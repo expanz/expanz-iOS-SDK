@@ -48,9 +48,7 @@ objection_register(ex_security_XmlPostLoginClient)
     [request startSynchronous];
     NSError* error = [request error];
     if (!error) {
-        NSString* response = [request responseString];           
-        LogDebug(@"Response from CreateSession: %@", response);                
-        return [[[SessionContextHolder alloc] init] autorelease];
+        return [[[SessionContextHolder alloc] initWithXml:[request responseString]] autorelease];
     }
     return nil;    
 }

@@ -17,4 +17,6 @@
 
 @property (nonatomic, retain) NSString* sessionKey;
 
+- (id) initWithXml:(NSString*)xml; 
+
 @end

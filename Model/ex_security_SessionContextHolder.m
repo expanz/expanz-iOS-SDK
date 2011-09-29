@@ -17,14 +17,21 @@
 @synthesize sessionKey = _sessionKey;
 
 /* ================================================== Constructors ================================================== */
-- (id)init
-{
+- (id) init {
     self = [super init];
     if (self) {
         // Initialization code here.
     }
     
     return self;
+}
+
+- (id) initWithXml:(id)xml {
+    self = [self init]; 
+    if (self) {
+        LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
+    }
+    return self; 
 }
 
 

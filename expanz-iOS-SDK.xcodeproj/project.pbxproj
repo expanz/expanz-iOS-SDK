@@ -88,6 +88,12 @@
 		6BB71C54143481A40023E288 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6BB71C55143481A70023E288 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BB71C56143481B40023E288 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
+		6BB71C5E143485E00023E288 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C59143485E00023E288 /* NSDataAdditions.m */; };
+		6BB71C5F143485E00023E288 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C59143485E00023E288 /* NSDataAdditions.m */; };
+		6BB71C60143485E00023E288 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C5B143485E00023E288 /* RXMLElement.m */; };
+		6BB71C61143485E00023E288 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C5B143485E00023E288 /* RXMLElement.m */; };
+		6BB71C62143485E00023E288 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C5D143485E00023E288 /* TBXML.m */; };
+		6BB71C63143485E00023E288 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB71C5D143485E00023E288 /* TBXML.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -196,6 +202,12 @@
 		6BB71C20143481860023E288 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BB71C22143481860023E288 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BB71C23143481860023E288 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6BB71C58143485E00023E288 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		6BB71C59143485E00023E288 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		6BB71C5A143485E00023E288 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
+		6BB71C5B143485E00023E288 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
+		6BB71C5C143485E00023E288 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		6BB71C5D143485E00023E288 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -332,6 +344,7 @@
 			children = (
 				6BB71BE9143481860023E288 /* ASIHTTPRequest */,
 				6BB71C1F143481860023E288 /* Flexible-iOS-Logging-1.0 */,
+				6BB71C57143485E00023E288 /* RaptureXML */,
 				6BB71C21143481860023E288 /* Reachability */,
 			);
 			name = External;
@@ -441,6 +454,19 @@
 				6BB71C23143481860023E288 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		6BB71C57143485E00023E288 /* RaptureXML */ = {
+			isa = PBXGroup;
+			children = (
+				6BB71C58143485E00023E288 /* NSDataAdditions.h */,
+				6BB71C59143485E00023E288 /* NSDataAdditions.m */,
+				6BB71C5A143485E00023E288 /* RXMLElement.h */,
+				6BB71C5B143485E00023E288 /* RXMLElement.m */,
+				6BB71C5C143485E00023E288 /* TBXML.h */,
+				6BB71C5D143485E00023E288 /* TBXML.m */,
+			);
+			path = RaptureXML;
 			sourceTree = "<group>";
 		};
 		6BCAFB8C14317B1B00575280 = {
@@ -637,6 +663,9 @@
 				6BB71C4D143481860023E288 /* ASIS3Request.m in Sources */,
 				6BB71C4F143481860023E288 /* ASIS3ServiceRequest.m in Sources */,
 				6BB71C51143481860023E288 /* Reachability.m in Sources */,
+				6BB71C5F143485E00023E288 /* NSDataAdditions.m in Sources */,
+				6BB71C61143485E00023E288 /* RXMLElement.m in Sources */,
+				6BB71C63143485E00023E288 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +703,9 @@
 				6BB71C4C143481860023E288 /* ASIS3Request.m in Sources */,
 				6BB71C4E143481860023E288 /* ASIS3ServiceRequest.m in Sources */,
 				6BB71C50143481860023E288 /* Reachability.m in Sources */,
+				6BB71C5E143485E00023E288 /* NSDataAdditions.m in Sources */,
+				6BB71C60143485E00023E288 /* RXMLElement.m in Sources */,
+				6BB71C62143485E00023E288 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
