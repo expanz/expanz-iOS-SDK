@@ -10,11 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 
-#import "ex_security_SessionContextHolder.h"
+#import "JBPackageVoodoo.h"
+#import "RXMLElement.h"
 
 @implementation ex_security_SessionContextHolder
 
-@synthesize sessionKey = _sessionKey;
+@synthesize sessionToken = _sessionToken;
 
 /* ================================================== Constructors ================================================== */
 - (id) init {
@@ -30,6 +31,11 @@
     self = [self init]; 
     if (self) {
         LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
+        RXMLElement* sessionContext = [RXMLElement elementFromXMLString:xml];
+        RXMLElement* sessionToken = [sessionContext child:@"CreateSessionXResult"];
+        if (sessionToken != nil) {
+            self.sessionToken = [sessionToken text];
+        }
     }
     return self; 
 }
@@ -38,7 +44,7 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {    
-    [_sessionKey release];
+    [_sessionToken release];
     [super dealloc];
 }
 

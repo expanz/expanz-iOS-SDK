@@ -20,9 +20,9 @@ describe(@"Manages authenticating with the site manager.", ^{
         
         SessionContextHolder* sessionContext = [loginClient createSessionWith:sesionRequest]; 
         assertThat(sessionContext, notNilValue());
+        assertThat([sessionContext sessionToken], notNilValue());
+        LogDebug(@"Session Token: %@", [sessionContext sessionToken]);
         
-
-
     });
 
 });

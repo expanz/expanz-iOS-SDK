@@ -15,7 +15,7 @@
 @interface ex_security_SessionContextHolder: NSObject
 
 
-@property (nonatomic, retain) NSString* sessionKey;
+@property (nonatomic, retain) NSString* sessionToken;
 
 - (id) initWithXml:(NSString*)xml; 
 
