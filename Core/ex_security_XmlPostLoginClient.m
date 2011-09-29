@@ -39,27 +39,22 @@ objection_register(ex_security_XmlPostLoginClient)
 
 
 - (ex_security_SessionContextHolder*) createSessionWith:(SessionRequest*)sessionRequest {
-//    
-//    NSURL *url = [NSURL URLWithString:kAffiliateSummaryReportUrl];    
-//    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: url];
-//        
-//    [request startSynchronous];
-//    NSError* error = [request error];
-//    if (!error) {
-//        NSString* jsonString = [request responseString];                
-//        return [JsonAffiliateSummaryDao unmarshalFromJson: jsonString];                
-//    }
+    
+    NSURL *url = [NSURL URLWithString:kCreateSessionUrl];    
+    ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL: url];   
+    [request addRequestHeader:@"Content-Type" value:@"text/xml"]; 
+    [request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+    [request startSynchronous];
+    NSError* error = [request error];
+    if (!error) {
+        NSString* response = [request responseString];           
+        LogDebug(@"Response from CreateSession: %@", response);                
+        return [[[SessionContextHolder alloc] init] autorelease];
+    }
     return nil;    
 }
     
-
-//- (void) listAffiliateSummaryBy:(NSNumber*)siteOid didFinishSelector:(SEL)didFinishSelector 
-//                didFailSelector:(SEL)didFailSelector {
-//    LogDebug(@"Loading report data");
-//    
-//}
-
-
 
 
 

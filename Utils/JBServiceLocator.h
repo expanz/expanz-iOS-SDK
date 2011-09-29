@@ -17,11 +17,6 @@
  */
 
 
-#define kConsumerKey                @"vc-reports-key"		
-#define kConsumerSecret             @"SHHHHH!!!!!!!!!!"	
-#define kRequestTokenURL            @"http://localhost:8080/report-service/oauth/request_token"
-#define kAccessTokenURL             @"http://localhost:8080/report-service/oauth/access_token"
-#define kAuthorizeURL               @"http://localhost:8080/report-service/oauth/confirm_access"
-#define kAffiliateSummaryReportUrl  @"http://localhost:8080/report-service/affiliate/simple/summary.xml"
+#define kCreateSessionUrl            @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/CreateSessionX"
 
 
