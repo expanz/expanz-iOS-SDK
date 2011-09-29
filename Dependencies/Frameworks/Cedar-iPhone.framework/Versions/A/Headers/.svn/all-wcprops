@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers
+END
+CDRExampleDetailsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRExampleDetailsViewController.h
+END
+SpecHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/SpecHelper.h
+END
+CedarApplicationDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CedarApplicationDelegate.h
+END
+CDRExampleParent.h
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRExampleParent.h
+END
+Cedar.h
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/Cedar.h
+END
+CDRExampleBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRExampleBase.h
+END
+CDRFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRFunctions.h
+END
+CDRSharedExampleGroupPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRSharedExampleGroupPool.h
+END
+CDRSpec.h
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRSpec.h
+END
+CDRExampleReporterViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRExampleReporterViewController.h
+END
+CDRExampleReporter.h
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/repos/!svn/ver/162678/PMBU/report-service/trunk/Examples/AffiliateSummaryReport/Dependencies/Frameworks/Cedar-iPhone.framework/Versions/A/Headers/CDRExampleReporter.h
+END
