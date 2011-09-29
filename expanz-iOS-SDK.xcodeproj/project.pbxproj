@@ -59,6 +59,7 @@
 		6B932F8F143456C500834A1B /* ex_security_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932F8B143456C500834A1B /* ex_security_SessionContextHolder.m */; };
 		6B932F90143456C500834A1B /* ex_security_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932F8D143456C500834A1B /* ex_security_SessionRequest.m */; };
 		6B932F91143456C500834A1B /* ex_security_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932F8D143456C500834A1B /* ex_security_SessionRequest.m */; };
+		6BB71BDF14347FDB0023E288 /* XmlPostLoginClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932F9914347A9D00834A1B /* XmlPostLoginClientSpec.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -166,6 +167,7 @@
 		6B932F8B143456C500834A1B /* ex_security_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ex_security_SessionContextHolder.m; sourceTree = "<group>"; };
 		6B932F8C143456C500834A1B /* ex_security_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ex_security_SessionRequest.h; sourceTree = "<group>"; };
 		6B932F8D143456C500834A1B /* ex_security_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ex_security_SessionRequest.m; sourceTree = "<group>"; };
+		6B932F9914347A9D00834A1B /* XmlPostLoginClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientSpec.m; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				6B932F7F1434513700834A1B /* SessionRequestSpec.m */,
+				6B932F9914347A9D00834A1B /* XmlPostLoginClientSpec.m */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				6B932F871434546100834A1B /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6B932F8F143456C500834A1B /* ex_security_SessionContextHolder.m in Sources */,
 				6B932F91143456C500834A1B /* ex_security_SessionRequest.m in Sources */,
+				6BB71BDF14347FDB0023E288 /* XmlPostLoginClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +818,7 @@
 				6B932F7714344EFD00834A1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BCAFB9114317B1B00575280 /* Build configuration list for PBXProject "expanz-iOS-SDK" */ = {
 			isa = XCConfigurationList;

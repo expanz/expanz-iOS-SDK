@@ -38,7 +38,7 @@ objection_register(ex_security_XmlPostLoginClient)
 
 
 
-- (ex_security_SessionContextHolder*) createSessionWith:(NSString*)usernName and:(NSString*)password {
+- (ex_security_SessionContextHolder*) createSessionWith:(SessionRequest*)sessionRequest {
 //    
 //    NSURL *url = [NSURL URLWithString:kAffiliateSummaryReportUrl];    
 //    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: url];

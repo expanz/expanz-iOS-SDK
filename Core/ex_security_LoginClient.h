@@ -18,7 +18,7 @@
 /** 
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */
-- (ex_security_SessionContextHolder*) createSessionWith:(NSString*)usernName and:(NSString*)password;
+- (ex_security_SessionContextHolder*) createSessionWith:(SessionRequest*)sessionRequest; 
 
 
 
