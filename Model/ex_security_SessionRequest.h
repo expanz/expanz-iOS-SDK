@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSString* password;
 @property (nonatomic, retain) NSString* appSite;
 
-
--(NSString*) toXml; 
+- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
+- (NSString*) toXml; 
 
 @end

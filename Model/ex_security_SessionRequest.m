@@ -13,30 +13,43 @@
 
 @implementation ex_security_SessionRequest
 
+#define kXmlTemplate @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateSession user=\"%@\" \
+password=\"%@\" appSite=\"%@\" authenticationMode=\"%@\" clientVersion=\"%@\" schemaVersion=\"%@\"/></ESA></xml>\
+</CreateSessionX>"
+
 
 @synthesize userName = _userName;
 @synthesize password = _password; 
 @synthesize appSite = _appSite;
 
 
-
 /* ================================================== Constructors ================================================== */
 
-- (id)init
+- (id) init
 {
     self = [super init];
     if (self) {
         // Initialization code here.
-    }
-    
+    }    
     return self;
+}
+
+- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
+    self = [self init];
+    if (self) {
+        self.userName = userName; 
+        self.password = password; 
+        self.appSite = appSite;
+    }
+    return self; 
 }
 
 
 /* ================================================ Interface Methods =============================================== */
 
 - (NSString*) toXml {
-    return nil;
+    return [NSString stringWithFormat: kXmlTemplate, _userName, _password, _appSite, kAuthenticationMode, 
+            kClientVersion, kSchemaVersion];
 }
 
 
