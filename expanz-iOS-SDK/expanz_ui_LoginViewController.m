@@ -9,7 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////y
 
+#import <QuartzCore/QuartzCore.h>
 #import "JBPackageVoodoo.h"
+
 
 @implementation expanz_ui_LoginViewController
 
@@ -75,7 +77,7 @@
 
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
-    [textField resignFirstResponder];
+    [self userDidRequestLogin:nil];
     return YES;
 }
 
@@ -90,6 +92,24 @@
                                                         autorelease];
         [alert show];
     }    
+    else {
+        ActivityViewController* activityViewController = [[ActivityViewController alloc] 
+                                                        initWithNibName: @"ActivityWindow" 
+                                                        bundle: [NSBundle mainBundle]];        
+        
+        static const NSTimeInterval kAnimationDuration = 0.75f;
+        CATransition *transition = [CATransition animation];
+        transition.duration = kAnimationDuration;
+        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        transition.subtype = kCATransitionFromRight;
+        transition.delegate = self;
+        CAFilter* filter = [CAFilter filterWithName:@"cube"];
+        [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
+        transition.filter = filter;
+        
+        [self.navigationController.view.layer addAnimation:transition forKey:nil];    
+        [self.navigationController pushViewController: activityViewController animated:NO];
+    }
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

@@ -16,7 +16,7 @@
 @interface expanz_iOS_SDKAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
+@property (nonatomic, retain) IBOutlet UINavigationController* navigationController;
 @property (nonatomic, retain) IBOutlet expanz_iOS_SDKViewController *viewController;
 
 @end

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B039B971435D6220036F9B5 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B039B951435D6220036F9B5 /* expanz_ui_ActivityViewController.m */; };
+		6B039B981435D6220036F9B5 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B039B961435D6220036F9B5 /* ActivityWindow.xib */; };
+		6B039BA01435D6C20036F9B5 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B039B9F1435D6C20036F9B5 /* brushed-metal2.png */; };
+		6B039BA11435D6C20036F9B5 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B039B9F1435D6C20036F9B5 /* brushed-metal2.png */; };
+		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
+		6B039BA41435D82A0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B86AD8D1435B65400AA7FD5 /* XmlPostLoginClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */; };
 		6B86AD911435B94A00AA7FD5 /* SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */; };
@@ -119,6 +125,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B039B941435D6220036F9B5 /* expanz_ui_ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityViewController.h; sourceTree = "<group>"; };
+		6B039B951435D6220036F9B5 /* expanz_ui_ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityViewController.m; sourceTree = "<group>"; };
+		6B039B961435D6220036F9B5 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
+		6B039B9F1435D6C20036F9B5 /* brushed-metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brushed-metal2.png"; sourceTree = "<group>"; };
+		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientSpec.m; sourceTree = "<group>"; };
 		6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextHolderSpec.m; sourceTree = "<group>"; };
@@ -246,6 +257,7 @@
 				6BB71C54143481A40023E288 /* CFNetwork.framework in Frameworks */,
 				6BB71C55143481A70023E288 /* libz.dylib in Frameworks */,
 				6BB71C56143481B40023E288 /* libxml2.dylib in Frameworks */,
+				6B039BA41435D82A0036F9B5 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */,
 				6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */,
 				6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */,
 				6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */,
@@ -510,6 +523,7 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
 				6B932F351433FA4000834A1B /* MobileCoreServices.framework */,
 				6B932F2F1433F97900834A1B /* SystemConfiguration.framework */,
 				6B932F311433F98400834A1B /* CFNetwork.framework */,
@@ -530,6 +544,7 @@
 		6BCAFBA114317B1C00575280 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6B039B9F1435D6C20036F9B5 /* brushed-metal2.png */,
 				6BBE14D2143568E800C8AD19 /* loginBackground.png */,
 				6BCAFBAA14317B1C00575280 /* expanz_iOS_SDKAppDelegate.h */,
 				6BCAFBAB14317B1C00575280 /* expanz_iOS_SDKAppDelegate.m */,
@@ -538,6 +553,9 @@
 				6BBE14CD14354B3C00C8AD19 /* LoginWindow.xib */,
 				6BBE14DA14356B6A00C8AD19 /* expanz_ui_LoginViewController.h */,
 				6BBE14DB14356B6B00C8AD19 /* expanz_ui_LoginViewController.m */,
+				6B039B941435D6220036F9B5 /* expanz_ui_ActivityViewController.h */,
+				6B039B951435D6220036F9B5 /* expanz_ui_ActivityViewController.m */,
+				6B039B961435D6220036F9B5 /* ActivityWindow.xib */,
 			);
 			path = "expanz-iOS-SDK";
 			sourceTree = "<group>";
@@ -626,6 +644,7 @@
 				6B932F4F14344EFC00834A1B /* InfoPlist.strings in Resources */,
 				6B932F5814344EFC00834A1B /* MainWindow.xib in Resources */,
 				6B932F5E14344EFC00834A1B /* UISpecsViewController.xib in Resources */,
+				6B039BA11435D6C20036F9B5 /* brushed-metal2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +656,8 @@
 				6BCAFBAF14317B1C00575280 /* MainWindow.xib in Resources */,
 				6BBE14E41435701800C8AD19 /* loginBackground.png in Resources */,
 				6BBE14CE14354B3C00C8AD19 /* LoginWindow.xib in Resources */,
+				6B039B981435D6220036F9B5 /* ActivityWindow.xib in Resources */,
+				6B039BA01435D6C20036F9B5 /* brushed-metal2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +746,7 @@
 				6BB71C60143485E00023E288 /* RXMLElement.m in Sources */,
 				6BB71C62143485E00023E288 /* TBXML.m in Sources */,
 				6BBE14DC14356B6B00C8AD19 /* expanz_ui_LoginViewController.m in Sources */,
+				6B039B971435D6220036F9B5 /* expanz_ui_ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

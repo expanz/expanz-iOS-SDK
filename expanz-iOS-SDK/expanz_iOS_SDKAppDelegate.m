@@ -11,14 +11,15 @@
 
 #import <Objection-iOS/Objection.h>
 #import "expanz_iOS_SDKAppDelegate.h"
-#import "expanz_iOS_SDKViewController.h"
 #import "JBPackageVoodoo.h"
 
 
 @implementation expanz_iOS_SDKAppDelegate
 
 @synthesize window = _window;
+@synthesize navigationController = _navigationController;
 @synthesize viewController = _viewController;
+
 
 
 /* ================================================ Delegate Methods ================================================ */
@@ -30,8 +31,12 @@
     
     LoginViewController* loginViewController = [[LoginViewController alloc] initWithNibName: @"LoginWindow" 
                                                                                      bundle: [NSBundle mainBundle]];
+    
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];    
+    [_navigationController setNavigationBarHidden:YES];
+    [loginViewController release];    
         
-    [self.window addSubview: [loginViewController view]];
+    [self.window addSubview: [_navigationController view]];
     [self.window makeKeyAndVisible];    
 
     return YES;

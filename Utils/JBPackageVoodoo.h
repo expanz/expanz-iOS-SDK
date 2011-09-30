@@ -37,8 +37,12 @@
 
 
 /* *********************************************** User Interface *************************************************** */
+#import "expanz_ui_ActivityViewController.h"
+@compatibility_alias ActivityViewController expanz_ui_ActivityViewController;
+
 #import "expanz_ui_LoginViewController.h"
 @compatibility_alias LoginViewController expanz_ui_LoginViewController;
+
 
 /* *************************************************** Utils ******************************************************** */
 
