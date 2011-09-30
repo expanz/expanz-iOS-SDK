@@ -86,19 +86,14 @@
 #pragma mark LoginClient delegate
 
 - (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext {
-    if (sessionContext.hasError) {
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.errorMessage 
-                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
-                                                        autorelease];
-        [alert show];
-    }    
-    else {
+    if (!sessionContext.hasError) {
+
         ActivityViewController* activityViewController = [[ActivityViewController alloc] 
                                                         initWithNibName: @"ActivityWindow" 
                                                         bundle: [NSBundle mainBundle]];        
-        
+ 
         static const NSTimeInterval kAnimationDuration = 0.75f;
-        CATransition *transition = [CATransition animation];
+        CATransition* transition = [CATransition animation];
         transition.duration = kAnimationDuration;
         transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         transition.subtype = kCATransitionFromRight;
@@ -106,10 +101,17 @@
         CAFilter* filter = [CAFilter filterWithName:@"cube"];
         [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
         transition.filter = filter;
-        
+               
         [self.navigationController.view.layer addAnimation:transition forKey:nil];    
         [self.navigationController pushViewController: activityViewController animated:NO];
+
     }
+    else {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.errorMessage 
+                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
+                                                        autorelease];
+        [alert show];
+    }    
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

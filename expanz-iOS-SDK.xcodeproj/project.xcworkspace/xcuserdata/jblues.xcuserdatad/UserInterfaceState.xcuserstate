@@ -3799,7 +3799,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339071609.103715</real>
+		<real>339075693.08763701</real>
 		<string>{0, 880}</string>
 		<string>{598, 0}</string>
 		<dict>
@@ -5131,9 +5131,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339075477.07758999</real>
-		<string>{1792, 2142}</string>
-		<string>{2834, 0}</string>
+		<real>339075877.99883598</real>
+		<string>{2637, 1954}</string>
+		<string>{3609, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9846,7 +9846,7 @@
 				<integer>727</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>339075473.36029601</real>
+			<real>339075875.89462698</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -9857,7 +9857,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 7:37 PM</string>
+		<string>Today at 7:44 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -10413,11 +10413,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>787</integer>
+					<integer>788</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>788</integer>
+					<integer>789</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -10425,11 +10425,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>481</integer>
+					<integer>792</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>791</integer>
+					<integer>481</integer>
 				</dict>
 			</array>
 		</dict>
@@ -10468,7 +10468,7 @@
 				<integer>781</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m</string>
+		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10486,7 +10486,7 @@
 				<integer>783</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m</string>
+		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10502,6 +10502,24 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>785</integer>
+			</dict>
+		</dict>
+		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>29</integer>
+			</dict>
+			<key>NS.base</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>0</integer>
+			</dict>
+			<key>NS.relative</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>787</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.h</string>
@@ -10553,7 +10571,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>789</integer>
+				<integer>791</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBPackageVoodoo.h</string>
@@ -10574,24 +10592,6 @@
 				<integer>69</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>29</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>792</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -16403,10 +16403,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339075477.08007902</real>
-		<string>{1792, 2142}</string>
-		<string>{2834, 0}</string>
-		<string>-textFieldShouldReturn:</string>
+		<real>339075878.00105298</real>
+		<string>{2637, 1954}</string>
+		<string>{3609, 0}</string>
+		<string>-requestDidFinishWithSessionContext:</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
