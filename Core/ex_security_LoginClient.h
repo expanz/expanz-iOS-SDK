@@ -12,15 +12,23 @@
 #import <Foundation/Foundation.h>
 #import "JBPackageVoodoo.h"
 
-@protocol ex_security_LoginClient <NSObject>
 
+/* ================================================================================================================== */
+@protocol ex_security_LoginClientDelegate <NSObject>
+
+- (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext; 
+- (void) requestDidFailWithError:(NSError*)error; 
+
+@end
+
+/* ================================================================================================================== */
+@protocol ex_security_LoginClient <NSObject>
 
 /** 
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */
-- (ex_security_SessionContextHolder*) createSessionWith:(SessionRequest*)sessionRequest; 
-
-
-
-
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ex_security_LoginClientDelegate>)delegate;
 @end
+
+
+

@@ -782,6 +782,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UISpecs/UISpecs-Prefix.pch";
 				INFOPLIST_FILE = "UISpecs/UISpecs-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries/Expecta\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-ObjC",
@@ -803,6 +807,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UISpecs/UISpecs-Prefix.pch";
 				INFOPLIST_FILE = "UISpecs/UISpecs-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries/Expecta\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-ObjC",

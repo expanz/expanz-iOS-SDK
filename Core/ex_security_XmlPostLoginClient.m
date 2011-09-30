@@ -38,19 +38,24 @@ objection_register(ex_security_XmlPostLoginClient)
 
 
 
-- (ex_security_SessionContextHolder*) createSessionWith:(SessionRequest*)sessionRequest {
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ex_security_LoginClientDelegate>)delegate {
     
     NSURL *url = [NSURL URLWithString:kCreateSessionUrl];    
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL: url];   
     [request addRequestHeader:@"Content-Type" value:@"text/xml"]; 
     [request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [request setCompletionBlock:^{
+        SessionContextHolder* contextHolder = [[[SessionContextHolder alloc] 
+                                                initWithXml:[request responseString]] autorelease];
+        [delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
+    }];
+    
+    [request setFailedBlock:^{
+        [delegate performSelector:@selector(requestDidFailWithError:) withObject:[request error]]; 
+    }];
+    [request startAsynchronous];
         
-    [request startSynchronous];
-    NSError* error = [request error];
-    if (!error) {
-        return [[[SessionContextHolder alloc] initWithXml:[request responseString]] autorelease];
-    }
-    return nil;    
 }
     
 
