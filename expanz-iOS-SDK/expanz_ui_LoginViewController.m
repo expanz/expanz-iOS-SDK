@@ -69,6 +69,7 @@
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
+    [self userDidRequestLogin:nil];
     [textField resignFirstResponder]; 
     return YES;
 }
