@@ -24,6 +24,9 @@
 /* ================================================================================================================== */
 @protocol ex_security_LoginClient <NSObject>
 
+
++ (id<ex_security_LoginClient>) loginClient;
+
 /** 
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */

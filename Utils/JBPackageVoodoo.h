@@ -33,11 +33,12 @@
 
 
 /* ************************************************* Services ******************************************************* */
+#import "JBServiceLocator.h"
 
 
 /* *********************************************** User Interface *************************************************** */
-
-
+#import "expanz_ui_LoginViewController.h"
+@compatibility_alias LoginViewController expanz_ui_LoginViewController;
 
 /* *************************************************** Utils ******************************************************** */
 
@@ -47,3 +48,8 @@
 
 #import "ex_security_XmlPostLoginClient.h"
 @compatibility_alias XmlPostLoginClient ex_security_XmlPostLoginClient;
+
+
+/* ******************************************* Dependency Injection ************************************************* */
+#import "JBDependencyBinder.h"
+

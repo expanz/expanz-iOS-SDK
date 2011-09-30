@@ -9,15 +9,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "JBDependencyBinder.h"
+#import <UIKit/UIKit.h>
 #import "JBPackageVoodoo.h"
+#import "ex_security_LoginClient.h"
+
+@interface expanz_ui_LoginViewController : UIViewController<ex_security_LoginClientDelegate>
+
+@property (nonatomic, retain) id<ex_security_LoginClient> loginClient; 
+@property (nonatomic, retain) IBOutlet UITextField* userName;
+@property (nonatomic, retain) IBOutlet UITextField* password;
+
+- (IBAction) userDidRequestLogin:(id)sender; 
 
 
-@implementation JBDependencyBinder
-
-- (void)configure {
-    [self bind:[ex_security_XmlPostLoginClient loginClient] toProtocol:@protocol(ex_security_LoginClient)];  
-}
-
-
-@end 
+@end

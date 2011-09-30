@@ -1,67 +1,84 @@
+////////////////////////////////////////////////////////////////////////////////
 //
-//  expanz_iOS_SDKAppDelegate.m
-//  expanz-iOS-SDK
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
 //
-//  Created by Jasper Blues on 9/27/11.
-//  Copyright 2011 Expanz Inc. All rights reserved.
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
 //
+////////////////////////////////////////////////////////////////////////////////`
 
+#import <Objection-iOS/Objection.h>
 #import "expanz_iOS_SDKAppDelegate.h"
-
 #import "expanz_iOS_SDKViewController.h"
+#import "JBPackageVoodoo.h"
+
 
 @implementation expanz_iOS_SDKAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+
+/* ================================================ Delegate Methods ================================================ */
+
+- (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+    
+    JSObjectionInjector* injector = [JSObjection createInjector:[[[JBDependencyBinder alloc] init] autorelease]];
+    [JSObjection setGlobalInjector:injector];
+    
+    LoginViewController* loginViewController = [[LoginViewController alloc] initWithNibName: @"LoginWindow" 
+                                                                                     bundle: [NSBundle mainBundle]];
+        
+    [self.window addSubview: [loginViewController view]];
+    [self.window makeKeyAndVisible];    
+
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
+- (void) applicationWillResignActive:(UIApplication*)application {
     /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+     Sent when the application is about to move from active to inactive state. This can occur for certain types of 
+     temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and 
+     it begins the transition to the background state. 
+     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use 
+     this method to pause the game.
      */
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
+- (void) applicationDidEnterBackground:(UIApplication*)application {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state 
+     information to restore your application to its current state in case it is terminated later. 
+     If your application supports background execution, this method is called instead of applicationWillTerminate: when 
+     the user quits.
      */
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
+- (void) applicationWillEnterForeground:(UIApplication*)application {
     /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+     Called as part of the transition from the background to the inactive state; here you can undo many of the changes 
+     made on entering the background.
      */
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
+- (void) applicationDidBecomeActive:(UIApplication*)application {
     /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was 
+     previously in the background, optionally refresh the user interface.
      */
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
+- (void)applicationWillTerminate:(UIApplication*)application {
     /*
      Called when the application is about to terminate.
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
 }
+
+/* ================================================== Utility Methods =============================================== */
 
 - (void)dealloc
 {

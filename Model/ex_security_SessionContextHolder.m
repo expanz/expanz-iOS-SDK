@@ -8,7 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-//
+
 
 #import "JBPackageVoodoo.h"
 #import "RXMLElement.h"
@@ -16,8 +16,17 @@
 @implementation ex_security_SessionContextHolder
 
 @synthesize sessionToken = _sessionToken;
+@synthesize hasError = _hasError; 
+@synthesize errorMessage = _errorMessage;
+@synthesize hasWarning = _hasWarning; 
+@synthesize warningMessage = _warningMessage;
 
 /* ================================================== Constructors ================================================== */
+
++ (id) fromXml:(NSString *)xml {
+    return [[[self alloc] initWithXml:xml] autorelease];
+}
+
 - (id) init {
     self = [super init];
     if (self) {
@@ -31,11 +40,23 @@
     self = [self init]; 
     if (self) {
         LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
-        RXMLElement* sessionContext = [RXMLElement elementFromXMLString:xml];
-        RXMLElement* sessionToken = [sessionContext child:@"CreateSessionXResult"];
-        if (sessionToken != nil) {
-            self.sessionToken = [sessionToken text];
+        RXMLElement* rootElement = [RXMLElement elementFromXMLString:xml];
+        RXMLElement* sessionToken = [rootElement child:@"CreateSessionXResult"];
+        RXMLElement* error = [rootElement child:@"errorMessage"];
+
+        if (sessionToken.text.length > 0) {
+            self.sessionToken = sessionToken.text;
+            if (error != nil) {
+                self.hasWarning = YES; 
+                self.warningMessage = error.text; 
+            }
         }
+        else {            
+            if (error != nil) {
+                self.hasError = YES; 
+                self.errorMessage = error.text;
+            }
+        }        
     }
     return self; 
 }

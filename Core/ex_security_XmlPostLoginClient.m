@@ -11,7 +11,6 @@
 
 #import <Objection-iOS/Objection.h>
 #import "JBPackageVoodoo.h"
-#import "JBServiceLocator.h"
 #import "ASIFormDataRequest.h"
 
 
@@ -24,6 +23,11 @@ objection_register(ex_security_XmlPostLoginClient)
 
 
 /* ================================================== Constructors ================================================== */
+
++ (id) loginClient {
+	return [[[self alloc] init] autorelease];
+}
+
 
 - (id)init {
     self = [super init];
@@ -46,8 +50,7 @@ objection_register(ex_security_XmlPostLoginClient)
     [request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [request setCompletionBlock:^{
-        SessionContextHolder* contextHolder = [[[SessionContextHolder alloc] 
-                                                initWithXml:[request responseString]] autorelease];
+        SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[request responseString]];
         [delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
     }];
     

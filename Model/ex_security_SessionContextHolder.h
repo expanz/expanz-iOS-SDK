@@ -15,8 +15,13 @@
 @interface ex_security_SessionContextHolder: NSObject
 
 
-@property (nonatomic, retain) NSString* sessionToken;
+@property (nonatomic, retain) NSString* sessionToken; 
+@property (nonatomic) BOOL hasError; 
+@property (nonatomic, retain) NSString* errorMessage;
+@property (nonatomic) BOOL hasWarning;
+@property (nonatomic, retain) NSString* warningMessage;
 
++ (id) fromXml:(NSString*)xml;
 - (id) initWithXml:(NSString*)xml; 
 
 @end
