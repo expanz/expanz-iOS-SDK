@@ -39,17 +39,22 @@ describe(@"Manages authenticating with the site manager.", ^{
         loginClient = [[XmlPostLoginClient alloc] init]; 
     });
 
-
-    it(@"Can request an access token, using a SessionRequest object.", ^{
-        SessionRequest* sesionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
-                                                                         appSite:@"SALESAPP"]; 
+    describe(@"Requests an access token, using a SessionRequest instance", ^{
         
-        TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init];
-        [loginClient createSessionWith:sesionRequest delegate:loginDelegate]; 
-        [NSThread sleepForTimeInterval:2];
-        LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
-        assertThat([loginDelegate sessionContextHolder], isNot(nil));
+        it(@"should return a SessionContextHolder, containing a valid session token, within 2 seconds", ^{
+            
+            SessionRequest* sesionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
+                                                                             appSite:@"SALESAPP"]; 
+            
+            TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init];
+            [loginClient createSessionWith:sesionRequest delegate:loginDelegate]; 
+            
+            [NSThread sleepForTimeInterval:2]; 
+            LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
+            assertThat([loginDelegate sessionContextHolder], isNot(nil));
+        });
     });
+
 
 });
 
