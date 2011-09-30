@@ -227,7 +227,6 @@
 		6BCAFBAA14317B1C00575280 /* expanz_iOS_SDKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKAppDelegate.h; sourceTree = "<group>"; };
 		6BCAFBAB14317B1C00575280 /* expanz_iOS_SDKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKAppDelegate.m; sourceTree = "<group>"; };
 		6BCAFBAE14317B1C00575280 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6BCAFBB014317B1C00575280 /* expanz_iOS_SDKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKViewController.h; sourceTree = "<group>"; };
 		6BCAFBBC14317B1C00575280 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -535,7 +534,6 @@
 				6BCAFBAA14317B1C00575280 /* expanz_iOS_SDKAppDelegate.h */,
 				6BCAFBAB14317B1C00575280 /* expanz_iOS_SDKAppDelegate.m */,
 				6BCAFBAD14317B1C00575280 /* MainWindow.xib */,
-				6BCAFBB014317B1C00575280 /* expanz_iOS_SDKViewController.h */,
 				6BCAFBA214317B1C00575280 /* Supporting Files */,
 				6BBE14CD14354B3C00C8AD19 /* LoginWindow.xib */,
 				6BBE14DA14356B6A00C8AD19 /* expanz_ui_LoginViewController.h */,
