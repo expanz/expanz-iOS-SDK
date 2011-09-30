@@ -62,15 +62,20 @@
 - (void) userDidRequestLogin:(id)sender {
     
     if (_userName.text.length > 0 && _password.text.length > 0) {
+        [_fieldWithCurrentFocus resignFirstResponder];
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userName.text password:_password.text 
                                                                           appSite:@"SALESAPP"];        
         [_loginClient createSessionWith:sessionRequest delegate:self];        
     }    
 }
 
+- (void) textFieldDidBeginEditing:(UITextField*)textField {
+    _fieldWithCurrentFocus = textField;
+}
+
+
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
-    [self userDidRequestLogin:nil];
-    [textField resignFirstResponder]; 
+    [textField resignFirstResponder];
     return YES;
 }
 
@@ -79,7 +84,12 @@
 #pragma mark LoginClient delegate
 
 - (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext {
-    
+    if (sessionContext.hasError) {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.errorMessage 
+                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
+                                                        autorelease];
+        [alert show];
+    }    
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

@@ -13,7 +13,12 @@
 #import "JBPackageVoodoo.h"
 #import "ex_security_LoginClient.h"
 
-@interface expanz_ui_LoginViewController : UIViewController<ex_security_LoginClientDelegate>
+@interface expanz_ui_LoginViewController : UIViewController<ex_security_LoginClientDelegate> {
+
+@private
+    UITextField* _fieldWithCurrentFocus; 
+    
+}
 
 @property (nonatomic, retain) id<ex_security_LoginClient> loginClient; 
 @property (nonatomic, retain) IBOutlet UITextField* userName;
