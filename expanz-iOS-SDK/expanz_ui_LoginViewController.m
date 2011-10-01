@@ -18,6 +18,8 @@
 @synthesize loginClient = _loginClient; 
 @synthesize userName = _userName;
 @synthesize password = _password;
+@synthesize loginButton = _loginButton;
+@synthesize spinner = _spinner; 
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
@@ -61,9 +63,11 @@
 /* ================================================================================================================== */
 #pragma mark User Actions
 
-- (void) userDidRequestLogin:(id)sender {
+- (void) loginWithUserNameAndPassword:(id)sender {
     
     if (_userName.text.length > 0 && _password.text.length > 0) {
+        _loginButton.enabled = NO;
+        [_spinner startAnimating];
         [_fieldWithCurrentFocus resignFirstResponder];
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userName.text password:_password.text 
                                                                           appSite:@"SALESAPP"];        
@@ -77,7 +81,7 @@
 
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
-    [self userDidRequestLogin:nil];
+    [self loginWithUserNameAndPassword:nil];
     return YES;
 }
 
@@ -86,6 +90,9 @@
 #pragma mark LoginClient delegate
 
 - (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext {
+    LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
+    [_spinner stopAnimating];
+    
     if (!sessionContext.hasError) {
 
         ActivityViewController* activityViewController = [[ActivityViewController alloc] 
@@ -107,6 +114,7 @@
 
     }
     else {
+        _loginButton.enabled = YES;
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.errorMessage 
                                                         delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
                                                         autorelease];

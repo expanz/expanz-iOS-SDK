@@ -17,14 +17,16 @@
 
 @private
     UITextField* _fieldWithCurrentFocus; 
-    
+        
 }
 
-@property (nonatomic, retain) id<ex_security_LoginClient> loginClient; 
-@property (nonatomic, retain) IBOutlet UITextField* userName;
-@property (nonatomic, retain) IBOutlet UITextField* password;
+@property (nonatomic, readonly) id<ex_security_LoginClient> loginClient; 
+@property (nonatomic, readonly) IBOutlet UITextField* userName;
+@property (nonatomic, readonly) IBOutlet UITextField* password;
+@property (nonatomic, readonly) IBOutlet UIButton* loginButton; 
+@property (nonatomic, readonly) IBOutlet UIActivityIndicatorView* spinner; 
 
-- (IBAction) userDidRequestLogin:(id)sender; 
+- (IBAction) loginWithUserNameAndPassword:(id)sender; 
 
 
 @end
