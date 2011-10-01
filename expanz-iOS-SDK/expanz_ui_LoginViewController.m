@@ -68,7 +68,6 @@
     if (_userName.text.length > 0 && _password.text.length > 0) {
         _loginButton.enabled = NO;
         [_spinner startAnimating];
-        [_fieldWithCurrentFocus resignFirstResponder];
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userName.text password:_password.text 
                                                                           appSite:@"SALESAPP"];        
         [_loginClient createSessionWith:sessionRequest delegate:self];        
@@ -81,6 +80,7 @@
 
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
+    [_fieldWithCurrentFocus resignFirstResponder];
     [self loginWithUserNameAndPassword:nil];
     return YES;
 }

@@ -195,10 +195,10 @@
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="739448282">
+					<object class="IBUIActivityIndicatorView" id="669266895">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{193, 191}, {20, 20}}</string>
+						<string key="NSFrame">{{150, 76}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:824</string>
@@ -265,7 +265,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">spinner</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="739448282"/>
+						<reference key="destination" ref="669266895"/>
 					</object>
 					<int key="connectionID">32</int>
 				</object>
@@ -306,8 +306,8 @@
 							<reference ref="439050640"/>
 							<reference ref="26788337"/>
 							<reference ref="531052554"/>
-							<reference ref="739448282"/>
 							<reference ref="170598611"/>
+							<reference ref="669266895"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">View</string>
@@ -355,7 +355,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">31</int>
-						<reference key="object" ref="739448282"/>
+						<reference key="object" ref="669266895"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
