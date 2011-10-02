@@ -70,7 +70,8 @@
         [_spinner startAnimating];
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userName.text password:_password.text 
                                                                           appSite:@"SALESAPP"];        
-        [_loginClient createSessionWith:sessionRequest delegate:self];        
+        [_loginClient createSessionWith:sessionRequest delegate:self];    
+        [sessionRequest release];
     }    
 }
 
@@ -111,7 +112,7 @@
                
         [self.navigationController.view.layer addAnimation:transition forKey:nil];    
         [self.navigationController pushViewController: activityViewController animated:NO];
-
+        [activityViewController release];
     }
     else {
         _loginButton.enabled = YES;
