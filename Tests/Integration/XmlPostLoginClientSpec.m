@@ -41,7 +41,7 @@ describe(@"Manages authenticating with the site manager.", ^{
 
     describe(@"Requests an access token, using a SessionRequest instance", ^{
         
-        it(@"should return a SessionContextHolder, containing a valid session token, within 4 seconds", ^{
+        it(@"should return a SessionContextHolder, containing a valid session token, within 5 seconds", ^{
             
             SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
                                                                              appSite:@"SALESAPP"]; 
@@ -49,7 +49,7 @@ describe(@"Manages authenticating with the site manager.", ^{
             TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init];
             [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
             
-            [NSThread sleepForTimeInterval:4]; 
+            [NSThread sleepForTimeInterval:5];
             LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
             assertThat([loginDelegate sessionContextHolder], isNot(nil));
             [sessionRequest release];

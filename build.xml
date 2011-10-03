@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="expans iOS SDK" default="build">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONFIGURATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <property file="build-configuration.properties"/>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <target name="build" depends="
+    --make.dirs,
+    --clean,
+    --simulator.launch,
+    --clean,
+    --make.dirs,
+    --uispecs.build,
+    --uispecs.run"/>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PRIVATE TARGETS (MUST NOT depend on other targets!) ~~~~~~~~~~~~~~~~~~~ -->
+    <target name="--make.dirs">
+
+        <mkdir dir="${target.dir}"/>
+        <mkdir dir="${temp.dir}"/>
+        <mkdir dir="${reports.dir}"/>
+    </target>
+
+    <target name="--clean">
+        <delete dir="${target.dir}"/>
+        <delete dir="${user.home}/Library/Application Support/iPhone Simulator/4.3.2/Applications" />
+        <mkdir dir="${user.home}/Library/Application Support/iPhone Simulator/4.3.2/Applications"/>
+    </target>
+
+    <target name="--simulator.launch">
+        <echo file="${temp.dir}/fg-simulator.script">
+            tell application "${simulator.path}" to launch
+            tell application "${simulator.path}" to activate
+        </echo>
+        <echo message="Launching the iPhone simulator. Leave it running in the foreground, or things won't work"/>
+        <exec executable="osascript" failonerror="true">
+            <arg line="${temp.dir}/fg-simulator.script"/>
+        </exec>
+    </target>
+
+    <target name="--uispecs.build">
+        <exec executable="xcodebuild" failonerror="true">
+            <arg line="-sdk iphonesimulator${sdk.version} -target ${uispecs.target.name}"/>
+        </exec>
+    </target>
+
+    <target name="--uispecs.run">
+        <mkdir dir="${reports.dir}/tests"/>
+        <exec executable="${basedir}/ios-sim" outputproperty="uispecs.output" >
+            <arg line="launch ${target.dir}/Release-iphonesimulator/${uispecs.target.name}.app"/>
+            <arg line="--setenv CEDAR_HEADLESS_SPECS=0"/>
+            <arg line="--setenv CEDAR_REPORTER_CLASS=CDRColorizedReporter"/>
+        </exec>
+
+        <!-- Write report to disk -->
+        <echo file="${reports.dir}/tests/report.txt" message="${uispecs.output}"/>
+        <!-- Print report to console -->
+        <echo message="${uispecs.output}"/>
+
+        <loadfile srcfile="${reports.dir}/tests/report.txt" property="tests.failed">
+            <filterchain>
+                <filterreader classname="org.apache.tools.ant.filters.LineContains">
+                    <param type="contains" value="FAILURE"/>
+                </filterreader>
+            </filterchain>
+        </loadfile>
+
+        <echo file="${temp.dir}/quit-simulator.script">
+            tell application "${simulator.path}" to quit
+        </echo>
+        <exec executable="osascript" failonerror="true">
+            <arg line="${temp.dir}/quit-simulator.script"/>
+        </exec>
+        <fail if="tests.failed" message="Tests failed. Report is at ${reports.dir}/tests/report.txt"/>
+
+    </target>
+
+
+</project>

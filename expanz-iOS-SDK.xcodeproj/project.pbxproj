@@ -10,7 +10,6 @@
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B039BA41435D82A0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
-		6B86AD8D1435B65400AA7FD5 /* XmlPostLoginClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */; };
 		6B86AD911435B94A00AA7FD5 /* SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932EAB1433E22100834A1B /* ex_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA11433E22100834A1B /* ex_security_XmlPostLoginClient.m */; };
@@ -116,10 +115,10 @@
 		6BC1608E1436AF3500E166F6 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1607A1436AF3500E166F6 /* LoginWindow.xib */; };
 		6BC1608F1436AF3500E166F6 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1607A1436AF3500E166F6 /* LoginWindow.xib */; };
 		6BC160901436AF3500E166F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1607B1436AF3500E166F6 /* main.m */; };
-		6BC160911436AF3500E166F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1607B1436AF3500E166F6 /* main.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BEDC8C21439BD1100B65660 /* XmlPostLoginClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -708,12 +707,11 @@
 				6BB71C61143485E00023E288 /* RXMLElement.m in Sources */,
 				6BB71C63143485E00023E288 /* TBXML.m in Sources */,
 				6BBE14DE14356CE700C8AD19 /* JBDependencyBinder.m in Sources */,
-				6B86AD8D1435B65400AA7FD5 /* XmlPostLoginClientSpec.m in Sources */,
 				6B86AD911435B94A00AA7FD5 /* SessionContextHolderSpec.m in Sources */,
 				6BC160871436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6BC160891436AF3500E166F6 /* expanz_ui_ActivityViewController.m in Sources */,
 				6BC1608B1436AF3500E166F6 /* expanz_ui_LoginViewController.m in Sources */,
-				6BC160911436AF3500E166F6 /* main.m in Sources */,
+				6BEDC8C21439BD1100B65660 /* XmlPostLoginClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +831,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -858,6 +857,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
