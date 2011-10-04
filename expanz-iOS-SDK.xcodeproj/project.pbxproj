@@ -226,6 +226,8 @@
 		6B3F4900143ACDCA005C0A7A /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6B3F4902143ACDCA005C0A7A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6B3F4903143ACDCA005C0A7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
+		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6B701480143A9A900023756C /* RunUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B701499143A9AC60023756C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -577,6 +579,8 @@
 		6BCAFB8C14317B1B00575280 = {
 			isa = PBXGroup;
 			children = (
+				6B3F4963143AD4B6005C0A7A /* build-configuration.properties */,
+				6B3F4964143AD4B7005C0A7A /* build.xml */,
 				6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */,
 				6B932E9C1433E22100834A1B /* Core */,
 				6B932F89143456C500834A1B /* Model */,
@@ -908,10 +912,14 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Tests/Unit/RunUnitTests/RunUnitTests-Prefix.pch";
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Tests/Unit/RunUnitTests/RunUnitTests-Info.plist";
 				OTHER_LDFLAGS = (
+					"-lgcov",
 					"-lstdc++",
 					"-ObjC",
 					"-all_load",
@@ -930,10 +938,14 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Tests/Unit/RunUnitTests/RunUnitTests-Prefix.pch";
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Tests/Unit/RunUnitTests/RunUnitTests-Info.plist";
 				OTHER_LDFLAGS = (
+					"-lgcov",
 					"-lstdc++",
 					"-ObjC",
 					"-all_load",
@@ -1046,9 +1058,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1061,9 +1077,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
