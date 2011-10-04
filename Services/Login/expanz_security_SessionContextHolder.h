@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ex_security_SessionContextHolder: NSObject
+@interface expanz_security_SessionContextHolder: NSObject
 
 
 @property (nonatomic, retain) NSString* sessionToken; 

@@ -25,7 +25,7 @@
 - (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _loginClient = [[JSObjection globalInjector] getObject:@protocol(ex_security_LoginClient)];
+        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_security_LoginClient)];
     }
     return self;
 }

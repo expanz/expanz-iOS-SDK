@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ex_security_SessionRequest : NSObject
+@interface expanz_security_SessionRequest : NSObject
 
 #define kAuthenticationMode @"Primary" 
 #define kClientVersion @"iOS 1.0"

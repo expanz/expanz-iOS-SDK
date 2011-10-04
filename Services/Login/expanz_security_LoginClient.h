@@ -14,7 +14,7 @@
 
 
 /* ================================================================================================================== */
-@protocol ex_security_LoginClientDelegate <NSObject>
+@protocol expanz_security_LoginClientDelegate <NSObject>
 
 - (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext; 
 - (void) requestDidFailWithError:(NSError*)error; 
@@ -22,15 +22,15 @@
 @end
 
 /* ================================================================================================================== */
-@protocol ex_security_LoginClient <NSObject>
+@protocol expanz_security_LoginClient <NSObject>
 
 
-+ (id<ex_security_LoginClient>) loginClient;
++ (id<expanz_security_LoginClient>) loginClient;
 
 /** 
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */
-- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ex_security_LoginClientDelegate>)delegate;
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_security_LoginClientDelegate>)delegate;
 @end
 
 

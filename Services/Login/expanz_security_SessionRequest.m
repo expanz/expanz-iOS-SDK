@@ -11,7 +11,7 @@
 
 #import "JBPackageVoodoo.h"
 
-@implementation ex_security_SessionRequest
+@implementation expanz_security_SessionRequest
 
 #define kXmlTemplate @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateSession user=\"%@\" \
 password=\"%@\" appSite=\"%@\" authenticationMode=\"%@\" clientVersion=\"%@\" schemaVersion=\"%@\"/></ESA></xml>\

@@ -5,7 +5,7 @@
 /* ================================================================================================================== */
 #pragma mark Call-back methods for request access token. 
 
-@interface TestLoginClientDelegate : NSObject<ex_security_LoginClientDelegate>
+@interface TestLoginClientDelegate : NSObject<expanz_security_LoginClientDelegate>
 
 @property (nonatomic, retain) SessionContextHolder* sessionContextHolder;
 @property (nonatomic, retain) NSError* error; 
@@ -33,7 +33,7 @@ SPEC_BEGIN(XmlPostLoginClientSpec)
 
 describe(@"Manages authenticating with the site manager.", ^{
     
-    __block id<ex_security_LoginClient> loginClient; 
+    __block id<expanz_security_LoginClient> loginClient; 
     
     beforeEach(^{
         loginClient = [[XmlPostLoginClient alloc] init]; 

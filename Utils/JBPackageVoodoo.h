@@ -25,11 +25,11 @@
 
 
 /* ************************************************** Model ********************************************************* */
-#import "ex_security_SessionRequest.h"
-@compatibility_alias SessionRequest ex_security_SessionRequest;
+#import "expanz_security_SessionRequest.h"
+@compatibility_alias SessionRequest expanz_security_SessionRequest;
 
-#import "ex_security_SessionContextHolder.h"
-@compatibility_alias SessionContextHolder ex_security_SessionContextHolder;
+#import "expanz_security_SessionContextHolder.h"
+@compatibility_alias SessionContextHolder expanz_security_SessionContextHolder;
 
 
 /* ************************************************* Services ******************************************************* */
@@ -48,10 +48,10 @@
 
 
 /* ************************************************* Security ******************************************************* */
-#import "ex_security_LoginClient.h"
+#import "expanz_security_LoginClient.h"
 
-#import "ex_security_XmlPostLoginClient.h"
-@compatibility_alias XmlPostLoginClient ex_security_XmlPostLoginClient;
+#import "expanz_security_XmlPostLoginClient.h"
+@compatibility_alias XmlPostLoginClient expanz_security_XmlPostLoginClient;
 
 
 /* ******************************************* Dependency Injection ************************************************* */

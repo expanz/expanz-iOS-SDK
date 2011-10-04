@@ -14,9 +14,9 @@
 #import "ASIFormDataRequest.h"
 
 
-@implementation ex_security_XmlPostLoginClient
+@implementation expanz_security_XmlPostLoginClient
 
-objection_register(ex_security_XmlPostLoginClient)
+objection_register(expanz_security_XmlPostLoginClient)
 
 
 
@@ -42,7 +42,7 @@ objection_register(ex_security_XmlPostLoginClient)
 
 
 
-- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ex_security_LoginClientDelegate>)delegate {
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_security_LoginClientDelegate>)delegate {
     
     NSURL *url = [NSURL URLWithString:kCreateSessionUrl];    
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL: url];   

@@ -13,7 +13,7 @@
 #import "JBPackageVoodoo.h"
 
 
-@interface ex_security_XmlPostLoginClient : NSObject<ex_security_LoginClient>
+@interface expanz_security_XmlPostLoginClient : NSObject<expanz_security_LoginClient>
 
 
 
