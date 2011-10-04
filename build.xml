@@ -10,8 +10,8 @@
     --simulator.launch,
     --clean,
     --make.dirs,
-    --uispecs.build,
-    --uispecs.run"/>
+    --unit.tests.build,
+    --unit.tests.run"/>
 
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -23,6 +23,7 @@
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
         <mkdir dir="${reports.dir}"/>
+        <mkdir dir="${reports.dir}/tests"/>
     </target>
 
     <target name="--clean">
@@ -42,26 +43,28 @@
         </exec>
     </target>
 
-    <target name="--uispecs.build">
+    <target name="--unit.tests.build">
         <exec executable="xcodebuild" failonerror="true">
-            <arg line="-sdk iphonesimulator${sdk.version} -target ${uispecs.target.name}"/>
+            <arg line="-sdk iphonesimulator${sdk.version} -target ${unit.tests.target.name}"/>
         </exec>
     </target>
 
-    <target name="--uispecs.run">
-        <mkdir dir="${reports.dir}/tests"/>
-        <exec executable="${basedir}/ios-sim" outputproperty="uispecs.output" >
-            <arg line="launch ${target.dir}/Release-iphonesimulator/${uispecs.target.name}.app"/>
-            <arg line="--setenv CEDAR_HEADLESS_SPECS=0"/>
+    <target name="--unit.tests.run">    
+        <mkdir dir="${reports.dir}/tests/unit"/>        
+        <property name="unit.tests.report" value="${reports.dir}/tests/unit/unit-test-results.txt"/>
+        <exec executable="${basedir}/ios-sim" outputproperty="unit.tests.output" >
+            <arg line="launch ${target.dir}/Release-iphonesimulator/${unit.tests.target.name}.app"/>
+            <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
             <arg line="--setenv CEDAR_REPORTER_CLASS=CDRColorizedReporter"/>
         </exec>
 
         <!-- Write report to disk -->
-        <echo file="${reports.dir}/tests/report.txt" message="${uispecs.output}"/>
+        <echo file="${unit.tests.report}" message="${unit.tests.output}"/>
         <!-- Print report to console -->
-        <echo message="${uispecs.output}"/>
+        <echo message="${unit.tests.output}"/>
 
-        <loadfile srcfile="${reports.dir}/tests/report.txt" property="tests.failed">
+        <!-- TODO: This might need better matching for test failure -->
+        <loadfile srcfile="${unit.tests.report}" property="tests.failed">
             <filterchain>
                 <filterreader classname="org.apache.tools.ant.filters.LineContains">
                     <param type="contains" value="FAILURE"/>
@@ -75,7 +78,7 @@
         <exec executable="osascript" failonerror="true">
             <arg line="${temp.dir}/quit-simulator.script"/>
         </exec>
-        <fail if="tests.failed" message="Tests failed. Report is at ${reports.dir}/tests/report.txt"/>
+        <fail if="tests.failed" message="Tests failed. Report is at ${unit.tests.report}"/>
 
     </target>
 

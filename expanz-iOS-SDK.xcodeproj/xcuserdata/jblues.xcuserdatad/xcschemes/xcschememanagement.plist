@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UISpecs.xcscheme</key>
+		<key>RunUnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>expanz-iOS-SDK.xcscheme</key>
 		<dict>
@@ -17,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6B70143E143A91B70023756C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B70147F143A9A900023756C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6B932F4414344EFC00834A1B</key>
 		<dict>
 			<key>primary</key>

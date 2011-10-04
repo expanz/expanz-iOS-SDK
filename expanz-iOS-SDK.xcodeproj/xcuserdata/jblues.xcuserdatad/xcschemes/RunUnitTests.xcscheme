@@ -13,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B932F4414344EFC00834A1B"
-               BuildableName = "UISpecs.app"
-               BlueprintName = "UISpecs"
+               BlueprintIdentifier = "6B70147F143A9A900023756C"
+               BuildableName = "RunUnitTests.app"
+               BlueprintName = "RunUnitTests"
                ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,16 +27,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B932F6314344EFD00834A1B"
-               BuildableName = "UISpecsTests.octest"
-               BlueprintName = "UISpecsTests"
-               ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -48,9 +38,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B932F4414344EFC00834A1B"
-            BuildableName = "UISpecs.app"
-            BlueprintName = "UISpecs"
+            BlueprintIdentifier = "6B70147F143A9A900023756C"
+            BuildableName = "RunUnitTests.app"
+            BlueprintName = "RunUnitTests"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -65,9 +55,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B932F4414344EFC00834A1B"
-            BuildableName = "UISpecs.app"
-            BlueprintName = "UISpecs"
+            BlueprintIdentifier = "6B70147F143A9A900023756C"
+            BuildableName = "RunUnitTests.app"
+            BlueprintName = "RunUnitTests"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

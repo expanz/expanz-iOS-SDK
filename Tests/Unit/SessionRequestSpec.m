@@ -17,7 +17,7 @@ describe(@"Encapsulates the data that needs to be passed to the backend, to crea
     });
     
     it(@"Can be marshalled to XML for passing over the wire.", ^{
-        assertThat([sessionRequest toXml], equalTo(kXmlRequest));   
+        assertThat([sessionRequest toXml], equalTo(kXmlRequest));
     });
             
 });

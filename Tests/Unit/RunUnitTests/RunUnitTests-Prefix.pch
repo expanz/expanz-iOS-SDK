@@ -1,9 +1,8 @@
 //
-// Prefix header for all source files of the 'UISpecs' target in the 'UISpecs' project
+// Prefix header for all source files of the 'RunUnitTests' target in the 'RunUnitTests' project
 //
 
 #import <Availability.h>
-#import "Logging.h"
 
 #ifndef __IPHONE_3_0
 #warning "This project uses features only available in iPhone SDK 3.0 and later."
@@ -14,4 +13,4 @@
     #import <Foundation/Foundation.h>
 #endif
 
-
+#import "Logging.h"
