@@ -6,15 +6,14 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
     --make.dirs,
-    --clean,
     --simulator.launch,
-    --clean,
     --make.dirs,
     --unit.tests.build,
     --unit.tests.run,
     --coverage.report,
     --api.report"/>
 
+    <target name="clean" depends="--clean"/>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
