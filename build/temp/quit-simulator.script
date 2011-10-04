@@ -1,3 +1,0 @@
-
-            tell application "/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" to quit
-        

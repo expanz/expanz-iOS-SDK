@@ -1,4 +1,0 @@
-
-            tell application "/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" to launch
-            tell application "/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" to activate
-        
