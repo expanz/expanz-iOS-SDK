@@ -6,6 +6,7 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
     --make.dirs,
+    --clean, 
     --simulator.launch,
     --make.dirs,
     --unit.tests.build,
@@ -14,6 +15,11 @@
     --api.report"/>
 
     <target name="clean" depends="--clean"/>
+
+    <target name="fast">
+        <property name="fast" value="yes"/>
+    </target>
+
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -27,7 +33,23 @@
         <mkdir dir="${reports.dir}/tests"/>
     </target>
 
-    <target name="--clean">
+    <target name="dig.this">
+        <path id="list_1">
+            <fileset dir="${basedir}">
+                <include name="${basedir}/Core/**"/>
+            </fileset>
+        </path>
+
+        <pathconvert property="main.class.path" pathsep=""
+                     dirsep="." refid="list_1">
+            <map from="${basedir}/" to=''/>
+
+        </pathconvert>
+        <echo>${main.class.path}</echo>
+    </target>
+
+
+    <target name="--clean" unless="fast">
         <echo file="${temp.dir}/quit-simulator.script">
             tell application "${simulator.path}" to quit
         </echo>
