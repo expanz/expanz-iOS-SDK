@@ -1,0 +1,1862 @@
+TRunUnitTests
+v3
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/Info.plist Tests/Unit/RunUnitTests/RunUnitTests-Info.plist
+cProcessPCH /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch.gch Tests/Unit/RunUnitTests/RunUnitTests-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cLd /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests normal i386
+cGenerateDSYMFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+cCopyStringsFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/InfoPlist.strings Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings
+cCompileXIB /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib
+cTouch /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D93ED360000000000000110
+t1301540150
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004D93DFC500000000001C41E0
+t1301536709
+s1851872
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D93DF9F00000000000004CF
+t1301536671
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D93DEBB0000000000000AB3
+t1301536443
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D93DF6900000000002999B0
+t1301536617
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D93DFEA000000000029DA70
+t1301536746
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D93DFDD0000000000001466
+t1301536733
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
+c000000004D93E09800000000000000EB
+t1301536920
+s235
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004D93E09A000000000005C090
+t1301536922
+s376976
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D93E12E00000000000000C4
+t1301537070
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004D93E1B20000000000162C50
+t1301537202
+s1453136
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
+c000000004D93DEED0000000000001A58
+t1301536493
+s6744
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004D93DEF400000000000689C0
+t1301536500
+s428480
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D93ECBE0000000000000AA1
+t1301540030
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D93ED1B0000000000766870
+t1301540123
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
+c000000004D4F7A2B0000000000001B19
+t1297054251
+s6937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004A11E8210000000000000DE2
+t1242687521
+s3554
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
+c000000004D93D5D80000000000001533
+t1301534168
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/ifaddrs.h
+c000000004D93D5D800000000000008F5
+t1301534168
+s2293
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2/libxml/HTMLparser.h
+c000000004D93DF730000000000002401
+t1301536627
+s9217
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2/libxml/xmlsave.h
+c000000004D93DF7300000000000008D4
+t1301536627
+s2260
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2/libxml/xpath.h
+c000000004D93DF730000000000003F47
+t1301536627
+s16199
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2/libxml/xpathInternals.h
+c000000004D93DF730000000000004BF8
+t1301536627
+s19448
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
+c000000004D93D5D8000000000000307F
+t1301534168
+s12415
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
+c000000004D93E0AA0000000000006BAC
+t1301536938
+s27564
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet6/in6.h
+c000000004D93E0AA000000000000638F
+t1301536938
+s25487
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/objc/objc.h
+c000000004D93DBDB0000000000000B92
+t1301535707
+s2962
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/objc/runtime.h
+c000000004D93DBDB00000000000063AF
+t1301535707
+s25519
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdio.h
+c000000004D4F6E9A0000000000004763
+t1297051290
+s18275
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
+c000000004D93E0AE0000000000005ACF
+t1301536942
+s23247
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/zlib.h
+c000000004D93DBDD00000000000102A5
+t1301535709
+s66213
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libsqlite3.dylib
+c000000004D93DBFD0000000000099500
+t1301535741
+s627968
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libxml2.dylib
+c000000004D93DF73000000000011E3F0
+t1301536627
+s1172464
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libz.dylib
+c000000004D93DBDE00000000000123C0
+t1301535710
+s74688
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_LoginClient.h
+c000000004E85601A00000000000004CC
+t1317363738
+s1228
+i<Foundation/Foundation.h>
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.h
+c000000004E84FB41000000000000021B
+t1317337921
+s539
+i<Foundation/Foundation.h>
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m
+c000000004E85838F000000000000077A
+t1317372815
+s1914
+i<Objection-iOS/Objection.h>
+i"JBPackageVoodoo.h"
+i"ASIFormDataRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.h
+c000000004E4D0A860000000000000453
+t1313671814
+s1107
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m
+c000000004E4D0A860000000000003E08
+t1313671814
+s15880
+i"ASIAuthenticationDialog.h"
+i"ASIHTTPRequest.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASICacheDelegate.h
+c000000004E4D0A86000000000000141F
+t1313671814
+s5151
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.h
+c000000004E4D0A86000000000000072C
+t1313671814
+s1836
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m
+c000000004E4D0A860000000000001A4A
+t1313671814
+s6730
+i"ASIDataCompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.h
+c000000004E4D0A8600000000000006A3
+t1313671814
+s1699
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m
+c000000004E4D0A860000000000001906
+t1313671814
+s6406
+i"ASIDataDecompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.h
+c000000004E4D0A8600000000000006CD
+t1313671814
+s1741
+i<Foundation/Foundation.h>
+i"ASICacheDelegate.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m
+c000000004E4D0A860000000000004096
+t1313671814
+s16534
+i"ASIDownloadCache.h"
+i"ASIHTTPRequest.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.h
+c000000004E4D0A860000000000000A85
+t1313671814
+s2693
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+i"ASIHTTPRequestConfig.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m
+c000000004E4D0A860000000000002BD1
+t1313671814
+s11217
+i"ASIFormDataRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.h
+c000000004E4D0A86000000000000AFE9
+t1313671814
+s45033
+i<Foundation/Foundation.h>
+i<CFNetwork/CFNetwork.h>
+i<UIKit/UIKit.h>
+i<stdio.h>
+i"ASIHTTPRequestConfig.h"
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+i"ASICacheDelegate.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m
+c000000004E4D0A86000000000002CA17
+t1313671814
+s182807
+i"ASIHTTPRequest.h"
+i"Reachability.h"
+i"ASIAuthenticationDialog.h"
+i<MobileCoreServices/MobileCoreServices.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i"ASIInputStream.h"
+i"ASIDataDecompressor.h"
+i"ASIDataCompressor.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequestConfig.h
+c000000004E4D0A860000000000000478
+t1313671814
+s1144
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequestDelegate.h
+c000000004E4D0A86000000000000063E
+t1313671814
+s1598
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.h
+c000000004E4D0A8600000000000003C9
+t1313671814
+s969
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m
+c000000004E4D0A860000000000000C14
+t1313671814
+s3092
+i"ASIInputStream.h"
+i"ASIHTTPRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.h
+c000000004E4D0A86000000000000120D
+t1313671814
+s4621
+i<Foundation/Foundation.h>
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m
+c000000004E4D0A860000000000002C8D
+t1313671814
+s11405
+i"ASINetworkQueue.h"
+i"ASIHTTPRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIProgressDelegate.h
+c000000004E4D0A860000000000000678
+t1313671814
+s1656
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.h
+c000000004E4D0A860000000000000DF6
+t1313671814
+s3574
+i"ASIHTTPRequest.h"
+i<libxml/HTMLparser.h>
+i<libxml/xmlsave.h>
+i<libxml/xpath.h>
+i<libxml/xpathInternals.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m
+c000000004E4D0A86000000000000787A
+t1313671814
+s30842
+i"ASIWebPageRequest.h"
+i"ASINetworkQueue.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.h
+c000000004E4D0A86000000000000078B
+t1313671814
+s1931
+i"ASICloudFilesRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m
+c000000004E4D0A8600000000000015D8
+t1313671814
+s5592
+i"ASICloudFilesCDNRequest.h"
+i"ASICloudFilesContainerXMLParserDelegate.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.h
+c000000004E4D0A860000000000000341
+t1313671814
+s833
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m
+c000000004E4D0A8600000000000001F4
+t1313671814
+s500
+i"ASICloudFilesContainer.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.h
+c000000004E4D0A8600000000000005C2
+t1313671814
+s1474
+i"ASICloudFilesRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m
+c000000004E4D0A860000000000001183
+t1313671814
+s4483
+i"ASICloudFilesContainerRequest.h"
+i"ASICloudFilesContainer.h"
+i"ASICloudFilesContainerXMLParserDelegate.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.h
+c000000004E4D0A860000000000000306
+t1313671814
+s774
+i"ASICloudFilesRequest.h"
+i"ASINSXMLParserCompat.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m
+c000000004E4D0A860000000000000A4D
+t1313671814
+s2637
+i"ASICloudFilesContainerXMLParserDelegate.h"
+i"ASICloudFilesContainer.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.h
+c000000004E4D0A860000000000000258
+t1313671814
+s600
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m
+c000000004E4D0A8600000000000001E5
+t1313671814
+s485
+i"ASICloudFilesObject.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.h
+c000000004E4D0A860000000000000DE8
+t1313671814
+s3560
+i"ASICloudFilesRequest.h"
+i"ASINSXMLParserCompat.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m
+c000000004E4D0A860000000000002955
+t1313671814
+s10581
+i"ASICloudFilesObjectRequest.h"
+i"ASICloudFilesObject.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.h
+c000000004E4D0A860000000000000434
+t1313671814
+s1076
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m
+c000000004E4D0A860000000000000ECE
+t1313671814
+s3790
+i"ASICloudFilesRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASINSXMLParserCompat.h
+c000000004E4D0A860000000000000363
+t1313671814
+s867
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.h
+c000000004E4D0A8600000000000003CC
+t1313671814
+s972
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m
+c000000004E4D0A8600000000000002FC
+t1313671814
+s764
+i"ASIS3Bucket.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.h
+c000000004E4D0A86000000000000060E
+t1313671814
+s1550
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m
+c000000004E4D0A860000000000000787
+t1313671814
+s1927
+i"ASIS3BucketObject.h"
+i"ASIS3ObjectRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.h
+c000000004E4D0A860000000000000A2E
+t1313671814
+s2606
+i<Foundation/Foundation.h>
+i"ASIS3Request.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m
+c000000004E4D0A860000000000001817
+t1313671814
+s6167
+i"ASIS3BucketRequest.h"
+i"ASIS3BucketObject.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.h
+c000000004E4D0A860000000000000E1C
+t1313671814
+s3612
+i<Foundation/Foundation.h>
+i"ASIS3Request.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m
+c000000004E4D0A860000000000001533
+t1313671814
+s5427
+i"ASIS3ObjectRequest.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.h
+c000000004E4D0A8600000000000010E6
+t1313671814
+s4326
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+i"ASINSXMLParserCompat.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m
+c000000004E4D0A8600000000000028FC
+t1313671814
+s10492
+i"ASIS3Request.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.h
+c000000004E4D0A860000000000000325
+t1313671814
+s805
+i<Foundation/Foundation.h>
+i"ASIS3Request.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m
+c000000004E4D0A860000000000000A4B
+t1313671814
+s2635
+i"ASIS3ServiceRequest.h"
+i"ASIS3Bucket.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Flexible-iOS-Logging-1.0/Logging.h
+c000000004E712C0200000000000015D9
+t1316039682
+s5593
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.h
+c000000004E83BEDD0000000000000A67
+t1317256925
+s2663
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m
+c000000004E83BEDD00000000000025EE
+t1317256925
+s9710
+i"NSDataAdditions.h"
+i<zlib.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.h
+c000000004E83BEDD0000000000000BAB
+t1317256925
+s2987
+i<Foundation/Foundation.h>
+i"TBXML.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m
+c000000004E83BEDD0000000000001E55
+t1317256925
+s7765
+i"RXMLElement.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.h
+c000000004E83BEDD00000000000012D1
+t1317256925
+s4817
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m
+c000000004E83BEDD0000000000004704
+t1317256925
+s18180
+i"TBXML.h"
+i"NSDataAdditions.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.h
+c000000004E4D0A860000000000001D25
+t1313671814
+s7461
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i<netinet/in.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m
+c000000004E4D0A860000000000005E0C
+t1313671814
+s24076
+i<sys/socket.h>
+i<netinet/in.h>
+i<netinet6/in6.h>
+i<arpa/inet.h>
+i<ifaddrs.h>
+i<netdb.h>
+i<CoreFoundation/CoreFoundation.h>
+i"Reachability.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Cedar-iPhone
+c000000004E488F4900000000000A485C
+t1313378121
+s673884
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Headers/CDRExampleBase.h
+c000000004E488F490000000000000379
+t1313378121
+s889
+i<Foundation/Foundation.h>
+i"CDRExampleParent.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Headers/CDRExampleParent.h
+c000000004E488F49000000000000009E
+t1313378121
+s158
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Headers/CDRSharedExampleGroupPool.h
+c000000004E488F4900000000000003E1
+t1313378121
+s993
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Headers/CDRSpec.h
+c000000004E488F4900000000000004A4
+t1313378121
+s1188
+i<Foundation/Foundation.h>
+i"CDRExampleBase.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Cedar-iPhone.framework/Headers/SpecHelper.h
+c000000004E488F490000000000000176
+t1313378121
+s374
+i"CDRSpec.h"
+i"CDRSharedExampleGroupPool.h"
+i"CDRExampleParent.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCAllOf.h
+c000000004E488F4A0000000000000395
+t1313378122
+s917
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCAnyOf.h
+c000000004E488F4A0000000000000395
+t1313378122
+s917
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCBaseMatcher.h
+c000000004E488F4A000000000000024E
+t1313378122
+s590
+i<Foundation/Foundation.h>
+i"HCMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCDescribedAs.h
+c000000004E488F4A00000000000004A2
+t1313378122
+s1186
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCHasDescription.h
+c000000004E488F4A0000000000000338
+t1313378122
+s824
+i"HCInvocationMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCInvocationMatcher.h
+c000000004E488F4A0000000000000363
+t1313378122
+s867
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIs.h
+c000000004E488F4A00000000000003EA
+t1313378122
+s1002
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsAnything.h
+c000000004E488F4A000000000000044E
+t1313378122
+s1102
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsCloseTo.h
+c000000004E488F4A000000000000032E
+t1313378122
+s814
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsCollectionContaining.h
+c000000004E488F4A0000000000000369
+t1313378122
+s873
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsCollectionOnlyContaining.h
+c000000004E488F4A000000000000051D
+t1313378122
+s1309
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsDictionaryContaining.h
+c000000004E488F4A000000000000033B
+t1313378122
+s827
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsDictionaryContainingKey.h
+c000000004E488F4A0000000000000290
+t1313378122
+s656
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsDictionaryContainingValue.h
+c000000004E488F4A00000000000002A8
+t1313378122
+s680
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsEqual.h
+c000000004E488F4A00000000000002C4
+t1313378122
+s708
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsEqualIgnoringCase.h
+c000000004E488F4A00000000000002DC
+t1313378122
+s732
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsEqualIgnoringWhiteSpace.h
+c000000004E488F4A0000000000000338
+t1313378122
+s824
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsEqualToNumber.h
+c000000004E488F4A0000000000001113
+t1313378122
+s4371
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsIn.h
+c000000004E488F4A000000000000021F
+t1313378122
+s543
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsInstanceOf.h
+c000000004E488F4A00000000000002CC
+t1313378122
+s716
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsNil.h
+c000000004E488F4A00000000000002DC
+t1313378122
+s732
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsNot.h
+c000000004E488F4A000000000000033E
+t1313378122
+s830
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCIsSame.h
+c000000004E488F4A00000000000002B0
+t1313378122
+s688
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCMatcher.h
+c000000004E488F4A0000000000000686
+t1313378122
+s1670
+i"HCSelfDescribing.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCMatcherAssert.h
+c000000004E488F4A00000000000002BA
+t1313378122
+s698
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCNumberAssert.h
+c000000004E488F4A000000000000206E
+t1313378122
+s8302
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCOrderingComparison.h
+c000000004E488F4A00000000000005DD
+t1313378122
+s1501
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCSelfDescribing.h
+c000000004E488F4A0000000000000274
+t1313378122
+s628
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCStringContains.h
+c000000004E488F4A0000000000000286
+t1313378122
+s646
+i"HCSubstringMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCStringEndsWith.h
+c000000004E488F4A000000000000026F
+t1313378122
+s623
+i"HCSubstringMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCStringStartsWith.h
+c000000004E488F4A0000000000000281
+t1313378122
+s641
+i"HCSubstringMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/HCSubstringMatcher.h
+c000000004E488F4A000000000000012D
+t1313378122
+s301
+i"HCBaseMatcher.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/Headers/OCHamcrest.h
+c000000004E488F4A0000000000000402
+t1313378122
+s1026
+i"HCMatcherAssert.h"
+i"HCNumberAssert.h"
+i"HCAllOf.h"
+i"HCAnyOf.h"
+i"HCDescribedAs.h"
+i"HCIs.h"
+i"HCIsAnything.h"
+i"HCIsEqual.h"
+i"HCIsInstanceOf.h"
+i"HCIsNil.h"
+i"HCIsNot.h"
+i"HCIsSame.h"
+i"HCIsCollectionContaining.h"
+i"HCIsCollectionOnlyContaining.h"
+i"HCIsDictionaryContaining.h"
+i"HCIsDictionaryContainingKey.h"
+i"HCIsDictionaryContainingValue.h"
+i"HCIsIn.h"
+i"HCIsCloseTo.h"
+i"HCIsEqualToNumber.h"
+i"HCOrderingComparison.h"
+i"HCHasDescription.h"
+i"HCIsEqualIgnoringCase.h"
+i"HCIsEqualIgnoringWhiteSpace.h"
+i"HCStringContains.h"
+i"HCStringEndsWith.h"
+i"HCStringStartsWith.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/OCHamcrest-iPhone.framework/OCHamcrest-iPhone
+c000000004E488F4A0000000000135CCC
+t1313378122
+s1268940
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjection.h
+c000000004E488F4900000000000001CE
+t1313378121
+s462
+i<Foundation/Foundation.h>
+i"JSObjectionInjector.h"
+i"JSObjectionEntry.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionBindingEntry.h
+c000000004E488F4900000000000000B3
+t1313378121
+s179
+i<Foundation/Foundation.h>
+i"JSObjectionEntry.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionEntry.h
+c000000004E488F490000000000000246
+t1313378121
+s582
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionFunctions.h
+c000000004E488F4900000000000001DA
+t1313378121
+s474
+i<Foundation/Foundation.h>
+i<objc/runtime.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionInjector.h
+c000000004E488F49000000000000018F
+t1313378121
+s399
+i<Foundation/Foundation.h>
+i"JSObjectionModule.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionInjectorEntry.h
+c000000004E488F4900000000000001BC
+t1313378121
+s444
+i<Foundation/Foundation.h>
+i"JSObjectionEntry.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionModule.h
+c000000004E488F4900000000000003FB
+t1313378121
+s1019
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/JSObjectionProviderEntry.h
+c000000004E488F4900000000000001CC
+t1313378121
+s460
+i<Foundation/Foundation.h>
+i"JSObjectionEntry.h"
+i"JSObjectionModule.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/NSObject+Objection.h
+c000000004E488F490000000000000065
+t1313378121
+s101
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Headers/Objection.h
+c000000004E488F4900000000000003F7
+t1313378121
+s1015
+i<Foundation/Foundation.h>
+i<objc/objc.h>
+i<objc/runtime.h>
+i"JSObjectionModule.h"
+i"JSObjectionInjector.h"
+i"JSObjectionEntry.h"
+i"JSObjectionBindingEntry.h"
+i"NSObject+Objection.h"
+i"JSObjectionInjectorEntry.h"
+i"JSObjectionFunctions.h"
+i"JSObjectionProviderEntry.h"
+i"JSObjection.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks/Objection-iOS.framework/Objection-iOS
+c000000004E488F4900000000000585AC
+t1313378121
+s361900
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.h
+c000000004E8582E6000000000000031A
+t1317372646
+s794
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m
+c000000004E8589720000000000000805
+t1317374322
+s2053
+i"JBPackageVoodoo.h"
+i"RXMLElement.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.h
+c000000004E843D850000000000000359
+t1317289349
+s857
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m
+c000000004E84400A0000000000000757
+t1317289994
+s1879
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/SpecHelper.h
+c000000004E8A667B00000000000002E2
+t1317693051
+s738
+i<Cedar-iPhone/SpecHelper.h>
+i<OCHamcrest-iPhone/OCHamcrest.h>
+i<Cedar/SpecHelper.h>
+i<OCHamcrest/OCHamcrest.h>
+i<objc/runtime.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/RunUnitTests-Prefix.pch
+c000000004E8A6675000000000000015F
+t1317693045
+s351
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i"Logging.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings
+c000000004E8A6310000000000000002D
+t1317692176
+s45
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib
+c000000004E8A63100000000000002119
+t1317692176
+s8473
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m
+c000000004E8A6D6000000000000002AB
+t1317694816
+s683
+i<UIKit/UIKit.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m
+c000000004E858DAF0000000000000657
+t1317375407
+s1623
+i"SpecHelper.h"
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m
+c000000004E8A92000000000000000354
+t1317704192
+s852
+i"SpecHelper.h"
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.h
+c000000004E855EF100000000000002DA
+t1317363441
+s730
+i<Foundation/Foundation.h>
+i<Objection-iOS/Objection.h>
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m
+c000000004E85600E000000000000026F
+t1317363726
+s623
+i"JBDependencyBinder.h"
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBPackageVoodoo.h
+c000000004E85A0050000000000000803
+t1317380101
+s2051
+i"ex_security_SessionRequest.h"
+i"ex_security_SessionContextHolder.h"
+i"JBServiceLocator.h"
+i"expanz_ui_ActivityViewController.h"
+i"expanz_ui_LoginViewController.h"
+i"ex_security_LoginClient.h"
+i"ex_security_XmlPostLoginClient.h"
+i"JBDependencyBinder.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBServiceLocator.h
+c000000004E8448EB0000000000000256
+t1317292267
+s598
+i<Foundation/Foundation.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/Info.plist
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/PkgInfo
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/MainWindow.nib
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RunUnitTests.LinkFileList
+c000000004E8A95750000000000001607
+t1317705077
+s5639
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.h
+c000000004E85A7F200000000000002F3
+t1317382130
+s755
+i<UIKit/UIKit.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m
+c000000004E85A87C0000000000000E03
+t1317382268
+s3587
+i<Objection-iOS/Objection.h>
+i"expanz_iOS_SDKAppDelegate.h"
+i"JBPackageVoodoo.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.h
+c000000004E859EA100000000000000FE
+t1317379745
+s254
+i<UIKit/UIKit.h>
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m
+c000000004E859EA100000000000004A8
+t1317379745
+s1192
+i"expanz_ui_ActivityViewController.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.h
+c000000004E867CD10000000000000410
+t1317436625
+s1040
+i<UIKit/UIKit.h>
+i"JBPackageVoodoo.h"
+i"ex_security_LoginClient.h"
+
+N/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m
+c000000004E88F6A80000000000001455
+t1317598888
+s5205
+i<QuartzCore/QuartzCore.h>
+i"JBPackageVoodoo.h"
+
+N/var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch.gch
+t1317694497
+s11967952
+
+NTests/Unit/RunUnitTests/RunUnitTests-Info.plist
+c000000004E8A646B000000000000046A
+t1317692523
+s1130
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd0eee4f4cc3ab441^7ffb4ef5cc3ab441^---0#1#0#--18"Check dependencies
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.526852
+e339397877.754123
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m8cf886f5cc3ab441^2f17c1f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m0000000000000000^2810"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIAuthenticationDialog.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIAuthenticationDialog.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.825521
+e339397877.926440
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m3271d3f5cc3ab441^d82aedf5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m0000000000000000^2832"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesCDNRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.925860
+e339397877.980870
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m2e1fedf5cc3ab441^8598fbf5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m0000000000000000^2828"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainer.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.927611
+e339397878.013671
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m9f90edf5cc3ab441^19e703f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m0000000000000000^2856"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.992144
+e339397878.067690
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.mb516fef5cc3ab441^265311f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m0000000000000000^2896"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.014871
+e339397878.068335
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m74ed03f6cc3ab441^bf7d11f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m0000000000000000^2816"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObject.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.068987
+e339397878.214338
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m26c311f6cc3ab441^4ce036f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m0000000000000000^2844"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesObjectRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.068997
+e339397878.134586
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m6ec211f6cc3ab441^ed7d22f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m0000000000000000^2820"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASICloudFilesRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.535887
+e339397877.622195
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m3c4a89f5cc3ab441^ed469ff5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m0000000000000000^2786"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataCompressor.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataCompressor.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.564662
+e339397877.653690
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m3ba890f5cc3ab441^9357a7f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m0000000000000000^2794"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDataDecompressor.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDataDecompressor.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.569618
+e339397877.742655
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.mccee91f5cc3ab441^fc1dbef5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m0000000000000000^2782"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIDownloadCache.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIDownloadCache.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.623962
+e339397877.773580
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m552ea0f5cc3ab441^6e13c6f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m0000000000000000^2790"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIFormDataRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIFormDataRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.655000
+e339397878.892477
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.mcdc9a7f5cc3ab441^9678e4f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m0000000000000000^2774"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIHTTPRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIHTTPRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.743931
+e339397877.824191
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m51bcbef5cc3ab441^f3ffd2f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m0000000000000000^2774"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o Dependencies/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIInputStream.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIInputStream.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.755401
+e339397877.924581
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m247ec1f5cc3ab441^8eb0ecf5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m0000000000000000^2778"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASINetworkQueue.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASINetworkQueue.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.089615
+e339397878.137329
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.mf60a17f6cc3ab441^312823f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m0000000000000000^2768"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Bucket.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Bucket.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.136751
+e339397878.211506
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.mda1c23f6cc3ab441^a52d36f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m0000000000000000^2792"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketObject.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketObject.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.138526
+e339397878.260501
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m938d23f6cc3ab441^7fbd42f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m0000000000000000^2796"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3BucketRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.212785
+e339397878.312053
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m469436f6cc3ab441^4a4450f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m0000000000000000^2796"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ObjectRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.215642
+e339397878.353545
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.md34c37f6cc3ab441^2a8b5af6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m0000000000000000^2772"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3Request.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3Request.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.261800
+e339397878.335245
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m642043f6cc3ab441^91d155f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m0000000000000000^2800"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIS3ServiceRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.774877
+e339397878.088280
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.md97ac6f5cc3ab441^789816f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m0000000000000000^2822"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/ASIHTTPRequest/ASIWebPageRequest/ASIWebPageRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ASIWebPageRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.509396
+e339397877.568366
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m1f8282f5cc3ab441^7f8891f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m0000000000000000^2728"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o Utils/JBDependencyBinder.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Utils/JBDependencyBinder.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/JBDependencyBinder.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.313577
+e339397878.399999
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.mc05f50f6cc3ab441^8c6566f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m0000000000000000^2770"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o Dependencies/External/RaptureXML/NSDataAdditions.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/NSDataAdditions.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/NSDataAdditions.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.336525
+e339397878.465909
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m964056f6cc3ab441^e54477f6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m0000000000000000^2754"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o Dependencies/External/RaptureXML/RXMLElement.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/RXMLElement.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RXMLElement.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.404090
+e339397878.497687
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m618d67f6cc3ab441^5e677ff6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m0000000000000000^2762"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o Dependencies/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/Reachability/Reachability.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/Reachability.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.344372
+e339397877.411846
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.mc65258f5cc3ab441^8f6d69f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m0000000000000000^2762"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o Tests/Unit/SessionContextHolderSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionContextHolderSpec.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionContextHolderSpec.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.344329
+e339397877.412089
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m6d5358f5cc3ab441^677e69f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m0000000000000000^2738"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o Tests/Unit/SessionRequestSpec.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/SessionRequestSpec.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/SessionRequestSpec.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397878.354870
+e339397878.492196
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.mfaf25af6cc3ab441^a4ff7df6cc3ab441^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m0000000000000000^2730"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o Dependencies/External/RaptureXML/TBXML.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/External/RaptureXML/TBXML.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/TBXML.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.436740
+e339397877.525313
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.mdee86ff5cc3ab441^2d9686f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m0000000000000000^2784"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o Model/ex_security_SessionContextHolder.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionContextHolder.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionContextHolder.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.455271
+e339397877.534564
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m52b674f5cc3ab441^04e388f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m0000000000000000^2760"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o Model/ex_security_SessionRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Model/ex_security_SessionRequest.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_SessionRequest.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.413762
+e339397877.504826
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.ma7026af5cc3ab441^666781f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m0000000000000000^2774"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o Core/ex_security_XmlPostLoginClient.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Core/ex_security_XmlPostLoginClient.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/ex_security_XmlPostLoginClient.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.344634
+e339397877.435449
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m2a5358f5cc3ab441^f9856ff5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m0000000000000000^2774"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_iOS_SDKAppDelegate.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_iOS_SDKAppDelegate.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.390317
+e339397877.453948
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.mf20664f5cc3ab441^9c3574f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m0000000000000000^2802"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o expanz-iOS-SDK/expanz_ui_ActivityViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_ActivityViewController.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_ActivityViewController.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.413191
+e339397877.563321
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m15e269f5cc3ab441^d23490f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m0000000000000000^2790"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o expanz-iOS-SDK/expanz_ui_LoginViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK/expanz_ui_LoginViewController.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/expanz_ui_LoginViewController.o
+
+CCompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339397877.344326
+e339397877.388986
+r1
+xCompileC
+xbuild/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m015158f5cc3ab441^fab363f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m0000000000000000^2708"CompileC build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o Tests/Unit/RunUnitTests/main.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wmissing-prototypes -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-generated-files.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-own-target-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-all-target-headers.hmap -iquote /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/RunUnitTests-project-headers.hmap -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libsqllite -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources/i386 -I/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/DerivedSources -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/main.m -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/main.o
+
+CCompileXIB /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib
+s339397879.041127
+e339397879.442622
+r1
+xCompileXIB
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compiling /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib46980af7cc3ab441^164f71f7cc3ab441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib0000000000000000^761"CompileXIB Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/MainWindow.nib /Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+
+CCopyStringsFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/InfoPlist.strings Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings
+s339397879.041100
+e339397879.045973
+r1
+xCopyStringsFile
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj/InfoPlist.strings
+xTests/Unit/RunUnitTests/en.lproj/InfoPlist.strings
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings0f990af7cc3ab441^b1c40bf7cc3ab441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings0000000000000000^626"CopyStringsFile build/Release-iphonesimulator/RunUnitTests.app/en.lproj/InfoPlist.strings Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/en.lproj -- Tests/Unit/RunUnitTests/en.lproj/InfoPlist.strings
+
+CGenerateDSYMFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+s339397878.971234
+e339397879.032092
+r1
+xGenerateDSYMFile
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Generating /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM56b9f8f6cc3ab441^443608f7cc3ab441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM00f4b8d9ddffdf42^605"GenerateDSYMFile build/Release-iphonesimulator/RunUnitTests.app.dSYM build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/usr/bin/dsymutil /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app.dSYM
+
+CLd /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests normal i386
+s339397878.900027
+e339397878.963463
+r1
+xLd
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+xnormal
+xi386
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Link /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTestsa582e6f6cc3ab441^1ea5f6f6cc3ab441^---0#0#0#--1397"Ld build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests normal i386    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator -F/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Dependencies/Frameworks -filelist /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/expanz-iOS-SDK.build/Release-iphonesimulator/RunUnitTests.build/Objects-normal/i386/RunUnitTests.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -lstdc++ -ObjC -all_load -framework UIKit -framework Foundation -framework CoreGraphics -framework QuartzCore -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -lz -framework Cedar-iPhone -framework OCHamcrest-iPhone -framework Objection-iOS -lsqlite3 -lxml2 -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/RunUnitTests
+
+CProcessInfoPlistFile /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/Info.plist Tests/Unit/RunUnitTests/RunUnitTests-Info.plist
+s339397877.323730
+e339397877.327717
+r1
+xProcessInfoPlistFile
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/Info.plist
+xTests/Unit/RunUnitTests/RunUnitTests-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Process Tests/Unit/RunUnitTests/RunUnitTests-Info.plist2aff52f5cc3ab441^9be453f5cc3ab441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Tests/Unit/RunUnitTests/RunUnitTests-Info.plist0000000000000000^723"ProcessInfoPlistFile build/Release-iphonesimulator/RunUnitTests.app/Info.plist Tests/Unit/RunUnitTests/RunUnitTests-Info.plist    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-infoPlistUtility Tests/Unit/RunUnitTests/RunUnitTests-Info.plist -genpkginfo /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app/Info.plist
+
+CProcessPCH /var/folders/5d/ld9y9ktx3hb482ywhcy4ghj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RunUnitTests-Prefix-bmehnoeuobnrcgferucofjhldbmi/RunUnitTests-Prefix.pch.gch Tests/Unit/RunUnitTests/RunUnitTests-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+r0
+
+CTouch /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app
+s339397879.451423
+e339397879.457039
+r1
+xTouch
+x/Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app40a073f7cc3ab441^5b0975f7cc3ab441^---0#0#0#--407"Touch build/Release-iphonesimulator/RunUnitTests.app    cd /Users/jblues/ExpanzProjects/expanz-iOS-SDK    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/touch -c /Users/jblues/ExpanzProjects/expanz-iOS-SDK/build/Release-iphonesimulator/RunUnitTests.app
+

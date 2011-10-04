@@ -1,0 +1,4 @@
+...
+[DEBUG] 2011-10-04 13:11:23.960 RunUnitTests[23152:b303] -[ex_security_SessionContextHolder initWithXml:][Line 42] [DEBUG] Initializing SessionContextHolder with xml: <CreateSessionXResponse xmlns="http://www.expanz.com/ESAService"><CreateSessionXResult>net.tcp://127.0.0.1:8198/SessionManager1#634530077119838630:30</CreateSessionXResult><errorMessage>Existing session abandoned [19:19]&#xD;</errorMessage></CreateSessionXResponse>
+
+[DEBUG] 2011-10-04 13:11:23.962 RunUnitTests[23152:b303] -[ex_security_SessionContextHolder initWithXml:][Line 42] [DEBUG] Initializing SessionContextHolder with xml: <CreateSessionXResponse xmlns="http://www.expanz.com/ESAService"><CreateSessionXResult/><errorMessage>Unknown User</errorMessage></CreateSessionXResponse>

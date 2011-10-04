@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RunIntegrationTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>RunUnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<key>expanz-iOS-SDK.xcscheme</key>
 		<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>6B70147F143A9A900023756C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B7C5538143ACD65001B1164</key>
 		<dict>
 			<key>primary</key>
 			<true/>

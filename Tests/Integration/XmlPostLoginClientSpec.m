@@ -49,7 +49,7 @@ describe(@"Manages authenticating with the site manager.", ^{
             TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init];
             [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
             
-            [NSThread sleepForTimeInterval:2];
+            [NSThread sleepForTimeInterval:5];
             LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
             assertThat([loginDelegate sessionContextHolder], isNot(nil));
             [sessionRequest release];
