@@ -23,6 +23,9 @@
 
 /* ================================================== Constructors ================================================== */
 
+/**
+ * Create an autoreleased instance from XML. 
+ */
 + (id) fromXml:(NSString *)xml {
     return [[[self alloc] initWithXml:xml] autorelease];
 }
@@ -36,6 +39,9 @@
     return self;
 }
 
+/**
+ * Create an instance with XML. 
+ */
 - (id) initWithXml:(id)xml {
     self = [self init]; 
     if (self) {

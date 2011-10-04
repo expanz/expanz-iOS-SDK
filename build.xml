@@ -12,7 +12,9 @@
     --make.dirs,
     --unit.tests.build,
     --unit.tests.run,
-    --coverage.report"/>
+    --coverage.report,
+    --api.report"/>
+
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -25,7 +27,7 @@
         <mkdir dir="${reports.dir}"/>
         <mkdir dir="${reports.dir}/tests"/>
     </target>
-    
+
     <target name="--clean">
         <echo file="${temp.dir}/quit-simulator.script">
             tell application "${simulator.path}" to quit
@@ -35,7 +37,7 @@
         </exec>
 
         <delete dir="${target.dir}"/>
-        <delete dir="${user.home}/Library/Application Support/iPhone Simulator/4.3.2/Applications" />
+        <delete dir="${user.home}/Library/Application Support/iPhone Simulator/4.3.2/Applications"/>
         <mkdir dir="${user.home}/Library/Application Support/iPhone Simulator/4.3.2/Applications"/>
     </target>
 
@@ -56,10 +58,11 @@
         </exec>
     </target>
 
-    <target name="--unit.tests.run">    
-        <mkdir dir="${reports.dir}/tests/unit"/>        
+    <target name="--unit.tests.run">
+        <mkdir dir="${reports.dir}/tests/unit"/>
         <property name="unit.tests.report" value="${reports.dir}/tests/unit/unit-test-results.txt"/>
-        <exec executable="${basedir}/ios-sim" outputproperty="unit.tests.output" failonerror="true" failifexecutionfails="true">
+        <exec executable="${basedir}/ios-sim" outputproperty="unit.tests.output" failonerror="true"
+              failifexecutionfails="true">
             <arg line="launch ${target.dir}/Release-iphonesimulator/${unit.tests.target.name}.app"/>
             <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
             <arg line="--setenv CEDAR_REPORTER_CLASS=CDRColorizedReporter"/>
@@ -92,16 +95,40 @@
         <mkdir dir="${coverage.reports.dir}"/>
 
         <echo file="${temp.dir}/geninfo.sh">
-            geninfo ${coverage.datafile.dir}/${coverage.class.prefix}* --output-filename ${unit.tests.target.name}.info
+            geninfo ${coverage.datafile.dir}/${coverage.class.prefix}* --output-filename ${temp.dir}/${unit.tests.target.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/geninfo.sh"/>
         <exec executable="${temp.dir}/geninfo.sh" failonerror="true" failifexecutionfails="true"/>
 
         <echo file="${temp.dir}/genhtml.sh">
-            genhtml -o ${coverage.reports.dir} ${unit.tests.target.name}.info
+            genhtml -o ${coverage.reports.dir} ${temp.dir}/${unit.tests.target.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>
+    </target>
+
+    <target name="--api.report">
+        <mkdir dir="${reports.dir}/api"/>
+        <mkdir dir="${user.home}/Library/Developer/Shared"/>
+        <mkdir dir="${user.home}/Library/Developer/Shared/Documentation"/>
+        <mkdir dir="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
+        <delete file="${basedir}/docset-installed.txt"/>
+
+        <exec executable="appledoc">
+            <arg line="--project-name=${module.name}"/>
+            <arg line="--project-company=${module.company}"/>
+            <arg line="--company-id=${module.company}"/>
+            <arg line="-h --keep-undocumented-objects --keep-undocumented-members"/>
+            <arg line="${documentation.include}"/>
+        </exec>
+
+        <loadfile srcfile="${basedir}/docset-installed.txt" property="docset.installed"/>
+        <fail unless="docset.installed" message="Error creating documentation"/>
+
+       <property name="docs.dir" value="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
+        <copy todir="${reports.dir}/api">
+            <fileset dir="${docs.dir}/${module.company}.${module.name}.docset/Contents/Resources/Documents"/>
+        </copy>
     </target>
 
 
