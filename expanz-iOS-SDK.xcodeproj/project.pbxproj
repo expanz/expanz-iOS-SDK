@@ -131,18 +131,18 @@
 		6B7C553C143ACD65001B1164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6B7C553D143ACD65001B1164 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
-		6B915A89143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m */; };
-		6B915A8A143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m */; };
-		6B915A8B143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m */; };
-		6B915A8C143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */; };
-		6B915A8D143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */; };
-		6B915A8E143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */; };
-		6B915A8F143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
-		6B915A90143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
-		6B915A91143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
-		6B915A94143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
-		6B915A95143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
-		6B915A96143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
+		6B915A89143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
+		6B915A8A143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
+		6B915A8B143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
+		6B915A8C143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
+		6B915A8D143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
+		6B915A8E143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
+		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
+		6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
+		6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
+		6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
+		6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
+		6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
 		6B932EAF1433E22100834A1B /* JBDependencyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA61433E22100834A1B /* JBDependencyBinder.m */; };
 		6B932EB21433E2D600834A1B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB11433E2D600834A1B /* Objection-iOS.framework */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -238,19 +238,21 @@
 		6B70149D143A9AC60023756C /* RunUnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RunUnitTests-Info.plist"; sourceTree = "<group>"; };
 		6B70149E143A9AC60023756C /* RunUnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RunUnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		6B701531143A9D920023756C /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
+		6B75024A143C66AD00444AA9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Dependencies/Frameworks/OCMock.framework; sourceTree = "<group>"; };
 		6B7C5539143ACD65001B1164 /* RunIntegrationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunIntegrationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientSpec.m; sourceTree = "<group>"; };
 		6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextHolderSpec.m; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		6B915A81143BC8BB005EFEFC /* expanz_security_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_security_LoginClient.h; sourceTree = "<group>"; };
-		6B915A82143BC8BB005EFEFC /* expanz_security_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_security_SessionContextHolder.h; sourceTree = "<group>"; };
-		6B915A83143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_security_SessionContextHolder.m; sourceTree = "<group>"; };
-		6B915A84143BC8BB005EFEFC /* expanz_security_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_security_SessionRequest.h; sourceTree = "<group>"; };
-		6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_security_SessionRequest.m; sourceTree = "<group>"; };
-		6B915A86143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_security_XmlPostLoginClient.h; sourceTree = "<group>"; };
-		6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_security_XmlPostLoginClient.m; sourceTree = "<group>"; };
-		6B915A92143BCC6E005EFEFC /* expanz_session_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_session_SessionDataRequest.h; sourceTree = "<group>"; };
-		6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_session_SessionDataRequest.m; sourceTree = "<group>"; };
+		6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClient.h; sourceTree = "<group>"; };
+		6B915A82143BC8BB005EFEFC /* expanz_service_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionContextHolder.h; sourceTree = "<group>"; };
+		6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
+		6B915A84143BC8BB005EFEFC /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
+		6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
+		6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
+		6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
+		6B915A92143BCC6E005EFEFC /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
+		6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jb_xml_Serializable.h; sourceTree = "<group>"; };
 		6B932EA51433E22100834A1B /* JBDependencyBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDependencyBinder.h; sourceTree = "<group>"; };
 		6B932EA61433E22100834A1B /* JBDependencyBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDependencyBinder.m; sourceTree = "<group>"; };
@@ -520,13 +522,13 @@
 		6B915A80143BC8BB005EFEFC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6B915A81143BC8BB005EFEFC /* expanz_security_LoginClient.h */,
-				6B915A82143BC8BB005EFEFC /* expanz_security_SessionContextHolder.h */,
-				6B915A83143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m */,
-				6B915A84143BC8BB005EFEFC /* expanz_security_SessionRequest.h */,
-				6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */,
-				6B915A86143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.h */,
-				6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */,
+				6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */,
+				6B915A82143BC8BB005EFEFC /* expanz_service_SessionContextHolder.h */,
+				6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */,
+				6B915A84143BC8BB005EFEFC /* expanz_service_SessionRequest.h */,
+				6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */,
+				6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */,
+				6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -534,8 +536,9 @@
 		6B915A88143BC8BB005EFEFC /* SessionData */ = {
 			isa = PBXGroup;
 			children = (
-				6B915A92143BCC6E005EFEFC /* expanz_session_SessionDataRequest.h */,
-				6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */,
+				6B915A92143BCC6E005EFEFC /* expanz_service_SessionDataRequest.h */,
+				6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */,
+				6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */,
 			);
 			path = SessionData;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B75024A143C66AD00444AA9 /* OCMock.framework */,
 				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
 				6B932F351433FA4000834A1B /* MobileCoreServices.framework */,
 				6B932F2F1433F97900834A1B /* SystemConfiguration.framework */,
@@ -794,10 +798,10 @@
 				6B3F494A143ACDCA005C0A7A /* RXMLElement.m in Sources */,
 				6B3F494D143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F4950143ACDCA005C0A7A /* Reachability.m in Sources */,
-				6B915A8A143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
-				6B915A8D143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
-				6B915A90143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
-				6B915A95143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
+				6B915A8A143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
+				6B915A8D143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
+				6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 				6B750248143C4FFB00444AA9 /* SessionDataRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -837,10 +841,10 @@
 				6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */,
 				6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */,
 				6B3F4962143ACE27005C0A7A /* JBDependencyBinder.m in Sources */,
-				6B915A8B143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
-				6B915A8E143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
-				6B915A91143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
-				6B915A96143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
+				6B915A8B143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
+				6B915A8E143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
+				6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,10 +883,10 @@
 				6B3F4949143ACDCA005C0A7A /* RXMLElement.m in Sources */,
 				6B3F494C143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F494F143ACDCA005C0A7A /* Reachability.m in Sources */,
-				6B915A89143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
-				6B915A8C143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
-				6B915A8F143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
-				6B915A94143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
+				6B915A89143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
+				6B915A8C143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
+				6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

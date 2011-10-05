@@ -26,22 +26,22 @@
 /* ================================================================================================================== */
 #pragma mark Login
 
-#import "expanz_security_SessionRequest.h"
-@compatibility_alias SessionRequest expanz_security_SessionRequest;
+#import "expanz_service_SessionRequest.h"
+@compatibility_alias SessionRequest expanz_service_SessionRequest;
 
-#import "expanz_security_SessionContextHolder.h"
-@compatibility_alias SessionContextHolder expanz_security_SessionContextHolder;
+#import "expanz_service_SessionContextHolder.h"
+@compatibility_alias SessionContextHolder expanz_service_SessionContextHolder;
 
-#import "expanz_security_LoginClient.h"
-#import "expanz_security_XmlPostLoginClient.h"
-@compatibility_alias XmlPostLoginClient expanz_security_XmlPostLoginClient;
+#import "expanz_service_LoginClient.h"
+#import "expanz_service_XmlPostLoginClient.h"
+@compatibility_alias XmlPostLoginClient expanz_service_XmlPostLoginClient;
 
 
 /* ================================================================================================================== */
 #pragma mark GetSessionData
-#import "expanz_session_SessionDataRequest.h"
-@class expanz_session_SessionDataRequest;
-@compatibility_alias SessionDataRequest expanz_session_SessionDataRequest;
+#import "expanz_service_SessionDataRequest.h"
+@class expanz_service_SessionDataRequest;
+@compatibility_alias SessionDataRequest expanz_service_SessionDataRequest;
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ User Interface ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

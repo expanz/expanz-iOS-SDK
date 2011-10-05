@@ -11,7 +11,19 @@
 
 #import "JBPackageVoodoo.h"
 
-@implementation expanz_security_SessionRequest
+/* ================================================================================================================== */
+
+@interface expanz_service_SessionRequest(private)
+
+- (void) setUserName:(NSString*)userName;
+- (void) setPassword:(NSString*)password;
+- (void) setAppsite:(NSString*)appSite;
+
+@end
+
+/* ================================================================================================================== */
+
+@implementation expanz_service_SessionRequest
 
 @synthesize userName = _userName;
 @synthesize password = _password; 
@@ -20,8 +32,7 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init
-{
+- (id) init {
     self = [super init];
     if (self) {
         // Initialization code here.
@@ -30,12 +41,10 @@
 }
 
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
-    self = [self init];
-    if (self) {
-        self.userName = userName; 
-        self.password = password; 
-        self.appSite = appSite;
-    }
+    self = [self init];   
+    [self setUserName:userName];
+    [self setPassword:password];
+    [self setAppsite:appSite];    
     return self; 
 }
 
@@ -61,5 +70,24 @@ schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
     [_appSite release];
     [super dealloc];
 }
+
+/* ================================================== Private Methods =============================================== */
+
+- (void) setUserName:(NSString*)userName {
+    _userName = userName;
+    [userName retain];    
+}
+
+- (void) setPassword:(NSString*)password {
+    _password = password;
+    [password retain];
+}
+
+- (void) setAppsite:(NSString*)appSite {
+    _appSite = appSite;
+    [appSite retain];
+}
+
+
 
 @end

@@ -11,16 +11,15 @@
 
 #import <UIKit/UIKit.h>
 #import "JBPackageVoodoo.h"
-#import "expanz_security_LoginClient.h"
 
-@interface expanz_ui_LoginViewController : UIViewController<expanz_security_LoginClientDelegate> {
+@interface expanz_ui_LoginViewController : UIViewController<expanz_service_LoginClientDelegate> {
 
 @private
     UITextField* _fieldWithCurrentFocus; 
         
 }
 
-@property (nonatomic, readonly) id<expanz_security_LoginClient> loginClient; 
+@property (nonatomic, readonly) id<expanz_service_LoginClient> loginClient; 
 @property (nonatomic, readonly) IBOutlet UITextField* userName;
 @property (nonatomic, readonly) IBOutlet UITextField* password;
 @property (nonatomic, readonly) IBOutlet UIButton* loginButton; 

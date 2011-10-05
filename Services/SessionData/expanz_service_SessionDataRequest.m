@@ -9,21 +9,32 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_session_SessionDataRequest.h"
+#import "expanz_service_SessionDataRequest.h"
 
 
 
-@implementation expanz_session_SessionDataRequest
+@implementation expanz_service_SessionDataRequest
 
 @synthesize sessionToken = _sessionToken;
 
 /* ================================================== Constructors ================================================== */
-- (id)initWithSessionToken:(NSString*)sessionToken {
+
+#pragma mark 'dedicated initializer' 
+- (id) init {
     self = [super init];
     if (self) {
-        _sessionToken = sessionToken; 
-        [_sessionToken retain];
+        // Initialization code here.
     }    
+    return self;
+}
+
+/**
+ * Initializes an instance using the supplied session token. 
+ */
+- (id)initWithSessionToken:(NSString*)sessionToken {
+    self = [self init];
+    _sessionToken = sessionToken; 
+    [_sessionToken retain];
     return self;
 }
 
@@ -41,7 +52,7 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_sessionToken dealloc];
+    [_sessionToken release];
     [super dealloc];
     
 }

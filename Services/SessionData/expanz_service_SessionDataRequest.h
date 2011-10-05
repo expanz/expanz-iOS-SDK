@@ -11,13 +11,15 @@
 
 #import <Foundation/Foundation.h>
 #import "JBPackageVoodoo.h"
+#import "jb_xml_Serializable.h"
 
 
-@interface expanz_security_XmlPostLoginClient : NSObject<expanz_security_LoginClient>
+@interface expanz_service_SessionDataRequest : NSObject<jb_xml_Serializable>
 
 
 
+@property (nonatomic, readonly) NSString* sessionToken;
+
+- (id) initWithSessionToken:(NSString*)sessionToken; 
 
 @end
-
-

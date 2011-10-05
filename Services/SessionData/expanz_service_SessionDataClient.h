@@ -1,5 +1,5 @@
 //
-//  jb_xml_Serializable.h
+//  expanz_service_SessionDataClient.h
 //  expanz-iOS-SDK
 //
 //  Created by Jasper Blues on 10/5/11.
@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol jb_xml_Serializable <NSObject>
-
-/**
- * Returns an XML representation of the class instance. 
- */
-- (NSString*) toXml;
+@protocol expanz_service_SessionDataClient <NSObject>
 
 @end

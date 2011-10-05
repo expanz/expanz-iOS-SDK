@@ -9,19 +9,15 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
 #import <Foundation/Foundation.h>
+#import "JBPackageVoodoo.h"
 
-@interface expanz_security_SessionContextHolder: NSObject
+
+@interface expanz_service_XmlPostLoginClient : NSObject<expanz_service_LoginClient>
 
 
-@property (nonatomic, retain) NSString* sessionToken; 
-@property (nonatomic) BOOL hasError; 
-@property (nonatomic, retain) NSString* errorMessage;
-@property (nonatomic) BOOL hasWarning;
-@property (nonatomic, retain) NSString* warningMessage;
 
-+ (id) fromXml:(NSString*)xml;
-- (id) initWithXml:(NSString*)xml; 
 
 @end
+
+

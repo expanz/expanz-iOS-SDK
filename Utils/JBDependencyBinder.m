@@ -16,7 +16,7 @@
 @implementation JBDependencyBinder
 
 - (void)configure {
-    [self bind:[expanz_security_XmlPostLoginClient loginClient] toProtocol:@protocol(expanz_security_LoginClient)];  
+    [self bind:[expanz_service_XmlPostLoginClient loginClient] toProtocol:@protocol(expanz_service_LoginClient)];  
 }
 
 

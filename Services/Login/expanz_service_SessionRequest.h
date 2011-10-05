@@ -13,16 +13,20 @@
 #import "JBPackageVoodoo.h"
 #import "jb_xml_Serializable.h"
 
-@interface expanz_security_SessionRequest : NSObject<jb_xml_Serializable>
+@interface expanz_service_SessionRequest : NSObject<jb_xml_Serializable>
 
 #define kAuthenticationMode @"Primary" 
 #define kClientVersion @"iOS 1.0"
 #define kSchemaVersion @"2.0"
 
-@property (nonatomic, retain) NSString* userName; 
-@property (nonatomic, retain) NSString* password;
-@property (nonatomic, retain) NSString* appSite;
+@property (nonatomic, readonly) NSString* userName; 
+@property (nonatomic, readonly) NSString* password;
+@property (nonatomic, readonly) NSString* appSite;
 
+/**
+ * Initializes an instance using the supplied session token. 
+ */
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
 
 @end
+

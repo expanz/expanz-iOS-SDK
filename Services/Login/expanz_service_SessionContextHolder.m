@@ -13,7 +13,7 @@
 #import "JBPackageVoodoo.h"
 #import "RXMLElement.h"
 
-@implementation expanz_security_SessionContextHolder
+@implementation expanz_service_SessionContextHolder
 
 @synthesize sessionToken = _sessionToken;
 @synthesize hasError = _hasError; 
