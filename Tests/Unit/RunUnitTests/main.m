@@ -14,7 +14,7 @@
 int main(int argc, char *argv[]) {
  
     
-    [NSThread sleepForTimeInterval:3];  
+    [NSThread sleepForTimeInterval:0.5];  
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];    
     int retVal = UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");
     [pool release];

@@ -23,55 +23,55 @@
 
 /* ================================================== Constructors ================================================== */
 
-/**
- * Create an autoreleased instance from XML. 
- */
 + (id) fromXml:(NSString*)xml {
     return [[[self alloc] initWithXml:xml] autorelease];
 }
 
 - (id) init {
     self = [super init];
-    if (self) {
-        // Initialization code here.
+    if (!self) {
+        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
     }
-    
+    //Initialization code here. 
     return self;
 }
 
-/**
- * Create an instance with XML. 
- */
 - (id) initWithXml:(NSString*)xml {
     self = [self init]; 
-    if (self) {
-        LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
-        RXMLElement* rootElement = [RXMLElement elementFromXMLString:xml];
-        RXMLElement* sessionToken = [rootElement child:@"CreateSessionXResult"];
-        RXMLElement* error = [rootElement child:@"errorMessage"];
+    LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
+    RXMLElement* rootElement = [RXMLElement elementFromXMLString:xml];
+    RXMLElement* sessionToken = [rootElement child:@"CreateSessionXResult"];
+    RXMLElement* error = [rootElement child:@"errorMessage"];
 
-        if (sessionToken.text.length > 0) {
-            self.sessionToken = sessionToken.text;
-            if (error != nil) {
-                self.hasWarning = YES; 
-                self.warningMessage = error.text; 
-            }
+    if (sessionToken.text.length > 0) {
+        self.sessionToken = sessionToken.text;
+        if (error != nil) {
+            self.hasWarning = YES; 
+            self.warningMessage = error.text; 
         }
-        else {            
-            if (error != nil) {
-                self.hasError = YES; 
-                self.errorMessage = error.text;
-            }
-        }        
     }
+    else {            
+        if (error != nil) {
+            self.hasError = YES; 
+            self.errorMessage = error.text;
+        }
+        else {
+            [NSException raise:@"Can't initialize with Xml" 
+                        format:@"Contains neither a session token or an error message."];
+        }
+    }        
     return self; 
 }
+
+
 
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {    
     [_sessionToken release];
+    [_errorMessage release];
+    [_warningMessage release];
     [super dealloc];
 }
 

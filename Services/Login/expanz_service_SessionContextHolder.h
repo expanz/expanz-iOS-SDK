@@ -21,7 +21,14 @@
 @property (nonatomic) BOOL hasWarning;
 @property (nonatomic, retain) NSString* warningMessage;
 
+/**
+ * Create an autoreleased instance from XML. 
+ */
 + (id) fromXml:(NSString*)xml;
+
+/**
+ * Create an instance with XML. 
+ */
 - (id) initWithXml:(NSString*)xml; 
 
 @end
