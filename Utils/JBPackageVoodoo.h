@@ -19,24 +19,32 @@
 @end
 
 
-/* *************************************************** Dao ********************************************************** */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Services ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#import "JBServiceLocator.h"
 
 
+/* ================================================================================================================== */
+#pragma mark Login
 
-
-/* ************************************************** Model ********************************************************* */
 #import "expanz_security_SessionRequest.h"
 @compatibility_alias SessionRequest expanz_security_SessionRequest;
 
 #import "expanz_security_SessionContextHolder.h"
 @compatibility_alias SessionContextHolder expanz_security_SessionContextHolder;
 
+#import "expanz_security_LoginClient.h"
+#import "expanz_security_XmlPostLoginClient.h"
+@compatibility_alias XmlPostLoginClient expanz_security_XmlPostLoginClient;
 
-/* ************************************************* Services ******************************************************* */
-#import "JBServiceLocator.h"
+
+/* ================================================================================================================== */
+#pragma mark GetSessionData
+#import "expanz_session_SessionDataRequest.h"
+@class expanz_session_SessionDataRequest;
+@compatibility_alias SessionDataRequest expanz_session_SessionDataRequest;
 
 
-/* *********************************************** User Interface *************************************************** */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ User Interface ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #import "expanz_ui_ActivityViewController.h"
 @compatibility_alias ActivityViewController expanz_ui_ActivityViewController;
 
@@ -44,17 +52,7 @@
 @compatibility_alias LoginViewController expanz_ui_LoginViewController;
 
 
-/* *************************************************** Utils ******************************************************** */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Utils ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #import "jb_xml_Serializable.h"
-
-
-/* ************************************************* Security ******************************************************* */
-#import "expanz_security_LoginClient.h"
-
-#import "expanz_security_XmlPostLoginClient.h"
-@compatibility_alias XmlPostLoginClient expanz_security_XmlPostLoginClient;
-
-
-/* ******************************************* Dependency Injection ************************************************* */
 #import "JBDependencyBinder.h"
 
