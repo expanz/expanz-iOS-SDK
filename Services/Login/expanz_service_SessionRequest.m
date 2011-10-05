@@ -34,9 +34,10 @@
 
 - (id) init {
     self = [super init];
-    if (self) {
-        // Initialization code here.
-    }    
+    if (!self) {
+        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
+    }
+    //Initialization code here. 
     return self;
 }
 

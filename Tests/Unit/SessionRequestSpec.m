@@ -16,8 +16,18 @@ describe(@"Encapsulates the data that needs to be passed to the backend, to crea
         sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" appSite:@"SALESAPP"];
     });
     
+    it(@"should provide immutable userName, password and appSite properties.", ^{
+        assertThat(sessionRequest.userName, equalTo(@"demo"));
+        assertThat(sessionRequest.password, equalTo(@"demo3"));
+        assertThat(sessionRequest.appSite, equalTo(@"SALESAPP"));
+    });
+    
     it(@"Can be marshalled to XML for passing over the wire.", ^{
         assertThat([sessionRequest toXml], equalTo(kXmlRequest));
+    });
+    
+    afterEach(^{
+        [sessionRequest release];
     });
             
 });

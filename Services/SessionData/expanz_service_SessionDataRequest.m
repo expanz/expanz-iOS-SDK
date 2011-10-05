@@ -28,9 +28,7 @@
     return self;
 }
 
-/**
- * Initializes an instance using the supplied session token. 
- */
+
 - (id)initWithSessionToken:(NSString*)sessionToken {
     self = [self init];
     _sessionToken = sessionToken; 
