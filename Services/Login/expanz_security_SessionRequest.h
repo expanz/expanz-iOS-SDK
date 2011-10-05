@@ -19,11 +19,6 @@
 #define kClientVersion @"iOS 1.0"
 #define kSchemaVersion @"2.0"
 
-#define kSessionRequestXml @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA>\
-<CreateSession user=\"%@\" password=\"%@\" appSite=\"%@\" authenticationMode=\"%@\" clientVersion=\"%@\" \
-schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
-
-
 @property (nonatomic, retain) NSString* userName; 
 @property (nonatomic, retain) NSString* password;
 @property (nonatomic, retain) NSString* appSite;

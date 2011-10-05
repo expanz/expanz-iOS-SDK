@@ -11,8 +11,7 @@
 
 #import "expanz_session_SessionDataRequest.h"
 
-#define kSessionDataRequestXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
-</xml><sessionHandle>%@</sessionHandle></ExecX>"
+
 
 @implementation expanz_session_SessionDataRequest
 
@@ -31,15 +30,18 @@
 /* ================================================ Delegate Methods ================================================ */
 #pragma mark jb_xml_Serializable
 
+#define kSessionDataRequestXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
+</xml><sessionHandle>%@</sessionHandle></ExecX>"
+
 - (NSString*) toXml {
-    return nil;
+    return [NSString stringWithFormat:kSessionDataRequestXml, _sessionToken];
 }
 
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    
+    [_sessionToken dealloc];
     [super dealloc];
     
 }

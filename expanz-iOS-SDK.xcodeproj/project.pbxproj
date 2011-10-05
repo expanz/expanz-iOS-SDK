@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
+		6B1EBE4D143C424D000191FE /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */; };
 		6B3F48B9143ACDB8005C0A7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F48B2143ACDB8005C0A7A /* InfoPlist.strings */; };
 		6B3F48BA143ACDB8005C0A7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F48B2143ACDB8005C0A7A /* InfoPlist.strings */; };
 		6B3F48BE143ACDB8005C0A7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F48B6143ACDB8005C0A7A /* main.m */; };
@@ -165,6 +166,7 @@
 
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataRequestSpec.m; sourceTree = "<group>"; };
 		6B3F48B3143ACDB8005C0A7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B3F48B6143ACDB8005C0A7A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B3F48B7143ACDB8005C0A7A /* RunIntegrationTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RunIntegrationTests-Info.plist"; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 				6B701497143A9AC60023756C /* RunUnitTests */,
 				6B932F7F1434513700834A1B /* SessionRequestSpec.m */,
 				6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */,
+				6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				6B915A8C143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
 				6B915A94143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
+				6B1EBE4D143C424D000191FE /* SessionDataRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@
 
 @interface expanz_session_SessionDataRequest : NSObject<jb_xml_Serializable>
 
+
+
 @property (nonatomic, readonly) NSString* sessionToken;
 
 - (id) initWithSessionToken:(NSString*)sessionToken; 

@@ -19,9 +19,6 @@
 objection_register(expanz_security_XmlPostLoginClient)
 
 
-
-
-
 /* ================================================== Constructors ================================================== */
 
 + (id) loginClient {
