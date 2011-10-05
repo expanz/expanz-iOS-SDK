@@ -33,20 +33,6 @@
         <mkdir dir="${reports.dir}/tests"/>
     </target>
 
-    <target name="dig.this">
-        <path id="list_1">
-            <fileset dir="${basedir}">
-                <include name="${basedir}/Core/**"/>
-            </fileset>
-        </path>
-
-        <pathconvert property="main.class.path" pathsep=""
-                     dirsep="." refid="list_1">
-            <map from="${basedir}/" to=''/>
-
-        </pathconvert>
-        <echo>${main.class.path}</echo>
-    </target>
 
 
     <target name="--clean" unless="fast">

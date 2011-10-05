@@ -9,53 +9,39 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "JBPackageVoodoo.h"
+#import "expanz_session_SessionDataRequest.h"
 
-@implementation expanz_security_SessionRequest
+#define kSessionDataRequestXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
+</xml><sessionHandle>%@</sessionHandle></ExecX>"
 
-@synthesize userName = _userName;
-@synthesize password = _password; 
-@synthesize appSite = _appSite;
+@implementation expanz_session_SessionDataRequest
 
+@synthesize sessionToken = _sessionToken;
 
 /* ================================================== Constructors ================================================== */
-
-- (id) init
-{
+- (id)initWithSessionToken:(NSString*)sessionToken {
     self = [super init];
     if (self) {
-        // Initialization code here.
+        _sessionToken = sessionToken; 
+        [_sessionToken retain];
     }    
     return self;
 }
-
-- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
-    self = [self init];
-    if (self) {
-        self.userName = userName; 
-        self.password = password; 
-        self.appSite = appSite;
-    }
-    return self; 
-}
-
 
 /* ================================================ Delegate Methods ================================================ */
 #pragma mark jb_xml_Serializable
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat: kSessionRequestXml, _userName, _password, _appSite, kAuthenticationMode, 
-            kClientVersion, kSchemaVersion];
+    return nil;
 }
 
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_userName release];
-    [_password release]; 
-    [_appSite release];
+    
     [super dealloc];
+    
 }
 
 @end

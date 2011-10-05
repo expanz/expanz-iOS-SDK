@@ -139,6 +139,9 @@
 		6B915A8F143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
 		6B915A90143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
 		6B915A91143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */; };
+		6B915A94143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
+		6B915A95143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
+		6B915A96143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */; };
 		6B932EAF1433E22100834A1B /* JBDependencyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA61433E22100834A1B /* JBDependencyBinder.m */; };
 		6B932EB21433E2D600834A1B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB11433E2D600834A1B /* Objection-iOS.framework */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -244,6 +247,9 @@
 		6B915A85143BC8BB005EFEFC /* expanz_security_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_security_SessionRequest.m; sourceTree = "<group>"; };
 		6B915A86143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_security_XmlPostLoginClient.h; sourceTree = "<group>"; };
 		6B915A87143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_security_XmlPostLoginClient.m; sourceTree = "<group>"; };
+		6B915A92143BCC6E005EFEFC /* expanz_session_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_session_SessionDataRequest.h; sourceTree = "<group>"; };
+		6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_session_SessionDataRequest.m; sourceTree = "<group>"; };
+		6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jb_xml_Serializable.h; sourceTree = "<group>"; };
 		6B932EA51433E22100834A1B /* JBDependencyBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDependencyBinder.h; sourceTree = "<group>"; };
 		6B932EA61433E22100834A1B /* JBDependencyBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDependencyBinder.m; sourceTree = "<group>"; };
 		6B932EA71433E22100834A1B /* JBPackageVoodoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPackageVoodoo.h; sourceTree = "<group>"; };
@@ -526,6 +532,8 @@
 		6B915A88143BC8BB005EFEFC /* SessionData */ = {
 			isa = PBXGroup;
 			children = (
+				6B915A92143BCC6E005EFEFC /* expanz_session_SessionDataRequest.h */,
+				6B915A93143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m */,
 			);
 			path = SessionData;
 			sourceTree = "<group>";
@@ -537,6 +545,7 @@
 				6B932EA61433E22100834A1B /* JBDependencyBinder.m */,
 				6B932EA71433E22100834A1B /* JBPackageVoodoo.h */,
 				6B932EA81433E22100834A1B /* JBServiceLocator.h */,
+				6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -785,6 +794,7 @@
 				6B915A8A143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
 				6B915A8D143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
 				6B915A90143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
+				6B915A95143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +836,7 @@
 				6B915A8B143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
 				6B915A8E143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
 				6B915A91143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
+				6B915A96143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +878,7 @@
 				6B915A89143BC8BB005EFEFC /* expanz_security_SessionContextHolder.m in Sources */,
 				6B915A8C143BC8BB005EFEFC /* expanz_security_SessionRequest.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_security_XmlPostLoginClient.m in Sources */,
+				6B915A94143BCC6E005EFEFC /* expanz_session_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

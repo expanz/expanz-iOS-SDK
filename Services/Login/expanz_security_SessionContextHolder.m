@@ -26,7 +26,7 @@
 /**
  * Create an autoreleased instance from XML. 
  */
-+ (id) fromXml:(NSString *)xml {
++ (id) fromXml:(NSString*)xml {
     return [[[self alloc] initWithXml:xml] autorelease];
 }
 
@@ -42,7 +42,7 @@
 /**
  * Create an instance with XML. 
  */
-- (id) initWithXml:(id)xml {
+- (id) initWithXml:(NSString*)xml {
     self = [self init]; 
     if (self) {
         LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
