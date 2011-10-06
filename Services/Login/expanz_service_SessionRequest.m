@@ -32,17 +32,12 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
-    self = [super init];
-    if (!self) {
-        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
-    }
-    //Initialization code here. 
-    return self;
-}
 
-- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
+- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {    
     self = [self init];   
+    if (!self) {
+        [NSException raise:kInitializationFailed format:@"Call to super-class initialization failed."];
+    }
     [self setUserName:userName];
     [self setPassword:password];
     [self setAppsite:appSite];    

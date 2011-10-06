@@ -11,6 +11,7 @@
 
 /**
  * Unlock private filter API. 
+ * TODO: Replace this with Library call. 
  */
 @interface CAFilter : NSObject 
 
@@ -56,3 +57,6 @@
 #import "jb_xml_Serializable.h"
 #import "JBDependencyBinder.h"
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Exceptions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#import "JBExceptions.h"
