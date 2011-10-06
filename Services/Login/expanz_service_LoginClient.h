@@ -25,8 +25,6 @@
 @protocol expanz_service_LoginClient <NSObject>
 
 
-+ (id<expanz_service_LoginClient>) loginClient;
-
 /** 
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */

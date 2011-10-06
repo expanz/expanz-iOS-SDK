@@ -10,18 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
-#import "ASIFormDataRequest.h"
 
 
-/* ================================================================================================================== */
-@interface expanz_service_XmlPostLoginClient : NSObject<expanz_service_LoginClient>
-
-
-@property (nonatomic, readonly) ASIFormDataRequest* loginRequest;
-
-- (id) initWithLoginRequest:(ASIFormDataRequest*)loginRequest;
-
-@end
+/**
+ * Map web-service keys to endpoint locations. 
+ */
+#define kCreateSessionUrl            @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/CreateSessionX"
 
 

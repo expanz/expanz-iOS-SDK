@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "JBPackageVoodoo.h"
 #import "ASIFormDataRequest.h"
 
@@ -19,42 +19,39 @@
 objection_register(expanz_service_XmlPostLoginClient)
 
 
+@synthesize loginRequest = _loginRequest;
+
+
 /* ================================================== Constructors ================================================== */
 
-+ (id) loginClient {
-	return [[[self alloc] init] autorelease];
-}
-
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        // Initialization code here.
+- (id) initWithLoginRequest:(ASIFormDataRequest*)loginRequest {
+    self = [self init];   
+    if (!self) {
+        [NSException raise:kInitializationFailed format:@"Call to super-class initialization failed."];
     }
-    
+    _loginRequest = [loginRequest retain];    
     return self;
 }
+
+
 
 /* ================================================ Interface Methods =============================================== */
 
 
-
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
+        
+    [_loginRequest addRequestHeader:@"Content-Type" value:@"text/xml"]; 
+    [_loginRequest appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSURL *url = [NSURL URLWithString:kCreateSessionUrl];    
-    ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL: url];   
-    [request addRequestHeader:@"Content-Type" value:@"text/xml"]; 
-    [request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [request setCompletionBlock:^{
-        SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[request responseString]];
+    [_loginRequest setCompletionBlock:^{
+        SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[_loginRequest responseString]];
         [delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
     }];
     
-    [request setFailedBlock:^{
-        [delegate performSelector:@selector(requestDidFailWithError:) withObject:[request error]]; 
+    [_loginRequest setFailedBlock:^{
+        [delegate performSelector:@selector(requestDidFailWithError:) withObject:[_loginRequest error]]; 
     }];
-    [request startAsynchronous];
+    [_loginRequest startAsynchronous];
         
 }
     

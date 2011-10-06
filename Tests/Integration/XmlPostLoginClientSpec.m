@@ -33,10 +33,15 @@ SPEC_BEGIN(XmlPostLoginClientSpec)
 
 describe(@"Manages authenticating with the site manager.", ^{
     
-    __block id<expanz_service_LoginClient> loginClient; 
+    __block XmlPostLoginClient* loginClient; 
     
     beforeEach(^{
-        loginClient = [[XmlPostLoginClient alloc] init]; 
+        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        [JSObjection setGlobalInjector:injector];
+        loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
+        
+        //ASIFormDataRequest<expanz_service_LoginRequestDispatcher>* dispatcher = [injector getObject:@protocol(expanz_service_LoginRequestDispatcher)];
+        //loginClient.loginDispatcher = dispatcher;
     });
 
     describe(@"Requests an access token, using a SessionRequest instance", ^{
@@ -56,9 +61,6 @@ describe(@"Manages authenticating with the site manager.", ^{
         });
         
         
-        it(@"should set an error property when invalid credentials are supplied", ^{
-//
-        });
     });
     
     

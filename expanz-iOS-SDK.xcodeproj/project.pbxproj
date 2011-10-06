@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0224DB143E77580055B579 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
+		6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
+		6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
 		6B3F48B9143ACDB8005C0A7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F48B2143ACDB8005C0A7A /* InfoPlist.strings */; };
 		6B3F48BA143ACDB8005C0A7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F48B2143ACDB8005C0A7A /* InfoPlist.strings */; };
 		6B3F48BE143ACDB8005C0A7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F48B6143ACDB8005C0A7A /* main.m */; };
@@ -98,12 +101,10 @@
 		6B3F4957143ACDF1005C0A7A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B3F4958143ACDF4005C0A7A /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
 		6B3F4959143ACDF7005C0A7A /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */; };
-		6B3F495A143ACDFA005C0A7A /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB11433E2D600834A1B /* Objection-iOS.framework */; };
 		6B3F495B143ACDFF005C0A7A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B3F495C143ACE02005C0A7A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
 		6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
-		6B3F4962143ACE27005C0A7A /* JBDependencyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA61433E22100834A1B /* JBDependencyBinder.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B701482143A9A900023756C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6B701483143A9A900023756C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -115,7 +116,6 @@
 		6B7014A8143A9BF50023756C /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
 		6B7014A9143A9BF90023756C /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
 		6B7014AA143A9BFC0023756C /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
-		6B7014AE143A9C0F0023756C /* JBDependencyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA61433E22100834A1B /* JBDependencyBinder.m */; };
 		6B701526143A9C7A0023756C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B701527143A9C7D0023756C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6B701528143A9C800023756C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -123,7 +123,6 @@
 		6B70152A143A9C870023756C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B70152C143A9C8B0023756C /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
 		6B70152D143A9C8D0023756C /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */; };
-		6B70152E143A9C900023756C /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB11433E2D600834A1B /* Objection-iOS.framework */; };
 		6B70152F143A9C930023756C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B701530143A9C960023756C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B750248143C4FFB00444AA9 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */; };
@@ -131,20 +130,12 @@
 		6B7C553C143ACD65001B1164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6B7C553D143ACD65001B1164 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
-		6B915A89143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
-		6B915A8A143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
-		6B915A8B143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */; };
-		6B915A8C143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
-		6B915A8D143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
-		6B915A8E143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
 		6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
 		6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
-		6B932EAF1433E22100834A1B /* JBDependencyBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B932EA61433E22100834A1B /* JBDependencyBinder.m */; };
-		6B932EB21433E2D600834A1B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB11433E2D600834A1B /* Objection-iOS.framework */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
@@ -152,6 +143,12 @@
 		6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BB679EF143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BB679F0143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
+		6BB67A05143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
+		6BB67A06143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
+		6BB67A07143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
+		6BB67A08143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
+		6BB67A09143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
+		6BB67A0A143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
 		6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
 		6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
@@ -165,10 +162,52 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BDD3785143DC37E00CB33AE /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3773143DC37E00CB33AE /* JSObjection.m */; };
+		6BDD3786143DC37E00CB33AE /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3773143DC37E00CB33AE /* JSObjection.m */; };
+		6BDD3787143DC37E00CB33AE /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3773143DC37E00CB33AE /* JSObjection.m */; };
+		6BDD3788143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */; };
+		6BDD3789143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */; };
+		6BDD378A143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */; };
+		6BDD378B143DC37E00CB33AE /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */; };
+		6BDD378C143DC37E00CB33AE /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */; };
+		6BDD378D143DC37E00CB33AE /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */; };
+		6BDD378E143DC37E00CB33AE /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3779143DC37E00CB33AE /* JSObjectionInjector.m */; };
+		6BDD378F143DC37E00CB33AE /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3779143DC37E00CB33AE /* JSObjectionInjector.m */; };
+		6BDD3790143DC37E00CB33AE /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3779143DC37E00CB33AE /* JSObjectionInjector.m */; };
+		6BDD3791143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377B143DC37E00CB33AE /* JSObjectionInjectorEntry.m */; };
+		6BDD3792143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377B143DC37E00CB33AE /* JSObjectionInjectorEntry.m */; };
+		6BDD3793143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377B143DC37E00CB33AE /* JSObjectionInjectorEntry.m */; };
+		6BDD3794143DC37E00CB33AE /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377D143DC37E00CB33AE /* JSObjectionModule.m */; };
+		6BDD3795143DC37E00CB33AE /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377D143DC37E00CB33AE /* JSObjectionModule.m */; };
+		6BDD3796143DC37E00CB33AE /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377D143DC37E00CB33AE /* JSObjectionModule.m */; };
+		6BDD3797143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377F143DC37E00CB33AE /* JSObjectionProviderEntry.m */; };
+		6BDD3798143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377F143DC37E00CB33AE /* JSObjectionProviderEntry.m */; };
+		6BDD3799143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD377F143DC37E00CB33AE /* JSObjectionProviderEntry.m */; };
+		6BDD379A143DC37E00CB33AE /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3781143DC37E00CB33AE /* JSObjectionUtils.m */; };
+		6BDD379B143DC37E00CB33AE /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3781143DC37E00CB33AE /* JSObjectionUtils.m */; };
+		6BDD379C143DC37E00CB33AE /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3781143DC37E00CB33AE /* JSObjectionUtils.m */; };
+		6BDD379D143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
+		6BDD379E143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
+		6BDD379F143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BB67A10143DA9AC00B9EC94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BCAFB8E14317B1B00575280 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BCAFB9614317B1B00575280;
+			remoteInfo = "expanz-iOS-SDK";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
+		6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
+		6B100BE9143E72BD00EABC94 /* expanz_iOS_SDKExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKExceptions.h; sourceTree = "<group>"; };
+		6B100BEB143E739000EABC94 /* JBPackageVoodoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPackageVoodoo.h; sourceTree = "<group>"; };
+		6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_expanz_com_ServiceUrls.h; sourceTree = "<group>"; };
 		6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataRequestSpec.m; sourceTree = "<group>"; };
 		6B3F48B3143ACDB8005C0A7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B3F48B6143ACDB8005C0A7A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -247,20 +286,11 @@
 		6B86AD901435B94A00AA7FD5 /* SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextHolderSpec.m; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClient.h; sourceTree = "<group>"; };
-		6B915A82143BC8BB005EFEFC /* expanz_service_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionContextHolder.h; sourceTree = "<group>"; };
-		6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
-		6B915A84143BC8BB005EFEFC /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
-		6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
 		6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
 		6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
 		6B915A92143BCC6E005EFEFC /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
 		6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jb_xml_Serializable.h; sourceTree = "<group>"; };
-		6B932EA51433E22100834A1B /* JBDependencyBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDependencyBinder.h; sourceTree = "<group>"; };
-		6B932EA61433E22100834A1B /* JBDependencyBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDependencyBinder.m; sourceTree = "<group>"; };
-		6B932EA71433E22100834A1B /* JBPackageVoodoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPackageVoodoo.h; sourceTree = "<group>"; };
-		6B932EA81433E22100834A1B /* JBServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBServiceLocator.h; sourceTree = "<group>"; };
-		6B932EB11433E2D600834A1B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "Dependencies/Frameworks/Objection-iOS.framework"; sourceTree = "<group>"; };
 		6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
 		6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OCHamcrest-iPhone.framework"; path = "Dependencies/Frameworks/OCHamcrest-iPhone.framework"; sourceTree = "<group>"; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -275,7 +305,10 @@
 		6BB679EB143D522400B9EC94 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		6BB679EC143D522400B9EC94 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		6BB679ED143D522400B9EC94 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		6BB679F2143D59E100B9EC94 /* JBExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBExceptions.h; sourceTree = "<group>"; };
+		6BB67A01143D6F9500B9EC94 /* expanz_service_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionContextHolder.h; sourceTree = "<group>"; };
+		6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
+		6BB67A03143D6F9500B9EC94 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
+		6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
 		6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
 		6BC1606C1436AF3500E166F6 /* brushed-metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brushed-metal2.png"; sourceTree = "<group>"; };
 		6BC1606E1436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -295,6 +328,25 @@
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BDD3772143DC37E00CB33AE /* JSObjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjection.h; sourceTree = "<group>"; };
+		6BDD3773143DC37E00CB33AE /* JSObjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjection.m; sourceTree = "<group>"; };
+		6BDD3774143DC37E00CB33AE /* JSObjectionBindingEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionBindingEntry.h; sourceTree = "<group>"; };
+		6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionBindingEntry.m; sourceTree = "<group>"; };
+		6BDD3776143DC37E00CB33AE /* JSObjectionEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionEntry.h; sourceTree = "<group>"; };
+		6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionEntry.m; sourceTree = "<group>"; };
+		6BDD3778143DC37E00CB33AE /* JSObjectionInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjector.h; sourceTree = "<group>"; };
+		6BDD3779143DC37E00CB33AE /* JSObjectionInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjector.m; sourceTree = "<group>"; };
+		6BDD377A143DC37E00CB33AE /* JSObjectionInjectorEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjectorEntry.h; sourceTree = "<group>"; };
+		6BDD377B143DC37E00CB33AE /* JSObjectionInjectorEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjectorEntry.m; sourceTree = "<group>"; };
+		6BDD377C143DC37E00CB33AE /* JSObjectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionModule.h; sourceTree = "<group>"; };
+		6BDD377D143DC37E00CB33AE /* JSObjectionModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionModule.m; sourceTree = "<group>"; };
+		6BDD377E143DC37E00CB33AE /* JSObjectionProviderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionProviderEntry.h; sourceTree = "<group>"; };
+		6BDD377F143DC37E00CB33AE /* JSObjectionProviderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionProviderEntry.m; sourceTree = "<group>"; };
+		6BDD3780143DC37E00CB33AE /* JSObjectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionUtils.h; sourceTree = "<group>"; };
+		6BDD3781143DC37E00CB33AE /* JSObjectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionUtils.m; sourceTree = "<group>"; };
+		6BDD3782143DC37E00CB33AE /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
+		6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
+		6BDD3784143DC37E00CB33AE /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,7 +364,6 @@
 				6B70152A143A9C870023756C /* libz.dylib in Frameworks */,
 				6B70152C143A9C8B0023756C /* Cedar-iPhone.framework in Frameworks */,
 				6B70152D143A9C8D0023756C /* OCHamcrest-iPhone.framework in Frameworks */,
-				6B70152E143A9C900023756C /* Objection-iOS.framework in Frameworks */,
 				6B70152F143A9C930023756C /* libsqlite3.dylib in Frameworks */,
 				6B701530143A9C960023756C /* libxml2.dylib in Frameworks */,
 				6BB679EF143D522400B9EC94 /* libOCMock.a in Frameworks */,
@@ -333,7 +384,6 @@
 				6B3F4957143ACDF1005C0A7A /* libz.dylib in Frameworks */,
 				6B3F4958143ACDF4005C0A7A /* Cedar-iPhone.framework in Frameworks */,
 				6B3F4959143ACDF7005C0A7A /* OCHamcrest-iPhone.framework in Frameworks */,
-				6B3F495A143ACDFA005C0A7A /* Objection-iOS.framework in Frameworks */,
 				6B3F495B143ACDFF005C0A7A /* libsqlite3.dylib in Frameworks */,
 				6B3F495C143ACE02005C0A7A /* libxml2.dylib in Frameworks */,
 				6BB679F0143D522400B9EC94 /* libOCMock.a in Frameworks */,
@@ -353,7 +403,6 @@
 				6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */,
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
-				6B932EB21433E2D600834A1B /* Objection-iOS.framework in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
 				6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */,
 			);
@@ -362,6 +411,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B100BEA143E739000EABC94 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6B100BEB143E739000EABC94 /* JBPackageVoodoo.h */,
+				6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		6B3F48B1143ACDB8005C0A7A /* RunIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +434,7 @@
 		6B3F48C1143ACDCA005C0A7A /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6BDD3771143DC37E00CB33AE /* Objection-iOS */,
 				6B3F48C2143ACDCA005C0A7A /* ASIHTTPRequest */,
 				6B3F48F8143ACDCA005C0A7A /* Flexible-iOS-Logging-1.0 */,
 				6B3F48FA143ACDCA005C0A7A /* RaptureXML */,
@@ -536,12 +595,9 @@
 			isa = PBXGroup;
 			children = (
 				6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */,
-				6B915A82143BC8BB005EFEFC /* expanz_service_SessionContextHolder.h */,
-				6B915A83143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m */,
-				6B915A84143BC8BB005EFEFC /* expanz_service_SessionRequest.h */,
-				6B915A85143BC8BB005EFEFC /* expanz_service_SessionRequest.m */,
 				6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */,
 				6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */,
+				6BB67A00143D6F9500B9EC94 /* PayLoad */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -559,12 +615,7 @@
 		6B932EA41433E22100834A1B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6B932EA51433E22100834A1B /* JBDependencyBinder.h */,
-				6B932EA61433E22100834A1B /* JBDependencyBinder.m */,
-				6B932EA71433E22100834A1B /* JBPackageVoodoo.h */,
-				6B932EA81433E22100834A1B /* JBServiceLocator.h */,
 				6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */,
-				6BB679F2143D59E100B9EC94 /* JBExceptions.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -629,6 +680,17 @@
 			path = OCMock;
 			sourceTree = "<group>";
 		};
+		6BB67A00143D6F9500B9EC94 /* PayLoad */ = {
+			isa = PBXGroup;
+			children = (
+				6BB67A01143D6F9500B9EC94 /* expanz_service_SessionContextHolder.h */,
+				6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */,
+				6BB67A03143D6F9500B9EC94 /* expanz_service_SessionRequest.h */,
+				6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */,
+			);
+			path = PayLoad;
+			sourceTree = "<group>";
+		};
 		6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +702,9 @@
 				6BC160721436AF3500E166F6 /* expanz-iOS-SDK-Prefix.pch */,
 				6BC160731436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.h */,
 				6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */,
+				6B100BE9143E72BD00EABC94 /* expanz_iOS_SDKExceptions.h */,
+				6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */,
+				6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */,
 				6BC160751436AF3500E166F6 /* expanz_ui_ActivityViewController.h */,
 				6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */,
 				6BC160771436AF3500E166F6 /* expanz_ui_LoginViewController.h */,
@@ -656,6 +721,7 @@
 			children = (
 				6B3F4963143AD4B6005C0A7A /* build-configuration.properties */,
 				6B3F4964143AD4B7005C0A7A /* build.xml */,
+				6B100BEA143E739000EABC94 /* Configuration */,
 				6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */,
 				6B915A7F143BC8BB005EFEFC /* Services */,
 				6B932EA41433E22100834A1B /* Utils */,
@@ -687,7 +753,6 @@
 				6B932F271433F7CE00834A1B /* libz.dylib */,
 				6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */,
 				6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */,
-				6B932EB11433E2D600834A1B /* Objection-iOS.framework */,
 				6B6B65251432A07B00B584C1 /* libsqlite3.dylib */,
 				6B912278143299CA0031F7A8 /* libxml2.dylib */,
 				6BCAFB9B14317B1C00575280 /* UIKit.framework */,
@@ -695,6 +760,32 @@
 				6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BDD3771143DC37E00CB33AE /* Objection-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6BDD3772143DC37E00CB33AE /* JSObjection.h */,
+				6BDD3773143DC37E00CB33AE /* JSObjection.m */,
+				6BDD3774143DC37E00CB33AE /* JSObjectionBindingEntry.h */,
+				6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */,
+				6BDD3776143DC37E00CB33AE /* JSObjectionEntry.h */,
+				6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */,
+				6BDD3778143DC37E00CB33AE /* JSObjectionInjector.h */,
+				6BDD3779143DC37E00CB33AE /* JSObjectionInjector.m */,
+				6BDD377A143DC37E00CB33AE /* JSObjectionInjectorEntry.h */,
+				6BDD377B143DC37E00CB33AE /* JSObjectionInjectorEntry.m */,
+				6BDD377C143DC37E00CB33AE /* JSObjectionModule.h */,
+				6BDD377D143DC37E00CB33AE /* JSObjectionModule.m */,
+				6BDD377E143DC37E00CB33AE /* JSObjectionProviderEntry.h */,
+				6BDD377F143DC37E00CB33AE /* JSObjectionProviderEntry.m */,
+				6BDD3780143DC37E00CB33AE /* JSObjectionUtils.h */,
+				6BDD3781143DC37E00CB33AE /* JSObjectionUtils.m */,
+				6BDD3782143DC37E00CB33AE /* NSObject+Objection.h */,
+				6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */,
+				6BDD3784143DC37E00CB33AE /* Objection.h */,
+			);
+			path = "Objection-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -728,6 +819,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6BB67A11143DA9AC00B9EC94 /* PBXTargetDependency */,
 			);
 			name = RunIntegrationTests;
 			productName = RunIntegrationTests;
@@ -824,7 +916,6 @@
 				6B7014A8143A9BF50023756C /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6B7014A9143A9BF90023756C /* expanz_ui_ActivityViewController.m in Sources */,
 				6B7014AA143A9BFC0023756C /* expanz_ui_LoginViewController.m in Sources */,
-				6B7014AE143A9C0F0023756C /* JBDependencyBinder.m in Sources */,
 				6B3F4905143ACDCA005C0A7A /* ASIAuthenticationDialog.m in Sources */,
 				6B3F4908143ACDCA005C0A7A /* ASIDataCompressor.m in Sources */,
 				6B3F490B143ACDCA005C0A7A /* ASIDataDecompressor.m in Sources */,
@@ -851,11 +942,21 @@
 				6B3F494A143ACDCA005C0A7A /* RXMLElement.m in Sources */,
 				6B3F494D143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F4950143ACDCA005C0A7A /* Reachability.m in Sources */,
-				6B915A8A143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
-				6B915A8D143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
 				6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
 				6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 				6B750248143C4FFB00444AA9 /* SessionDataRequestSpec.m in Sources */,
+				6BB67A06143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BB67A09143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
+				6BDD3786143DC37E00CB33AE /* JSObjection.m in Sources */,
+				6BDD3789143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
+				6BDD378C143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
+				6BDD378F143DC37E00CB33AE /* JSObjectionInjector.m in Sources */,
+				6BDD3792143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */,
+				6BDD3795143DC37E00CB33AE /* JSObjectionModule.m in Sources */,
+				6BDD3798143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */,
+				6BDD379B143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
+				6BDD379E143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
+				6B0224DB143E77580055B579 /* expanz_iOS_SDKModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,11 +994,20 @@
 				6B3F4952143ACDDC005C0A7A /* XmlPostLoginClientSpec.m in Sources */,
 				6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */,
 				6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */,
-				6B3F4962143ACE27005C0A7A /* JBDependencyBinder.m in Sources */,
-				6B915A8B143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
-				6B915A8E143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
 				6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
 				6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
+				6BB67A07143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BB67A0A143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
+				6BDD3787143DC37E00CB33AE /* JSObjection.m in Sources */,
+				6BDD378A143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
+				6BDD378D143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
+				6BDD3790143DC37E00CB33AE /* JSObjectionInjector.m in Sources */,
+				6BDD3793143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */,
+				6BDD3796143DC37E00CB33AE /* JSObjectionModule.m in Sources */,
+				6BDD3799143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */,
+				6BDD379C143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
+				6BDD379F143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
+				6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +1015,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B932EAF1433E22100834A1B /* JBDependencyBinder.m in Sources */,
 				6BC160861436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6BC160881436AF3500E166F6 /* expanz_ui_ActivityViewController.m in Sources */,
 				6BC1608A1436AF3500E166F6 /* expanz_ui_LoginViewController.m in Sources */,
@@ -936,14 +1045,32 @@
 				6B3F4949143ACDCA005C0A7A /* RXMLElement.m in Sources */,
 				6B3F494C143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F494F143ACDCA005C0A7A /* Reachability.m in Sources */,
-				6B915A89143BC8BB005EFEFC /* expanz_service_SessionContextHolder.m in Sources */,
-				6B915A8C143BC8BB005EFEFC /* expanz_service_SessionRequest.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
 				6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
+				6BB67A05143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BB67A08143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
+				6BDD3785143DC37E00CB33AE /* JSObjection.m in Sources */,
+				6BDD3788143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
+				6BDD378B143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
+				6BDD378E143DC37E00CB33AE /* JSObjectionInjector.m in Sources */,
+				6BDD3791143DC37E00CB33AE /* JSObjectionInjectorEntry.m in Sources */,
+				6BDD3794143DC37E00CB33AE /* JSObjectionModule.m in Sources */,
+				6BDD3797143DC37E00CB33AE /* JSObjectionProviderEntry.m in Sources */,
+				6BDD379A143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
+				6BDD379D143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
+				6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BB67A11143DA9AC00B9EC94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BCAFB9614317B1B00575280 /* expanz-iOS-SDK */;
+			targetProxy = 6BB67A10143DA9AC00B9EC94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B3F48B2143ACDB8005C0A7A /* InfoPlist.strings */ = {

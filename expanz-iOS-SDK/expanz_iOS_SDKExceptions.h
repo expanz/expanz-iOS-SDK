@@ -10,18 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
-#import "ASIFormDataRequest.h"
 
+/**
+ * Object couldn't be initialized into a valid state. 
+ */
+#define kInitializationFailed   @"ObjectInitializationFailedException"
 
-/* ================================================================================================================== */
-@interface expanz_service_XmlPostLoginClient : NSObject<expanz_service_LoginClient>
-
-
-@property (nonatomic, readonly) ASIFormDataRequest* loginRequest;
-
-- (id) initWithLoginRequest:(ASIFormDataRequest*)loginRequest;
-
-@end
-
-
+/**
+ * Xml does not match the expected format. 
+ */
+#define kXmlValidationFailed       @"XmlValidationFailedException"

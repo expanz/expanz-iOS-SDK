@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////`
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_iOS_SDKAppDelegate.h"
 #import "JBPackageVoodoo.h"
 
@@ -26,7 +26,7 @@
 
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
-    JSObjectionInjector* injector = [JSObjection createInjector:[[[JBDependencyBinder alloc] init] autorelease]];
+    JSObjectionInjector* injector = [JSObjection createInjector:[[[expanz_iOS_SDKModule alloc] init] autorelease]];
     [JSObjection setGlobalInjector:injector];
     
     LoginViewController* loginViewController = [[LoginViewController alloc] initWithNibName: @"LoginWindow" 

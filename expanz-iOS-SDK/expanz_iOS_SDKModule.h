@@ -10,18 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
-#import "ASIFormDataRequest.h"
+#import "Objection.h"
+#import "JBPackageVoodoo.h" 
 
-
-/* ================================================================================================================== */
-@interface expanz_service_XmlPostLoginClient : NSObject<expanz_service_LoginClient>
-
-
-@property (nonatomic, readonly) ASIFormDataRequest* loginRequest;
-
-- (id) initWithLoginRequest:(ASIFormDataRequest*)loginRequest;
-
-@end
-
-
+/** 
+ * Uses Objection dependency injection framework to bind protocols to concrete implementations. This allows class
+ * implementations to be swapped out, with minimal code changes. 
+ */
+@interface expanz_iOS_SDKModule : JSObjectionModule @end
