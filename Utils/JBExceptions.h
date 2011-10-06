@@ -15,3 +15,8 @@
  * Object couldn't be initialized into a valid state. 
  */
 #define kInitializationFailed   @"Initialization Failed"
+
+/**
+ * Xml does not match the expected format. 
+ */
+#define kXmlValidationFailed       @"Validation Failed"
