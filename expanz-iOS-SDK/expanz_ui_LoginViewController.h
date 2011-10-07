@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import "JBPackageVoodoo.h"
+#import "expanz_service_LoginClient.h"
 
 @interface expanz_ui_LoginViewController : UIViewController<expanz_service_LoginClientDelegate> {
 
@@ -29,3 +29,7 @@
 
 
 @end
+
+
+/* ================================================================================================================== */
+@compatibility_alias LoginViewController expanz_ui_LoginViewController;

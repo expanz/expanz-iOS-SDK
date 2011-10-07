@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
 #import "jb_xml_Serializable.h"
 
 @interface expanz_service_SessionRequest : NSObject<jb_xml_Serializable>
@@ -29,4 +28,7 @@
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias SessionRequest expanz_service_SessionRequest;
 

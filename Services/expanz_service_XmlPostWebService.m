@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_XmlPostWebService.h"
-#import "JBPackageVoodoo.h"
+#import "expanz_iOS_SDKExceptions.h"
 
 @implementation expanz_service_XmlPostWebService
 

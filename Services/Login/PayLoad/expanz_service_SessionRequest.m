@@ -9,7 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "JBPackageVoodoo.h"
+#import "expanz_service_SessionRequest.h"
+#import "expanz_iOS_SDKExceptions.h"
 
 
 @implementation expanz_service_SessionRequest

@@ -10,10 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
 #import "ASIFormDataRequest.h"
+#import "expanz_service_XmlPostWebService.h"
+#import "expanz_service_XmlPostLoginClient.h"
+#import "expanz_service_LoginClient.h"
 
 
 @interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>@end
+
+/* ================================================================================================================== */
+@compatibility_alias XmlPostLoginClient expanz_service_XmlPostLoginClient;
 
 

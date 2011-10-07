@@ -218,7 +218,6 @@
 		6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
 		6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
 		6B100BE9143E72BD00EABC94 /* expanz_iOS_SDKExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKExceptions.h; sourceTree = "<group>"; };
-		6B100BEB143E739000EABC94 /* JBPackageVoodoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPackageVoodoo.h; sourceTree = "<group>"; };
 		6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_expanz_com_ServiceUrls.h; sourceTree = "<group>"; };
 		6B1EBE4C143C424D000191FE /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataRequestSpec.m; sourceTree = "<group>"; };
 		6B3F48B3143ACDB8005C0A7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -433,7 +432,6 @@
 		6B100BEA143E739000EABC94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				6B100BEB143E739000EABC94 /* JBPackageVoodoo.h */,
 				6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */,
 			);
 			path = Configuration;

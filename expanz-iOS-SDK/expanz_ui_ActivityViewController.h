@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface expanz_ui_ActivityViewController : UIViewController
+@interface expanz_ui_ActivityViewController : UIViewController @end
 
-@end
+/* ================================================================================================================== */
+@compatibility_alias ActivityViewController expanz_ui_ActivityViewController;

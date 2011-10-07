@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
 #import "jb_xml_Serializable.h"
 
 
@@ -23,3 +22,6 @@
 - (id) initWithSessionToken:(NSString*)sessionToken; 
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias SessionDataRequest expanz_service_SessionDataRequest;

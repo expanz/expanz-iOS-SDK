@@ -32,3 +32,6 @@
 - (id) initWithXml:(NSString*)xml; 
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias SessionContextHolder expanz_service_SessionContextHolder;

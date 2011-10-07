@@ -10,8 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_iOS_SDKModule.h"
-#import "JBPackageVoodoo.h"
 #import "ASIFormDataRequest.h"
+#import "test_expanz_com_ServiceUrls.h"
+#import "expanz_service_XmlPostLoginClient.h"
 
 
 @implementation expanz_iOS_SDKModule

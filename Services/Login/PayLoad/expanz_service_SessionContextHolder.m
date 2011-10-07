@@ -10,7 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "JBPackageVoodoo.h"
+#import "expanz_service_SessionContextHolder.h"
+#import "expanz_iOS_SDKExceptions.h"
 #import "RXMLElement.h"
 
 @implementation expanz_service_SessionContextHolder

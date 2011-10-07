@@ -10,7 +10,20 @@
 ////////////////////////////////////////////////////////////////////////////////y
 
 #import <QuartzCore/QuartzCore.h>
-#import "JBPackageVoodoo.h"
+#import "expanz_ui_LoginViewController.h"
+#import "Objection.h"
+#import "expanz_ui_ActivityViewController.h"
+
+
+/**
+ * Unlock private filter API. 
+ * TODO: Replace this with Library call. 
+ */
+@interface CAFilter : NSObject 
+
++ (CAFilter*) filterWithName: (NSString*) name;
+
+@end
 
 
 @implementation expanz_ui_LoginViewController

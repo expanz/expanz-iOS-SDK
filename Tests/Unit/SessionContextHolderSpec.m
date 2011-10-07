@@ -1,6 +1,7 @@
 #import "SpecHelper.h"
-#import "JBPackageVoodoo.h"
 #import "OCMock/OCMock.h"
+#import "expanz_service_SessionContextHolder.h"
+#import "expanz_iOS_SDKExceptions.h"
 
 
 SPEC_BEGIN(SessionContextHolderSpec)

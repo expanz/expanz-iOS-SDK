@@ -21,3 +21,6 @@
 - (id) initWithRequest:(ASIFormDataRequest*)request;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias XmlPostWebService expanz_service_XmlPostWebService;

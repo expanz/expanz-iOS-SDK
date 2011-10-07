@@ -10,7 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
+#import "expanz_service_LoginClient.h"
+#import "expanz_service_SessionRequest.h"
+#import "expanz_service_SessionContextHolder.h"
 
 
 /* ================================================================================================================== */
