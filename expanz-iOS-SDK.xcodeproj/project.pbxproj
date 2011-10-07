@@ -114,6 +114,7 @@
 		6B3F495C143ACE02005C0A7A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
 		6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
+		6B68DDB1143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B701482143A9A900023756C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6B701483143A9A900023756C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -284,6 +285,7 @@
 		6B3F4903143ACDCA005C0A7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientSpec.m; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6B701480143A9A900023756C /* RunUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B701499143A9AC60023756C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 			children = (
 				6B3F48B1143ACDB8005C0A7A /* RunIntegrationTests */,
 				6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */,
+				6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3F48BA143ACDB8005C0A7A /* InfoPlist.strings in Resources */,
+				6B68DDB1143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

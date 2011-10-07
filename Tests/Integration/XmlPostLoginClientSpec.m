@@ -1,5 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
+//
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+
 #import "SpecHelper.h"
-#import "JBPackageVoodoo.h"
+#import "expanz_service_SessionContextHolder.h"
+#import "expanz_service_XmlPostLoginClient.h"
+#import "Objection.h"
+#import "expanz_iOS_SDKModule.h"
 
 
 /* ================================================================================================================== */
@@ -31,7 +45,7 @@
 SPEC_BEGIN(XmlPostLoginClientSpec)
 
 
-describe(@"Manages authenticating with the site manager.", ^{
+describe(@"Authenticating with the site manager.", ^{
     
     __block XmlPostLoginClient* loginClient; 
     
@@ -39,13 +53,9 @@ describe(@"Manages authenticating with the site manager.", ^{
         JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
         [JSObjection setGlobalInjector:injector];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
-        
-        //ASIFormDataRequest<expanz_service_LoginRequestDispatcher>* dispatcher = [injector getObject:@protocol(expanz_service_LoginRequestDispatcher)];
-        //loginClient.loginDispatcher = dispatcher;
     });
 
-    describe(@"Requests an access token, using a SessionRequest instance", ^{
-        
+          
         it(@"should return a SessionContextHolder, containing a valid session token, within 5 seconds", ^{
             
             SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
@@ -58,20 +68,9 @@ describe(@"Manages authenticating with the site manager.", ^{
             LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
             assertThat([loginDelegate sessionContextHolder], isNot(nil));
             [sessionRequest release];
-        });
-        
-        
     });
     
-    
-
-
 });
 
 
 SPEC_END
-
-
-
-
-
