@@ -62,7 +62,7 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {    
-    [_sessionToken release];
+    [_sessionToken release]; 
     [_errorMessage release];
     [_warningMessage release];
     [super dealloc];

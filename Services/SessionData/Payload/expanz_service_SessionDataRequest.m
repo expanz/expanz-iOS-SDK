@@ -19,20 +19,12 @@
 
 /* ================================================== Constructors ================================================== */
 
-#pragma mark 'dedicated initializer' 
-- (id) init {
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }    
-    return self;
-}
-
-
 - (id)initWithSessionToken:(NSString*)sessionToken {
     self = [self init];
-    _sessionToken = sessionToken; 
-    [_sessionToken retain];
+    if (!self) {
+        [NSException raise:kInitializationFailed format:@"Call to super-class initialization failed."];
+    }
+    _sessionToken = [sessionToken retain];
     return self;
 }
 
