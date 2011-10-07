@@ -46,7 +46,6 @@
       key = [NSString stringWithFormat:@"<%@>", NSStringFromProtocol(classOrProtocol)];
     }
 
-    LogDebug(@"Here's the context: %@", [_context description]);
     id<JSObjectionEntry> injectorEntry = [_context objectForKey:key];
     injectorEntry.injector = self;
     

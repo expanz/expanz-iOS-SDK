@@ -34,7 +34,7 @@ objection_register(expanz_service_XmlPostLoginClient)
     }];
     
     [self.request setFailedBlock:^{
-        [delegate performSelector:@selector(requestDidFailWithError:) withObject:[self.request error]]; 
+        [delegate requestDidFailWithError:[self.request error]]; 
     }];
     [self.request startAsynchronous];
         
