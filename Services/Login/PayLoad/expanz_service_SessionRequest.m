@@ -11,17 +11,6 @@
 
 #import "JBPackageVoodoo.h"
 
-/* ================================================================================================================== */
-
-@interface expanz_service_SessionRequest(private)
-
-- (void) setUserName:(NSString*)userName;
-- (void) setPassword:(NSString*)password;
-- (void) setAppsite:(NSString*)appSite;
-
-@end
-
-/* ================================================================================================================== */
 
 @implementation expanz_service_SessionRequest
 
@@ -38,9 +27,9 @@
     if (!self) {
         [NSException raise:kInitializationFailed format:@"Call to super-class initialization failed."];
     }
-    [self setUserName:userName];
-    [self setPassword:password];
-    [self setAppsite:appSite];    
+    _userName = [userName retain];
+    _password = [password retain];
+    _appSite = [appSite retain];
     return self; 
 }
 
@@ -66,24 +55,6 @@ schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
     [_appSite release];
     [super dealloc];
 }
-
-/* ================================================== Private Methods =============================================== */
-
-- (void) setUserName:(NSString*)userName {
-    _userName = userName;
-    [userName retain];    
-}
-
-- (void) setPassword:(NSString*)password {
-    _password = password;
-    [password retain];
-}
-
-- (void) setAppsite:(NSString*)appSite {
-    _appSite = appSite;
-    [appSite retain];
-}
-
 
 
 @end

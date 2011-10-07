@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6B0224DB143E77580055B579 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
+		6B0224E0143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
+		6B0224E1143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
+		6B0224E2143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
 		6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
@@ -133,9 +136,6 @@
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
-		6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
-		6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
-		6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
@@ -202,6 +202,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B0224DE143E7A9D0055B579 /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
+		6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
 		6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
@@ -288,8 +290,6 @@
 		6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClient.h; sourceTree = "<group>"; };
 		6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
 		6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
-		6B915A92143BCC6E005EFEFC /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
-		6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6B915A97143BD899005EFEFC /* jb_xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jb_xml_Serializable.h; sourceTree = "<group>"; };
 		6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
 		6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OCHamcrest-iPhone.framework"; path = "Dependencies/Frameworks/OCHamcrest-iPhone.framework"; sourceTree = "<group>"; };
@@ -411,6 +411,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0224DD143E7A9D0055B579 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6B0224DE143E7A9D0055B579 /* expanz_service_SessionDataRequest.h */,
+				6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
 		6B100BEA143E739000EABC94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,9 +614,8 @@
 		6B915A88143BC8BB005EFEFC /* SessionData */ = {
 			isa = PBXGroup;
 			children = (
-				6B915A92143BCC6E005EFEFC /* expanz_service_SessionDataRequest.h */,
-				6B915A93143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m */,
 				6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */,
+				6B0224DD143E7A9D0055B579 /* Payload */,
 			);
 			path = SessionData;
 			sourceTree = "<group>";
@@ -943,7 +951,6 @@
 				6B3F494D143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F4950143ACDCA005C0A7A /* Reachability.m in Sources */,
 				6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6B915A95143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 				6B750248143C4FFB00444AA9 /* SessionDataRequestSpec.m in Sources */,
 				6BB67A06143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BB67A09143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
@@ -957,6 +964,7 @@
 				6BDD379B143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
 				6BDD379E143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B0224DB143E77580055B579 /* expanz_iOS_SDKModule.m in Sources */,
+				6B0224E1143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,7 +1003,6 @@
 				6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */,
 				6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */,
 				6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6B915A96143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 				6BB67A07143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BB67A0A143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
 				6BDD3787143DC37E00CB33AE /* JSObjection.m in Sources */,
@@ -1008,6 +1015,7 @@
 				6BDD379C143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
 				6BDD379F143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
+				6B0224E2143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1054,6 @@
 				6B3F494C143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F494F143ACDCA005C0A7A /* Reachability.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6B915A94143BCC6E005EFEFC /* expanz_service_SessionDataRequest.m in Sources */,
 				6BB67A05143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BB67A08143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
 				6BDD3785143DC37E00CB33AE /* JSObjection.m in Sources */,
@@ -1059,6 +1066,7 @@
 				6BDD379A143DC37E00CB33AE /* JSObjectionUtils.m in Sources */,
 				6BDD379D143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
+				6B0224E0143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
