@@ -14,9 +14,10 @@
 /**
  * Object couldn't be initialized into a valid state. 
  */
-#define kInitializationFailed   @"ObjectInitializationFailedException"
+#define ExObjectInitializationException   @"ExObjectInitializationException"
 
 /**
  * Xml does not match the expected format. 
  */
-#define kXmlValidationFailed       @"XmlValidationFailedException"
+#define ExXmlValidationException       @"ExXmlValidationException"
+

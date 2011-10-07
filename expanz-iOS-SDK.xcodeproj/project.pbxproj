@@ -11,6 +11,12 @@
 		6B0224E0143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
 		6B0224E1143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
 		6B0224E2143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */; };
+		6B0224E5143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */; };
+		6B0224E6143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */; };
+		6B0224E7143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */; };
+		6B0224EA143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */; };
+		6B0224EB143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */; };
+		6B0224EC143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
 		6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
@@ -204,6 +210,10 @@
 /* Begin PBXFileReference section */
 		6B0224DE143E7A9D0055B579 /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
 		6B0224DF143E7A9D0055B579 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
+		6B0224E3143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostSessionDataClient.h; sourceTree = "<group>"; };
+		6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostSessionDataClient.m; sourceTree = "<group>"; };
+		6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostWebService.h; sourceTree = "<group>"; };
+		6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostWebService.m; sourceTree = "<group>"; };
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
 		6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
@@ -596,6 +606,8 @@
 			children = (
 				6B915A80143BC8BB005EFEFC /* Login */,
 				6B915A88143BC8BB005EFEFC /* SessionData */,
+				6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */,
+				6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -615,6 +627,8 @@
 			isa = PBXGroup;
 			children = (
 				6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */,
+				6B0224E3143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.h */,
+				6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */,
 				6B0224DD143E7A9D0055B579 /* Payload */,
 			);
 			path = SessionData;
@@ -965,6 +979,8 @@
 				6BDD379E143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B0224DB143E77580055B579 /* expanz_iOS_SDKModule.m in Sources */,
 				6B0224E1143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
+				6B0224E6143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6B0224EB143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,6 +1032,8 @@
 				6BDD379F143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B100BE8143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
 				6B0224E2143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
+				6B0224E7143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6B0224EC143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,6 +1085,8 @@
 				6BDD379D143DC37E00CB33AE /* NSObject+Objection.m in Sources */,
 				6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
 				6B0224E0143E7A9D0055B579 /* expanz_service_SessionDataRequest.m in Sources */,
+				6B0224E5143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6B0224EA143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

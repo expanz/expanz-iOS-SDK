@@ -30,7 +30,7 @@
 - (id) initWithXml:(NSString*)xml {
     self = [self init]; 
     if (!self) {
-        [NSException raise:kInitializationFailed format:@"Call to superclass initializer failed."];
+        [NSException raise:ExObjectInitializationException format:@"Call to superclass initializer failed."];
     }
     LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
     RXMLElement* rootElement = [RXMLElement elementFromXMLString:xml];
@@ -50,7 +50,7 @@
             self.errorMessage = error.text;
         }
         else {
-            [NSException raise:kXmlValidationFailed format:@"Contains neither a session token or an error message."];
+            [NSException raise:ExXmlValidationException format:@"Contains neither a session token or an error message."];
         }
     }        
     return self; 

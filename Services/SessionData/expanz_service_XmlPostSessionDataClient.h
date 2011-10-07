@@ -13,7 +13,11 @@
 #import "JBPackageVoodoo.h"
 #import "ASIFormDataRequest.h"
 
+@interface expanz_service_XmlPostSessionDataClient : NSObject
 
-@interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>@end
+
+@property (nonatomic, readonly) ASIFormDataRequest* sessionDataRequest; 
 
 
+
+@end

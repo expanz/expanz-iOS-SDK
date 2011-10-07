@@ -17,7 +17,7 @@ describe(@"Object initialization", ^{
             [NSException raise:@"AssertionFailed" format:@"Should have thrown exception"];
         }
         @catch(NSException* exception) {
-            assertThat([exception name], equalTo(kInitializationFailed));
+            assertThat([exception name], equalTo(ExObjectInitializationException));
             [sessionRequest release];
         }        
     });

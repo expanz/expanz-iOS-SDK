@@ -20,7 +20,7 @@
     
     [self bindBlock:^(JSObjectionInjector *context) {
         ASIFormDataRequest* loginRequest = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:kCreateSessionUrl]];
-        XmlPostLoginClient* loginClient = [[XmlPostLoginClient alloc] initWithLoginRequest:loginRequest];
+        XmlPostLoginClient* loginClient = [[XmlPostLoginClient alloc] initWithRequest:loginRequest];
         return (id) loginClient;
     } toProtocol:@protocol(expanz_service_LoginClient)];         
 }

@@ -19,7 +19,7 @@ describe(@"Object initialization", ^{
             [NSException raise:@"AssertionFailed" format:@"Should have thrown exception"];
         }
         @catch(NSException* exception) {
-            assertThat([exception name], equalTo(kInitializationFailed));
+            assertThat([exception name], equalTo(ExObjectInitializationException));
             [context release];
         }        
     });
@@ -80,7 +80,7 @@ describe(@"Attempt to instantiate a SessionContextHolder from invalid XML", ^{
             [NSException raise:@"AssertionFailed" format:@"Should have thrown exception"];
         }
         @catch(NSException* exception) {
-            assertThat([exception name], equalTo(kXmlValidationFailed));
+            assertThat([exception name], equalTo(ExXmlValidationException));
         }
 
     });

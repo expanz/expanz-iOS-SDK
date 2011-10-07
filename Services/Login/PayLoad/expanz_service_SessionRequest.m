@@ -25,7 +25,7 @@
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {    
     self = [self init];   
     if (!self) {
-        [NSException raise:kInitializationFailed format:@"Call to super-class initialization failed."];
+        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
     }
     _userName = [userName retain];
     _password = [password retain];

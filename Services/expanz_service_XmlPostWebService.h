@@ -10,10 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "JBPackageVoodoo.h"
 #import "ASIFormDataRequest.h"
 
+@interface expanz_service_XmlPostWebService : NSObject
 
-@interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>@end
+
+@property (nonatomic, retain) ASIFormDataRequest* request; 
 
 
+- (id) initWithRequest:(ASIFormDataRequest*)request;
+
+@end

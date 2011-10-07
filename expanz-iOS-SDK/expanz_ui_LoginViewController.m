@@ -130,8 +130,11 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_userName dealloc];
-    [_password dealloc];
+    [_loginClient release];
+    [_userName release];
+    [_password release];
+    [_loginButton release];
+    [_spinner release];
     [super dealloc];
 }
 

@@ -29,6 +29,11 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Services ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #import "test_expanz_com_ServiceUrls.h"
 
+/* ================================================================================================================== */
+@class expanz_service_XmlPostWebService;
+#import "expanz_service_XmlPostWebService.h"
+@compatibility_alias XmlPostWebService expanz_service_XmlPostWebService;
+
 
 /* ================================================================================================================== */
 #pragma mark Login

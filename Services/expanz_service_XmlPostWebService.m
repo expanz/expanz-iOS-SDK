@@ -9,42 +9,30 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_SessionDataRequest.h"
+#import "expanz_service_XmlPostWebService.h"
+#import "JBPackageVoodoo.h"
 
+@implementation expanz_service_XmlPostWebService
 
-
-@implementation expanz_service_SessionDataRequest
-
-@synthesize sessionToken = _sessionToken;
+@synthesize request = _request;
 
 /* ================================================== Constructors ================================================== */
 
-- (id)initWithSessionToken:(NSString*)sessionToken {
-    self = [self init];
+- (id) initWithRequest:(ASIFormDataRequest*)request {
+    self = [super init];
     if (!self) {
         [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
     }
-    _sessionToken = [sessionToken retain];
+    _request = [request retain];
+    [_request addRequestHeader:@"Content-Type" value:@"text/xml"];     
     return self;
 }
-
-/* ================================================ Delegate Methods ================================================ */
-#pragma mark jb_xml_Serializable
-
-#define kSessionDataRequestXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
-</xml><sessionHandle>%@</sessionHandle></ExecX>"
-
-- (NSString*) toXml {
-    return [NSString stringWithFormat:kSessionDataRequestXml, _sessionToken];
-}
-
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_sessionToken release];
+    [_request release];
     [super dealloc];
-    
 }
 
 @end
