@@ -51,10 +51,8 @@ describe(@"Authenticating with the site manager.", ^{
     
     beforeEach(^{
         JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
-        [JSObjection setGlobalInjector:injector];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
     });
-
           
         it(@"should return a SessionContextHolder, containing a valid session token, within 5 seconds", ^{
             

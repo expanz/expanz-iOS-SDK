@@ -32,6 +32,7 @@
     [self bindBlock:^(JSObjectionInjector *context) {
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kGetSessionDataUrl]];        
         XmlPostSessionDataClient* client = [[XmlPostSessionDataClient alloc] initWithRequest:request];
+        [request release];
         return (id) client;
     } toProtocol:@protocol(expanz_service_SessionDataClient)];         
 }

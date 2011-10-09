@@ -25,6 +25,8 @@ objection_register(expanz_service_XmlPostSessionDataClient)
     [self.request appendPostData:[[sessionDataRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [self.request setCompletionBlock:^{
+        LogDebug(@"Response: %@", [self.request responseString]);
+        
         //SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[self.request responseString]];
         //[delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
     }];

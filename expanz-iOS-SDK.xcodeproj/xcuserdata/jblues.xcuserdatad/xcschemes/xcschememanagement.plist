@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RELEASE.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>RunIntegrationTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>Single Test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>expanz-iOS-SDK.xcscheme</key>
 		<dict>
@@ -43,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>6B932F6314344EFD00834A1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB17F5B14425AF200DDA634</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB17FAF14425C4400DDA634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
