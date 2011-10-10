@@ -11,11 +11,12 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_SessionDataRequest.h"
+#import "expanz_model_Menu.h"
 
 /* ================================================================================================================== */
 @protocol expanz_service_SessionDataDelegate <NSObject>
 
-- (void) requestDidFinishWithSessionContext:(id)holder; 
+- (void) requestDidFinishWithMenu:(Menu*)menu; 
 - (void) requestDidFailWithError:(NSError*)error; 
 
 @end

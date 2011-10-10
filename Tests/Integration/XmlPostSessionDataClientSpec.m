@@ -11,7 +11,7 @@
 
 #import "SpecHelper.h"
 #import "Objection.h"
-#import "expanz_service_XmlPostSessionDataClient.h"
+#import "expanz_service_SessionDataClient.h"
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_service_SessionDataRequest.h"
 
@@ -20,17 +20,22 @@
 
 @interface TestSessionDataClientDelegate : NSObject<expanz_service_SessionDataDelegate> 
 
+@property (nonatomic, readonly) Menu* menu;
+@property (nonatomic, readonly) NSError* error; 
 
 @end
 
 @implementation TestSessionDataClientDelegate 
 
-- (void) requestDidFinishWithSessionContext:(id)holder {
+@synthesize menu = _menu;
+@synthesize error = _error;
 
-    
+- (void) requestDidFinishWithMenu:(Menu*)menu {
+    _menu = [menu retain];    
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
+    _error = [error retain];
     
 }
 
@@ -51,11 +56,14 @@ describe(@"Retrieve session data using an access token", ^{
     
     it(@"should retrieve session data", ^{
         TestSessionDataClientDelegate* delegate = [[[TestSessionDataClientDelegate alloc] init] autorelease];
-        NSString* token = @"net.tcp://127.0.0.1:8198/SessionManager1#634536054150607978:291";
+        NSString* token = @"net.tcp://127.0.0.1:8198/SessionManager1#634538574809943002:303";
         SessionDataRequest* request = [[SessionDataRequest alloc] initWithSessionToken:token];
         [sessionDataClient retrieveSessionDataWith:request delegate:delegate];  
         [request release];        
         [NSThread sleepForTimeInterval:5];
+        LogDebug("Request finished with: %@", delegate.menu);
+        assertThat(delegate.menu, notNilValue());
+        
     });
 });
 

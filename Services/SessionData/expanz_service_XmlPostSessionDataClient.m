@@ -11,6 +11,9 @@
 
 #import "expanz_service_XmlPostSessionDataClient.h"
 #import "Objection.h"
+#import "RXMLElement+SessionData.h"
+
+
 
 @implementation expanz_service_XmlPostSessionDataClient
 
@@ -24,11 +27,9 @@ objection_register(expanz_service_XmlPostSessionDataClient)
     
     [self.request appendPostData:[[sessionDataRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
-    [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@", [self.request responseString]);
-        
-        //SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[self.request responseString]];
-        //[delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
+    [self.request setCompletionBlock:^{        
+        RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];
+        [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
     }];
     
     [self.request setFailedBlock:^{
