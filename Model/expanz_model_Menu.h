@@ -21,26 +21,18 @@
 
 @property (nonatomic, readonly, getter = hasWorkflowTrays) BOOL hasWorkflowTrays; 
 @property (nonatomic, readonly, getter = canChangeCompanyRole) BOOL canChangeCompanyRole;
-@property (nonatomic, readonly) NSSet* processAreas;
-@property (nonatomic, readonly) NSSet* userRoles; 
+@property (nonatomic, readonly) NSArray* processAreas;
+@property (nonatomic, readonly) NSArray* userRoles; 
 
 
 - (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole; 
 
-/**
- * Returns an immutable copy of the processAreas collection. 
- */
-- (NSSet*) processAreas;
 
 /**
  * Adds a ProcessArea to this menu. 
  */
 - (void) addProcessArea:(ProcessArea*)processArea;
 
-/**
- * Returns an immutable copy of the userRoles collection. 
- */
-- (NSSet*) userRoles;
 
 /**
  * Adds a ProcessArea to this menu. 

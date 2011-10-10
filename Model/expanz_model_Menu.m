@@ -37,16 +37,18 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (NSSet*) processAreas {
-    return [[_processAreas copy] autorelease];
+- (NSArray*) processAreas {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
 }
 
 - (void) addProcessArea:(ProcessArea*)processArea {
     [_processAreas addObject:processArea];    
 }
 
-- (NSSet*) userRoles {
-    return [[_userRoles copy] autorelease];
+- (NSArray*) userRoles {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
 }
 
 - (void) addUserRole:(UserRole*)userRole {

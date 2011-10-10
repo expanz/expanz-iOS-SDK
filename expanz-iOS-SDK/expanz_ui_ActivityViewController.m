@@ -15,7 +15,12 @@
 
 @implementation expanz_ui_ActivityViewController
 
+//TODO: Replace this with a static
+#define kMenuId @"ExpanzMenu"
+
 @synthesize sessionDataClient = _sessionDataClient;
+@synthesize menu = _menu;
+@synthesize menuTable = _menuTable;
 
 /* ================================================ Delegate Methods ================================================ */
 
@@ -49,14 +54,60 @@
 }
 
 /* ================================================================================================================== */
+#pragma mark table view
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
+    return [_menu.processAreas count];
+}
+
+
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[[_menu.processAreas objectAtIndex:section] activities] count];
+}
+
+- (NSString*) tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[_menu.processAreas objectAtIndex:section] title];
+}
+
+
+-(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kMenuId];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuId] autorelease];
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.detailTextLabel.textColor = [UIColor darkGrayColor];
+        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
+    Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
+    cell.textLabel.text = [activity title];    
+    return cell;    
+}
+
+
+/* ================================================================================================================== */
 #pragma mark SessionDataClientDelegate 
 
 - (void) requestDidFinishWithMenu:(Menu*)menu {
-    LogDebug(@"Got menu - %@", menu);    
+    LogDebug(@"%@", menu);
+    _menu = [menu retain];
+    [self.menuTable reloadData];
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
     
 }
+
+/* ================================================== Utility Methods =============================================== */
+
+
+
+- (void) dealloc {
+    
+    [super dealloc];
+}
+
 
 @end

@@ -33,8 +33,9 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (NSSet*) activities {
-    return [[_activities copy] autorelease];
+- (NSArray*) activities {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
 }
 
 - (void) addActivity:(Activity*)activity {

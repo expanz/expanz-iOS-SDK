@@ -19,7 +19,7 @@
 
 @property (nonatomic, readonly) NSString* processId; 
 @property (nonatomic, readonly) NSString* title;
-@property (nonatomic, readonly) NSSet* activities; 
+@property (nonatomic, readonly) NSArray* activities; 
 
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title; 
 - (void) addActivity:(Activity*)activity; 

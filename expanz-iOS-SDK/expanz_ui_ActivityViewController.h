@@ -15,6 +15,8 @@
 @interface expanz_ui_ActivityViewController : UIViewController<expanz_service_SessionDataClientDelegate>
         
 @property (nonatomic, readonly) id<expanz_service_SessionDataClient> sessionDataClient; 
+@property (nonatomic, readonly) Menu* menu;
+@property (nonatomic, retain) IBOutlet UITableView* menuTable;
 
 @end
 
