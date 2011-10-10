@@ -1,10 +1,13 @@
+////////////////////////////////////////////////////////////////////////////////
 //
-//  expanz_ui_ActivityViewController.m
-//  expanz-iOS-SDK
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
 //
-//  Created by Jasper Blues on 9/30/11.
-//  Copyright 2011 Expanz Inc. All rights reserved.
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
 //
+////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_ui_ActivityViewController.h"
 

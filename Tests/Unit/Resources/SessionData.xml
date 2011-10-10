@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" operationalMode="Testing"
+            timeZone="(GMT+10:00) Canberra, Melbourne, Sydney" windowTitle="" userName="demo4"
+            blobCacheURL="http://hosted.expanz.com/DEMO/live/" UserCultureName="en-AU"
+            keepDBStats="0" responseTime="0" xmlns="">
+            <Menu hasWorkflowTrays="0" canChangeCompanyRole="0">
+                <ProcessArea id="Sales" title="Sales">
+                    <Activity name="ESA.Sales.SalesOrder" style="Browse" title="Sales Orders"/>
+                    <Activity name="ESA.Sales.Customer" style="Browse" title="Customers"/>
+                    <Activity title="My Dashboard" name="ESA.Sales.Dashboard" style=""/>
+                </ProcessArea>
+                <ProcessArea id="Dashboard" title="Dashboard">
+                    <Activity title="My Dashboard" name="Dashboard" style=""/>
+                </ProcessArea>
+                <ProcessArea id="Test" title="Test">
+                    <Activity name="ESA.Framework.Testing.LongRunningTransaction"
+                        title="Test Long Running Trans"/>
+                    <Activity name="ESA.Framework.Testing.EmailTest" title="Email Test"/>
+                    <Activity name="ESA.Framework.Testing.ReflectionTest" title="Reflection Test"/>
+                    <Activity name="ESA.Framework.Testing.BasicTester" title="Basic Test"/>
+                    <Activity name="ESA.Framework.Testing.Persistence" title="Persistence"/>
+                    <Activity name="ESA.Framework.Testing.B1" title="Polymorphism - B1"/>
+                    <Activity name="ESA.Framework.Testing.B2" title="Polymorphism - B2"/>
+                    <Activity name="ESA.Framework.Testing.B21" title="Polymorphism - B21"/>
+                    <Activity name="ESA.Framework.Testing.ReportTester" title="Reports"/>
+                    <Activity name="ESA.Framework.Testing.ClientMessage" title="Client Messaging"/>
+                </ProcessArea>
+                <ProcessArea id="Calculator" title="Calculator">
+                    <Activity title="Basic Calculator" name="ESA.Sales.Calc" style=""/>
+                    <Activity title="Advanced Calculator" name="ESA.Sales.AdvancedCalc" style=""/>
+                </ProcessArea>
+                <Roles>
+                    <UserRole id="SalesClerk">Sales</UserRole>
+                    <UserRole id="Test">Test</UserRole>
+                </Roles>
+            </Menu>
+            <UIPreferences/>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8198/SessionManager1#634536054150607978:291</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>
