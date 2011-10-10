@@ -10,11 +10,20 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement.h"
+#import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_Activity.h"
+#import "expanz_model_UserRole.h"
 
+/**
+ * Category for parsing GetSessionData response. 
+ */
 @interface RXMLElement (RXMLElement_SessionData)
 
+- (Menu*) asMenu; 
 - (ProcessArea*) asProcessArea;
+- (UserRole*) asUserRole; 
+
+
 
 @end

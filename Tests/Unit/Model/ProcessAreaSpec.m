@@ -28,12 +28,8 @@ describe(@"Object initialization", ^{
         NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"]; 
         NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
         RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
-        
-        [element iterate:@"ExecXResult.ESA.Menu.*" with: ^(RXMLElement* e) {
-            ProcessArea* processArea = [e asProcessArea];
-            LogDebug(@"%@", [processArea description]);
-
-        }];
+        Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
+        LogDebug(@"%@", menu);
         
 
     });
