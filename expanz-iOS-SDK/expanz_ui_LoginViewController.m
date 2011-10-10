@@ -34,14 +34,6 @@
 @synthesize loginButton = _loginButton;
 @synthesize spinner = _spinner; 
 
-/* ================================================== Constructors ================================================== */
-- (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
-    }
-    return self;
-}
 
 /* ================================================ Delegate Methods ================================================ */
 - (void) didReceiveMemoryWarning {
@@ -54,13 +46,13 @@
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void) viewDidLoad
-{
+
+
+- (void) viewDidLoad {
     [super viewDidLoad];
+    _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
 }
-*/
+
 
 - (void) viewDidUnload {
     [super viewDidUnload];
@@ -108,7 +100,7 @@
     [_spinner stopAnimating];
     
     if (!sessionContext.hasError) {
-
+        [SessionContextHolder setGlobalContext:sessionContext];
         ActivityViewController* activityViewController = [[ActivityViewController alloc] 
                                                         initWithNibName: @"ActivityWindow" 
                                                         bundle: [NSBundle mainBundle]];        

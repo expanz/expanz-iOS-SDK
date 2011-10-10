@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
+ 
 @interface expanz_service_SessionContextHolder: NSObject
 
 
@@ -21,10 +22,16 @@
 @property (nonatomic) BOOL hasWarning;
 @property (nonatomic, retain) NSString* warningMessage;
 
+
++ (void)setGlobalContext:(expanz_service_SessionContextHolder*)context;
++ (expanz_service_SessionContextHolder*) globalContext;
+
+
 /**
  * Create an autoreleased instance from XML. 
  */
 + (id) fromXml:(NSString*)xml;
+
 
 /**
  * Create an instance with XML. 

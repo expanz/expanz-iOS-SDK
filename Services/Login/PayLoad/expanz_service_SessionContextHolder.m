@@ -14,6 +14,8 @@
 #import "expanz_iOS_SDKExceptions.h"
 #import "RXMLElement.h"
 
+static SessionContextHolder* globalContext;
+
 @implementation expanz_service_SessionContextHolder
 
 @synthesize sessionToken = _sessionToken;
@@ -28,6 +30,7 @@
     return [[[self alloc] initWithXml:xml] autorelease];
 }
 
+//TODO: Replace this with a vanila initializer. Use a RXMLElement category to parse.
 - (id) initWithXml:(NSString*)xml {
     self = [self init]; 
     if (!self) {
@@ -55,6 +58,19 @@
         }
     }        
     return self; 
+}
+
+/* ================================================ Interface Methods =============================================== */
+
++ (void)setGlobalContext:(SessionContextHolder*)context {
+    if (globalContext != context) {
+        [globalContext release];
+        globalContext = [context retain];
+    }
+}
+
++ (SessionContextHolder*) globalContext {  
+    return [[globalContext retain] autorelease];
 }
 
 

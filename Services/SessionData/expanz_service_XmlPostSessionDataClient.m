@@ -23,7 +23,7 @@ objection_register(expanz_service_XmlPostSessionDataClient)
 /* ================================================ Interface Methods =============================================== */
 
 - (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
-                        delegate:(id<expanz_service_SessionDataDelegate>)delegate {
+                        delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
     
     [self.request appendPostData:[[sessionDataRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     

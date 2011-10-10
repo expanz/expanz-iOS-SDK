@@ -18,7 +18,7 @@
 /* ================================================================================================================== */
 #pragma mark Call back methods for XmlPostSessionDataClient
 
-@interface TestSessionDataClientDelegate : NSObject<expanz_service_SessionDataDelegate> 
+@interface TestSessionDataClientDelegate : NSObject<expanz_service_SessionDataClientDelegate> 
 
 @property (nonatomic, readonly) Menu* menu;
 @property (nonatomic, readonly) NSError* error; 

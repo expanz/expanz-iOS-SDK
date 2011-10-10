@@ -14,7 +14,7 @@
 #import "expanz_model_Menu.h"
 
 /* ================================================================================================================== */
-@protocol expanz_service_SessionDataDelegate <NSObject>
+@protocol expanz_service_SessionDataClientDelegate <NSObject>
 
 - (void) requestDidFinishWithMenu:(Menu*)menu; 
 - (void) requestDidFailWithError:(NSError*)error; 
@@ -30,6 +30,6 @@
  * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
  */
 - (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
-                        delegate:(id<expanz_service_SessionDataDelegate>)delegate;
+                        delegate:(id<expanz_service_SessionDataClientDelegate>)delegate;
 
 @end
