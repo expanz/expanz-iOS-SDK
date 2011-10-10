@@ -27,7 +27,7 @@ objection_register(expanz_service_XmlPostSessionDataClient)
     
     [self.request appendPostData:[[sessionDataRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
-    [self.request setCompletionBlock:^{        
+    [self.request setCompletionBlock:^{       
         RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];
         [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
     }];
