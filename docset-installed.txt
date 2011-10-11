@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/jblues/Library/Developer/Shared/Documentation/DocSets/expanz.expanz-iOS-SDK.docset
-Time: 2011-10-11 07:42:42 +0000
