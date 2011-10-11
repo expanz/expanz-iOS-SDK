@@ -18,7 +18,7 @@
 @property (nonatomic, readonly) NSString* sessionToken; 
 
 
-- (id) initWithActivityName:(NSString*)activityName andSessionToken:(NSString*)sessionToken;
+- (id) initWithActivityName:(NSString*)activityName sessionToken:(NSString*)sessionToken;
 
 @end
 

@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6BF58B3B144410A50063E805"
-               BuildableName = "expanz-iOS-SDK copy.app"
+               BuildableName = "expanz-iOS-SDK.app"
                BlueprintName = "RELEASE"
                ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
             </BuildableReference>

@@ -27,7 +27,7 @@
     return self;
 }
 
-- (id) initWithActivityName:(NSString*)activityName andSessionToken:(NSString*)sessionToken {
+- (id) initWithActivityName:(NSString*)activityName sessionToken:(NSString*)sessionToken {
     self = [self init];
     _activityName = [activityName retain];
     _sessionToken = [sessionToken retain];

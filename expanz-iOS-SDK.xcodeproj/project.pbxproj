@@ -159,6 +159,8 @@
 		6B353A2E1444282900C8E6C2 /* SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* SessionContextHolderSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
+		6B353A32144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
+		6B353A33144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
 		6B7FAAEE143EF57F00347DE7 /* expanz_model_ProcessArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAED143EF57F00347DE7 /* expanz_model_ProcessArea.m */; };
@@ -169,6 +171,7 @@
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
+		6BB77B0C14444F71007CA74B /* XmlPostActivityClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
 		6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
 		6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
@@ -384,9 +387,8 @@
 		6B17C6A3144195D200FF35D8 /* expanz_model_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Menu.h; sourceTree = "<group>"; };
 		6B17C6A4144195D200FF35D8 /* expanz_model_Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Menu.m; sourceTree = "<group>"; };
 		6B3539CB1444275A00C8E6C2 /* IntegrationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B3539CD1444275B00C8E6C2 /* UnitTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UnitTests copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/UnitTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B353A211444276C00C8E6C2 /* IntegrationTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "IntegrationTests copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/IntegrationTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientSpec.m; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientSpec.m; sourceTree = "<group>"; };
@@ -451,7 +453,7 @@
 		6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
 		6BF58B341443D67A0063E805 /* expanz_service_XmlPostActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostActivityClient.h; sourceTree = "<group>"; };
 		6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostActivityClient.m; sourceTree = "<group>"; };
-		6BF58B89144410A50063E805 /* expanz-iOS-SDK copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58BB014441E210063E805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BF58BB114441E210063E805 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF58BB214441E210063E805 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
@@ -703,6 +705,7 @@
 		6B86AD8B1435B65400AA7FD5 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */,
 				6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientSpec.m */,
 				6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientSpec.m */,
 			);
@@ -851,8 +854,6 @@
 				6BB679E3143D522400B9EC94 /* Libraries */,
 				6BCAFB9A14317B1C00575280 /* Frameworks */,
 				6BCAFB9814317B1C00575280 /* Products */,
-				6B3539CD1444275B00C8E6C2 /* UnitTests copy-Info.plist */,
-				6B353A211444276C00C8E6C2 /* IntegrationTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -860,7 +861,7 @@
 			isa = PBXGroup;
 			children = (
 				6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */,
-				6BF58B89144410A50063E805 /* expanz-iOS-SDK copy.app */,
+				6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */,
 				6BF58BC814441E320063E805 /* UnitTests.app */,
 				6B3539CB1444275A00C8E6C2 /* IntegrationTests.app */,
 				6B353A1F1444276C00C8E6C2 /* Single Test.app */,
@@ -1156,7 +1157,7 @@
 			);
 			name = RELEASE;
 			productName = "expanz-iOS-SDK";
-			productReference = 6BF58B89144410A50063E805 /* expanz-iOS-SDK copy.app */;
+			productReference = 6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6BF58BBA14441E320063E805 /* UnitTests */ = {
@@ -1212,6 +1213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3539C61444275A00C8E6C2 /* InfoPlist.strings in Resources */,
+				6B353A33144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1235,7 @@
 				6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */,
 				6BC1608C1436AF3500E166F6 /* loginBackground.png in Resources */,
 				6BC1608E1436AF3500E166F6 /* LoginWindow.xib in Resources */,
+				6B353A32144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,6 +1387,7 @@
 				6B353A041444276C00C8E6C2 /* RXMLElement.m in Sources */,
 				6B353A051444276C00C8E6C2 /* TBXML.m in Sources */,
 				6B353A061444276C00C8E6C2 /* Reachability.m in Sources */,
+				6BB77B0C14444F71007CA74B /* XmlPostActivityClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1862,7 +1866,7 @@
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "expanz-iOS-SDK copy";
+				PRODUCT_NAME = "expanz-iOS-SDK";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1885,7 +1889,7 @@
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "expanz-iOS-SDK copy";
+				PRODUCT_NAME = "expanz-iOS-SDK";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

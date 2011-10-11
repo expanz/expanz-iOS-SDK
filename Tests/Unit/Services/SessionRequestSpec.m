@@ -31,7 +31,7 @@ describe(@"Properties", ^{
                                                                           appSite:@"SALESAPP"];
         
         assertThat(sessionRequest.userName, equalTo(@"demo"));
-        assertThat(sessionRequest.password, equalTo(@"demo3"));
+                        assertThat(sessionRequest.password, equalTo(@"demo3"));
         assertThat(sessionRequest.appSite, equalTo(@"SALESAPP"));
         
         [sessionRequest release];
