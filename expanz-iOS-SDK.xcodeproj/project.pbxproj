@@ -383,9 +383,9 @@
 		6B17C69B14418C8D00FF35D8 /* expanz_model_Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Activity.m; sourceTree = "<group>"; };
 		6B17C6A3144195D200FF35D8 /* expanz_model_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Menu.h; sourceTree = "<group>"; };
 		6B17C6A4144195D200FF35D8 /* expanz_model_Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Menu.m; sourceTree = "<group>"; };
-		6B3539CB1444275A00C8E6C2 /* UnitTests copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnitTests copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3539CB1444275A00C8E6C2 /* IntegrationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3539CD1444275B00C8E6C2 /* UnitTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UnitTests copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/UnitTests copy-Info.plist"; sourceTree = "<absolute>"; };
-		6B353A1F1444276C00C8E6C2 /* IntegrationTests copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IntegrationTests copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B353A211444276C00C8E6C2 /* IntegrationTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "IntegrationTests copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/IntegrationTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 		6BF58BB314441E210063E805 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestRunner-Prefix.pch"; sourceTree = "<group>"; };
 		6BF58BB414441E210063E805 /* TestRunnerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunnerAppDelegate.h; sourceTree = "<group>"; };
 		6BF58BB514441E210063E805 /* TestRunnerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunnerAppDelegate.m; sourceTree = "<group>"; };
-		6BF58BC814441E320063E805 /* TestRunner copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestRunner copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF58BC814441E320063E805 /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58C22144420810063E805 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		6BF58C23144420810063E805 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		6BF58C24144420810063E805 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -861,9 +861,9 @@
 			children = (
 				6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */,
 				6BF58B89144410A50063E805 /* expanz-iOS-SDK copy.app */,
-				6BF58BC814441E320063E805 /* TestRunner copy.app */,
-				6B3539CB1444275A00C8E6C2 /* UnitTests copy.app */,
-				6B353A1F1444276C00C8E6C2 /* IntegrationTests copy.app */,
+				6BF58BC814441E320063E805 /* UnitTests.app */,
+				6B3539CB1444275A00C8E6C2 /* IntegrationTests.app */,
+				6B353A1F1444276C00C8E6C2 /* Single Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1105,7 +1105,7 @@
 			);
 			name = IntegrationTests;
 			productName = TestRunner;
-			productReference = 6B3539CB1444275A00C8E6C2 /* UnitTests copy.app */;
+			productReference = 6B3539CB1444275A00C8E6C2 /* IntegrationTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6B3539CE1444276C00C8E6C2 /* Single Test */ = {
@@ -1122,7 +1122,7 @@
 			);
 			name = "Single Test";
 			productName = TestRunner;
-			productReference = 6B353A1F1444276C00C8E6C2 /* IntegrationTests copy.app */;
+			productReference = 6B353A1F1444276C00C8E6C2 /* Single Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6BCAFB9614317B1B00575280 /* expanz-iOS-SDK */ = {
@@ -1173,7 +1173,7 @@
 			);
 			name = UnitTests;
 			productName = TestRunner;
-			productReference = 6BF58BC814441E320063E805 /* TestRunner copy.app */;
+			productReference = 6BF58BC814441E320063E805 /* UnitTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1634,7 +1634,7 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "UnitTests copy";
+				PRODUCT_NAME = IntegrationTests;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1669,7 +1669,7 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "UnitTests copy";
+				PRODUCT_NAME = IntegrationTests;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1704,7 +1704,7 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "IntegrationTests copy";
+				PRODUCT_NAME = "Single Test";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1739,7 +1739,7 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "IntegrationTests copy";
+				PRODUCT_NAME = "Single Test";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1919,8 +1919,10 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "TestRunner copy";
+				PRODUCT_NAME = UnitTests;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1954,8 +1956,10 @@
 					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "TestRunner copy";
+				PRODUCT_NAME = UnitTests;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
