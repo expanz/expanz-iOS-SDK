@@ -190,8 +190,6 @@
 		6BB17F7914425AF200DDA634 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F4900143ACDCA005C0A7A /* TBXML.m */; };
 		6BB17F7A14425AF200DDA634 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F4903143ACDCA005C0A7A /* Reachability.m */; };
 		6BB17F7B14425AF200DDA634 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
-		6BB17F7C14425AF200DDA634 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
-		6BB17F7D14425AF200DDA634 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
 		6BB17F7E14425AF200DDA634 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3773143DC37E00CB33AE /* JSObjection.m */; };
 		6BB17F7F14425AF200DDA634 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */; };
 		6BB17F8014425AF200DDA634 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */; };
@@ -260,8 +258,6 @@
 		6BB17FCD14425C4400DDA634 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F4900143ACDCA005C0A7A /* TBXML.m */; };
 		6BB17FCE14425C4400DDA634 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F4903143ACDCA005C0A7A /* Reachability.m */; };
 		6BB17FCF14425C4400DDA634 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
-		6BB17FD014425C4400DDA634 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
-		6BB17FD114425C4400DDA634 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
 		6BB17FD214425C4400DDA634 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3773143DC37E00CB33AE /* JSObjection.m */; };
 		6BB17FD314425C4400DDA634 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3775143DC37E00CB33AE /* JSObjectionBindingEntry.m */; };
 		6BB17FD414425C4400DDA634 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3777143DC37E00CB33AE /* JSObjectionEntry.m */; };
@@ -303,12 +299,6 @@
 		6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BB679EF143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BB679F0143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
-		6BB67A05143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
-		6BB67A06143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
-		6BB67A07143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */; };
-		6BB67A08143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
-		6BB67A09143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
-		6BB67A0A143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */; };
 		6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
 		6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
@@ -354,6 +344,16 @@
 		6BDD379D143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
 		6BDD379E143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
 		6BDD379F143DC37E00CB33AE /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */; };
+		6BF58B221443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */; };
+		6BF58B231443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */; };
+		6BF58B241443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */; };
+		6BF58B251443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */; };
+		6BF58B261443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */; };
+		6BF58B271443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
+		6BF58B281443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
+		6BF58B291443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
+		6BF58B2A1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
+		6BF58B2B1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -488,10 +488,6 @@
 		6BB679EB143D522400B9EC94 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		6BB679EC143D522400B9EC94 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		6BB679ED143D522400B9EC94 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		6BB67A01143D6F9500B9EC94 /* expanz_service_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionContextHolder.h; sourceTree = "<group>"; };
-		6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
-		6BB67A03143D6F9500B9EC94 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
-		6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
 		6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
 		6BC1606C1436AF3500E166F6 /* brushed-metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brushed-metal2.png"; sourceTree = "<group>"; };
 		6BC1606E1436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -532,7 +528,11 @@
 		6BDD3782143DC37E00CB33AE /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
 		6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BDD3784143DC37E00CB33AE /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
-		6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
+		6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
+		6BF58B1E1443C8EB0063E805 /* expanz_service_SessionContextHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionContextHolder.h; sourceTree = "<group>"; };
+		6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
+		6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
+		6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -878,7 +878,7 @@
 				6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */,
 				6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */,
 				6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */,
-				6BB67A00143D6F9500B9EC94 /* PayLoad */,
+				6BF58B1D1443C8EB0063E805 /* Payload */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -960,17 +960,6 @@
 				6BB679EC143D522400B9EC94 /* OCMockRecorder.h */,
 			);
 			path = OCMock;
-			sourceTree = "<group>";
-		};
-		6BB67A00143D6F9500B9EC94 /* PayLoad */ = {
-			isa = PBXGroup;
-			children = (
-				6BB67A01143D6F9500B9EC94 /* expanz_service_SessionContextHolder.h */,
-				6BB67A02143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m */,
-				6BB67A03143D6F9500B9EC94 /* expanz_service_SessionRequest.h */,
-				6BB67A04143D6F9500B9EC94 /* expanz_service_SessionRequest.m */,
-			);
-			path = PayLoad;
 			sourceTree = "<group>";
 		};
 		6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */ = {
@@ -1079,6 +1068,17 @@
 				6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */,
 			);
 			path = ActivityDetails;
+			sourceTree = "<group>";
+		};
+		6BF58B1D1443C8EB0063E805 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BF58B1E1443C8EB0063E805 /* expanz_service_SessionContextHolder.h */,
+				6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */,
+				6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */,
+				6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */,
+			);
+			path = Payload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1295,8 +1295,6 @@
 				6B3F494D143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F4950143ACDCA005C0A7A /* Reachability.m in Sources */,
 				6B915A90143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6BB67A06143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
-				6BB67A09143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
 				6BDD3786143DC37E00CB33AE /* JSObjection.m in Sources */,
 				6BDD3789143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
 				6BDD378C143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
@@ -1320,6 +1318,8 @@
 				6BB1800114425D0100DDA634 /* SessionDataRequestSpec.m in Sources */,
 				6BB1800214425D0500DDA634 /* SessionRequestSpec.m in Sources */,
 				6BD5EDBA1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
+				6BF58B231443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BF58B281443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,8 +1357,6 @@
 				6B3F495D143ACE11005C0A7A /* expanz_ui_ActivityViewController.m in Sources */,
 				6B3F495E143ACE15005C0A7A /* expanz_ui_LoginViewController.m in Sources */,
 				6B915A91143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6BB67A07143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
-				6BB67A0A143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
 				6BDD3787143DC37E00CB33AE /* JSObjection.m in Sources */,
 				6BDD378A143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
 				6BDD378D143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
@@ -1379,6 +1377,8 @@
 				6B17C69E14418C8D00FF35D8 /* expanz_model_Activity.m in Sources */,
 				6B17C6A7144195D200FF35D8 /* expanz_model_Menu.m in Sources */,
 				6BD5EDBB1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
+				6BF58B241443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BF58B291443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1417,8 +1417,6 @@
 				6BB17F7914425AF200DDA634 /* TBXML.m in Sources */,
 				6BB17F7A14425AF200DDA634 /* Reachability.m in Sources */,
 				6BB17F7B14425AF200DDA634 /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6BB17F7C14425AF200DDA634 /* expanz_service_SessionContextHolder.m in Sources */,
-				6BB17F7D14425AF200DDA634 /* expanz_service_SessionRequest.m in Sources */,
 				6BB17F7E14425AF200DDA634 /* JSObjection.m in Sources */,
 				6BB17F7F14425AF200DDA634 /* JSObjectionBindingEntry.m in Sources */,
 				6BB17F8014425AF200DDA634 /* JSObjectionEntry.m in Sources */,
@@ -1438,6 +1436,8 @@
 				6BB17F8E14425AF200DDA634 /* expanz_model_Activity.m in Sources */,
 				6BB17F8F14425AF200DDA634 /* expanz_model_Menu.m in Sources */,
 				6BD5EDBC1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
+				6BF58B251443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BF58B2A1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1476,8 +1476,6 @@
 				6BB17FCD14425C4400DDA634 /* TBXML.m in Sources */,
 				6BB17FCE14425C4400DDA634 /* Reachability.m in Sources */,
 				6BB17FCF14425C4400DDA634 /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6BB17FD014425C4400DDA634 /* expanz_service_SessionContextHolder.m in Sources */,
-				6BB17FD114425C4400DDA634 /* expanz_service_SessionRequest.m in Sources */,
 				6BB17FD214425C4400DDA634 /* JSObjection.m in Sources */,
 				6BB17FD314425C4400DDA634 /* JSObjectionBindingEntry.m in Sources */,
 				6BB17FD414425C4400DDA634 /* JSObjectionEntry.m in Sources */,
@@ -1498,6 +1496,8 @@
 				6BB17FE314425C4400DDA634 /* expanz_model_Activity.m in Sources */,
 				6BB17FE414425C4400DDA634 /* expanz_model_Menu.m in Sources */,
 				6BD5EDBD14429CA0009CE668 /* expanz_model_UserRole.m in Sources */,
+				6BF58B261443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BF58B2B1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1536,8 +1536,6 @@
 				6B3F494C143ACDCA005C0A7A /* TBXML.m in Sources */,
 				6B3F494F143ACDCA005C0A7A /* Reachability.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
-				6BB67A05143D6F9500B9EC94 /* expanz_service_SessionContextHolder.m in Sources */,
-				6BB67A08143D6F9500B9EC94 /* expanz_service_SessionRequest.m in Sources */,
 				6BDD3785143DC37E00CB33AE /* JSObjection.m in Sources */,
 				6BDD3788143DC37E00CB33AE /* JSObjectionBindingEntry.m in Sources */,
 				6BDD378B143DC37E00CB33AE /* JSObjectionEntry.m in Sources */,
@@ -1557,6 +1555,8 @@
 				6B17C69C14418C8D00FF35D8 /* expanz_model_Activity.m in Sources */,
 				6B17C6A5144195D200FF35D8 /* expanz_model_Menu.m in Sources */,
 				6BD5EDB91442614B009CE668 /* expanz_model_UserRole.m in Sources */,
+				6BF58B221443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
+				6BF58B271443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
