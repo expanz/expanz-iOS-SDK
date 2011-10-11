@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Integration Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>RELEASE.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>RunIntegrationTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>RunUnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -22,7 +17,12 @@
 		<key>Single Test.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>6</integer>
+		</dict>
+		<key>UnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>expanz-iOS-SDK.xcscheme</key>
 		<dict>
@@ -32,6 +32,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6B35397A1444275A00C8E6C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B3539CE1444276C00C8E6C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6B70143E143A91B70023756C</key>
 		<dict>
 			<key>primary</key>
@@ -73,6 +83,31 @@
 			<true/>
 		</dict>
 		<key>6BCAFBBA14317B1C00575280</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF58B3B144410A50063E805</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF58B8F14441C5B0063E805</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF58BBA14441E320063E805</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF58BCA14441E660063E805</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BF58BDA14441E8D0063E805</key>
 		<dict>
 			<key>primary</key>
 			<true/>

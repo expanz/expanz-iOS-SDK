@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'RunUnitTests' target in the 'RunUnitTests' project
+// Prefix header for all source files of the 'TestRunner' target in the 'TestRunner' project
 //
 
 #import <Availability.h>

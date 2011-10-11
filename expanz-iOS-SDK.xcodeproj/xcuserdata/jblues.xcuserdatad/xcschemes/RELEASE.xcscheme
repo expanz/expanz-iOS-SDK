@@ -13,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B7C5538143ACD65001B1164"
-               BuildableName = "RunIntegrationTests.app"
-               BlueprintName = "RunIntegrationTests"
+               BlueprintIdentifier = "6BF58B3B144410A50063E805"
+               BuildableName = "expanz-iOS-SDK copy.app"
+               BlueprintName = "RELEASE"
                ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,17 +30,17 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B7C5538143ACD65001B1164"
-            BuildableName = "RunIntegrationTests.app"
-            BlueprintName = "RunIntegrationTests"
+            BlueprintIdentifier = "6BCAFB9614317B1B00575280"
+            BuildableName = "expanz-iOS-SDK.app"
+            BlueprintName = "expanz-iOS-SDK"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -51,13 +51,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B7C5538143ACD65001B1164"
-            BuildableName = "RunIntegrationTests.app"
-            BlueprintName = "RunIntegrationTests"
+            BlueprintIdentifier = "6BCAFB9614317B1B00575280"
+            BuildableName = "expanz-iOS-SDK.app"
+            BlueprintName = "expanz-iOS-SDK"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
