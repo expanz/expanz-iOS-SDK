@@ -480,9 +480,7 @@
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6BB17FA814425AF200DDA634 /* expanz-iOS-SDK copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB17FAB14425AF200DDA634 /* expanz-iOS-SDK copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "expanz-iOS-SDK copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK copy-Info.plist"; sourceTree = "<absolute>"; };
 		6BB17FFC14425C4400DDA634 /* RunUnitTests copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RunUnitTests copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB17FFE14425C4400DDA634 /* RunUnitTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RunUnitTests copy-Info.plist"; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/RunUnitTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		6BB679E7143D522400B9EC94 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		6BB679E8143D522400B9EC94 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		6BB679E9143D522400B9EC94 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
@@ -534,6 +532,7 @@
 		6BDD3782143DC37E00CB33AE /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
 		6BDD3783143DC37E00CB33AE /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BDD3784143DC37E00CB33AE /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
+		6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -864,6 +863,7 @@
 		6B915A7F143BC8BB005EFEFC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58B1A1443B7590063E805 /* ActivityDetails */,
 				6B915A80143BC8BB005EFEFC /* Login */,
 				6B915A88143BC8BB005EFEFC /* SessionData */,
 				6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */,
@@ -1013,8 +1013,6 @@
 				6BB679E3143D522400B9EC94 /* Libraries */,
 				6BCAFB9A14317B1C00575280 /* Frameworks */,
 				6BCAFB9814317B1C00575280 /* Products */,
-				6BB17FAB14425AF200DDA634 /* expanz-iOS-SDK copy-Info.plist */,
-				6BB17FFE14425C4400DDA634 /* RunUnitTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1073,6 +1071,14 @@
 				6BDD3784143DC37E00CB33AE /* Objection.h */,
 			);
 			path = "Objection-iOS";
+			sourceTree = "<group>";
+		};
+		6BF58B1A1443B7590063E805 /* ActivityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */,
+			);
+			path = ActivityDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1732,7 +1738,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				INFOPLIST_FILE = "expanz-iOS-SDK copy-Info.plist";
+				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
@@ -1755,7 +1761,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				INFOPLIST_FILE = "expanz-iOS-SDK copy-Info.plist";
+				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
@@ -1784,7 +1790,7 @@
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
 				);
-				INFOPLIST_FILE = "RunUnitTests copy-Info.plist";
+				INFOPLIST_FILE = "${SRCROOT}/Tests/Unit/RunUnitTests/RunUnitTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
@@ -1796,6 +1802,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "RunUnitTests copy";
+				PUBLIC_HEADERS_FOLDER_PATH = "${SRCROOT}/Tests/Unit/RuntUnitTests/RunUnitTests-Info.plist";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1819,7 +1826,7 @@
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
 				);
-				INFOPLIST_FILE = "RunUnitTests copy-Info.plist";
+				INFOPLIST_FILE = "${SRCROOT}/Tests/Unit/RunUnitTests/RunUnitTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
@@ -1831,6 +1838,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "RunUnitTests copy";
+				PUBLIC_HEADERS_FOLDER_PATH = "${SRCROOT}/Tests/Unit/RuntUnitTests/RunUnitTests-Info.plist";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
