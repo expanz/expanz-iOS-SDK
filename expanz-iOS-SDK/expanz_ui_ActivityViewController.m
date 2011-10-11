@@ -9,8 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_ui_ActivityViewController.h"
 #import "Objection.h"
+#import "expanz_iOS_SDKExceptions.h"
+#import "expanz_ui_ActivityViewController.h"
 #import "expanz_service_SessionContextHolder.h"
 
 @implementation expanz_ui_ActivityViewController
@@ -21,6 +22,19 @@
 @synthesize sessionDataClient = _sessionDataClient;
 @synthesize menu = _menu;
 @synthesize menuTable = _menuTable;
+
+/* ================================================== Constructors ================================================== */
+
+- (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (!self) {
+        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
+    }
+     _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
+    return self;
+}
+
+
 
 /* ================================================ Delegate Methods ================================================ */
 
@@ -35,11 +49,6 @@
 #pragma mark - View lifecycle
 - (void) viewDidLoad {
     [super viewDidLoad];
-    _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
-    SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
-                                              initWithSessionToken:[SessionContextHolder globalContext].sessionToken];
-    [_sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:self];
-    [sessionDataRequest release];
 }
 
 - (void) viewDidUnload {

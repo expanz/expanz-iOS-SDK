@@ -10,14 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////y
 
 #import <QuartzCore/QuartzCore.h>
-#import "expanz_ui_LoginViewController.h"
 #import "Objection.h"
+#import "expanz_ui_LoginViewController.h"
 #import "expanz_ui_ActivityViewController.h"
+#import "expanz_service_SessionDataRequest.h"
 
-
+/* ================================================================================================================== */
 /**
- * Unlock private filter API. 
- * TODO: Replace this with Library call. 
+ * Unlock private filter API. TODO: Replace this with Library call. 
  */
 @interface CAFilter : NSObject 
 
@@ -25,7 +25,13 @@
 
 @end
 
+@interface expanz_ui_LoginViewController(private) 
 
+- (CATransition*) makeViewTransition;
+
+@end
+
+/* ================================================================================================================== */
 @implementation expanz_ui_LoginViewController
 
 @synthesize loginClient = _loginClient; 
@@ -103,19 +109,15 @@
         [SessionContextHolder setGlobalContext:sessionContext];
         ActivityViewController* activityViewController = [[ActivityViewController alloc] 
                                                         initWithNibName: @"ActivityWindow" 
-                                                        bundle: [NSBundle mainBundle]];        
- 
-        static const NSTimeInterval kAnimationDuration = 0.75f;
-        CATransition* transition = [CATransition animation];
-        transition.duration = kAnimationDuration;
-        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        transition.subtype = kCATransitionFromRight;
-        transition.delegate = self;
-        CAFilter* filter = [CAFilter filterWithName:@"cube"];
-        [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
-        transition.filter = filter;
+                                                        bundle: [NSBundle mainBundle]];    
+
+        NSString* sessionToken = [SessionContextHolder globalContext].sessionToken;
+        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] initWithSessionToken:sessionToken];
+        [activityViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest 
+                                                                 delegate:activityViewController];
+        [sessionDataRequest release];
                
-        [self.navigationController.view.layer addAnimation:transition forKey:nil];    
+        [self.navigationController.view.layer addAnimation:[self makeViewTransition] forKey:nil];    
         [self.navigationController pushViewController: activityViewController animated:NO];
         [activityViewController release];
     }
@@ -141,6 +143,21 @@
     [_loginButton release];
     [_spinner release];
     [super dealloc];
+}
+
+/* ================================================== Private Methods =============================================== */
+
+- (CATransition*) makeViewTransition {
+    static const NSTimeInterval kAnimationDuration = 0.75f;
+    CATransition* transition = [CATransition animation];
+    transition.duration = kAnimationDuration;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.subtype = kCATransitionFromRight;
+    transition.delegate = self;
+    CAFilter* filter = [CAFilter filterWithName:@"cube"];
+    [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
+    transition.filter = filter;
+    return transition;
 }
 
 @end
