@@ -11,6 +11,6 @@
 
 #import "RXMLElement.h"
 
-@interface RXMLElement (RXMLElement_ActivityInstance)
+@interface RXMLElement (ActivityInstance)
 
 @end

@@ -15,7 +15,7 @@
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
 
-@implementation RXMLElement (RXMLElement_SessionData)
+@implementation RXMLElement(SessionData)
 
 
 /* ================================================ Interface Methods =============================================== */

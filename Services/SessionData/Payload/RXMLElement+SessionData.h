@@ -18,7 +18,7 @@
 /**
  * Category for parsing GetSessionData response. 
  */
-@interface RXMLElement (RXMLElement_SessionData)
+@interface RXMLElement (SessionData)
 
 - (Menu*) asMenu; 
 - (ProcessArea*) asProcessArea;
