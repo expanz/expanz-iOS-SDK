@@ -354,6 +354,11 @@
 		6BF58B291443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
 		6BF58B2A1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
 		6BF58B2B1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
+		6BF58B2F1443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
+		6BF58B301443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
+		6BF58B311443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
+		6BF58B321443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
+		6BF58B331443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -533,6 +538,8 @@
 		6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionContextHolder.m; sourceTree = "<group>"; };
 		6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
 		6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
+		6BF58B2D1443CD060063E805 /* expanz_service_CreateActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_CreateActivityRequest.h; sourceTree = "<group>"; };
+		6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1066,6 +1073,7 @@
 			isa = PBXGroup;
 			children = (
 				6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */,
+				6BF58B2C1443CA8E0063E805 /* Payload */,
 			);
 			path = ActivityDetails;
 			sourceTree = "<group>";
@@ -1077,6 +1085,15 @@
 				6BF58B1F1443C8EB0063E805 /* expanz_service_SessionContextHolder.m */,
 				6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */,
 				6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BF58B2C1443CA8E0063E805 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BF58B2D1443CD060063E805 /* expanz_service_CreateActivityRequest.h */,
+				6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */,
 			);
 			path = Payload;
 			sourceTree = "<group>";
@@ -1320,6 +1337,7 @@
 				6BD5EDBA1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
 				6BF58B231443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BF58B281443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
+				6BF58B301443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1379,6 +1397,7 @@
 				6BD5EDBB1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
 				6BF58B241443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BF58B291443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
+				6BF58B311443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1438,6 +1457,7 @@
 				6BD5EDBC1442614B009CE668 /* expanz_model_UserRole.m in Sources */,
 				6BF58B251443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BF58B2A1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
+				6BF58B321443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1498,6 +1518,7 @@
 				6BD5EDBD14429CA0009CE668 /* expanz_model_UserRole.m in Sources */,
 				6BF58B261443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BF58B2B1443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
+				6BF58B331443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1557,6 +1578,7 @@
 				6BD5EDB91442614B009CE668 /* expanz_model_UserRole.m in Sources */,
 				6BF58B221443C8EB0063E805 /* expanz_service_SessionContextHolder.m in Sources */,
 				6BF58B271443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */,
+				6BF58B2F1443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

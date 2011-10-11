@@ -11,20 +11,15 @@
 
 #import <Foundation/Foundation.h>
 
+@interface expanz_service_CreateActivityRequest : NSObject
 
-/* ================================================================================================================== */
-@protocol expanz_service_CreateActivityClientDelegate <NSObject>
+@property (nonatomic, readonly) NSString* activityName; 
+@property (nonatomic, readonly) NSString* sessionToken; 
 
-- (void) requestDidFinishWithActivityDetails:(id)activityDetails; 
-- (void) requestDidFailWithError:(NSError*)error; 
 
-@end
-
-/* ================================================================================================================== */
-
-@protocol expanz_service_ActivityClient <NSObject>
-
-- (void) createActivityWith:(CreateActivityRequest*)activityRequest 
-                   delegate:(id<expanz_service_CreateActivityClientDelegate>)delegate;
+- (id) initWithActivityName:(NSString*)activityName andSessionToken:(NSString*)sessionToken;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias CreateActivityRequest expanz_service_CreateActivityRequest;
