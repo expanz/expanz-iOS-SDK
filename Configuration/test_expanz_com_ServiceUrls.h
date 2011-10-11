@@ -17,7 +17,7 @@
  */
 
 
-#define kCreateSessionUrl            @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/CreateSessionX"
-#define kGetSessionDataUrl           @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/ExecX"
+#define kCreateSessionUrl       @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/CreateSessionX"
+#define kExecXUrl               @"http://test.expanz.com/ESADemoService/ESAService.svc/restish/ExecX"
 
 

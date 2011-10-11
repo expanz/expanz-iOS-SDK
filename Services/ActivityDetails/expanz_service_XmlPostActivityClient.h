@@ -16,3 +16,6 @@
 @interface expanz_service_XmlPostActivityClient : XmlPostWebService<expanz_service_ActivityClient>
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias XmlPostActivityClient expanz_service_XmlPostActivityClient;

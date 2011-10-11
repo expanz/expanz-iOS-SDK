@@ -13,6 +13,7 @@
 #import "ASIFormDataRequest.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "expanz_service_XmlPostSessionDataClient.h"
+#import "expanz_service_XmlPostActivityClient.h"
 
 //Current Environment
 #import "test_expanz_com_ServiceUrls.h"
@@ -32,11 +33,19 @@
     
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector *context) {
-        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kGetSessionDataUrl]];        
+        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kExecXUrl]];        
         XmlPostSessionDataClient* client = [[XmlPostSessionDataClient alloc] initWithRequest:request];
         [request release];
         return (id) client;
     } toProtocol:@protocol(expanz_service_SessionDataClient)];         
+    /* ================================================================================================================== */
+    [self bindBlock:^(JSObjectionInjector *context) {
+        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kExecXUrl]];        
+        XmlPostActivityClient* client = [[XmlPostActivityClient alloc] initWithRequest:request];
+        [request release];
+        return (id) client;
+    } toProtocol:@protocol(expanz_service_ActivityClient)];         
+
 }
 
 
