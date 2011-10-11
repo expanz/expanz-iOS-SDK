@@ -22,18 +22,7 @@ describe(@"Object initialization", ^{
         assertThat(processArea.processId, equalTo(@"Calculator"));
         assertThat(processArea.title, equalTo(@"Calculator"));        
         [processArea release];
-    });
-    
-    it(@"should allow initialization from XML", ^{
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"]; 
-        NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
-        Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
-        LogDebug(@"%@", menu);
-        
-
-    });
-    
+    });    
     
 });
 
