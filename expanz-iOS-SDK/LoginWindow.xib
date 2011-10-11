@@ -52,14 +52,14 @@
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="439050640"/>
+						<reference key="NSNextKeyView" ref="669266895"/>
 						<string key="NSReuseIdentifierKey">_NS:541</string>
 						<float key="IBUIAlpha">0.60000002384185791</float>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">loginBackground.png</string>
+							<string key="NSResourceName">brushed-metal2.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="439050640">
@@ -170,6 +170,7 @@
 						<string key="NSFrame">{{107, 182}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -201,6 +202,7 @@
 						<string key="NSFrame">{{150, 76}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="439050640"/>
 						<string key="NSReuseIdentifierKey">_NS:824</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -486,7 +488,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">loginBackground.png</string>
+			<string key="NS.key.0">brushed-metal2.png</string>
 			<string key="NS.object.0">{320, 480}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">534</string>
