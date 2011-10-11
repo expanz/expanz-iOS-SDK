@@ -35,15 +35,15 @@
 }
 
 
-/* ================================================ Delegate Methods ================================================ */
-#pragma mark jb_xml_Serializable
+/* ================================================= Protocol Methods =============================================== */
+#pragma mark xml_Serializable
 
-#define kSessionRequestXml @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA>\
+#define kXmlTemplate @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA>\
 <CreateSession user=\"%@\" password=\"%@\" appSite=\"%@\" authenticationMode=\"%@\" clientVersion=\"%@\" \
 schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kSessionRequestXml, _userName, _password, _appSite, kAuthenticationMode, 
+    return [NSString stringWithFormat:kXmlTemplate, _userName, _password, _appSite, kAuthenticationMode, 
             kClientVersion, kSchemaVersion];
 }
 

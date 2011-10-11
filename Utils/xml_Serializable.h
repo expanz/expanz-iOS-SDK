@@ -10,18 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "xml_Serializable.h"
 
+@protocol xml_Serializable <NSObject>
 
-@interface expanz_service_SessionDataRequest : NSObject<xml_Serializable>
-
-
-
-@property (nonatomic, readonly) NSString* sessionToken;
-
-- (id) initWithSessionToken:(NSString*)sessionToken; 
+/**
+ * Returns an XML representation of the class instance. 
+ */
+- (NSString*) toXml;
 
 @end
-
-/* ================================================================================================================== */
-@compatibility_alias SessionDataRequest expanz_service_SessionDataRequest;

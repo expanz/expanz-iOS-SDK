@@ -29,14 +29,14 @@
     return self;
 }
 
-/* ================================================ Delegate Methods ================================================ */
-#pragma mark jb_xml_Serializable
+/* ================================================= Protocol Methods =============================================== */
+#pragma mark xml_Serializable
 
-#define kSessionDataRequestXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
+#define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><GetSessionData/></ESA>\
 </xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kSessionDataRequestXml, _sessionToken];
+    return [NSString stringWithFormat:kXmlTemplate, _sessionToken];
 }
 
 

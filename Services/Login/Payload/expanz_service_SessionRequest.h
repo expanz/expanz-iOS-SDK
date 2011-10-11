@@ -10,9 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "jb_xml_Serializable.h"
+#import "xml_Serializable.h"
 
-@interface expanz_service_SessionRequest : NSObject<jb_xml_Serializable>
+@interface expanz_service_SessionRequest : NSObject<xml_Serializable>
 
 #define kAuthenticationMode @"Primary" 
 #define kClientVersion @"iOS 1.0"

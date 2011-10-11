@@ -34,6 +34,17 @@
     return self;
 }
 
+/* ================================================= Protocol Methods =============================================== */
+#pragma mark xml_Serializable
+
+
+#define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateActivity name=\"%@\"/></ESA>\
+</xml><sessionHandle>%@</sessionHandle></ExecX>"
+
+- (NSString*) toXml {
+    return [NSString stringWithFormat:kXmlTempate, _activityName, _sessionToken];
+}
+
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {

@@ -10,8 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "xml_Serializable.h"
 
-@interface expanz_service_CreateActivityRequest : NSObject
+@interface expanz_service_CreateActivityRequest : NSObject<xml_Serializable>
 
 @property (nonatomic, readonly) NSString* activityName; 
 @property (nonatomic, readonly) NSString* sessionToken; 

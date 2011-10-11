@@ -10,18 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "xml_Serializable.h"
+#import "expanz_service_ActivityClient.h"
+#import "expanz_service_XmlPostWebService.h"
 
-
-@interface expanz_service_SessionDataRequest : NSObject<xml_Serializable>
-
-
-
-@property (nonatomic, readonly) NSString* sessionToken;
-
-- (id) initWithSessionToken:(NSString*)sessionToken; 
+@interface expanz_service_XmlPostActivityClient : XmlPostWebService<expanz_service_ActivityClient>
 
 @end
-
-/* ================================================================================================================== */
-@compatibility_alias SessionDataRequest expanz_service_SessionDataRequest;
