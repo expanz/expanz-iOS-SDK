@@ -9,8 +9,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
+#import "RXMLElement+ActivityInstance.h"
+#import "expanz_iOS_SDKExceptions.h"
 
-@interface RXMLElement (ActivityInstance)
+@implementation RXMLElement (ActivityInstance)
+
+- (ActivityInstance*) asActivityInstance {
+    if (![self.tag isEqualToString:@"Menu"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not an Activity."];
+    }
+    return nil;
+}
 
 @end

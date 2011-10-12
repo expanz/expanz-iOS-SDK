@@ -9,8 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement_ActivityInstance.h"
+#import "RXMLElement.h"
+#import "expanz_model_ActivityInstance.h"
 
-@implementation RXMLElement (ActivityInstance)
+@interface RXMLElement (ActivityInstance)
+
+- (ActivityInstance*) asActivityInstance;
 
 @end

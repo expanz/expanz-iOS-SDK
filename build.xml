@@ -2,7 +2,21 @@
 <project xmlns:ivy="antlib:org.apache.ivy.ant" name="${module.name}" default="build">
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONFIGURATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <property file="build-configuration.properties"/>
-
+    <path id="headers">
+        <fileset dir="${basedir}">
+            <include name="**/*.h"/>
+            <exclude name="Dependencies/**/*"/>
+            <exclude name="Tests/**/*"/>
+        </fileset>
+    </path>
+    <path id="classes">
+        <fileset dir="${basedir}">
+            <include name="**/*.m"/>
+            <exclude name="Dependencies/**/*"/>
+            <exclude name="Tests/**/*"/>
+            <exclude name="**/main.m"/>
+        </fileset>
+    </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
     --make.dirs,
@@ -11,7 +25,7 @@
     --make.dirs,
     --unit.tests.build,
     --unit.tests.run,
-    --assemble.coverage.data,
+    assemble.coverage.data,
     --coverage.report,
     --api.report"/>
 
@@ -27,14 +41,11 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PRIVATE TARGETS (MUST NOT depend on other targets!) ~~~~~~~~~~~~~~~~~~~ -->
     <target name="--make.dirs">
-
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
         <mkdir dir="${reports.dir}"/>
         <mkdir dir="${reports.dir}/tests"/>
     </target>
-
-
 
     <target name="--clean" unless="fast">
         <echo file="${temp.dir}/quit-simulator.script">
@@ -98,13 +109,22 @@
         <fail if="tests.failed" message="Tests failed. Report is at ${unit.tests.report}"/>
     </target>
 
-    <target name="--assemble.coverage.data">
+    <target name="assemble.coverage.data">
         <mkdir dir="${temp.dir}/coverage-data"/>
+
+        <pathconvert pathsep=", " property="gcno.list" refid="classes">
+            <mapper>
+                <chainedmapper>
+                    <flattenmapper/>
+                    <globmapper from="*.m" to="*.gcno"/>
+                </chainedmapper>
+            </mapper>
+        </pathconvert>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
-            <fileset dir="${simulator.objects.dir}" includes="**/${coverage.class.prefix}*.gcno"/>
+            <fileset dir="${simulator.objects.dir}" includes="${gcno.list}"/>
         </copy>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
-            <fileset dir="${simulator.applications.path}" includes="**/${coverage.class.prefix}*.gcda"/>
+            <fileset dir="${simulator.applications.path}" includes="**/*.gcda"/>
         </copy>
     </target>
 
@@ -113,12 +133,14 @@
         <mkdir dir="${coverage.reports.dir}"/>
 
         <echo file="${temp.dir}/geninfo.sh">
-            geninfo ${temp.dir}/coverage-data/${coverage.class.prefix}* --output-filename ${temp.dir}/${unit.tests.target.name}.info
+            #!/bin/sh
+            geninfo ${temp.dir}/coverage-data/*.gcno --output-filename ${temp.dir}/${unit.tests.target.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/geninfo.sh"/>
         <exec executable="${temp.dir}/geninfo.sh" failonerror="true" failifexecutionfails="true"/>
 
         <echo file="${temp.dir}/genhtml.sh">
+            #!/bin/sh
             genhtml --no-function-coverage -o ${coverage.reports.dir} ${temp.dir}/${unit.tests.target.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
@@ -130,20 +152,25 @@
         <mkdir dir="${user.home}/Library/Developer/Shared"/>
         <mkdir dir="${user.home}/Library/Developer/Shared/Documentation"/>
         <mkdir dir="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
+        <!-- In case it's turned up somehow, despite cleaning up. -->
         <delete file="${basedir}/docset-installed.txt"/>
+
+        <pathconvert pathsep=" " property="doc.files.list" refid="headers"/>
 
         <exec executable="appledoc">
             <arg line="--project-name=${module.name}"/>
             <arg line="--project-company=${module.company}"/>
             <arg line="--company-id=${module.company}"/>
             <arg line="-h --keep-undocumented-objects --keep-undocumented-members"/>
-            <arg line="${documentation.include}"/>
+            <arg line="${doc.files.list}"/>
         </exec>
 
         <loadfile srcfile="${basedir}/docset-installed.txt" property="docset.installed"/>
         <fail unless="docset.installed" message="Error creating documentation"/>
+        <!-- Don't leave it lying around -->
+        <delete file="${basedir}/docset-installed.txt"/>
 
-       <property name="docs.dir" value="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
+        <property name="docs.dir" value="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
         <copy todir="${reports.dir}/api">
             <fileset dir="${docs.dir}/${module.company}.${module.name}.docset/Contents/Resources/Documents"/>
         </copy>

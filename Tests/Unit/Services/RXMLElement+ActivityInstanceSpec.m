@@ -9,30 +9,26 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "SpecHelper.h"
+#import "RXMLElement+ActivityInstance.h"
 
-#import "SpecHelper.h" 
-#import "RXMLElement+SessionData.h"
-
-SPEC_BEGIN(RXMLELement_GetSessionData)
+SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
 describe(@"Object instanciation", ^{
     
     __block RXMLElement* element;
-
+    
     beforeEach(^{
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"]; 
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityDetails" ofType:@"xml"]; 
         NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
         element = [RXMLElement elementFromXMLString:xmlString]; 
     });
     
-    it(@"should return a menu instance for from XML data.", ^{        
-        Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
-        LogDebug(@"%@", menu);    
-        assertThat(menu, notNilValue());
+    it(@"should return an ActivityIntance from corresponding XML", ^{
+        //[element asActivityInstance];
     });
     
 });
-
 
 
 SPEC_END
