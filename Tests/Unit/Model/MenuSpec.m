@@ -20,6 +20,7 @@ describe(@"Object creation", ^{
         Menu* menu = [[Menu alloc] initWithHasWorkFlowTrays:YES canChangeCompanyRole:NO]; 
         assertThatBool(menu.hasWorkflowTrays, equalToBool(YES));
         assertThatBool(menu.canChangeCompanyRole, equalToBool(NO));
+        assertThat([menu description], notNilValue());
         [menu release];
     });
 });

@@ -9,13 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Foundation/Foundation.h>
+#import "RXMLElement.h"
+#import "expanz_model_SessionContextHolder.h"
 
-//TODO: These really shouldn't be defines. 
+@interface RXMLElement (SessionContextHolder)
 
+- (SessionContextHolder*) asSessionContextHolder; 
 
-/**
- * Xml does not match the expected format. 
- */
-#define ExXmlValidationException       @"ExXmlValidationException"
-
+@end

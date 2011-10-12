@@ -11,8 +11,6 @@
 
 #import <objc/runtime.h>
 
-
-
 #define AddToContext(key, value) [[SpecHelper specHelper].sharedExampleContext setObject:value forKey:key]
 #define GetFromContext(key) [[SpecHelper specHelper].sharedExampleContext objectForKey:key]
 #define SetTarget(value) AddToContext(@"target", value)

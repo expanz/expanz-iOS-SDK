@@ -19,18 +19,12 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
-    self = [super init];    
-    if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
-    }
-    return self;
-}
-
 - (id) initWithActivityName:(NSString*)activityName sessionToken:(NSString*)sessionToken {
-    self = [self init];
-    _activityName = [activityName retain];
-    _sessionToken = [sessionToken retain];
+    self = [super init];
+    if (self) {
+        _activityName = [activityName retain];
+        _sessionToken = [sessionToken retain];
+    }
     return self;
 }
 

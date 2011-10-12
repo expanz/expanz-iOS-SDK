@@ -21,6 +21,7 @@ describe(@"Object instanciation", ^{
         Activity* activity = [[Activity alloc] initWithName:@"Calculator" andTitle:@"Calculator Application"]; 
         assertThat(activity.name, equalTo(@"Calculator"));
         assertThat(activity.title, equalTo(@"Calculator Application"));
+        assertThat([activity description], notNilValue());
         [activity release];        
     });    
 });

@@ -21,6 +21,7 @@ describe(@"Object initialization", ^{
         ProcessArea* processArea = [[ProcessArea alloc] initWithProcessId:@"Calculator" andTitle:@"Calculator"]; 
         assertThat(processArea.processId, equalTo(@"Calculator"));
         assertThat(processArea.title, equalTo(@"Calculator"));        
+        assertThat([processArea description], notNilValue());
         [processArea release];
     });        
 });

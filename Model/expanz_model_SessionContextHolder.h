@@ -19,25 +19,16 @@
 
 @property (nonatomic, retain) NSString* sessionToken; 
 @property (nonatomic) BOOL hasError; 
-@property (nonatomic, retain) NSString* errorMessage;
 @property (nonatomic) BOOL hasWarning;
-@property (nonatomic, retain) NSString* warningMessage;
+@property (nonatomic, retain) NSString* message;
 
 
 + (void)setGlobalContext:(expanz_model_SessionContextHolder*)context;
 + (expanz_model_SessionContextHolder*) globalContext;
+- (id) initWithSessionToken:(NSString*)sessionToken hasError:(BOOL)hasError hasWarning:(BOOL)hasWarning
+                    message:(NSString*)message;
 
 
-/**
- * Create an autoreleased instance from XML. 
- */
-+ (id) fromXml:(NSString*)xml;
-
-
-/**
- * Create an instance with XML. 
- */
-- (id) initWithXml:(NSString*)xml; 
 
 @end
 

@@ -22,10 +22,9 @@
 
 - (id)initWithSessionToken:(NSString*)sessionToken {
     self = [self init];
-    if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
+    if (self) {
+        _sessionToken = [sessionToken retain];
     }
-    _sessionToken = [sessionToken retain];
     return self;
 }
 

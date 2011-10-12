@@ -14,6 +14,7 @@
 #import "expanz_model_SessionContextHolder.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "ASIFormDataRequest.h"
+#import "RXMLElement+SessionContextHolder.h"
 
 
 @implementation expanz_service_XmlPostLoginClient
@@ -29,8 +30,8 @@ objection_register(expanz_service_XmlPostLoginClient)
     [self.request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [self.request setCompletionBlock:^{
-        SessionContextHolder* contextHolder = [SessionContextHolder fromXml:[self.request responseString]];
-        [delegate performSelector:@selector(requestDidFinishWithSessionContext:) withObject:contextHolder];        
+        RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];
+        [delegate requestDidFinishWithSessionContext:[element asSessionContextHolder]];        
     }];
     
     [self.request setFailedBlock:^{

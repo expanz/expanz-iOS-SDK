@@ -19,6 +19,7 @@ describe(@"Object creation", ^{
         UserRole* role = [[UserRole alloc] initWithRoleId:@"234" andDescription:@"Sales Manager"]; 
         assertThat(role.roleId, equalTo(@"234"));
         assertThat(role.roleDescription, equalTo(@"Sales Manager"));
+        assertThat([role description], equalTo(@"UserRole: roleId=234, description=Sales Manager"));
         [role release];
     });
 });

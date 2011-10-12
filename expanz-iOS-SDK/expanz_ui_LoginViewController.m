@@ -123,7 +123,7 @@
     }
     else {
         _loginButton.enabled = YES;
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.errorMessage 
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.message 
                                                         delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
                                                         autorelease];
         [alert show];
