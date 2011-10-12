@@ -14,7 +14,7 @@
 
 
  
-@interface expanz_model_SessionContextHolder: NSObject
+@interface expanz_model_SessionContext: NSObject
 
 
 @property (nonatomic, retain) NSString* sessionToken; 
@@ -23,8 +23,8 @@
 @property (nonatomic, retain) NSString* message;
 
 
-+ (void)setGlobalContext:(expanz_model_SessionContextHolder*)context;
-+ (expanz_model_SessionContextHolder*) globalContext;
++ (void)setGlobalContext:(expanz_model_SessionContext*)context;
++ (expanz_model_SessionContext*) globalContext;
 - (id) initWithSessionToken:(NSString*)sessionToken hasError:(BOOL)hasError hasWarning:(BOOL)hasWarning
                     message:(NSString*)message;
 
@@ -33,4 +33,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SessionContextHolder expanz_model_SessionContextHolder;
+@compatibility_alias SessionContext expanz_model_SessionContext;

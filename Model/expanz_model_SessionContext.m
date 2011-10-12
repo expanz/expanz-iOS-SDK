@@ -10,13 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_SessionContextHolder.h"
+#import "expanz_model_SessionContext.h"
 #import "expanz_iOS_SDKExceptions.h"
 #import "RXMLElement.h"
 
-static SessionContextHolder* globalContext;
+static SessionContext* globalContext;
 
-@implementation expanz_model_SessionContextHolder
+@implementation expanz_model_SessionContext
 
 @synthesize sessionToken = _sessionToken;
 @synthesize hasError = _hasError; 
@@ -42,14 +42,14 @@ static SessionContextHolder* globalContext;
 
 /* ================================================ Interface Methods =============================================== */
 
-+ (void)setGlobalContext:(SessionContextHolder*)context {
++ (void)setGlobalContext:(SessionContext*)context {
     if (globalContext != context) {
         [globalContext release];
         globalContext = [context retain];
     }
 }
 
-+ (SessionContextHolder*) globalContext {  
++ (SessionContext*) globalContext {  
     return [[globalContext retain] autorelease];
 }
 

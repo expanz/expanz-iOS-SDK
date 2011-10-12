@@ -11,10 +11,10 @@
 
 #import "Objection.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_model_SessionContextHolder.h"
+#import "expanz_model_SessionContext.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "ASIFormDataRequest.h"
-#import "RXMLElement+SessionContextHolder.h"
+#import "RXMLElement+SessionContext.h"
 
 
 @implementation expanz_service_XmlPostLoginClient
@@ -31,7 +31,7 @@ objection_register(expanz_service_XmlPostLoginClient)
     
     [self.request setCompletionBlock:^{
         RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];
-        [delegate requestDidFinishWithSessionContext:[element asSessionContextHolder]];        
+        [delegate requestDidFinishWithSessionContext:[element asSessionContext]];        
     }];
     
     [self.request setFailedBlock:^{

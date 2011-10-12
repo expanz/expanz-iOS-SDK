@@ -101,18 +101,18 @@
 /* ================================================================================================================== */
 #pragma mark LoginClient delegate
 
-- (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext {
+- (void) requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
     LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
     [_spinner stopAnimating];
     
     if (!sessionContext.hasError) {
-        [SessionContextHolder setGlobalContext:sessionContext];
+        [SessionContext setGlobalContext:sessionContext];
         ActivityViewController* activityViewController = [[ActivityViewController alloc] 
                                                         initWithNibName: @"ActivityWindow" 
                                                         bundle: [NSBundle mainBundle]];    
 
-        NSString* sessionToken = [SessionContextHolder globalContext].sessionToken;
-        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] initWithSessionToken:sessionToken];
+        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
+                                                  initWithSessionToken:sessionContext.sessionToken];
         [activityViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest 
                                                                  delegate:activityViewController];
         [sessionDataRequest release];

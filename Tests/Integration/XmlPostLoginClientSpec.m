@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "expanz_model_SessionContextHolder.h"
+#import "expanz_model_SessionContext.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "Objection.h"
 #import "expanz_iOS_SDKModule.h"
@@ -21,18 +21,18 @@
 
 @interface TestLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
 
-@property (nonatomic, retain) SessionContextHolder* sessionContextHolder;
+@property (nonatomic, retain) SessionContext* sessionContext;
 @property (nonatomic, retain) NSError* error; 
 
 @end
 
 @implementation TestLoginClientDelegate
 
-@synthesize sessionContextHolder = _sessionContextHolder, error = _error;
+@synthesize sessionContext = _sessionContext, error = _error;
 
-- (void) requestDidFinishWithSessionContext:(SessionContextHolder*)sessionContext {
+- (void) requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
     LogDebug(@"Session Token: %@", [sessionContext sessionToken]);
-    self.sessionContextHolder = sessionContext;    
+    self.sessionContext = sessionContext;    
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
@@ -54,7 +54,7 @@ describe(@"Authenticating with the site manager.", ^{
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
     });
           
-        it(@"should return a SessionContextHolder, containing a valid session token, within 5 seconds", ^{
+        it(@"should return a SessionContext, containing a valid session token, within 5 seconds", ^{
             
             SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
                                                                              appSite:@"SALESAPP"]; 
@@ -63,8 +63,8 @@ describe(@"Authenticating with the site manager.", ^{
             [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
             
             [NSThread sleepForTimeInterval:5];
-            LogDebug(@"Result: %@", [loginDelegate sessionContextHolder]);
-            assertThat([loginDelegate sessionContextHolder], isNot(nil));
+            LogDebug(@"Result: %@", [loginDelegate sessionContext]);
+            assertThat([loginDelegate sessionContext], isNot(nil));
             [sessionRequest release];
     });
     

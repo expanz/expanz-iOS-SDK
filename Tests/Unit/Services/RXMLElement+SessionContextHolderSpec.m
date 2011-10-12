@@ -1,9 +1,9 @@
 #import "SpecHelper.h"
 #import "OCMock/OCMock.h"
-#import "RXMLElement+SessionContextHolder.h"
+#import "RXMLElement+SessionContext.h"
 
 
-SPEC_BEGIN(SessionContextHolderSpec)
+SPEC_BEGIN(RXMLElement_SessionContextSpec)
 
 
 #define kSessionRequestResponse @"<CreateSessionXResponse xmlns=\"http://www.expanz.com/ESAService\">\
@@ -23,20 +23,20 @@ describe(@"Valid XML", ^{
     it(@"should return a SessionContext holder instance, which holds the session token", ^{
         RXMLElement* element = [RXMLElement elementFromXMLString:kSessionRequestResponse]; 
         
-        SessionContextHolder* sessionContextHolder = [element asSessionContextHolder];
-        assertThat([sessionContextHolder sessionToken], notNilValue());
+        SessionContext* sessionContext = [element asSessionContext];
+        assertThat([sessionContext sessionToken], notNilValue());
     });
         
 });
 
 
 describe(@"Valid XML with a warning", ^{
-    it(@"Should return a SessionContextHolder with the warning flag set.", ^{
+    it(@"Should return a SessionContext with the warning flag set.", ^{
         RXMLElement* element = [RXMLElement elementFromXMLString:kXmlResponseWithWarning]; 
-        SessionContextHolder* sessionContextHolder = [element asSessionContextHolder];
-        assertThat(sessionContextHolder.sessionToken, is(notNilValue()));
-        assertThatBool(sessionContextHolder.hasWarning, is(equalToBool(YES)));
-        assertThat(sessionContextHolder.message, is(equalTo(@"Existing session abandoned [19:19]&#xD;")));        
+        SessionContext* sessionContext = [element asSessionContext];
+        assertThat(sessionContext.sessionToken, is(notNilValue()));
+        assertThatBool(sessionContext.hasWarning, is(equalToBool(YES)));
+        assertThat(sessionContext.message, is(equalTo(@"Existing session abandoned [19:19]&#xD;")));        
     });
 
 });
@@ -44,25 +44,25 @@ describe(@"Valid XML with a warning", ^{
 
 describe(@"Valid XML with an error", ^{
     
-    it(@"should return a SessionContextHolder with the error flag set.", ^{
+    it(@"should return a SessionContext with the error flag set.", ^{
         RXMLElement* element = [RXMLElement elementFromXMLString:kXmlResponseWithError]; 
-        SessionContextHolder* sessionContextHolder = [element asSessionContextHolder];
-        assertThatBool(sessionContextHolder.hasError, is(equalToBool(YES)));
-        assertThat(sessionContextHolder.message, is(equalTo(@"Unknown User")));        
+        SessionContext* sessionContext = [element asSessionContext];
+        assertThatBool(sessionContext.hasError, is(equalToBool(YES)));
+        assertThat(sessionContext.message, is(equalTo(@"Unknown User")));        
     });  
 
 });
 
 
 
-describe(@"Attempting to instantiate a SessionContextHolder from invalid XML", ^{
+describe(@"Attempting to instantiate a SessionContext from invalid XML", ^{
 
     it(@"should throw NSException if the xml is root element is not CreateSessionXResult", ^{
         
         @try {
             RXMLElement* element = [RXMLElement elementFromXMLString:@"<xml><foobar/></xml>"]; 
-            SessionContextHolder* sessionContextHolder = [element asSessionContextHolder];                           
-            [sessionContextHolder description]; //Suppress unused variable warning. 
+            SessionContext* sessionContext = [element asSessionContext];                           
+            [sessionContext description]; //Suppress unused variable warning. 
             [NSException raise:@"Should have thrown exception" format:@"Assertion failed."];
         }
         @catch(NSException* exception) {
@@ -74,8 +74,8 @@ describe(@"Attempting to instantiate a SessionContextHolder from invalid XML", ^
         
         @try {
             RXMLElement* element = [RXMLElement elementFromXMLString:@"<CreateSessionXResponse/>"]; 
-            SessionContextHolder* sessionContextHolder = [element asSessionContextHolder];                           
-            [sessionContextHolder description]; //Suppress unused variable warning. 
+            SessionContext* sessionContext = [element asSessionContext];                           
+            [sessionContext description]; //Suppress unused variable warning. 
             [NSException raise:@"Should have thrown exception" format:@"Assertion failed."];
         }
         @catch(NSException* exception) {

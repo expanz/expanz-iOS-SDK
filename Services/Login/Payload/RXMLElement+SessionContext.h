@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement.h"
-#import "expanz_model_SessionContextHolder.h"
+#import "expanz_model_SessionContext.h"
 
-@interface RXMLElement (SessionContextHolder)
+@interface RXMLElement (SessionContext)
 
-- (SessionContextHolder*) asSessionContextHolder; 
+- (SessionContext*) asSessionContext; 
 
 @end

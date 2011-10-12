@@ -27,7 +27,7 @@
 
 
 /** 
- * Presents credentials to the expanz server and returns a SessionContextHolder, which contains a session token.  
+ * Presents credentials to the expanz server and returns a SessionContext, which contains a session token.  
  */
 - (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
                         delegate:(id<expanz_service_SessionDataClientDelegate>)delegate;

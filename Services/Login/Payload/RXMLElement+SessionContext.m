@@ -9,16 +9,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement+SessionContextHolder.h"
+#import "RXMLElement+SessionContext.h"
 
-@implementation RXMLElement (SessionContextHolder)
+@implementation RXMLElement (SessionContext)
 
-- (SessionContextHolder*) asSessionContextHolder {
+- (SessionContext*) asSessionContext {
     if (![self.tag isEqualToString:@"CreateSessionXResponse"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a CreateSessionXResponse."];
     }
 
-    SessionContextHolder* sessionContextHolder; 
+    SessionContext* sessionContext; 
     RXMLElement* sessionToken = [self child:@"CreateSessionXResult"];
     RXMLElement* error = [self child:@"errorMessage"]; 
     NSString* message = error.text;         
@@ -28,19 +28,19 @@
         if (error != nil) {
             hasWarning = YES;  
         }
-        sessionContextHolder = [[[SessionContextHolder alloc] initWithSessionToken:sessionToken.text hasError:NO 
+        sessionContext = [[[SessionContext alloc] initWithSessionToken:sessionToken.text hasError:NO 
                                                             hasWarning:hasWarning message:message] autorelease];
      }
      else {            
          if (error != nil) {
-                sessionContextHolder = [[[SessionContextHolder alloc] initWithSessionToken:nil hasError:YES 
+                sessionContext = [[[SessionContext alloc] initWithSessionToken:nil hasError:YES 
                                                                 hasWarning:NO message:message] autorelease];
             }
             else {
                 [NSException raise:ExXmlValidationException format:@"Contains neither a session token or an error message."];
             }
         }        
-    return sessionContextHolder;
+    return sessionContext;
 }
 
 @end
