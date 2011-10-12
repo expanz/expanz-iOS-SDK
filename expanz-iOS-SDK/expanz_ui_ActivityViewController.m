@@ -12,7 +12,7 @@
 #import "Objection.h"
 #import "expanz_iOS_SDKExceptions.h"
 #import "expanz_ui_ActivityViewController.h"
-#import "expanz_service_SessionContextHolder.h"
+#import "expanz_model_SessionContextHolder.h"
 
 @implementation expanz_ui_ActivityViewController
 

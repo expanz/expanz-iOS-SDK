@@ -14,7 +14,7 @@
 @implementation expanz_model_UserRole
 
 @synthesize roleId = _roleId;
-@synthesize description = _description;
+@synthesize roleDescription = _roleDescription;
 
 /* ================================================== Constructors ================================================== */
 
@@ -22,7 +22,7 @@
     self = [super init]; 
     if (self) {
         _roleId = [roleId retain]; 
-        _description = [description retain];
+        _roleDescription = [description retain];
     }
     return self;
 }
@@ -30,12 +30,12 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (NSString*) description {
-    return [NSString stringWithFormat:@"UserRole: roleId=%@, description=%@", _roleId, _description];
+    return [NSString stringWithFormat:@"UserRole: roleId=%@, description=%@", _roleId, _roleDescription];
 }
 
 - (void) dealloc {
     [_roleId release];
-    [_description release];
+    [_roleDescription release];
     [super dealloc];
 }
 

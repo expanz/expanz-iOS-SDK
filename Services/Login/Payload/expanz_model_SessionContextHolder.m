@@ -10,13 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_service_SessionContextHolder.h"
+#import "expanz_model_SessionContextHolder.h"
 #import "expanz_iOS_SDKExceptions.h"
 #import "RXMLElement.h"
 
 static SessionContextHolder* globalContext;
 
-@implementation expanz_service_SessionContextHolder
+@implementation expanz_model_SessionContextHolder
 
 @synthesize sessionToken = _sessionToken;
 @synthesize hasError = _hasError; 

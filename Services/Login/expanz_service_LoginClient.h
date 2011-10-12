@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "expanz_service_LoginClient.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_service_SessionContextHolder.h"
+#import "expanz_model_SessionContextHolder.h"
 
 
 /* ================================================================================================================== */

@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_service_SessionContextHolder.h"
+#import "expanz_model_SessionContextHolder.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "ASIFormDataRequest.h"
 
