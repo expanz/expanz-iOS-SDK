@@ -22,8 +22,30 @@ describe(@"Object initialization", ^{
         assertThat(processArea.processId, equalTo(@"Calculator"));
         assertThat(processArea.title, equalTo(@"Calculator"));        
         [processArea release];
-    });    
+    });        
+});
+
+describe(@"Activities", ^{
     
+    __block ProcessArea* processArea;
+    
+    beforeEach(^{
+        processArea = [[ProcessArea alloc] initWithProcessId:@"123" andTitle:@"My Process"];
+    });
+    
+    it(@"should contain an activities property, that is initialized empty. ", ^{
+        assertThat(processArea.activities, hasCountOf(0));
+    });
+    
+    it(@"should store references to associated activites via an addActivity method", ^{
+        Activity* activity = [[Activity alloc] initWithName:@"Order a widget" andTitle:@"Get your widgets here"];
+        [processArea addActivity:activity];
+        assertThat(processArea.activities, hasCountOf(1));
+    });
+    
+    afterEach(^{    
+        [processArea release];
+    });
 });
 
 SPEC_END

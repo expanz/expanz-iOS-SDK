@@ -11,6 +11,9 @@
 		6B0224E5143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E4143E7D770055B579 /* expanz_service_XmlPostSessionDataClient.m */; };
 		6B0224EA143E86330055B579 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
+		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B0E25B81445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B0E25B91445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
 		6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
 		6B17C697144189EA00FF35D8 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17C696144189EA00FF35D8 /* RXMLElement+SessionData.m */; };
 		6B35397C1444275A00C8E6C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58BB114441E210063E805 /* main.m */; };
@@ -71,7 +74,6 @@
 		6B3539BC1444275A00C8E6C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B3539BD1444275A00C8E6C2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6B3539BE1444275A00C8E6C2 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
-		6B3539BF1444275A00C8E6C2 /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */; };
 		6B3539C01444275A00C8E6C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B3539C11444275A00C8E6C2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B3539C21444275A00C8E6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
@@ -136,7 +138,6 @@
 		6B353A101444276C00C8E6C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B353A111444276C00C8E6C2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6B353A121444276C00C8E6C2 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
-		6B353A131444276C00C8E6C2 /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */; };
 		6B353A141444276C00C8E6C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B353A151444276C00C8E6C2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
@@ -149,7 +150,6 @@
 		6B353A2E1444282900C8E6C2 /* SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* SessionContextHolderSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
-		6B353A32144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
 		6B353A33144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
@@ -159,8 +159,6 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
-		6BB77B0C14444F71007CA74B /* XmlPostActivityClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientSpec.m */; };
 		6BB77B0E144450C7007CA74B /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB77B0D144450C7007CA74B /* ActivityDetails.xml */; };
 		6BB77B0F144450C7007CA74B /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB77B0D144450C7007CA74B /* ActivityDetails.xml */; };
 		6BB77B10144450C7007CA74B /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB77B0D144450C7007CA74B /* ActivityDetails.xml */; };
@@ -196,6 +194,10 @@
 		6BB77B4214445AA9007CA74B /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B2914445AA9007CA74B /* expanz_model_UserRole.m */; };
 		6BB77B4414445B63007CA74B /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */; };
 		6BB77B4614445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */; };
+		6BB815A31445357F00A7C284 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815A21445357F00A7C284 /* ActivitySpec.m */; };
+		6BB815B0144544A000A7C284 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */; };
+		6BB815B314455B6800A7C284 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815B11445545600A7C284 /* MenuSpec.m */; };
+		6BB815B414455B6800A7C284 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815B11445545600A7C284 /* MenuSpec.m */; };
 		6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
 		6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
@@ -238,7 +240,6 @@
 		6BF58B7B144410A50063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BF58B7C144410A50063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58B7D144410A50063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
-		6BF58B7E144410A50063E805 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BF58B80144410A50063E805 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
 		6BF58B81144410A50063E805 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BF58B82144410A50063E805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
@@ -377,7 +378,6 @@
 		6BF58DC31444245C0063E805 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BF58DC51444245C0063E805 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
-		6BF58DC61444245C0063E805 /* OCHamcrest-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
@@ -391,6 +391,7 @@
 		6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostWebService.h; sourceTree = "<group>"; };
 		6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostWebService.m; sourceTree = "<group>"; };
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
 		6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
 		6B100BE9143E72BD00EABC94 /* expanz_iOS_SDKExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKExceptions.h; sourceTree = "<group>"; };
@@ -420,7 +421,6 @@
 		6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
 		6B915A97143BD899005EFEFC /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
 		6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
-		6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OCHamcrest-iPhone.framework"; path = "Dependencies/Frameworks/OCHamcrest-iPhone.framework"; sourceTree = "<group>"; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -447,6 +447,9 @@
 		6BB77B2914445AA9007CA74B /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
 		6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionDataSpec.m"; sourceTree = "<group>"; };
 		6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstanceSpec.m"; sourceTree = "<group>"; };
+		6BB815A21445357F00A7C284 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
+		6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
+		6BB815B11445545600A7C284 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSpec.m; sourceTree = "<group>"; };
 		6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
 		6BC1606C1436AF3500E166F6 /* brushed-metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brushed-metal2.png"; sourceTree = "<group>"; };
 		6BC1606E1436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -574,12 +577,12 @@
 				6B3539BC1444275A00C8E6C2 /* libz.dylib in Frameworks */,
 				6B3539BD1444275A00C8E6C2 /* libOCMock.a in Frameworks */,
 				6B3539BE1444275A00C8E6C2 /* Cedar-iPhone.framework in Frameworks */,
-				6B3539BF1444275A00C8E6C2 /* OCHamcrest-iPhone.framework in Frameworks */,
 				6B3539C01444275A00C8E6C2 /* libsqlite3.dylib in Frameworks */,
 				6B3539C11444275A00C8E6C2 /* libxml2.dylib in Frameworks */,
 				6B3539C21444275A00C8E6C2 /* UIKit.framework in Frameworks */,
 				6B3539C31444275A00C8E6C2 /* Foundation.framework in Frameworks */,
 				6B3539C41444275A00C8E6C2 /* CoreGraphics.framework in Frameworks */,
+				6B0E25B81445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,12 +597,12 @@
 				6B353A101444276C00C8E6C2 /* libz.dylib in Frameworks */,
 				6B353A111444276C00C8E6C2 /* libOCMock.a in Frameworks */,
 				6B353A121444276C00C8E6C2 /* Cedar-iPhone.framework in Frameworks */,
-				6B353A131444276C00C8E6C2 /* OCHamcrest-iPhone.framework in Frameworks */,
 				6B353A141444276C00C8E6C2 /* libsqlite3.dylib in Frameworks */,
 				6B353A151444276C00C8E6C2 /* libxml2.dylib in Frameworks */,
 				6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */,
 				6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */,
 				6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */,
+				6B0E25B91445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +620,6 @@
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
-				6BB679EE143D522400B9EC94 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +637,6 @@
 				6BF58B7B144410A50063E805 /* libxml2.dylib in Frameworks */,
 				6BF58B7C144410A50063E805 /* libsqlite3.dylib in Frameworks */,
 				6BF58B7D144410A50063E805 /* libz.dylib in Frameworks */,
-				6BF58B7E144410A50063E805 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,12 +651,12 @@
 				6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */,
 				6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */,
 				6BF58DC51444245C0063E805 /* Cedar-iPhone.framework in Frameworks */,
-				6BF58DC61444245C0063E805 /* OCHamcrest-iPhone.framework in Frameworks */,
 				6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */,
 				6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */,
 				6BF58BBF14441E320063E805 /* UIKit.framework in Frameworks */,
 				6BF58BC014441E320063E805 /* Foundation.framework in Frameworks */,
 				6BF58BC114441E320063E805 /* CoreGraphics.framework in Frameworks */,
+				6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +696,9 @@
 		6B7FAAF1143EFC8700347DE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BB815A21445357F00A7C284 /* ActivitySpec.m */,
+				6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */,
+				6BB815B11445545600A7C284 /* MenuSpec.m */,
 				6B7FAAF9143EFCC000347DE7 /* ProcessAreaSpec.m */,
 			);
 			path = Model;
@@ -899,13 +903,13 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */,
 				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
 				6B932F351433FA4000834A1B /* MobileCoreServices.framework */,
 				6B932F2F1433F97900834A1B /* SystemConfiguration.framework */,
 				6B932F311433F98400834A1B /* CFNetwork.framework */,
 				6B932F271433F7CE00834A1B /* libz.dylib */,
 				6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */,
-				6B932EB41433E2E700834A1B /* OCHamcrest-iPhone.framework */,
 				6B6B65251432A07B00B584C1 /* libsqlite3.dylib */,
 				6B912278143299CA0031F7A8 /* libxml2.dylib */,
 				6BCAFB9B14317B1C00575280 /* UIKit.framework */,
@@ -1266,7 +1270,6 @@
 				6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */,
 				6BC1608C1436AF3500E166F6 /* loginBackground.png in Resources */,
 				6BC1608E1436AF3500E166F6 /* LoginWindow.xib in Resources */,
-				6B353A32144440BF00C8E6C2 /* XmlPostActivityClientSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1417,13 +1420,13 @@
 				6B353A041444276C00C8E6C2 /* RXMLElement.m in Sources */,
 				6B353A051444276C00C8E6C2 /* TBXML.m in Sources */,
 				6B353A061444276C00C8E6C2 /* Reachability.m in Sources */,
-				6BB77B0C14444F71007CA74B /* XmlPostActivityClientSpec.m in Sources */,
 				6BB77B1E14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */,
 				6BB77B2E14445AA9007CA74B /* expanz_model_Activity.m in Sources */,
 				6BB77B3314445AA9007CA74B /* expanz_model_ActivityInstance.m in Sources */,
 				6BB77B3814445AA9007CA74B /* expanz_model_Menu.m in Sources */,
 				6BB77B3D14445AA9007CA74B /* expanz_model_ProcessArea.m in Sources */,
 				6BB77B4214445AA9007CA74B /* expanz_model_UserRole.m in Sources */,
+				6BB815B414455B6800A7C284 /* MenuSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1620,6 +1623,9 @@
 				6BB77B4014445AA9007CA74B /* expanz_model_UserRole.m in Sources */,
 				6BB77B4414445B63007CA74B /* RXMLElement+SessionDataSpec.m in Sources */,
 				6BB77B4614445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m in Sources */,
+				6BB815A31445357F00A7C284 /* ActivitySpec.m in Sources */,
+				6BB815B0144544A000A7C284 /* ActivityInstanceSpec.m in Sources */,
+				6BB815B314455B6800A7C284 /* MenuSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

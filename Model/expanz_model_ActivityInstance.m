@@ -12,6 +12,14 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_iOS_SDKExceptions.h"
 
+
+
+@interface expanz_model_ActivityInstance (protected)
+@property (nonatomic, readwrite, assign) NSString* title; 
+@end
+
+/* ================================================================================================================== */
+
 @implementation expanz_model_ActivityInstance
 
 @synthesize handle = _handle; 
@@ -19,18 +27,13 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
-    self = [super init];    
-    if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
-    }
-    return self;
-}
 
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
-    self = [self init];
-    _handle = [handle retain];
-    _persistentId = [persistentId retain];    
+    self = [super initWithName:nil andTitle:title];
+    if (self) {
+        _handle = [handle retain];
+        _persistentId = [persistentId retain];   
+    }   
     return self;    
 }
 

@@ -22,12 +22,11 @@
 
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title {
     self = [self init];     
-    if (!self) {
-        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
+    if (self) {
+        _processId = [processId retain];
+        _title = [title retain];
+        _activities = [[NSMutableSet alloc] init];
     }
-    _processId = [processId retain];
-    _title = [title retain];
-    _activities = [[NSMutableSet alloc] init];
     return self;
 }
 

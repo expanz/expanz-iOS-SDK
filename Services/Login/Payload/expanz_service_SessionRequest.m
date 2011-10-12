@@ -25,12 +25,11 @@
 
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {    
     self = [self init];   
-    if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
+    if (self) {
+        _userName = [userName retain];
+        _password = [password retain];
+        _appSite = [appSite retain];
     }
-    _userName = [userName retain];
-    _password = [password retain];
-    _appSite = [appSite retain];
     return self; 
 }
 

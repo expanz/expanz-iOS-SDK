@@ -18,20 +18,15 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
-    self = [super init];    
-    if (!self) {
-        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
-    }    
-    return self;
-}
 
 - (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
-    self = [self init]; 
-    _hasWorkflowTrays = hasWorkflowTrays; 
-    _canChangeCompanyRole = canChangeCompanyRole;
-    _processAreas = [[NSMutableSet alloc] init];
-    _userRoles = [[NSMutableSet alloc] init];
+    self = [super init]; 
+    if (self) {
+        _hasWorkflowTrays = hasWorkflowTrays; 
+        _canChangeCompanyRole = canChangeCompanyRole;
+        _processAreas = [[NSMutableSet alloc] init];
+        _userRoles = [[NSMutableSet alloc] init];
+    }   
     return self; 
 }
 

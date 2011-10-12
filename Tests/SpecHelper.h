@@ -3,13 +3,15 @@
 #define HC_SHORTHAND
 #if TARGET_OS_IPHONE
 #import <Cedar-iPhone/SpecHelper.h>
-#import <OCHamcrest-iPhone/OCHamcrest.h>
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
 #else
 #import <Cedar/SpecHelper.h>
 #import <OCHamcrest/OCHamcrest.h>
 #endif
 
 #import <objc/runtime.h>
+
+
 
 #define AddToContext(key, value) [[SpecHelper specHelper].sharedExampleContext setObject:value forKey:key]
 #define GetFromContext(key) [[SpecHelper specHelper].sharedExampleContext objectForKey:key]

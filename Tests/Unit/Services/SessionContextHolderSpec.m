@@ -7,27 +7,6 @@
 SPEC_BEGIN(SessionContextHolderSpec)
 
 
-/* ================================================================================================================== */
-
-describe(@"Object initialization", ^{
-    it(@"should throw NSExcption if initialization fails.", ^{
-        SessionContextHolder* context = [[SessionContextHolder alloc] init];
-        id mock = [OCMockObject partialMockForObject:context];
-        [[mock expect] init];
-        @try {
-            [context initWithXml:@"<xml/>"];
-            [mock verify];        
-            [NSException raise:@"AssertionFailed" format:@"Should have thrown exception"];
-        }
-        @catch(NSException* exception) {
-            assertThat([exception name], equalTo(ExObjectInitializationException));
-            [context release];
-        }        
-    });
-});
-
-/* ================================================================================================================== */
-
 #define kSessionRequestResponse @"<CreateSessionXResponse xmlns=\"http://www.expanz.com/ESAService\">\
 <CreateSessionXResult>net.tcp://127.0.0.1:8198/SessionManager1#634530077119838630:30</CreateSessionXResult>"
 

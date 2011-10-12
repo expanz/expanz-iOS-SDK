@@ -34,7 +34,7 @@ static SessionContextHolder* globalContext;
 - (id) initWithXml:(NSString*)xml {
     self = [self init]; 
     if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to superclass initializer failed."];
+        return nil;
     }
     LogDebug(@"Initializing SessionContextHolder with xml: %@", xml);
     RXMLElement* rootElement = [RXMLElement elementFromXMLString:xml];

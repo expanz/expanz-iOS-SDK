@@ -21,10 +21,9 @@
 - (id) initWithRequest:(ASIFormDataRequest*)request {
     self = [super init];
     if (!self) {
-        [NSException raise:ExObjectInitializationException format:@"Call to super-class initialization failed."];
-    }
-    _request = [request retain];
-    [_request addRequestHeader:@"Content-Type" value:@"text/xml"];     
+        _request = [request retain];
+        [_request addRequestHeader:@"Content-Type" value:@"text/xml"];   
+    }  
     return self;
 }
 

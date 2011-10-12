@@ -11,7 +11,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface expanz_model_Activity : NSObject
+@interface expanz_model_Activity : NSObject {
+
+@protected
+    NSString* _title; 
+    
+}
 
 @property (nonatomic, readonly) NSString* name; 
 @property (nonatomic, readonly) NSString* title; 

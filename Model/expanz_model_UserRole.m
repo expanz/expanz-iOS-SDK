@@ -18,18 +18,12 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id)init {
-    self = [super init];    
-    if (!self) {
-        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
-    }
-    return self;
-}
-
 - (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description {
-    self = [self init]; 
-    _roleId = [roleId retain]; 
-    _description = [description retain];
+    self = [super init]; 
+    if (self) {
+        _roleId = [roleId retain]; 
+        _description = [description retain];
+    }
     return self;
 }
 

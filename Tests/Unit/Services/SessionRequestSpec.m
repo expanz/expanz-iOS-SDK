@@ -6,25 +6,6 @@
 
 SPEC_BEGIN(SessionRequestSpec)
 
-/* ================================================================================================================== */
-describe(@"Object initialization", ^{
-    it(@"should throw NSExcption if initialization fails.", ^{
-        SessionRequest* sessionRequest = [[SessionRequest alloc] init];
-        id mockRequest = [OCMockObject partialMockForObject:sessionRequest];
-        [[mockRequest expect] init];
-        @try {
-            [sessionRequest initWithUserName:@"demo" password:@"demo3" appSite:@"SALESAPP"];
-            [mockRequest verify];        
-            [NSException raise:@"AssertionFailed" format:@"Should have thrown exception"];
-        }
-        @catch(NSException* exception) {
-            assertThat([exception name], equalTo(ExObjectInitializationException));
-            [sessionRequest release];
-        }        
-    });
-});
-
-/* ================================================================================================================== */
 describe(@"Properties", ^{
     it(@"should provide immutable userName, password and appSite properties.", ^{
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
@@ -39,7 +20,6 @@ describe(@"Properties", ^{
     });
 });
 
-/* ================================================================================================================== */
 #define kXmlRequest @"<CreateSessionX xmlns=\"http://www.expanz.com/ESAService\"><xml>\
 <ESA><CreateSession user=\"demo\" password=\"demo3\" appSite=\"SALESAPP\" authenticationMode=\"Primary\" \
 clientVersion=\"iOS 1.0\" schemaVersion=\"2.0\"/></ESA></xml></CreateSessionX>"

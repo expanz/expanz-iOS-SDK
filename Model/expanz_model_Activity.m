@@ -20,11 +20,10 @@
 
 - (id) initWithName:(NSString*)name andTitle:(NSString*)title {
     self = [self init];     
-    if (!self) {
-        [NSException raise:@"Initialization failed." format:@"Call to superclass initializer failed."];
+    if (self) {
+        _name = [name retain]; 
+        _title = [title retain];
     }
-    _name = [name retain]; 
-    _title = [title retain];
     return self; 
 }
 
