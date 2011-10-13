@@ -16,7 +16,6 @@
 
 @implementation expanz_service_XmlPostActivityClient
 
-objection_register(expanz_service_XmlPostActivityClient)
 
 /* ================================================ Interface Methods =============================================== */
 
@@ -36,10 +35,6 @@ objection_register(expanz_service_XmlPostActivityClient)
         [delegate requestDidFailWithError:[self.request error]]; 
     }];
     [self.request startAsynchronous];
-
-    
-    
-    
 }
 
 

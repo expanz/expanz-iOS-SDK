@@ -20,7 +20,7 @@
 
 - (id) initWithRequest:(ASIFormDataRequest*)request {
     self = [super init];
-    if (!self) {
+    if (self) {
         _request = [request retain];
         [_request addRequestHeader:@"Content-Type" value:@"text/xml"];   
     }  

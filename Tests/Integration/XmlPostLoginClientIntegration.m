@@ -42,7 +42,7 @@
 @end
 
 /* ================================================================================================================== */
-SPEC_BEGIN(XmlPostLoginClientSpec)
+SPEC_BEGIN(XmlPostLoginClientIntegration)
 
 
 describe(@"Authenticating with the site manager.", ^{
@@ -60,11 +60,9 @@ describe(@"Authenticating with the site manager.", ^{
                                                                              appSite:@"SALESAPP"]; 
             
             TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init];
-            [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
-            
-            [NSThread sleepForTimeInterval:5];
-            LogDebug(@"Result: %@", [loginDelegate sessionContext]);
-            assertThat([loginDelegate sessionContext], isNot(nil));
+            LogDebug(@"!@@@@@@@@@@@@@@@@@@@@@@ foobar!");
+            [loginClient createSessionWith:sessionRequest delegate:loginDelegate];             
+            assertWillHappen(loginDelegate.sessionContext != nil);      
             [sessionRequest release];
     });
     

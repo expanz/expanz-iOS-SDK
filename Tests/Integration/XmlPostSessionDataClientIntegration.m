@@ -43,7 +43,7 @@
 
 
 /* ================================================================================================================== */
-SPEC_BEGIN(XmlPostSessionDataClientSpec)
+SPEC_BEGIN(XmlPostSessionDataClientIntegration)
 
 describe(@"Retrieve session data using an access token", ^{
     

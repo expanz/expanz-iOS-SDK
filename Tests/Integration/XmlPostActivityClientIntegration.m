@@ -14,7 +14,7 @@
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
 
-SPEC_BEGIN(XmlPostActivityClientSpec)
+SPEC_BEGIN(XmlPostActivityClientIntegration)
 
 describe(@"create activity. . . ", ^{
     

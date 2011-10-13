@@ -14,10 +14,7 @@
 #import "RXMLElement+SessionData.h"
 
 
-
 @implementation expanz_service_XmlPostSessionDataClient
-
-objection_register(expanz_service_XmlPostSessionDataClient)
 
 
 /* ================================================ Interface Methods =============================================== */

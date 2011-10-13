@@ -24,8 +24,8 @@
     --simulator.launch,
     --make.dirs,
     --unit.tests.build,
-    --unit.tests.run,
-    assemble.coverage.data,
+    --tests.run,
+    --assemble.coverage.data,
     --coverage.report,
     --api.report"/>
 
@@ -43,6 +43,7 @@
     <target name="--make.dirs">
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
+        <mkdir dir="${temp.dir}/coverage-data"/>
         <mkdir dir="${reports.dir}"/>
         <mkdir dir="${reports.dir}/tests"/>
     </target>
@@ -65,7 +66,8 @@
             tell application "${simulator.path}" to launch
             tell application "${simulator.path}" to activate
         </echo>
-        <echo message="Launching the iPhone simulator. Leave it running in the foreground, or things won't work"/>
+        <echo message="Launching the iPhone simulator for unit tests. . "/>
+        <echo message="Leave it running in the foreground, or things won't work."/>
         <exec executable="osascript" failonerror="true" failifexecutionfails="true">
             <arg line="${temp.dir}/fg-simulator.script"/>
         </exec>
@@ -73,40 +75,40 @@
 
     <target name="--unit.tests.build">
         <exec executable="xcodebuild" failonerror="true">
-            <arg line="-sdk iphonesimulator${sdk.version} -target ${unit.tests.target.name}"/>
+            <arg line="-sdk iphonesimulator${module.sdk.version} -target ${tests.target.name}"/>
         </exec>
     </target>
 
-    <target name="--unit.tests.run">
-        <mkdir dir="${reports.dir}/tests/unit"/>
-        <property name="unit.tests.report" value="${reports.dir}/tests/unit/unit-test-results.txt"/>
-        <exec executable="${basedir}/ios-sim" outputproperty="unit.tests.output" failonerror="true"
+    <target name="--tests.run">
+        <mkdir dir="${reports.dir}/tests"/>
+        <property name="tests.report" value="${reports.dir}/tests/test-results.txt"/>
+        <exec executable="${basedir}/ios-sim" outputproperty="tests.output" failonerror="true"
               failifexecutionfails="true">
-            <arg line="launch ${target.dir}/Release-iphonesimulator/${unit.tests.target.name}.app"/>
+            <arg line="launch ${target.dir}/Release-iphonesimulator/${tests.target.name}.app"/>
             <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
             <arg line="--setenv CEDAR_REPORTER_CLASS=CDRColorizedReporter"/>
         </exec>
 
         <!-- Write report to disk -->
-        <echo file="${unit.tests.report}" message="${unit.tests.output}"/>
+        <echo file="${tests.report}" message="${tests.output}"/>
         <!-- Print report to console -->
-        <echo message="${unit.tests.output}"/>
+        <echo message="${tests.output}"/>
 
-        <loadfile srcfile="${unit.tests.report}" property="tests.failed">
+        <loadfile srcfile="${tests.report}" property="tests.failed">
             <filterchain>
                 <filterreader classname="org.apache.tools.ant.filters.LineContains">
                     <param type="contains" value="FAILURE"/>
                 </filterreader>
             </filterchain>
         </loadfile>
-        
-        <loadfile srcfile="${unit.tests.report}" property="tests.exception">
+
+        <loadfile srcfile="${tests.report}" property="tests.exception">
             <filterchain>
                 <filterreader classname="org.apache.tools.ant.filters.LineContains">
                     <param type="contains" value="EXCEPTION"/>
                 </filterreader>
             </filterchain>
-        </loadfile>        
+        </loadfile>
 
         <echo file="${temp.dir}/quit-simulator.script">
             tell application "${simulator.path}" to quit
@@ -114,13 +116,11 @@
         <exec executable="osascript" failonerror="true" failifexecutionfails="true">
             <arg line="${temp.dir}/quit-simulator.script"/>
         </exec>
-        <fail if="tests.failed" message="Tests failed. Report is at ${unit.tests.report}"/>
-        <fail if="tests.exception" message="Tests failed. Report is at ${unit.tests.report}"/>
+        <fail if="tests.failed" message="Tests failed. Report is at ${tests.report}"/>
+        <fail if="tests.exception" message="Tests failed. Report is at ${tests.report}"/>
     </target>
 
-    <target name="assemble.coverage.data">
-        <mkdir dir="${temp.dir}/coverage-data"/>
-
+    <target name="--assemble.coverage.data">
         <pathconvert pathsep=", " property="gcno.list" refid="classes">
             <mapper>
                 <chainedmapper>
@@ -130,7 +130,7 @@
             </mapper>
         </pathconvert>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
-            <fileset dir="${simulator.objects.dir}" includes="${gcno.list}"/>
+            <fileset dir="${tests.coverage.files}" includes="${gcno.list}"/>
         </copy>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
             <fileset dir="${simulator.applications.path}" includes="**/*.gcda"/>
@@ -143,16 +143,16 @@
 
         <echo file="${temp.dir}/geninfo.sh">
             #!/bin/sh
-            geninfo ${temp.dir}/coverage-data/*.gcno --no-recursion --output-filename ${temp.dir}/${unit.tests.target.name}-temp.info
-            #Remove symbols we're not interested in. 
-            lcov -r ${temp.dir}/${unit.tests.target.name}-temp.info CGGeometry.h > ${temp.dir}/${unit.tests.target.name}.info
+            geninfo ${temp.dir}/coverage-data/*.gcno --no-recursion --output-filename ${temp.dir}/${module.name}-temp.info
+            #Remove symbols we're not interested in.
+            lcov -r ${temp.dir}/${module.name}-temp.info CGGeometry.h > ${temp.dir}/${module.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/geninfo.sh"/>
         <exec executable="${temp.dir}/geninfo.sh" failonerror="true" failifexecutionfails="true"/>
 
         <echo file="${temp.dir}/genhtml.sh">
             #!/bin/sh
-            genhtml --no-function-coverage -o ${coverage.reports.dir} ${temp.dir}/${unit.tests.target.name}.info
+            genhtml --no-function-coverage -o ${coverage.reports.dir} ${temp.dir}/${module.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>

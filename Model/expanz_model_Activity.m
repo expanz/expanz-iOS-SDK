@@ -19,7 +19,7 @@
 /* ================================================== Constructors ================================================== */
 
 - (id) initWithName:(NSString*)name andTitle:(NSString*)title {
-    self = [self init];     
+    self = [self init];
     if (self) {
         _name = [name retain]; 
         _title = [title retain];

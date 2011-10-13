@@ -19,8 +19,6 @@
 
 @implementation expanz_service_XmlPostLoginClient
 
-objection_register(expanz_service_XmlPostLoginClient)
-
 
 /* ================================================ Interface Methods =============================================== */
 
@@ -31,14 +29,13 @@ objection_register(expanz_service_XmlPostLoginClient)
     
     [self.request setCompletionBlock:^{
         RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];
-        [delegate requestDidFinishWithSessionContext:[element asSessionContext]];        
+        [delegate requestDidFinishWithSessionContext:[element asSessionContext]];                          
     }];
     
     [self.request setFailedBlock:^{
         [delegate requestDidFailWithError:[self.request error]]; 
     }];
     [self.request startAsynchronous];
-        
 }
     
 

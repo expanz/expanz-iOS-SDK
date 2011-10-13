@@ -13,7 +13,7 @@
 #import "SpecHelper.h" 
 #import "RXMLElement+SessionData.h"
 
-SPEC_BEGIN(RXMLELement_GetSessionData)
+SPEC_BEGIN(RXMLELement_SessionDataSpec)
 
 describe(@"Object instanciation", ^{
     

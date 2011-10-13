@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Integration Tests.xcscheme</key>
+		<key>All Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>2</integer>
 		</dict>
 		<key>RELEASE.xcscheme</key>
 		<dict>
@@ -18,11 +18,6 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
-		</dict>
-		<key>UnitTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>expanz-iOS-SDK.xcscheme</key>
 		<dict>
