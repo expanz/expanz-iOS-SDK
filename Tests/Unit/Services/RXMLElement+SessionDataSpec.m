@@ -31,6 +31,39 @@ describe(@"Object instanciation", ^{
         assertThat(menu, notNilValue());
     });
     
+    it(@"should throw XML validation exception if you pass it the wrong kind of element", ^{
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"Dodgy" ofType:@"xml"]; 
+        NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
+        
+        @try {
+            [element asMenu]; 
+            [NSException raise:@"Should have thrown exception" format:@"Assertion failed"];
+        }
+        @catch (NSException* e) {
+            assertThat([e reason], equalTo(@"Element is not a Menu."));
+        }
+        
+        @try {
+            [element asProcessArea]; 
+            [NSException raise:@"Should have thrown exception" format:@"Assertion failed"];
+        }
+        @catch (NSException* e) {
+            assertThat([e reason], equalTo(@"Element is not a ProcessArea."));
+        }
+        
+        @try {
+            [element asUserRole]; 
+            [NSException raise:@"Should have thrown exception" format:@"Assertion failed"];
+        }
+        @catch (NSException* e) {
+            assertThat([e reason], equalTo(@"Element is not a UserRole."));
+        }
+
+    });
+    
+
+    
 });
 
 

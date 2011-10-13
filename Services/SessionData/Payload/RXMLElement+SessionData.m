@@ -23,7 +23,7 @@
 
 - (Menu*) asMenu {
     if (![self.tag isEqualToString:@"Menu"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a menu."];
+        [NSException raise:ExXmlValidationException format:@"Element is not a Menu."];
     }
     
     NSString* workflowTraysAttr = [self attribute:@"hasWorkflowTrays"];
