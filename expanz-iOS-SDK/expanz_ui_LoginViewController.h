@@ -22,7 +22,7 @@
 @property (nonatomic, readonly) id<expanz_service_LoginClient> loginClient; 
 @property (nonatomic, readonly) IBOutlet UITextField* userName;
 @property (nonatomic, readonly) IBOutlet UITextField* password;
-@property (nonatomic, readonly) IBOutlet UIButton* loginButton; 
+@property (nonatomic, readonly) IBOutlet UIBarButtonItem* loginButton; 
 @property (nonatomic, readonly) IBOutlet UIActivityIndicatorView* spinner; 
 
 - (IBAction) loginWithUserNameAndPassword:(id)sender; 
