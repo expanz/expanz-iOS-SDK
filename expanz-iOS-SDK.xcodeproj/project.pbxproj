@@ -326,7 +326,9 @@
 		6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42241447B5E40000FA7D /* expanz_model_Field.m */; };
 		6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
 		6BFE422E1447EF980000FA7D /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE422D1447EF980000FA7D /* FieldSpec.m */; };
-		6BFE422F1447EF980000FA7D /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE422D1447EF980000FA7D /* FieldSpec.m */; };
+		6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42301447FA580000FA7D /* CreateActivityRequestSpec.m */; };
+		6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */; };
+		6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -530,6 +532,7 @@
 		6BFE42231447B5E40000FA7D /* expanz_model_Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Field.h; sourceTree = "<group>"; };
 		6BFE42241447B5E40000FA7D /* expanz_model_Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Field.m; sourceTree = "<group>"; };
 		6BFE422D1447EF980000FA7D /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldSpec.m; sourceTree = "<group>"; };
+		6BFE42301447FA580000FA7D /* CreateActivityRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateActivityRequestSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -665,6 +668,7 @@
 				6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */,
 				6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */,
 				6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */,
+				6BFE42301447FA580000FA7D /* CreateActivityRequestSpec.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1307,7 +1311,8 @@
 				6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */,
 				6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */,
 				6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */,
-				6BFE422F1447EF980000FA7D /* FieldSpec.m in Sources */,
+				6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */,
+				6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1521,6 +1526,7 @@
 				6BFE42271447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 				6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 				6BFE422E1447EF980000FA7D /* FieldSpec.m in Sources */,
+				6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,8 @@
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
-describe(@"Object instanciation", ^{
+
+describe(@"Object creation", ^{
     
     __block RXMLElement* activityElement;
     
@@ -24,10 +25,37 @@ describe(@"Object instanciation", ^{
         RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString]; 
         activityElement = [rootElement child:@"ExecXResult.ESA.Activity"]; 
     });
-    
+
+        
     it(@"should return an ActivityIntance from corresponding XML", ^{
         ActivityInstance* activityInstance = [activityElement asActivityInstance]; 
         assertThat(activityInstance, notNilValue());                                              
+    });
+    
+});
+
+describe(@"Error handling", ^{
+    
+    it(@"should throw NSException if you feed it the wrong kind of element.", ^{
+        RXMLElement* e = [RXMLElement elementFromXMLString:@"<wrong><xml>this is the wrong xml.</xml></wrong>"]; 
+
+        @try {
+            [e asActivityInstance]; 
+            [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
+        }
+        @catch (NSException* exception) {
+            assertThat([exception name], equalTo(ExXmlValidationException));
+        }
+        
+        @try {
+            [e asField]; 
+            [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
+        }
+        @catch (NSException* exception) {
+            assertThat([exception name], equalTo(ExXmlValidationException));
+        }
+
+        
     });
     
 });

@@ -11,12 +11,13 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_CreateActivityRequest.h"
+#import "expanz_model_ActivityInstance.h"
 
 
 /* ================================================================================================================== */
 @protocol expanz_service_CreateActivityClientDelegate <NSObject>
 
-- (void) requestDidFinishWithActivityInstance:(id)activityDetails; 
+- (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance; 
 - (void) requestDidFailWithError:(NSError*)error; 
 
 @end
