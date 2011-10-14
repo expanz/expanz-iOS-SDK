@@ -37,7 +37,8 @@
                                                                 hasWarning:NO message:message] autorelease];
             }
             else {
-                [NSException raise:ExXmlValidationException format:@"Contains neither a session token or an error message."];
+                [NSException raise:ExXmlValidationException 
+                            format:@"Contains neither a session token or an error message."];
             }
         }        
     return sessionContext;

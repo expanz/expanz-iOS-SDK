@@ -9,13 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
-#import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import <Foundation/Foundation.h>
+#import "expanz_service_LoginClient.h"
 
-@interface RXMLElement (ActivityInstance)
+@interface TestLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
 
-- (ActivityInstance*) asActivityInstance;
-- (Field*) asField; 
+@property (nonatomic, retain) SessionContext* sessionContext;
+@property (nonatomic, retain) NSError* error; 
 
 @end

@@ -9,13 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
-#import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import <Foundation/Foundation.h>
+#import "ASIFormDataRequest.h"
 
-@interface RXMLElement (ActivityInstance)
+@interface IntegrationUtils : NSObject
 
-- (ActivityInstance*) asActivityInstance;
-- (Field*) asField; 
++ (void) loginWithDefaultUserIfRequired; 
++ (ASIFormDataRequest*) requestThatWillFail; 
 
 @end

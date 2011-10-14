@@ -10,23 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_Activity.h"
 
-@interface expanz_model_ProcessArea : NSObject {
+@interface expanz_model_Field : NSObject
 
-@private        
-    NSMutableSet* _activities; 
-}
+@property (nonatomic, readonly) NSString* fieldId; 
+@property (nonatomic, readonly, getter = isNullable) BOOL nullable; 
+@property (nonatomic, readonly) NSString* defaultValue; 
+@property (nonatomic, readonly) NSString* datatype; 
 
-@property (nonatomic, readonly) NSString* processId; 
-@property (nonatomic, readonly) NSString* title;
-@property (nonatomic, readonly) NSArray* activities; 
-
-- (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title; 
-- (void) addActivity:(Activity*)activity; 
+- (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
+              dataType:(NSString*)datatype; 
 
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ProcessArea expanz_model_ProcessArea;
+@compatibility_alias Field expanz_model_Field;

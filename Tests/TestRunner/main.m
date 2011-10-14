@@ -1,10 +1,13 @@
+////////////////////////////////////////////////////////////////////////////////
 //
-//  main.m
-//  TestRunner
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
 //
-//  Created by Jasper Blues on 10/11/11.
-//  Copyright 2011 EXPANZ. All rights reserved.
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
 //
+////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
 

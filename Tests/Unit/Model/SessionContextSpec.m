@@ -28,8 +28,6 @@ describe(@"Object creation", ^{
     });
     
     it(@"should store global authentication details for subsequent retrieval.", ^{
-        assertThat([SessionContext globalContext], nilValue());
-        [SessionContext setGlobalContext:contextHolder];
         [SessionContext setGlobalContext:contextHolder];
         assertThat([SessionContext globalContext], notNilValue());
     });
@@ -50,6 +48,7 @@ describe(@"Object creation", ^{
     
     afterEach(^{
         [contextHolder release];
+        [SessionContext setGlobalContext:nil];
     });
         
 });

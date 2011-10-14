@@ -13,6 +13,7 @@
 #import "expanz_service_XmlPostActivityClient.h"
 #import "expanz_iOS_SDKExceptions.h"
 #import "expanz_service_CreateActivityRequest.h"
+#import "RXMLElement+ActivityInstance.h"
 
 @implementation expanz_service_XmlPostActivityClient
 
@@ -26,9 +27,9 @@
     [self.request appendPostData:[[activityRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [self.request setCompletionBlock:^{       
-        LogDebug(@"Got response: %@", [self.request responseString]);
-//        RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];
-//        [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
+        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];                
+        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"]; 
+        [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
     }];
     
     [self.request setFailedBlock:^{

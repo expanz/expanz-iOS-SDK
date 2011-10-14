@@ -16,7 +16,7 @@
 /* ================================================================================================================== */
 @protocol expanz_service_CreateActivityClientDelegate <NSObject>
 
-- (void) requestDidFinishWithActivityDetails:(id)activityDetails; 
+- (void) requestDidFinishWithActivityInstance:(id)activityDetails; 
 - (void) requestDidFailWithError:(NSError*)error; 
 
 @end

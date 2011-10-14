@@ -91,12 +91,12 @@
 		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
-		6B55F5381445976800A4512A /* SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B55F5371445976800A4512A /* SessionContextHolderSpec.m */; };
-		6B5C1B8E1446614C007DA71A /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B5C1B8D1446614C007DA71A /* Dodgy.xml */; };
-		6B5C1B8F1446614C007DA71A /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B5C1B8D1446614C007DA71A /* Dodgy.xml */; };
-		6B5C1B9214466237007DA71A /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE4143EE78400347DE7 /* SessionData.xml */; };
+		6B55F5381445976800A4512A /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B55F5371445976800A4512A /* SessionContextSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7067691446CDC9000A1CAE /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */; };
+		6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
+		6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
+		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
 		6B78D77C14466B0E00A9D6DA /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
@@ -105,8 +105,6 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6BB77B0E144450C7007CA74B /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB77B0D144450C7007CA74B /* ActivityDetails.xml */; };
-		6BB77B10144450C7007CA74B /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BB77B0D144450C7007CA74B /* ActivityDetails.xml */; };
 		6BB77B1A14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
 		6BB77B1B14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
 		6BB77B1C14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
@@ -305,7 +303,6 @@
 		6BF58DB3144420820063E805 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58C95144420810063E805 /* Reachability.m */; };
 		6BF58DB4144420820063E805 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58C95144420810063E805 /* Reachability.m */; };
 		6BF58DB5144420820063E805 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58C95144420810063E805 /* Reachability.m */; };
-		6BF58DBE144421640063E805 /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE4143EE78400347DE7 /* SessionData.xml */; };
 		6BF58DC01444245C0063E805 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6BF58DC11444245C0063E805 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6BF58DC21444245C0063E805 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -315,6 +312,20 @@
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
+		6BFE4215144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
+		6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
+		6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */; };
+		6BFE421E1447A4D10000FA7D /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */; };
+		6BFE421F1447A4D10000FA7D /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421B1447A4D10000FA7D /* Dodgy.xml */; };
+		6BFE42201447A4D10000FA7D /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421B1447A4D10000FA7D /* Dodgy.xml */; };
+		6BFE42211447A4D10000FA7D /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421C1447A4D10000FA7D /* SessionData.xml */; };
+		6BFE42221447A4D10000FA7D /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421C1447A4D10000FA7D /* SessionData.xml */; };
+		6BFE42251447B5E40000FA7D /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42241447B5E40000FA7D /* expanz_model_Field.m */; };
+		6BFE42261447B5E40000FA7D /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42241447B5E40000FA7D /* expanz_model_Field.m */; };
+		6BFE42271447B5E40000FA7D /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42241447B5E40000FA7D /* expanz_model_Field.m */; };
+		6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42241447B5E40000FA7D /* expanz_model_Field.m */; };
+		6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
+		6BFE422B1447CE030000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -351,13 +362,13 @@
 		6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
-		6B55F5371445976800A4512A /* SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextHolderSpec.m; sourceTree = "<group>"; };
-		6B5C1B8D1446614C007DA71A /* Dodgy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dodgy.xml; sourceTree = "<group>"; };
+		6B55F5371445976800A4512A /* SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextSpec.m; sourceTree = "<group>"; };
 		6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientIntegration.m; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6B701531143A9D920023756C /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		6B70676C144702DA000A1CAE /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		6B70676D14470309000A1CAE /* TestLoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginClientDelegate.h; sourceTree = "<group>"; };
+		6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginClientDelegate.m; sourceTree = "<group>"; };
 		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
-		6B7FAAE4143EE78400347DE7 /* SessionData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SessionData.xml; sourceTree = "<group>"; };
 		6B7FAAE6143EE7D000347DE7 /* expanz_service_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionData.h; sourceTree = "<group>"; };
 		6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionData.m; sourceTree = "<group>"; };
 		6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContextHolderSpec.m"; sourceTree = "<group>"; };
@@ -382,7 +393,6 @@
 		6BB679EB143D522400B9EC94 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		6BB679EC143D522400B9EC94 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		6BB679ED143D522400B9EC94 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		6BB77B0D144450C7007CA74B /* ActivityDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityDetails.xml; sourceTree = "<group>"; };
 		6BB77B1814445A86007CA74B /* RXMLElement+ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ActivityInstance.h"; sourceTree = "<group>"; };
 		6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstance.m"; sourceTree = "<group>"; };
 		6BB77B2014445AA9007CA74B /* expanz_model_Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Activity.h; sourceTree = "<group>"; };
@@ -511,6 +521,13 @@
 		6BF58C92144420810063E805 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6BF58C94144420810063E805 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BF58C95144420810063E805 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6BFE4213144792EC0000FA7D /* IntegrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationUtils.h; sourceTree = "<group>"; };
+		6BFE4214144792EC0000FA7D /* IntegrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationUtils.m; sourceTree = "<group>"; };
+		6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityDetails.xml; sourceTree = "<group>"; };
+		6BFE421B1447A4D10000FA7D /* Dodgy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dodgy.xml; sourceTree = "<group>"; };
+		6BFE421C1447A4D10000FA7D /* SessionData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SessionData.xml; sourceTree = "<group>"; };
+		6BFE42231447B5E40000FA7D /* expanz_model_Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Field.h; sourceTree = "<group>"; };
+		6BFE42241447B5E40000FA7D /* expanz_model_Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Field.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,14 +629,16 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		6B7FAAE3143EE78400347DE7 /* Resources */ = {
+		6B70676B144702DA000A1CAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6B7FAAE4143EE78400347DE7 /* SessionData.xml */,
-				6BB77B0D144450C7007CA74B /* ActivityDetails.xml */,
-				6B5C1B8D1446614C007DA71A /* Dodgy.xml */,
+				6B70676C144702DA000A1CAE /* SpecHelper.h */,
+				6B70676D14470309000A1CAE /* TestLoginClientDelegate.h */,
+				6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */,
+				6BFE4213144792EC0000FA7D /* IntegrationUtils.h */,
+				6BFE4214144792EC0000FA7D /* IntegrationUtils.m */,
 			);
-			path = Resources;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6B7FAAF1143EFC8700347DE7 /* Model */ = {
@@ -630,7 +649,7 @@
 				6BB815B11445545600A7C284 /* MenuSpec.m */,
 				6B7FAAF9143EFCC000347DE7 /* ProcessAreaSpec.m */,
 				6B0E25C21445776400D34A22 /* UserRoleSpec.m */,
-				6B55F5371445976800A4512A /* SessionContextHolderSpec.m */,
+				6B55F5371445976800A4512A /* SessionContextSpec.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -653,6 +672,7 @@
 				6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */,
 				6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */,
 				6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */,
+				6BFE42191447A4D10000FA7D /* Resources */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -702,8 +722,8 @@
 		6B932F7D1434513700834A1B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6B70676B144702DA000A1CAE /* Utils */,
 				6BF58BAE14441E210063E805 /* TestRunner */,
-				6B701531143A9D920023756C /* SpecHelper.h */,
 				6B86AD8B1435B65400AA7FD5 /* Integration */,
 				6B932F7E1434513700834A1B /* Unit */,
 			);
@@ -715,7 +735,6 @@
 			children = (
 				6B7FAAF1143EFC8700347DE7 /* Model */,
 				6B7FAAF2143EFC8700347DE7 /* Services */,
-				6B7FAAE3143EE78400347DE7 /* Resources */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -766,6 +785,8 @@
 				6BB77B2114445AA9007CA74B /* expanz_model_Activity.m */,
 				6BB77B2214445AA9007CA74B /* expanz_model_ActivityInstance.h */,
 				6BB77B2314445AA9007CA74B /* expanz_model_ActivityInstance.m */,
+				6BFE42231447B5E40000FA7D /* expanz_model_Field.h */,
+				6BFE42241447B5E40000FA7D /* expanz_model_Field.m */,
 				6BB77B2414445AA9007CA74B /* expanz_model_Menu.h */,
 				6BB77B2514445AA9007CA74B /* expanz_model_Menu.m */,
 				6BB77B2614445AA9007CA74B /* expanz_model_ProcessArea.h */,
@@ -1054,6 +1075,17 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		6BFE42191447A4D10000FA7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */,
+				6BFE421B1447A4D10000FA7D /* Dodgy.xml */,
+				6BFE421C1447A4D10000FA7D /* SessionData.xml */,
+			);
+			name = Resources;
+			path = Tests/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1161,9 +1193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B353A1A1444276C00C8E6C2 /* InfoPlist.strings in Resources */,
-				6BB77B10144450C7007CA74B /* ActivityDetails.xml in Resources */,
-				6B5C1B8F1446614C007DA71A /* Dodgy.xml in Resources */,
-				6B5C1B9214466237007DA71A /* SessionData.xml in Resources */,
+				6BFE421E1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
+				6BFE42201447A4D10000FA7D /* Dodgy.xml in Resources */,
+				6BFE42221447A4D10000FA7D /* SessionData.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1198,9 +1230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF58BC314441E320063E805 /* InfoPlist.strings in Resources */,
-				6BF58DBE144421640063E805 /* SessionData.xml in Resources */,
-				6BB77B0E144450C7007CA74B /* ActivityDetails.xml in Resources */,
-				6B5C1B8E1446614C007DA71A /* Dodgy.xml in Resources */,
+				6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
+				6BFE421F1447A4D10000FA7D /* Dodgy.xml in Resources */,
+				6BFE42211447A4D10000FA7D /* SessionData.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1269,6 +1301,10 @@
 				6BB77B4214445AA9007CA74B /* expanz_model_UserRole.m in Sources */,
 				6B0E25E714457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EE14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
+				6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */,
+				6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */,
+				6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */,
+				6BFE422B1447CE030000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,6 +1369,7 @@
 				6BB77B3E14445AA9007CA74B /* expanz_model_UserRole.m in Sources */,
 				6B0E25E314457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EA14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
+				6BFE42251447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1397,6 +1434,7 @@
 				6BB77B3F14445AA9007CA74B /* expanz_model_UserRole.m in Sources */,
 				6B0E25E414457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EB14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
+				6BFE42261447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1471,9 +1509,14 @@
 				6B0E25C31445776400D34A22 /* UserRoleSpec.m in Sources */,
 				6B0E25E514457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EC14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
-				6B55F5381445976800A4512A /* SessionContextHolderSpec.m in Sources */,
+				6B55F5381445976800A4512A /* SessionContextSpec.m in Sources */,
 				6B78D77C14466B0E00A9D6DA /* RXMLElement+SessionDataSpec.m in Sources */,
 				6B7067691446CDC9000A1CAE /* XmlPostLoginClientIntegration.m in Sources */,
+				6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */,
+				6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */,
+				6BFE4215144792EC0000FA7D /* IntegrationUtils.m in Sources */,
+				6BFE42271447B5E40000FA7D /* expanz_model_Field.m in Sources */,
+				6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

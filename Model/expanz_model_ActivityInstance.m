@@ -13,13 +13,6 @@
 #import "expanz_iOS_SDKExceptions.h"
 
 
-
-@interface expanz_model_ActivityInstance (protected)
-@property (nonatomic, readwrite, assign) NSString* title; 
-@end
-
-/* ================================================================================================================== */
-
 @implementation expanz_model_ActivityInstance
 
 @synthesize handle = _handle; 
@@ -35,6 +28,17 @@
         _persistentId = [persistentId retain];   
     }   
     return self;    
+}
+
+/* ================================================ Interface Methods =============================================== */
+
+- (NSArray*) fields {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"fieldId" ascending:YES] autorelease];
+    return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
+}
+
+- (void) addField:(Field*)field {
+    [_fields addObject:field]; 
 }
 
 

@@ -14,7 +14,8 @@
 #import "expanz_model_UserRole.h"
 
 @interface expanz_model_Menu : NSObject {
-    
+
+@private    
     NSMutableSet* _processAreas;
     NSMutableSet* _userRoles; 
 }

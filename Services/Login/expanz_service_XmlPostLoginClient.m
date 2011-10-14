@@ -19,6 +19,7 @@
 
 @implementation expanz_service_XmlPostLoginClient
 
+objection_register_singleton(expanz_service_XmlPostLoginClient)
 
 /* ================================================ Interface Methods =============================================== */
 
@@ -37,8 +38,6 @@
     }];
     [self.request startAsynchronous];
 }
-    
-
 
 
 @end

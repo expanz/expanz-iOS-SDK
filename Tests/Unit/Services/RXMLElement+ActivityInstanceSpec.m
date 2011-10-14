@@ -16,16 +16,18 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
 describe(@"Object instanciation", ^{
     
-    __block RXMLElement* element;
+    __block RXMLElement* activityElement;
     
     beforeEach(^{
         NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityDetails" ofType:@"xml"]; 
         NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        element = [RXMLElement elementFromXMLString:xmlString]; 
+        RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString]; 
+        activityElement = [rootElement child:@"ExecXResult.ESA.Activity"]; 
     });
     
     it(@"should return an ActivityIntance from corresponding XML", ^{
-        //[element asActivityInstance];
+        ActivityInstance* activityInstance = [activityElement asActivityInstance]; 
+        assertThat(activityInstance, notNilValue());                                              
     });
     
 });

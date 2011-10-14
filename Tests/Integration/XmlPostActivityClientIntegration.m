@@ -13,6 +13,7 @@
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
+#import "IntegrationUtils.h"
 
 SPEC_BEGIN(XmlPostActivityClientIntegration)
 
@@ -21,6 +22,7 @@ describe(@"create activity. . . ", ^{
     __block id<expanz_service_ActivityClient> activityClient;
     
     beforeEach(^{
+        [IntegrationUtils loginWithDefaultUserIfRequired];
         JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
         activityClient = [injector getObject:@protocol(expanz_service_ActivityClient)];
     });
@@ -28,7 +30,7 @@ describe(@"create activity. . . ", ^{
     it(@"should return activity details upon invocation", ^{
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] 
                                 initWithActivityName:@"ESA.Sales.Calc" 
-                                sessionToken:@"net.tcp://127.0.0.1:8198/SessionManager1#634539647528074658:365"];
+                                sessionToken:[SessionContext globalContext].sessionToken];
         [activityClient createActivityWith:activityRequest delegate:nil];
     });
     

@@ -18,7 +18,6 @@
 //Current Environment
 #import "test_expanz_com_ServiceUrls.h"
 
-
 @implementation expanz_iOS_SDKModule
 
 - (void)configure {
@@ -26,7 +25,7 @@
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector *context) {
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kCreateSessionUrl]];        
-        XmlPostLoginClient* client = [[XmlPostLoginClient alloc] initWithRequest:request];
+        XmlPostLoginClient* client = [[[XmlPostLoginClient alloc] initWithRequest:request] autorelease];
         [request release];
         return (id) client;
     } toProtocol:@protocol(expanz_service_LoginClient)];         
@@ -34,14 +33,14 @@
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector *context) {
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kExecXUrl]];        
-        XmlPostSessionDataClient* client = [[XmlPostSessionDataClient alloc] initWithRequest:request];
+        XmlPostSessionDataClient* client = [[[XmlPostSessionDataClient alloc] initWithRequest:request] autorelease];
         [request release];
         return (id) client;
     } toProtocol:@protocol(expanz_service_SessionDataClient)];         
-    /* ================================================================================================================== */
+    /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector *context) {
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kExecXUrl]];        
-        XmlPostActivityClient* client = [[XmlPostActivityClient alloc] initWithRequest:request];
+        XmlPostActivityClient* client = [[[XmlPostActivityClient alloc] initWithRequest:request] autorelease];
         [request release];
         return (id) client;
     } toProtocol:@protocol(expanz_service_ActivityClient)];         

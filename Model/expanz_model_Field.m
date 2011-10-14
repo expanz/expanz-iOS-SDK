@@ -9,30 +9,39 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_XmlPostWebService.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "expanz_model_Field.h"
 
-@implementation expanz_service_XmlPostWebService
+@implementation expanz_model_Field
 
-@synthesize request = _request;
+@synthesize fieldId = _fieldId;
+@synthesize nullable = _nullable; 
+@synthesize defaultValue = _defaultValue;
+@synthesize datatype = _datatype;
 
 /* ================================================== Constructors ================================================== */
 
-- (id) initWithRequest:(ASIFormDataRequest*)request {
-    self = [super init];
+- (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
+              dataType:(NSString*)datatype {
+    
+    self = [super init]; 
     if (self) {
-        _request = [request retain];
-        [_request addRequestHeader:@"Content-Type" value:@"text/xml"];   
-    }  
-    return self;
+        _fieldId = [fieldId retain]; 
+        _nullable = nullable; 
+        _defaultValue = [defaultValue retain]; 
+        _datatype = [datatype retain];         
+    }
+    return self; 
 }
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    LogDebug(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! In dealloc");
-    [_request release];
+    [_fieldId release]; 
+    [_defaultValue release]; 
+    [_datatype release];
     [super dealloc];
 }
+
+
 
 @end
