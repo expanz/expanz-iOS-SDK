@@ -26,6 +26,7 @@
     if (self) {
         _handle = [handle retain];
         _persistentId = [persistentId retain];   
+        _fields = [[NSMutableSet alloc] initWithCapacity:20];
     }   
     return self;    
 }
