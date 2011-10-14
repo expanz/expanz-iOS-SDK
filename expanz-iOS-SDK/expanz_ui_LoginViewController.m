@@ -57,6 +57,7 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
+    [_loginClient retain];
 }
 
 
