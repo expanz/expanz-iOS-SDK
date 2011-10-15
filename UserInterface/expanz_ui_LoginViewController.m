@@ -104,7 +104,7 @@
         textFieldCell.textField.placeholder = @"example@expanz.com";
         textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
         textFieldCell.textField.returnKeyType = UIReturnKeyNext; 
-        _userNameField = textFieldCell.textField; 
+        _userNameField = [textFieldCell.textField retain]; 
     }
     else {
         textFieldCell.textLabel.text = @"Password";
@@ -112,7 +112,7 @@
         textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
         textFieldCell.textField.returnKeyType = UIReturnKeyDone;
         textFieldCell.textField.secureTextEntry = YES;        
-        _passwordField = textFieldCell.textField; 
+        _passwordField = [textFieldCell.textField retain]; 
     }
     return cell;
 }
@@ -120,14 +120,15 @@
 /* ================================================================================================================== */
 #pragma mark UITextFieldDelegate    
 
-- (void) textFieldDidBeginEditing:(UITextField*)textField {
-    //    _fieldWithCurrentFocus = textField;
-}
-
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
     [textField resignFirstResponder];
-    [self loginWithUserNameAndPassword:nil];
+    if (textField == _userNameField) {
+        [_passwordField becomeFirstResponder];
+    }
+    else if (textField == _passwordField && _userNameField.text.length > 0 && _passwordField.text.length > 0) {
+        [self loginWithUserNameAndPassword:nil];
+    }
     return YES;
 }
 
@@ -135,8 +136,11 @@
 #pragma mark User Actions
 
 - (void) loginWithUserNameAndPassword:(id)sender {    
-    _loginButton.enabled = NO;
+    _loginButton.enabled = NO; 
+    _userNameField.enabled = NO; 
+    _passwordField.enabled = NO;
     [_spinner startAnimating];
+
     SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userNameField.text 
                                       password:_passwordField.text appSite:@"SALESAPP"];        
     [_loginClient createSessionWith:sessionRequest delegate:self];    
@@ -170,6 +174,8 @@
     }
     else {
         _loginButton.enabled = YES;
+        _userNameField.enabled = YES; 
+        _passwordField.enabled = YES;
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.message 
                                                         delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
                                                         autorelease];
@@ -188,6 +194,8 @@
     [_userNameAndPasswordForm release];
     [_loginButton release];
     [_spinner release];
+    [_userNameField release];
+    [_passwordField release];
     [super dealloc];
 }
 
