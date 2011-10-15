@@ -28,8 +28,6 @@
 		6B3539D11444276C00C8E6C2 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58BB514441E210063E805 /* TestRunnerAppDelegate.m */; };
 		6B3539D21444276C00C8E6C2 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
 		6B3539D31444276C00C8E6C2 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
-		6B3539D41444276C00C8E6C2 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
-		6B3539D51444276C00C8E6C2 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
 		6B3539DA1444276C00C8E6C2 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */; };
 		6B3539DB1444276C00C8E6C2 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 		6B3539DC1444276C00C8E6C2 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
@@ -91,6 +89,26 @@
 		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
+		6B4F9746144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
+		6B4F9747144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
+		6B4F9748144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
+		6B4F9749144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
+		6B4F974A144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
+		6B4F974B144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
+		6B4F974C144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
+		6B4F974D144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
+		6B4F974E144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
+		6B4F974F144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
+		6B4F9750144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
+		6B4F9751144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
+		6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
+		6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
+		6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
+		6B4F9755144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
+		6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
+		6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
+		6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
+		6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
 		6B55F5381445976800A4512A /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B55F5371445976800A4512A /* SessionContextSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7067691446CDC9000A1CAE /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */; };
@@ -133,15 +151,9 @@
 		6BB815A31445357F00A7C284 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815A21445357F00A7C284 /* ActivitySpec.m */; };
 		6BB815B0144544A000A7C284 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */; };
 		6BB815B314455B6800A7C284 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815B11445545600A7C284 /* MenuSpec.m */; };
-		6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
-		6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
 		6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606F1436AF3500E166F6 /* MainWindow.xib */; };
 		6BC160861436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
-		6BC160881436AF3500E166F6 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
-		6BC1608A1436AF3500E166F6 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
-		6BC1608C1436AF3500E166F6 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC160791436AF3500E166F6 /* loginBackground.png */; };
-		6BC1608E1436AF3500E166F6 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1607A1436AF3500E166F6 /* LoginWindow.xib */; };
 		6BC160901436AF3500E166F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1607B1436AF3500E166F6 /* main.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -150,8 +162,6 @@
 		6BF58B2F1443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 		6BF58B361443D67A0063E805 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */; };
 		6BF58B3D144410A50063E805 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
-		6BF58B3E144410A50063E805 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
-		6BF58B3F144410A50063E805 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
 		6BF58B40144410A50063E805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1607B1436AF3500E166F6 /* main.m */; };
 		6BF58B5B144410A50063E805 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6BF58B65144410A50063E805 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
@@ -173,12 +183,8 @@
 		6BF58B7B144410A50063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BF58B7C144410A50063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58B7D144410A50063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
-		6BF58B80144410A50063E805 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */; };
-		6BF58B81144410A50063E805 /* brushed-metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606C1436AF3500E166F6 /* brushed-metal2.png */; };
 		6BF58B82144410A50063E805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
 		6BF58B83144410A50063E805 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606F1436AF3500E166F6 /* MainWindow.xib */; };
-		6BF58B84144410A50063E805 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC160791436AF3500E166F6 /* loginBackground.png */; };
-		6BF58B85144410A50063E805 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1607A1436AF3500E166F6 /* LoginWindow.xib */; };
 		6BF58BBC14441E320063E805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58BB114441E210063E805 /* main.m */; };
 		6BF58BBD14441E320063E805 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58BB514441E210063E805 /* TestRunnerAppDelegate.m */; };
 		6BF58BBF14441E320063E805 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
@@ -187,8 +193,6 @@
 		6BF58BC314441E320063E805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58BAF14441E210063E805 /* InfoPlist.strings */; };
 		6BF58BEA144420150063E805 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
 		6BF58BED1444201A0063E805 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */; };
-		6BF58BF0144420200063E805 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */; };
-		6BF58BF3144420240063E805 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */; };
 		6BF58C02144420630063E805 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */; };
 		6BF58C03144420630063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 		6BF58C04144420630063E805 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
@@ -365,6 +369,13 @@
 		6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		6B4F973F144913A500D85040 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
+		6B4F9740144913A500D85040 /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
+		6B4F9741144913A500D85040 /* LoginWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
+		6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityViewController.h; sourceTree = "<group>"; };
+		6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityViewController.m; sourceTree = "<group>"; };
+		6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
+		6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
 		6B55F5371445976800A4512A /* SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextSpec.m; sourceTree = "<group>"; };
 		6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientIntegration.m; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -413,20 +424,12 @@
 		6BB815A21445357F00A7C284 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
 		6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
 		6BB815B11445545600A7C284 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSpec.m; sourceTree = "<group>"; };
-		6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
-		6BC1606C1436AF3500E166F6 /* brushed-metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brushed-metal2.png"; sourceTree = "<group>"; };
 		6BC1606E1436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BC160701436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6BC160711436AF3500E166F6 /* expanz-iOS-SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "expanz-iOS-SDK-Info.plist"; sourceTree = "<group>"; };
 		6BC160721436AF3500E166F6 /* expanz-iOS-SDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz-iOS-SDK-Prefix.pch"; sourceTree = "<group>"; };
 		6BC160731436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKAppDelegate.h; sourceTree = "<group>"; };
 		6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKAppDelegate.m; sourceTree = "<group>"; };
-		6BC160751436AF3500E166F6 /* expanz_ui_ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityViewController.h; sourceTree = "<group>"; };
-		6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityViewController.m; sourceTree = "<group>"; };
-		6BC160771436AF3500E166F6 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
-		6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
-		6BC160791436AF3500E166F6 /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
-		6BC1607A1436AF3500E166F6 /* LoginWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
 		6BC1607B1436AF3500E166F6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -634,6 +637,28 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		6B4F973D144913A500D85040 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6B4F973E144913A500D85040 /* Assets */,
+				6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */,
+				6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */,
+				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
+				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		6B4F973E144913A500D85040 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6B4F973F144913A500D85040 /* ActivityWindow.xib */,
+				6B4F9740144913A500D85040 /* loginBackground.png */,
+				6B4F9741144913A500D85040 /* LoginWindow.xib */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		6B70676B144702DA000A1CAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,8 +834,6 @@
 		6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				6BC1606B1436AF3500E166F6 /* ActivityWindow.xib */,
-				6BC1606C1436AF3500E166F6 /* brushed-metal2.png */,
 				6BC1606D1436AF3500E166F6 /* InfoPlist.strings */,
 				6BC1606F1436AF3500E166F6 /* MainWindow.xib */,
 				6BC160711436AF3500E166F6 /* expanz-iOS-SDK-Info.plist */,
@@ -820,12 +843,6 @@
 				6B100BE9143E72BD00EABC94 /* expanz_iOS_SDKExceptions.h */,
 				6B100BE5143E6E3200EABC94 /* expanz_iOS_SDKModule.h */,
 				6B100BE6143E6E3200EABC94 /* expanz_iOS_SDKModule.m */,
-				6BC160751436AF3500E166F6 /* expanz_ui_ActivityViewController.h */,
-				6BC160761436AF3500E166F6 /* expanz_ui_ActivityViewController.m */,
-				6BC160771436AF3500E166F6 /* expanz_ui_LoginViewController.h */,
-				6BC160781436AF3500E166F6 /* expanz_ui_LoginViewController.m */,
-				6BC160791436AF3500E166F6 /* loginBackground.png */,
-				6BC1607A1436AF3500E166F6 /* LoginWindow.xib */,
 				6BC1607B1436AF3500E166F6 /* main.m */,
 			);
 			path = "expanz-iOS-SDK";
@@ -840,6 +857,7 @@
 				6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */,
 				6BB77B1F14445AA9007CA74B /* Model */,
 				6B915A7F143BC8BB005EFEFC /* Services */,
+				6B4F973D144913A500D85040 /* UserInterface */,
 				6B932EA41433E22100834A1B /* Utils */,
 				6B932F7D1434513700834A1B /* Tests */,
 				6BF58C20144420810063E805 /* External */,
@@ -1203,6 +1221,9 @@
 				6BFE421E1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
 				6BFE42201447A4D10000FA7D /* Dodgy.xml in Resources */,
 				6BFE42221447A4D10000FA7D /* SessionData.xml in Resources */,
+				6B4F9749144913A500D85040 /* ActivityWindow.xib in Resources */,
+				6B4F974D144913A500D85040 /* loginBackground.png in Resources */,
+				6B4F9751144913A500D85040 /* LoginWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,12 +1231,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC1607C1436AF3500E166F6 /* ActivityWindow.xib in Resources */,
-				6BC1607E1436AF3500E166F6 /* brushed-metal2.png in Resources */,
 				6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */,
 				6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */,
-				6BC1608C1436AF3500E166F6 /* loginBackground.png in Resources */,
-				6BC1608E1436AF3500E166F6 /* LoginWindow.xib in Resources */,
+				6B4F9746144913A500D85040 /* ActivityWindow.xib in Resources */,
+				6B4F974A144913A500D85040 /* loginBackground.png in Resources */,
+				6B4F974E144913A500D85040 /* LoginWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,12 +1243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF58B80144410A50063E805 /* ActivityWindow.xib in Resources */,
-				6BF58B81144410A50063E805 /* brushed-metal2.png in Resources */,
 				6BF58B82144410A50063E805 /* InfoPlist.strings in Resources */,
 				6BF58B83144410A50063E805 /* MainWindow.xib in Resources */,
-				6BF58B84144410A50063E805 /* loginBackground.png in Resources */,
-				6BF58B85144410A50063E805 /* LoginWindow.xib in Resources */,
+				6B4F9747144913A500D85040 /* ActivityWindow.xib in Resources */,
+				6B4F974B144913A500D85040 /* loginBackground.png in Resources */,
+				6B4F974F144913A500D85040 /* LoginWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,6 +1259,9 @@
 				6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
 				6BFE421F1447A4D10000FA7D /* Dodgy.xml in Resources */,
 				6BFE42211447A4D10000FA7D /* SessionData.xml in Resources */,
+				6B4F9748144913A500D85040 /* ActivityWindow.xib in Resources */,
+				6B4F974C144913A500D85040 /* loginBackground.png in Resources */,
+				6B4F9750144913A500D85040 /* LoginWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,8 +1276,6 @@
 				6B3539D11444276C00C8E6C2 /* TestRunnerAppDelegate.m in Sources */,
 				6B3539D21444276C00C8E6C2 /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6B3539D31444276C00C8E6C2 /* expanz_iOS_SDKModule.m in Sources */,
-				6B3539D41444276C00C8E6C2 /* expanz_ui_ActivityViewController.m in Sources */,
-				6B3539D51444276C00C8E6C2 /* expanz_ui_LoginViewController.m in Sources */,
 				6B3539DA1444276C00C8E6C2 /* expanz_service_XmlPostActivityClient.m in Sources */,
 				6B3539DB1444276C00C8E6C2 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6B3539DC1444276C00C8E6C2 /* expanz_service_XmlPostLoginClient.m in Sources */,
@@ -1313,6 +1333,8 @@
 				6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 				6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */,
 				6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
+				6B4F9755144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,8 +1343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC160861436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */,
-				6BC160881436AF3500E166F6 /* expanz_ui_ActivityViewController.m in Sources */,
-				6BC1608A1436AF3500E166F6 /* expanz_ui_LoginViewController.m in Sources */,
 				6BC160901436AF3500E166F6 /* main.m in Sources */,
 				6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */,
 				6B100BE7143E6E3200EABC94 /* expanz_iOS_SDKModule.m in Sources */,
@@ -1378,6 +1398,8 @@
 				6B0E25E314457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EA14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
 				6BFE42251447B5E40000FA7D /* expanz_model_Field.m in Sources */,
+				6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,8 +1408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF58B3D144410A50063E805 /* expanz_iOS_SDKAppDelegate.m in Sources */,
-				6BF58B3E144410A50063E805 /* expanz_ui_ActivityViewController.m in Sources */,
-				6BF58B3F144410A50063E805 /* expanz_ui_LoginViewController.m in Sources */,
 				6BF58B40144410A50063E805 /* main.m in Sources */,
 				6BF58B5B144410A50063E805 /* expanz_service_XmlPostLoginClient.m in Sources */,
 				6BF58B65144410A50063E805 /* expanz_iOS_SDKModule.m in Sources */,
@@ -1443,6 +1463,8 @@
 				6B0E25E414457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EB14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
 				6BFE42261447B5E40000FA7D /* expanz_model_Field.m in Sources */,
+				6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1454,8 +1476,6 @@
 				6BF58BBD14441E320063E805 /* TestRunnerAppDelegate.m in Sources */,
 				6BF58BEA144420150063E805 /* expanz_iOS_SDKAppDelegate.m in Sources */,
 				6BF58BED1444201A0063E805 /* expanz_iOS_SDKModule.m in Sources */,
-				6BF58BF0144420200063E805 /* expanz_ui_ActivityViewController.m in Sources */,
-				6BF58BF3144420240063E805 /* expanz_ui_LoginViewController.m in Sources */,
 				6BF58C02144420630063E805 /* expanz_service_XmlPostActivityClient.m in Sources */,
 				6BF58C03144420630063E805 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BF58C04144420630063E805 /* expanz_service_XmlPostLoginClient.m in Sources */,
@@ -1527,6 +1547,8 @@
 				6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 				6BFE422E1447EF980000FA7D /* FieldSpec.m in Sources */,
 				6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */,
+				6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
