@@ -12,7 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_LoginClient.h"
 
-@interface expanz_ui_LoginViewController : UIViewController<expanz_service_LoginClientDelegate, UITextFieldDelegate> {
+@interface expanz_ui_LoginViewController : UIViewController
+        <expanz_service_LoginClientDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource> {
 
 @private
     UITextField* _userNameField; 

@@ -97,7 +97,7 @@
     }    
 
     TextFieldTableCell* textFieldCell = (TextFieldTableCell*) cell; 
-    //textFieldCell.textField.delegate = self;
+    textFieldCell.textField.delegate = self;
     
     if ([indexPath row] == 0) {
         textFieldCell.textLabel.text = @"User Name";
