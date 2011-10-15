@@ -13,7 +13,7 @@
 #import "Objection.h"
 #import "expanz_ui_LoginViewController.h"
 #import "expanz_ui_ActivityViewController.h"
-#import "expanz_service_SessionDataRequest.h"
+#import "expanz_ui_components_TextFieldTableCell.h"
 
 /* ================================================================================================================== */
 /**
@@ -35,10 +35,9 @@
 @implementation expanz_ui_LoginViewController
 
 @synthesize loginClient = _loginClient; 
-@synthesize userName = _userName;
-@synthesize password = _password;
 @synthesize loginButton = _loginButton;
 @synthesize spinner = _spinner; 
+@synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
 
 
 /* ================================================ Delegate Methods ================================================ */
@@ -56,6 +55,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    _userNameAndPasswordForm.backgroundColor = [UIColor clearColor];
     _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
     [_loginClient retain];
 }
@@ -73,29 +73,75 @@
 }
 
 /* ================================================================================================================== */
-#pragma mark User Actions
+#pragma mark Login and Password Form
 
-- (void) loginWithUserNameAndPassword:(id)sender {
-    
-    if (_userName.text.length > 0 && _password.text.length > 0) {
-        _loginButton.enabled = NO;
-        [_spinner startAnimating];
-        SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userName.text password:_password.text 
-                                                                          appSite:@"SALESAPP"];        
-        [_loginClient createSessionWith:sessionRequest delegate:self];    
-        [sessionRequest release];
-    }    
+- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
+    return 1;
 }
 
+
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2; 
+}
+
+
+-(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+    static NSString* reuseId = @"userNameAndPasswordForm";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    if (cell == nil) {
+        cell = [[[TextFieldTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.detailTextLabel.textColor = [UIColor darkGrayColor];
+        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }    
+
+    TextFieldTableCell* textFieldCell = (TextFieldTableCell*) cell; 
+    //textFieldCell.textField.delegate = self;
+    
+    if ([indexPath row] == 0) {
+        textFieldCell.textLabel.text = @"User Name";
+        textFieldCell.textField.placeholder = @"example@expanz.com";
+        textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
+        textFieldCell.textField.returnKeyType = UIReturnKeyNext; 
+        _userNameField = textFieldCell.textField; 
+    }
+    else {
+        textFieldCell.textLabel.text = @"Password";
+        textFieldCell.textField.placeholder = @"required";
+        textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
+        textFieldCell.textField.returnKeyType = UIReturnKeyDone;
+        textFieldCell.textField.secureTextEntry = YES;        
+        _passwordField = textFieldCell.textField; 
+    }
+    return cell;
+}
+
+/* ================================================================================================================== */
+#pragma mark UITextFieldDelegate    
+
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    _fieldWithCurrentFocus = textField;
+    //    _fieldWithCurrentFocus = textField;
 }
 
 
 -(BOOL) textFieldShouldReturn:(UITextField*) textField {
-    [_fieldWithCurrentFocus resignFirstResponder];
+    [textField resignFirstResponder];
     [self loginWithUserNameAndPassword:nil];
     return YES;
+}
+
+/* ================================================================================================================== */
+#pragma mark User Actions
+
+- (void) loginWithUserNameAndPassword:(id)sender {    
+    _loginButton.enabled = NO;
+    [_spinner startAnimating];
+    SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userNameField.text 
+                                      password:_passwordField.text appSite:@"SALESAPP"];        
+    [_loginClient createSessionWith:sessionRequest delegate:self];    
+    [sessionRequest release];
+    
 }
 
 
@@ -139,8 +185,7 @@
 
 - (void) dealloc {
     [_loginClient release];
-    [_userName release];
-    [_password release];
+    [_userNameAndPasswordForm release];
     [_loginButton release];
     [_spinner release];
     [super dealloc];

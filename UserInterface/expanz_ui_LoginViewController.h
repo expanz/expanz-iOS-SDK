@@ -12,18 +12,17 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_LoginClient.h"
 
-@interface expanz_ui_LoginViewController : UIViewController<expanz_service_LoginClientDelegate> {
+@interface expanz_ui_LoginViewController : UIViewController<expanz_service_LoginClientDelegate, UITextFieldDelegate> {
 
 @private
-    UITextField* _fieldWithCurrentFocus; 
-        
+    UITextField* _userNameField; 
+    UITextField* _passwordField;             
 }
 
 @property (nonatomic, readonly) id<expanz_service_LoginClient> loginClient; 
-@property (nonatomic, readonly) IBOutlet UITextField* userName;
-@property (nonatomic, readonly) IBOutlet UITextField* password;
-@property (nonatomic, readonly) IBOutlet UIBarButtonItem* loginButton; 
-@property (nonatomic, readonly) IBOutlet UIActivityIndicatorView* spinner; 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem* loginButton; 
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner; 
+@property (nonatomic, retain) IBOutlet UITableView* userNameAndPasswordForm; 
 
 - (IBAction) loginWithUserNameAndPassword:(id)sender; 
 

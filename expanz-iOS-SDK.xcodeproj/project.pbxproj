@@ -97,10 +97,10 @@
 		6B4F974B144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
 		6B4F974C144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
 		6B4F974D144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
-		6B4F974E144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
-		6B4F974F144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
-		6B4F9750144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
-		6B4F9751144913A500D85040 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* LoginWindow.xib */; };
+		6B4F974E144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
+		6B4F974F144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
+		6B4F9750144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
+		6B4F9751144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
 		6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
 		6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
 		6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
@@ -109,6 +109,10 @@
 		6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
 		6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
 		6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
+		6B4F975D144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6B55F5381445976800A4512A /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B55F5371445976800A4512A /* SessionContextSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7067691446CDC9000A1CAE /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */; };
@@ -371,11 +375,13 @@
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B4F973F144913A500D85040 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
 		6B4F9740144913A500D85040 /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
-		6B4F9741144913A500D85040 /* LoginWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
+		6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameAndPasswordWindow.xib; sourceTree = "<group>"; };
 		6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityViewController.h; sourceTree = "<group>"; };
 		6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityViewController.m; sourceTree = "<group>"; };
-		6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
+		6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_ui_LoginViewController.h; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/UserInterface/expanz_ui_LoginViewController.h"; sourceTree = "<absolute>"; };
 		6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
+		6B4F975B144914E600D85040 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
+		6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
 		6B55F5371445976800A4512A /* SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextSpec.m; sourceTree = "<group>"; };
 		6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientIntegration.m; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -641,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				6B4F973E144913A500D85040 /* Assets */,
+				6B4F975A1449146B00D85040 /* Components */,
 				6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */,
 				6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
@@ -654,10 +661,20 @@
 			children = (
 				6B4F973F144913A500D85040 /* ActivityWindow.xib */,
 				6B4F9740144913A500D85040 /* loginBackground.png */,
-				6B4F9741144913A500D85040 /* LoginWindow.xib */,
+				6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
+		};
+		6B4F975A1449146B00D85040 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B4F975B144914E600D85040 /* expanz_ui_components_TextFieldTableCell.h */,
+				6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */,
+			);
+			name = Components;
+			path = UserInterface/Components;
+			sourceTree = SOURCE_ROOT;
 		};
 		6B70676B144702DA000A1CAE /* Utils */ = {
 			isa = PBXGroup;
@@ -1223,7 +1240,7 @@
 				6BFE42221447A4D10000FA7D /* SessionData.xml in Resources */,
 				6B4F9749144913A500D85040 /* ActivityWindow.xib in Resources */,
 				6B4F974D144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F9751144913A500D85040 /* LoginWindow.xib in Resources */,
+				6B4F9751144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,7 +1252,7 @@
 				6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */,
 				6B4F9746144913A500D85040 /* ActivityWindow.xib in Resources */,
 				6B4F974A144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F974E144913A500D85040 /* LoginWindow.xib in Resources */,
+				6B4F974E144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1247,7 +1264,7 @@
 				6BF58B83144410A50063E805 /* MainWindow.xib in Resources */,
 				6B4F9747144913A500D85040 /* ActivityWindow.xib in Resources */,
 				6B4F974B144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F974F144913A500D85040 /* LoginWindow.xib in Resources */,
+				6B4F974F144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,7 +1278,7 @@
 				6BFE42211447A4D10000FA7D /* SessionData.xml in Resources */,
 				6B4F9748144913A500D85040 /* ActivityWindow.xib in Resources */,
 				6B4F974C144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F9750144913A500D85040 /* LoginWindow.xib in Resources */,
+				6B4F9750144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,6 +1352,7 @@
 				6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 				6B4F9755144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
+				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,6 +1418,7 @@
 				6BFE42251447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 				6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
 				6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
+				6B4F975D144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1465,6 +1484,7 @@
 				6BFE42261447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 				6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
 				6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
+				6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1549,6 +1569,7 @@
 				6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */,
 				6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
 				6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
+				6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,8 +31,9 @@
     JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
     [JSObjection setGlobalInjector:injector];
     
-    LoginViewController* loginViewController = [[LoginViewController alloc] initWithNibName: @"LoginWindow" 
-                                                                                     bundle: [NSBundle mainBundle]];
+    LoginViewController* loginViewController = [[LoginViewController alloc] 
+                                                initWithNibName: @"UserNameAndPasswordWindow" 
+                                                bundle: [NSBundle mainBundle]];
     
     _navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];    
     [_navigationController setNavigationBarHidden:YES];
