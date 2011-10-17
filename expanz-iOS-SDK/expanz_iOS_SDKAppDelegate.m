@@ -30,7 +30,7 @@
     [JSObjection setGlobalInjector:injector];
     
     LoginViewController* loginViewController = [[LoginViewController alloc] 
-                                                initWithNibName: @"UserNameAndPasswordWindow" 
+                                                initWithNibName: @"Login" 
                                                 bundle: [NSBundle mainBundle]];
     
     _navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];    

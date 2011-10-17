@@ -89,22 +89,22 @@
 		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
-		6B4F9746144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
-		6B4F9747144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
-		6B4F9748144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
-		6B4F9749144913A500D85040 /* ActivityWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityWindow.xib */; };
-		6B4F974A144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
-		6B4F974B144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
-		6B4F974C144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
-		6B4F974D144913A500D85040 /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* loginBackground.png */; };
-		6B4F974E144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
-		6B4F974F144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
-		6B4F9750144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
-		6B4F9751144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */; };
-		6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
-		6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
-		6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
-		6B4F9755144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */; };
+		6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
+		6B4F9747144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
+		6B4F9748144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
+		6B4F9749144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
+		6B4F974A144913A500D85040 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* background.png */; };
+		6B4F974B144913A500D85040 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* background.png */; };
+		6B4F974C144913A500D85040 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* background.png */; };
+		6B4F974D144913A500D85040 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9740144913A500D85040 /* background.png */; };
+		6B4F974E144913A500D85040 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* Login.xib */; };
+		6B4F974F144913A500D85040 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* Login.xib */; };
+		6B4F9750144913A500D85040 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* Login.xib */; };
+		6B4F9751144913A500D85040 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9741144913A500D85040 /* Login.xib */; };
+		6B4F9752144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B4F9753144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B4F9754144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B4F9755144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */; };
 		6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
 		6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
 		6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */; };
@@ -127,6 +127,14 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
+		6B9E2E72144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
+		6B9E2E73144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
+		6B9E2E74144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
+		6B9E2E75144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
+		6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BA75BA0144C037A007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
@@ -383,11 +391,11 @@
 		6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
-		6B4F973F144913A500D85040 /* ActivityWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityWindow.xib; sourceTree = "<group>"; };
-		6B4F9740144913A500D85040 /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
-		6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameAndPasswordWindow.xib; sourceTree = "<group>"; };
-		6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityViewController.h; sourceTree = "<group>"; };
-		6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityViewController.m; sourceTree = "<group>"; };
+		6B4F973F144913A500D85040 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
+		6B4F9740144913A500D85040 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6B4F9741144913A500D85040 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
+		6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
 		6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_ui_LoginViewController.h; path = "/Users/jblues/ExpanzProjects/expanz-iOS-SDK/UserInterface/expanz_ui_LoginViewController.h"; sourceTree = "<absolute>"; };
 		6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
 		6B4F975B144914E600D85040 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
@@ -416,6 +424,9 @@
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6B9E2E71144C3E4500E8297F /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
+		6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6BB679E7143D522400B9EC94 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		6BB679E8143D522400B9EC94 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -662,20 +673,24 @@
 			children = (
 				6B4F973E144913A500D85040 /* Assets */,
 				6B4F975A1449146B00D85040 /* Components */,
-				6B4F9742144913A500D85040 /* expanz_ui_ActivityViewController.h */,
-				6B4F9743144913A500D85040 /* expanz_ui_ActivityViewController.m */,
+				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
+				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
 				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
+				6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */,
+				6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */,
 			);
-			path = UserInterface;
+			name = UserInterface;
+			path = ../UserInterface;
 			sourceTree = "<group>";
 		};
 		6B4F973E144913A500D85040 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6B4F973F144913A500D85040 /* ActivityWindow.xib */,
-				6B4F9740144913A500D85040 /* loginBackground.png */,
-				6B4F9741144913A500D85040 /* UserNameAndPasswordWindow.xib */,
+				6B4F973F144913A500D85040 /* ActivityMenu.xib */,
+				6B4F9740144913A500D85040 /* background.png */,
+				6B4F9741144913A500D85040 /* Login.xib */,
+				6B9E2E71144C3E4500E8297F /* ActivityView.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -748,6 +763,7 @@
 				6B915A88143BC8BB005EFEFC /* SessionData */,
 				6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */,
 				6B0224E9143E86330055B579 /* expanz_service_XmlPostWebService.m */,
+				6B4F973D144913A500D85040 /* UserInterface */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -888,7 +904,6 @@
 				6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */,
 				6BB77B1F14445AA9007CA74B /* Model */,
 				6B915A7F143BC8BB005EFEFC /* Services */,
-				6B4F973D144913A500D85040 /* UserInterface */,
 				6B932EA41433E22100834A1B /* Utils */,
 				6B932F7D1434513700834A1B /* Tests */,
 				6BF58C20144420810063E805 /* External */,
@@ -1254,9 +1269,10 @@
 				6BFE421E1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
 				6BFE42201447A4D10000FA7D /* Dodgy.xml in Resources */,
 				6BFE42221447A4D10000FA7D /* SessionData.xml in Resources */,
-				6B4F9749144913A500D85040 /* ActivityWindow.xib in Resources */,
-				6B4F974D144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F9751144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
+				6B4F9749144913A500D85040 /* ActivityMenu.xib in Resources */,
+				6B4F974D144913A500D85040 /* background.png in Resources */,
+				6B4F9751144913A500D85040 /* Login.xib in Resources */,
+				6B9E2E75144C3E4500E8297F /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,9 +1282,10 @@
 			files = (
 				6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */,
 				6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */,
-				6B4F9746144913A500D85040 /* ActivityWindow.xib in Resources */,
-				6B4F974A144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F974E144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
+				6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */,
+				6B4F974A144913A500D85040 /* background.png in Resources */,
+				6B4F974E144913A500D85040 /* Login.xib in Resources */,
+				6B9E2E72144C3E4500E8297F /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1278,9 +1295,10 @@
 			files = (
 				6BF58B82144410A50063E805 /* InfoPlist.strings in Resources */,
 				6BF58B83144410A50063E805 /* MainWindow.xib in Resources */,
-				6B4F9747144913A500D85040 /* ActivityWindow.xib in Resources */,
-				6B4F974B144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F974F144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
+				6B4F9747144913A500D85040 /* ActivityMenu.xib in Resources */,
+				6B4F974B144913A500D85040 /* background.png in Resources */,
+				6B4F974F144913A500D85040 /* Login.xib in Resources */,
+				6B9E2E73144C3E4500E8297F /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1292,9 +1310,10 @@
 				6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */,
 				6BFE421F1447A4D10000FA7D /* Dodgy.xml in Resources */,
 				6BFE42211447A4D10000FA7D /* SessionData.xml in Resources */,
-				6B4F9748144913A500D85040 /* ActivityWindow.xib in Resources */,
-				6B4F974C144913A500D85040 /* loginBackground.png in Resources */,
-				6B4F9750144913A500D85040 /* UserNameAndPasswordWindow.xib in Resources */,
+				6B4F9748144913A500D85040 /* ActivityMenu.xib in Resources */,
+				6B4F974C144913A500D85040 /* background.png in Resources */,
+				6B4F9750144913A500D85040 /* Login.xib in Resources */,
+				6B9E2E74144C3E4500E8297F /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,9 +1385,10 @@
 				6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */,
 				6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */,
 				6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
-				6B4F9755144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9755144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1432,9 +1452,10 @@
 				6B0E25E314457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EA14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
 				6BFE42251447B5E40000FA7D /* expanz_model_Field.m in Sources */,
-				6B4F9752144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9752144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975D144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1498,9 +1519,10 @@
 				6B0E25E414457BF400D34A22 /* expanz_model_SessionContext.m in Sources */,
 				6B0E25EB14457D6F00D34A22 /* RXMLElement+SessionContext.m in Sources */,
 				6BFE42261447B5E40000FA7D /* expanz_model_Field.m in Sources */,
-				6B4F9753144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9753144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1583,9 +1605,10 @@
 				6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 				6BFE422E1447EF980000FA7D /* FieldSpec.m in Sources */,
 				6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */,
-				6B4F9754144913A500D85040 /* expanz_ui_ActivityViewController.m in Sources */,
+				6B4F9754144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

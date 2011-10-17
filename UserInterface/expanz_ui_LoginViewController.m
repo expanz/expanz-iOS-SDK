@@ -12,7 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Objection.h"
 #import "expanz_ui_LoginViewController.h"
-#import "expanz_ui_ActivityViewController.h"
+#import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
 #import "expanz_iOS_SDKAppDelegate.h"
 
@@ -159,8 +159,8 @@
     
     if (!sessionContext.hasError) {
         [SessionContext setGlobalContext:sessionContext];
-        ActivityViewController* activityViewController = [[ActivityViewController alloc] 
-                                                        initWithNibName: @"ActivityWindow" 
+        ActivityMenuViewController* activityViewController = [[ActivityMenuViewController alloc] 
+                                                        initWithNibName: @"ActivityMenu" 
                                                         bundle: [NSBundle mainBundle]];    
 
         SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 

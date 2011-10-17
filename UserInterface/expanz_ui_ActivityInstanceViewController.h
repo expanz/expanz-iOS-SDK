@@ -10,15 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import "expanz_service_SessionDataClient.h"
+#import "expanz_service_ActivityClient.h"
 
-@interface expanz_ui_ActivityViewController : UIViewController<expanz_service_SessionDataClientDelegate>
-        
-@property (nonatomic, readonly) id<expanz_service_SessionDataClient> sessionDataClient; 
-@property (nonatomic, readonly) Menu* menu;
-@property (nonatomic, retain) IBOutlet UITableView* menuTable;
+@interface expanz_ui_ActivityInstanceViewController : UIViewController
+
+@property (nonatomic, readonly) id<expanz_service_ActivityClient> activityClient; 
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ActivityViewController expanz_ui_ActivityViewController;
+@compatibility_alias ActivityInstanceViewController expanz_ui_ActivityInstanceViewController;

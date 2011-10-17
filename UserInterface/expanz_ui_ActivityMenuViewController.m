@@ -11,10 +11,10 @@
 
 #import "Objection.h"
 #import "expanz_iOS_SDKExceptions.h"
-#import "expanz_ui_ActivityViewController.h"
+#import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_model_SessionContext.h"
 
-@implementation expanz_ui_ActivityViewController
+@implementation expanz_ui_ActivityMenuViewController
 
 //TODO: Replace this with a static
 #define kMenuId @"ExpanzMenu"
