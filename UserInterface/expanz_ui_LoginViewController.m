@@ -14,6 +14,7 @@
 #import "expanz_ui_LoginViewController.h"
 #import "expanz_ui_ActivityViewController.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
+#import "expanz_iOS_SDKAppDelegate.h"
 
 /* ================================================================================================================== */
 /**
@@ -167,10 +168,15 @@
         [activityViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest 
                                                                  delegate:activityViewController];
         [sessionDataRequest release];
-               
-        [self.navigationController.view.layer addAnimation:[self makeViewTransition] forKey:nil];    
-        [self.navigationController pushViewController: activityViewController animated:NO];
+        
+        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+        delegate.navigationController = [[[UINavigationController alloc] 
+                                         initWithRootViewController:activityViewController] autorelease];                
         [activityViewController release];
+
+        [self.view removeFromSuperview]; 
+        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];    
+        [delegate.window addSubview:delegate.navigationController.view];
     }
     else {
         _loginButton.enabled = YES;

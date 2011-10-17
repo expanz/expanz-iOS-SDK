@@ -20,8 +20,6 @@
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
-@synthesize viewController = _viewController;
-
 
 
 /* ================================================ Delegate Methods ================================================ */
@@ -88,10 +86,8 @@
 
 /* ================================================== Utility Methods =============================================== */
 
-- (void)dealloc
-{
+- (void)dealloc {
     [_window release];
-    [_viewController release];
     [super dealloc];
 }
 
