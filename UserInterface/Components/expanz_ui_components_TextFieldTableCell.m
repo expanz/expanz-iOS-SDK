@@ -28,6 +28,11 @@
     return self;
 }
 
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier {
+    return [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+}
+
+
 /* ================================================ Interface Methods =============================================== */
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

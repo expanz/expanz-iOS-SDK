@@ -16,6 +16,8 @@
 
 @property (nonatomic, retain) IBOutlet UITextField* textField;
 
+- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier; 
+
 @end
 /* ================================================================================================================== */
 @compatibility_alias TextFieldTableCell expanz_ui_components_TextFieldTableCell;

@@ -90,7 +90,7 @@
     static NSString* reuseId = @"userNameAndPasswordForm";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[TextFieldTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
+        cell = [[[TextFieldTableCell alloc] initWithReuseIdentifier:reuseId] autorelease];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
