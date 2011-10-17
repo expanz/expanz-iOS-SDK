@@ -127,10 +127,10 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6B9E2E72144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
-		6B9E2E73144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
-		6B9E2E74144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
-		6B9E2E75144C3E4500E8297F /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityView.xib */; };
+		6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
+		6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
+		6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
+		6B9E2E75144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
 		6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
@@ -424,7 +424,7 @@
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		6B9E2E71144C3E4500E8297F /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityInstance.xib; sourceTree = "<group>"; };
 		6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
@@ -690,7 +690,7 @@
 				6B4F973F144913A500D85040 /* ActivityMenu.xib */,
 				6B4F9740144913A500D85040 /* background.png */,
 				6B4F9741144913A500D85040 /* Login.xib */,
-				6B9E2E71144C3E4500E8297F /* ActivityView.xib */,
+				6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1272,7 +1272,7 @@
 				6B4F9749144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974D144913A500D85040 /* background.png in Resources */,
 				6B4F9751144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E75144C3E4500E8297F /* ActivityView.xib in Resources */,
+				6B9E2E75144C3E4500E8297F /* ActivityInstance.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,7 +1285,7 @@
 				6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974A144913A500D85040 /* background.png in Resources */,
 				6B4F974E144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E72144C3E4500E8297F /* ActivityView.xib in Resources */,
+				6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,7 +1298,7 @@
 				6B4F9747144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974B144913A500D85040 /* background.png in Resources */,
 				6B4F974F144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E73144C3E4500E8297F /* ActivityView.xib in Resources */,
+				6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,7 +1313,7 @@
 				6B4F9748144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974C144913A500D85040 /* background.png in Resources */,
 				6B4F9750144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E74144C3E4500E8297F /* ActivityView.xib in Resources */,
+				6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

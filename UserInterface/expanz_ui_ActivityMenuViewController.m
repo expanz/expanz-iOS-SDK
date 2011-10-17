@@ -13,11 +13,12 @@
 #import "expanz_iOS_SDKExceptions.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_model_SessionContext.h"
+#import "expanz_model_ProcessArea.h"
+#import "expanz_model_Activity.h"
+#import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_iOS_SDKAppDelegate.h"
 
 @implementation expanz_ui_ActivityMenuViewController
-
-//TODO: Replace this with a static
-#define kMenuId @"ExpanzMenu"
 
 @synthesize sessionDataClient = _sessionDataClient;
 @synthesize menu = _menu;
@@ -31,7 +32,6 @@
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
     }
-
     return self;
 }
 
@@ -81,9 +81,10 @@
 
 
 -(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kMenuId];
+    static NSString* reuseId = @"ActivityMenu";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuId] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -96,12 +97,19 @@
     return cell;    
 }
 
+- (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
+    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section]; 
+    Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
+    ActivityInstanceViewController* nextView = [[ActivityInstanceViewController alloc] initWithActivity:activity]; 
+    SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    [delegate.navigationController pushViewController:nextView animated:YES]; 
+    [nextView release]; 
+}
 
 /* ================================================================================================================== */
 #pragma mark SessionDataClientDelegate 
 
 - (void) requestDidFinishWithMenu:(Menu*)menu {
-    LogDebug(@"%@", menu);
     _menu = [menu retain];
     [self.menuTable reloadData];
 }
@@ -115,7 +123,10 @@
 
 
 - (void) dealloc {
-    
+    LogDebug(@"!!!!!!!!!!!!!!!!!!!! In dealloc!!!!!!!!!!!!"); 
+    [_sessionDataClient release]; 
+    [_menu release]; 
+    [_menuTable release];
     [super dealloc];
 }
 

@@ -10,6 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_service_CreateActivityRequest.h"
+#import "expanz_model_SessionContext.h"
 #import "Objection.h"
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -18,13 +20,18 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+-(id) initWithActivity:(Activity*)activity {
+    self = [super initWithNibName:@"ActivityInstance" bundle:[NSBundle mainBundle]];
     if (self) {
+        self.title = activity.title;
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
+        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
+                                                        sessionToken:[SessionContext globalContext].sessionToken];        
+        [_activityClient createActivityWith:activityRequest delegate:self];
     }
     return self;
 }
+
 
 
 /* ================================================ Delegate Methods ================================================ */
@@ -37,8 +44,6 @@
 
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
-
-
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -57,5 +62,14 @@
 }
 
 /* ================================================================================================================== */
+#pragma mark CreateActivityClientDelegate
+
+- (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
+    
+}
+
+- (void) requestDidFailWithError:(NSError*)error {
+    
+}
 
 @end

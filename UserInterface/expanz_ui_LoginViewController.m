@@ -157,39 +157,42 @@
     LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
     [_spinner stopAnimating];
     
-    if (!sessionContext.hasError) {
-        [SessionContext setGlobalContext:sessionContext];
-        ActivityMenuViewController* activityViewController = [[ActivityMenuViewController alloc] 
-                                                        initWithNibName: @"ActivityMenu" 
-                                                        bundle: [NSBundle mainBundle]];    
-
-        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
-                                                  initWithSessionToken:sessionContext.sessionToken];
-        [activityViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest 
-                                                                 delegate:activityViewController];
-        [sessionDataRequest release];
-        
-        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-        delegate.navigationController = [[[UINavigationController alloc] 
-                                         initWithRootViewController:activityViewController] autorelease];                
-        [activityViewController release];
-
-        [self.view removeFromSuperview]; 
-        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];    
-        [delegate.window addSubview:delegate.navigationController.view];
-    }
-    else {
+    if (sessionContext.hasError) {
         _loginButton.enabled = YES;
         _userNameField.enabled = YES; 
         _passwordField.enabled = YES;
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.message 
-                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] 
-                                                        autorelease];
+                             delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
         [alert show];
+    }
+    else {                
+        [SessionContext setGlobalContext:sessionContext];
+        ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] 
+                                                initWithNibName: @"ActivityMenu" bundle: [NSBundle mainBundle]];    
+        
+        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
+                                                  initWithSessionToken:sessionContext.sessionToken];
+        [menuViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:menuViewController];
+        [sessionDataRequest release];
+        
+        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+        delegate.navigationController = [[[UINavigationController alloc] 
+                                          initWithRootViewController:menuViewController] autorelease];                
+        [menuViewController release];
+        
+        [self.view removeFromSuperview]; 
+
+        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];    
+        [delegate.window addSubview:delegate.navigationController.view];
+        [self release];
     }    
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
+    //TODO: System-wide error handler. 
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There was a system error."
+                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
     
 }
 

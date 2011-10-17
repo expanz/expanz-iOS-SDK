@@ -1,15 +1,17 @@
+////////////////////////////////////////////////////////////////////////////////
 //
-//  main.m
-//  expanz-iOS-SDK
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
 //
-//  Created by Jasper Blues on 9/27/11.
-//  Copyright 2011 Expanz Inc. All rights reserved.
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
 //
+////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     [pool release];
