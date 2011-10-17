@@ -26,15 +26,14 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id) init {
+    self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
     }
     return self;
 }
-
 
 
 /* ================================================ Delegate Methods ================================================ */

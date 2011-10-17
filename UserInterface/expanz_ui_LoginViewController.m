@@ -167,8 +167,7 @@
     }
     else {                
         [SessionContext setGlobalContext:sessionContext];
-        ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] 
-                                                initWithNibName: @"ActivityMenu" bundle: [NSBundle mainBundle]];    
+        ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
         
         SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
                                                   initWithSessionToken:sessionContext.sessionToken];
@@ -210,6 +209,7 @@
 
 /* ================================================== Private Methods =============================================== */
 
+//TODO: Private API - replace this with library call. 
 - (CATransition*) makeViewTransition {
     static const NSTimeInterval kAnimationDuration = 0.75f;
     CATransition* transition = [CATransition animation];
