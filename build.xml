@@ -57,8 +57,6 @@
         </exec>
 
         <delete dir="${target.dir}"/>
-        <delete dir="${simulator.applications.path}"/>
-        <mkdir dir="${simulator.applications.path}"/>
     </target>
 
     <target name="--simulator.launch">
@@ -121,19 +119,30 @@
     </target>
 
     <target name="--assemble.coverage.data">
+        <mkdir dir="${temp.dir}/coverage-data"/>
         <pathconvert pathsep=", " property="gcno.list" refid="classes">
             <mapper>
                 <chainedmapper>
                     <flattenmapper/>
-                    <globmapper from="*.m" to="*.gcno"/>
+                    <globmapper from="*.m" to="**/*.gcno"/>
                 </chainedmapper>
             </mapper>
         </pathconvert>
+        <echo message="Coverage info files: ${gcno.list}"/>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
-            <fileset dir="${tests.coverage.files}" includes="${gcno.list}"/>
+            <fileset dir="${target.dir}" includes="${gcno.list}"/>
         </copy>
+        <pathconvert pathsep=", " property="gcda.list" refid="classes">
+            <mapper>
+                <chainedmapper>
+                    <flattenmapper/>
+                    <globmapper from="*.m" to="**/*.gcda"/>
+                </chainedmapper>
+            </mapper>
+        </pathconvert>
+        <echo message="Coverage data files: ${gcda.list}"/>
         <copy todir="${temp.dir}/coverage-data" flatten="true">
-            <fileset dir="${simulator.applications.path}" includes="**/*.gcda"/>
+            <fileset dir="${target.dir}" includes="${gcda.list}"/>
         </copy>
     </target>
 

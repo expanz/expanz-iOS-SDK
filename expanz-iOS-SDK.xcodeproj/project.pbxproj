@@ -127,6 +127,9 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
+		6BA75BA0144C037A007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
+		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
+		6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BB77B1A14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
 		6BB77B1B14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
 		6BB77B1C14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */; };
@@ -340,12 +343,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B55F53A1445984D00A4512A /* PBXContainerItemProxy */ = {
+		6BA75B9B144C02D0007148B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BCAFB8E14317B1B00575280 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6BCAFB9614317B1B00575280;
-			remoteInfo = "expanz-iOS-SDK";
+			remoteGlobalIDString = 6BF58B3B144410A50063E805;
+			remoteInfo = Instrumented;
+		};
+		6BA75B9D144C02DE007148B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BCAFB8E14317B1B00575280 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BF58B3B144410A50063E805;
+			remoteInfo = Instrumented;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -406,6 +416,7 @@
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6BB679E7143D522400B9EC94 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		6BB679E8143D522400B9EC94 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		6BB679E9143D522400B9EC94 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
@@ -448,7 +459,7 @@
 		6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
 		6BF58B341443D67A0063E805 /* expanz_service_XmlPostActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostActivityClient.h; sourceTree = "<group>"; };
 		6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostActivityClient.m; sourceTree = "<group>"; };
-		6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF58B89144410A50063E805 /* Instrumented.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instrumented.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58BB014441E210063E805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BF58BB114441E210063E805 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF58BB214441E210063E805 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
@@ -555,6 +566,7 @@
 				6B353A0F1444276C00C8E6C2 /* CFNetwork.framework in Frameworks */,
 				6B353A101444276C00C8E6C2 /* libz.dylib in Frameworks */,
 				6B353A111444276C00C8E6C2 /* libOCMock.a in Frameworks */,
+				6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */,
 				6B353A121444276C00C8E6C2 /* Cedar-iPhone.framework in Frameworks */,
 				6B353A141444276C00C8E6C2 /* libsqlite3.dylib in Frameworks */,
 				6B353A151444276C00C8E6C2 /* libxml2.dylib in Frameworks */,
@@ -586,6 +598,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA75BA0144C037A007148B3 /* libprofile_rt.dylib in Frameworks */,
 				6BF58B74144410A50063E805 /* QuartzCore.framework in Frameworks */,
 				6BF58B75144410A50063E805 /* MobileCoreServices.framework in Frameworks */,
 				6BF58B76144410A50063E805 /* CFNetwork.framework in Frameworks */,
@@ -609,6 +622,7 @@
 				6BF58DC31444245C0063E805 /* CFNetwork.framework in Frameworks */,
 				6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */,
 				6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */,
+				6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */,
 				6BF58DC51444245C0063E805 /* Cedar-iPhone.framework in Frameworks */,
 				6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */,
 				6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */,
@@ -888,7 +902,7 @@
 			isa = PBXGroup;
 			children = (
 				6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */,
-				6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */,
+				6BF58B89144410A50063E805 /* Instrumented.app */,
 				6BF58BC814441E320063E805 /* AllTests.app */,
 				6B353A1F1444276C00C8E6C2 /* Single Test.app */,
 			);
@@ -898,6 +912,7 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */,
 				6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */,
 				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
 				6B932F351433FA4000834A1B /* MobileCoreServices.framework */,
@@ -1142,15 +1157,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				6BA75B9E144C02DE007148B3 /* PBXTargetDependency */,
 			);
 			name = "Single Test";
 			productName = TestRunner;
 			productReference = 6B353A1F1444276C00C8E6C2 /* Single Test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6BCAFB9614317B1B00575280 /* expanz-iOS-SDK */ = {
+		6BCAFB9614317B1B00575280 /* Release */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BCAFBCF14317B1C00575280 /* Build configuration list for PBXNativeTarget "expanz-iOS-SDK" */;
+			buildConfigurationList = 6BCAFBCF14317B1C00575280 /* Build configuration list for PBXNativeTarget "Release" */;
 			buildPhases = (
 				6BCAFB9314317B1B00575280 /* Sources */,
 				6BCAFB9414317B1B00575280 /* Frameworks */,
@@ -1160,14 +1176,14 @@
 			);
 			dependencies = (
 			);
-			name = "expanz-iOS-SDK";
+			name = Release;
 			productName = "expanz-iOS-SDK";
 			productReference = 6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6BF58B3B144410A50063E805 /* RELEASE */ = {
+		6BF58B3B144410A50063E805 /* Instrumented */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BF58B86144410A50063E805 /* Build configuration list for PBXNativeTarget "RELEASE" */;
+			buildConfigurationList = 6BF58B86144410A50063E805 /* Build configuration list for PBXNativeTarget "Instrumented" */;
 			buildPhases = (
 				6BF58B3C144410A50063E805 /* Sources */,
 				6BF58B73144410A50063E805 /* Frameworks */,
@@ -1177,9 +1193,9 @@
 			);
 			dependencies = (
 			);
-			name = RELEASE;
+			name = Instrumented;
 			productName = "expanz-iOS-SDK";
-			productReference = 6BF58B89144410A50063E805 /* expanz-iOS-SDK.app */;
+			productReference = 6BF58B89144410A50063E805 /* Instrumented.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6BF58BBA14441E320063E805 /* AllTests */ = {
@@ -1193,7 +1209,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6B55F53B1445984D00A4512A /* PBXTargetDependency */,
+				6BA75B9C144C02D0007148B3 /* PBXTargetDependency */,
 			);
 			name = AllTests;
 			productName = TestRunner;
@@ -1206,7 +1222,7 @@
 		6BCAFB8E14317B1B00575280 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Expanz Inc";
 			};
 			buildConfigurationList = 6BCAFB9114317B1B00575280 /* Build configuration list for PBXProject "expanz-iOS-SDK" */;
@@ -1221,8 +1237,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BCAFB9614317B1B00575280 /* expanz-iOS-SDK */,
-				6BF58B3B144410A50063E805 /* RELEASE */,
+				6BCAFB9614317B1B00575280 /* Release */,
+				6BF58B3B144410A50063E805 /* Instrumented */,
 				6BF58BBA14441E320063E805 /* AllTests */,
 				6B3539CE1444276C00C8E6C2 /* Single Test */,
 			);
@@ -1576,10 +1592,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6B55F53B1445984D00A4512A /* PBXTargetDependency */ = {
+		6BA75B9C144C02D0007148B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6BCAFB9614317B1B00575280 /* expanz-iOS-SDK */;
-			targetProxy = 6B55F53A1445984D00A4512A /* PBXContainerItemProxy */;
+			target = 6BF58B3B144410A50063E805 /* Instrumented */;
+			targetProxy = 6BA75B9B144C02D0007148B3 /* PBXContainerItemProxy */;
+		};
+		6BA75B9E144C02DE007148B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BF58B3B144410A50063E805 /* Instrumented */;
+			targetProxy = 6BA75B9D144C02DE007148B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1620,10 +1641,10 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
@@ -1633,14 +1654,18 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
-					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "Single Test";
+				PRODUCT_NAME = "${TARGETNAME}";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1655,10 +1680,10 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
@@ -1668,14 +1693,19 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
-					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "Single Test";
+				PRODUCT_NAME = "${TARGETNAME}";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1741,18 +1771,18 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
-				OTHER_LDFLAGS = "-lgcov";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "expanz-iOS-SDK";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1764,18 +1794,18 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
-				OTHER_LDFLAGS = "-lgcov";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "expanz-iOS-SDK";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1791,14 +1821,19 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "expanz-iOS-SDK";
+				PRODUCT_NAME = "${TARGETNAME}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1814,14 +1849,20 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "expanz-iOS-SDK";
+				PRODUCT_NAME = "${TARGETNAME}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1835,10 +1876,10 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
@@ -1848,14 +1889,18 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
-					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = AllTests;
+				PRODUCT_NAME = "${TARGETNAME}";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -1872,11 +1917,11 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "LOGGING_ENABLED=0";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
@@ -1886,14 +1931,19 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-ftest-coverage",
+					"-fprofile-arcs",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
-					"-lgcov",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = AllTests;
+				PRODUCT_NAME = "${TARGETNAME}";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2 ${SRCROOT}/Dependencies/Libraries/OCMock/Headers";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -1922,7 +1972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BCAFBCF14317B1C00575280 /* Build configuration list for PBXNativeTarget "expanz-iOS-SDK" */ = {
+		6BCAFBCF14317B1C00575280 /* Build configuration list for PBXNativeTarget "Release" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BCAFBD014317B1C00575280 /* Debug */,
@@ -1931,7 +1981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BF58B86144410A50063E805 /* Build configuration list for PBXNativeTarget "RELEASE" */ = {
+		6BF58B86144410A50063E805 /* Build configuration list for PBXNativeTarget "Instrumented" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BF58B87144410A50063E805 /* Debug */,
