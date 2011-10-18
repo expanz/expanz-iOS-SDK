@@ -33,7 +33,12 @@
 /* ================================================== Constructors ================================================== */
 
 - (id) init {
-    return [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]]; 
+    self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]]; 
+    if (self) {
+        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
+        [_loginClient retain];
+    }
+    return self;
 }
 
 
@@ -51,10 +56,8 @@
 
 
 - (void) viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];   
     _userNameAndPasswordForm.backgroundColor = [UIColor clearColor];
-    _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
-    [_loginClient retain];
 }
 
 

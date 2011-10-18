@@ -27,6 +27,7 @@
     [self.request appendPostData:[[activityRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [self.request setCompletionBlock:^{       
+        LogDebug(@"Xml: %@", [self.request responseString]);
         RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];                
         RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"]; 
         [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];

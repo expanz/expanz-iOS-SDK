@@ -16,12 +16,23 @@ SPEC_BEGIN(LoginViewControllerSpec)
 
 describe(@"Object creation", ^{
     
+    
+    beforeEach(^{
+        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        [JSObjection setGlobalInjector:injector];
+    });
+    
     it(@"should provide a default initializer that loads the default nib from the main bundle.", ^{
         LoginViewController* loginController = [[[LoginViewController alloc] init] autorelease]; 
         assertThat(loginController, notNilValue());
+        assertThat(loginController.view, notNilValue());
+        assertThat(loginController.loginClient, notNilValue());
+        assertThat(loginController.loginButton, notNilValue());
+        assertThat(loginController.spinner, notNilValue());
+        assertThat(loginController.userNameAndPasswordForm, notNilValue());
     });
-
     
 });
+
 
 SPEC_END
