@@ -86,7 +86,7 @@
 		6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
 		6B353A1A1444276C00C8E6C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58BAF14441E210063E805 /* InfoPlist.strings */; };
 		6B353A2D1444282900C8E6C2 /* ProcessAreaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF9143EFCC000347DE7 /* ProcessAreaSpec.m */; };
-		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextHolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */; };
+		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
 		6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
@@ -409,7 +409,7 @@
 		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
 		6B7FAAE6143EE7D000347DE7 /* expanz_service_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionData.h; sourceTree = "<group>"; };
 		6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionData.m; sourceTree = "<group>"; };
-		6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContextHolderSpec.m"; sourceTree = "<group>"; };
+		6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContextSpec.m"; sourceTree = "<group>"; };
 		6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataRequestSpec.m; sourceTree = "<group>"; };
 		6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRequestSpec.m; sourceTree = "<group>"; };
 		6B7FAAF9143EFCC000347DE7 /* ProcessAreaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessAreaSpec.m; sourceTree = "<group>"; };
@@ -736,7 +736,7 @@
 			children = (
 				6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */,
 				6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */,
-				6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextHolderSpec.m */,
+				6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */,
 				6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */,
 				6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */,
 				6BFE42301447FA580000FA7D /* CreateActivityRequestSpec.m */,
@@ -1579,7 +1579,7 @@
 				6BF58DB0144420820063E805 /* TBXML.m in Sources */,
 				6BF58DB5144420820063E805 /* Reachability.m in Sources */,
 				6B353A2D1444282900C8E6C2 /* ProcessAreaSpec.m in Sources */,
-				6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextHolderSpec.m in Sources */,
+				6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextSpec.m in Sources */,
 				6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */,
 				6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */,
 				6BB77B1C14445A86007CA74B /* RXMLElement+ActivityInstance.m in Sources */,
