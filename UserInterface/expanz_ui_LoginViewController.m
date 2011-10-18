@@ -9,36 +9,32 @@
 //
 ////////////////////////////////////////////////////////////////////////////////y
 
-#import <QuartzCore/QuartzCore.h>
+
 #import "Objection.h"
 #import "expanz_ui_LoginViewController.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
 #import "expanz_iOS_SDKAppDelegate.h"
+#import "CAFilter+Unlock.h"
 
-/* ================================================================================================================== */
-/**
- * Unlock private filter API. TODO: Replace this with Library call. 
- */
-@interface CAFilter : NSObject 
 
-+ (CAFilter*) filterWithName: (NSString*) name;
-
+@interface expanz_ui_LoginViewController (private) 
+- (CATransition*) makeViewTransition; 
 @end
 
-@interface expanz_ui_LoginViewController(private) 
 
-- (CATransition*) makeViewTransition;
-
-@end
-
-/* ================================================================================================================== */
 @implementation expanz_ui_LoginViewController
 
 @synthesize loginClient = _loginClient; 
 @synthesize loginButton = _loginButton;
 @synthesize spinner = _spinner; 
 @synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
+
+/* ================================================== Constructors ================================================== */
+
+- (id) init {
+    return [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]]; 
+}
 
 
 /* ================================================ Delegate Methods ================================================ */

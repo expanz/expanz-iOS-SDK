@@ -35,12 +35,6 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (void)layoutSubviews {
     [super layoutSubviews];
     _textField.frame = CGRectMake(120, 10, 185, 30);

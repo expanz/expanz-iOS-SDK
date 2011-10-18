@@ -87,6 +87,7 @@
 		6B353A2E1444282900C8E6C2 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */; };
 		6B353A2F1444282900C8E6C2 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF4143EFC8700347DE7 /* SessionDataRequestSpec.m */; };
 		6B353A301444282900C8E6C2 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF5143EFC8700347DE7 /* SessionRequestSpec.m */; };
+		6B49B26F144D687A0055444D /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE383A144D63F8007241B4 /* LoginViewControllerSpec.m */; };
 		6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
 		6B4F9747144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
 		6B4F9748144913A500D85040 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F973F144913A500D85040 /* ActivityMenu.xib */; };
@@ -119,7 +120,6 @@
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
 		6B78D77C14466B0E00A9D6DA /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
-		6B815934144D1B4700BAABB1 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -167,6 +167,8 @@
 		6BB815A31445357F00A7C284 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815A21445357F00A7C284 /* ActivitySpec.m */; };
 		6BB815B0144544A000A7C284 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */; };
 		6BB815B314455B6800A7C284 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB815B11445545600A7C284 /* MenuSpec.m */; };
+		6BBE3839144D6126007241B4 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE3838144D6126007241B4 /* TextFieldTableCellSpec.m */; };
+		6BBE383B144D63F8007241B4 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE383A144D63F8007241B4 /* LoginViewControllerSpec.m */; };
 		6BC160801436AF3500E166F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606D1436AF3500E166F6 /* InfoPlist.strings */; };
 		6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606F1436AF3500E166F6 /* MainWindow.xib */; };
 		6BC160861436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
@@ -442,6 +444,9 @@
 		6BB815A21445357F00A7C284 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
 		6BB815AE1445430900A7C284 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
 		6BB815B11445545600A7C284 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSpec.m; sourceTree = "<group>"; };
+		6BBE3838144D6126007241B4 /* TextFieldTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableCellSpec.m; sourceTree = "<group>"; };
+		6BBE383A144D63F8007241B4 /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
+		6BBE383C144D64C6007241B4 /* CAFilter+Unlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAFilter+Unlock.h"; sourceTree = "<group>"; };
 		6BC1606E1436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BC160701436AF3500E166F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6BC160711436AF3500E166F6 /* expanz-iOS-SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "expanz-iOS-SDK-Info.plist"; sourceTree = "<group>"; };
@@ -782,6 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				6B915A97143BD899005EFEFC /* xml_Serializable.h */,
+				6BBE383C144D64C6007241B4 /* CAFilter+Unlock.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -802,6 +808,7 @@
 			children = (
 				6B7FAAF1143EFC8700347DE7 /* Model */,
 				6B7FAAF2143EFC8700347DE7 /* Services */,
+				6BBE3835144D60AA007241B4 /* UserInterface */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -833,6 +840,23 @@
 				6BB77B2914445AA9007CA74B /* expanz_model_UserRole.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6BBE3835144D60AA007241B4 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE3836144D60AA007241B4 /* Components */,
+				6BBE383A144D63F8007241B4 /* LoginViewControllerSpec.m */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		6BBE3836144D60AA007241B4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE3838144D6126007241B4 /* TextFieldTableCellSpec.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */ = {
@@ -1344,7 +1368,7 @@
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B815934144D1B4700BAABB1 /* RXMLElement+SessionContextSpec.m in Sources */,
+				6B49B26F144D687A0055444D /* LoginViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1565,6 +1589,8 @@
 				6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6BBE3839144D6126007241B4 /* TextFieldTableCellSpec.m in Sources */,
+				6BBE383B144D63F8007241B4 /* LoginViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

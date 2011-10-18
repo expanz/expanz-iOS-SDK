@@ -25,6 +25,14 @@
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner; 
 @property (nonatomic, retain) IBOutlet UITableView* userNameAndPasswordForm; 
 
+/**
+ * Initialize using the default nib name, from the main bundle. 
+ */
+- (id) init; 
+
+/** 
+ * Handler that is executed after credentials have been entered.
+ */
 - (IBAction) loginWithUserNameAndPassword:(id)sender; 
 
 
