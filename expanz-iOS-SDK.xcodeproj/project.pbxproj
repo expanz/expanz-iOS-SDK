@@ -675,10 +675,10 @@
 				6B4F975A1449146B00D85040 /* Components */,
 				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
 				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
-				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
-				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
 				6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */,
 				6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */,
+				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
+				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
 			);
 			name = UserInterface;
 			path = ../UserInterface;

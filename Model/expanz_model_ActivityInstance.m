@@ -45,6 +45,11 @@
 
 /* ================================================== Utility Methods =============================================== */
 
+- (NSString*) description {
+    return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", super.title, 
+            _handle, _persistentId]; 
+}
+
 - (void) dealloc {
     [_handle release];
     [_persistentId release];

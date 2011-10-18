@@ -65,6 +65,7 @@
 #pragma mark CreateActivityClientDelegate
 
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
+    LogDebug(@"%@", activityInstance);
     
 }
 
