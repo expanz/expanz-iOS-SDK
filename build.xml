@@ -84,7 +84,6 @@
               failifexecutionfails="true">
             <arg line="launch ${target.dir}/Release-iphonesimulator/${tests.target.name}.app"/>
             <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
-            <arg line="--setenv CEDAR_REPORTER_CLASS=CDRColorizedReporter"/>
         </exec>
 
         <!-- Write report to disk -->

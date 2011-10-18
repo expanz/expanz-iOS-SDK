@@ -77,8 +77,6 @@
 		6B353A0E1444276C00C8E6C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B353A0F1444276C00C8E6C2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B353A101444276C00C8E6C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
-		6B353A111444276C00C8E6C2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
-		6B353A121444276C00C8E6C2 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
 		6B353A141444276C00C8E6C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B353A151444276C00C8E6C2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
@@ -121,12 +119,15 @@
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
 		6B78D77C14466B0E00A9D6DA /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4314445B63007CA74B /* RXMLElement+SessionDataSpec.m */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
+		6B815934144D1B4700BAABB1 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAF3143EFC8700347DE7 /* RXMLElement+SessionContextSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
+		6B9809F5144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
+		6B9809F6144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
 		6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
 		6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
 		6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
@@ -327,10 +328,8 @@
 		6BF58DC21444245C0063E805 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6BF58DC31444245C0063E805 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
-		6BF58DC51444245C0063E805 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
-		6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB679ED143D522400B9EC94 /* libOCMock.a */; };
 		6BFE4215144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */; };
@@ -346,8 +345,6 @@
 		6BFE42291447BB910000FA7D /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
 		6BFE422E1447EF980000FA7D /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE422D1447EF980000FA7D /* FieldSpec.m */; };
 		6BFE42311447FA580000FA7D /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE42301447FA580000FA7D /* CreateActivityRequestSpec.m */; };
-		6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77B4514445ED4007CA74B /* RXMLElement+ActivityInstanceSpec.m */; };
-		6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,22 +416,15 @@
 		6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
 		6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
 		6B915A97143BD899005EFEFC /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
-		6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
 		6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityInstance.xib; sourceTree = "<group>"; };
 		6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
-		6BB679E7143D522400B9EC94 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		6BB679E8143D522400B9EC94 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
-		6BB679E9143D522400B9EC94 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
-		6BB679EA143D522400B9EC94 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
-		6BB679EB143D522400B9EC94 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
-		6BB679EC143D522400B9EC94 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
-		6BB679ED143D522400B9EC94 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		6BB77B1814445A86007CA74B /* RXMLElement+ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ActivityInstance.h"; sourceTree = "<group>"; };
 		6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstance.m"; sourceTree = "<group>"; };
 		6BB77B2014445AA9007CA74B /* expanz_model_Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Activity.h; sourceTree = "<group>"; };
@@ -576,15 +566,14 @@
 				6B353A0E1444276C00C8E6C2 /* SystemConfiguration.framework in Frameworks */,
 				6B353A0F1444276C00C8E6C2 /* CFNetwork.framework in Frameworks */,
 				6B353A101444276C00C8E6C2 /* libz.dylib in Frameworks */,
-				6B353A111444276C00C8E6C2 /* libOCMock.a in Frameworks */,
 				6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */,
-				6B353A121444276C00C8E6C2 /* Cedar-iPhone.framework in Frameworks */,
 				6B353A141444276C00C8E6C2 /* libsqlite3.dylib in Frameworks */,
 				6B353A151444276C00C8E6C2 /* libxml2.dylib in Frameworks */,
 				6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */,
 				6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */,
 				6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */,
 				6B0E25B91445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
+				6B9809F6144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,15 +621,14 @@
 				6BF58DC21444245C0063E805 /* SystemConfiguration.framework in Frameworks */,
 				6BF58DC31444245C0063E805 /* CFNetwork.framework in Frameworks */,
 				6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */,
-				6BF58DC9144424670063E805 /* libOCMock.a in Frameworks */,
 				6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */,
-				6BF58DC51444245C0063E805 /* Cedar-iPhone.framework in Frameworks */,
 				6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */,
 				6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */,
 				6BF58BBF14441E320063E805 /* UIKit.framework in Frameworks */,
 				6BF58BC014441E320063E805 /* Foundation.framework in Frameworks */,
 				6BF58BC114441E320063E805 /* CoreGraphics.framework in Frameworks */,
 				6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
+				6B9809F5144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,40 +809,9 @@
 		6BB679E3143D522400B9EC94 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6BB679E4143D522400B9EC94 /* OCMock */,
 			);
 			name = Libraries;
 			path = Dependencies/Libraries;
-			sourceTree = "<group>";
-		};
-		6BB679E4143D522400B9EC94 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				6BB679E5143D522400B9EC94 /* Headers */,
-				6BB679ED143D522400B9EC94 /* libOCMock.a */,
-			);
-			path = OCMock;
-			sourceTree = "<group>";
-		};
-		6BB679E5143D522400B9EC94 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				6BB679E6143D522400B9EC94 /* OCMock */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		6BB679E6143D522400B9EC94 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				6BB679E7143D522400B9EC94 /* NSNotificationCenter+OCMAdditions.h */,
-				6BB679E8143D522400B9EC94 /* OCMArg.h */,
-				6BB679E9143D522400B9EC94 /* OCMConstraint.h */,
-				6BB679EA143D522400B9EC94 /* OCMock.h */,
-				6BB679EB143D522400B9EC94 /* OCMockObject.h */,
-				6BB679EC143D522400B9EC94 /* OCMockRecorder.h */,
-			);
-			path = OCMock;
 			sourceTree = "<group>";
 		};
 		6BB77B1F14445AA9007CA74B /* Model */ = {
@@ -927,6 +884,7 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */,
 				6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */,
 				6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */,
 				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
@@ -934,7 +892,6 @@
 				6B932F2F1433F97900834A1B /* SystemConfiguration.framework */,
 				6B932F311433F98400834A1B /* CFNetwork.framework */,
 				6B932F271433F7CE00834A1B /* libz.dylib */,
-				6B932EB31433E2E700834A1B /* Cedar-iPhone.framework */,
 				6B6B65251432A07B00B584C1 /* libsqlite3.dylib */,
 				6B912278143299CA0031F7A8 /* libxml2.dylib */,
 				6BCAFB9B14317B1C00575280 /* UIKit.framework */,
@@ -1383,12 +1340,11 @@
 				6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */,
 				6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */,
 				6BFE42281447B5E40000FA7D /* expanz_model_Field.m in Sources */,
-				6BFE4233144800530000FA7D /* RXMLElement+ActivityInstanceSpec.m in Sources */,
-				6BFE4234144803EC0000FA7D /* XmlPostActivityClientIntegration.m in Sources */,
 				6B4F9755144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B815934144D1B4700BAABB1 /* RXMLElement+SessionContextSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1838,7 +1794,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/Dependencies/Frameworks/**\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -1866,7 +1822,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/Dependencies/Frameworks/**\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;

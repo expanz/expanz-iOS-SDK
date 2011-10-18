@@ -1,5 +1,4 @@
 #import "SpecHelper.h"
-#import "OCMock/OCMock.h"
 #import "RXMLElement+SessionContext.h"
 
 
@@ -57,7 +56,7 @@ describe(@"Valid XML with an error", ^{
 
 describe(@"Attempting to instantiate a SessionContext from invalid XML", ^{
 
-    it(@"should throw NSException if the xml is root element is not CreateSessionXResult", ^{
+    it(@"should throw NSException if the xml root element is not CreateSessionXResponse", ^{
         
         @try {
             RXMLElement* element = [RXMLElement elementFromXMLString:@"<xml><foobar/></xml>"]; 

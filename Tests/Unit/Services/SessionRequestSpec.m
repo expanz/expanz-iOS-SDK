@@ -1,5 +1,4 @@
 #import "SpecHelper.h"
-#import "OCMock/OCMock.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_iOS_SDKExceptions.h"
 
