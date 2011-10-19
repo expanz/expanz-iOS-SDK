@@ -33,19 +33,20 @@
 #define NSDATE(__i) ([[[NSDate alloc] initWithString: __i] autorelease])
 
 /* ================================================================================================================== */
+
 #define assertWillHappen(expression) \
 float sleepCount = 0; \
-while ((!(expression)) && sleepCount < 5) { \
+while ((!(expression)) && sleepCount < 9) { \
     [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];\
     usleep(50000); \
     sleepCount = sleepCount + 0.05; \
 }\
 NSString* outcome; \
 if (expression)\
-    outcome = @"expression happened before 5 seconds.";\
+    outcome = @"expression happened before 9 seconds.";\
 else\
-    outcome = @"expression did not happen before 5 seconds.";\
-assertThat(outcome, equalTo(@"expression happened before 5 seconds."))
+    outcome = @"expression did not happen before 9 seconds.";\
+assertThat(outcome, equalTo(@"expression happened before 9 seconds."))
 
 /* ================================================================================================================== */
 

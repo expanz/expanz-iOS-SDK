@@ -10,29 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "ASIFormDataRequest.h"
 #import "xml_Serializable.h"
 
+@interface expanz_service_DeltaRequest : NSObject<xml_Serializable>
 
-/**
- * Abstract for Expanz XML post style web services. 
- */
-@interface expanz_service_XmlPostWebService : NSObject
+@property (nonatomic, readonly) NSString* fieldId; 
+@property (nonatomic, readonly) NSString* fieldValue; 
+@property (nonatomic, readonly) NSString* sessionToken; 
+@property (nonatomic, readonly) NSString* activityHandle; 
 
-
-@property (nonatomic, retain) ASIFormDataRequest* request; 
-
-/**
- * Initializes the request using an ASIFormDataRequest that has been mapped to the service endpoint. 
- */
-- (id) initWithRequest:(ASIFormDataRequest*)request;
-
-/**
- * Utility method for appending post data to the underlying request. 
- */
-- (void) addPayload:(id<xml_Serializable>)xmlable; 
+- (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
+          sessionToken:(NSString*)sessionToken;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias XmlPostWebService expanz_service_XmlPostWebService;
+@compatibility_alias DeltaRequest expanz_service_DeltaRequest;

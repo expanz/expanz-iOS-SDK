@@ -25,8 +25,7 @@ objection_register_singleton(expanz_service_XmlPostLoginClient)
 
 
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
-    
-    [self.request appendPostData:[[sessionRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
+    [self addPayload:sessionRequest];
     
     [self.request setCompletionBlock:^{
         RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];

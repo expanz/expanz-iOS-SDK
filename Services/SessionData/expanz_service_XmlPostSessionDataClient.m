@@ -22,7 +22,7 @@
 - (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
                         delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
     
-    [self.request appendPostData:[[sessionDataRequest toXml] dataUsingEncoding:NSUTF8StringEncoding]];
+    [self addPayload:sessionDataRequest];
     
     [self.request setCompletionBlock:^{       
         RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];

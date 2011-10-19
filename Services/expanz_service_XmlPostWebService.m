@@ -11,6 +11,7 @@
 
 #import "expanz_service_XmlPostWebService.h"
 #import "expanz_iOS_SDKExceptions.h"
+#import "xml_Serializable.h"
 
 @implementation expanz_service_XmlPostWebService
 
@@ -27,10 +28,15 @@
     return self;
 }
 
+- (void) addPayload:(id<xml_Serializable>)xmlable {
+    [xmlable retain]; 
+    [_request appendPostData:[[xmlable toXml] dataUsingEncoding:NSUTF8StringEncoding]];
+    [xmlable release];
+}
+
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    LogDebug(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! In dealloc");
     [_request release];
     [super dealloc];
 }

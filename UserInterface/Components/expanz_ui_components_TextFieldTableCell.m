@@ -40,7 +40,7 @@
     _textField.frame = CGRectMake(120, 10, 185, 30);
     _textField.adjustsFontSizeToFitWidth = YES;
     _textField.textColor = [UIColor blackColor];
-    _textField.backgroundColor = [UIColor whiteColor];
+    _textField.backgroundColor = [UIColor clearColor];
     _textField.autocorrectionType = UITextAutocorrectionTypeNo; 
     _textField.autocapitalizationType = UITextAutocapitalizationTypeNone; 
     _textField.textAlignment = UITextAlignmentLeft;

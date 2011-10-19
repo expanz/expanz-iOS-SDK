@@ -34,10 +34,11 @@ describe(@"Authenticating with the site manager.", ^{
           
     it(@"should return a SessionContext, containing a valid session token, within 5 seconds", ^{
             
-        SessionRequest* sessionRequest = [[[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
-                                                                             appSite:@"SALESAPP"] autorelease]; 
+        SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
+                                                                          appSite:@"SALESAPP"];
             
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate];                 
+        [sessionRequest release];
         assertWillHappen(loginDelegate.sessionContext != nil);              
     });
     
