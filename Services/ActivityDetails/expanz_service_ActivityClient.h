@@ -11,11 +11,12 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_CreateActivityRequest.h"
+#import "expanz_service_DeltaRequest.h"
 #import "expanz_model_ActivityInstance.h"
 
 
 /* ================================================================================================================== */
-@protocol expanz_service_CreateActivityClientDelegate <NSObject>
+@protocol expanz_service_ActivityClientDelegate <NSObject>
 
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance; 
 - (void) requestDidFailWithError:(NSError*)error; 
@@ -27,6 +28,11 @@
 @protocol expanz_service_ActivityClient <NSObject>
 
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest 
-                   delegate:(id<expanz_service_CreateActivityClientDelegate>)delegate;
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate;
+
+- (void) createDeltaWith:(DeltaRequest*)deltaRequest 
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate; 
+
+
 
 @end

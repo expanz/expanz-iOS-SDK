@@ -35,11 +35,11 @@
 
 /* ================================================= Protocol Methods =============================================== */
 
-#define kXmlTemplate @"<ESA sessionHandle\"%@\"><Activity activityHandle=\"%@\"><Delta id=\"%@\" value=\"%@\"/>\
-</Activity></ESA>"
+#define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
+<Delta id=\"%@\" value=\"%@\"/></Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _sessionToken, _activityHandle, _fieldId, _fieldValue];
+    return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fieldId, _fieldValue, _sessionToken];
 }
 
 

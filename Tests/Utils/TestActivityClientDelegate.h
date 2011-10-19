@@ -10,12 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "ASIFormDataRequest.h"
+#import "expanz_service_ActivityClient.h"
 
-@interface IntegrationUtils : NSObject
+@interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
 
-+ (void) loginWithDefaultUserIfRequired; 
-+ (NSString*) aValidActivityHandle;
-+ (ASIFormDataRequest*) requestThatWillFail; 
+@property (nonatomic, retain) ActivityInstance* activityInstance; 
+@property (nonatomic, retain) NSError* error; 
 
 @end

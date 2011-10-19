@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_ActivityClient.h"
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_CreateActivityClientDelegate>
+@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate>
 
 @property (nonatomic, readonly) id<expanz_service_ActivityClient> activityClient; 
 

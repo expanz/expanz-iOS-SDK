@@ -32,8 +32,8 @@ describe(@"object creation", ^{
 });
 
 
-#define kExpectedXml @"<ESA sessionHandle\"tokenXXYY\"><Activity activityHandle=\"234234\"><Delta id=\"op1\" \
-value=\"23\"/></Activity></ESA>"
+#define kExpectedXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"234234\">\
+<Delta id=\"op1\" value=\"23\"/></Activity></ESA></xml><sessionHandle>tokenXXYY</sessionHandle></ExecX>"
 
 describe(@"XML marshalling", ^{
     it(@"should allow serialization to xml", ^{

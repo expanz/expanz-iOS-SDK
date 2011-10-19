@@ -111,10 +111,6 @@
 		6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
-		6B787BEA144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */; };
-		6B787BEB144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */; };
-		6B787BEC144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */; };
-		6B787BED144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */; };
 		6B7FAAE8143EE7D000347DE7 /* expanz_service_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
@@ -339,6 +335,13 @@
 		6BFD398C144E6BDD0086EA9A /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */; };
 		6BFD398E144E6C0B0086EA9A /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */; };
 		6BFD398F144E6F580086EA9A /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */; };
+		6BFD3993144E806D0086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
+		6BFD3994144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
+		6BFD3995144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
+		6BFD3996144E8A190086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
+		6BFD3997144E95A70086EA9A /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
+		6BFD399A144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */; };
+		6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */; };
 		6BFE4215144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */; };
@@ -409,8 +412,6 @@
 		6B70676D14470309000A1CAE /* TestLoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginClientDelegate.h; sourceTree = "<group>"; };
 		6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginClientDelegate.m; sourceTree = "<group>"; };
 		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
-		6B787BE8144E51B200B11A1F /* expanz_service_DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DeltaRequest.h; sourceTree = "<group>"; };
-		6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DeltaRequest.m; sourceTree = "<group>"; };
 		6B7FAAE6143EE7D000347DE7 /* expanz_service_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionData.h; sourceTree = "<group>"; };
 		6B7FAAE7143EE7D000347DE7 /* expanz_service_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionData.m; sourceTree = "<group>"; };
 		6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientIntegration.m; sourceTree = "<group>"; };
@@ -560,6 +561,10 @@
 		6BFD397C144E6BDD0086EA9A /* TextFieldTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableCellSpec.m; sourceTree = "<group>"; };
 		6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
 		6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeltaRequestSpec.m; sourceTree = "<group>"; };
+		6BFD3991144E806D0086EA9A /* expanz_service_DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DeltaRequest.h; sourceTree = "<group>"; };
+		6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DeltaRequest.m; sourceTree = "<group>"; };
+		6BFD3998144EA6450086EA9A /* TestActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestActivityClientDelegate.h; sourceTree = "<group>"; };
+		6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestActivityClientDelegate.m; sourceTree = "<group>"; };
 		6BFE4213144792EC0000FA7D /* IntegrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationUtils.h; sourceTree = "<group>"; };
 		6BFE4214144792EC0000FA7D /* IntegrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationUtils.m; sourceTree = "<group>"; };
 		6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityDetails.xml; sourceTree = "<group>"; };
@@ -708,31 +713,15 @@
 		6B70676B144702DA000A1CAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6B70676C144702DA000A1CAE /* SpecHelper.h */,
-				6B70676D14470309000A1CAE /* TestLoginClientDelegate.h */,
-				6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */,
 				6BFE4213144792EC0000FA7D /* IntegrationUtils.h */,
 				6BFE4214144792EC0000FA7D /* IntegrationUtils.m */,
+				6B70676C144702DA000A1CAE /* SpecHelper.h */,
+				6BFD3998144EA6450086EA9A /* TestActivityClientDelegate.h */,
+				6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */,
+				6B70676D14470309000A1CAE /* TestLoginClientDelegate.h */,
+				6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		6B787BE5144E516200B11A1F /* Delta */ = {
-			isa = PBXGroup;
-			children = (
-				6B787BE6144E516200B11A1F /* PayLoad */,
-			);
-			name = Delta;
-			path = Services/Delta;
-			sourceTree = SOURCE_ROOT;
-		};
-		6B787BE6144E516200B11A1F /* PayLoad */ = {
-			isa = PBXGroup;
-			children = (
-				6B787BE8144E51B200B11A1F /* expanz_service_DeltaRequest.h */,
-				6B787BE9144E51B200B11A1F /* expanz_service_DeltaRequest.m */,
-			);
-			path = PayLoad;
 			sourceTree = "<group>";
 		};
 		6B86AD8B1435B65400AA7FD5 /* Integration */ = {
@@ -749,7 +738,6 @@
 			isa = PBXGroup;
 			children = (
 				6BF58B1A1443B7590063E805 /* ActivityDetails */,
-				6B787BE5144E516200B11A1F /* Delta */,
 				6B915A80143BC8BB005EFEFC /* Login */,
 				6B915A88143BC8BB005EFEFC /* SessionData */,
 				6B0224E8143E86330055B579 /* expanz_service_XmlPostWebService.h */,
@@ -924,6 +912,8 @@
 			children = (
 				6BF58B2D1443CD060063E805 /* expanz_service_CreateActivityRequest.h */,
 				6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */,
+				6BFD3991144E806D0086EA9A /* expanz_service_DeltaRequest.h */,
+				6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */,
 				6BB77B1814445A86007CA74B /* RXMLElement+ActivityInstance.h */,
 				6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */,
 			);
@@ -1128,12 +1118,12 @@
 			isa = PBXGroup;
 			children = (
 				6BFD3974144E6BDD0086EA9A /* CreateActivityRequestSpec.m */,
+				6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */,
 				6BFD3975144E6BDD0086EA9A /* RXMLElement+ActivityInstanceSpec.m */,
 				6BFD3976144E6BDD0086EA9A /* RXMLElement+SessionContextSpec.m */,
 				6BFD3977144E6BDD0086EA9A /* RXMLElement+SessionDataSpec.m */,
 				6BFD3978144E6BDD0086EA9A /* SessionDataRequestSpec.m */,
 				6BFD3979144E6BDD0086EA9A /* SessionRequestSpec.m */,
-				6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1395,8 +1385,10 @@
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B787BED144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD398F144E6F580086EA9A /* DeltaRequestSpec.m in Sources */,
+				6BFD3996144E8A190086EA9A /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD3997144E95A70086EA9A /* XmlPostActivityClientIntegration.m in Sources */,
+				6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,7 +1456,7 @@
 				6B4F9756144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975D144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B787BEA144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD3994144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1532,7 +1524,7 @@
 				6B4F9757144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B787BEB144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD3995144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,7 +1598,6 @@
 				6B4F9758144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B787BEC144E51B200B11A1F /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD397E144E6BDD0086EA9A /* ActivityInstanceSpec.m in Sources */,
 				6BFD397F144E6BDD0086EA9A /* ActivitySpec.m in Sources */,
 				6BFD3980144E6BDD0086EA9A /* FieldSpec.m in Sources */,
@@ -1623,6 +1614,8 @@
 				6BFD398B144E6BDD0086EA9A /* TextFieldTableCellSpec.m in Sources */,
 				6BFD398C144E6BDD0086EA9A /* LoginViewControllerSpec.m in Sources */,
 				6BFD398E144E6C0B0086EA9A /* DeltaRequestSpec.m in Sources */,
+				6BFD3993144E806D0086EA9A /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD399A144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
