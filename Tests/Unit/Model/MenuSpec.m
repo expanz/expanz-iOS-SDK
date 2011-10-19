@@ -11,6 +11,8 @@
 
 #import "SpecHelper.h"
 #import "expanz_model_Menu.h"
+#import "expanz_model_ProcessArea.h"
+#import "expanz_model_UserRole.h"
 
 
 SPEC_BEGIN(MenuSpec)

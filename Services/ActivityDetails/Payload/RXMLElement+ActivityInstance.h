@@ -10,12 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement.h"
-#import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+@class expanz_model_ActivityInstance;
+@class expanz_model_Field; 
+
+@class expanz_model_Field;
 
 @interface RXMLElement (ActivityInstance)
 
-- (ActivityInstance*) asActivityInstance;
-- (Field*) asField; 
+- (expanz_model_ActivityInstance*) asActivityInstance;
+- (expanz_model_Field*) asField; 
 
 @end

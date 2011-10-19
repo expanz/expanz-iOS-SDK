@@ -11,6 +11,8 @@
 
 #import "SpecHelper.h"
 #import "RXMLElement+SessionData.h"
+#import "expanz_model_ProcessArea.h"
+#import "expanz_model_Activity.h"
 
 
 SPEC_BEGIN(ProcessAreaSpec)

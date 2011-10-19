@@ -10,8 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+ActivityInstance.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
+#import "expanz_iOS_SDKExceptions.h"
+
 
 @implementation RXMLElement (ActivityInstance)
 

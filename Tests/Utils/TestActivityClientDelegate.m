@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "TestActivityClientDelegate.h"
+#import "expanz_model_ActivityInstance.h"
 
 @implementation TestActivityClientDelegate
 

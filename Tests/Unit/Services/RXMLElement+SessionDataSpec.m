@@ -12,6 +12,7 @@
 
 #import "SpecHelper.h" 
 #import "RXMLElement+SessionData.h"
+#import "expanz_model_Menu.h"
 
 SPEC_BEGIN(RXMLELement_SessionDataSpec)
 

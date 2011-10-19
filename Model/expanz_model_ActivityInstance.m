@@ -11,6 +11,7 @@
 
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_iOS_SDKExceptions.h"
+#import "expanz_model_Field.h"
 
 
 @implementation expanz_model_ActivityInstance

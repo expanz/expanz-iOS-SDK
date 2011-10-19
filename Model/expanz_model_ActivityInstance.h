@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_Activity.h"
-#import "expanz_model_Field.h"
+@class expanz_model_Field;
 
 @interface expanz_model_ActivityInstance : expanz_model_Activity {
     
@@ -24,7 +24,7 @@
 @property (nonatomic, readonly) NSArray* fields; 
 
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId;
-- (void) addField:(Field*)field; 
+- (void) addField:(expanz_model_Field*)field; 
 
 
 @end

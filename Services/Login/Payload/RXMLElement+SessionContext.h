@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement.h"
-#import "expanz_model_SessionContext.h"
+@class expanz_model_SessionContext;
 
 @interface RXMLElement (SessionContext)
 
-- (SessionContext*) asSessionContext; 
+- (expanz_model_SessionContext*) asSessionContext; 
 
 @end

@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "TestLoginClientDelegate.h"
+#import "expanz_model_SessionContext.h"
 
 @implementation TestLoginClientDelegate
 

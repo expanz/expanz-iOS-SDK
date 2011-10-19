@@ -11,10 +11,11 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_LoginClient.h"
+@class expanz_model_SessionContext;
 
 @interface TestLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
 
-@property (nonatomic, retain) SessionContext* sessionContext;
+@property (nonatomic, retain) expanz_model_SessionContext* sessionContext;
 @property (nonatomic, retain) NSError* error; 
 
 @end

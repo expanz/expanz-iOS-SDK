@@ -10,8 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_ProcessArea.h"
-#import "expanz_model_UserRole.h"
+@class expanz_model_ProcessArea;
+@class expanz_model_UserRole;
 
 @interface expanz_model_Menu : NSObject {
 
@@ -32,13 +32,13 @@
 /**
  * Adds a ProcessArea to this menu. 
  */
-- (void) addProcessArea:(ProcessArea*)processArea;
+- (void) addProcessArea:(expanz_model_ProcessArea*)processArea;
 
 
 /**
  * Adds a ProcessArea to this menu. 
  */
-- (void) addUserRole:(UserRole*)userRole;
+- (void) addUserRole:(expanz_model_UserRole*)userRole;
 
 
 @end

@@ -9,10 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "Objection.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_model_SessionContext.h"
-#import "Objection.h"
+#import "expanz_model_Activity.h"
+#import "expanz_model_ActivityInstance.h"
+
 
 @implementation expanz_ui_ActivityInstanceViewController
 

@@ -12,9 +12,11 @@
 #import <Foundation/Foundation.h>
 #import "expanz_service_ActivityClient.h"
 
+@class expanz_model_ActivityInstance;
+
 @interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
 
-@property (nonatomic, retain) ActivityInstance* activityInstance; 
+@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
 @property (nonatomic, retain) NSError* error; 
 
 @end

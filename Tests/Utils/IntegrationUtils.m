@@ -20,6 +20,7 @@
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_ActivityClient.h"
 #import "TestActivityClientDelegate.h"
+#import "expanz_model_ActivityInstance.h"
 
 
 @implementation IntegrationUtils

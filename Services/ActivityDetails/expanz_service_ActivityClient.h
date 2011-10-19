@@ -10,15 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_CreateActivityRequest.h"
-#import "expanz_service_DeltaRequest.h"
-#import "expanz_model_ActivityInstance.h"
+@class expanz_model_ActivityInstance;
+@class expanz_service_CreateActivityRequest;
+@class expanz_service_DeltaRequest;
 
 
 /* ================================================================================================================== */
 @protocol expanz_service_ActivityClientDelegate <NSObject>
 
-- (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance; 
+- (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance; 
 - (void) requestDidFailWithError:(NSError*)error; 
 
 @end
@@ -27,10 +27,10 @@
 
 @protocol expanz_service_ActivityClient <NSObject>
 
-- (void) createActivityWith:(CreateActivityRequest*)activityRequest 
+- (void) createActivityWith:(expanz_service_CreateActivityRequest*)activityRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate;
 
-- (void) createDeltaWith:(DeltaRequest*)deltaRequest 
+- (void) createDeltaWith:(expanz_service_DeltaRequest*)deltaRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate; 
 
 

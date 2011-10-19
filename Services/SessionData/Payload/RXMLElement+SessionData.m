@@ -11,6 +11,7 @@
 
 #import "RXMLElement+SessionData.h"
 #import "expanz_iOS_SDKExceptions.h"
+#import "expanz_model_Activity.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"

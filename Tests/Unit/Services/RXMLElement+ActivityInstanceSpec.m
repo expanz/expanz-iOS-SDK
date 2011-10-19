@@ -11,6 +11,8 @@
 
 #import "SpecHelper.h"
 #import "RXMLElement+ActivityInstance.h"
+#import "expanz_model_ActivityInstance.h"
+
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 

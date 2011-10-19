@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_Activity.h"
+@class expanz_model_Activity;
 
 @interface expanz_model_ProcessArea : NSObject {
 
@@ -23,7 +23,7 @@
 @property (nonatomic, readonly) NSArray* activities; 
 
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title; 
-- (void) addActivity:(Activity*)activity; 
+- (void) addActivity:(expanz_model_Activity*)activity; 
 
 
 @end

@@ -11,6 +11,7 @@
 
 #import "SpecHelper.h"
 #import "expanz_model_ActivityInstance.h"
+#import "expanz_model_Field.h"
 
 
 SPEC_BEGIN(ActivityInstanceSpec)

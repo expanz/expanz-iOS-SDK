@@ -10,6 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_Menu.h"
+#import "expanz_model_ProcessArea.h"
+#import "expanz_model_UserRole.h"
+
 
 @implementation expanz_model_Menu
 

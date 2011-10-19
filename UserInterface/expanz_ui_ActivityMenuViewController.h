@@ -11,11 +11,12 @@
 
 #import <UIKit/UIKit.h>
 #import "expanz_service_SessionDataClient.h"
+@class expanz_model_Menu;
 
 @interface expanz_ui_ActivityMenuViewController : UIViewController<expanz_service_SessionDataClientDelegate>
         
 @property (nonatomic, readonly) id<expanz_service_SessionDataClient> sessionDataClient; 
-@property (nonatomic, readonly) Menu* menu;
+@property (nonatomic, readonly) expanz_model_Menu* menu;
 @property (nonatomic, retain) IBOutlet UITableView* menuTable;
 
 @end
