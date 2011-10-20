@@ -25,6 +25,7 @@
 
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId;
 - (void) addField:(expanz_model_Field*)field; 
+- (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
 
 
 @end

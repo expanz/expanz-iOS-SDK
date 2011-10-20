@@ -68,7 +68,7 @@ describe(@"sending deltas", ^{
         LogDebug(@"Activity handle: %@", activityHandle);
         DeltaRequest* deltaRequest = [[DeltaRequest alloc] initWithFieldId:@"Op1" fieldValue:@"623" 
             activityHandle:activityHandle sessionToken:[SessionContext globalContext].sessionToken];         
-        [activityClient createDeltaWith:deltaRequest delegate:delegate]; 
+        [activityClient sendDeltaWith:deltaRequest delegate:delegate]; 
         
         assertWillHappen(delegate.activityInstance != nil);         
         LogDebug(@"%@", delegate.activityInstance);                    

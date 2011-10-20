@@ -9,18 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
-@class expanz_model_ActivityInstance;
-@class expanz_model_Field; 
+#import "expanz_model_Field.h"
+@class expanz_service_DeltaRequest; 
 
-@class expanz_model_Field;
 
-/**
- * Adds methods to RXMLElement for parsing results of XmlPostActivityClient invocations. 
- */
-@interface RXMLElement (ActivityInstance)
+@interface expanz_model_Field (DeltaRequest)
 
-- (expanz_model_ActivityInstance*) asActivityInstance;
-- (expanz_model_Field*) asField; 
+- (expanz_service_DeltaRequest*) asDeltaRequest;
 
 @end

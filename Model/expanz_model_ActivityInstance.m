@@ -40,7 +40,17 @@
 }
 
 - (void) addField:(Field*)field {
-    [_fields addObject:field]; 
+    [field setParentActivity:self];
+    [_fields addObject:field];  
+}
+
+- (Field*) fieldWithId:(NSString*)fieldId {
+    for (Field* field in _fields) {
+        if ([field.fieldId isEqualToString:fieldId]) {
+            return field;
+        }
+    }
+    return nil;
 }
 
 

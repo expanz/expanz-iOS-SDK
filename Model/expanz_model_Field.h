@@ -10,13 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+@class expanz_model_ActivityInstance;
 
 @interface expanz_model_Field : NSObject
 
 @property (nonatomic, readonly) NSString* fieldId; 
+@property (nonatomic, readonly) BOOL dirty; 
+
 @property (nonatomic, readonly, getter = isNullable) BOOL nullable; 
 @property (nonatomic, readonly) NSString* defaultValue; 
 @property (nonatomic, readonly) NSString* datatype; 
+
+@property (nonatomic, readwrite, assign) expanz_model_ActivityInstance* parentActivity;
+@property (nonatomic, readwrite, retain) NSString* value;
 
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
               dataType:(NSString*)datatype; 

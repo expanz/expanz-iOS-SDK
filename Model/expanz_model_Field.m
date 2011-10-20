@@ -13,10 +13,16 @@
 
 @implementation expanz_model_Field
 
+//Readonly properties.  
 @synthesize fieldId = _fieldId;
 @synthesize nullable = _nullable; 
 @synthesize defaultValue = _defaultValue;
 @synthesize datatype = _datatype;
+
+//Read-write properties. 
+@synthesize parentActivity = _parentActivity;
+@synthesize value = _value;
+
 
 /* ================================================== Constructors ================================================== */
 

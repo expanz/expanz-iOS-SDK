@@ -46,8 +46,10 @@
     NSString* datatype = [self attribute:@"datatype"];
     
     
-    return [[[Field alloc] initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype] 
-            autorelease];    
+    Field* field = [[[Field alloc] initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue 
+                                          dataType:datatype] autorelease];    
+    [field setValue:[self attribute:@"value"]];
+     return field;
 }
 
 @end

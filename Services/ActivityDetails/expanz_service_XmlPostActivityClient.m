@@ -15,11 +15,12 @@
 #import "expanz_service_CreateActivityRequest.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_service_DeltaRequest.h"
+#import "expanz_service_MethodInvocationRequest.h"
 
 
 @interface expanz_service_XmlPostActivityClient (private) 
 
--(void) createRequestHandlersWith:(id<expanz_service_ActivityClientDelegate>)delegate;
+-(void) registerResponseParserFor:(id<expanz_service_ActivityClientDelegate>)delegate;
 
 @end
 
@@ -29,25 +30,34 @@
 /* ================================================ Interface Methods =============================================== */
 
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest 
-                   delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
     
     [self addPayload:activityRequest];
-    [self createRequestHandlersWith:delegate];
+    [self registerResponseParserFor:delegate];
     [self.request startAsynchronous];
 }
 
-- (void) createDeltaWith:(DeltaRequest*)deltaRequest 
+- (void) sendDeltaWith:(DeltaRequest*)deltaRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
     
     [self addPayload:deltaRequest]; 
-    [self createRequestHandlersWith:delegate];    
+    [self registerResponseParserFor:delegate];    
     [self.request startAsynchronous];
     
 }
 
+- (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+    
+    [self addPayload:methodRequest];
+    [self registerResponseParserFor:delegate];
+    [self.request startAsynchronous];
+}
+
+
 /* ================================================== Private Methods =============================================== */
 
-- (void) createRequestHandlersWith:(id<expanz_service_ActivityClientDelegate>)delegate {
+- (void) registerResponseParserFor:(id<expanz_service_ActivityClientDelegate>)delegate {
     [self.request setCompletionBlock:^{       
         LogDebug(@"Response: %@, ", [self.request responseString]);
         RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];                

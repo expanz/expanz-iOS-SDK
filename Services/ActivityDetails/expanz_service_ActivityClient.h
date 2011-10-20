@@ -13,6 +13,7 @@
 @class expanz_model_ActivityInstance;
 @class expanz_service_CreateActivityRequest;
 @class expanz_service_DeltaRequest;
+@class expanz_service_MethodInvocationRequest;
 
 
 /* ================================================================================================================== */
@@ -30,8 +31,11 @@
 - (void) createActivityWith:(expanz_service_CreateActivityRequest*)activityRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate;
 
-- (void) createDeltaWith:(expanz_service_DeltaRequest*)deltaRequest 
-                delegate:(id<expanz_service_ActivityClientDelegate>)delegate; 
+- (void) sendDeltaWith:(expanz_service_DeltaRequest*)deltaRequest 
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate;
+
+- (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
+                delegate:(id<expanz_service_ActivityClientDelegate>)delegate;
 
 
 

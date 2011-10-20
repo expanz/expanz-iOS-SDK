@@ -16,20 +16,24 @@
 
 SPEC_BEGIN(ActivityInstanceSpec)
 
+__block ActivityInstance* instance; 
+
+beforeEach(^{
+    instance = [[ActivityInstance alloc] initWithTitle:@"Calculator" handle:@"12345" persistentId:@"123"];
+});
+
 describe(@"Object creation.", ^{
-    
-    __block ActivityInstance* instance; 
-    
-    beforeEach(^{
-        instance = [[ActivityInstance alloc] initWithTitle:@"Calculator" handle:@"12345" persistentId:@"123"];
-    });
     
     it(@"should allow initialization with title, handle and persistent id", ^{
         assertThat(instance.title, equalTo(@"Calculator"));
         assertThat(instance.handle, equalTo(@"12345"));
         assertThat(instance.persistentId, equalTo(@"123"));     
     });
-    
+        
+});
+
+describe(@"Relationship to fields", ^{
+
     it(@"should store a collection of field objects, initially empty.", ^{
         assertThat([instance fields], empty());
     });
@@ -41,13 +45,25 @@ describe(@"Object creation.", ^{
         assertThatInt([instance.fields count], equalToInt(1)); 
     });
     
-    afterEach(^{
-        [instance release]; 
+    it(@"should allow a stored field to be retrieved by fieldId", ^{
+        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+        [instance addField:field]; 
+        [field release];
+        
+        Field* retrieved = [instance fieldWithId:@"op1"];
+        assertThat(retrieved, equalTo(field));
+        
+        Field* another = [instance fieldWithId:@"notInMyCollection"];
+        assertThat(another, nilValue());
+
     });
-    
+
 });
 
 
+afterEach(^{
+    [instance release]; 
+});
 
 
 SPEC_END

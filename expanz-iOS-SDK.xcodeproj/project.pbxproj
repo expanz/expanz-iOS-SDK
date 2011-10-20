@@ -318,6 +318,12 @@
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
+		6BF99A9E144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */; };
+		6BF99A9F144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */; };
+		6BF99AA0144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */; };
+		6BF99AA1144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */; };
+		6BF99AA5144FEB57006F1A3B /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99AA2144FEB57006F1A3B /* MethodInvocationRequestSpec.m */; };
+		6BF99AA6144FEB57006F1A3B /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF99AA2144FEB57006F1A3B /* MethodInvocationRequestSpec.m */; };
 		6BFD397E144E6BDD0086EA9A /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396C144E6BDD0086EA9A /* ActivityInstanceSpec.m */; };
 		6BFD397F144E6BDD0086EA9A /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396D144E6BDD0086EA9A /* ActivitySpec.m */; };
 		6BFD3980144E6BDD0086EA9A /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396E144E6BDD0086EA9A /* FieldSpec.m */; };
@@ -334,14 +340,16 @@
 		6BFD398B144E6BDD0086EA9A /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD397C144E6BDD0086EA9A /* TextFieldTableCellSpec.m */; };
 		6BFD398C144E6BDD0086EA9A /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */; };
 		6BFD398E144E6C0B0086EA9A /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */; };
-		6BFD398F144E6F580086EA9A /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD398D144E6C0B0086EA9A /* DeltaRequestSpec.m */; };
 		6BFD3993144E806D0086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
 		6BFD3994144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
 		6BFD3995144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
 		6BFD3996144E8A190086EA9A /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */; };
-		6BFD3997144E95A70086EA9A /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353A31144440BF00C8E6C2 /* XmlPostActivityClientIntegration.m */; };
 		6BFD399A144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */; };
 		6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */; };
+		6BFD39A4144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */; };
+		6BFD39A5144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */; };
+		6BFD39A6144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */; };
+		6BFD39A7144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */; };
 		6BFE4215144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE4216144792EC0000FA7D /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE4214144792EC0000FA7D /* IntegrationUtils.m */; };
 		6BFE421D1447A4D10000FA7D /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */; };
@@ -545,6 +553,9 @@
 		6BF58C92144420810063E805 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6BF58C94144420810063E805 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BF58C95144420810063E805 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6BF99A9C144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_MethodInvocationRequest.h; sourceTree = "<group>"; };
+		6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_MethodInvocationRequest.m; sourceTree = "<group>"; };
+		6BF99AA2144FEB57006F1A3B /* MethodInvocationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodInvocationRequestSpec.m; sourceTree = "<group>"; };
 		6BFD396C144E6BDD0086EA9A /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
 		6BFD396D144E6BDD0086EA9A /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
 		6BFD396E144E6BDD0086EA9A /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldSpec.m; sourceTree = "<group>"; };
@@ -565,6 +576,8 @@
 		6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DeltaRequest.m; sourceTree = "<group>"; };
 		6BFD3998144EA6450086EA9A /* TestActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestActivityClientDelegate.h; sourceTree = "<group>"; };
 		6BFD3999144EA6450086EA9A /* TestActivityClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestActivityClientDelegate.m; sourceTree = "<group>"; };
+		6BFD39A2144EF3170086EA9A /* expanz_model_Field+DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz_model_Field+DeltaRequest.h"; sourceTree = "<group>"; };
+		6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "expanz_model_Field+DeltaRequest.m"; sourceTree = "<group>"; };
 		6BFE4213144792EC0000FA7D /* IntegrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationUtils.h; sourceTree = "<group>"; };
 		6BFE4214144792EC0000FA7D /* IntegrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationUtils.m; sourceTree = "<group>"; };
 		6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityDetails.xml; sourceTree = "<group>"; };
@@ -679,10 +692,10 @@
 			children = (
 				6B4F973E144913A500D85040 /* Assets */,
 				6B4F975A1449146B00D85040 /* Components */,
-				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
-				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
 				6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */,
 				6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */,
+				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
+				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
 				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
 			);
@@ -916,6 +929,10 @@
 				6BFD3992144E806D0086EA9A /* expanz_service_DeltaRequest.m */,
 				6BB77B1814445A86007CA74B /* RXMLElement+ActivityInstance.h */,
 				6BB77B1914445A86007CA74B /* RXMLElement+ActivityInstance.m */,
+				6BFD39A2144EF3170086EA9A /* expanz_model_Field+DeltaRequest.h */,
+				6BFD39A3144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m */,
+				6BF99A9C144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.h */,
+				6BF99A9D144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m */,
 			);
 			path = Payload;
 			sourceTree = "<group>";
@@ -1124,6 +1141,7 @@
 				6BFD3977144E6BDD0086EA9A /* RXMLElement+SessionDataSpec.m */,
 				6BFD3978144E6BDD0086EA9A /* SessionDataRequestSpec.m */,
 				6BFD3979144E6BDD0086EA9A /* SessionRequestSpec.m */,
+				6BF99AA2144FEB57006F1A3B /* MethodInvocationRequestSpec.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1385,10 +1403,11 @@
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BFD398F144E6F580086EA9A /* DeltaRequestSpec.m in Sources */,
 				6BFD3996144E8A190086EA9A /* expanz_service_DeltaRequest.m in Sources */,
-				6BFD3997144E95A70086EA9A /* XmlPostActivityClientIntegration.m in Sources */,
 				6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
+				6BFD39A7144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BF99AA1144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6BF99AA6144FEB57006F1A3B /* MethodInvocationRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1457,6 +1476,8 @@
 				6B4F975D144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BFD3994144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD39A4144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BF99A9E144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1525,6 +1546,8 @@
 				6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BFD3995144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
+				6BFD39A5144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BF99A9F144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1616,6 +1639,9 @@
 				6BFD398E144E6C0B0086EA9A /* DeltaRequestSpec.m in Sources */,
 				6BFD3993144E806D0086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD399A144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
+				6BFD39A6144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BF99AA0144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6BF99AA5144FEB57006F1A3B /* MethodInvocationRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
