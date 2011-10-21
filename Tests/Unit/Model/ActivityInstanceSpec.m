@@ -29,6 +29,11 @@ describe(@"Object creation.", ^{
         assertThat(instance.handle, equalTo(@"12345"));
         assertThat(instance.persistentId, equalTo(@"123"));     
     });
+    
+    it(@"should describe itself", ^{
+        assertThat([instance description], 
+                   equalTo(@"Activity Instance: title=Calculator, handle=12345, persistentId=123"));
+    });
         
 });
 
@@ -56,13 +61,15 @@ describe(@"Relationship to fields", ^{
         Field* another = [instance fieldWithId:@"notInMyCollection"];
         assertThat(another, nilValue());
     });
+});
+
+describe(@"Method invocations. . . ", ^{
     
     it(@"should prevent method invocations, unless all of it's child fields are clean.", ^{
         
         //Yes if it has no fields. 
         assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
         
-
         //Yes, if it has one field, that is synched with the server. 
         Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
         //Field is clean. 
@@ -70,7 +77,7 @@ describe(@"Relationship to fields", ^{
         [instance addField:field];
         [field release];
         assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
-
+        
         
         //No, if one ore more fieds are dirty. 
         Field* another = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
@@ -82,7 +89,6 @@ describe(@"Relationship to fields", ^{
         assertThatBool([instance allowsMethodInvocations], equalToBool(NO)); 
         
     });
-
 });
 
 

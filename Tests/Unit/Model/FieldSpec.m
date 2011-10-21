@@ -26,10 +26,11 @@ describe(@"Object creation.", ^{
         assertThat([field fieldId], equalTo(@"op1")); 
         assertThatBool([field isNullable], equalToBool(NO)); 
         assertThat([field defaultValue], nilValue()); 
-        assertThat([field datatype], equalTo(@"number"));
+        assertThat([field datatype], equalTo(@"number"));            
     });
-        
+    
 });
+
 
 describe(@"Editing", ^{
     
