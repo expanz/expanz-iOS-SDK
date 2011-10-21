@@ -39,6 +39,7 @@
     } toProtocol:@protocol(expanz_service_SessionDataClient)];         
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector *context) {
+        LogInfo(@"In bind block for expanz_service_ActivityClient");
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:kExecXUrl]];        
         XmlPostActivityClient* client = [[[XmlPostActivityClient alloc] initWithRequest:request] autorelease];
         [request release];

@@ -188,10 +188,12 @@
     else if (textField == _op2Field) {
         field = [_activityInstance fieldWithId:@"Op2"];
     }
-    field.value = textField.text;  
-    id<expanz_service_ActivityClient> activityClient = [self createActivityClient];
-    [activityClient sendDeltaWith:[field asDeltaRequest] delegate:self];
-    [activityClient release];
+    if (![field.value isEqualToString:textField.text]) {
+        field.value = textField.text;  
+        id<expanz_service_ActivityClient> activityClient = [self createActivityClient];
+        [activityClient sendDeltaWith:[field asDeltaRequest] delegate:self];
+        [activityClient release];
+    }
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {    

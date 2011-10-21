@@ -11,6 +11,7 @@
 
 #define __SPEC_HELPER
 
+
 #define HC_SHORTHAND
 #if TARGET_OS_IPHONE
 #import <Cedar-iPhone/SpecHelper.h>

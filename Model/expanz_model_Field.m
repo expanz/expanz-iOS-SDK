@@ -18,6 +18,7 @@
 @synthesize nullable = _nullable; 
 @synthesize defaultValue = _defaultValue;
 @synthesize datatype = _datatype;
+@synthesize dirty = _dirty;
 
 //Read-write properties. 
 @synthesize parentActivity = _parentActivity;
@@ -38,6 +39,27 @@
     }
     return self; 
 }
+
+
+/* ================================================ Interface Methods =============================================== */
+
+- (void) userDidEditWithValue:(NSString*)value {
+    if (value != _value) {
+        [_value release]; 
+        _value = [value retain];        
+        _dirty = YES;
+    }    
+}
+
+- (void) completedStateChangeWithValidation:(NSString*)validatedValue {
+    if (validatedValue != _value) {
+        [_value release]; 
+        _value = [validatedValue retain];
+    }
+    //Field is clean now, weather the server has a new validated value or not. 
+    _dirty = NO;
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 

@@ -35,5 +35,49 @@ describe(@"Object creation.", ^{
     
 });
 
+describe(@"Editing", ^{
+    
+    __block Field* field; 
+    
+    beforeEach(^{
+        field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"]; 
+    });
+    
+    
+    it(@"should include a method to set a new value, as a result of user interaction.", ^{
+        [field userDidEditWithValue:@"new value"];
+        
+        assertThat(field.value, equalTo(@"new value"));
+        
+        it(@"should set a dirty flag to indicate the user changed a value, but the value has not yet been recieved \
+           by the server",  ^{
+               
+               assertThatBool(field.isDirty, equalToBool(YES));
+               
+        });
+        
+        
+    });
+    
+    
+    it(@"should include a method to set a new value, as a result of server processing a delta request.", ^{
+        [field completedStateChangeWithValidation:@"new validated value"]; 
+        assertThat(field.value, equalTo(@"new validated value"));
+                
+        it(@"should revert back to a clean state, after the server has registered the delta. ", ^{
+            assertThatBool(field.isDirty, equalToBool(NO));
+            
+        });
+
+        
+    });
+    
+    
+    afterEach(^{
+        [field release];
+    });
+
+});
+
 
 SPEC_END

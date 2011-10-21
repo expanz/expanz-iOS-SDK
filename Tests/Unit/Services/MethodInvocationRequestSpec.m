@@ -14,7 +14,7 @@
 #import "expanz_model_ActivityInstance.h"
 
 
-SPEC_BEGIN(MethodRequestSpec)
+SPEC_BEGIN(MethodInvocationRequestSpec)
 
 __block MethodInvocationRequest* methodRequest;
 
