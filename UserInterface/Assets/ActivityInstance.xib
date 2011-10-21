@@ -182,7 +182,7 @@
 						<string key="NSFrame">{{97, 120}, {94, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="998187123"/>
+						<reference key="NSNextKeyView" ref="1049013838"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -337,6 +337,7 @@
 						<string key="NSFrame">{{171, 121}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="998187123"/>
 						<string key="NSReuseIdentifierKey">_NS:1030</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -391,46 +392,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">op1Field</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="832085158"/>
-					</object>
-					<int key="connectionID">28</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">op1Label</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="856998409"/>
-					</object>
-					<int key="connectionID">29</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">op2Field</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="300671392"/>
-					</object>
-					<int key="connectionID">30</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">op2Label</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="501011349"/>
-					</object>
-					<int key="connectionID">31</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">result</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="998187123"/>
-					</object>
-					<int key="connectionID">41</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">add</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="77704680"/>
@@ -444,6 +405,46 @@
 						<reference key="destination" ref="1049013838"/>
 					</object>
 					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">Op1Label</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="856998409"/>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">Op2Label</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="501011349"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">Op1Field</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="832085158"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">Op2Field</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="300671392"/>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">ResultField</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="998187123"/>
+					</object>
+					<int key="connectionID">53</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -639,7 +640,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">47</int>
+			<int key="maxID">53</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -681,18 +682,38 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="Op1Field">UITextField</string>
+						<string key="Op1Label">UILabel</string>
+						<string key="Op2Field">UITextField</string>
+						<string key="Op2Label">UILabel</string>
+						<string key="ResultField">UILabel</string>
 						<string key="add">UIButton</string>
 						<string key="divide">UIButton</string>
 						<string key="multiply">UIButton</string>
-						<string key="op1Field">UITextField</string>
-						<string key="op1Label">UILabel</string>
-						<string key="op2Field">UITextField</string>
-						<string key="op2Label">UILabel</string>
-						<string key="result">UILabel</string>
 						<string key="spinner">UIActivityIndicatorView</string>
 						<string key="subtract">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="Op1Field">
+							<string key="name">Op1Field</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="Op1Label">
+							<string key="name">Op1Label</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="Op2Field">
+							<string key="name">Op2Field</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="Op2Label">
+							<string key="name">Op2Label</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="ResultField">
+							<string key="name">ResultField</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="add">
 							<string key="name">add</string>
 							<string key="candidateClassName">UIButton</string>
@@ -704,26 +725,6 @@
 						<object class="IBToOneOutletInfo" key="multiply">
 							<string key="name">multiply</string>
 							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="op1Field">
-							<string key="name">op1Field</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="op1Label">
-							<string key="name">op1Label</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="op2Field">
-							<string key="name">op2Field</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="op2Label">
-							<string key="name">op2Label</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="result">
-							<string key="name">result</string>
-							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="spinner">
 							<string key="name">spinner</string>

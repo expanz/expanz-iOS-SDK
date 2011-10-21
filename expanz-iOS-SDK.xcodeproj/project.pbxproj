@@ -110,8 +110,40 @@
 		6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
-		6B7F0BEC1451478800E29FA1 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396C144E6BDD0086EA9A /* ActivityInstanceSpec.m */; };
-		6B7F0BEF1451533300E29FA1 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396E144E6BDD0086EA9A /* FieldSpec.m */; };
+		6B8DBB451451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
+		6B8DBB461451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
+		6B8DBB471451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
+		6B8DBB481451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
+		6B8DBB4D1451B4F30012DDB7 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */; };
+		6B8DBB4E1451B4F30012DDB7 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */; };
+		6B8DBB4F1451B4F30012DDB7 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */; };
+		6B8DBB501451B4F30012DDB7 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */; };
+		6B8DBB511451B4F30012DDB7 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB361451B4F30012DDB7 /* README.markdown */; };
+		6B8DBB521451B4F30012DDB7 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB361451B4F30012DDB7 /* README.markdown */; };
+		6B8DBB531451B4F30012DDB7 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB361451B4F30012DDB7 /* README.markdown */; };
+		6B8DBB541451B4F30012DDB7 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB361451B4F30012DDB7 /* README.markdown */; };
+		6B8DBB551451B4F30012DDB7 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB381451B4F30012DDB7 /* RTIvar.m */; };
+		6B8DBB561451B4F30012DDB7 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB381451B4F30012DDB7 /* RTIvar.m */; };
+		6B8DBB571451B4F30012DDB7 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB381451B4F30012DDB7 /* RTIvar.m */; };
+		6B8DBB581451B4F30012DDB7 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB381451B4F30012DDB7 /* RTIvar.m */; };
+		6B8DBB591451B4F30012DDB7 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */; };
+		6B8DBB5A1451B4F30012DDB7 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */; };
+		6B8DBB5B1451B4F30012DDB7 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */; };
+		6B8DBB5C1451B4F30012DDB7 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */; };
+		6B8DBB5D1451B4F30012DDB7 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */; };
+		6B8DBB5E1451B4F30012DDB7 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */; };
+		6B8DBB5F1451B4F30012DDB7 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */; };
+		6B8DBB601451B4F30012DDB7 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */; };
+		6B8DBB611451B4F30012DDB7 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */; };
+		6B8DBB621451B4F30012DDB7 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */; };
+		6B8DBB631451B4F30012DDB7 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */; };
+		6B8DBB641451B4F30012DDB7 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */; };
+		6B8DBB651451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */; };
+		6B8DBB661451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */; };
+		6B8DBB671451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */; };
+		6B8DBB681451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */; };
+		6B8DBB6D1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB6A1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m */; };
+		6B8DBB6E1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DBB6A1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -418,6 +450,21 @@
 		6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginClientDelegate.m; sourceTree = "<group>"; };
 		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
 		6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientIntegration.m; sourceTree = "<group>"; };
+		6B8DBB321451B4F30012DDB7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6B8DBB341451B4F30012DDB7 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
+		6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
+		6B8DBB361451B4F30012DDB7 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		6B8DBB371451B4F30012DDB7 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
+		6B8DBB381451B4F30012DDB7 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTIvar.m; sourceTree = "<group>"; };
+		6B8DBB391451B4F30012DDB7 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMethod.h; sourceTree = "<group>"; };
+		6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMethod.m; sourceTree = "<group>"; };
+		6B8DBB3B1451B4F30012DDB7 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProperty.h; sourceTree = "<group>"; };
+		6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProperty.m; sourceTree = "<group>"; };
+		6B8DBB3D1451B4F30012DDB7 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProtocol.h; sourceTree = "<group>"; };
+		6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
+		6B8DBB3F1451B4F30012DDB7 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
+		6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
+		6B8DBB6A1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceViewControllerSpec.m; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B915A81143BC8BB005EFEFC /* expanz_service_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClient.h; sourceTree = "<group>"; };
 		6B915A86143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
@@ -740,6 +787,27 @@
 			path = Integration;
 			sourceTree = "<group>";
 		};
+		6B8DBB301451B4F30012DDB7 /* MAObjCRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				6B8DBB321451B4F30012DDB7 /* LICENSE */,
+				6B8DBB341451B4F30012DDB7 /* MARTNSObject.h */,
+				6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */,
+				6B8DBB361451B4F30012DDB7 /* README.markdown */,
+				6B8DBB371451B4F30012DDB7 /* RTIvar.h */,
+				6B8DBB381451B4F30012DDB7 /* RTIvar.m */,
+				6B8DBB391451B4F30012DDB7 /* RTMethod.h */,
+				6B8DBB3A1451B4F30012DDB7 /* RTMethod.m */,
+				6B8DBB3B1451B4F30012DDB7 /* RTProperty.h */,
+				6B8DBB3C1451B4F30012DDB7 /* RTProperty.m */,
+				6B8DBB3D1451B4F30012DDB7 /* RTProtocol.h */,
+				6B8DBB3E1451B4F30012DDB7 /* RTProtocol.m */,
+				6B8DBB3F1451B4F30012DDB7 /* RTUnregisteredClass.h */,
+				6B8DBB401451B4F30012DDB7 /* RTUnregisteredClass.m */,
+			);
+			path = MAObjCRuntime;
+			sourceTree = "<group>";
+		};
 		6B915A7F143BC8BB005EFEFC /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,7 +851,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		6B932F7D1434513700834A1B /* Tests */ = {
+		6B932F7D1434513700834A1B /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				6B86AD8B1435B65400AA7FD5 /* Integration */,
@@ -792,6 +860,7 @@
 				6BFD396A144E6BDD0086EA9A /* Unit */,
 				6B70676B144702DA000A1CAE /* Utils */,
 			);
+			name = Specs;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -854,7 +923,7 @@
 				6BB77B1F14445AA9007CA74B /* Model */,
 				6BCAFB9814317B1C00575280 /* Products */,
 				6B915A7F143BC8BB005EFEFC /* Services */,
-				6B932F7D1434513700834A1B /* Tests */,
+				6B932F7D1434513700834A1B /* Specs */,
 				6B4F973D144913A500D85040 /* UserInterface */,
 				6B932EA41433E22100834A1B /* Utils */,
 			);
@@ -948,6 +1017,7 @@
 			children = (
 				6BF58C21144420810063E805 /* ASIHTTPRequest */,
 				6BF58C58144420810063E805 /* Flexible-iOS-Logging-1.0 */,
+				6B8DBB301451B4F30012DDB7 /* MAObjCRuntime */,
 				6BF58C5A144420810063E805 /* Objection-iOS */,
 				6BF58C8C144420810063E805 /* RaptureXML */,
 				6BF58C93144420810063E805 /* Reachability */,
@@ -1144,6 +1214,7 @@
 			children = (
 				6BFD397B144E6BDD0086EA9A /* Components */,
 				6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */,
+				6B8DBB6A1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -1282,6 +1353,8 @@
 				6B4F974D144913A500D85040 /* background.png in Resources */,
 				6B4F9751144913A500D85040 /* Login.xib in Resources */,
 				6B9E2E75144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B8DBB481451B4F30012DDB7 /* LICENSE in Resources */,
+				6B8DBB541451B4F30012DDB7 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1295,6 +1368,8 @@
 				6B4F974A144913A500D85040 /* background.png in Resources */,
 				6B4F974E144913A500D85040 /* Login.xib in Resources */,
 				6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B8DBB451451B4F30012DDB7 /* LICENSE in Resources */,
+				6B8DBB511451B4F30012DDB7 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,6 +1383,8 @@
 				6B4F974B144913A500D85040 /* background.png in Resources */,
 				6B4F974F144913A500D85040 /* Login.xib in Resources */,
 				6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B8DBB461451B4F30012DDB7 /* LICENSE in Resources */,
+				6B8DBB521451B4F30012DDB7 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,6 +1400,8 @@
 				6B4F974C144913A500D85040 /* background.png in Resources */,
 				6B4F9750144913A500D85040 /* Login.xib in Resources */,
 				6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B8DBB471451B4F30012DDB7 /* LICENSE in Resources */,
+				6B8DBB531451B4F30012DDB7 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,8 +1478,13 @@
 				6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
 				6BFD39A7144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BF99AA1144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
-				6B7F0BEC1451478800E29FA1 /* ActivityInstanceSpec.m in Sources */,
-				6B7F0BEF1451533300E29FA1 /* FieldSpec.m in Sources */,
+				6B8DBB501451B4F30012DDB7 /* MARTNSObject.m in Sources */,
+				6B8DBB581451B4F30012DDB7 /* RTIvar.m in Sources */,
+				6B8DBB5C1451B4F30012DDB7 /* RTMethod.m in Sources */,
+				6B8DBB601451B4F30012DDB7 /* RTProperty.m in Sources */,
+				6B8DBB641451B4F30012DDB7 /* RTProtocol.m in Sources */,
+				6B8DBB681451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
+				6B8DBB6E1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1470,6 +1554,12 @@
 				6BFD3994144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD39A4144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BF99A9E144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6B8DBB4D1451B4F30012DDB7 /* MARTNSObject.m in Sources */,
+				6B8DBB551451B4F30012DDB7 /* RTIvar.m in Sources */,
+				6B8DBB591451B4F30012DDB7 /* RTMethod.m in Sources */,
+				6B8DBB5D1451B4F30012DDB7 /* RTProperty.m in Sources */,
+				6B8DBB611451B4F30012DDB7 /* RTProtocol.m in Sources */,
+				6B8DBB651451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1539,6 +1629,12 @@
 				6BFD3995144E8A180086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD39A5144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BF99A9F144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6B8DBB4E1451B4F30012DDB7 /* MARTNSObject.m in Sources */,
+				6B8DBB561451B4F30012DDB7 /* RTIvar.m in Sources */,
+				6B8DBB5A1451B4F30012DDB7 /* RTMethod.m in Sources */,
+				6B8DBB5E1451B4F30012DDB7 /* RTProperty.m in Sources */,
+				6B8DBB621451B4F30012DDB7 /* RTProtocol.m in Sources */,
+				6B8DBB661451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1632,6 +1728,13 @@
 				6BFD39A6144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BF99AA0144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BF99AA5144FEB57006F1A3B /* MethodInvocationRequestSpec.m in Sources */,
+				6B8DBB4F1451B4F30012DDB7 /* MARTNSObject.m in Sources */,
+				6B8DBB571451B4F30012DDB7 /* RTIvar.m in Sources */,
+				6B8DBB5B1451B4F30012DDB7 /* RTMethod.m in Sources */,
+				6B8DBB5F1451B4F30012DDB7 /* RTProperty.m in Sources */,
+				6B8DBB631451B4F30012DDB7 /* RTProtocol.m in Sources */,
+				6B8DBB671451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
+				6B8DBB6D1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

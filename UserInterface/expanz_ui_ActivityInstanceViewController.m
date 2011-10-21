@@ -17,6 +17,9 @@
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
+#import "MARTNSObject.h"
+#import "RTMethod.h"
+
 /* ================================================================================================================== */
 
 @interface expanz_ui_ActivityInstanceViewController (private) 
@@ -25,6 +28,8 @@
 - (void) sendDeltaForField:(UITextField*)textField;
 - (void) sendMethodInvocation:(NSString*)methodName;
 - (void) tellKeyboardToClose;
+- (expanz_model_Field*) modelFor:(UITextField*)textField;
+- (NSArray*) fieldAccessors; 
 
 @end
 
@@ -36,11 +41,11 @@
 @synthesize activityInstance = _activityInstance;
 
 @synthesize spinner = _spinner;
-@synthesize op1Label = _op1Label;
-@synthesize op2Label = _op2Label;
-@synthesize result = _result;
-@synthesize op1Field = _op1Field;
-@synthesize op2Field = _op2Field;
+@synthesize Op1Label = _Op1Label;
+@synthesize Op2Label = _Op2Label;
+@synthesize ResultField = _ResultField;
+@synthesize Op1Field = _Op1Field;
+@synthesize Op2Field = _Op2Field;
 @synthesize add = _add; 
 @synthesize subtract = _subtract;
 @synthesize multiply = _multiply;
@@ -96,14 +101,14 @@
 
 
 - (IBAction) op1ValueChanged {
-    [self sendDeltaForField:_op1Field];
+    [self sendDeltaForField:_Op1Field];
 }
 
 - (IBAction) o21ValueChanged {
-    [self sendDeltaForField:_op2Field];
+    [self sendDeltaForField:_Op2Field];
 }
 
-- (IBAction) addClicked {
+- (void) addClicked {
     [self sendMethodInvocation:@"Add"];
 }
 
@@ -129,28 +134,17 @@
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];    
-        [_op1Field setEnabled:YES]; 
-        [_op2Field setEnabled:YES];
+        [_Op1Field setEnabled:YES]; 
+        [_Op2Field setEnabled:YES];
     }
     else {                    
-        for (Field* field in activityInstance.fields) {
-            LogDebug(@"Field: %@", field.fieldId);
-            
-            [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
-            
-            //TODO: Make this dynamic
-            if ([field.fieldId isEqualToString:@"Op1"]) {
-                LogDebug(@"Setting Op1");
-                [_op1Field setText:[field value]];
-            }
-            else if ([field.fieldId isEqualToString:@"Op2"]) {
-                LogDebug(@"Setting Op2");
-                [_op2Field setText:[field value]];
-            }
-            else if ([field.fieldId isEqualToString:@"Result"]) {
-                LogDebug(@"Setting Result");
-                [_result setText:[field value]];
-            }
+        for (Field* field in activityInstance.fields) {                
+            [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];            
+            SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@Field", field.fieldId]);            
+            RTMethod* method = [[self class] rt_methodForSelector: sel];                                
+            UITextField* uiComponent; 
+            [method returnValue: &uiComponent sendToTarget: self];
+            [uiComponent setText:[field value]];                        
         }        
     }
 }
@@ -164,15 +158,17 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_op1Label release]; 
-    [_op2Label release];
-    [_result release];
-    [_op1Field release];
-    [_op2Field release];
+    [_spinner release];
+    [_Op1Label release]; 
+    [_Op2Label release];
+    [_ResultField release];
+    [_Op1Field release];
+    [_Op2Field release];
     [_add release]; 
     [_subtract release]; 
     [_multiply release]; 
     [_divide release];
+    [super dealloc];
 }
 
 
@@ -183,13 +179,7 @@
 }
 
 - (void) sendDeltaForField:(UITextField*)textField {   
-    Field* field = nil;
-    if (textField == _op1Field) {
-        field = [_activityInstance fieldWithId:@"Op1"];
-    }
-    else if (textField == _op2Field) {
-        field = [_activityInstance fieldWithId:@"Op2"];
-    }
+    Field* field = [self modelFor:textField]; 
     [field didFinishEditWithValue:textField.text];
     if ([field isDirty]) {
         [_spinner startAnimating];
@@ -212,9 +202,34 @@
     [methodRequest release];    
 }
 
+- (expanz_model_Field*) modelFor:(UITextField *)textField {
+    for (RTMethod* method in [self fieldAccessors]) {
+        UITextField* uiComponent; 
+        [method returnValue: &uiComponent sendToTarget: self];
+        if (uiComponent == textField) {
+            LogDebug(@"!!!!!!!!!!!!!!! Got it!!!!!!!!!!!");
+            NSString* selectorName = [method selectorName];
+            NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Field"].location];
+            return [_activityInstance fieldWithId:fieldId]; 
+        }
+    }
+    return nil;
+}
+
+- (NSArray*) fieldAccessors {
+    NSArray* classMethods = [[self class] rt_methods]; 
+    NSMutableArray* fieldAccessors = [[[NSMutableArray alloc] init] autorelease];
+    for (RTMethod* method in classMethods) {
+        if ([[method selectorName] hasSuffix:@"Field"]) {
+            [fieldAccessors addObject:method]; 
+        }        
+    }
+    return fieldAccessors;
+}
+
 - (void) tellKeyboardToClose {
-    [_op1Field resignFirstResponder]; 
-    [_op2Field resignFirstResponder];    
+    [_Op1Field resignFirstResponder]; 
+    [_Op2Field resignFirstResponder];    
 }
 
 @end

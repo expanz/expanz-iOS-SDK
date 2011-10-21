@@ -19,11 +19,11 @@
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-@property (nonatomic, retain) IBOutlet UILabel* op1Label; 
-@property (nonatomic, retain) IBOutlet UILabel* op2Label;
-@property (nonatomic, retain) IBOutlet UILabel* result; 
-@property (nonatomic, retain) IBOutlet UITextField* op1Field; 
-@property (nonatomic, retain) IBOutlet UITextField* op2Field; 
+@property (nonatomic, retain) IBOutlet UILabel* Op1Label; 
+@property (nonatomic, retain) IBOutlet UILabel* Op2Label;
+@property (nonatomic, retain) IBOutlet UILabel* ResultField; 
+@property (nonatomic, retain) IBOutlet UITextField* Op1Field; 
+@property (nonatomic, retain) IBOutlet UITextField* Op2Field; 
 @property (nonatomic, retain) IBOutlet UIButton* add; 
 @property (nonatomic, retain) IBOutlet UIButton* subtract;
 @property (nonatomic, retain) IBOutlet UIButton* multiply;
