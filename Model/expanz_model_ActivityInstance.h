@@ -23,9 +23,26 @@
 @property (nonatomic, readonly) NSString* persistentId;
 @property (nonatomic, readonly) NSArray* fields; 
 
+/**
+ * Initializes new instance with the supplied parameters. 
+ */
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId;
+
+/** 
+ * Adds a field to the instance. 
+ */
 - (void) addField:(expanz_model_Field*)field; 
+
+/**
+ * Returns the field matching the supplied fieldId, or nil. 
+ */
 - (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
+
+/**
+ * Indicates the activity allow method invocations. For this to occur, the value of all fields must be registered 
+ * with the server.
+ */
+- (BOOL) allowsMethodInvocations; 
 
 
 @end

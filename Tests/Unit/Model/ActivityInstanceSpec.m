@@ -55,7 +55,35 @@ describe(@"Relationship to fields", ^{
         
         Field* another = [instance fieldWithId:@"notInMyCollection"];
         assertThat(another, nilValue());
+    });
+    
+    it(@"should prevent method invocations, unless all of it's child fields are clean.", ^{
+        
+        it(@"should allow method invocations when it doesn't have any fields. ", ^{
+            assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
+        });
 
+        it(@"should allow method invocations when it's one field is clean", ^{
+            Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+            //Field is clean. 
+            assertThatBool(field.isDirty, equalToBool(NO));
+            [instance addField:field];
+            [field release];
+            assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
+        });
+        
+        
+        it(@"should disallow method invocations, when one or more if it's child fields is dirty.", ^{
+            Field* another = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+            //Make the field dirty. 
+            [another userDidEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
+            [instance addField:another];
+            [another release];
+            
+            assertThatBool([instance allowsMethodInvocations], equalToBool(NO)); 
+        });
+        
+        
     });
 
 });

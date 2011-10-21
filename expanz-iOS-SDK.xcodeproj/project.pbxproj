@@ -105,12 +105,12 @@
 		6B4F975E144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6B4F975F144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F975C144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m */; };
-		6B60A9D71451293F00C7AD1B /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396E144E6BDD0086EA9A /* FieldSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7067691446CDC9000A1CAE /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */; };
 		6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
+		6B7F0BEC1451478800E29FA1 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD396C144E6BDD0086EA9A /* ActivityInstanceSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B915A8F143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B915A87143BC8BB005EFEFC /* expanz_service_XmlPostLoginClient.m */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -1398,7 +1398,7 @@
 				6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
 				6BFD39A7144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BF99AA1144FE4D3006F1A3B /* expanz_service_MethodInvocationRequest.m in Sources */,
-				6B60A9D71451293F00C7AD1B /* FieldSpec.m in Sources */,
+				6B7F0BEC1451478800E29FA1 /* ActivityInstanceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

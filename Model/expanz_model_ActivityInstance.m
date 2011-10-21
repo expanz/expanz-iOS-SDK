@@ -53,6 +53,15 @@
     return nil;
 }
 
+- (BOOL) allowsMethodInvocations { 
+    for (Field* field in _fields) {
+        if (field.isDirty) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 
