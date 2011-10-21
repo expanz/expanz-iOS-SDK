@@ -82,7 +82,7 @@ describe(@"Method invocations. . . ", ^{
         //No, if one ore more fieds are dirty. 
         Field* another = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
         //Make the field dirty. 
-        [another userDidEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
+        [another didFinishEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
         [instance addField:another];
         [another release];
         

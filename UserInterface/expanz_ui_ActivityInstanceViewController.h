@@ -17,7 +17,6 @@
 @interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate>
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
-@property (nonatomic, readonly) BOOL allowsMethodInvocations;
 
 @property (nonatomic, retain) IBOutlet UILabel* op1Label; 
 @property (nonatomic, retain) IBOutlet UILabel* op2Label;

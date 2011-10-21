@@ -43,7 +43,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (void) userDidEditWithValue:(NSString*)value {
+- (void) didFinishEditWithValue:(NSString*)value {
     if (value != _value) {
         [_value release]; 
         _value = [value retain];        
@@ -51,7 +51,7 @@
     }    
 }
 
-- (void) completedStateChangeWithValidation:(NSString*)validatedValue {
+- (void) didSynchronizeStateWithServerModel:(NSString*)validatedValue {
     if (validatedValue != _value) {
         [_value release]; 
         _value = [validatedValue retain];

@@ -21,7 +21,7 @@
 
 @interface expanz_ui_ActivityInstanceViewController (private) 
     
-- (id<expanz_service_ActivityClient>) createActivityClient;
+- (id<expanz_service_ActivityClient>) activityClient;
 - (void) sendDeltaForField:(UITextField*)textField;
 - (void) sendMethodInvocation:(NSString*)methodName;
 - (void) tellKeyboardToClose;
@@ -34,7 +34,6 @@
 @implementation expanz_ui_ActivityInstanceViewController
 
 @synthesize activityInstance = _activityInstance;
-@synthesize allowsMethodInvocations = _allowsMethodInvocations;
 
 @synthesize op1Label = _op1Label;
 @synthesize op2Label = _op2Label;
@@ -53,7 +52,7 @@
     self = [super initWithNibName:@"ActivityInstance" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;        
-        id<expanz_service_ActivityClient> activityClient = [self createActivityClient];
+        id<expanz_service_ActivityClient> activityClient = [self activityClient];
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
                                                         sessionToken:[SessionContext globalContext].sessionToken];        
         [activityClient createActivityWith:activityRequest delegate:self];
@@ -130,11 +129,13 @@
         [_op1Field setEnabled:YES]; 
         [_op2Field setEnabled:YES];
     }
-    else {
-        _allowsMethodInvocations = YES;
-        LogDebug(@"Setting dirty field.");
+    else {                    
         for (Field* field in activityInstance.fields) {
             LogDebug(@"Field: %@", field.fieldId);
+            
+            [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
+            
+            //TODO: Make this dynamic
             if ([field.fieldId isEqualToString:@"Op1"]) {
                 LogDebug(@"Setting Op1");
                 [_op1Field setText:[field value]];
@@ -174,13 +175,11 @@
 
 /* ================================================== Private Methods =============================================== */
 
-- (id<expanz_service_ActivityClient>) createActivityClient {
-    return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
+- (id<expanz_service_ActivityClient>) activityClient {
+    return [[[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)] autorelease];
 }
 
-- (void) sendDeltaForField:(UITextField*)textField {
-    _allowsMethodInvocations = NO;
-    
+- (void) sendDeltaForField:(UITextField*)textField {    
     Field* field;
     if (textField == _op1Field) {
         field = [_activityInstance fieldWithId:@"Op1"];
@@ -188,25 +187,21 @@
     else if (textField == _op2Field) {
         field = [_activityInstance fieldWithId:@"Op2"];
     }
-    if (![field.value isEqualToString:textField.text]) {
-        field.value = textField.text;  
-        id<expanz_service_ActivityClient> activityClient = [self createActivityClient];
-        [activityClient sendDeltaWith:[field asDeltaRequest] delegate:self];
-        [activityClient release];
-    }
+    [field didFinishEditWithValue:textField.text];
+    id<expanz_service_ActivityClient> activityClient = [self activityClient];
+    [activityClient sendDeltaWith:[field asDeltaRequest] delegate:self];    
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {    
     [self tellKeyboardToClose];
-    float sleepCount;
-    while (_allowsMethodInvocations == NO && sleepCount < 9) { 
+
+    while ([_activityInstance allowsMethodInvocations] == NO) { 
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        LogDebug(@"Sleeping. . . ");
+        LogDebug(@"Waiting for model synchronization. . . ");
         usleep(50000); \
-        sleepCount = sleepCount + 0.05; 
     }
     
-    id<expanz_service_ActivityClient> activityClient = [self createActivityClient];
+    id<expanz_service_ActivityClient> activityClient = [self activityClient];
     MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
                                               initWithActivityInstance:_activityInstance methodName:methodName]; 
     [activityClient sendMethodInvocationWith:methodRequest delegate:self];

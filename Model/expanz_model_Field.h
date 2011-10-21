@@ -29,12 +29,12 @@
 /**
  * Invoked when value is changed as a result of user edit. Marks the field as dirty. 
  */
-- (void) userDidEditWithValue:(NSString*)value; 
+- (void) didFinishEditWithValue:(NSString*)value; 
 
 /**
  * Invoked to indicate the server state has been synchronized with the client-side state. Marks the field as clean.
  */
-- (void) completedStateChangeWithValidation:(NSString*)validatedValue; 
+- (void) didSynchronizeStateWithServerModel:(NSString*)validatedValue; 
 
 
 @end
