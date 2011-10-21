@@ -72,7 +72,7 @@
 #	define LOGGING_LEVEL_ERROR		1
 #endif
 #ifndef LOGGING_LEVEL_DEBUG
-#	define LOGGING_LEVEL_DEBUG		0
+#	define LOGGING_LEVEL_DEBUG		1
 #endif
 
 /**

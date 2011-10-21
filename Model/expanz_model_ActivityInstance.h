@@ -39,8 +39,8 @@
 - (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
 
 /**
- * Indicates the activity allow method invocations. For this to occur, the value of all fields must be registered 
- * with the server.
+ * Indicates weather the activity in progress, currently allows method invocations. For this to occur, the value of all 
+ * of its fields must be registered with the server.
  */
 - (BOOL) allowsMethodInvocations; 
 

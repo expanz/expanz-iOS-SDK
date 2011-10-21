@@ -42,7 +42,7 @@
     LogDebug(@"Global session context is: %@", [SessionContext globalContext]);
 }
 
-+ (NSString*) aValidActivityHandle {
++ (ActivityInstance*) aValidActivity {
     JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 
     CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] 
                                                initWithActivityName:@"ESA.Sales.Calc" 
@@ -51,13 +51,11 @@
     id<expanz_service_ActivityClient> activityClient = [testInjector 
                                                         getObject:@protocol(expanz_service_ActivityClient)];
     
-    TestActivityClientDelegate* delegate = [[TestActivityClientDelegate alloc] init];
+    TestActivityClientDelegate* delegate = [[[TestActivityClientDelegate alloc] init] autorelease];
     
     [activityClient createActivityWith:activityRequest delegate:delegate];
     assertWillHappen(delegate.activityInstance != nil);
-    NSString* handle = [[[NSString alloc] initWithString:delegate.activityInstance.handle] autorelease];
-    [delegate release];
-    return handle;
+    return delegate.activityInstance;
 }
 
 + (ASIFormDataRequest*) requestThatWillFail {

@@ -18,7 +18,7 @@
 #import "expanz_service_XmlPostActivityClient.h"
 #import "expanz_service_DeltaRequest.h"
 #import "TestActivityClientDelegate.h"
-
+#import "expanz_service_MethodInvocationRequest.h"
 
 SPEC_BEGIN(XmlPostActivityClientIntegration)
 
@@ -64,7 +64,7 @@ describe(@"sending deltas", ^{
     
     it(@"should allow sending updated field values", ^{
             
-        NSString* activityHandle = [IntegrationUtils aValidActivityHandle]; 
+        NSString* activityHandle = [IntegrationUtils aValidActivity].handle; 
         LogDebug(@"Activity handle: %@", activityHandle);
         DeltaRequest* deltaRequest = [[DeltaRequest alloc] initWithFieldId:@"Op1" fieldValue:@"623" 
             activityHandle:activityHandle sessionToken:[SessionContext globalContext].sessionToken];         
@@ -72,6 +72,19 @@ describe(@"sending deltas", ^{
         
         assertWillHappen(delegate.activityInstance != nil);         
         LogDebug(@"%@", delegate.activityInstance);                    
+    });
+});
+
+describe(@"server method invocations.", ^{
+    
+    it(@"should allow sending invoking methods on the server-side model.", ^{
+        ActivityInstance* activityInstance = [IntegrationUtils aValidActivity];
+        MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
+                                                  initWithActivityInstance:activityInstance methodName:@"Add"];
+        [activityClient sendMethodInvocationWith:methodRequest delegate:delegate];
+        
+        assertWillHappen(delegate.activityInstance != nil);
+        LogDebug("%@", delegate.activityInstance);        
     });
 });
 
