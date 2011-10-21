@@ -12,6 +12,9 @@
 #import "expanz_model_Activity.h"
 @class expanz_model_Field;
 
+/**
+ * Represents an activity in progress. 
+ */
 @interface expanz_model_ActivityInstance : expanz_model_Activity {
     
 @private

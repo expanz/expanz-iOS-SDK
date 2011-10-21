@@ -12,6 +12,9 @@
 #import <Foundation/Foundation.h>
 @class expanz_model_ActivityInstance;
 
+/**
+ * Represents an item within an `expanz_model_ActivityInstance` requiring user input. 
+ */
 @interface expanz_model_Field : NSObject
 
 
