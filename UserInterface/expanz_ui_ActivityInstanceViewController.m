@@ -35,6 +35,7 @@
 
 @synthesize activityInstance = _activityInstance;
 
+@synthesize spinner = _spinner;
 @synthesize op1Label = _op1Label;
 @synthesize op2Label = _op2Label;
 @synthesize result = _result;
@@ -52,10 +53,11 @@
     self = [super initWithNibName:@"ActivityInstance" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;        
-        id<expanz_service_ActivityClient> activityClient = [self activityClient];
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
                                                         sessionToken:[SessionContext globalContext].sessionToken];        
-        [activityClient createActivityWith:activityRequest delegate:self];
+        [[self activityClient] createActivityWith:activityRequest delegate:self];
+        [_spinner startAnimating];
+        [activityRequest release];
     }
     return self;
 }
@@ -124,6 +126,7 @@
 #pragma mark CreateActivityClientDelegate
 
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
+    [_spinner stopAnimating];
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];    
         [_op1Field setEnabled:YES]; 
@@ -176,11 +179,11 @@
 /* ================================================== Private Methods =============================================== */
 
 - (id<expanz_service_ActivityClient>) activityClient {
-    return [[[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)] autorelease];
+    return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
 }
 
-- (void) sendDeltaForField:(UITextField*)textField {    
-    Field* field;
+- (void) sendDeltaForField:(UITextField*)textField {   
+    Field* field = nil;
     if (textField == _op1Field) {
         field = [_activityInstance fieldWithId:@"Op1"];
     }
@@ -188,8 +191,10 @@
         field = [_activityInstance fieldWithId:@"Op2"];
     }
     [field didFinishEditWithValue:textField.text];
-    id<expanz_service_ActivityClient> activityClient = [self activityClient];
-    [activityClient sendDeltaWith:[field asDeltaRequest] delegate:self];    
+    if ([field isDirty]) {
+        [_spinner startAnimating];
+        [[self activityClient] sendDeltaWith:[field asDeltaRequest] delegate:self];    
+    }
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {    
@@ -200,11 +205,10 @@
         LogDebug(@"Waiting for model synchronization. . . ");
         usleep(50000); \
     }
-    
-    id<expanz_service_ActivityClient> activityClient = [self activityClient];
     MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
                                               initWithActivityInstance:_activityInstance methodName:methodName]; 
-    [activityClient sendMethodInvocationWith:methodRequest delegate:self];
+    [_spinner startAnimating];
+    [[self activityClient] sendMethodInvocationWith:methodRequest delegate:self];
     [methodRequest release];    
 }
 

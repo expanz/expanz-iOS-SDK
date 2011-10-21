@@ -18,6 +18,7 @@
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 @property (nonatomic, retain) IBOutlet UILabel* op1Label; 
 @property (nonatomic, retain) IBOutlet UILabel* op2Label;
 @property (nonatomic, retain) IBOutlet UILabel* result; 
