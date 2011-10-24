@@ -14,6 +14,7 @@
 #import "expanz_model_Activity.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field+DeltaRequest.h"
+#import "expanz_model_Message.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -175,16 +176,20 @@
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];    
         [self setFieldsHidden:NO];
+    }                   
+    for (Field* field in activityInstance.fields) {                
+        [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];            
+        SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@Field", field.fieldId]);            
+        RTMethod* method = [[self class] rt_methodForSelector: sel];                                
+        UITextField* uiComponent; 
+        [method returnValue: &uiComponent sendToTarget: self];
+        [uiComponent setText:[field value]];                                
     }
-    else {                    
-        for (Field* field in activityInstance.fields) {                
-            [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];            
-            SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@Field", field.fieldId]);            
-            RTMethod* method = [[self class] rt_methodForSelector: sel];                                
-            UITextField* uiComponent; 
-            [method returnValue: &uiComponent sendToTarget: self];
-            [uiComponent setText:[field value]];                        
-        }        
+    for (Message* message in activityInstance.messages) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"zzz" message:message.content delegate:self 
+                                              cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [alert release];
     }
 }
 
