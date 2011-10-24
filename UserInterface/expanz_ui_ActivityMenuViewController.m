@@ -18,6 +18,7 @@
 #import "expanz_model_Menu.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_ui_BasicCalculatorViewController.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
@@ -101,7 +102,9 @@
 - (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section]; 
     Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
-    ActivityInstanceViewController* nextView = [[ActivityInstanceViewController alloc] initWithActivity:activity]; 
+    
+    //TODO: Look up view controller from formmapping.xml
+    BasicCalculatorViewController* nextView = [[BasicCalculatorViewController alloc] initWithActivity:activity]; 
     SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
     [delegate.navigationController pushViewController:nextView animated:YES]; 
     [nextView release]; 

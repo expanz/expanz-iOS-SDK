@@ -20,42 +20,17 @@
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 
-/* ================================================================================================================== */
-
-@interface expanz_ui_ActivityInstanceViewController (private) 
-    
-- (id<expanz_service_ActivityClient>) activityClient;
-- (void) sendDeltaForField:(UITextField*)textField;
-- (void) sendMethodInvocation:(NSString*)methodName;
-- (void) tellKeyboardToClose;
-- (expanz_model_Field*) modelFor:(UITextField*)textField;
-- (NSArray*) fieldAccessors; 
-
-@end
-
-/* ================================================================================================================== */
-
 
 @implementation expanz_ui_ActivityInstanceViewController
 
 @synthesize activityInstance = _activityInstance;
-
 @synthesize spinner = _spinner;
-@synthesize Op1Label = _Op1Label;
-@synthesize Op2Label = _Op2Label;
-@synthesize ResultField = _ResultField;
-@synthesize Op1Field = _Op1Field;
-@synthesize Op2Field = _Op2Field;
-@synthesize add = _add; 
-@synthesize subtract = _subtract;
-@synthesize multiply = _multiply;
-@synthesize divide = _divide;
 
 
 /* ================================================== Constructors ================================================== */
 
 -(id) initWithActivity:(Activity*)activity {
-    self = [super initWithNibName:@"ActivityInstance" bundle:[NSBundle mainBundle]];
+    self = [super initWithNibName:@"BasicCalculator" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;        
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
@@ -67,7 +42,88 @@
     return self;
 }
 
+/* ================================================ Interface Methods =============================================== */
 
+
+- (id<expanz_service_ActivityClient>) activityClient {
+    return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
+}
+
+- (void) sendDeltaForField:(UITextField*)textField {   
+    Field* field = [self fieldFor:textField]; 
+    [field didFinishEditWithValue:textField.text];
+    if ([field isDirty]) {
+        [_spinner startAnimating];
+        [[self activityClient] sendDeltaWith:[field asDeltaRequest] delegate:self];    
+    }
+}
+
+- (void) sendMethodInvocation:(NSString*)methodName {    
+    [_currentlyEditingField resignFirstResponder];
+    
+    while ([_activityInstance allowsMethodInvocations] == NO) { 
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        LogDebug(@"Waiting for model synchronization. . . ");
+        usleep(50000); 
+    }
+    MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
+                                              initWithActivityInstance:_activityInstance methodName:methodName]; 
+    [_spinner startAnimating];
+    [[self activityClient] sendMethodInvocationWith:methodRequest delegate:self];
+    [methodRequest release];    
+}
+
+
+- (NSArray*) fieldAccessors {
+    NSArray* classMethods = [[self class] rt_methods]; 
+    NSMutableArray* fieldAccessors = [[[NSMutableArray alloc] init] autorelease];
+    for (RTMethod* method in classMethods) {
+        if ([[method selectorName] hasSuffix:@"Field"]) {
+            [fieldAccessors addObject:method]; 
+        }        
+    }
+    return fieldAccessors;
+}
+
+- (expanz_model_Field*) fieldFor:(UITextField *)textField {
+    for (RTMethod* method in [self fieldAccessors]) {
+        UITextField* uiComponent; 
+        [method returnValue: &uiComponent sendToTarget: self];
+        if (uiComponent == textField) {
+            NSString* selectorName = [method selectorName];
+            NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Field"].location];
+            return [_activityInstance fieldWithId:fieldId]; 
+        }
+    }
+    return nil;
+}
+
+- (NSSet*) uiControls {
+    if (_uiControls == nil) {
+        _uiControls = [[NSMutableSet alloc] initWithCapacity:[_activityInstance.fields count]];
+        NSArray* classMethods = [[self class] rt_methods]; 
+        for (RTMethod* method in classMethods) {
+            if ([[method selectorName] hasSuffix:@"Field"]) {
+                UIControl* uiComponent; 
+                [method returnValue: &uiComponent sendToTarget: self];
+                [_uiControls addObject:uiComponent];                 
+            }            
+        }
+    }
+    return _uiControls;
+}
+
+- (void) setFieldsEnabled:(BOOL)enabled {
+    for (UIControl* uiControl in [self uiControls]) {
+        [uiControl setEnabled:enabled];
+    }
+}
+
+- (void) setFieldsHidden:(BOOL)enabled {
+    for (UIControl* uiControl in [self uiControls]) {
+        [uiControl setHidden:enabled];
+    }
+}
 
 /* ================================================ Delegate Methods ================================================ */
 - (void) didReceiveMemoryWarning {
@@ -82,6 +138,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    [self setFieldsHidden:YES];
 }
 
 
@@ -97,33 +154,16 @@
 }
 
 /* ================================================================================================================== */
-#pragma mark UITextFieldDelegate    
+#pragma mark UITextFieldDelegate
 
-
-- (IBAction) op1ValueChanged {
-    [self sendDeltaForField:_Op1Field];
+- (void) textFieldDidBeginEditing:(UITextField*)textField {
+    _currentlyEditingField = textField;
 }
 
-- (IBAction) o21ValueChanged {
-    [self sendDeltaForField:_Op2Field];
-}
-
-- (void) addClicked {
-    [self sendMethodInvocation:@"Add"];
-}
-
-- (IBAction) subtractClicked {
-    [self sendMethodInvocation:@"Subtract"];  
-    
-}
-
-- (IBAction) multiplyClicked {
-    [self sendMethodInvocation:@"Multiply"];
-    
-}
-
-- (IBAction) divideClicked {
-    [self sendMethodInvocation:@"Divide"];
+- (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
+    [textField resignFirstResponder]; 
+    [self sendDeltaForField:textField]; 
+    return YES;
 }
 
 
@@ -134,8 +174,7 @@
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];    
-        [_Op1Field setEnabled:YES]; 
-        [_Op2Field setEnabled:YES];
+        [self setFieldsHidden:NO];
     }
     else {                    
         for (Field* field in activityInstance.fields) {                
@@ -159,77 +198,10 @@
 
 - (void) dealloc {
     [_spinner release];
-    [_Op1Label release]; 
-    [_Op2Label release];
-    [_ResultField release];
-    [_Op1Field release];
-    [_Op2Field release];
-    [_add release]; 
-    [_subtract release]; 
-    [_multiply release]; 
-    [_divide release];
+    [_activityInstance dealloc];
     [super dealloc];
 }
 
 
-/* ================================================== Private Methods =============================================== */
-
-- (id<expanz_service_ActivityClient>) activityClient {
-    return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
-}
-
-- (void) sendDeltaForField:(UITextField*)textField {   
-    Field* field = [self modelFor:textField]; 
-    [field didFinishEditWithValue:textField.text];
-    if ([field isDirty]) {
-        [_spinner startAnimating];
-        [[self activityClient] sendDeltaWith:[field asDeltaRequest] delegate:self];    
-    }
-}
-
-- (void) sendMethodInvocation:(NSString*)methodName {    
-    [self tellKeyboardToClose];
-
-    while ([_activityInstance allowsMethodInvocations] == NO) { 
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        LogDebug(@"Waiting for model synchronization. . . ");
-        usleep(50000); \
-    }
-    MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
-                                              initWithActivityInstance:_activityInstance methodName:methodName]; 
-    [_spinner startAnimating];
-    [[self activityClient] sendMethodInvocationWith:methodRequest delegate:self];
-    [methodRequest release];    
-}
-
-- (expanz_model_Field*) modelFor:(UITextField *)textField {
-    for (RTMethod* method in [self fieldAccessors]) {
-        UITextField* uiComponent; 
-        [method returnValue: &uiComponent sendToTarget: self];
-        if (uiComponent == textField) {
-            LogDebug(@"!!!!!!!!!!!!!!! Got it!!!!!!!!!!!");
-            NSString* selectorName = [method selectorName];
-            NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Field"].location];
-            return [_activityInstance fieldWithId:fieldId]; 
-        }
-    }
-    return nil;
-}
-
-- (NSArray*) fieldAccessors {
-    NSArray* classMethods = [[self class] rt_methods]; 
-    NSMutableArray* fieldAccessors = [[[NSMutableArray alloc] init] autorelease];
-    for (RTMethod* method in classMethods) {
-        if ([[method selectorName] hasSuffix:@"Field"]) {
-            [fieldAccessors addObject:method]; 
-        }        
-    }
-    return fieldAccessors;
-}
-
-- (void) tellKeyboardToClose {
-    [_Op1Field resignFirstResponder]; 
-    [_Op2Field resignFirstResponder];    
-}
 
 @end

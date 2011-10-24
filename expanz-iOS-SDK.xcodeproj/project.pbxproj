@@ -152,10 +152,10 @@
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6B9809F5144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
 		6B9809F6144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
-		6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
-		6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
-		6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
-		6B9E2E75144C3E4500E8297F /* ActivityInstance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */; };
+		6B9E2E72144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
+		6B9E2E73144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
+		6B9E2E74144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
+		6B9E2E75144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
 		6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
@@ -194,6 +194,10 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BF000541454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
+		6BF000551454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
+		6BF000561454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
+		6BF000571454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
 		6BF58B271443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
 		6BF58B2F1443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 		6BF58B361443D67A0063E805 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */; };
@@ -475,7 +479,7 @@
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "../Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
-		6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityInstance.xib; sourceTree = "<group>"; };
+		6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCalculator.xib; sourceTree = "<group>"; };
 		6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../Developer/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
@@ -503,6 +507,8 @@
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BF000521454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_BasicCalculatorViewController.h; sourceTree = "<group>"; };
+		6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_BasicCalculatorViewController.m; sourceTree = "<group>"; };
 		6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
 		6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
 		6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
@@ -736,6 +742,8 @@
 				6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */,
 				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
 				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
+				6BF000521454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.h */,
+				6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
 				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
 			);
@@ -748,7 +756,7 @@
 				6B4F973F144913A500D85040 /* ActivityMenu.xib */,
 				6B4F9740144913A500D85040 /* background.png */,
 				6B4F9741144913A500D85040 /* Login.xib */,
-				6B9E2E71144C3E4500E8297F /* ActivityInstance.xib */,
+				6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1352,7 +1360,7 @@
 				6B4F9749144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974D144913A500D85040 /* background.png in Resources */,
 				6B4F9751144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E75144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B9E2E75144C3E4500E8297F /* BasicCalculator.xib in Resources */,
 				6B8DBB481451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB541451B4F30012DDB7 /* README.markdown in Resources */,
 			);
@@ -1367,7 +1375,7 @@
 				6B4F9746144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974A144913A500D85040 /* background.png in Resources */,
 				6B4F974E144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E72144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B9E2E72144C3E4500E8297F /* BasicCalculator.xib in Resources */,
 				6B8DBB451451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB511451B4F30012DDB7 /* README.markdown in Resources */,
 			);
@@ -1382,7 +1390,7 @@
 				6B4F9747144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974B144913A500D85040 /* background.png in Resources */,
 				6B4F974F144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E73144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B9E2E73144C3E4500E8297F /* BasicCalculator.xib in Resources */,
 				6B8DBB461451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB521451B4F30012DDB7 /* README.markdown in Resources */,
 			);
@@ -1399,7 +1407,7 @@
 				6B4F9748144913A500D85040 /* ActivityMenu.xib in Resources */,
 				6B4F974C144913A500D85040 /* background.png in Resources */,
 				6B4F9750144913A500D85040 /* Login.xib in Resources */,
-				6B9E2E74144C3E4500E8297F /* ActivityInstance.xib in Resources */,
+				6B9E2E74144C3E4500E8297F /* BasicCalculator.xib in Resources */,
 				6B8DBB471451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB531451B4F30012DDB7 /* README.markdown in Resources */,
 			);
@@ -1485,6 +1493,7 @@
 				6B8DBB641451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB681451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6B8DBB6E1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */,
+				6BF000571454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1560,6 +1569,7 @@
 				6B8DBB5D1451B4F30012DDB7 /* RTProperty.m in Sources */,
 				6B8DBB611451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB651451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
+				6BF000541454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,6 +1645,7 @@
 				6B8DBB5E1451B4F30012DDB7 /* RTProperty.m in Sources */,
 				6B8DBB621451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB661451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
+				6BF000551454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1735,6 +1746,7 @@
 				6B8DBB631451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB671451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6B8DBB6D1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */,
+				6BF000561454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,33 +12,61 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_ActivityClient.h"
 @class expanz_model_Activity;
+@class expanz_model_Field;
 
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate>
+@interface expanz_ui_ActivityInstanceViewController : 
+    UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate> {
+    
+@private        
+    NSMutableSet* _uiControls;
+    UITextField* _currentlyEditingField;    
+        
+}
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
-
+@property (nonatomic, readonly) NSSet* uiControls;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-@property (nonatomic, retain) IBOutlet UILabel* Op1Label; 
-@property (nonatomic, retain) IBOutlet UILabel* Op2Label;
-@property (nonatomic, retain) IBOutlet UILabel* ResultField; 
-@property (nonatomic, retain) IBOutlet UITextField* Op1Field; 
-@property (nonatomic, retain) IBOutlet UITextField* Op2Field; 
-@property (nonatomic, retain) IBOutlet UIButton* add; 
-@property (nonatomic, retain) IBOutlet UIButton* subtract;
-@property (nonatomic, retain) IBOutlet UIButton* multiply;
-@property (nonatomic, retain) IBOutlet UIButton* divide; 
 
-
+/**
+ * Initialize a new activity instance view controller with the supplied activity. 
+ */
 -(id) initWithActivity:(expanz_model_Activity*)activity; 
 
-- (IBAction) op1ValueChanged; 
-- (IBAction) o21ValueChanged; 
-- (IBAction) addClicked; 
-- (IBAction) subtractClicked; 
-- (IBAction) multiplyClicked; 
-- (IBAction) divideClicked; 
+/**
+ * Update model with new field value. 
+ */
+- (void) sendDeltaForField:(UITextField*)textField;
 
+/**
+ * Invoke a method on the model. 
+ */
+- (void) sendMethodInvocation:(NSString*)methodName;
+
+/**
+ * Returns the expanz field descriptor for the supplied UIControl. 
+ */
+- (expanz_model_Field*) fieldFor:(UIControl*)uiControl;
+
+/**
+ * The set of UIControls for this activity. 
+ */
+- (NSSet*) uiControls; 
+
+/** 
+ * Returns activity client service. 
+ */
+- (id<expanz_service_ActivityClient>) activityClient;
+
+/**
+ * Enables or disables expanz editable controls. 
+ */
+- (void) setFieldsEnabled:(BOOL)enabled;
+
+/**
+ * Hides or shows expanz editable controls. 
+ */
+- (void) setFieldsHidden:(BOOL)enabled;
 
 @end
 
