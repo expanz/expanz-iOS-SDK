@@ -28,11 +28,22 @@
         _handle = [handle retain];
         _persistentId = [persistentId retain];   
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
+        _messages = [[NSMutableArray alloc] initWithCapacity:10];
     }   
     return self;    
 }
 
 /* ================================================ Interface Methods =============================================== */
+
+- (BOOL) allowsMethodInvocations { 
+    for (Field* field in _fields) {
+        if (field.isDirty) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 - (NSArray*) fields {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"fieldId" ascending:YES] autorelease];
@@ -53,13 +64,13 @@
     return nil;
 }
 
-- (BOOL) allowsMethodInvocations { 
-    for (Field* field in _fields) {
-        if (field.isDirty) {
-            return NO;
-        }
-    }
-    return YES;
+- (NSArray*) messages {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"content" ascending:YES] autorelease];
+    return [_messages sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];             
+}
+
+- (void) addMessage:(expanz_model_Message*)message {
+    [_messages addObject:message];
 }
 
 

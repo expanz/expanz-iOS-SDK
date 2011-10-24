@@ -10,9 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_ui_BasicCalculatorViewController.h"
-#import "expanz_model_Activity.h"
-#import "expanz_service_CreateActivityRequest.h"
-#import "expanz_model_SessionContext.h"
 
 @implementation expanz_ui_BasicCalculatorViewController
 

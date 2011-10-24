@@ -79,7 +79,7 @@
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIKeyboardType">2</int>
+							<int key="IBUIKeyboardType">4</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="1071451801">
@@ -115,7 +115,7 @@
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIKeyboardType">2</int>
+							<int key="IBUIKeyboardType">4</int>
 							<int key="IBUIReturnKeyType">9</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -390,14 +390,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">add</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="77704680"/>
-					</object>
-					<int key="connectionID">42</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">spinner</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="1049013838"/>
@@ -443,6 +435,14 @@
 						<reference key="destination" ref="998187123"/>
 					</object>
 					<int key="connectionID">53</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">add</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="77704680"/>
+					</object>
+					<int key="connectionID">42</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -514,13 +514,13 @@
 							<reference ref="856685073"/>
 							<reference ref="879114617"/>
 							<reference ref="300671392"/>
+							<reference ref="832085158"/>
 							<reference ref="856998409"/>
 							<reference ref="501011349"/>
 							<reference ref="77704680"/>
 							<reference ref="998187123"/>
 							<reference ref="1049013838"/>
 							<reference ref="704461644"/>
-							<reference ref="832085158"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -620,7 +620,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">53</int>
+			<int key="maxID">54</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

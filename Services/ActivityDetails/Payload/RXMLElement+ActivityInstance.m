@@ -12,6 +12,7 @@
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
+#import "expanz_model_Message.h"
 #import "expanz_iOS_SDKExceptions.h"
 
 
@@ -29,7 +30,13 @@
         
         if ([e.tag isEqualToString:@"Field"]) {
             [activityInstance addField:[e asField]];
-        }        
+        } 
+        
+        if ([e.tag isEqualToString:@"Messages"]) {
+            [e iterate:@"*" with: ^(RXMLElement* messageElement) {
+                [activityInstance addMessage:[messageElement asMessage]];
+            }];                         
+        }         
     }];            
     
     return activityInstance;
@@ -51,5 +58,15 @@
     [field setValue:[self attribute:@"value"]];
      return field;
 }
+
+- (Message*) asMessage {
+    if (![self.tag isEqualToString:@"Message"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a Message."];
+    }
+    MessageType messageType = [[self attribute:@"type"] isEqualToString:@"Warning"] ? 
+                                MessageTypeWarning : MessageTypeError;
+    return [[[Message alloc] initWithMessageType:messageType content:[self text]] autorelease];
+}
+    
 
 @end

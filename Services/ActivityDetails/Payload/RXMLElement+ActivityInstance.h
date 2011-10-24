@@ -12,8 +12,7 @@
 #import "RXMLElement.h"
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field; 
-
-@class expanz_model_Field;
+@class expanz_model_Message;
 
 /**
  * Adds methods to RXMLElement for parsing results of XmlPostActivityClient invocations. 
@@ -22,5 +21,6 @@
 
 - (expanz_model_ActivityInstance*) asActivityInstance;
 - (expanz_model_Field*) asField; 
+- (expanz_model_Message*) asMessage;
 
 @end

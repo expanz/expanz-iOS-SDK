@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="0" responseTime="0" xmlns="">
+            <Activity activityHandle="634550749880108014.97">
+                <Messages>
+                    <Message type="Warning" key="1013" source="Op1" messageSource="Framework">The
+                        value adsfa of Operand 1 in Calc is not a valid number.</Message>
+                </Messages>
+                <Field id="Op1" value="0"/>
+            </Activity>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8197/SessionManager1#634550749857433684:48</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

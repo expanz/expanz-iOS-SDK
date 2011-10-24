@@ -11,6 +11,7 @@
 
 #import "expanz_model_Activity.h"
 @class expanz_model_Field;
+@class expanz_model_Message;
 
 /**
  * Represents an activity in progress. 
@@ -19,12 +20,14 @@
     
 @private
     NSMutableSet* _fields;         
+    NSMutableArray* _messages;
 }
 
 
 @property (nonatomic, readonly) NSString* handle; 
 @property (nonatomic, readonly) NSString* persistentId;
 @property (nonatomic, readonly) NSArray* fields; 
+@property (nonatomic, readonly) NSArray* messages; 
 
 /**
  * Initializes new instance with the supplied parameters. 
@@ -35,6 +38,11 @@
  * Adds a field to the instance. 
  */
 - (void) addField:(expanz_model_Field*)field; 
+
+/** 
+ * Adds a message to the instance. 
+ */
+- (void) addMessage:(expanz_model_Message*)message; 
 
 /**
  * Returns the field matching the supplied fieldId, or nil. 

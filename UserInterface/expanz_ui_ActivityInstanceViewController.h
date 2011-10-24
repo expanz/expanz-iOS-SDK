@@ -34,7 +34,7 @@
 -(id) initWithActivity:(expanz_model_Activity*)activity; 
 
 /**
- * Update model with new field value. 
+ * Request model to update with new field value. 
  */
 - (void) sendDeltaForField:(UITextField*)textField;
 
