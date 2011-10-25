@@ -27,8 +27,9 @@
 
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
-- (UIControl*) controlFor:(expanz_model_Field*)field; 
+- (UIControl*) textControlFor:(expanz_model_Field*)field; 
 - (expanz_model_Field*) fieldFor:(UIControl*)control;
+- (void) updateUIControlsFromModelValues; 
 
 
 @end

@@ -66,11 +66,24 @@ describe(@"Mapping UIControls to expanz_model_Field items in an ActivityInstance
     
     it(@"should map the other way - return a UIControl for an expanz_model_field. ", ^{
         Field* field = [modelAdapter.activityInstance fieldWithId:@"Op2"]; 
-        UIControl* control = [modelAdapter controlFor:field]; 
-        assertThat(control, notNilValue());
-        LogDebug(@"Control: %@", control); 
+        id textControl = [modelAdapter textControlFor:field]; 
+        assertThat(textControl, notNilValue());
+        LogDebug(@"Text Control: %@", textControl); 
     });
     
+});
+
+describe(@"Updating user interface controls with model values.", ^{
+
+    it(@"should update each user interface control with the corresponding model value. ", ^{
+        
+        Field* op1 = [modelAdapter.activityInstance fieldWithId:@"Op1"]; 
+        op1.value = @"9999"; 
+        
+        [modelAdapter updateUIControlsFromModelValues]; 
+        assertThat(controller.Op1Field.text, equalTo(@"9999"));
+        
+    });
 });
 
 

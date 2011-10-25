@@ -197,6 +197,7 @@
 		6BD51BB61456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
 		6BD51BB71456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
 		6BD51BB814568B1D00B83E68 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0005F145537C3006E024F /* MessageSpec.m */; };
+		6BD51BB9145694C100B83E68 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BF000541454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
 		6BF000551454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
 		6BF000561454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
@@ -1570,6 +1571,7 @@
 				6BF00074145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
 				6BF00078145580B2006E024F /* ModelAdapterSpec.m in Sources */,
 				6BD51BB814568B1D00B83E68 /* MessageSpec.m in Sources */,
+				6BD51BB9145694C100B83E68 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

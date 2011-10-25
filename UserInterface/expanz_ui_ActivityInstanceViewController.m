@@ -125,14 +125,10 @@
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self]; 
-    }                   
+    } 
+    
     for (Field* field in activityInstance.fields) {                
-        [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];            
-        SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@Field", field.fieldId]);            
-        RTMethod* method = [[self class] rt_methodForSelector: sel];                                
-        UITextField* uiComponent; 
-        [method returnValue: &uiComponent sendToTarget: self];
-        [uiComponent setText:[field value]];                                
+        [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];                    
     }
     for (Message* message in activityInstance.messages) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message.messageTypeAsString message:message.content 
@@ -140,6 +136,7 @@
         [alert show];
         [alert release];
     }
+    [_modelAdapter updateUIControlsFromModelValues]; 
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

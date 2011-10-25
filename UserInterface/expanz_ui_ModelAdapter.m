@@ -47,13 +47,21 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (UIControl*) controlFor:(Field*)field {
+- (UIControl*) textControlFor:(Field*)field {
     return [_mappings objectForKey:field.fieldId]; 
 }
 
 - (Field*) fieldFor:(UIControl*)control {
     NSArray* keys = [_mappings allKeysForObject:control]; 
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
+}
+
+- (void) updateUIControlsFromModelValues {
+    for (NSString* fieldId in [_mappings allKeys]) {
+        Field* field = [_activityInstance fieldWithId:fieldId]; 
+        id textControl = [_mappings valueForKey:fieldId];         
+        [textControl setText: field.value];         
+    }    
 }
 
 

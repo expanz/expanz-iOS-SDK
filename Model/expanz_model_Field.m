@@ -58,6 +58,7 @@
     }
     //Field is clean now, weather the server has a new validated value or not. 
     _dirty = NO;
+    LogDebug(@"Synchronized field '%@' with model instance value", _fieldId);
 }
 
 
