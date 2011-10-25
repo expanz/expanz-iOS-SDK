@@ -135,8 +135,8 @@
         [uiComponent setText:[field value]];                                
     }
     for (Message* message in activityInstance.messages) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"zzz" message:message.content delegate:self 
-                                              cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message.messageTypeAsString message:message.content 
+                                                       delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         [alert release];
     }

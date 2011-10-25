@@ -158,7 +158,6 @@
 		6B9E2E78144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E79144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B9E2E7A144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
-		6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BA75BA0144C037A007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
@@ -1556,7 +1555,6 @@
 				6B4F9755144913A500D85040 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B4F9759144913A500D85040 /* expanz_ui_LoginViewController.m in Sources */,
 				6B4F9760144914E600D85040 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6B9E2E7B144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BFD3996144E8A190086EA9A /* expanz_service_DeltaRequest.m in Sources */,
 				6BFD399B144EA6450086EA9A /* TestActivityClientDelegate.m in Sources */,
 				6BFD39A7144EF3170086EA9A /* expanz_model_Field+DeltaRequest.m in Sources */,
