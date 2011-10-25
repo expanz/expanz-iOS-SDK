@@ -16,6 +16,7 @@
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 
+#define kUIControlIsNilMessage @"The UI control named '%@' is nil. Has the connection been made in Interface Builder?"
 
 /* ================================================================================================================== */
 @implementation expanz_ui_ModelAdapter
@@ -34,10 +35,13 @@
         for (RTMethod* method in classMethods) {
             NSString* selectorName = [method selectorName];            
             if ([_activityInstance fieldWithId:selectorName]) {            
-                UIControl* uiComponent; 
-                [method returnValue: &uiComponent sendToTarget: viewController]; 
+                UIControl* uiControl; 
+                [method returnValue: &uiControl sendToTarget: viewController]; 
+                if (uiControl == nil) {
+                    [NSException raise:NSObjectNotAvailableException format:kUIControlIsNilMessage, selectorName]; 
+                }
                 LogDebug(@"Mapping field: '%@' to UIControl.", selectorName);
-                [_fieldMappings setObject:uiComponent forKey:selectorName];                 
+                [_fieldMappings setObject:uiControl forKey:selectorName];                 
             }            
         }                
     }
@@ -59,7 +63,8 @@
     for (NSString* fieldId in [_fieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId]; 
         id textControl = [_fieldMappings valueForKey:fieldId];         
-        [textControl setText: field.value];         
+        [textControl setText: field.value];      
+        [textControl setEnabled:!field.isDisabled];
     }    
 }
 
