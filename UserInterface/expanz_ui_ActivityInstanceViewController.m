@@ -18,6 +18,7 @@
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_ui_ModelAdapter.h"
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 
@@ -33,7 +34,7 @@
 -(id) initWithActivity:(Activity*)activity {
     self = [super initWithNibName:@"BasicCalculator" bundle:[NSBundle mainBundle]];
     if (self) {
-        self.title = activity.title;        
+        self.title = activity.title;    
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
                                                         sessionToken:[SessionContext globalContext].sessionToken];        
         [[self activityClient] createActivityWith:activityRequest delegate:self];
@@ -51,7 +52,7 @@
 }
 
 - (void) sendDeltaForField:(UITextField*)textField {   
-    Field* field = [self fieldFor:textField]; 
+    Field* field = [_modelAdapter fieldFor:textField]; 
     [field didFinishEditWithValue:textField.text];
     if ([field isDirty]) {
         [_spinner startAnimating];
@@ -75,54 +76,15 @@
 }
 
 
-- (NSArray*) fieldAccessors {
-    NSArray* classMethods = [[self class] rt_methods]; 
-    NSMutableArray* fieldAccessors = [[[NSMutableArray alloc] init] autorelease];
-    for (RTMethod* method in classMethods) {
-        if ([[method selectorName] hasSuffix:@"Field"]) {
-            [fieldAccessors addObject:method]; 
-        }        
-    }
-    return fieldAccessors;
-}
-
-- (expanz_model_Field*) fieldFor:(UITextField *)textField {
-    for (RTMethod* method in [self fieldAccessors]) {
-        UITextField* uiComponent; 
-        [method returnValue: &uiComponent sendToTarget: self];
-        if (uiComponent == textField) {
-            NSString* selectorName = [method selectorName];
-            NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Field"].location];
-            return [_activityInstance fieldWithId:fieldId]; 
-        }
-    }
-    return nil;
-}
-
-- (NSSet*) uiControls {
-    if (_uiControls == nil) {
-        _uiControls = [[NSMutableSet alloc] initWithCapacity:[_activityInstance.fields count]];
-        NSArray* classMethods = [[self class] rt_methods]; 
-        for (RTMethod* method in classMethods) {
-            if ([[method selectorName] hasSuffix:@"Field"]) {
-                UIControl* uiComponent; 
-                [method returnValue: &uiComponent sendToTarget: self];
-                [_uiControls addObject:uiComponent];                 
-            }            
-        }
-    }
-    return _uiControls;
-}
-
 - (void) setFieldsEnabled:(BOOL)enabled {
-    for (UIControl* uiControl in [self uiControls]) {
+    for (UIControl* uiControl in [_modelAdapter uiControls]) {
         [uiControl setEnabled:enabled];
     }
 }
 
-- (void) setFieldsHidden:(BOOL)enabled {
-    for (UIControl* uiControl in [self uiControls]) {
-        [uiControl setHidden:enabled];
+- (void) setFieldsHidden:(BOOL)hidden {
+    for (UIControl* uiControl in [_modelAdapter uiControls]) {
+        [uiControl setHidden:hidden];
     }
 }
 
@@ -174,7 +136,8 @@
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
-        _activityInstance = [activityInstance retain];    
+        _activityInstance = [activityInstance retain];
+        _modelAdapter = [[ModelAdapter alloc] initWithViewController:self]; 
         [self setFieldsHidden:NO];
     }                   
     for (Field* field in activityInstance.fields) {                
@@ -203,7 +166,8 @@
 
 - (void) dealloc {
     [_spinner release];
-    [_activityInstance dealloc];
+    [_activityInstance release];
+    [_modelAdapter release]; 
     [super dealloc];
 }
 

@@ -13,19 +13,19 @@
 #import "expanz_service_ActivityClient.h"
 @class expanz_model_Activity;
 @class expanz_model_Field;
+@class expanz_ui_ModelAdapter;
 
 
 @interface expanz_ui_ActivityInstanceViewController : 
     UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate> {
     
 @private        
-    NSMutableSet* _uiControls;
+    expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;    
         
 }
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
-@property (nonatomic, readonly) NSSet* uiControls;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 
 /**
@@ -43,16 +43,6 @@
  */
 - (void) sendMethodInvocation:(NSString*)methodName;
 
-/**
- * Returns the expanz field descriptor for the supplied UIControl. 
- */
-- (expanz_model_Field*) fieldFor:(UIControl*)uiControl;
-
-/**
- * The set of UIControls for this activity. 
- */
-- (NSSet*) uiControls; 
-
 /** 
  * Returns activity client service. 
  */
@@ -66,7 +56,7 @@
 /**
  * Hides or shows expanz editable controls. 
  */
-- (void) setFieldsHidden:(BOOL)enabled;
+- (void) setFieldsHidden:(BOOL)hidden;
 
 @end
 

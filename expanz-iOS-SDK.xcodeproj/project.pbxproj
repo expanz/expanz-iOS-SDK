@@ -110,6 +110,8 @@
 		6B70676F14470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B70677014470309000A1CAE /* TestLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */; };
 		6B706771144704A3000A1CAE /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */; };
+		6B886D201456495E00D2AFE0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B886D1F1456495E00D2AFE0 /* libOCMock.a */; };
+		6B886D211456495E00D2AFE0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B886D1F1456495E00D2AFE0 /* libOCMock.a */; };
 		6B8DBB451451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
 		6B8DBB461451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
 		6B8DBB471451B4F30012DDB7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DBB321451B4F30012DDB7 /* LICENSE */; };
@@ -149,8 +151,6 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6B9809F5144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
-		6B9809F6144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */; };
 		6B9E2E72144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
 		6B9E2E73144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
 		6B9E2E74144C3E4500E8297F /* BasicCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */; };
@@ -193,6 +193,10 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BD51BB31456527F00B83E68 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD51BB21456527F00B83E68 /* Cedar-iPhone.framework */; };
+		6BD51BB41456527F00B83E68 /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD51BB21456527F00B83E68 /* Cedar-iPhone.framework */; };
+		6BD51BB61456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
+		6BD51BB71456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
 		6BF000541454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
 		6BF000551454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
 		6BF000561454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */; };
@@ -206,7 +210,12 @@
 		6BF0006B145542FA006E024F /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF00069145542FA006E024F /* ActivityWithMessage.xml */; };
 		6BF0006C145542FA006E024F /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF00069145542FA006E024F /* ActivityWithMessage.xml */; };
 		6BF0006D145542FA006E024F /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF00069145542FA006E024F /* ActivityWithMessage.xml */; };
-		6BF0006E14554C61006E024F /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD3975144E6BDD0086EA9A /* RXMLElement+ActivityInstanceSpec.m */; };
+		6BF00071145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */; };
+		6BF00072145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */; };
+		6BF00073145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */; };
+		6BF00074145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */; };
+		6BF00077145580B2006E024F /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00076145580B2006E024F /* ModelAdapterSpec.m */; };
+		6BF00078145580B2006E024F /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF00076145580B2006E024F /* ModelAdapterSpec.m */; };
 		6BF58B271443C8EB0063E805 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */; };
 		6BF58B2F1443CD060063E805 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B2E1443CD060063E805 /* expanz_service_CreateActivityRequest.m */; };
 		6BF58B361443D67A0063E805 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58B351443D67A0063E805 /* expanz_service_XmlPostActivityClient.m */; };
@@ -463,6 +472,13 @@
 		6B70676E14470309000A1CAE /* TestLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginClientDelegate.m; sourceTree = "<group>"; };
 		6B750249143C619900444AA9 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
 		6B86AD8C1435B65400AA7FD5 /* XmlPostLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientIntegration.m; sourceTree = "<group>"; };
+		6B886D1F1456495E00D2AFE0 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMock/libOCMock.a; sourceTree = "<group>"; };
+		6B886D251456499B00D2AFE0 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		6B886D261456499B00D2AFE0 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		6B886D271456499B00D2AFE0 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		6B886D281456499B00D2AFE0 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		6B886D291456499B00D2AFE0 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		6B886D2A1456499B00D2AFE0 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		6B8DBB321451B4F30012DDB7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6B8DBB341451B4F30012DDB7 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
 		6B8DBB351451B4F30012DDB7 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
@@ -487,7 +503,6 @@
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "../Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = "<group>"; };
 		6B9E2E71144C3E4500E8297F /* BasicCalculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCalculator.xib; sourceTree = "<group>"; };
 		6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
@@ -516,12 +531,17 @@
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BD51BB21456527F00B83E68 /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = SOURCE_ROOT; };
+		6BD51BB51456605300B83E68 /* ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityInstance.xml; sourceTree = "<group>"; };
 		6BF000521454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_BasicCalculatorViewController.h; sourceTree = "<group>"; };
 		6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_BasicCalculatorViewController.m; sourceTree = "<group>"; };
 		6BF0005914553486006E024F /* expanz_model_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Message.h; sourceTree = "<group>"; };
 		6BF0005A14553486006E024F /* expanz_model_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Message.m; sourceTree = "<group>"; };
 		6BF0005F145537C3006E024F /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSpec.m; sourceTree = "<group>"; };
 		6BF00069145542FA006E024F /* ActivityWithMessage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithMessage.xml; sourceTree = "<group>"; };
+		6BF0006F145575DD006E024F /* expanz_ui_ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ModelAdapter.h; sourceTree = "<group>"; };
+		6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ModelAdapter.m; sourceTree = "<group>"; };
+		6BF00076145580B2006E024F /* ModelAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAdapterSpec.m; sourceTree = "<group>"; };
 		6BF58B1C1443BCDA0063E805 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
 		6BF58B201443C8EB0063E805 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
 		6BF58B211443C8EB0063E805 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
@@ -665,7 +685,8 @@
 				6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */,
 				6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */,
 				6B0E25B91445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
-				6B9809F6144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */,
+				6B886D211456495E00D2AFE0 /* libOCMock.a in Frameworks */,
+				6BD51BB41456527F00B83E68 /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,7 +741,8 @@
 				6BF58BC014441E320063E805 /* Foundation.framework in Frameworks */,
 				6BF58BC114441E320063E805 /* CoreGraphics.framework in Frameworks */,
 				6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */,
-				6B9809F5144D34D900590B8D /* Cedar-iPhone.framework in Frameworks */,
+				6B886D201456495E00D2AFE0 /* libOCMock.a in Frameworks */,
+				6BD51BB31456527F00B83E68 /* Cedar-iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +781,8 @@
 				6BF000531454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
 				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
+				6BF0006F145575DD006E024F /* expanz_ui_ModelAdapter.h */,
+				6BF00070145575DD006E024F /* expanz_ui_ModelAdapter.m */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -806,6 +830,28 @@
 				6B68DDB0143EC52B008A1D62 /* XmlPostSessionDataClientIntegration.m */,
 			);
 			path = Integration;
+			sourceTree = "<group>";
+		};
+		6B886D231456499B00D2AFE0 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6B886D241456499B00D2AFE0 /* OCMock */,
+			);
+			name = Headers;
+			path = OCMock/Headers;
+			sourceTree = "<group>";
+		};
+		6B886D241456499B00D2AFE0 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				6B886D251456499B00D2AFE0 /* NSNotificationCenter+OCMAdditions.h */,
+				6B886D261456499B00D2AFE0 /* OCMArg.h */,
+				6B886D271456499B00D2AFE0 /* OCMConstraint.h */,
+				6B886D281456499B00D2AFE0 /* OCMock.h */,
+				6B886D291456499B00D2AFE0 /* OCMockObject.h */,
+				6B886D2A1456499B00D2AFE0 /* OCMockRecorder.h */,
+			);
+			path = OCMock;
 			sourceTree = "<group>";
 		};
 		6B8DBB301451B4F30012DDB7 /* MAObjCRuntime */ = {
@@ -888,6 +934,8 @@
 		6BB679E3143D522400B9EC94 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6B886D231456499B00D2AFE0 /* Headers */,
+				6B886D1F1456495E00D2AFE0 /* libOCMock.a */,
 			);
 			name = Libraries;
 			path = Dependencies/Libraries;
@@ -919,7 +967,6 @@
 		6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				6BCAFB9A14317B1C00575280 /* Frameworks */,
 				6BC1606D1436AF3500E166F6 /* InfoPlist.strings */,
 				6BC1606F1436AF3500E166F6 /* MainWindow.xib */,
 				6BC160711436AF3500E166F6 /* expanz-iOS-SDK-Info.plist */,
@@ -942,6 +989,7 @@
 				6B100BEA143E739000EABC94 /* Configuration */,
 				6BF58C20144420810063E805 /* External */,
 				6BC1606A1436AF3500E166F6 /* expanz-iOS-SDK */,
+				6BCAFB9A14317B1C00575280 /* Frameworks */,
 				6BB679E3143D522400B9EC94 /* Libraries */,
 				6BB77B1F14445AA9007CA74B /* Model */,
 				6BCAFB9814317B1C00575280 /* Products */,
@@ -966,7 +1014,7 @@
 		6BCAFB9A14317B1C00575280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B9809F4144D34D900590B8D /* Cedar-iPhone.framework */,
+				6BD51BB21456527F00B83E68 /* Cedar-iPhone.framework */,
 				6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */,
 				6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */,
 				6B039BA21435D81B0036F9B5 /* QuartzCore.framework */,
@@ -981,6 +1029,7 @@
 				6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			path = "expanz-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		6BF58B1A1443B7590063E805 /* ActivityDetails */ = {
@@ -1237,8 +1286,9 @@
 			isa = PBXGroup;
 			children = (
 				6BFD397B144E6BDD0086EA9A /* Components */,
-				6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */,
 				6B8DBB6A1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m */,
+				6BFD397D144E6BDD0086EA9A /* LoginViewControllerSpec.m */,
+				6BF00076145580B2006E024F /* ModelAdapterSpec.m */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -1255,6 +1305,7 @@
 			isa = PBXGroup;
 			children = (
 				6BFE421A1447A4D10000FA7D /* ActivityDetails.xml */,
+				6BD51BB51456605300B83E68 /* ActivityInstance.xml */,
 				6BF00069145542FA006E024F /* ActivityWithMessage.xml */,
 				6BFE421B1447A4D10000FA7D /* Dodgy.xml */,
 				6BFE421C1447A4D10000FA7D /* SessionData.xml */,
@@ -1381,6 +1432,7 @@
 				6B8DBB481451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB541451B4F30012DDB7 /* README.markdown in Resources */,
 				6BF0006D145542FA006E024F /* ActivityWithMessage.xml in Resources */,
+				6BD51BB71456605300B83E68 /* ActivityInstance.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1431,6 +1483,7 @@
 				6B8DBB471451B4F30012DDB7 /* LICENSE in Resources */,
 				6B8DBB531451B4F30012DDB7 /* README.markdown in Resources */,
 				6BF0006C145542FA006E024F /* ActivityWithMessage.xml in Resources */,
+				6BD51BB61456605300B83E68 /* ActivityInstance.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1515,7 +1568,8 @@
 				6B8DBB681451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6BF000571454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 				6BF0005E14553486006E024F /* expanz_model_Message.m in Sources */,
-				6BF0006E14554C61006E024F /* RXMLElement+ActivityInstanceSpec.m in Sources */,
+				6BF00074145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
+				6BF00078145580B2006E024F /* ModelAdapterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,6 +1647,7 @@
 				6B8DBB651451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6BF000541454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 				6BF0005B14553486006E024F /* expanz_model_Message.m in Sources */,
+				6BF00071145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1670,6 +1725,7 @@
 				6B8DBB661451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6BF000551454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 				6BF0005C14553486006E024F /* expanz_model_Message.m in Sources */,
+				6BF00072145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1773,6 +1829,8 @@
 				6BF000561454E9AC006E024F /* expanz_ui_BasicCalculatorViewController.m in Sources */,
 				6BF0005D14553486006E024F /* expanz_model_Message.m in Sources */,
 				6BF00062145537C3006E024F /* MessageSpec.m in Sources */,
+				6BF00073145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
+				6BF00077145580B2006E024F /* ModelAdapterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1840,8 +1898,8 @@
 				INFOPLIST_FILE = "Tests/TestRunner/TestRunner-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
@@ -1879,8 +1937,8 @@
 				INFOPLIST_FILE = "Tests/TestRunner/TestRunner-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -2075,8 +2133,8 @@
 				INFOPLIST_FILE = "Tests/TestRunner/TestRunner-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
@@ -2117,8 +2175,8 @@
 				INFOPLIST_FILE = "Tests/TestRunner/TestRunner-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",

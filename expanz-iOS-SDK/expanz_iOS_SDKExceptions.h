@@ -19,3 +19,8 @@
  */
 #define ExXmlValidationException       @"ExXmlValidationException"
 
+
+/** 
+ * Model not correctly bound to UI. 
+ */
+#define ExModelBindingException        @"ExModelBindingException"
