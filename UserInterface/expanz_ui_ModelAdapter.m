@@ -29,16 +29,15 @@
     self = [super init]; 
     if (self) {
         _activityInstance = [viewController.activityInstance retain];
-        _mappings = [[NSMutableDictionary alloc] init];
+        _fieldMappings = [[NSMutableDictionary alloc] init];
         NSArray* classMethods = [[viewController class] rt_methods]; 
         for (RTMethod* method in classMethods) {
-            NSString* selectorName = [method selectorName];
-            if ([selectorName hasSuffix:@"Field"]) {
-                NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Field"].location]; 
+            NSString* selectorName = [method selectorName];            
+            if ([_activityInstance fieldWithId:selectorName]) {            
                 UIControl* uiComponent; 
                 [method returnValue: &uiComponent sendToTarget: viewController]; 
-                LogDebug(@"Mapping field: '%@' to UIControl.", fieldId);
-                [_mappings setObject:uiComponent forKey:fieldId];                 
+                LogDebug(@"Mapping field: '%@' to UIControl.", selectorName);
+                [_fieldMappings setObject:uiComponent forKey:selectorName];                 
             }            
         }                
     }
@@ -48,18 +47,18 @@
 /* ================================================ Interface Methods =============================================== */
 
 - (UIControl*) textControlFor:(Field*)field {
-    return [_mappings objectForKey:field.fieldId]; 
+    return [_fieldMappings objectForKey:field.fieldId]; 
 }
 
 - (Field*) fieldFor:(UIControl*)control {
-    NSArray* keys = [_mappings allKeysForObject:control]; 
+    NSArray* keys = [_fieldMappings allKeysForObject:control]; 
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
 }
 
-- (void) updateUIControlsFromModelValues {
-    for (NSString* fieldId in [_mappings allKeys]) {
+- (void) updateUIControlsWithModelValues {
+    for (NSString* fieldId in [_fieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId]; 
-        id textControl = [_mappings valueForKey:fieldId];         
+        id textControl = [_fieldMappings valueForKey:fieldId];         
         [textControl setText: field.value];         
     }    
 }
@@ -69,7 +68,7 @@
 
 - (void) dealloc {
     [_activityInstance release];
-    [_mappings release]; 
+    [_fieldMappings release]; 
     [super dealloc];    
 }
 

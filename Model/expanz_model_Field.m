@@ -18,7 +18,10 @@
 @synthesize nullable = _nullable; 
 @synthesize defaultValue = _defaultValue;
 @synthesize datatype = _datatype;
+@synthesize disabled = _disabled;
 @synthesize dirty = _dirty;
+@synthesize label = _label;
+@synthesize hint = _hint;
 
 //Read-write properties. 
 @synthesize parentActivity = _parentActivity;
@@ -28,7 +31,7 @@
 /* ================================================== Constructors ================================================== */
 
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
-              dataType:(NSString*)datatype {
+              dataType:(NSString*)datatype label:(NSString*)label hint:(NSString*)hint {
     
     self = [super init]; 
     if (self) {
@@ -36,6 +39,8 @@
         _nullable = nullable; 
         _defaultValue = [defaultValue retain]; 
         _datatype = [datatype retain];         
+        _label = [label retain];
+        _hint = [hint retain];
     }
     return self; 
 }
@@ -68,6 +73,8 @@
     [_fieldId release]; 
     [_defaultValue release]; 
     [_datatype release];
+    [_label release]; 
+    [_hint release];
     [super dealloc];
 }
 

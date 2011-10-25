@@ -44,14 +44,16 @@ describe(@"Relationship to fields", ^{
     });
     
     it(@"should allow field references to be added.", ^{
-        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" 
+                                                label:@"Operand 1" hint:@"Enter a value for operand 1"];
         [instance addField:field]; 
         [field release];
         assertThatInt([instance.fields count], equalToInt(1)); 
     });
     
     it(@"should allow a stored field to be retrieved by fieldId", ^{
-        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" 
+                                                label:@"Operand 1" hint:@"Enter a value for operand 1"];
         [instance addField:field]; 
         [field release];
         
@@ -71,7 +73,8 @@ describe(@"Method invocations. . . ", ^{
         assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
         
         //Yes, if it has one field, that is synched with the server. 
-        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+        Field* field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" 
+                                                label:@"Operand 1" hint:@"Enter a value for operand 1"];
         //Field is clean. 
         assertThatBool(field.isDirty, equalToBool(NO));
         [instance addField:field];
@@ -80,7 +83,8 @@ describe(@"Method invocations. . . ", ^{
         
         
         //No, if one ore more fieds are dirty. 
-        Field* another = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"];
+        Field* another = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" 
+                                                  label:@"Operand 1" hint:@"Enter a value for operand 1"];
         //Make the field dirty. 
         [another didFinishEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
         [instance addField:another];

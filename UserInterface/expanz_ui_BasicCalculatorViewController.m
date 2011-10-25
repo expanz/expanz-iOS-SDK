@@ -15,9 +15,9 @@
 
 @synthesize Op1Label = _Op1Label;
 @synthesize Op2Label = _Op2Label;
-@synthesize ResultField = _ResultField;
-@synthesize Op1Field = _Op1Field;
-@synthesize Op2Field = _Op2Field;
+@synthesize Result = _ResultField;
+@synthesize Op1 = _Op1Field;
+@synthesize Op2 = _Op2Field;
 @synthesize add = _add; 
 @synthesize subtract = _subtract;
 @synthesize multiply = _multiply;

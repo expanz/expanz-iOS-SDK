@@ -17,19 +17,18 @@
 @interface expanz_ui_ModelAdapter : NSObject {
     
 @private    
-    NSMutableDictionary* _mappings;
+    NSMutableDictionary* _fieldMappings;
     
 }
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance; 
 
 
-
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
 - (UIControl*) textControlFor:(expanz_model_Field*)field; 
 - (expanz_model_Field*) fieldFor:(UIControl*)control;
-- (void) updateUIControlsFromModelValues; 
+- (void) updateUIControlsWithModelValues; 
 
 
 @end

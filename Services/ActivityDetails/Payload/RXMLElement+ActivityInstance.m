@@ -47,16 +47,17 @@
         [NSException raise:ExXmlValidationException format:@"Element is not a Field."];
     }
     NSString* fieldId = [self attribute:@"id"]; 
-    NSString* nullableAttr = [self attribute:@"nullable"];    
-    BOOL nullable = (nullableAttr != nil && ![nullableAttr isEqualToString:@"0"]);
+    BOOL nullable = [[self attribute:@"nullable"] boolValue];    
     NSString* defaultValue = [self attribute:@"null"]; 
     NSString* datatype = [self attribute:@"datatype"];
-    
+    NSString* label = [self attribute:@"label"];
+    NSString* hint = [self attribute:@"hint"];
     
     Field* field = [[[Field alloc] initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue 
-                                          dataType:datatype] autorelease];    
+                                          dataType:datatype label:label hint:hint] autorelease];    
     [field setValue:[self attribute:@"value"]];
-     return field;
+    [field setDisabled:[[self attribute:@"disabled"] boolValue]];
+    return field;
 }
 
 - (Message*) asMessage {

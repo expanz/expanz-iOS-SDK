@@ -27,11 +27,8 @@
         [NSException raise:ExXmlValidationException format:@"Element is not a Menu."];
     }
     
-    NSString* workflowTraysAttr = [self attribute:@"hasWorkflowTrays"];
-    NSString* companyRolesAttr = [self attribute:@"canChangeCompanyRole"];
-    
-    BOOL hasWorkFlowTrays = (workflowTraysAttr != nil && ![workflowTraysAttr isEqualToString:@"0"]);
-    BOOL canChangeCompanyRoles = (companyRolesAttr != nil && ![companyRolesAttr isEqualToString:@"0"]);
+    BOOL hasWorkFlowTrays = [[self attribute:@"hasWorkflowTrays"] boolValue];
+    BOOL canChangeCompanyRoles = [[self attribute:@"canChangeCompanyRole"] boolValue];
             
     Menu* menu = [[[Menu alloc] initWithHasWorkFlowTrays:hasWorkFlowTrays 
                                     canChangeCompanyRole:canChangeCompanyRoles] autorelease]; 

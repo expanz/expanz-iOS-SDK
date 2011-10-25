@@ -136,7 +136,7 @@
         [alert show];
         [alert release];
     }
-    [_modelAdapter updateUIControlsFromModelValues]; 
+    [_modelAdapter updateUIControlsWithModelValues]; 
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

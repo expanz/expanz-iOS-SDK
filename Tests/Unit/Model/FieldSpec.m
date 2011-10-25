@@ -17,7 +17,7 @@ SPEC_BEGIN(FieldSpec)
 __block Field* field; 
 
 beforeEach(^{
-    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number"]; 
+    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:nil hint:nil]; 
 });
 
 describe(@"Object creation.", ^{

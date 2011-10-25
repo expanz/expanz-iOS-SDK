@@ -15,9 +15,9 @@
 
 @property (nonatomic, retain) IBOutlet UILabel* Op1Label; 
 @property (nonatomic, retain) IBOutlet UILabel* Op2Label;
-@property (nonatomic, retain) IBOutlet UILabel* ResultField; 
-@property (nonatomic, retain) IBOutlet UITextField* Op1Field; 
-@property (nonatomic, retain) IBOutlet UITextField* Op2Field; 
+@property (nonatomic, retain) IBOutlet UILabel* Result; 
+@property (nonatomic, retain) IBOutlet UITextField* Op1; 
+@property (nonatomic, retain) IBOutlet UITextField* Op2; 
 @property (nonatomic, retain) IBOutlet UIButton* add; 
 @property (nonatomic, retain) IBOutlet UIButton* subtract;
 @property (nonatomic, retain) IBOutlet UIButton* multiply;

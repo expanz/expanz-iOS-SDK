@@ -35,17 +35,28 @@
 /** Indicates the client model is not yet synchronized with the server model. */
 @property (nonatomic, readonly, getter = isDirty) BOOL dirty; 
 
+/** Label to display next to the field */
+@property (nonatomic, readonly) NSString* label; 
+
+/** Additional user instructions for the field. */
+@property (nonatomic, readonly) NSString* hint; 
+
+
+
 /** Reference to the activity this field belongs to. */
 @property (nonatomic, readwrite, assign) expanz_model_ActivityInstance* parentActivity;
 
 /** The value held by this field. */
 @property (nonatomic, readwrite, retain) NSString* value;
 
+/** Weather the field allows user input */
+@property (nonatomic, readwrite, getter = isDisabled) BOOL disabled;
+
 
 /* ================================================================================================================== */
 
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
-              dataType:(NSString*)datatype; 
+              dataType:(NSString*)datatype label:(NSString*)label hint:(NSString*)hint;
 
 /**
  * Invoked when value is changed as a result of user edit. Marks the field as dirty. 
