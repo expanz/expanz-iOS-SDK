@@ -29,7 +29,6 @@
 
 - (UIControl*) controlFor:(expanz_model_Field*)field; 
 - (expanz_model_Field*) fieldFor:(UIControl*)control;
-- (NSArray*) uiControls;
 
 
 @end

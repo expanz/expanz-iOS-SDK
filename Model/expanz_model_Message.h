@@ -17,6 +17,7 @@ typedef enum {
     MessageTypeError
 } MessageType;
 
+
 /* ================================================================================================================== */
 
 /** 
@@ -25,6 +26,7 @@ typedef enum {
 @interface expanz_model_Message : NSObject
 
 @property (nonatomic, readonly) MessageType messageType; 
+@property (nonatomic, readonly) NSString* messageTypeAsString; 
 @property (nonatomic, readonly) NSString* content; 
 
 

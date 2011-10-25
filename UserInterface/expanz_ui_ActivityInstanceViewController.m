@@ -76,18 +76,6 @@
 }
 
 
-- (void) setFieldsEnabled:(BOOL)enabled {
-    for (UIControl* uiControl in [_modelAdapter uiControls]) {
-        [uiControl setEnabled:enabled];
-    }
-}
-
-- (void) setFieldsHidden:(BOOL)hidden {
-    for (UIControl* uiControl in [_modelAdapter uiControls]) {
-        [uiControl setHidden:hidden];
-    }
-}
-
 /* ================================================ Delegate Methods ================================================ */
 - (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -101,7 +89,6 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    [self setFieldsHidden:YES];
 }
 
 
@@ -138,7 +125,6 @@
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self]; 
-        [self setFieldsHidden:NO];
     }                   
     for (Field* field in activityInstance.fields) {                
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];            

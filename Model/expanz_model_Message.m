@@ -14,7 +14,9 @@
 @implementation expanz_model_Message
 
 @synthesize messageType = _messageType;
+@synthesize messageTypeAsString = _messageTypeAsString;
 @synthesize content = _content;
+
 
 /* ================================================== Constructors ================================================== */
 
@@ -22,15 +24,28 @@
     self = [super init]; 
     if (self) {
         _messageType = messageType;
+        switch (messageType) {
+            case 0:
+                _messageTypeAsString = @"Warning";
+                break;
+            case 1:
+                _messageTypeAsString = @"Error";
+                break;
+            default:
+                [NSException raise: NSInternalInconsistencyException format:@"Unknown message type."]; 
+                break;            
+        }    
         _content = [content retain];
     }
     return self;
 }
 
 
+
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
+    [_messageTypeAsString release]; 
     [_content release]; 
     [super dealloc];
 }

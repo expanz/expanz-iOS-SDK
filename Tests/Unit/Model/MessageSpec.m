@@ -15,14 +15,32 @@
 
 SPEC_BEGIN(MessageSpec)
 
+
+__block Message* message;
+
 describe(@"object creation", ^{
     it(@"should allow initialization with messageType and message attributes", ^{
         
-        Message* message = [[Message alloc] initWithMessageType:MessageTypeWarning content:@"abcd is not a valid number."]; 
+        message = [[Message alloc] initWithMessageType:MessageTypeWarning content:@"abcd is not a valid number."]; 
         assertThatInt(message.messageType, equalToInt(MessageTypeWarning)); 
         assertThat(message.content, equalTo(@"abcd is not a valid number."));
-        [message release];
-                
+        assertThat([message messageTypeAsString], equalTo(@"Warning"));
+        [message release];                
+        
+        message = [[Message alloc] initWithMessageType:MessageTypeError content:@"abcd is not a valid number."]; 
+        assertThat([message messageTypeAsString], equalTo(@"Error"));                    
+    });
+    
+    it(@"should throw NSInternalInconsistency exception for unknown message type.", ^{
+        @try {
+            message = [[Message alloc] initWithMessageType:999 content:@"abcd is not a valid number."]; 
+            [NSException raise:@"Should have thrown" format:@"Should have thrown"]; 
+        }
+        @catch (NSException* e){
+            assertThat([e reason], equalTo(@"Unknown message type."));
+        }
+
+        
     });
 });
 

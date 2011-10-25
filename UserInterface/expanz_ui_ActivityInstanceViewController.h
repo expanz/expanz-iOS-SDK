@@ -48,15 +48,6 @@
  */
 - (id<expanz_service_ActivityClient>) activityClient;
 
-/**
- * Enables or disables expanz editable controls. 
- */
-- (void) setFieldsEnabled:(BOOL)enabled;
-
-/**
- * Hides or shows expanz editable controls. 
- */
-- (void) setFieldsHidden:(BOOL)hidden;
 
 @end
 

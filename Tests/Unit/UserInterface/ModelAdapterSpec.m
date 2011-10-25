@@ -73,14 +73,6 @@ describe(@"Mapping UIControls to expanz_model_Field items in an ActivityInstance
     
 });
 
-describe(@"Iterating UIControl elements.", ^{
-    
-    it(@"should return all mapped UIControls as a collection.", ^{
-        NSArray* allControls = [modelAdapter uiControls]; 
-        assertThat(allControls, hasItems(controller.Op1Field, controller.Op2Field, controller.ResultField, nil));     
-    });
-    
-});
 
 
 

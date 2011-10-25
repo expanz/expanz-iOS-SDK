@@ -56,9 +56,6 @@
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
 }
 
-- (NSArray*) uiControls {
-    return [_mappings allValues]; 
-}
 
 /* ================================================== Utility Methods =============================================== */
 
