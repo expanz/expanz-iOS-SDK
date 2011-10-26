@@ -36,7 +36,7 @@
 /**
  * Request model to update with new field value. 
  */
-- (void) sendDeltaForField:(UITextField*)textField;
+- (void) sendDeltaForField:(expanz_model_Field*)textField;
 
 /**
  * Invoke a method on the model. 

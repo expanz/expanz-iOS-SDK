@@ -49,7 +49,8 @@
 /* ================================================ Interface Methods =============================================== */
 
 - (void) didFinishEditWithValue:(NSString*)value {
-    if (value != _value) {
+    LogDebug(@"%@', did finish edit with new value '%@'", [self description], value);
+    if (! [_value isEqualToString:value]) {
         [_value release]; 
         _value = [value retain];        
         _dirty = YES;
@@ -77,6 +78,11 @@
     [_hint release];
     [super dealloc];
 }
+             
+- (NSString*) description { 
+    return [NSString stringWithFormat:@"Field: id='%@', value='%@'", _fieldId, _value]; 
+}
+                 
 
 
 

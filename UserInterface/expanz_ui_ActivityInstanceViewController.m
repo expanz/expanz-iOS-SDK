@@ -19,8 +19,6 @@
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "MARTNSObject.h"
-#import "RTMethod.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -51,9 +49,7 @@
     return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
 }
 
-- (void) sendDeltaForField:(UITextField*)textField {   
-    Field* field = [_modelAdapter fieldFor:textField]; 
-    [field didFinishEditWithValue:textField.text];
+- (void) sendDeltaForField:(Field*)field {   
     if ([field isDirty]) {
         [_spinner startAnimating];
         [[self activityClient] sendDeltaWith:[field asDeltaRequest] delegate:self];    
@@ -112,7 +108,9 @@
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
     [textField resignFirstResponder]; 
-    [self sendDeltaForField:textField]; 
+    Field* field = [_modelAdapter fieldFor:textField]; 
+    [field didFinishEditWithValue:textField.text];
+    [self sendDeltaForField:field]; 
     return YES;
 }
 

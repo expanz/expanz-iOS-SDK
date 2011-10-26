@@ -62,9 +62,9 @@
 - (void) updateUIControlsWithModelValues {
     for (NSString* fieldId in [_fieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId]; 
-        id textControl = [_fieldMappings valueForKey:fieldId];         
-        [textControl setText: field.value];      
-        [textControl setEnabled:!field.isDisabled];
+        UITextField* textField = [_fieldMappings valueForKey:fieldId];         
+        [textField setText: field.value];      
+        [textField setEnabled:!field.isDisabled];
     }    
 }
 
