@@ -46,6 +46,14 @@ describe(@"Activities", ^{
         assertThat(processArea.activities, hasCountOf(1));
     });
     
+    it(@"should allow retrieving an activity by name.", ^{
+        Activity* activity = [[Activity alloc] initWithName:@"Order a widget" andTitle:@"Get your widgets here"];
+        [processArea addActivity:activity];
+
+        assertThat([processArea activityWithName:@"Order a widget"], equalTo(activity));
+        assertThat([processArea activityWithName:@"zzzzzz"], nilValue());
+    });
+    
     afterEach(^{    
         [processArea release];
     });

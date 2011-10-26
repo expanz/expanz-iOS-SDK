@@ -15,8 +15,9 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "expanz_ui_BasicCalculatorViewController.h"
+#import "../../../UserInterface/ESA_Sales_CalcViewController.h"
 #import "RXMLElement+ActivityInstance.h"
+#import "RXMLElement+SessionData.h"
 
 
 
@@ -28,22 +29,19 @@ __block ModelAdapter* modelAdapter;
 beforeEach(^{
     
     id injector = [OCMockObject niceMockForClass:[JSObjectionInjector class]]; 
-    [JSObjection setGlobalInjector:injector];
+    [JSObjection setGlobalInjector:injector];  
+    Activity* activity = [[Activity alloc] initWithName:@"ESA.Sales.Calc" andTitle:@"Basic Calculator"];     
     
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityDetails" ofType:@"xml"]; 
-    NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
-    Activity* activity = (Activity*) [[element child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-    controller = [[BasicCalculatorViewController alloc] initWithActivity:activity];
+    controller = [[[BasicCalculatorViewController alloc] initWithActivity:activity] autorelease];
     assertThat(controller, notNilValue());
     assertThat(controller.view, notNilValue());
     
-    filePath = [[NSBundle mainBundle] pathForResource:@"ActivityInstance" ofType:@"xml"]; 
-    xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    element = [RXMLElement elementFromXMLString:xmlString]; 
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityInstance" ofType:@"xml"]; 
+    NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
     ActivityInstance* activityInstance = [[element child:@"ExecXResult.ESA.Activity"] asActivityInstance]; 
     [controller requestDidFinishWithActivityInstance:activityInstance];     
-    modelAdapter = [[ModelAdapter alloc] initWithViewController:controller]; 
+    modelAdapter = [[[ModelAdapter alloc] initWithViewController:controller] autorelease]; 
         
 });
 
@@ -86,14 +84,6 @@ describe(@"Updating user interface controls with model values.", ^{
     
 });
 
-
-
-
-
-afterEach(^{
-    [controller release]; 
-    [modelAdapter release]; 
-});
 
 
 SPEC_END

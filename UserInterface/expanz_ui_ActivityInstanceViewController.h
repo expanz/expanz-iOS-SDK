@@ -20,12 +20,12 @@
     UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate> {
     
 @private        
-    expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;    
         
 }
 
-@property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
+@property (nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
+@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 
 /**

@@ -44,6 +44,18 @@ describe(@"Process Areas", ^{
         [menu addProcessArea:processArea];
         assertThat(menu.processAreas, hasCountOf(1));
     });
+    
+    it(@"should allow returning a process area by id", ^{
+        ProcessArea* processArea = [[[ProcessArea alloc] initWithProcessId:@"1234" andTitle:@"My Process"] autorelease];
+        [menu addProcessArea:processArea];
+        
+        ProcessArea* retrieved = [menu processAreaWithId:@"1234"]; 
+        assertThat(retrieved, equalTo(processArea));
+        
+        retrieved = [menu processAreaWithId:@"id.not.stored"]; 
+        assertThat(retrieved, nilValue());        
+
+    });
             
     afterEach(^{
         [menu release];

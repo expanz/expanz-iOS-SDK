@@ -78,14 +78,10 @@
 #define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
     _fieldMappings = [[NSMutableDictionary alloc] init];
-    for (Field* field in _activityInstance.fields) {
-        RTMethod* method = [NSObject rt_methodForSelector:NSSelectorFromString(field.fieldId)];
-    }
-    
     NSArray* classMethods = [[controller class] rt_methods]; 
     for (RTMethod* method in classMethods) {
         NSString* selectorName = [method selectorName];            
-        if ([_activityInstance fieldWithId:selectorName]) {            
+        if ([_activityInstance fieldWithId:selectorName] != nil) {            
             UITextField* textField; 
             [method returnValue: &textField sendToTarget: controller]; 
             if (textField == nil) {
@@ -97,7 +93,6 @@
     }                
 }
 
-#define kUILabel @"The UILabel named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
     _labelMappings = [[NSMutableDictionary alloc] init];
     NSArray* classMethods = [[controller class] rt_methods];
@@ -106,11 +101,10 @@
         NSString* selectorName = [method selectorName];
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
-            Field* field = [_activityInstance fieldWithId:fieldId];
             UILabel* uiLabel;
             [method returnValue: &uiLabel sendToTarget: controller];
             if (uiLabel == nil) {
-                [NSException raise:NSObjectNotAvailableException format:kUILabel, selectorName];
+                LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
             }
             LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
             [_labelMappings setObject:uiLabel forKey:fieldId];

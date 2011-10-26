@@ -44,6 +44,15 @@
     [_processAreas addObject:processArea];    
 }
 
+- (expanz_model_ProcessArea*) processAreaWithId:(NSString*)processAreaId {
+    for (ProcessArea* processArea in _processAreas) {
+        if ([processArea.processId isEqualToString:processAreaId]) {
+            return processArea;
+        }
+    }
+    return nil;
+}
+
 - (NSArray*) userRoles {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
     return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 

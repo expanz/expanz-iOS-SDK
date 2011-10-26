@@ -34,6 +34,11 @@
  */
 - (void) addProcessArea:(expanz_model_ProcessArea*)processArea;
 
+/** 
+ * Returns the process area matching the supplied id, or nil. 
+ */
+- (expanz_model_ProcessArea*) processAreaWithId:(NSString*)processAreaId; 
+
 
 /**
  * Adds a ProcessArea to this menu. 

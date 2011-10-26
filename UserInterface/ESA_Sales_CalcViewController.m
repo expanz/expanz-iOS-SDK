@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_ui_BasicCalculatorViewController.h"
+#import "ESA_Sales_CalcViewController.h"
 
-@implementation expanz_ui_BasicCalculatorViewController
+@implementation ESA_Sales_CalcViewController
 
 @synthesize ResultLabel = _ResultLabel;
 @synthesize Op1Label = _Op1Label;

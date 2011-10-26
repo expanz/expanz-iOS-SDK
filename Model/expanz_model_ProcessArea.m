@@ -41,6 +41,15 @@
     [_activities addObject:activity];    
 }
 
+- (Activity*) activityWithName:(NSString*)activityName {
+    for (Activity* activity in _activities) {
+        if ([activity.name isEqualToString:activityName]) {
+            return activity;
+        }
+    }
+    return nil;
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 

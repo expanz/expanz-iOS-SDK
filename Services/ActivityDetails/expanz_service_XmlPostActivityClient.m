@@ -28,7 +28,6 @@
 @implementation expanz_service_XmlPostActivityClient
 
 /* ================================================ Interface Methods =============================================== */
-
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
     
@@ -56,7 +55,6 @@
 
 
 /* ================================================== Private Methods =============================================== */
-
 - (void) registerResponseParserFor:(id<expanz_service_ActivityClientDelegate>)delegate {
     [self.request setCompletionBlock:^{       
         LogDebug(@"Response: %@, ", [self.request responseString]);

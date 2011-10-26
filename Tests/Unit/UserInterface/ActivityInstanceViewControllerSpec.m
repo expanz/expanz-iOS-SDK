@@ -23,23 +23,18 @@ SPEC_BEGIN(ActivityInstanceViewControllerSpec)
 
 describe(@"objc runtime. . . ", ^{
     
-    it(@"should do some cool stuff", ^{
-        
-        NSString* field = @"ResultField";
-        
-        NSString* substring = [field substringToIndex:[field rangeOfString:@"Field"].location];
-        
-        LogDebug(@"The field!!!!!!!!! %@", substring);
-        
-        NSArray* methods = [ActivityInstanceViewController rt_methods]; 
-        for (RTMethod* method in methods) {
-            if ([[method selectorName] hasSuffix:@"Field"]) {
-                LogDebug(@"%@", [method selectorName]);
-            }
+    
+    it(@"can i instantiate a class using class name?", ^{
 
-        }
+        id clazz = objc_getClass("expanz_ui_BasicCalculatorViewController");
+        //assertThat(clazz, notNilValue());
+        LogDebug(@"%@", [clazz description]);
 
-        
+        ActivityInstanceViewController* controller = class_createInstance(clazz, 0);
+        //assertThat(controller, notNilValue());
+
+
+
     });
     
 });

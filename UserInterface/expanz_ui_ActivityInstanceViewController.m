@@ -19,10 +19,12 @@
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
+#import "expanz_model_Field.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
 
+@synthesize modelAdapter = _modelAdapter;
 @synthesize activityInstance = _activityInstance;
 @synthesize spinner = _spinner;
 
@@ -30,7 +32,7 @@
 /* ================================================== Constructors ================================================== */
 
 -(id) initWithActivity:(Activity*)activity {
-    self = [super initWithNibName:@"BasicCalculator" bundle:[NSBundle mainBundle]];
+    self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;    
         CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
@@ -122,11 +124,13 @@
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
         _activityInstance = [activityInstance retain];
-        _modelAdapter = [[ModelAdapter alloc] initWithViewController:self]; 
+        _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
+        [_modelAdapter updateUIControlsWithModelValues];
     } 
     
     for (Field* field in activityInstance.fields) {                
-        [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];                    
+        [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
+        [[_modelAdapter textControlFor:field] setText:field.value];
     }
     for (Message* message in activityInstance.messages) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message.messageTypeAsString message:message.content 
@@ -134,7 +138,6 @@
         [alert show];
         [alert release];
     }
-    [_modelAdapter updateUIControlsWithModelValues]; 
 }
 
 - (void) requestDidFailWithError:(NSError*)error {

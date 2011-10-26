@@ -22,8 +22,21 @@
 @property (nonatomic, readonly) NSString* title;
 @property (nonatomic, readonly) NSArray* activities; 
 
+/**
+ * Initializes with the supplied processId and title parameters. 
+ */
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title; 
+
+/** 
+ * Adds an activity to the process area. 
+ */
 - (void) addActivity:(expanz_model_Activity*)activity; 
+
+/**
+ * Returns the activity with the supplied id, or nil if none matching. 
+ */
+- (expanz_model_Activity*) activityWithName:(NSString*)activityName; 
+
 
 
 @end

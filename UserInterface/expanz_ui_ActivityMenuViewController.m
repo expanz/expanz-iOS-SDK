@@ -18,7 +18,7 @@
 #import "expanz_model_Menu.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
-#import "expanz_ui_BasicCalculatorViewController.h"
+#import "ESA_Sales_CalcViewController.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
@@ -104,10 +104,24 @@
     Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
     
     //TODO: Look up view controller from formmapping.xml
-    BasicCalculatorViewController* nextView = [[BasicCalculatorViewController alloc] initWithActivity:activity]; 
-    SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-    [delegate.navigationController pushViewController:nextView animated:YES]; 
-    [nextView release]; 
+    NSMutableString* controllerClassName = [[NSMutableString alloc] initWithString:activity.name];
+    controllerClassName = [controllerClassName stringByReplacingOccurrencesOfString:@"." withString:@"_"];
+    [controllerClassName appendString:@"ViewController"];
+    id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
+    if (clazz == nil) {
+        NSString * errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self
+                                                  cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+    }
+    else {
+        ActivityInstanceViewController* nextView = class_createInstance(clazz, 0);
+        nextView = [nextView initWithActivity:activity];
+        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+        [delegate.navigationController pushViewController:nextView animated:YES];
+        [nextView release];
+    }
 }
 
 /* ================================================================================================================== */

@@ -11,7 +11,7 @@
 
 #import "expanz_ui_ActivityInstanceViewController.h"
 
-@interface expanz_ui_BasicCalculatorViewController : expanz_ui_ActivityInstanceViewController
+@interface ESA_Sales_CalcViewController : expanz_ui_ActivityInstanceViewController
 
 @property (nonatomic, retain) IBOutlet UILabel* ResultLabel;
 @property (nonatomic, retain) IBOutlet UILabel* Op1Label; 
@@ -33,4 +33,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias BasicCalculatorViewController expanz_ui_BasicCalculatorViewController;
+@compatibility_alias BasicCalculatorViewController ESA_Sales_CalcViewController;
