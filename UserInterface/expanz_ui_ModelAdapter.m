@@ -16,7 +16,13 @@
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 
-#define kUIControlIsNilMessage @"The UI control named '%@' is nil. Has the connection been made in Interface Builder?"
+/* ================================================================================================================== */
+@interface expanz_ui_ModelAdapter(private) 
+
+-(void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
+-(void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
+
+@end
 
 /* ================================================================================================================== */
 @implementation expanz_ui_ModelAdapter
@@ -30,31 +36,19 @@
     self = [super init]; 
     if (self) {
         _activityInstance = [viewController.activityInstance retain];
-        _fieldMappings = [[NSMutableDictionary alloc] init];
-        NSArray* classMethods = [[viewController class] rt_methods]; 
-        for (RTMethod* method in classMethods) {
-            NSString* selectorName = [method selectorName];            
-            if ([_activityInstance fieldWithId:selectorName]) {            
-                UIControl* uiControl; 
-                [method returnValue: &uiControl sendToTarget: viewController]; 
-                if (uiControl == nil) {
-                    [NSException raise:NSObjectNotAvailableException format:kUIControlIsNilMessage, selectorName]; 
-                }
-                LogDebug(@"Mapping field: '%@' to UIControl.", selectorName);
-                [_fieldMappings setObject:uiControl forKey:selectorName];                 
-            }            
-        }                
+        [self mapUITextFieldsForController:viewController];
+        [self mapUILabelsForController:viewController];
     }
     return self;    
 }
 
 /* ================================================ Interface Methods =============================================== */
 
-- (UIControl*) textControlFor:(Field*)field {
+- (UITextField*) textControlFor:(Field*)field {
     return [_fieldMappings objectForKey:field.fieldId]; 
 }
 
-- (Field*) fieldFor:(UIControl*)control {
+- (Field*) fieldFor:(UITextField*)control {
     NSArray* keys = [_fieldMappings allKeysForObject:control]; 
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
 }
@@ -62,9 +56,11 @@
 - (void) updateUIControlsWithModelValues {
     for (NSString* fieldId in [_fieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId]; 
-        UITextField* textField = [_fieldMappings valueForKey:fieldId];         
+        UITextField* textField = [_fieldMappings valueForKey:fieldId];        
         [textField setText: field.value];      
         [textField setEnabled:!field.isDisabled];
+        UILabel* label = [_labelMappings valueForKey:fieldId];
+        [label setText:field.label];
     }    
 }
 
@@ -75,6 +71,51 @@
     [_activityInstance release];
     [_fieldMappings release]; 
     [super dealloc];    
+}
+
+/* ================================================== Private Methods =============================================== */
+
+#define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
+- (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
+    _fieldMappings = [[NSMutableDictionary alloc] init];
+    for (Field* field in _activityInstance.fields) {
+        RTMethod* method = [NSObject rt_methodForSelector:NSSelectorFromString(field.fieldId)];
+    }
+    
+    NSArray* classMethods = [[controller class] rt_methods]; 
+    for (RTMethod* method in classMethods) {
+        NSString* selectorName = [method selectorName];            
+        if ([_activityInstance fieldWithId:selectorName]) {            
+            UITextField* textField; 
+            [method returnValue: &textField sendToTarget: controller]; 
+            if (textField == nil) {
+                [NSException raise:NSObjectNotAvailableException format:kUIControlIsNilMessage, selectorName];
+            }
+            LogDebug(@"Mapping field: '%@' to UITextField.", selectorName);
+            [_fieldMappings setObject:textField forKey:selectorName];                 
+        }            
+    }                
+}
+
+#define kUILabel @"The UILabel named '%@' is nil. Has the connection been made in Interface Builder?"
+- (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
+    _labelMappings = [[NSMutableDictionary alloc] init];
+    NSArray* classMethods = [[controller class] rt_methods];
+
+    for (RTMethod* method in classMethods) {
+        NSString* selectorName = [method selectorName];
+        if ([selectorName hasSuffix:@"Label"]) {
+            NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
+            Field* field = [_activityInstance fieldWithId:fieldId];
+            UILabel* uiLabel;
+            [method returnValue: &uiLabel sendToTarget: controller];
+            if (uiLabel == nil) {
+                [NSException raise:NSObjectNotAvailableException format:kUILabel, selectorName];
+            }
+            LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
+            [_labelMappings setObject:uiLabel forKey:fieldId];
+        }
+    }
 }
 
 

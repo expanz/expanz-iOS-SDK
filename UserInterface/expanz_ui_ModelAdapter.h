@@ -18,16 +18,30 @@
     
 @private    
     NSMutableDictionary* _fieldMappings;
+    NSMutableDictionary* _labelMappings; 
     
 }
 
 @property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance; 
 
-
+/**
+ * Initializes a model adapter for the given view controller. 
+ */
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
-- (UIControl*) textControlFor:(expanz_model_Field*)field; 
-- (expanz_model_Field*) fieldFor:(UIControl*)control;
+/**
+ * Returns the UIText field corresponding to the model's field object. 
+ */
+- (UITextField*) textControlFor:(expanz_model_Field*)field; 
+
+/** 
+ * Returns the field object corresponding to the UITextField object. 
+ */
+- (expanz_model_Field*) fieldFor:(UITextField*)control;
+
+/**
+ * Updates UI text fields and labels with values from the model object. 
+ */
 - (void) updateUIControlsWithModelValues; 
 
 

@@ -57,9 +57,8 @@ describe(@"Object creation", ^{
 
 describe(@"Mapping UIControls to expanz_model_Field items in an ActivityInstance", ^{
     
-    it(@"should return field corresponding to a UIControl", ^{
-        UIControl* control = controller.Op1; 
-        Field* field = [modelAdapter fieldFor:control]; 
+    it(@"should return field corresponding to a UIControl", ^{ 
+        Field* field = [modelAdapter fieldFor:controller.Op1]; 
         assertThat(field, notNilValue());
         assertThat(field.fieldId, equalTo(@"Op1"));        
     });
