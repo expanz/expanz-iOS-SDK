@@ -13,6 +13,7 @@
 
 @interface expanz_ui_BasicCalculatorViewController : expanz_ui_ActivityInstanceViewController
 
+@property (nonatomic, retain) IBOutlet UILabel* ResultLabel;
 @property (nonatomic, retain) IBOutlet UILabel* Op1Label; 
 @property (nonatomic, retain) IBOutlet UILabel* Op2Label;
 @property (nonatomic, retain) IBOutlet UITextField* Result; 

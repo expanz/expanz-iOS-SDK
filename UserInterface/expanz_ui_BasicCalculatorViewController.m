@@ -13,6 +13,7 @@
 
 @implementation expanz_ui_BasicCalculatorViewController
 
+@synthesize ResultLabel = _ResultLabel;
 @synthesize Op1Label = _Op1Label;
 @synthesize Op2Label = _Op2Label;
 @synthesize Result = _ResultField;
@@ -47,6 +48,7 @@
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
+    [_ResultLabel release];
     [_Op1Label release]; 
     [_Op2Label release];
     [_ResultField release];
