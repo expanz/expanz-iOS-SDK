@@ -19,7 +19,6 @@
 @synthesize methodName = _methodName;
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance methodName:(NSString*)methodName {
     self = [super init]; 
     if (self) {
@@ -31,7 +30,6 @@
 
 
 /* ================================================= Protocol Methods =============================================== */
-
 #define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
 <Method name=\"%@\"/></Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
@@ -41,7 +39,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
     [_activityInstance release]; 
     [_methodName release];

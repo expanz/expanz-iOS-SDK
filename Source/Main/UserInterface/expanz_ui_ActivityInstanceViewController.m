@@ -13,13 +13,13 @@
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_Activity.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field+DeltaRequest.h"
 #import "expanz_model_Message.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_Field.h"
+#import "expanz_service_DeltaRequest.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -30,7 +30,6 @@
 
 
 /* ================================================== Constructors ================================================== */
-
 -(id) initWithActivity:(Activity*)activity {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
@@ -45,8 +44,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-
-
 - (id<expanz_service_ActivityClient>) activityClient {
     return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
 }
@@ -54,7 +51,8 @@
 - (void) sendDeltaForField:(Field*)field {   
     if ([field isDirty]) {
         [_spinner startAnimating];
-        [[self activityClient] sendDeltaWith:[field asDeltaRequest] delegate:self];    
+        DeltaRequest* deltaRequest = [DeltaRequest fromField:field];
+        [[self activityClient] sendDeltaWith:deltaRequest delegate:self];
     }
 }
 
@@ -147,7 +145,6 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
     [_spinner release];
     [_activityInstance release];

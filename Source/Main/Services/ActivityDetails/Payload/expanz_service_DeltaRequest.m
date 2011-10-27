@@ -10,6 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_DeltaRequest.h"
+#import "expanz_model_Field.h"
+#import "expanz_model_SessionContext.h"
+#import "expanz_model_ActivityInstance.h"
 
 @implementation expanz_service_DeltaRequest
 
@@ -18,8 +21,14 @@
 @synthesize fieldId = _fieldId;
 @synthesize fieldValue = _fieldValue;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================= Class Methods ================================================== */
++ (id) fromField:(Field*)field {
+    NSString* sessionToken = [SessionContext globalContext].sessionToken;
+    return [[[DeltaRequest alloc] initWithFieldId:field.fieldId fieldValue:field.value
+                                  activityHandle:field.parentActivity.handle sessionToken:sessionToken] autorelease];
+}
 
+/* ================================================== Constructors ================================================== */
 - (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
           sessionToken:(NSString*)sessionToken {
     
@@ -34,7 +43,6 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
-
 #define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
 <Delta id=\"%@\" value=\"%@\"/></Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
@@ -44,7 +52,6 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
     [_sessionToken release]; 
     [_activityHandle release]; 

@@ -18,8 +18,6 @@
 @synthesize title = _title;
 
 /* ================================================== Constructors ================================================== */
-
-
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title {
     self = [self init];     
     if (self) {
@@ -31,7 +29,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-
 - (NSArray*) activities {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
@@ -52,7 +49,6 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"ProcessArea: id=%@, title=%@, activities: %@", _processId, _title, _activities];
 }

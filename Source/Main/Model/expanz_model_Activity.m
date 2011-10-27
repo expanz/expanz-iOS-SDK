@@ -17,7 +17,6 @@
 @synthesize title = _title;
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithName:(NSString*)name andTitle:(NSString*)title {
     self = [self init];
     if (self) {
@@ -28,7 +27,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"Activity name=%@, title=%@", _name, _title];
 }

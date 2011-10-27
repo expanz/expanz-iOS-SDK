@@ -83,10 +83,9 @@
 		6BC9F5E41458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
 		6BC9F5E51458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
 		6BC9F5E61458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
-		6BC9F5E71458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */; };
-		6BC9F5E81458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */; };
-		6BC9F5E91458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */; };
-		6BC9F5EA1458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */; };
+		6BC9F5E71458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
+		6BC9F5E91458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
+		6BC9F5EA1458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
 		6BC9F5EB1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
 		6BC9F5EC1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
 		6BC9F5ED1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
@@ -139,10 +138,6 @@
 		6BC9F61C1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BC9F61D1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BC9F61E1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
-		6BC9F6231458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
-		6BC9F6241458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
-		6BC9F6251458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
-		6BC9F6261458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
 		6BC9F6271458EB82001AF204 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
 		6BC9F6281458EB82001AF204 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
 		6BC9F6291458EB82001AF204 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
@@ -414,6 +409,14 @@
 		6BC9F7E61458EBB6001AF204 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */; };
 		6BC9F7E91458EBB6001AF204 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7321458EBB6001AF204 /* libOCMock.a */; };
 		6BC9F7EA1458EBB6001AF204 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7321458EBB6001AF204 /* libOCMock.a */; };
+		6BC9F7F41458F764001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */; };
+		6BC9F7F51458F764001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */; };
+		6BC9F7F61458F764001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */; };
+		6BC9F7F71458F764001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */; };
+		6BC9F7F91458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
+		6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
+		6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
+		6BC9F7FC1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -437,6 +440,12 @@
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
+		6BF58DC81444245C0063E807 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
+		6BF58DC81444245C0063E808 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
+		6BF58DC81444245C0063E809 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
+		6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
+		6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
+		6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -499,8 +508,6 @@
 		6BC9F5711458EB82001AF204 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
 		6BC9F5721458EB82001AF204 /* expanz_service_XmlPostActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostActivityClient.h; sourceTree = "<group>"; };
 		6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostActivityClient.m; sourceTree = "<group>"; };
-		6BC9F5751458EB82001AF204 /* expanz_model_Field+DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz_model_Field+DeltaRequest.h"; sourceTree = "<group>"; };
-		6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "expanz_model_Field+DeltaRequest.m"; sourceTree = "<group>"; };
 		6BC9F5771458EB82001AF204 /* expanz_service_CreateActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_CreateActivityRequest.h; sourceTree = "<group>"; };
 		6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
 		6BC9F5791458EB82001AF204 /* expanz_service_DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DeltaRequest.h; sourceTree = "<group>"; };
@@ -527,7 +534,6 @@
 		6BC9F5921458EB82001AF204 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
 		6BC9F5951458EB82001AF204 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BC9F5961458EB82001AF204 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
 		6BC9F5991458EB82001AF204 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
 		6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
@@ -684,12 +690,17 @@
 		6BC9F7301458EBB6001AF204 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		6BC9F7311458EBB6001AF204 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		6BC9F7321458EBB6001AF204 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
+		6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Customer.xib; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BF58B89144410A50063E805 /* Instrumented.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instrumented.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CustomerViewController.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -871,8 +882,6 @@
 		6BC9F5741458EB82001AF204 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
-				6BC9F5751458EB82001AF204 /* expanz_model_Field+DeltaRequest.h */,
-				6BC9F5761458EB82001AF204 /* expanz_model_Field+DeltaRequest.m */,
 				6BC9F5771458EB82001AF204 /* expanz_service_CreateActivityRequest.h */,
 				6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */,
 				6BC9F5791458EB82001AF204 /* expanz_service_DeltaRequest.h */,
@@ -952,7 +961,6 @@
 			children = (
 				6BC9F5951458EB82001AF204 /* ActivityMenu.xib */,
 				6BC9F5961458EB82001AF204 /* background.png */,
-				6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */,
 				6BC9F5991458EB82001AF204 /* Login.xib */,
 			);
 			path = Assets;
@@ -970,6 +978,10 @@
 		6BC9F59D1458EB82001AF204 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				6BC9F7F31458F764001AF204 /* ESA.Sales.Calc.xib */,
+				6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */,
+				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
+				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
 				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
 				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
 			);
@@ -1011,6 +1023,7 @@
 		6BC9F6481458EB8C001AF204 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */,
 				6BC9F6491458EB8C001AF204 /* ActivityDetails.xml */,
 				6BC9F64A1458EB8C001AF204 /* ActivityInstance.xml */,
 				6BC9F64B1458EB8C001AF204 /* ActivityWithMessage.xml */,
@@ -1504,7 +1517,6 @@
 				6BC9F5B21458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F61A1458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61E1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6261458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F62A1458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F67E1458EB8C001AF204 /* ActivityDetails.xml in Resources */,
 				6BC9F6801458EB8C001AF204 /* ActivityInstance.xml in Resources */,
@@ -1514,6 +1526,9 @@
 				6BC9F6881458EB8C001AF204 /* InfoPlist.strings in Resources */,
 				6BC9F78E1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7961458EBB6001AF204 /* README.markdown in Resources */,
+				6BC9F7F71458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
+				6BC9F7FC1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1525,9 +1540,10 @@
 				6BC9F5AF1458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6171458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61B1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6231458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6271458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
+				6BC9F7F41458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
+				6BC9F7F91458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1539,8 +1555,9 @@
 				6BC9F5B01458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6181458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61C1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6241458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6281458EB82001AF204 /* Login.xib in Resources */,
+				6BC9F7F51458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
+				6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1552,7 +1569,6 @@
 				6BC9F5B11458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6191458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61D1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6251458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6291458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F67D1458EB8C001AF204 /* ActivityDetails.xml in Resources */,
 				6BC9F67F1458EB8C001AF204 /* ActivityInstance.xml in Resources */,
@@ -1562,6 +1578,9 @@
 				6BC9F6871458EB8C001AF204 /* InfoPlist.strings in Resources */,
 				6BC9F78D1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7951458EBB6001AF204 /* README.markdown in Resources */,
+				6BC9F7F61458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
+				6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1670,6 +1689,7 @@
 				6BC9F7D61458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7DA1458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DE1458EBB6001AF204 /* Reachability.m in Sources */,
+				6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1748,6 +1768,7 @@
 				6BC9F7D31458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D71458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DB1458EBB6001AF204 /* Reachability.m in Sources */,
+				6BF58DC81444245C0063E807 /* ESA_Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1767,7 +1788,6 @@
 				6BC9F5DC1458EB82001AF204 /* expanz_model_SessionContext.m in Sources */,
 				6BC9F5E01458EB82001AF204 /* expanz_model_UserRole.m in Sources */,
 				6BC9F5E41458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */,
-				6BC9F5E81458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */,
 				6BC9F5EC1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BC9F5F01458EB82001AF204 /* expanz_service_DeltaRequest.m in Sources */,
 				6BC9F5F41458EB82001AF204 /* expanz_service_MethodInvocationRequest.m in Sources */,
@@ -1826,6 +1846,7 @@
 				6BC9F7D41458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D81458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DC1458EBB6001AF204 /* Reachability.m in Sources */,
+				6BF58DC81444245C0063E808 /* ESA_Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1931,6 +1952,7 @@
 				6BC9F7D51458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D91458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DD1458EBB6001AF204 /* Reachability.m in Sources */,
+				6BF58DC81444245C0063E809 /* ESA_Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

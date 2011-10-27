@@ -24,7 +24,6 @@ static SessionContext* globalContext;
 @synthesize message = _message;
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithSessionToken:(NSString*)sessionToken hasError:(BOOL)hasError hasWarning:(BOOL)hasWarning
                     message:(NSString*)message {
     
@@ -41,7 +40,6 @@ static SessionContext* globalContext;
 
 
 /* ================================================ Interface Methods =============================================== */
-
 + (void)setGlobalContext:(SessionContext*)context {
     if (globalContext != context) {
         [globalContext release];
@@ -57,7 +55,6 @@ static SessionContext* globalContext;
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {    
     [_sessionToken release]; 
     [_message release];

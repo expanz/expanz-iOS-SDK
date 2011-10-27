@@ -20,8 +20,6 @@
 @synthesize canChangeCompanyRole = _canChangeCompanyRole;
 
 /* ================================================== Constructors ================================================== */
-
-
 - (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
     self = [super init]; 
     if (self) {
@@ -34,7 +32,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-
 - (NSArray*) processAreas {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
     return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
@@ -63,7 +60,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"Menu: hasWorkFlowTrays=%@, canChangeCompanyRole=%@, processAreas=%@, \
             userRoles=%@", _hasWorkflowTrays == YES ? @"YES" : @"NO", 

@@ -17,7 +17,6 @@
 @synthesize roleDescription = _roleDescription;
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description {
     self = [super init]; 
     if (self) {
@@ -28,7 +27,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"UserRole: roleId=%@, description=%@", _roleId, _roleDescription];
 }

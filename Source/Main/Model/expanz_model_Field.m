@@ -29,7 +29,6 @@
 
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue 
               dataType:(NSString*)datatype label:(NSString*)label hint:(NSString*)hint {
     
@@ -47,7 +46,6 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-
 - (void) didFinishEditWithValue:(NSString*)value {
     LogDebug(@"%@', did finish edit with new value '%@'", [self description], value);
     if (! [_value isEqualToString:value]) {
@@ -69,7 +67,6 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
     [_fieldId release]; 
     [_defaultValue release]; 

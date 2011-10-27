@@ -20,8 +20,6 @@
 @synthesize persistentId = _persistentId;
 
 /* ================================================== Constructors ================================================== */
-
-
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
     self = [super initWithName:nil andTitle:title];
     if (self) {
@@ -34,7 +32,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-
 - (BOOL) allowsMethodInvocations { 
     for (Field* field in _fields) {
         if (field.isDirty) {
@@ -75,7 +72,6 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", super.title, 
             _handle, _persistentId]; 
