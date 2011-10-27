@@ -11,11 +11,10 @@
         </fileset>
     </path>
     <path id="classes">
-        <fileset dir="${basedir}">
+        <fileset dir="${source.main.dir}">
             <include name="**/*.m"/>
-            <exclude name="Dependencies/**/*"/>
-            <exclude name="Tests/**/*"/>
             <exclude name="**/main.m"/>
+            <exclude name="**/Examples/**/*"/>
         </fileset>
     </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
