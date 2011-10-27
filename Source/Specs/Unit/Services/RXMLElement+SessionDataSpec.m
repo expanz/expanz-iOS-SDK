@@ -13,25 +13,43 @@
 #import "SpecHelper.h" 
 #import "RXMLElement+SessionData.h"
 #import "expanz_model_Menu.h"
+#import "expanz_model_ProcessArea.h" 
+#import "expanz_model_ActivityDefinition.h"
 
 SPEC_BEGIN(RXMLELement_SessionDataSpec)
 
-describe(@"Object instanciation", ^{
-    
-    __block RXMLElement* element;
+__block RXMLElement* element;
 
-    beforeEach(^{
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"]; 
-        NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        element = [RXMLElement elementFromXMLString:xmlString]; 
-    });
-    
+beforeEach(^{
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"];
+    NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    element = [RXMLElement elementFromXMLString:xmlString];
+});
+
+
+describe(@"Object intantiation", ^{
+
     it(@"should return a menu instance for from XML data.", ^{        
         Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
         LogDebug(@"%@", menu);    
         assertThat(menu, notNilValue());
+    });    
+});
+
+describe(@"Parsing children", ^{
+    
+    it(@"should include the style attribute on ProcessArea.Activity children, where necessary.", ^{
+        Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
+        ProcessArea* processArea = [menu processAreaWithId:@"Sales"]; 
+        ActivityDefinition* activity = [processArea activityWithName:@"ESA.Sales.Customer"]; 
+        assertThat(activity, notNilValue());
+        assertThat(activity.style, notNilValue());    
+        assertThat(activity.style, equalTo(@"Browse"));
     });
     
+});
+
+describe(@"Error handling", ^{
     it(@"should throw XML validation exception if you pass it the wrong kind of element", ^{
         NSString* filePath = [[NSBundle mainBundle] pathForResource:@"Dodgy" ofType:@"xml"]; 
         NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
@@ -60,11 +78,8 @@ describe(@"Object instanciation", ^{
         @catch (NSException* e) {
             assertThat([e reason], equalTo(@"Element is not a UserRole."));
         }
-
+        
     });
-    
-
-    
 });
 
 

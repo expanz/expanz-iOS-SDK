@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_model_SessionContext.h"
-#import "../Model/expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Message.h"
 #import "expanz_service_CreateActivityRequest.h"
@@ -33,9 +33,10 @@
 -(id) initWithActivity:(ActivityDefinition*)activity {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
-        self.title = activity.title;    
-        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name 
-                                                        sessionToken:[SessionContext globalContext].sessionToken];        
+        self.title = activity.title;
+        NSString* sessionToken = [SessionContext globalContext].sessionToken;
+        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name
+                                                 style:activity.style sessionToken:sessionToken];
         [[self activityClient] createActivityWith:activityRequest delegate:self];
         [_spinner startAnimating];
         [activityRequest release];
@@ -151,7 +152,5 @@
     [_modelAdapter release]; 
     [super dealloc];
 }
-
-
 
 @end

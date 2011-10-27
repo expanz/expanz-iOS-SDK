@@ -21,24 +21,24 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
-    self = [super init]; 
+    self = [super init];
     if (self) {
-        _hasWorkflowTrays = hasWorkflowTrays; 
+        _hasWorkflowTrays = hasWorkflowTrays;
         _canChangeCompanyRole = canChangeCompanyRole;
         _processAreas = [[NSMutableSet alloc] init];
         _userRoles = [[NSMutableSet alloc] init];
-    }   
-    return self; 
+    }
+    return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*) processAreas {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
-    return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
+    return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (void) addProcessArea:(ProcessArea*)processArea {
-    [_processAreas addObject:processArea];    
+    [_processAreas addObject:processArea];
 }
 
 - (expanz_model_ProcessArea*) processAreaWithId:(NSString*)processAreaId {
@@ -52,22 +52,22 @@
 
 - (NSArray*) userRoles {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
-    return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
+    return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (void) addUserRole:(UserRole*)userRole {
-    [_userRoles addObject:userRole];    
+    [_userRoles addObject:userRole];
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
     return [NSString stringWithFormat:@"Menu: hasWorkFlowTrays=%@, canChangeCompanyRole=%@, processAreas=%@, \
-            userRoles=%@", _hasWorkflowTrays == YES ? @"YES" : @"NO", 
-            _canChangeCompanyRole == YES ? @"YES" : @"NO", _processAreas, _userRoles];
+            userRoles=%@", _hasWorkflowTrays == YES ? @"YES" : @"NO",
+                                      _canChangeCompanyRole == YES ? @"YES" : @"NO", _processAreas, _userRoles];
 }
 
 - (void) dealloc {
-    [_processAreas release]; 
+    [_processAreas release];
     [_userRoles release];
     [super dealloc];
 }

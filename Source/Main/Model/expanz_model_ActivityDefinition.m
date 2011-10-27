@@ -19,14 +19,14 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id)initWithName:(NSString *)name title:(NSString *)title style:(NSString*)style {
+- (id) initWithName:(NSString*)name title:(NSString*)title style:(NSString*)style {
     self = [self init];
     if (self) {
-        _name = [name retain]; 
+        _name = [name retain];
         _title = [title retain];
         _style = [style retain];
     }
-    return self; 
+    return self;
 }
 
 /* ================================================== Utility Methods =============================================== */
@@ -40,7 +40,6 @@
     [_style release];
     [super dealloc];
 }
-
 
 
 @end

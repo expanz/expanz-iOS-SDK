@@ -18,9 +18,9 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description {
-    self = [super init]; 
+    self = [super init];
     if (self) {
-        _roleId = [roleId retain]; 
+        _roleId = [roleId retain];
         _roleDescription = [description retain];
     }
     return self;

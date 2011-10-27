@@ -22,8 +22,8 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 describe(@"Object creation", ^{
     
     it(@"should allow initialization with activityName and sessionToken parameters.", ^{
-        CreateActivityRequest* request = [[CreateActivityRequest alloc] initWithActivityName:@"Calculator"
-                                                                                sessionToken:@"EggResponderxx238b"]; 
+        CreateActivityRequest* request = [[CreateActivityRequest alloc] initWithActivityName:@"Calculator" style:nil
+                                                                                sessionToken:@"EggResponderxx238b"];
         assertThat([request activityName], equalTo(@"Calculator")); 
         assertThat([request sessionToken], equalTo(@"EggResponderxx238b"));
     });
@@ -34,7 +34,7 @@ describe(@"Web service integration.", ^{
     
     it(@"should be able to marshal itself to XML to send over the wire as a web service request.", ^{
         id<xml_Serializable> request = [[CreateActivityRequest alloc] initWithActivityName:@"Calculator"
-                                                                              sessionToken:@"xx2348b"]; 
+                                                                                style:nil sessionToken:@"xx2348b"];
         RXMLElement* e = [RXMLElement elementFromXMLString:[request toXml]]; 
         assertThat(e, notNilValue()); 
         

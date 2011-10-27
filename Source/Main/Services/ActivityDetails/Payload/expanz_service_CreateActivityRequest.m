@@ -15,14 +15,21 @@
 @implementation expanz_service_CreateActivityRequest
 
 @synthesize activityName = _activityName;
+@synthesize style = _style;
 @synthesize sessionToken = _sessionToken;
 
 /* ================================================== Constructors ================================================== */
 
-- (id) initWithActivityName:(NSString*)activityName sessionToken:(NSString*)sessionToken {
+- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken {
     self = [super init];
     if (self) {
         _activityName = [activityName retain];
+        if (style != nil) {
+            _style = [style retain];
+        }
+        else {
+            _style = @"";
+        }
         _sessionToken = [sessionToken retain];
     }
     return self;
@@ -32,17 +39,19 @@
 #pragma mark xml_Serializable
 
 
-#define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateActivity name=\"%@\"/></ESA>\
+#define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA>\
+<CreateActivity name=\"%@\" style=\"%@\"/></ESA>\
 </xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTempate, _activityName, _sessionToken];
+    return [NSString stringWithFormat:kXmlTempate, _activityName, _style, _sessionToken];
 }
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
     [_activityName release];
+    [_style release];
     [_sessionToken release];
     [super dealloc];
 }

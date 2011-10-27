@@ -10,31 +10,35 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_iOS_SDKExceptions.h"
 #import "expanz_model_Field.h"
 
 
 @implementation expanz_model_ActivityInstance
 
-@synthesize handle = _handle; 
+@synthesize handle = _handle;
 @synthesize persistentId = _persistentId;
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
+- (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId
+{
     self = [super initWithName:nil title:title style:NULL];
-    if (self) {
+    if (self)
+    {
         _handle = [handle retain];
-        _persistentId = [persistentId retain];   
+        _persistentId = [persistentId retain];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
         _messages = [[NSMutableArray alloc] initWithCapacity:10];
-    }   
-    return self;    
+    }
+    return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (BOOL) allowsMethodInvocations { 
-    for (Field* field in _fields) {
-        if (field.isDirty) {
+- (BOOL) allowsMethodInvocations
+{
+    for (Field* field in _fields)
+    {
+        if (field.isDirty)
+        {
             return NO;
         }
     }
@@ -42,42 +46,51 @@
 }
 
 
-- (NSArray*) fields {
+- (NSArray*) fields
+{
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"fieldId" ascending:YES] autorelease];
-    return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
+    return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addField:(Field*)field {
+- (void) addField:(Field*)field
+{
     [field setParentActivity:self];
-    [_fields addObject:field];  
+    [_fields addObject:field];
 }
 
-- (Field*) fieldWithId:(NSString*)fieldId {
-    for (Field* field in _fields) {
-        if ([field.fieldId isEqualToString:fieldId]) {
+- (Field*) fieldWithId:(NSString*)fieldId
+{
+    for (Field* field in _fields)
+    {
+        if ([field.fieldId isEqualToString:fieldId])
+        {
             return field;
         }
     }
     return nil;
 }
 
-- (NSArray*) messages {
+- (NSArray*) messages
+{
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"content" ascending:YES] autorelease];
-    return [_messages sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];             
+    return [_messages sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addMessage:(expanz_model_Message*)message {
+- (void) addMessage:(expanz_model_Message*)message
+{
     [_messages addObject:message];
 }
 
 
 /* ================================================== Utility Methods =============================================== */
-- (NSString*) description {
-    return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", super.title, 
-            _handle, _persistentId]; 
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", super.title,
+                                      _handle, _persistentId];
 }
 
-- (void) dealloc {
+- (void) dealloc
+{
     [_handle release];
     [_persistentId release];
     [super dealloc];

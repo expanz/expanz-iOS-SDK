@@ -44,9 +44,8 @@
 
 + (ActivityInstance*) aValidActivity {
     JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 
-    CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] 
-                                               initWithActivityName:@"ESA.Sales.Calc" 
-                                               sessionToken:[SessionContext globalContext].sessionToken];
+    CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
+                                             style:nil sessionToken:[SessionContext globalContext].sessionToken];
     
     id<expanz_service_ActivityClient> activityClient = [testInjector 
                                                         getObject:@protocol(expanz_service_ActivityClient)];

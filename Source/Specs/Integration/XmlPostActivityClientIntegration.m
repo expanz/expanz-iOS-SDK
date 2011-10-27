@@ -36,19 +36,16 @@ beforeEach(^{
 describe(@"create activity. . . ", ^{
         
     it(@"should return activity details upon invocation", ^{
-        CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc] 
-                                initWithActivityName:@"ESA.Sales.Calc" 
-                                sessionToken:[SessionContext globalContext].sessionToken] autorelease];
+        CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
+                                    style:nil sessionToken:[SessionContext globalContext].sessionToken] autorelease];
         
         [activityClient createActivityWith:activityRequest delegate:delegate];
         assertWillHappen(delegate.activityInstance != nil); 
     });
     
     it(@"should invoke the delegate's error handler, if the underlying ASIFormDataRequest fails.", ^{
-        CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc] 
-                                                   initWithActivityName:@"ESA.Sales.Calc" 
-                                                   sessionToken:[SessionContext globalContext].sessionToken] 
-                                                  autorelease];
+        CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
+                                     style:nil sessionToken:[SessionContext globalContext].sessionToken] autorelease];
         
         ASIFormDataRequest* requestThatWillFail = [IntegrationUtils requestThatWillFail]; 
         id<expanz_service_ActivityClient> anotherClient = [[XmlPostActivityClient alloc] 

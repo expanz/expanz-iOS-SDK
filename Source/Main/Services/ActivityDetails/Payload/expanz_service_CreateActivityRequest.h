@@ -14,11 +14,12 @@
 
 @interface expanz_service_CreateActivityRequest : NSObject<xml_Serializable>
 
-@property (nonatomic, readonly) NSString* activityName; 
-@property (nonatomic, readonly) NSString* sessionToken; 
+@property (nonatomic, readonly) NSString* activityName;
+@property (nonatomic, readonly) NSString* style;
+@property (nonatomic, readonly) NSString* sessionToken;
 
 
-- (id) initWithActivityName:(NSString*)activityName sessionToken:(NSString*)sessionToken;
+- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken;
 
 @end
 

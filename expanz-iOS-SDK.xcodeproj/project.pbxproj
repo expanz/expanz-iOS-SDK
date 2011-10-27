@@ -83,9 +83,9 @@
 		6BC9F5E41458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
 		6BC9F5E51458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
 		6BC9F5E61458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5731458EB82001AF204 /* expanz_service_XmlPostActivityClient.m */; };
-		6BC9F5E71458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
-		6BC9F5E91458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
-		6BC9F5EA1458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */ = {isa = PBXBuildFile; };
+		6BC9F5E71458EB82001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F5E91458EB82001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F5EA1458EB82001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BC9F5EB1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
 		6BC9F5EC1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
 		6BC9F5ED1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */; };
@@ -167,11 +167,8 @@
 		6BC9F6411458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BC9F6421458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BC9F6771458EB8C001AF204 /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6451458EB8C001AF204 /* XmlPostActivityClientIntegration.m */; };
-		6BC9F6781458EB8C001AF204 /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6451458EB8C001AF204 /* XmlPostActivityClientIntegration.m */; };
 		6BC9F6791458EB8C001AF204 /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6461458EB8C001AF204 /* XmlPostLoginClientIntegration.m */; };
-		6BC9F67A1458EB8C001AF204 /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6461458EB8C001AF204 /* XmlPostLoginClientIntegration.m */; };
 		6BC9F67B1458EB8C001AF204 /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6471458EB8C001AF204 /* XmlPostSessionDataClientIntegration.m */; };
-		6BC9F67C1458EB8C001AF204 /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6471458EB8C001AF204 /* XmlPostSessionDataClientIntegration.m */; };
 		6BC9F67D1458EB8C001AF204 /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6491458EB8C001AF204 /* ActivityDetails.xml */; };
 		6BC9F67E1458EB8C001AF204 /* ActivityDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6491458EB8C001AF204 /* ActivityDetails.xml */; };
 		6BC9F67F1458EB8C001AF204 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F64A1458EB8C001AF204 /* ActivityInstance.xml */; };
@@ -189,45 +186,26 @@
 		6BC9F68D1458EB8C001AF204 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6551458EB8C001AF204 /* TestRunnerAppDelegate.m */; };
 		6BC9F68E1458EB8C001AF204 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6551458EB8C001AF204 /* TestRunnerAppDelegate.m */; };
 		6BC9F68F1458EB8C001AF204 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */; };
-		6BC9F6901458EB8C001AF204 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */; };
 		6BC9F6911458EB8C001AF204 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6591458EB8C001AF204 /* ActivitySpec.m */; };
-		6BC9F6921458EB8C001AF204 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6591458EB8C001AF204 /* ActivitySpec.m */; };
 		6BC9F6931458EB8C001AF204 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65A1458EB8C001AF204 /* FieldSpec.m */; };
-		6BC9F6941458EB8C001AF204 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65A1458EB8C001AF204 /* FieldSpec.m */; };
 		6BC9F6951458EB8C001AF204 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65B1458EB8C001AF204 /* MenuSpec.m */; };
-		6BC9F6961458EB8C001AF204 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65B1458EB8C001AF204 /* MenuSpec.m */; };
 		6BC9F6971458EB8C001AF204 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65C1458EB8C001AF204 /* MessageSpec.m */; };
-		6BC9F6981458EB8C001AF204 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65C1458EB8C001AF204 /* MessageSpec.m */; };
 		6BC9F6991458EB8C001AF204 /* ProcessAreaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65D1458EB8C001AF204 /* ProcessAreaSpec.m */; };
-		6BC9F69A1458EB8C001AF204 /* ProcessAreaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65D1458EB8C001AF204 /* ProcessAreaSpec.m */; };
 		6BC9F69B1458EB8C001AF204 /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65E1458EB8C001AF204 /* SessionContextSpec.m */; };
-		6BC9F69C1458EB8C001AF204 /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65E1458EB8C001AF204 /* SessionContextSpec.m */; };
 		6BC9F69D1458EB8C001AF204 /* UserRoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65F1458EB8C001AF204 /* UserRoleSpec.m */; };
-		6BC9F69E1458EB8C001AF204 /* UserRoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F65F1458EB8C001AF204 /* UserRoleSpec.m */; };
 		6BC9F69F1458EB8C001AF204 /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */; };
-		6BC9F6A01458EB8C001AF204 /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */; };
 		6BC9F6A11458EB8C001AF204 /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6621458EB8C001AF204 /* DeltaRequestSpec.m */; };
-		6BC9F6A21458EB8C001AF204 /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6621458EB8C001AF204 /* DeltaRequestSpec.m */; };
 		6BC9F6A31458EB8C001AF204 /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6631458EB8C001AF204 /* MethodInvocationRequestSpec.m */; };
-		6BC9F6A41458EB8C001AF204 /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6631458EB8C001AF204 /* MethodInvocationRequestSpec.m */; };
 		6BC9F6A51458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6641458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m */; };
-		6BC9F6A61458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6641458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m */; };
 		6BC9F6A71458EB8C001AF204 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6651458EB8C001AF204 /* RXMLElement+SessionContextSpec.m */; };
-		6BC9F6A81458EB8C001AF204 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6651458EB8C001AF204 /* RXMLElement+SessionContextSpec.m */; };
 		6BC9F6A91458EB8C001AF204 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6661458EB8C001AF204 /* RXMLElement+SessionDataSpec.m */; };
-		6BC9F6AA1458EB8C001AF204 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6661458EB8C001AF204 /* RXMLElement+SessionDataSpec.m */; };
 		6BC9F6AB1458EB8C001AF204 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6671458EB8C001AF204 /* SessionDataRequestSpec.m */; };
-		6BC9F6AC1458EB8C001AF204 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6671458EB8C001AF204 /* SessionDataRequestSpec.m */; };
 		6BC9F6AD1458EB8C001AF204 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6681458EB8C001AF204 /* SessionRequestSpec.m */; };
-		6BC9F6AE1458EB8C001AF204 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6681458EB8C001AF204 /* SessionRequestSpec.m */; };
 		6BC9F6AF1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66A1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m */; };
-		6BC9F6B01458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66A1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m */; };
 		6BC9F6B11458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66C1458EB8C001AF204 /* TextFieldTableCellSpec.m */; };
 		6BC9F6B21458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66C1458EB8C001AF204 /* TextFieldTableCellSpec.m */; };
 		6BC9F6B31458EB8C001AF204 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66D1458EB8C001AF204 /* LoginViewControllerSpec.m */; };
-		6BC9F6B41458EB8C001AF204 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66D1458EB8C001AF204 /* LoginViewControllerSpec.m */; };
 		6BC9F6B51458EB8C001AF204 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */; };
-		6BC9F6B61458EB8C001AF204 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */; };
 		6BC9F6B71458EB8C001AF204 /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6711458EB8C001AF204 /* IntegrationUtils.m */; };
 		6BC9F6B81458EB8C001AF204 /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6711458EB8C001AF204 /* IntegrationUtils.m */; };
 		6BC9F6B91458EB8C001AF204 /* TestActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6741458EB8C001AF204 /* TestActivityClientDelegate.m */; };
@@ -417,6 +395,7 @@
 		6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
 		6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
 		6BC9F7FC1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
+		6BC9F81414593607001AF204 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6661458EB8C001AF204 /* RXMLElement+SessionDataSpec.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -446,6 +425,13 @@
 		6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
 		6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
 		6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
+		6BF58DC81444245C0063E810 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E811 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E812 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E814 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
+		6BF58DC81444245C0063E815 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
+		6BF58DC81444245C0063E816 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
+		6BF58DC81444245C0063E817 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -701,6 +687,8 @@
 		6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CustomerViewController.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataPublication.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E818 /* expanz_model_DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataPublication.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -836,6 +824,8 @@
 		6BC9F55E1458EB82001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E818 /* expanz_model_DataPublication.h */,
+				6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */,
 				6BC9F55F1458EB82001AF204 /* expanz_model_ActivityDefinition.h */,
 				6BC9F5601458EB82001AF204 /* expanz_model_ActivityDefinition.m */,
 				6BC9F5611458EB82001AF204 /* expanz_model_ActivityInstance.h */,
@@ -1544,6 +1534,7 @@
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7F41458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7F91458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E810 /* expanz_model_DataPublication in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1558,6 +1549,7 @@
 				6BC9F6281458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F7F51458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E811 /* expanz_model_DataPublication in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1581,6 +1573,7 @@
 				6BC9F7F61458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
+				6BF58DC81444245C0063E812 /* expanz_model_DataPublication in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1602,7 +1595,7 @@
 				6BC9F5DE1458EB82001AF204 /* expanz_model_SessionContext.m in Sources */,
 				6BC9F5E21458EB82001AF204 /* expanz_model_UserRole.m in Sources */,
 				6BC9F5E61458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */,
-				6BC9F5EA1458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BC9F5EA1458EB82001AF204 /* (null) in Sources */,
 				6BC9F5EE1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BC9F5F21458EB82001AF204 /* expanz_service_DeltaRequest.m in Sources */,
 				6BC9F5F61458EB82001AF204 /* expanz_service_MethodInvocationRequest.m in Sources */,
@@ -1620,31 +1613,9 @@
 				6BC9F63A1458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63E1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,
 				6BC9F6421458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */,
-				6BC9F6781458EB8C001AF204 /* XmlPostActivityClientIntegration.m in Sources */,
-				6BC9F67A1458EB8C001AF204 /* XmlPostLoginClientIntegration.m in Sources */,
-				6BC9F67C1458EB8C001AF204 /* XmlPostSessionDataClientIntegration.m in Sources */,
 				6BC9F68A1458EB8C001AF204 /* main.m in Sources */,
 				6BC9F68E1458EB8C001AF204 /* TestRunnerAppDelegate.m in Sources */,
-				6BC9F6901458EB8C001AF204 /* ActivityInstanceSpec.m in Sources */,
-				6BC9F6921458EB8C001AF204 /* ActivitySpec.m in Sources */,
-				6BC9F6941458EB8C001AF204 /* FieldSpec.m in Sources */,
-				6BC9F6961458EB8C001AF204 /* MenuSpec.m in Sources */,
-				6BC9F6981458EB8C001AF204 /* MessageSpec.m in Sources */,
-				6BC9F69A1458EB8C001AF204 /* ProcessAreaSpec.m in Sources */,
-				6BC9F69C1458EB8C001AF204 /* SessionContextSpec.m in Sources */,
-				6BC9F69E1458EB8C001AF204 /* UserRoleSpec.m in Sources */,
-				6BC9F6A01458EB8C001AF204 /* CreateActivityRequestSpec.m in Sources */,
-				6BC9F6A21458EB8C001AF204 /* DeltaRequestSpec.m in Sources */,
-				6BC9F6A41458EB8C001AF204 /* MethodInvocationRequestSpec.m in Sources */,
-				6BC9F6A61458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m in Sources */,
-				6BC9F6A81458EB8C001AF204 /* RXMLElement+SessionContextSpec.m in Sources */,
-				6BC9F6AA1458EB8C001AF204 /* RXMLElement+SessionDataSpec.m in Sources */,
-				6BC9F6AC1458EB8C001AF204 /* SessionDataRequestSpec.m in Sources */,
-				6BC9F6AE1458EB8C001AF204 /* SessionRequestSpec.m in Sources */,
-				6BC9F6B01458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m in Sources */,
 				6BC9F6B21458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */,
-				6BC9F6B41458EB8C001AF204 /* LoginViewControllerSpec.m in Sources */,
-				6BC9F6B61458EB8C001AF204 /* ModelAdapterSpec.m in Sources */,
 				6BC9F6B81458EB8C001AF204 /* IntegrationUtils.m in Sources */,
 				6BC9F6BA1458EB8C001AF204 /* TestActivityClientDelegate.m in Sources */,
 				6BC9F6BC1458EB8C001AF204 /* TestLoginClientDelegate.m in Sources */,
@@ -1690,6 +1661,8 @@
 				6BC9F7DA1458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DE1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BC9F81414593607001AF204 /* RXMLElement+SessionDataSpec.m in Sources */,
+				6BF58DC81444245C0063E817 /* expanz_model_DataPublication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1709,7 +1682,7 @@
 				6BC9F5DB1458EB82001AF204 /* expanz_model_SessionContext.m in Sources */,
 				6BC9F5DF1458EB82001AF204 /* expanz_model_UserRole.m in Sources */,
 				6BC9F5E31458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */,
-				6BC9F5E71458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BC9F5E71458EB82001AF204 /* (null) in Sources */,
 				6BC9F5EB1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BC9F5EF1458EB82001AF204 /* expanz_service_DeltaRequest.m in Sources */,
 				6BC9F5F31458EB82001AF204 /* expanz_service_MethodInvocationRequest.m in Sources */,
@@ -1769,6 +1742,7 @@
 				6BC9F7D71458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DB1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E807 /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E814 /* expanz_model_DataPublication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1847,6 +1821,7 @@
 				6BC9F7D81458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DC1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E808 /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E815 /* expanz_model_DataPublication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1865,7 +1840,7 @@
 				6BC9F5DD1458EB82001AF204 /* expanz_model_SessionContext.m in Sources */,
 				6BC9F5E11458EB82001AF204 /* expanz_model_UserRole.m in Sources */,
 				6BC9F5E51458EB82001AF204 /* expanz_service_XmlPostActivityClient.m in Sources */,
-				6BC9F5E91458EB82001AF204 /* expanz_model_Field+DeltaRequest.m in Sources */,
+				6BC9F5E91458EB82001AF204 /* (null) in Sources */,
 				6BC9F5ED1458EB82001AF204 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BC9F5F11458EB82001AF204 /* expanz_service_DeltaRequest.m in Sources */,
 				6BC9F5F51458EB82001AF204 /* expanz_service_MethodInvocationRequest.m in Sources */,
@@ -1953,6 +1928,7 @@
 				6BC9F7D91458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DD1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E809 /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E816 /* expanz_model_DataPublication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2010,7 +1986,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Specs/TestRunner/TestRunner-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
@@ -2049,7 +2025,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/TestRunner/TestRunner-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Specs/TestRunner/TestRunner-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,

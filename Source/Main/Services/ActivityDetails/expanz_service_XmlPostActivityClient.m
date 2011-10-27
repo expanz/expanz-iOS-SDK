@@ -30,7 +30,7 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
-    
+
     [self addPayload:activityRequest];
     [self registerResponseParserFor:delegate];
     [self.request startAsynchronous];

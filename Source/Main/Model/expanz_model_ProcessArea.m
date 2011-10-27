@@ -19,7 +19,7 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title {
-    self = [self init];     
+    self = [self init];
     if (self) {
         _processId = [processId retain];
         _title = [title retain];
@@ -31,11 +31,11 @@
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*) activities {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
-    return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]]; 
+    return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (void) addActivityDefinition:(ActivityDefinition*)activity {
-    [_activities addObject:activity];    
+    [_activities addObject:activity];
 }
 
 - (ActivityDefinition*) activityWithName:(NSString*)activityName {

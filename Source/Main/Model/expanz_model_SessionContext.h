@@ -13,21 +13,21 @@
 #import <Foundation/Foundation.h>
 
 
- 
-@interface expanz_model_SessionContext: NSObject
+@interface expanz_model_SessionContext : NSObject
 
 
-@property (nonatomic, retain) NSString* sessionToken; 
-@property (nonatomic) BOOL hasError; 
-@property (nonatomic) BOOL hasWarning;
-@property (nonatomic, retain) NSString* message;
+@property(nonatomic, retain) NSString* sessionToken;
+@property(nonatomic) BOOL hasError;
+@property(nonatomic) BOOL hasWarning;
+@property(nonatomic, retain) NSString* message;
 
 
-+ (void)setGlobalContext:(expanz_model_SessionContext*)context;
++ (void) setGlobalContext:(expanz_model_SessionContext*)context;
+
 + (expanz_model_SessionContext*) globalContext;
+
 - (id) initWithSessionToken:(NSString*)sessionToken hasError:(BOOL)hasError hasWarning:(BOOL)hasWarning
                     message:(NSString*)message;
-
 
 
 @end

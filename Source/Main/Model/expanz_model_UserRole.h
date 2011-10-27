@@ -13,10 +13,10 @@
 
 @interface expanz_model_UserRole : NSObject
 
-@property (nonatomic, readonly) NSString* roleId; 
-@property (nonatomic, readonly) NSString* roleDescription; 
+@property(nonatomic, readonly) NSString* roleId;
+@property(nonatomic, readonly) NSString* roleDescription;
 
-- (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description; 
+- (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description;
 
 @end
 

@@ -9,33 +9,33 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_XmlPostWebService.h"
 
-@implementation expanz_service_XmlPostWebService
+#import "expanz_model_DataPublication.h"
 
-@synthesize request = _request;
+
+@implementation expanz_model_DataPublication
+
+@synthesize dataPublicationId = _dataPublicationId;
+@synthesize populateMethod = _populateMethod;
+@synthesize autoPopulate = _autoPopulate;
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithRequest:(ASIFormDataRequest*)request {
-    self = [super init];
-    if (self) {
-        _request = [request retain];
-        [_request addRequestHeader:@"Content-Type" value:@"text/xml"];   
-    }  
-    return self;
+- (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod autoPopulate:(BOOL)autoPopulate
+{
+    return nil;
+    //To change the template use AppCode | Preferences | File Templates.
+
 }
 
-- (void) addPayload:(id<xml_Serializable>)xmlable {
-    [xmlable retain];
-    LogDebug(@"Sending request: %@", [xmlable toXml]);
-    [_request appendPostData:[[xmlable toXml] dataUsingEncoding:NSUTF8StringEncoding]];
-    [xmlable release];
-}
+
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_request release];
+- (void) dealloc
+{
+    [_dataPublicationId release];
+    [_populateMethod release];
     [super dealloc];
 }
+
 
 @end

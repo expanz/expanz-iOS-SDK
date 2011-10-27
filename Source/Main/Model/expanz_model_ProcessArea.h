@@ -10,33 +10,34 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+
 @class expanz_model_ActivityDefinition;
 
-@interface expanz_model_ProcessArea : NSObject {
+@interface expanz_model_ProcessArea : NSObject
+{
 
-@private        
-    NSMutableSet* _activities; 
+@private
+    NSMutableSet* _activities;
 }
 
-@property (nonatomic, readonly) NSString* processId; 
-@property (nonatomic, readonly) NSString* title;
-@property (nonatomic, readonly) NSArray* activities; 
+@property(nonatomic, readonly) NSString* processId;
+@property(nonatomic, readonly) NSString* title;
+@property(nonatomic, readonly) NSArray* activities;
 
 /**
- * Initializes with the supplied processId and title parameters. 
- */
-- (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title; 
+* Initializes with the supplied processId and title parameters.
+*/
+- (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title;
 
 /** 
- * Adds an activity to the process area. 
- */
+* Adds an activity to the process area.
+*/
 - (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activity;
 
 /**
  * Returns the activity with the supplied id, or nil if none matching. 
  */
-- (expanz_model_ActivityDefinition *) activityWithName:(NSString*)activityName;
-
+- (expanz_model_ActivityDefinition*) activityWithName:(NSString*)activityName;
 
 
 @end

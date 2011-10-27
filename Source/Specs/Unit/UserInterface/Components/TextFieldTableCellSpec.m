@@ -12,7 +12,7 @@
 #import "SpecHelper.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
 
-SPEC_BEGIN(TestFieldTableCellSpec)
+SPEC_BEGIN(TextFieldTableCellSpec)
 
 describe(@"Object creation", ^{
     
