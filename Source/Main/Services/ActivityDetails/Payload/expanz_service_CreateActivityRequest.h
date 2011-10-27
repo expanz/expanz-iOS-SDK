@@ -12,14 +12,21 @@
 #import <Foundation/Foundation.h>
 #import "xml_Serializable.h"
 
-@interface expanz_service_CreateActivityRequest : NSObject<xml_Serializable>
+@class expanz_service_DataPublicationRequest;
 
-@property (nonatomic, readonly) NSString* activityName;
-@property (nonatomic, readonly) NSString* style;
-@property (nonatomic, readonly) NSString* sessionToken;
+@interface expanz_service_CreateActivityRequest : NSObject <xml_Serializable>
+
+
+@property(nonatomic, readonly) NSString* activityName;
+@property(nonatomic, readonly) NSString* style;
+@property(nonatomic, readonly) NSString* sessionToken;
+@property(nonatomic, readonly) NSMutableArray* dataPublicationRequests;
 
 
 - (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken;
+
+- (void) addDataPublicationRequest:(expanz_service_DataPublicationRequest*)dataPublicationRequest;
+
 
 @end
 

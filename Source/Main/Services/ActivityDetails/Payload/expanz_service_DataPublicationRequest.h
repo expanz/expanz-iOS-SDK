@@ -11,9 +11,10 @@
 
 
 #import <Foundation/Foundation.h>
+#import "xml_Serializable.h"
 
 
-@interface expanz_model_DataPublication : NSObject
+@interface expanz_service_DataPublicationRequest : NSObject<xml_Serializable>
 
 @property(nonatomic, readonly) NSString* dataPublicationId;
 @property(nonatomic, readonly) NSString* populateMethod;
@@ -23,3 +24,6 @@
 - (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod autoPopulate:(BOOL)autoPopulate;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias DataPublicationRequest expanz_service_DataPublicationRequest;

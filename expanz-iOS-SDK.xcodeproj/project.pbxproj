@@ -29,6 +29,11 @@
 		6BA75BA0144C037A007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BA75BA2144C0385007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
+		6BB3180C14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */; };
+		6BB3180D14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */; };
+		6BB3180E14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */; };
+		6BB3180F14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */; };
+		6BB3181714597030007D4DB7 /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */; };
 		6BC9F5AB1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AC1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AD1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
@@ -203,7 +208,6 @@
 		6BC9F6AD1458EB8C001AF204 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6681458EB8C001AF204 /* SessionRequestSpec.m */; };
 		6BC9F6AF1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66A1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m */; };
 		6BC9F6B11458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66C1458EB8C001AF204 /* TextFieldTableCellSpec.m */; };
-		6BC9F6B21458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66C1458EB8C001AF204 /* TextFieldTableCellSpec.m */; };
 		6BC9F6B31458EB8C001AF204 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66D1458EB8C001AF204 /* LoginViewControllerSpec.m */; };
 		6BC9F6B51458EB8C001AF204 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */; };
 		6BC9F6B71458EB8C001AF204 /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6711458EB8C001AF204 /* IntegrationUtils.m */; };
@@ -395,7 +399,6 @@
 		6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
 		6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
 		6BC9F7FC1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F7F81458F8CF001AF204 /* ESA.Sales.Customer.xib */; };
-		6BC9F81414593607001AF204 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6661458EB8C001AF204 /* RXMLElement+SessionDataSpec.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -425,13 +428,9 @@
 		6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */; };
 		6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
 		6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */; };
-		6BF58DC81444245C0063E810 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E811 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E812 /* expanz_model_DataPublication in Resources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E814 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
-		6BF58DC81444245C0063E815 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
-		6BF58DC81444245C0063E816 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
-		6BF58DC81444245C0063E817 /* expanz_model_DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */; };
+		6BF58DC81444245C0063E810 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E811 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E812 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -465,6 +464,8 @@
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../Developer/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
+		6BB3180A14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DataPublicationRequest.h; sourceTree = "<group>"; };
+		6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DataPublicationRequest.m; sourceTree = "<group>"; };
 		6BC9F5531458EB82001AF204 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BC9F5551458EB82001AF204 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6BC9F5561458EB82001AF204 /* expanz-iOS-SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "expanz-iOS-SDK-Info.plist"; sourceTree = "<group>"; };
@@ -687,8 +688,6 @@
 		6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CustomerViewController.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataPublication.m; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E818 /* expanz_model_DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataPublication.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,8 +823,6 @@
 		6BC9F55E1458EB82001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6BF58DC81444245C0063E818 /* expanz_model_DataPublication.h */,
-				6BF58DC81444245C0063E813 /* expanz_model_DataPublication.m */,
 				6BC9F55F1458EB82001AF204 /* expanz_model_ActivityDefinition.h */,
 				6BC9F5601458EB82001AF204 /* expanz_model_ActivityDefinition.m */,
 				6BC9F5611458EB82001AF204 /* expanz_model_ActivityInstance.h */,
@@ -872,6 +869,8 @@
 		6BC9F5741458EB82001AF204 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
+				6BB3180A14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.h */,
+				6BB3180B14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m */,
 				6BC9F5771458EB82001AF204 /* expanz_service_CreateActivityRequest.h */,
 				6BC9F5781458EB82001AF204 /* expanz_service_CreateActivityRequest.m */,
 				6BC9F5791458EB82001AF204 /* expanz_service_DeltaRequest.h */,
@@ -1534,7 +1533,7 @@
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7F41458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7F91458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
-				6BF58DC81444245C0063E810 /* expanz_model_DataPublication in Resources */,
+				6BF58DC81444245C0063E810 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1549,7 +1548,7 @@
 				6BC9F6281458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F7F51458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7FA1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
-				6BF58DC81444245C0063E811 /* expanz_model_DataPublication in Resources */,
+				6BF58DC81444245C0063E811 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1573,7 +1572,7 @@
 				6BC9F7F61458F764001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F7FB1458F8CF001AF204 /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
-				6BF58DC81444245C0063E812 /* expanz_model_DataPublication in Resources */,
+				6BF58DC81444245C0063E812 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1615,7 +1614,6 @@
 				6BC9F6421458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BC9F68A1458EB8C001AF204 /* main.m in Sources */,
 				6BC9F68E1458EB8C001AF204 /* TestRunnerAppDelegate.m in Sources */,
-				6BC9F6B21458EB8C001AF204 /* TextFieldTableCellSpec.m in Sources */,
 				6BC9F6B81458EB8C001AF204 /* IntegrationUtils.m in Sources */,
 				6BC9F6BA1458EB8C001AF204 /* TestActivityClientDelegate.m in Sources */,
 				6BC9F6BC1458EB8C001AF204 /* TestLoginClientDelegate.m in Sources */,
@@ -1661,8 +1659,8 @@
 				6BC9F7DA1458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DE1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E80A /* ESA_Sales_CustomerViewController.m in Sources */,
-				6BC9F81414593607001AF204 /* RXMLElement+SessionDataSpec.m in Sources */,
-				6BF58DC81444245C0063E817 /* expanz_model_DataPublication.m in Sources */,
+				6BB3180F14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */,
+				6BB3181714597030007D4DB7 /* CreateActivityRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1742,7 +1740,7 @@
 				6BC9F7D71458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DB1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E807 /* ESA_Sales_CustomerViewController.m in Sources */,
-				6BF58DC81444245C0063E814 /* expanz_model_DataPublication.m in Sources */,
+				6BB3180C14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1821,7 +1819,7 @@
 				6BC9F7D81458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DC1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E808 /* ESA_Sales_CustomerViewController.m in Sources */,
-				6BF58DC81444245C0063E815 /* expanz_model_DataPublication.m in Sources */,
+				6BB3180D14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1928,7 +1926,7 @@
 				6BC9F7D91458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DD1458EBB6001AF204 /* Reachability.m in Sources */,
 				6BF58DC81444245C0063E809 /* ESA_Sales_CustomerViewController.m in Sources */,
-				6BF58DC81444245C0063E816 /* expanz_model_DataPublication.m in Sources */,
+				6BB3180E14596AB2007D4DB7 /* expanz_service_DataPublicationRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
