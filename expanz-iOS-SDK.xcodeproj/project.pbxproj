@@ -139,10 +139,6 @@
 		6BC9F61C1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BC9F61D1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BC9F61E1458EB82001AF204 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
-		6BC9F61F1458EB82001AF204 /* backgroundGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5971458EB82001AF204 /* backgroundGradient.png */; };
-		6BC9F6201458EB82001AF204 /* backgroundGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5971458EB82001AF204 /* backgroundGradient.png */; };
-		6BC9F6211458EB82001AF204 /* backgroundGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5971458EB82001AF204 /* backgroundGradient.png */; };
-		6BC9F6221458EB82001AF204 /* backgroundGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5971458EB82001AF204 /* backgroundGradient.png */; };
 		6BC9F6231458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
 		6BC9F6241458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
 		6BC9F6251458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */; };
@@ -531,7 +527,6 @@
 		6BC9F5921458EB82001AF204 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
 		6BC9F5951458EB82001AF204 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BC9F5961458EB82001AF204 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		6BC9F5971458EB82001AF204 /* backgroundGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundGradient.png; sourceTree = "<group>"; };
 		6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
 		6BC9F5991458EB82001AF204 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
@@ -957,7 +952,6 @@
 			children = (
 				6BC9F5951458EB82001AF204 /* ActivityMenu.xib */,
 				6BC9F5961458EB82001AF204 /* background.png */,
-				6BC9F5971458EB82001AF204 /* backgroundGradient.png */,
 				6BC9F5981458EB82001AF204 /* ESA.Sales.Calc.xib */,
 				6BC9F5991458EB82001AF204 /* Login.xib */,
 			);
@@ -1510,7 +1504,6 @@
 				6BC9F5B21458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F61A1458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61E1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6221458EB82001AF204 /* backgroundGradient.png in Resources */,
 				6BC9F6261458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F62A1458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F67E1458EB8C001AF204 /* ActivityDetails.xml in Resources */,
@@ -1532,7 +1525,6 @@
 				6BC9F5AF1458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6171458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61B1458EB82001AF204 /* background.png in Resources */,
-				6BC9F61F1458EB82001AF204 /* backgroundGradient.png in Resources */,
 				6BC9F6231458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6271458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
@@ -1547,7 +1539,6 @@
 				6BC9F5B01458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6181458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61C1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6201458EB82001AF204 /* backgroundGradient.png in Resources */,
 				6BC9F6241458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6281458EB82001AF204 /* Login.xib in Resources */,
 			);
@@ -1561,7 +1552,6 @@
 				6BC9F5B11458EB82001AF204 /* MainWindow.xib in Resources */,
 				6BC9F6191458EB82001AF204 /* ActivityMenu.xib in Resources */,
 				6BC9F61D1458EB82001AF204 /* background.png in Resources */,
-				6BC9F6211458EB82001AF204 /* backgroundGradient.png in Resources */,
 				6BC9F6251458EB82001AF204 /* ESA.Sales.Calc.xib in Resources */,
 				6BC9F6291458EB82001AF204 /* Login.xib in Resources */,
 				6BC9F67D1458EB8C001AF204 /* ActivityDetails.xml in Resources */,
