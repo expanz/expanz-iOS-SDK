@@ -12,7 +12,7 @@
 #import "SpecHelper.h"
 #import "RXMLElement+SessionData.h"
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_Activity.h"
+#import "../../../Main/Model/expanz_model_ActivityDefinition.h"
 
 
 SPEC_BEGIN(ProcessAreaSpec)
@@ -41,14 +41,14 @@ describe(@"Activities", ^{
     });
     
     it(@"should store references to associated activites via an addActivity method", ^{
-        Activity* activity = [[Activity alloc] initWithName:@"Order a widget" andTitle:@"Get your widgets here"];
-        [processArea addActivity:activity];
+        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Order a widget" title:@"Get your widgets here" style:NULL];
+        [processArea addActivityDefinition:activity];
         assertThat(processArea.activities, hasCountOf(1));
     });
     
     it(@"should allow retrieving an activity by name.", ^{
-        Activity* activity = [[Activity alloc] initWithName:@"Order a widget" andTitle:@"Get your widgets here"];
-        [processArea addActivity:activity];
+        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Order a widget" title:@"Get your widgets here" style:NULL];
+        [processArea addActivityDefinition:activity];
 
         assertThat([processArea activityWithName:@"Order a widget"], equalTo(activity));
         assertThat([processArea activityWithName:@"zzzzzz"], nilValue());

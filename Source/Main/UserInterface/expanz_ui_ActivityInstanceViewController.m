@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_model_SessionContext.h"
-#import "expanz_model_Activity.h"
+#import "../Model/expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Message.h"
 #import "expanz_service_CreateActivityRequest.h"
@@ -30,7 +30,7 @@
 
 
 /* ================================================== Constructors ================================================== */
--(id) initWithActivity:(Activity*)activity {
+-(id) initWithActivity:(ActivityDefinition*)activity {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;    

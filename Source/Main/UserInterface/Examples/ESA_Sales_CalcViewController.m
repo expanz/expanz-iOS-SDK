@@ -26,19 +26,18 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-
 - (IBAction) addClicked {
     [self sendMethodInvocation:@"Add"];
 }
 
 - (IBAction) subtractClicked {
-    [self sendMethodInvocation:@"Subtract"];  
-    
+    [self sendMethodInvocation:@"Subtract"];
+
 }
 
 - (IBAction) multiplyClicked {
     [self sendMethodInvocation:@"Multiply"];
-    
+
 }
 
 - (IBAction) divideClicked {
@@ -46,7 +45,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
     [_ResultLabel release];
     [_Op1Label release]; 

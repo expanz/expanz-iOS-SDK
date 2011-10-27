@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_Activity.h"
+#import "expanz_model_ActivityDefinition.h"
 @class expanz_model_Field;
 @class expanz_model_Message;
 
 /**
  * Represents an activity in progress. 
  */
-@interface expanz_model_ActivityInstance : expanz_model_Activity {
+@interface expanz_model_ActivityInstance : expanz_model_ActivityDefinition {
     
 @private
     NSMutableSet* _fields;         

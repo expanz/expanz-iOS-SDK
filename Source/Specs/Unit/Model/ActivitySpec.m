@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "expanz_model_Activity.h"
+#import "../../../Main/Model/expanz_model_ActivityDefinition.h"
 
 
 SPEC_BEGIN(ActivitySpec)
@@ -18,7 +18,7 @@ SPEC_BEGIN(ActivitySpec)
 describe(@"Object instanciation", ^{
         
     it(@"should allow initialization with name and title.", ^{
-        Activity* activity = [[Activity alloc] initWithName:@"Calculator" andTitle:@"Calculator Application"]; 
+        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Calculator" title:@"Calculator Application" style:NULL];
         assertThat(activity.name, equalTo(@"Calculator"));
         assertThat(activity.title, equalTo(@"Calculator Application"));
         assertThat([activity description], notNilValue());

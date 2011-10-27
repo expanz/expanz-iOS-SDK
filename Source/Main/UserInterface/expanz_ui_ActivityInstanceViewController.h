@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "expanz_service_ActivityClient.h"
-@class expanz_model_Activity;
+@class expanz_model_ActivityDefinition;
 @class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
 
@@ -31,7 +31,7 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity. 
  */
--(id) initWithActivity:(expanz_model_Activity*)activity; 
+-(id) initWithActivity:(expanz_model_ActivityDefinition *)activity;
 
 /**
  * Request model to update with new field value. 

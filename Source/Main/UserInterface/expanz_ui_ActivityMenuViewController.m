@@ -14,7 +14,7 @@
 #import "expanz_iOS_SDKExceptions.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_Activity.h"
+#import "../Model/expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -94,14 +94,14 @@
     }
     
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-    Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
+    ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
     cell.textLabel.text = [activity title];    
     return cell;    
 }
 
 - (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section]; 
-    Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
+    ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
     
     //TODO: Look up view controller from formmapping.xml
     NSMutableString* controllerClassName = [[NSMutableString alloc] init];

@@ -11,7 +11,7 @@
 
 #import "OCMock.h"
 #import "SpecHelper.h" 
-#import "expanz_model_Activity.h"
+#import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
@@ -30,7 +30,7 @@ beforeEach(^{
     
     id injector = [OCMockObject niceMockForClass:[JSObjectionInjector class]]; 
     [JSObjection setGlobalInjector:injector];  
-    Activity* activity = [[Activity alloc] initWithName:@"ESA.Sales.Calc" andTitle:@"Basic Calculator"];     
+    ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Basic Calculator" style:NULL];
     
     controller = [[[BasicCalculatorViewController alloc] initWithActivity:activity] autorelease];
     assertThat(controller, notNilValue());

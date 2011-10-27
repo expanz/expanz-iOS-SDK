@@ -11,19 +11,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface expanz_model_Activity : NSObject {
+@interface expanz_model_ActivityDefinition : NSObject
 
-@protected
-    NSString* _title; 
-    
-}
+@property (nonatomic, readonly) NSString* name;
+@property (nonatomic, readonly) NSString* title;
+@property (nonatomic, readonly) NSString* style;
 
-@property (nonatomic, readonly) NSString* name; 
-@property (nonatomic, readonly) NSString* title; 
-
-- (id) initWithName:(NSString*)name andTitle:(NSString*)title; 
+- (id)initWithName:(NSString *)name title:(NSString *)title style:(NSString*)style;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias Activity expanz_model_Activity;
+@compatibility_alias ActivityDefinition expanz_model_ActivityDefinition;

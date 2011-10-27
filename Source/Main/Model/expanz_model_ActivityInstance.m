@@ -21,7 +21,7 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
-    self = [super initWithName:nil andTitle:title];
+    self = [super initWithName:nil title:title style:NULL];
     if (self) {
         _handle = [handle retain];
         _persistentId = [persistentId retain];   

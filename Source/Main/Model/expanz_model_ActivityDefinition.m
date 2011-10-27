@@ -9,19 +9,22 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_Activity.h"
+#import "expanz_model_ActivityDefinition.h"
 
-@implementation expanz_model_Activity
+@implementation expanz_model_ActivityDefinition
 
 @synthesize name = _name;
 @synthesize title = _title;
+@synthesize style = _style;
+
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithName:(NSString*)name andTitle:(NSString*)title {
+- (id)initWithName:(NSString *)name title:(NSString *)title style:(NSString*)style {
     self = [self init];
     if (self) {
         _name = [name retain]; 
         _title = [title retain];
+        _style = [style retain];
     }
     return self; 
 }
@@ -34,6 +37,7 @@
 - (void) dealloc {
     [_name release];
     [_title release];
+    [_style release];
     [super dealloc];
 }
 

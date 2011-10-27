@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-@class expanz_model_Activity;
+@class expanz_model_ActivityDefinition;
 
 @interface expanz_model_ProcessArea : NSObject {
 
@@ -30,12 +30,12 @@
 /** 
  * Adds an activity to the process area. 
  */
-- (void) addActivity:(expanz_model_Activity*)activity; 
+- (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activity;
 
 /**
  * Returns the activity with the supplied id, or nil if none matching. 
  */
-- (expanz_model_Activity*) activityWithName:(NSString*)activityName; 
+- (expanz_model_ActivityDefinition *) activityWithName:(NSString*)activityName;
 
 
 
