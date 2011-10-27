@@ -191,6 +191,10 @@
 		6BC160821436AF3500E166F6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1606F1436AF3500E166F6 /* MainWindow.xib */; };
 		6BC160861436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */; };
 		6BC160901436AF3500E166F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1607B1436AF3500E166F6 /* main.m */; };
+		6BC527301458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */; };
+		6BC527311458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */; };
+		6BC527321458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */; };
+		6BC527331458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -199,10 +203,6 @@
 		6BD51BB61456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
 		6BD51BB71456605300B83E68 /* ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD51BB51456605300B83E68 /* ActivityInstance.xml */; };
 		6BD51BB9145694C100B83E68 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */; };
-		6BF000541454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */; };
-		6BF000551454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */; };
-		6BF000561454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */; };
-		6BF000571454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */; };
 		6BF0005B14553486006E024F /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0005A14553486006E024F /* expanz_model_Message.m */; };
 		6BF0005C14553486006E024F /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0005A14553486006E024F /* expanz_model_Message.m */; };
 		6BF0005D14553486006E024F /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0005A14553486006E024F /* expanz_model_Message.m */; };
@@ -527,14 +527,14 @@
 		6BC160731436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKAppDelegate.h; sourceTree = "<group>"; };
 		6BC160741436AF3500E166F6 /* expanz_iOS_SDKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKAppDelegate.m; sourceTree = "<group>"; };
 		6BC1607B1436AF3500E166F6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BC5272E1458D118000A5233 /* ESA_Sales_CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CalcViewController.h; sourceTree = "<group>"; };
+		6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CalcViewController.m; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* expanz-iOS-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expanz-iOS-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BD51BB21456527F00B83E68 /* Cedar-iPhone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iPhone.framework"; path = "Dependencies/Frameworks/Cedar-iPhone.framework"; sourceTree = SOURCE_ROOT; };
 		6BD51BB51456605300B83E68 /* ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityInstance.xml; sourceTree = "<group>"; };
-		6BF000521454E9AC006E024F /* ESA_Sales_CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CalcViewController.h; sourceTree = "<group>"; };
-		6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CalcViewController.m; sourceTree = "<group>"; };
 		6BF0005914553486006E024F /* expanz_model_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Message.h; sourceTree = "<group>"; };
 		6BF0005A14553486006E024F /* expanz_model_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Message.m; sourceTree = "<group>"; };
 		6BF0005F145537C3006E024F /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSpec.m; sourceTree = "<group>"; };
@@ -773,12 +773,11 @@
 			children = (
 				6B4F973E144913A500D85040 /* Assets */,
 				6B4F975A1449146B00D85040 /* Components */,
+				6BC5272D1458D118000A5233 /* Examples */,
 				6B9E2E76144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.h */,
 				6B9E2E77144C3FE300E8297F /* expanz_ui_ActivityInstanceViewController.m */,
 				6B4F9742144913A500D85040 /* expanz_ui_ActivityMenuViewController.h */,
 				6B4F9743144913A500D85040 /* expanz_ui_ActivityMenuViewController.m */,
-				6BF000521454E9AC006E024F /* ESA_Sales_CalcViewController.h */,
-				6BF000531454E9AC006E024F /* ESA_Sales_CalcViewController.m */,
 				6B4F9744144913A500D85040 /* expanz_ui_LoginViewController.h */,
 				6B4F9745144913A500D85040 /* expanz_ui_LoginViewController.m */,
 				6BF0006F145575DD006E024F /* expanz_ui_ModelAdapter.h */,
@@ -979,6 +978,15 @@
 				6BC1607B1436AF3500E166F6 /* main.m */,
 			);
 			path = "expanz-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		6BC5272D1458D118000A5233 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				6BC5272E1458D118000A5233 /* ESA_Sales_CalcViewController.h */,
+				6BC5272F1458D118000A5233 /* ESA_Sales_CalcViewController.m */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		6BCAFB8C14317B1B00575280 = {
@@ -1565,11 +1573,11 @@
 				6B8DBB601451B4F30012DDB7 /* RTProperty.m in Sources */,
 				6B8DBB641451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB681451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
-				6BF000571454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */,
 				6BF0005E14553486006E024F /* expanz_model_Message.m in Sources */,
 				6BF00074145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
 				6BD51BB9145694C100B83E68 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6B5DC9E714580D7D00A1820A /* ActivityInstanceViewControllerSpec.m in Sources */,
+				6BC527331458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1645,9 +1653,9 @@
 				6B8DBB5D1451B4F30012DDB7 /* RTProperty.m in Sources */,
 				6B8DBB611451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB651451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
-				6BF000541454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */,
 				6BF0005B14553486006E024F /* expanz_model_Message.m in Sources */,
 				6BF00071145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
+				6BC527301458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1723,9 +1731,9 @@
 				6B8DBB5E1451B4F30012DDB7 /* RTProperty.m in Sources */,
 				6B8DBB621451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB661451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
-				6BF000551454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */,
 				6BF0005C14553486006E024F /* expanz_model_Message.m in Sources */,
 				6BF00072145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
+				6BC527311458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1826,11 +1834,11 @@
 				6B8DBB631451B4F30012DDB7 /* RTProtocol.m in Sources */,
 				6B8DBB671451B4F30012DDB7 /* RTUnregisteredClass.m in Sources */,
 				6B8DBB6D1451B53A0012DDB7 /* ActivityInstanceViewControllerSpec.m in Sources */,
-				6BF000561454E9AC006E024F /* ESA_Sales_CalcViewController.m in Sources */,
 				6BF0005D14553486006E024F /* expanz_model_Message.m in Sources */,
 				6BF00062145537C3006E024F /* MessageSpec.m in Sources */,
 				6BF00073145575DD006E024F /* expanz_ui_ModelAdapter.m in Sources */,
 				6B5DC9E5145801B400A1820A /* ModelAdapterSpec.m in Sources */,
+				6BC527321458D118000A5233 /* ESA_Sales_CalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

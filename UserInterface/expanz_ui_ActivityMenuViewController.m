@@ -104,8 +104,8 @@
     Activity* activity = [processArea.activities objectAtIndex:indexPath.row];
     
     //TODO: Look up view controller from formmapping.xml
-    NSMutableString* controllerClassName = [[NSMutableString alloc] initWithString:activity.name];
-    controllerClassName = [controllerClassName stringByReplacingOccurrencesOfString:@"." withString:@"_"];
+    NSMutableString* controllerClassName = [[NSMutableString alloc] init];
+    [controllerClassName appendString:[activity.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
     [controllerClassName appendString:@"ViewController"];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
     if (clazz == nil) {

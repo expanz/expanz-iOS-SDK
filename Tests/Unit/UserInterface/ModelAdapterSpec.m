@@ -15,7 +15,7 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "../../../UserInterface/ESA_Sales_CalcViewController.h"
+#import "ESA_Sales_CalcViewController.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "RXMLElement+SessionData.h"
 
