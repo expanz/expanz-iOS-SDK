@@ -13,9 +13,11 @@
 #import <Foundation/Foundation.h>
 #import "expanz_ui_ActivityInstanceViewController.h"
 
+@class expanz_ui_components_TableView;
 
-@interface ESA_Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController {
 
-}
+@interface ESA_Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController<UITableViewDelegate>
+
+@property (nonatomic, retain) IBOutlet expanz_ui_components_TableView* dataGrid;
 
 @end

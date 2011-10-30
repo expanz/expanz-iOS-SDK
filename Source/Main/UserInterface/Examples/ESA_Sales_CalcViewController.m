@@ -27,21 +27,21 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (IBAction) addClicked {
-    [self sendMethodInvocation:@"Add"];
+    [super sendMethodInvocation:@"Add"];
 }
 
 - (IBAction) subtractClicked {
-    [self sendMethodInvocation:@"Subtract"];
+    [super sendMethodInvocation:@"Subtract"];
 
 }
 
 - (IBAction) multiplyClicked {
-    [self sendMethodInvocation:@"Multiply"];
+    [super sendMethodInvocation:@"Multiply"];
 
 }
 
 - (IBAction) divideClicked {
-    [self sendMethodInvocation:@"Divide"];
+    [super sendMethodInvocation:@"Divide"];
 }
 
 /* ================================================== Utility Methods =============================================== */

@@ -20,6 +20,7 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_Field.h"
 #import "expanz_service_DeltaRequest.h"
+#import "expanz_service_DataPublicationRequest.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -30,13 +31,21 @@
 
 
 /* ================================================== Constructors ================================================== */
--(id) initWithActivity:(ActivityDefinition*)activity {
+- (id) initWithActivity:(ActivityDefinition*)activity {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;
         NSString* sessionToken = [SessionContext globalContext].sessionToken;
-        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:activity.name
-                                                 style:activity.style sessionToken:sessionToken];
+        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
+            initWithActivityName:activity.name style:activity.style sessionToken:sessionToken];
+
+        if ([activity.name isEqualToString:@"ESA.Sales.Customer"]) {
+            DataPublicationRequest* dataPublicationRequest =
+                [[DataPublicationRequest alloc] initWithId:@"customersList" populateMethod:@"ListMe" autoPopulate:YES];
+            [activityRequest addDataPublicationRequest:dataPublicationRequest];
+            [dataPublicationRequest release];
+        }
+
         [[self activityClient] createActivityWith:activityRequest delegate:self];
         [_spinner startAnimating];
         [activityRequest release];
@@ -45,11 +54,11 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (id<expanz_service_ActivityClient>) activityClient {
+- (id <expanz_service_ActivityClient>) activityClient {
     return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
 }
 
-- (void) sendDeltaForField:(Field*)field {   
+- (void) sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
         DeltaRequest* deltaRequest = [DeltaRequest fromField:field];
@@ -57,27 +66,39 @@
     }
 }
 
-- (void) sendMethodInvocation:(NSString*)methodName {    
+- (void) sendMethodInvocation:(NSString*)methodName {
     [_currentlyEditingField resignFirstResponder];
-    
-    while ([_activityInstance allowsMethodInvocations] == NO) { 
+
+    while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         LogDebug(@"Waiting for model synchronization. . . ");
-        usleep(50000); 
+        usleep(50000);
     }
-    MethodInvocationRequest* methodRequest = [[MethodInvocationRequest alloc] 
-                                              initWithActivityInstance:_activityInstance methodName:methodName]; 
+    MethodInvocationRequest* methodRequest =
+        [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
     [_spinner startAnimating];
     [[self activityClient] sendMethodInvocationWith:methodRequest delegate:self];
-    [methodRequest release];    
+    [methodRequest release];
 }
 
+- (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
+    LogDebug(@"Requesting dataPublicationId: %@", dataPublicationId);
+}
+
+- (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
+    LogDebug(@"Requesting populateMethod: %@", populateMethod);
+    
+}
+
+- (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
+    LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
+}
 
 /* ================================================ Delegate Methods ================================================ */
 - (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -108,10 +129,10 @@
 }
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
-    [textField resignFirstResponder]; 
-    Field* field = [_modelAdapter fieldFor:textField]; 
+    [textField resignFirstResponder];
+    Field* field = [_modelAdapter fieldFor:textField];
     [field didFinishEditWithValue:textField.text];
-    [self sendDeltaForField:field]; 
+    [self sendDeltaForField:field];
     return YES;
 }
 
@@ -125,22 +146,23 @@
         _activityInstance = [activityInstance retain];
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
         [_modelAdapter updateUIControlsWithModelValues];
-    } 
-    
-    for (Field* field in activityInstance.fields) {                
+    }
+
+    for (Field* field in activityInstance.fields) {
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
         [[_modelAdapter textControlFor:field] setText:field.value];
     }
     for (Message* message in activityInstance.messages) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message.messageTypeAsString message:message.content 
-                                                       delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView* alert = [[UIAlertView alloc]
+            initWithTitle:message.messageTypeAsString message:message.content delegate:self cancelButtonTitle:@"OK"
+        otherButtonTitles:nil];
         [alert show];
         [alert release];
     }
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    
+
 }
 
 
@@ -149,7 +171,7 @@
 - (void) dealloc {
     [_spinner release];
     [_activityInstance release];
-    [_modelAdapter release]; 
+    [_modelAdapter release];
     [super dealloc];
 }
 

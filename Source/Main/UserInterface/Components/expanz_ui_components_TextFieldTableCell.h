@@ -11,7 +11,9 @@
 
 #import <UIKit/UIKit.h>
 
-
+/**
+* Adds a text field on the right of the table cell, making it an editable control.
+*/
 @interface expanz_ui_components_TextFieldTableCell : UITableViewCell<UITextFieldDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextField* textField;

@@ -48,6 +48,10 @@
  */
 - (id<expanz_service_ActivityClient>) activityClient;
 
+- (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId;
+- (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
+- (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
+
 
 @end
 
