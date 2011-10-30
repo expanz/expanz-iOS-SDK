@@ -1,67 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExecXResponse xmlns="http://www.expanz.com/ESAService">
     <ExecXResult>
-        <ESA success="1" responseTime="6" xmlns="">
-            <Activity activityHandle="634553550003888042.58" title="Customer" titleField="Name"
-                focusField="SearchCode" ActivityPersistentId="0">
-                <Field id="PersistentId" label="Customer Id" nullable="0" null="1" value=""
-                    datatype="number"/>
-                <Field id="AllowLogin" label="Allow Login" nullable="0" null="0" valid="1" value="0"
-                    datatype="bool"/>
-                <Field id="SearchCode" label="Search Code" nullable="0" maxLength="8" null="1"
-                    value="" datatype="string" textCase="upper" isSearchField="1" valid="0"/>
-                <Field id="EmailAddress" label="Email Address" maxLength="100" null="1" value=""
-                    datatype="string" valid="1"/>
-                <Field id="Name" label="Name" disabled="1" nullable="0" maxLength="100" null="1"
-                    value="" datatype="string" valid="0"/>
-                <Field id="Street" label="Street" maxLength="80" null="1" value="" datatype="string"
-                    valid="1"/>
-                <Field id="Address" label="Address" maxLength="80" null="1" value=""
-                    datatype="string" valid="1"/>
-                <Field id="Phone" label="Telephone No" maxLength="20" null="1" value=""
-                    datatype="string" valid="1"/>
-                <Field id="MobilePhone" label="Mobile Phone" maxLength="20" null="1" value=""
-                    datatype="string" valid="1"/>
-                <Field id="Image.FileName" label="Attachment Name" maxLength="200" null="1" value=""
-                    datatype="string" valid="1"/>
-                <Field id="Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
-                    valid="1"/>
-                <Field id="Image.Timestamp" null="1" value="" date="" time="" DayOfWeek=""
-                    datatype="datetime" valid="1"/>
+        <ESA success="1" responseTime="7" xmlns="">
+            <Activity activityHandle="634555857251714201.57" title="Customer" titleField="Name" focusField="SearchCode"
+                      ActivityPersistentId="0">
+                <Field id="PersistentId" label="Customer Id" nullable="0" null="1" value="" datatype="number"/>
+                <Field id="AllowLogin" label="Allow Login" nullable="0" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="SearchCode" label="Search Code" nullable="0" maxLength="8" null="1" value=""
+                       datatype="string" textCase="upper" isSearchField="1" valid="0"/>
+                <Field id="EmailAddress" label="Email Address" maxLength="100" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Name" label="Name" disabled="1" nullable="0" maxLength="100" null="1" value=""
+                       datatype="string" valid="0"/>
+                <Field id="Street" label="Street" maxLength="80" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Address" label="Address" maxLength="80" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Phone" label="Telephone No" maxLength="20" null="1" value="" datatype="string" valid="1"/>
+                <Field id="MobilePhone" label="Mobile Phone" maxLength="20" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Image.FileName" label="Attachment Name" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Image.FileContents" label="Binary Contents" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Image.Timestamp" null="1" value="" date="" time="" DayOfWeek="" datatype="datetime"
+                       valid="1"/>
                 <Field id="RowClassType"/>
                 <Field id="Roles.PersistentId" nullable="0" null="1" value="" datatype="number"
-                    relationship="aggregate"/>
+                       relationship="aggregate"/>
                 <Field id="Roles.Sequence" null="1" value="" datatype="number" valid="1"/>
-                <Field id="Roles.SecurityRole.PersistentId" disabled="0" nullable="0" null="1"
-                    value="" datatype="number"/>
-                <Field id="Roles.SecurityRole.Name" label="Role Name" disabled="0" nullable="0"
-                    maxLength="50" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Roles.SecurityRole.PersistentId" disabled="0" nullable="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="Roles.SecurityRole.Name" label="Role Name" disabled="0" nullable="0" maxLength="50" null="1"
+                       value="" datatype="string" valid="1"/>
                 <Field id="Roles.SecurityRole.BPMRoleID" label="BPM Role"
-                    hint="Name of the Role from Business Process Modelling document" disabled="1"
-                    maxLength="32" null="1" value="" text="" datatype="string" valid="1"/>
-                <Field id="Roles.SecurityRole.DefaultSequence" label="Sequence" disabled="1"
-                    null="1" value="" datatype="number" valid="1"/>
-                <Field id="Roles.SecurityRole.Description" label="Description" disabled="1"
-                    maxLength="400" null="1" value="$longData$" datatype="string" valid="1"/>
-                <Field id="FirstName" label="First Name" nullable="0" maxLength="50" null="1"
-                    value="" datatype="string" valid="0"/>
-                <Field id="LastName" label="Last Name" nullable="0" maxLength="50" null="1" value=""
-                    datatype="string" valid="0"/>
-                <Field id="Notes" label="Notes" maxLength="200" null="1" value="" datatype="string"
-                    valid="1"/>
+                       hint="Name of the Role from Business Process Modelling document" disabled="1" maxLength="32"
+                       null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Roles.SecurityRole.DefaultSequence" label="Sequence" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="Roles.SecurityRole.Description" label="Description" disabled="1" maxLength="400" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="FirstName" label="First Name" nullable="0" maxLength="50" null="1" value="" datatype="string"
+                       valid="0"/>
+                <Field id="LastName" label="Last Name" nullable="0" maxLength="50" null="1" value="" datatype="string"
+                       valid="0"/>
+                <Field id="Notes" label="Notes" maxLength="200" null="1" value="" datatype="string" valid="1"/>
                 <Field id="Discount" label="Discount" null="1" value="" datatype="number" valid="1"/>
-                <Field id="LoginCode" label="Login Code" maxLength="20" disabled="1" null="1"
-                    value="" datatype="string" valid="1"/>
-                <Field id="Password" maxLength="20" disabled="1" null="1" value="" datatype="string"
-                    secureChannel="1" valid="1"/>
+                <Field id="LoginCode" label="Login Code" maxLength="20" disabled="1" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Password" maxLength="20" disabled="1" null="1" value="" datatype="string" secureChannel="1"
+                       valid="1"/>
                 <Types>
                     <Type id="ESA.Sales.UserRole" image="UserRole"/>
                     <Type id="ESA.Sales.Customer" image="Customer"/>
                 </Types>
                 <Data id="customersList" source="ESA.Sales.Customer.ListMe">
                     <Columns>
-                        <Column id="1" field="SearchCode" label="Search Code" datatype="string"
-                            width="70"/>
+                        <Column id="1" field="SearchCode" label="Search Code" datatype="string" width="70"/>
                         <Column id="2" field="Name" label="Name" datatype="string" width="140"/>
                     </Columns>
                     <Rows Type="cell">
@@ -106,6 +98,6 @@
             </Activity>
         </ESA>
     </ExecXResult>
-    <sessionHandle>net.tcp://127.0.0.1:8197/SessionManager1#634553549750968174:251</sessionHandle>
+    <sessionHandle>net.tcp://127.0.0.1:8197/SessionManager1#634555857211234131:321</sessionHandle>
     <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
 </ExecXResponse>

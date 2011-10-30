@@ -46,7 +46,10 @@
     SDKAppDelegate* appDelegate = (SDKAppDelegate*) [UIApplication sharedApplication].delegate;
     UINavigationController* navigationController = appDelegate.navigationController;
     UIViewController* topController = navigationController.topViewController;
-    return [topController isKindOfClass:[ActivityInstanceViewController class]] ? topController : nil;
+    if ([topController isKindOfClass:[ActivityInstanceViewController class]]) {
+        return (ActivityInstanceViewController*) topController;
+    }
+    return nil;
 }
 
 @end

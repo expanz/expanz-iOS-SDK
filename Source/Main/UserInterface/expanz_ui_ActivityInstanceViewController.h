@@ -14,14 +14,15 @@
 @class expanz_model_ActivityDefinition;
 @class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
+@class expanz_service_CreateActivityRequest;
 
 
 @interface expanz_ui_ActivityInstanceViewController : 
     UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate> {
     
-@private        
-    UITextField* _currentlyEditingField;    
-        
+@private
+    expanz_service_CreateActivityRequest* _activityRequest;
+    UITextField* _currentlyEditingField;
 }
 
 @property (nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;

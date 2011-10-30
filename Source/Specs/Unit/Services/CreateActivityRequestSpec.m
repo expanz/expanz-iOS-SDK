@@ -38,23 +38,23 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             assertThat(e, notNilValue());
         });
 
-        it(@"Should allow inclusion of DataPublicationRequests in the request body", ^{
-            CreateActivityRequest* request = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Calculator" style:@"Browse" sessionToken:@"xx2348b"];
-
-            DataPublicationRequest* dataPublicationRequest =
-                [[DataPublicationRequest alloc] initWithId:@"1234" populateMethod:@"ListMe" autoPopulate:YES];
-            [request addDataPublicationRequest:dataPublicationRequest];
-            [dataPublicationRequest release];
-
-            DataPublicationRequest* another = [[DataPublicationRequest alloc] initWithId:@"888"
-                populateMethod:@"ShowMe" autoPopulate:NO];
-            [request addDataPublicationRequest:another];
-            [another release];
-            LogDebug(@"%@", [request toXml]);
-            assertThat([request toXml], containsString(@"DataPublication id=\"1234\""));
-            assertThat([request toXml], containsString(@"DataPublication id=\"888\""));
-        });
+//        it(@"Should allow inclusion of DataPublicationRequests in the request body", ^{
+//            CreateActivityRequest* request = [[CreateActivityRequest alloc]
+//                initWithActivityName:@"Calculator" style:@"Browse" sessionToken:@"xx2348b"];
+//
+//            DataPublicationRequest* dataPublicationRequest =
+//                [[DataPublicationRequest alloc] initWithId:@"1234" populateMethod:@"ListMe" autoPopulate:YES];
+//            [request addDataPublicationRequest:dataPublicationRequest];
+//            [dataPublicationRequest release];
+//
+//            DataPublicationRequest* another = [[DataPublicationRequest alloc] initWithId:@"888"
+//                populateMethod:@"ShowMe" autoPopulate:NO];
+//            [request addDataPublicationRequest:another];
+//            [another release];
+//            LogDebug(@"%@", [request toXml]);
+//            assertThat([request toXml], containsString(@"DataPublication id=\"1234\""));
+//            assertThat([request toXml], containsString(@"DataPublication id=\"888\""));
+//        });
     });
 
 

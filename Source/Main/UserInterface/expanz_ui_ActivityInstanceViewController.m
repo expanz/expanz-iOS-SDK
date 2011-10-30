@@ -36,19 +36,9 @@
     if (self) {
         self.title = activity.title;
         NSString* sessionToken = [SessionContext globalContext].sessionToken;
-        CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
+        _activityRequest = [[CreateActivityRequest alloc]
             initWithActivityName:activity.name style:activity.style sessionToken:sessionToken];
-
-        if ([activity.name isEqualToString:@"ESA.Sales.Customer"]) {
-            DataPublicationRequest* dataPublicationRequest =
-                [[DataPublicationRequest alloc] initWithId:@"customersList" populateMethod:@"ListMe" autoPopulate:YES];
-            [activityRequest addDataPublicationRequest:dataPublicationRequest];
-            [dataPublicationRequest release];
-        }
-
-        [[self activityClient] createActivityWith:activityRequest delegate:self];
         [_spinner startAnimating];
-        [activityRequest release];
     }
     return self;
 }
@@ -83,15 +73,21 @@
 
 - (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
     LogDebug(@"Requesting dataPublicationId: %@", dataPublicationId);
+    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    [publicationRequest setDataPublicationId:dataPublicationId];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
     LogDebug(@"Requesting populateMethod: %@", populateMethod);
-    
+    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    [publicationRequest setPopulateMethod:populateMethod];
+
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
+    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    [publicationRequest setAutoPopulate:autoPopulate];
 }
 
 /* ================================================ Delegate Methods ================================================ */
@@ -107,6 +103,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    [[self activityClient] createActivityWith:_activityRequest delegate:self];
 }
 
 
@@ -170,6 +167,7 @@
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_spinner release];
+    [_activityRequest release];
     [_activityInstance release];
     [_modelAdapter release];
     [super dealloc];

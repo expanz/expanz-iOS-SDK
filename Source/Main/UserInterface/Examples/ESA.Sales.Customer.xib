@@ -154,17 +154,12 @@
 							<object class="IBUserDefinedRuntimeAttribute">
 								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
 								<string key="keyPath">dataPublicationId</string>
-								<string key="value">1234</string>
+								<string key="value">customersList</string>
 							</object>
 							<object class="IBUserDefinedRuntimeAttribute">
 								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.boolean</string>
 								<string key="keyPath">autoPopulate</string>
 								<boolean value="YES" key="value"/>
-							</object>
-							<object class="IBUserDefinedRuntimeAttribute">
-								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
-								<string key="keyPath">populateMethod</string>
-								<string key="value">zzzzz</string>
 							</object>
 						</array>
 					</object>

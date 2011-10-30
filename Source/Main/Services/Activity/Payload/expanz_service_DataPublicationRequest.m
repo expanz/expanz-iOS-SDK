@@ -20,15 +20,24 @@
 @synthesize autoPopulate = _autoPopulate;
 
 /* ================================================== Constructors ================================================== */
+- (id) init {
+    self = [super init]; 
+    if (self) {
+        _populateMethod = @"ListMe"; 
+    }
+    return self; 
+}
+
 - (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod 
      autoPopulate:(BOOL)autoPopulate {
     
-    self = [super init];
-    if (self) {
-        _dataPublicationId = [dataPublicationId retain];
-        _populateMethod = [populateMethod retain];
-        _autoPopulate = autoPopulate;
+    self = [self init];
+    _dataPublicationId = [dataPublicationId retain];
+    if (![populateMethod isEqualToString:@"ListMe"]) {
+        [_populateMethod release];
+        _populateMethod = [populateMethod retain];        
     }
+    _autoPopulate = autoPopulate;
     return self;
 }
 

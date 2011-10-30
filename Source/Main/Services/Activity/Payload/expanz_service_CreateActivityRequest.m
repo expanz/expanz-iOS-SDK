@@ -17,7 +17,6 @@
 @synthesize activityName = _activityName;
 @synthesize style = _style;
 @synthesize sessionToken = _sessionToken;
-@synthesize dataPublicationRequests = _dataPublicationRequests;
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken {
@@ -31,17 +30,26 @@
             _style = @"";
         }
         _sessionToken = [sessionToken retain];
-        _dataPublicationRequests = [[NSMutableArray alloc] init]; 
+        _dataPublicationRequests = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
 
-- (void) addDataPublicationRequest:(expanz_service_DataPublicationRequest*)dataPublicationRequest {
-    [_dataPublicationRequests addObject:dataPublicationRequest];
+- (NSArray*) dataPublicationRequests {
+    return [_dataPublicationRequests allValues];
 }
 
+- (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView {
+    NSValue* key = [NSValue valueWithPointer:tableView];
+    DataPublicationRequest* publicationRequest = [_dataPublicationRequests objectForKey:key];
+    if (publicationRequest == nil) {
+        publicationRequest = [[DataPublicationRequest alloc] init];
+        [_dataPublicationRequests setObject:publicationRequest forKey:key];
+    }
+    return publicationRequest;
+}
 
 /* ================================================= Protocol Methods =============================================== */
 #pragma mark xml_Serializable
@@ -53,7 +61,7 @@
 
 - (NSString*) toXml {
     NSMutableString* body = [[NSMutableString alloc] initWithString:@""];
-    for (DataPublicationRequest* dataPublicationRequest in _dataPublicationRequests) {
+    for (DataPublicationRequest* dataPublicationRequest in [_dataPublicationRequests allValues]) {
         [body appendString:[dataPublicationRequest toXml]];
     }
     return [NSString stringWithFormat:kXmlTempate, _activityName, _style, body, _sessionToken];

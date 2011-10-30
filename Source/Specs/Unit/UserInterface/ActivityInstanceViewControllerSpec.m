@@ -30,13 +30,20 @@ describe(@"objc runtime. . . ", ^{
         //assertThat(clazz, notNilValue());
         LogDebug(@"%@", [clazz description]);
 
-        ActivityInstanceViewController* controller = class_createInstance(clazz, 0);
+        //ActivityInstanceViewController* controller = class_createInstance(clazz, 0);
         //assertThat(controller, notNilValue());
+
+    });
+
+
+    it(@"can i use NSValue to store a pointer to an object, to use as a key in a dictionary?", ^{
+        UITableView* tableView = [[UITableView alloc] init];
+        NSValue* value = [NSValue valueWithPointer:tableView];
+        LogDebug(@"Address: %@", value);
 
 
 
     });
-    
 });
 
 SPEC_END

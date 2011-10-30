@@ -36,7 +36,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = @"This is fucked.";    
+    cell.textLabel.text = @"Data goes here.";
     return cell;    
 
 }

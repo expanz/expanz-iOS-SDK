@@ -16,9 +16,9 @@
 
 @interface expanz_service_DataPublicationRequest : NSObject<xml_Serializable>
 
-@property(nonatomic, readonly) NSString* dataPublicationId;
-@property(nonatomic, readonly) NSString* populateMethod;
-@property(nonatomic, readonly) BOOL autoPopulate;
+@property(nonatomic, retain) NSString* dataPublicationId;
+@property(nonatomic, retain) NSString* populateMethod;
+@property(nonatomic) BOOL autoPopulate;
 
 
 - (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod autoPopulate:(BOOL)autoPopulate;

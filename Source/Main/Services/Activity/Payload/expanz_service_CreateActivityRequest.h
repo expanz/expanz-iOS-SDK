@@ -14,18 +14,28 @@
 
 @class expanz_service_DataPublicationRequest;
 
-@interface expanz_service_CreateActivityRequest : NSObject <xml_Serializable>
+@interface expanz_service_CreateActivityRequest : NSObject <xml_Serializable> {
+
+@private
+    NSMutableDictionary* _dataPublicationRequests;
+}
 
 
 @property(nonatomic, readonly) NSString* activityName;
 @property(nonatomic, readonly) NSString* style;
 @property(nonatomic, readonly) NSString* sessionToken;
-@property(nonatomic, readonly) NSMutableArray* dataPublicationRequests;
+@property(nonatomic, readonly) NSArray* dataPublicationRequests;
 
 
+/**
+* Initializes with activity name, and session token attribtues.
+*/
 - (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken;
 
-- (void) addDataPublicationRequest:(expanz_service_DataPublicationRequest*)dataPublicationRequest;
+/**
+* Creates or retrieves a DataPublicationRequest for associated with the supplied UITableView.
+*/
+- (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView;
 
 
 @end
