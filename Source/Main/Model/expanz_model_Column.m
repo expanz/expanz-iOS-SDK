@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
+//
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+#import "expanz_model_Column.h"
+
+
+@implementation expanz_model_Column
+
+@synthesize columnId = _columnId;
+@synthesize field = _field;
+@synthesize label = _label;
+@synthesize dataType = _dataType;
+
+
+/* ================================================== Constructors ================================================== */
+- (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label dataType:(NSString*)dataType
+                  width:(NSInteger)width {
+    
+    self = [super init]; 
+    if (self) {
+        _columnId = [columnId retain];
+        _field = [field retain];
+        _label = [label retain];
+        _dataType = [_dataType retain];
+        width = width;
+    }
+    return self;
+}
+
+
+/* ================================================== Utility Methods =============================================== */
+- (void) dealloc {
+    [_columnId release];
+    [_field release];
+    [_label release];
+    [_dataType release];
+    [super dealloc];
+}
+
+
+@end

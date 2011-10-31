@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "../../../Main/Model/expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityDefinition.h"
 
 
 SPEC_BEGIN(ActivitySpec)

@@ -48,6 +48,7 @@
     return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
 }
 
+/* ================================================================================================================== */
 - (void) sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
@@ -147,7 +148,7 @@
 
     for (Field* field in activityInstance.fields) {
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
-        [[_modelAdapter textControlFor:field] setText:field.value];
+        [[_modelAdapter textInputControlFor:field] setText:field.value];
     }
     for (Message* message in activityInstance.messages) {
         UIAlertView* alert = [[UIAlertView alloc]

@@ -31,11 +31,14 @@
 @synthesize activityInstance = _activityInstance; 
 
 /* ================================================== Constructors ================================================== */
-
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init]; 
     if (self) {
-        _activityInstance = [viewController.activityInstance retain];
+        //weak reference.
+        _activityInstance = viewController.activityInstance;
+        _fieldMappings = [[NSMutableDictionary alloc] init];
+        _labelMappings = [[NSMutableDictionary alloc] init];
+
         [self mapUITextFieldsForController:viewController];
         [self mapUILabelsForController:viewController];
     }
@@ -43,8 +46,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-
-- (UITextField*) textControlFor:(Field*)field {
+- (UITextField*) textInputControlFor:(expanz_model_Field*)field {
     return [_fieldMappings objectForKey:field.fieldId]; 
 }
 
@@ -66,18 +68,15 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void) dealloc {
-    [_activityInstance release];
-    [_fieldMappings release]; 
+    [_fieldMappings release];
+    [_labelMappings release];
     [super dealloc];    
 }
 
 /* ================================================== Private Methods =============================================== */
-
 #define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
-    _fieldMappings = [[NSMutableDictionary alloc] init];
     NSArray* classMethods = [[controller class] rt_methods]; 
     for (RTMethod* method in classMethods) {
         NSString* selectorName = [method selectorName];            
@@ -94,7 +93,6 @@
 }
 
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
-    _labelMappings = [[NSMutableDictionary alloc] init];
     NSArray* classMethods = [[controller class] rt_methods];
 
     for (RTMethod* method in classMethods) {

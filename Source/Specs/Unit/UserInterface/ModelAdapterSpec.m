@@ -63,7 +63,7 @@ describe(@"Mapping UIControls to expanz_model_Field items in an ActivityInstance
     
     it(@"should map the other way - return a UIControl for an expanz_model_field. ", ^{
         Field* field = [modelAdapter.activityInstance fieldWithId:@"Op2"]; 
-        id textControl = [modelAdapter textControlFor:field]; 
+        id textControl = [modelAdapter textInputControlFor:field];
         assertThat(textControl, notNilValue());
         LogDebug(@"Text Control: %@", textControl); 
     });

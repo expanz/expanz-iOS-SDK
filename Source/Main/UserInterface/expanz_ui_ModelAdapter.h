@@ -32,12 +32,15 @@
 /**
  * Returns the UIText field corresponding to the model's field object. 
  */
-- (UITextField*) textControlFor:(expanz_model_Field*)field; 
+- (UITextField*) textInputControlFor:(expanz_model_Field*)field;
 
 /** 
  * Returns the field object corresponding to the UITextField object. 
  */
 - (expanz_model_Field*) fieldFor:(UITextField*)control;
+
+
+- (UITableView*) dataViewControlFor:(id)data;
 
 /**
  * Updates UI text fields and labels with values from the model object. 

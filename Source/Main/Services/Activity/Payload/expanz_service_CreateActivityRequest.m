@@ -47,6 +47,7 @@
     if (publicationRequest == nil) {
         publicationRequest = [[DataPublicationRequest alloc] init];
         [_dataPublicationRequests setObject:publicationRequest forKey:key];
+        [publicationRequest release];
     }
     return publicationRequest;
 }
