@@ -17,20 +17,25 @@ SPEC_BEGIN(FieldSpec)
 __block Field* field; 
 
 beforeEach(^{
-    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:nil hint:nil]; 
+    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"First Name"
+                                      hint:@"Try typing your name, doh."]; 
 });
 
 describe(@"Object creation.", ^{
     
-    it(@"should allow initialization with fieldId, nullable, defaultValue and datatype attributes.", ^{
+    it(@"should allow initialization with fieldId, nullable, defaultValue, datatype, label & hint attributes.", ^{
         assertThat([field fieldId], equalTo(@"op1")); 
         assertThatBool([field isNullable], equalToBool(NO)); 
         assertThat([field defaultValue], nilValue()); 
-        assertThat([field datatype], equalTo(@"number"));            
+        assertThat([field datatype], equalTo(@"number"));
+        assertThat([field hint], equalTo(@"Try typing your name, doh."));
     });
     
+    it(@"Should be able to describe itslef", ^{
+        assertThat([field description], notNilValue());
+        LogDebug(@"Description: %@", [field description]);
+    });
 });
-
 
 describe(@"Editing", ^{
     
