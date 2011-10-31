@@ -51,6 +51,11 @@ SPEC_BEGIN(DataSpec)
 
             Column* retrieved = [data columnWithId:@"1"];
             assertThat(retrieved, equalTo(column));
+            
+            //Not stored.
+            Column* shouldBeNil = [data columnWithId:@"99999"];
+            assertThat(shouldBeNil, nilValue());
+            
         });
 
         it(@"Should be able to return all columns by copy.", ^{
@@ -84,6 +89,10 @@ SPEC_BEGIN(DataSpec)
             
             Row* retrieved = [data rowWithId:@"1"];
             assertThat(retrieved, equalTo(row));
+            
+            //Not stored
+            Row* shouldBeNil = [data rowWithId:@"99999"];
+            assertThat(shouldBeNil, nilValue());
         });
         
         it(@"Should be able to return all rows by copy, as a sorted list.", ^{
