@@ -47,7 +47,7 @@
 /**
 * Returns the column with the supplied id parameter or nil.
 */
-- (void) columnWithId:(NSString*)columnId;
+- (expanz_model_Column*) columnWithId:(NSString*)columnId;
 
 /**
 * Adds a row to the data set.

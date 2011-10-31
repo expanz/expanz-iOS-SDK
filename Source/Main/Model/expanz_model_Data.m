@@ -43,7 +43,7 @@
     return [_columns sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) columnWithId:(NSString*)columnId {
+- (Column*) columnWithId:(NSString*)columnId {
     for (Column* column in _columns) {
         if ([column.columnId isEqualToString:columnId]) {
             return column;
@@ -58,7 +58,7 @@
 
 - (NSArray*) rows {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"rowId" ascending:YES];
-    return [_columns sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+    return [_rows sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (expanz_model_Row*) rowWithId:(NSString*)rowId {

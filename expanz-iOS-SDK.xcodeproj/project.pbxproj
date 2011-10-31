@@ -54,6 +54,9 @@
 		6BBE269E145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BBE269F145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BC12382145E87B200C647BA /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */; };
+		6BC12383145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
+		6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
+		6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC9F5AB1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AC1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AD1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
@@ -1102,9 +1105,9 @@
 		6BC9F6571458EB8C001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6BF58DC81444245C0063E844 /* DataSpec.m */,
 				6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */,
 				6BC9F6591458EB8C001AF204 /* ActivitySpec.m */,
+				6BF58DC81444245C0063E844 /* DataSpec.m */,
 				6BC9F65A1458EB8C001AF204 /* FieldSpec.m */,
 				6BC9F65B1458EB8C001AF204 /* MenuSpec.m */,
 				6BC9F65C1458EB8C001AF204 /* MessageSpec.m */,
@@ -1723,6 +1726,7 @@
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E846 /* DataSpec.m in Sources */,
 				6BC12382145E87B200C647BA /* CreateActivityRequestSpec.m in Sources */,
+				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1894,6 +1898,7 @@
 				6BF58DC81444245C0063E831 /* expanz_model_Data.m in Sources */,
 				6BF58DC81444245C0063E83A /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
+				6BC12383145E962C00C647BA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2007,6 +2012,7 @@
 				6BF58DC81444245C0063E83B /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E841 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E845 /* DataSpec.m in Sources */,
+				6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
