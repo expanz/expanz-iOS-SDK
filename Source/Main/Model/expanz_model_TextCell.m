@@ -14,4 +14,24 @@
 
 
 @implementation expanz_model_TextCell
+
+@synthesize cellId = _cellId; 
+@synthesize data = _data;
+
+- (id) initWithCellId:(NSString*)cellId data:(NSString*)data {
+    self = [super init];
+    if (self) {
+        _cellId = [cellId retain];
+        _data = [data retain];
+    }
+    return self;
+}
+
+/* ================================================== Utility Methods =============================================== */
+- (void) dealloc {
+    [_cellId release];
+    [_data release];
+    [super dealloc];
+}
+
 @end

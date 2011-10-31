@@ -22,6 +22,8 @@
 @property (nonatomic, readonly) NSString* cellId;
 @property (nonatomic, readonly) NSString* data;
 
+- (id) initWithCellId:(NSString*)cellId data:(NSString*)data;
+
 @end
 
 /* ================================================================================================================== */
