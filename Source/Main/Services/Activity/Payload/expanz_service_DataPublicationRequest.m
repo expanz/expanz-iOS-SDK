@@ -23,22 +23,11 @@
 - (id) init {
     self = [super init]; 
     if (self) {
-        _populateMethod = @"ListMe"; 
+        //Set defaults.
+        _populateMethod = @"ListMe";
+        _autoPopulate = YES;
     }
     return self; 
-}
-
-- (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod 
-     autoPopulate:(BOOL)autoPopulate {
-    
-    self = [self init];
-    _dataPublicationId = [dataPublicationId retain];
-    if (![populateMethod isEqualToString:@"ListMe"]) {
-        [_populateMethod release];
-        _populateMethod = [populateMethod retain];        
-    }
-    _autoPopulate = autoPopulate;
-    return self;
 }
 
 /* ================================================= Protocol Methods =============================================== */
@@ -48,8 +37,6 @@
     return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod,
             _autoPopulate == YES ? @"1" : @"0"];
 }
-
-
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {

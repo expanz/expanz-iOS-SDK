@@ -49,7 +49,7 @@
         [_dataPublicationRequests setObject:publicationRequest forKey:key];
         [publicationRequest release];
     }
-    return publicationRequest;
+    return [publicationRequest autorelease];
 }
 
 /* ================================================= Protocol Methods =============================================== */

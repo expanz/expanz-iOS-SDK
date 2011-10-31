@@ -40,6 +40,7 @@ SPEC_BEGIN(DataSpec)
             Column* column = [[Column alloc]
                 initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
             [data addColumn:column];
+            [column release];
 
             assertThatInt([[data columns] count], equalToInt(1));
         });
@@ -48,6 +49,7 @@ SPEC_BEGIN(DataSpec)
             Column* column = [[Column alloc]
                 initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
             [data addColumn:column];
+            [column release];
 
             Column* retrieved = [data columnWithId:@"1"];
             assertThat(retrieved, equalTo(column));
@@ -62,10 +64,12 @@ SPEC_BEGIN(DataSpec)
             Column* column = [[Column alloc]
                 initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
             [data addColumn:column];
+            [column release];
 
             Column* another = [[Column alloc]
                 initWithColumnId:@"2" field:@"lastName" label:@"Customer Last Name" dataType:@"string" width:70];
             [data addColumn:another];
+            [another release];
 
             NSArray* theColumns = [data columns];
             assertThatInt([theColumns count], equalToInt(2));            
@@ -79,6 +83,7 @@ SPEC_BEGIN(DataSpec)
         it(@"Should hold a reference to it's rows", ^{
             Row* row = [[Row alloc] initWithRowId:@"1" type:@"ESA.Sales.Customer"];
             [data addRow:row];
+            [row release];
 
             assertThatInt([[data rows] count], equalToInt(1));
         });
@@ -86,6 +91,7 @@ SPEC_BEGIN(DataSpec)
         it(@"Should allow retrieving a row by id", ^{
             Row* row = [[Row alloc] initWithRowId:@"1" type:@"ESA.Sales.Customer"];
             [data addRow:row];
+            [row release];
             
             Row* retrieved = [data rowWithId:@"1"];
             assertThat(retrieved, equalTo(row));
@@ -98,8 +104,10 @@ SPEC_BEGIN(DataSpec)
         it(@"Should be able to return all rows by copy, as a sorted list.", ^{
             Row* row = [[Row alloc] initWithRowId:@"2" type:@"ESA.Sales.Customer"];
             [data addRow:row];
+            [row release];
             Row* another = [[Row alloc] initWithRowId:@"1" type:@"ESA.Sales.Customer"];
             [data addRow:another];
+            [another release];
             
             NSArray* rows = [data rows];
             assertThatInt([rows count], equalToInt(2));
