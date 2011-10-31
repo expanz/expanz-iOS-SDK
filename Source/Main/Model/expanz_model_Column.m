@@ -19,6 +19,7 @@
 @synthesize field = _field;
 @synthesize label = _label;
 @synthesize dataType = _dataType;
+@synthesize width = _width;
 
 
 /* ================================================== Constructors ================================================== */
@@ -30,8 +31,8 @@
         _columnId = [columnId retain];
         _field = [field retain];
         _label = [label retain];
-        _dataType = [_dataType retain];
-        width = width;
+        _dataType = [dataType retain];
+        _width = width;
     }
     return self;
 }

@@ -53,8 +53,6 @@
 		6BBE269D145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BBE269E145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BBE269F145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
-		6BC12382145E87B200C647BA /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */; };
-		6BC12383145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC9F5AB1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
@@ -448,7 +446,6 @@
 		6BF58DC81444245C0063E831 /* expanz_model_Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E82F /* expanz_model_Data.m */; };
 		6BF58DC81444245C0063E832 /* expanz_model_Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E82F /* expanz_model_Data.m */; };
 		6BF58DC81444245C0063E833 /* expanz_model_Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E82F /* expanz_model_Data.m */; };
-		6BF58DC81444245C0063E836 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BF58DC81444245C0063E839 /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E838 /* expanz_model_Row.m */; };
 		6BF58DC81444245C0063E83A /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E838 /* expanz_model_Row.m */; };
 		6BF58DC81444245C0063E83B /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E838 /* expanz_model_Row.m */; };
@@ -458,7 +455,8 @@
 		6BF58DC81444245C0063E841 /* expanz_model_TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E83E /* expanz_model_TextCell.m */; };
 		6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E83E /* expanz_model_TextCell.m */; };
 		6BF58DC81444245C0063E845 /* DataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E844 /* DataSpec.m */; };
-		6BF58DC81444245C0063E846 /* DataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E844 /* DataSpec.m */; };
+		6BF58DC81444245C0063E848 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E847 /* ColumnSpec.m */; };
+		6BF58DC81444245C0063E849 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E847 /* ColumnSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -727,6 +725,7 @@
 		6BF58DC81444245C0063E83E /* expanz_model_TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TextCell.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E843 /* expanz_model_TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TextCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E844 /* DataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E847 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1105,6 +1104,7 @@
 		6BC9F6571458EB8C001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E847 /* ColumnSpec.m */,
 				6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */,
 				6BC9F6591458EB8C001AF204 /* ActivitySpec.m */,
 				6BF58DC81444245C0063E844 /* DataSpec.m */,
@@ -1724,9 +1724,8 @@
 				6BF58DC81444245C0063E833 /* expanz_model_Data.m in Sources */,
 				6BF58DC81444245C0063E83C /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
-				6BF58DC81444245C0063E846 /* DataSpec.m in Sources */,
-				6BC12382145E87B200C647BA /* CreateActivityRequestSpec.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
+				6BF58DC81444245C0063E849 /* ColumnSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1811,7 +1810,6 @@
 				6BBE2698145CEF0800052700 /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BBE269C145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */,
 				6BF58DC81444245C0063E830 /* expanz_model_Data.m in Sources */,
-				6BF58DC81444245C0063E836 /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E839 /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E83F /* expanz_model_TextCell.m in Sources */,
 			);
@@ -1898,7 +1896,6 @@
 				6BF58DC81444245C0063E831 /* expanz_model_Data.m in Sources */,
 				6BF58DC81444245C0063E83A /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
-				6BC12383145E962C00C647BA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2013,6 +2010,7 @@
 				6BF58DC81444245C0063E841 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E845 /* DataSpec.m in Sources */,
 				6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */,
+				6BF58DC81444245C0063E848 /* ColumnSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
