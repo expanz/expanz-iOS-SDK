@@ -459,9 +459,10 @@
 		6BF58DC81444245C0063E849 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E847 /* ColumnSpec.m */; };
 		6BF58DC81444245C0063E84B /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E84A /* RowSpec.m */; };
 		6BF58DC81444245C0063E84C /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E84A /* RowSpec.m */; };
-		6BF58DC81444245C0063E84E /* expanz_model_Cell.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E84F /* expanz_model_Cell.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E850 /* expanz_model_Cell.m in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E84E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E84F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E850 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -732,6 +733,7 @@
 		6BF58DC81444245C0063E844 /* DataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E847 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E84A /* RowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E851 /* TextCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCellSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1110,6 +1112,7 @@
 		6BC9F6571458EB8C001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E851 /* TextCellSpec.m */,
 				6BF58DC81444245C0063E84A /* RowSpec.m */,
 				6BF58DC81444245C0063E847 /* ColumnSpec.m */,
 				6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */,
@@ -1820,7 +1823,7 @@
 				6BF58DC81444245C0063E830 /* expanz_model_Data.m in Sources */,
 				6BF58DC81444245C0063E839 /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E83F /* expanz_model_TextCell.m in Sources */,
-				6BF58DC81444245C0063E84E /* expanz_model_Cell.m in Sources */,
+				6BF58DC81444245C0063E84E /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1905,7 +1908,7 @@
 				6BF58DC81444245C0063E831 /* expanz_model_Data.m in Sources */,
 				6BF58DC81444245C0063E83A /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
-				6BF58DC81444245C0063E84F /* expanz_model_Cell.m in Sources */,
+				6BF58DC81444245C0063E84F /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2022,7 +2025,8 @@
 				6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E848 /* ColumnSpec.m in Sources */,
 				6BF58DC81444245C0063E84B /* RowSpec.m in Sources */,
-				6BF58DC81444245C0063E850 /* expanz_model_Cell.m in Sources */,
+				6BF58DC81444245C0063E850 /* (null) in Sources */,
+				6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

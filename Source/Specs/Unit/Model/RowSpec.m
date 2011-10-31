@@ -33,19 +33,22 @@ SPEC_BEGIN(RowSpec)
 
     describe(@"Association with cells", ^{
         it(@"Should hold a collection of cells", ^{
-            TextCell* cell = [[[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"] autorelease];
+            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"];
             [row addCell:cell];
+            [cell release];
 
             assertThatInt([[row cells] count], equalToInt(1));
         });
 
         it(@"Should allow returning a sorted list of all cells.", ^{
-            TextCell* cell = [[[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"] autorelease];
+            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"];
             [row addCell:cell];
+            [cell release];
 
-            TextCell* another = [[[TextCell alloc] initWithCellId:@"address" data:@"Metro Manila"] autorelease];
+            TextCell* another = [[TextCell alloc] initWithCellId:@"address" data:@"Metro Manila"];
             [row addCell:another];
-            
+            [another release];
+
             NSArray* cells = [row cells];
             assertThatInt([cells count], equalToInt(2));
             
