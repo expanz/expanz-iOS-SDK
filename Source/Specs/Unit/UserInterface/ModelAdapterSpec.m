@@ -15,74 +15,23 @@
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "ESA_Sales_CalcViewController.h"
-#import "RXMLElement+ActivityInstance.h"
-#import "OCMockObject.h"
+#import "ModelAdapterSpecHelper.h"
 #import "ESA_Sales_CustomerViewController.h"
+#import "expanz_model_DataSet.h"
 
-/* ================================================================================================================== */
-//Stub a navigation controller - expected to be there by UITableView+DataPublication
-@interface CedarApplicationDelegate
-@end
-@implementation CedarApplicationDelegate(private)
-- (UINavigationController*) navigationController {
-    return nil;
-}
-@end
-/* ================================================================================================================== */
 
 SPEC_BEGIN(ModelAdapterSpec)
 
     __block CalcViewController* calcViewController;
     __block ModelAdapter* calcModelAdapter;
 
-    __block CustomerViewController* customerViewController;
-    __block ModelAdapter* customerModelAdapter;
-
     beforeEach(^{
-
-        id injector = [OCMockObject niceMockForClass:[JSObjectionInjector class]];
-        [JSObjection setGlobalInjector:injector];
-
-
-        /* ========================================================================================================== */
-        //Setup calc model adapter.
-
-        NSString* calcFilePath;
-        NSString* calcXmlString;
-        ActivityDefinition* calcActivity;
-
-        calcActivity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Basic Calculator" style:NULL];
-        calcViewController = [[[CalcViewController alloc] initWithActivity:calcActivity] autorelease];
-        assertThat(calcViewController, notNilValue());
-        assertThat(calcViewController.view, notNilValue());
-        calcFilePath = [[NSBundle mainBundle] pathForResource:@"ESA_Sales_Calc_ActivityInstance" ofType:@"xml"];
-        calcXmlString = [[NSString alloc] initWithContentsOfFile:calcFilePath encoding:NSUTF8StringEncoding error:nil];
-        ActivityInstance* activityInstance =
-            [[[RXMLElement elementFromXMLString:calcXmlString] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-        [calcViewController requestDidFinishWithActivityInstance:activityInstance];
-        calcModelAdapter = [[[ModelAdapter alloc] initWithViewController:calcViewController] autorelease];
-
-        /* ========================================================================================================== */
-        //Setup customer model adapter.
-
-        NSString* customerFilePath;
-        NSString* customerXmlString;
-        ActivityDefinition* customerActivity;
-
-        customerActivity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Customer" title:@"Customer" style:NULL];
-        customerViewController = [[[CustomerViewController alloc] initWithActivity:customerActivity] autorelease];
-        assertThat(customerViewController, notNilValue());
-        assertThat(customerViewController.view, notNilValue());
-        customerFilePath = [[NSBundle mainBundle] pathForResource:@"ESA_Sales_Customer_ActivityInstance" ofType:@"xml"];
-        customerXmlString =
-            [[NSString alloc] initWithContentsOfFile:customerFilePath encoding:NSUTF8StringEncoding error:nil];
-        ActivityInstance* customerActivityInstance =
-            [[[RXMLElement elementFromXMLString:customerXmlString] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-        [customerViewController requestDidFinishWithActivityInstance:customerActivityInstance];
-        customerModelAdapter = [[[ModelAdapter alloc] initWithViewController:customerViewController] autorelease];
-
+        ActivityDefinition
+            * activity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:NULL];
+        calcViewController = [[[CalcViewController alloc] initWithActivity:activity] autorelease];
+        NSString* xmlFile = @"ESA_Sales_Calc_ActivityInstance";
+        calcModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:calcViewController xmlFileName:xmlFile];
     });
-
 
     describe(@"Object creation", ^{
 
@@ -108,7 +57,29 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
     });
+    
+    describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
 
+        __block CustomerViewController* customerViewController;
+        __block ModelAdapter* customerModelAdapter;
+
+        beforeEach(^{
+            ActivityDefinition* activity =
+                [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Customer" title:@"Customer" style:NULL];
+            customerViewController = [[[CustomerViewController alloc] initWithActivity:activity] autorelease];
+            NSString* xmlFile = @"ESA_Sales_Customer_ActivityInstance";
+            customerModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:customerViewController xmlFileName:xmlFile];
+        });
+        
+        it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
+            
+            DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.dataGrid];
+            assertThat(dataSet, notNilValue());
+
+        });
+
+    });
+    
 
     describe(@"Updating user interface controls with model values.", ^{
 
@@ -126,6 +97,6 @@ SPEC_BEGIN(ModelAdapterSpec)
 
 
 
-    SPEC_END
+SPEC_END
 
 

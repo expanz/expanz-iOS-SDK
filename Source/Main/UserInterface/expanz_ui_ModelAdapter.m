@@ -22,6 +22,7 @@
 
 -(void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
 -(void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
+-(void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
 
 @end
 
@@ -37,11 +38,14 @@
     if (self) {
         //weak reference.
         _activityInstance = viewController.activityInstance;
+        _runtimeMethods = [[[viewController class] rt_methods] retain];
         _fieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
+        _dataSetMappings = [[NSMutableDictionary alloc] init];
 
         [self mapUITextFieldsForController:viewController];
         [self mapUILabelsForController:viewController];
+        [self mapUITableViewsForController:viewController];
     }
     return self;    
 }
@@ -63,8 +67,7 @@
 }
 
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl {
-    return nil;
-
+    return [[[DataSet alloc] init] autorelease];
 }
 
 
@@ -82,16 +85,17 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
+    [_runtimeMethods release];
     [_fieldMappings release];
     [_labelMappings release];
+    [_dataSetMappings release];
     [super dealloc];    
 }
 
 /* ================================================== Private Methods =============================================== */
 #define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
-    NSArray* classMethods = [[controller class] rt_methods]; 
-    for (RTMethod* method in classMethods) {
+    for (RTMethod* method in _runtimeMethods) {
         NSString* selectorName = [method selectorName];            
         if ([_activityInstance fieldWithId:selectorName] != nil) {            
             UITextField* textField; 
@@ -106,9 +110,7 @@
 }
 
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
-    NSArray* classMethods = [[controller class] rt_methods];
-
-    for (RTMethod* method in classMethods) {
+    for (RTMethod* method in _runtimeMethods) {
         NSString* selectorName = [method selectorName];
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
@@ -120,7 +122,11 @@
             LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
             [_labelMappings setObject:uiLabel forKey:fieldId];
         }
-    }
+    }       
+}
+
+- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
+    
 }
 
 

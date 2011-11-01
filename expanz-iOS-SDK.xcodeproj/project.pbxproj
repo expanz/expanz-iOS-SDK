@@ -57,6 +57,7 @@
 		6BBE269F145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
+		6BC96AA7145FE3F0008DC5B0 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */; };
 		6BC9F5AB1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AC1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AD1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
@@ -463,9 +464,10 @@
 		6BF58DC81444245C0063E850 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
 		6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
-		6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
 		6BF58DC81444245C0063E858 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
+		6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -737,6 +739,8 @@
 		6BF58DC81444245C0063E84A /* RowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E851 /* TextCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCellSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAdapterSpecHelper.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E85F /* ModelAdapterSpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelAdapterSpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1157,6 +1161,8 @@
 		6BC9F6691458EB8C001AF204 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E85F /* ModelAdapterSpecHelper.h */,
+				6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */,
 				6BC9F66A1458EB8C001AF204 /* ActivityInstanceViewControllerSpec.m */,
 				6BC9F66B1458EB8C001AF204 /* Components */,
 				6BC9F66D1458EB8C001AF204 /* LoginViewControllerSpec.m */,
@@ -1745,8 +1751,9 @@
 				6BF58DC81444245C0063E83C /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
-				6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E85B /* (null) in Sources */,
+				6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */,
+				6BC96AA7145FE3F0008DC5B0 /* ModelAdapterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2041,6 +2048,7 @@
 				6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */,
 				6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E858 /* (null) in Sources */,
+				6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
