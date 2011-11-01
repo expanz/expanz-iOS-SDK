@@ -15,7 +15,7 @@
 @class expanz_model_TextCell;
 
 /**
-* Represents a row in an `expanz_model_Data`.
+* Represents a row in an `expanz_model_DataSet`.
 */
 @interface expanz_model_Row : NSObject {
 

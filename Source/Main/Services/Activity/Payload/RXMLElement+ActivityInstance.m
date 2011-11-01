@@ -13,9 +13,10 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
-#import "../../../Model/expanz_model_DataSet.h"
-#import "expanz_model_Column.h"
 #import "expanz_model_DataSet.h"
+#import "expanz_model_Column.h"
+#import "expanz_model_Row.h"
+#import "expanz_model_TextCell.h"
 
 
 @implementation RXMLElement (ActivityInstance)
@@ -48,6 +49,7 @@
     return activityInstance;
 }
 
+/* ================================================================================================================== */
 - (Field*) asField {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Field."];
@@ -67,6 +69,7 @@
     return field;
 }
 
+/* ================================================================================================================== */
 - (Message*) asMessage {
     if (![self.tag isEqualToString:@"Message"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Message."];
@@ -76,6 +79,8 @@
     return [[[Message alloc] initWithMessageType:messageType content:[self text]] autorelease];
 }
 
+/* ================================================================================================================== */
+#pragma mark DataSet and DataSet child elements.
 - (DataSet*) asData {
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
@@ -84,9 +89,16 @@
         [[[DataSet alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
+
         if ([e.tag isEqualToString:@"Columns"]) {
             [e iterate:@"*" with:^(RXMLElement* columnElement) {
                 [dataSet addColumn:[columnElement asColumn]];
+            }];
+        }
+
+        if ([e.tag isEqualToString:@"Rows"]) {
+            [e iterate:@"*" with:^(RXMLElement* rowElement) {
+                [dataSet addRow:[rowElement asRow]];
             }];
         }
     }];
@@ -108,8 +120,28 @@
         [[[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width] autorelease];
 
     return column;
+}
 
+- (Row*) asRow {
+    if (![self.tag isEqualToString:@"Row"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a Row."];
+    }
+    Row* row = [[[Row alloc] initWithRowId:[self attribute:@"id"] type:[self attribute:@"Type"]] autorelease];
 
+    [self iterate:@"*" with:^(RXMLElement* e) {
+        if ([e.tag isEqualToString:@"Cell"]) {
+            [row addCell:[e asTextCell]];
+        }
+    }];
+
+    return row;
+}
+
+- (TextCell*) asTextCell {
+    if (![self.tag isEqualToString:@"Cell"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a Cell."];
+    }
+    return [[[TextCell alloc] initWithCellId:[self attribute:@"id"] data:[self text]] autorelease];
 }
 
 

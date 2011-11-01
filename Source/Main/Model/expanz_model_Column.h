@@ -13,6 +13,9 @@
 #import <Foundation/Foundation.h>
 
 
+/**
+* Represents a column in an `expanz_model_DataSet`.
+*/
 @interface expanz_model_Column : NSObject
 
 @property (nonatomic, readonly) NSString* columnId;

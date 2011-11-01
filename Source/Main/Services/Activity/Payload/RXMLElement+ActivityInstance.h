@@ -15,6 +15,8 @@
 @class expanz_model_Message;
 @class expanz_model_DataSet;
 @class expanz_model_Column;
+@class expanz_model_Row;
+@class expanz_model_TextCell;
 
 /**
  * Adds methods to RXMLElement for parsing results of XmlPostActivityClient invocations. 
@@ -45,5 +47,15 @@
 * Maps the element onto an `expanz_model_Column` object.
 */
 - (expanz_model_Column*) asColumn;
+
+/**
+* Maps the element onto an `expanz_model_Row` object.
+*/
+- (expanz_model_Row*) asRow;
+
+/**
+* Maps the element onto an `expanz_model_TextCell` object.
+*/
+- (expanz_model_TextCell*) asTextCell;
 
 @end

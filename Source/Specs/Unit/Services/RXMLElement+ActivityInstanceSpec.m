@@ -15,6 +15,8 @@
 #import "../../../Main/Model/expanz_model_DataSet.h"
 #import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
+#import "expanz_model_Row.h"
+#import "expanz_model_TextCell.h"
 
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
@@ -85,6 +87,17 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                 assertThat(column.dataType, notNilValue());
                 assertThat(column.label, notNilValue());
                 assertThatBool(column.width > 0, equalToBool(YES));
+            }
+            
+            //Rows
+            assertThatInt([data.rows count], equalToInt(9));
+            for (Row* row in [data rows]) {
+                assertThat(row.rowId, notNilValue());
+                assertThat(row.type, equalTo(@"ESA.Sales.Customer"));
+                for (TextCell* cell in [row cells]) {
+                    assertThat(cell.cellId, notNilValue());
+                    assertThat(cell.data, notNilValue());
+                }
             }
         });
 
