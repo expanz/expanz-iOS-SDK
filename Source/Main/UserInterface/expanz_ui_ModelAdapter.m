@@ -86,8 +86,11 @@
         UILabel* label = [_labelMappings valueForKey:fieldId];
         [label setText:field.label];
     }
-}
 
+    for (UITableView* tableView in [_dataSetMappings allValues]) {
+        [tableView reloadData];
+    }
+}
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
@@ -111,8 +114,7 @@
             UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
             if (textField == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
-            }
-            LogDebug(@"Mapping field: '%@' to UITextField.", selectorName);
+            }LogDebug(@"Mapping field: '%@' to UITextField.", selectorName);
             [_fieldMappings setObject:textField forKey:selectorName];
         }
     }
@@ -125,8 +127,7 @@
             UILabel* uiLabel = [controller performSelector:NSSelectorFromString(selectorName)];
             if (uiLabel == nil) {
                 LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
-            }
-            LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
+            }LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
             [_labelMappings setObject:uiLabel forKey:fieldId];
         }
     }
@@ -138,8 +139,7 @@
             UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
             if (tableView == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
-            }
-            LogDebug(@"Mapping data set: '%@' to UITableView.", selectorName);
+            }LogDebug(@"Mapping data set: '%@' to UITableView.", selectorName);
             [_dataSetMappings setObject:tableView forKey:selectorName];
         }
     }

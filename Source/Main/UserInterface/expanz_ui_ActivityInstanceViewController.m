@@ -21,6 +21,9 @@
 #import "expanz_model_Field.h"
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_service_DataPublicationRequest.h"
+#import "expanz_model_DataSet.h"
+#import "expanz_model_Row.h"
+#import "expanz_model_TextCell.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -132,6 +135,46 @@
     [field didFinishEditWithValue:textField.text];
     [self sendDeltaForField:field];
     return YES;
+}
+
+/* ================================================================================================================== */
+#pragma mark UITableViewDelegate
+
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    if (dataSet == nil) {
+        LogDebug(@"Oh fuck");
+    }
+    LogDebug(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Hey!!!!!!!!!!!!!!!!!! %i", [dataSet.rows count]);
+    return [dataSet.rows count];
+}
+
+
+-(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    NSString* reuseId = [dataSet dataId];
+        
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.detailTextLabel.textColor = [UIColor darkGrayColor];
+        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+
+    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
+    TextCell* textLabelCell = [row.cells objectAtIndex:0]; 
+    cell.textLabel.text = textLabelCell.data;
+    TextCell* subTitleCell = [row.cells objectAtIndex:1];
+    cell.detailTextLabel.text = subTitleCell.data;
+
+    return cell;
+
+}
+
+- (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
+
 }
 
 

@@ -18,7 +18,7 @@
 
 
 @interface expanz_ui_ActivityInstanceViewController : 
-    UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate> {
+    UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate, UITableViewDelegate> {
     
 @private
     expanz_service_CreateActivityRequest* _activityRequest;

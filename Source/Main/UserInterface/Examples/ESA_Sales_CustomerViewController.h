@@ -16,7 +16,7 @@
 @class expanz_ui_components_TableView;
 
 
-@interface ESA_Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController<UITableViewDelegate>
+@interface ESA_Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController
 
 @property (nonatomic, retain) IBOutlet UITableView* customersList;
 
