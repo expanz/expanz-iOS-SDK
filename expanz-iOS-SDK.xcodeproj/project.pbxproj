@@ -20,7 +20,6 @@
 		6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
-		6B3F1CDF145F836F00BAD0DA /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6641458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m */; };
 		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
@@ -463,6 +462,8 @@
 		6BF58DC81444245C0063E84F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E850 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
+		6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
+		6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -733,6 +734,7 @@
 		6BF58DC81444245C0063E847 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E84A /* RowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E851 /* TextCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCellSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -818,6 +820,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0D44CE145FA139006F16A7 /* expanz-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */,
+			);
+			path = "expanz-iOS-SDK";
+			sourceTree = "<group>";
+		};
 		6B100BEA143E739000EABC94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,6 +1110,7 @@
 		6BC9F6561458EB8C001AF204 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				6B0D44CE145FA139006F16A7 /* expanz-iOS-SDK */,
 				6BC9F6571458EB8C001AF204 /* Model */,
 				6BC9F6601458EB8C001AF204 /* Services */,
 				6BC9F6691458EB8C001AF204 /* UserInterface */,
@@ -1732,7 +1743,7 @@
 				6BF58DC81444245C0063E83C /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
-				6B3F1CDF145F836F00BAD0DA /* RXMLElement+ActivityInstanceSpec.m in Sources */,
+				6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,6 +2036,7 @@
 				6BF58DC81444245C0063E84B /* RowSpec.m in Sources */,
 				6BF58DC81444245C0063E850 /* (null) in Sources */,
 				6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */,
+				6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2175,7 +2187,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2199,7 +2211,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};
