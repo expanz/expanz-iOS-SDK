@@ -16,10 +16,6 @@
 
 @synthesize textField = _textField;
 
-+ (void)exposeBinding:(NSString *)binding {
-    
-}
-
 /* ================================================== Constructors ================================================== */
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
