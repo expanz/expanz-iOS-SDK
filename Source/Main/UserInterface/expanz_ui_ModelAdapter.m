@@ -20,9 +20,10 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter(private) 
 
--(void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
--(void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
--(void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
+- (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller;
+- (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
+- (void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
+- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
 
 @end
 
@@ -38,11 +39,12 @@
     if (self) {
         //weak reference.
         _activityInstance = viewController.activityInstance;
-        _runtimeMethods = [[[viewController class] rt_methods] retain];
+        _selectorNames = [[NSMutableArray alloc] init];
         _fieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
 
+        [self cacheSelectorNamesForController:viewController];
         [self mapUITextFieldsForController:viewController];
         [self mapUILabelsForController:viewController];
         [self mapUITableViewsForController:viewController];
@@ -85,7 +87,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_runtimeMethods release];
+    [_selectorNames release];
     [_fieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
@@ -93,13 +95,17 @@
 }
 
 /* ================================================== Private Methods =============================================== */
+- (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller {
+    for (RTMethod* method in [[controller class] rt_methods]) {
+        [_selectorNames addObject:[method selectorName]];
+    }
+}
+
 #define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
-    for (RTMethod* method in _runtimeMethods) {
-        NSString* selectorName = [method selectorName];            
-        if ([_activityInstance fieldWithId:selectorName] != nil) {            
-            UITextField* textField; 
-            [method returnValue: &textField sendToTarget: controller]; 
+    for (NSString* selectorName in _selectorNames) {
+        if ([_activityInstance fieldWithId:selectorName] != nil) {
+            UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
             if (textField == nil) {
                 [NSException raise:NSObjectNotAvailableException format:kUIControlIsNilMessage, selectorName];
             }
@@ -110,12 +116,10 @@
 }
 
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
-    for (RTMethod* method in _runtimeMethods) {
-        NSString* selectorName = [method selectorName];
+    for (NSString* selectorName in _selectorNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
-            UILabel* uiLabel;
-            [method returnValue: &uiLabel sendToTarget: controller];
+            UILabel* uiLabel = [controller performSelector:NSSelectorFromString(selectorName)];
             if (uiLabel == nil) {
                 LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
             }
@@ -126,6 +130,11 @@
 }
 
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
+    for (NSString* selectorName in _selectorNames) {
+        //DataSet* dataSet = _activityInstance
+    }
+
+
     
 }
 

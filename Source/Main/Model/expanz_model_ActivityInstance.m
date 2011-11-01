@@ -80,6 +80,14 @@
     [_dataSets addObject:dataSet];
 }
 
+- (DataSet*) dataSetWithId:(NSString*)dataSetId {
+    for (DataSet* dataSet in _dataSets) {
+        if ([dataSet.dataId isEqualToString:dataSetId]) {
+            return dataSet;
+        }
+    }
+    return nil;
+}
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {

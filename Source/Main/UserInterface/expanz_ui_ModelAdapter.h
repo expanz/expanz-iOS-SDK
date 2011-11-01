@@ -18,7 +18,7 @@
 @interface expanz_ui_ModelAdapter : NSObject {
     
 @private
-    NSArray* _runtimeMethods;
+    NSMutableArray* _selectorNames;
     NSMutableDictionary* _fieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;

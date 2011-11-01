@@ -45,7 +45,7 @@
 - (void) addField:(expanz_model_Field*)field;
 
 /**
-* Returns the field matching the supplied fieldId, or nil.
+* Returns the `expanz_model_Field` matching the supplied fieldId, or nil.
 */
 - (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
 
@@ -58,6 +58,11 @@
 * Adds a data set to the instance.
 */
 - (void) addDataSet:(expanz_model_DataSet*)data;
+
+/**
+* Returns the `expanz_model_DataSet` with the given id, or nil.
+*/
+- (expanz_model_DataSet*) dataSetWithId:(NSString*)dataSetId;
 
 /**
  * Indicates weather the activity in progress currently allows method invocations. For this to occur the client model
