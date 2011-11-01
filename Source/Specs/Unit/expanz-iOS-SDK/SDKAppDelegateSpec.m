@@ -12,6 +12,8 @@
 
 #import "SpecHelper.h"
 #import "expanz_iOS_SDKAppDelegate.h"
+#import "OCMockObject.h"
+#import "OCMArg.h"
 
 
 SPEC_BEGIN(SDKAppDelegateSpec)
@@ -30,6 +32,23 @@ SPEC_BEGIN(SDKAppDelegateSpec)
             delegate.navigationController = [[[UINavigationController alloc] init] autorelease];
 
             assertThat(delegate.window, notNilValue());
+            assertThat(delegate.navigationController, notNilValue());
+        });
+
+    });
+
+    describe(@"Lifecycle", ^{
+
+        it(@"should instantiate and show the application window after launching.", ^{
+            id window = [OCMockObject mockForClass:[UIWindow class]];
+            [[window expect] addSubview:[OCMArg any]];
+            [[window expect] makeKeyAndVisible];
+            
+            delegate.window = window;
+            UIApplication* application = [OCMockObject niceMockForClass:[UIApplication class]];
+            [delegate application:application didFinishLaunchingWithOptions:nil];
+            
+            [window verify];
             assertThat(delegate.navigationController, notNilValue());
         });
 

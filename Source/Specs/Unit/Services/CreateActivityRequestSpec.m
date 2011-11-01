@@ -58,6 +58,8 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             LogDebug(@"%@", [request toXml]);
             assertThat([request toXml], containsString(@"DataPublication id=\"customersList\""));
             assertThat([request toXml], containsString(@"DataPublication id=\"ordersList\""));
+
+            [request release];
         });
     });
 
