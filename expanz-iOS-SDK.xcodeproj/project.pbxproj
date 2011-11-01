@@ -464,6 +464,8 @@
 		6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
 		6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
 		6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
+		6BF58DC81444245C0063E858 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1744,6 +1746,7 @@
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E856 /* SDKAppDelegateSpec.m in Sources */,
+				6BF58DC81444245C0063E85B /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2037,6 +2040,7 @@
 				6BF58DC81444245C0063E850 /* (null) in Sources */,
 				6BF58DC81444245C0063E853 /* TextCellSpec.m in Sources */,
 				6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */,
+				6BF58DC81444245C0063E858 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

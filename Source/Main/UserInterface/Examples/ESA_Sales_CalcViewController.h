@@ -33,4 +33,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias BasicCalculatorViewController ESA_Sales_CalcViewController;
+@compatibility_alias CalcViewController ESA_Sales_CalcViewController;

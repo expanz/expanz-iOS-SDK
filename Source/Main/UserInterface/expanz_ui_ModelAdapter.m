@@ -15,6 +15,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "MARTNSObject.h"
 #import "RTMethod.h"
+#import "expanz_model_DataSet.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter(private) 
@@ -54,6 +55,18 @@
     NSArray* keys = [_fieldMappings allKeysForObject:control]; 
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
 }
+
+
+- (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet {
+    return nil;
+
+}
+
+- (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl {
+    return nil;
+
+}
+
 
 - (void) updateUIControlsWithModelValues {
     for (NSString* fieldId in [_fieldMappings allKeys]) {

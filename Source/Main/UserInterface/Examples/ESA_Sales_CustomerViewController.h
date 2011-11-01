@@ -21,3 +21,6 @@
 @property (nonatomic, retain) IBOutlet UITableView* dataGrid;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias CustomerViewController ESA_Sales_CustomerViewController;

@@ -21,8 +21,6 @@
 @property(nonatomic) BOOL autoPopulate;
 
 
-- (id) initWithId:(NSString*)dataPublicationId populateMethod:(NSString*)populateMethod autoPopulate:(BOOL)autoPopulate;
-
 @end
 
 /* ================================================================================================================== */

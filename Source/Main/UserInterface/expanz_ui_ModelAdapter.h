@@ -13,6 +13,7 @@
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field;
 @class expanz_ui_ActivityInstanceViewController;
+@class expanz_model_DataSet;
 
 @interface expanz_ui_ModelAdapter : NSObject {
     
@@ -30,17 +31,21 @@
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
 /**
- * Returns the UIText field corresponding to the model's field object. 
+ * Returns the UITextField corresponding to the model's field object.
  */
 - (UITextField*) textInputControlFor:(expanz_model_Field*)field;
 
 /** 
- * Returns the field object corresponding to the UITextField object. 
+ * Returns the `expanz_model_Field` object corresponding to the UITextField object.
  */
-- (expanz_model_Field*) fieldFor:(UITextField*)control;
+- (expanz_model_Field*) fieldFor:(UITextField*)textControl;
 
+/**
+* Returns the `expanz_model_DataSet` object backing the UITableView component.
+*/
+- (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet;
 
-- (UITableView*) dataViewControlFor:(id)data;
+- (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl;
 
 /**
  * Updates UI text fields and labels with values from the model object. 
