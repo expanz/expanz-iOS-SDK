@@ -1046,12 +1046,12 @@
 		6BC9F59D1458EB82001AF204 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */,
 				6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */,
-				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
-				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
+				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */,
 				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
 				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
+				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
+				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
 			);
 			path = Examples;
 			sourceTree = "<group>";

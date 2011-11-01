@@ -18,11 +18,16 @@
 #import "expanz_model_DataSet.h"
 
 /* ================================================================================================================== */
-@interface expanz_ui_ModelAdapter(private) 
+@interface expanz_ui_ModelAdapter (private)
+
+- (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName;
 
 - (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller;
+
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
+
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
+
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
 
 @end
@@ -31,11 +36,11 @@
 @implementation expanz_ui_ModelAdapter
 
 
-@synthesize activityInstance = _activityInstance; 
+@synthesize activityInstance = _activityInstance;
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
-    self = [super init]; 
+    self = [super init];
     if (self) {
         //weak reference.
         _activityInstance = viewController.activityInstance;
@@ -49,17 +54,17 @@
         [self mapUILabelsForController:viewController];
         [self mapUITableViewsForController:viewController];
     }
-    return self;    
+    return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
 - (UITextField*) textInputControlFor:(expanz_model_Field*)field {
-    return [_fieldMappings objectForKey:field.fieldId]; 
+    return [_fieldMappings objectForKey:field.fieldId];
 }
 
 - (Field*) fieldFor:(UITextField*)control {
-    NSArray* keys = [_fieldMappings allKeysForObject:control]; 
-    return [_activityInstance fieldWithId:[keys objectAtIndex:0]]; 
+    NSArray* keys = [_fieldMappings allKeysForObject:control];
+    return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
 }
 
 
@@ -69,19 +74,19 @@
 }
 
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl {
-    return [[[DataSet alloc] init] autorelease];
+    NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
+    return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
-
 
 - (void) updateUIControlsWithModelValues {
     for (NSString* fieldId in [_fieldMappings allKeys]) {
-        Field* field = [_activityInstance fieldWithId:fieldId]; 
-        UITextField* textField = [_fieldMappings valueForKey:fieldId];        
-        [textField setText: field.value];      
+        Field* field = [_activityInstance fieldWithId:fieldId];
+        UITextField* textField = [_fieldMappings valueForKey:fieldId];
+        [textField setText:field.value];
         [textField setEnabled:!field.isDisabled];
         UILabel* label = [_labelMappings valueForKey:fieldId];
         [label setText:field.label];
-    }    
+    }
 }
 
 
@@ -91,7 +96,7 @@
     [_fieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
-    [super dealloc];    
+    [super dealloc];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -101,18 +106,17 @@
     }
 }
 
-#define kUIControlIsNilMessage @"The UITextField named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _selectorNames) {
         if ([_activityInstance fieldWithId:selectorName] != nil) {
             UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
             if (textField == nil) {
-                [NSException raise:NSObjectNotAvailableException format:kUIControlIsNilMessage, selectorName];
+                [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
             }
             LogDebug(@"Mapping field: '%@' to UITextField.", selectorName);
-            [_fieldMappings setObject:textField forKey:selectorName];                 
-        }            
-    }                
+            [_fieldMappings setObject:textField forKey:selectorName];
+        }
+    }
 }
 
 - (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
@@ -126,16 +130,25 @@
             LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
             [_labelMappings setObject:uiLabel forKey:fieldId];
         }
-    }       
+    }
 }
 
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _selectorNames) {
-        //DataSet* dataSet = _activityInstance
+        if ([_activityInstance dataSetWithId:selectorName] != nil) {
+            UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
+            if (tableView == nil) {
+                [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
+            }
+            LogDebug(@"Mapping data set: '%@' to UITableView.", selectorName);
+            [_dataSetMappings setObject:tableView forKey:selectorName];
+        }
     }
+}
 
-
-    
+#define kControlIsNilTemplate @"The %@ named '%@' is nil. Has the connection been made in Interface Builder?"
+- (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName {
+    [NSException raise:NSObjectNotAvailableException format:kControlIsNilTemplate, typeName, controlName];
 }
 
 

@@ -18,7 +18,7 @@
 
 @interface ESA_Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController<UITableViewDelegate>
 
-@property (nonatomic, retain) IBOutlet UITableView* dataGrid;
+@property (nonatomic, retain) IBOutlet UITableView* customersList;
 
 @end
 

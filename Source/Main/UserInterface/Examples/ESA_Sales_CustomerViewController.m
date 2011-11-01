@@ -14,7 +14,7 @@
 
 @implementation ESA_Sales_CustomerViewController
 
-@synthesize dataGrid = _dataGrid;
+@synthesize customersList = _customersList;
 
 
 /* ================================================================================================================== */
@@ -49,7 +49,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_dataGrid release];
+    [_customersList release];
     [super dealloc];
 }
 

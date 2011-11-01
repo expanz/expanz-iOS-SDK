@@ -73,7 +73,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         
         it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
             
-            DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.dataGrid];
+            DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.customersList];
             assertThat(dataSet, notNilValue());
 
         });
