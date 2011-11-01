@@ -21,6 +21,8 @@
 		6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
 		6B3F1CDF145F836F00BAD0DA /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6641458EB8C001AF204 /* RXMLElement+ActivityInstanceSpec.m */; };
+		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
+		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -456,9 +458,7 @@
 		6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E83E /* expanz_model_TextCell.m */; };
 		6BF58DC81444245C0063E845 /* DataSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E844 /* DataSetSpec.m */; };
 		6BF58DC81444245C0063E848 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E847 /* ColumnSpec.m */; };
-		6BF58DC81444245C0063E849 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E847 /* ColumnSpec.m */; };
 		6BF58DC81444245C0063E84B /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E84A /* RowSpec.m */; };
-		6BF58DC81444245C0063E84C /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E84A /* RowSpec.m */; };
 		6BF58DC81444245C0063E84E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E84F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E850 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -1732,8 +1732,6 @@
 				6BF58DC81444245C0063E83C /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
-				6BF58DC81444245C0063E849 /* ColumnSpec.m in Sources */,
-				6BF58DC81444245C0063E84C /* RowSpec.m in Sources */,
 				6B3F1CDF145F836F00BAD0DA /* RXMLElement+ActivityInstanceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1822,6 +1820,7 @@
 				6BF58DC81444245C0063E839 /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E83F /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84E /* (null) in Sources */,
+				6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1907,6 +1906,7 @@
 				6BF58DC81444245C0063E83A /* expanz_model_Row.m in Sources */,
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84F /* (null) in Sources */,
+				6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

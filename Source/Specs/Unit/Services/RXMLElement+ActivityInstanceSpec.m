@@ -13,6 +13,8 @@
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
 #import "../../../Main/Model/expanz_model_DataSet.h"
+#import "expanz_model_DataSet.h"
+#import "expanz_model_Column.h"
 
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
@@ -67,8 +69,23 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         });
 
         it(@"Should add expanz_model_Data objects for each data node.", ^{
-            DataSet* data = [activityElement asData];
+            ActivityInstance* activity = [activityElement asActivityInstance];
+            assertThatInt([activity.dataSets count], equalToInt(1));
+            
+            DataSet* data = [activity.dataSets objectAtIndex:0]; 
             assertThat(data, notNilValue());
+            assertThat(data.dataId, notNilValue());
+            assertThat(data.source, notNilValue());
+            
+            //Columns
+            assertThatInt([data.columns count], equalToInt(2));
+            for (Column* column in [data columns]) {
+                assertThat(column.columnId, notNilValue());
+                assertThat(column.field, notNilValue());
+                assertThat(column.dataType, notNilValue());
+                assertThat(column.label, notNilValue());
+                assertThatBool(column.width > 0, equalToBool(YES));
+            }
         });
 
     });

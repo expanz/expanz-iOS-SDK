@@ -14,6 +14,8 @@
 #import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
 #import "../../../Model/expanz_model_DataSet.h"
+#import "expanz_model_Column.h"
+#import "expanz_model_DataSet.h"
 
 
 @implementation RXMLElement (ActivityInstance)
@@ -75,9 +77,37 @@
 }
 
 - (DataSet*) asData {
+    if (![self.tag isEqualToString:@"Data"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not Data."];
+    }
     DataSet* dataSet =
         [[[DataSet alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
+
+    [self iterate:@"*" with:^(RXMLElement* e) {
+        if ([e.tag isEqualToString:@"Columns"]) {
+            [e iterate:@"*" with:^(RXMLElement* columnElement) {
+                [dataSet addColumn:[columnElement asColumn]];
+            }];
+        }
+    }];
+
     return dataSet;
+}
+
+- (Column*) asColumn {
+    if (![self.tag isEqualToString:@"Column"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a Column."];
+    }
+    NSString* columnId = [self attribute:@"id"];
+    NSString* field = [self attribute:@"field"];
+    NSString* label = [self attribute:@"label"];
+    NSString* dataType = [self attribute:@"datatype"];
+    NSInteger width = [[self attribute:@"width"] integerValue];
+
+    Column* column =
+        [[[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width] autorelease];
+
+    return column;
 
 
 }

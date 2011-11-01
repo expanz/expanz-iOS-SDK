@@ -71,6 +71,11 @@
     [_messages addObject:message];
 }
 
+- (NSArray*) dataSets {
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"dataId" ascending:YES] autorelease];
+    return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];    
+}
+
 - (void) addDataSet:(expanz_model_DataSet*)dataSet {
     [_dataSets addObject:dataSet];
 }
