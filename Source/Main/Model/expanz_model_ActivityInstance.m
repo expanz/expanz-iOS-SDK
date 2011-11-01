@@ -11,6 +11,7 @@
 
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
+#import "expanz_model_DataSet.h"
 
 
 @implementation expanz_model_ActivityInstance
@@ -26,6 +27,7 @@
         _persistentId = [persistentId retain];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
         _messages = [[NSMutableArray alloc] initWithCapacity:10];
+        _dataSets = [[NSMutableArray alloc] initWithCapacity:2];
     }
     return self;
 }
@@ -69,6 +71,10 @@
     [_messages addObject:message];
 }
 
+- (void) addDataSet:(expanz_model_DataSet*)dataSet {
+    [_dataSets addObject:dataSet];
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
@@ -79,6 +85,9 @@
 - (void) dealloc {
     [_handle release];
     [_persistentId release];
+    [_fields release];
+    [_messages release];
+    [_dataSets release];
     [super dealloc];
 }
 

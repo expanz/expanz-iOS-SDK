@@ -36,7 +36,7 @@ beforeEach(^{
     assertThat(controller, notNilValue());
     assertThat(controller.view, notNilValue());
     
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityInstance" ofType:@"xml"]; 
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ESA_Sales_Calc_ActivityInstance" ofType:@"xml"];
     NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
     ActivityInstance* activityInstance = [[element child:@"ExecXResult.ESA.Activity"] asActivityInstance]; 

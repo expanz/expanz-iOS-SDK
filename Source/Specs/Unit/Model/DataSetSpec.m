@@ -11,22 +11,22 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_model_Data.h"
+#import "../../../Main/Model/expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 
-SPEC_BEGIN(DataSpec)
+SPEC_BEGIN(DataSetSpec)
 
-    __block Data* data;
+
+    __block DataSet* data;
 
     beforeEach(^{
-        data = [[[Data alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"] autorelease];
+        data = [[[DataSet alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"] autorelease];
     });
 
     describe(@"Object creation", ^{
 
         it(@"Should allow instantiation with id and source attributes.", ^{
-            Data* data = [[Data alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"];
             assertThat(data, notNilValue());
             assertThat(data.dataId, notNilValue());
             assertThat(data.source, notNilValue());

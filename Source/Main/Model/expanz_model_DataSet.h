@@ -18,7 +18,7 @@
 /**
 * Top level container for holding repeating records of information in an `expanz_model_ActivityInstance`.
 */
-@interface expanz_model_Data : NSObject {
+@interface expanz_model_DataSet : NSObject {
 
 @private
     NSMutableArray* _columns;
@@ -67,4 +67,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias Data expanz_model_Data;
+@compatibility_alias DataSet expanz_model_DataSet;

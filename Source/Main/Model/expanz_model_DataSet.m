@@ -10,12 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_Data.h"
+#import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 
 
-@implementation expanz_model_Data
+@implementation expanz_model_DataSet
 
 @synthesize dataId = _dataId;
 @synthesize source = _source;

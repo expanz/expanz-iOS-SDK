@@ -13,6 +13,7 @@
 
 @class expanz_model_Field;
 @class expanz_model_Message;
+@class expanz_model_DataSet;
 
 /**
  * Represents an activity in progress. 
@@ -23,6 +24,7 @@
 @private
     NSMutableSet* _fields;
     NSMutableArray* _messages;
+    NSMutableArray* _dataSets;
 }
 
 
@@ -30,6 +32,7 @@
 @property(nonatomic, readonly) NSString* persistentId;
 @property(nonatomic, readonly) NSArray* fields;
 @property(nonatomic, readonly) NSArray* messages;
+@property(nonatomic, readonly) NSArray* dataSets;
 
 /**
 * Initializes new instance with the supplied parameters.
@@ -41,15 +44,20 @@
  */
 - (void) addField:(expanz_model_Field*)field;
 
+/**
+* Returns the field matching the supplied fieldId, or nil.
+*/
+- (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
+
 /** 
 * Adds a message to the instance.
 */
 - (void) addMessage:(expanz_model_Message*)message;
 
 /**
-* Returns the field matching the supplied fieldId, or nil.
+* Adds a data set to the instance.
 */
-- (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
+- (void) addDataSet:(expanz_model_DataSet*)data;
 
 /**
  * Indicates weather the activity in progress currently allows method invocations. For this to occur the client model
