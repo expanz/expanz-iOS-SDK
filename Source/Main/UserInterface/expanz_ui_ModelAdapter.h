@@ -43,10 +43,13 @@
 - (expanz_model_Field*) fieldFor:(UITextField*)textControl;
 
 /**
-* Returns the `expanz_model_DataSet` object backing the UITableView component.
+* Returns the UITableView corresponding to the supplied `expanz_model_DataSet`.
 */
 - (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet;
 
+/**
+* Returns the `expanz_model_DataSet` object backing the UITableView component.
+*/
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl;
 
 /**

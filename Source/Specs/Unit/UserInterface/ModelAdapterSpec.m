@@ -72,10 +72,14 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
         
         it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
-            
             DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.customersList];
             assertThat(dataSet, notNilValue());
+        });
 
+        it(@"should map the other directrion - return a UITableView corresponding to a DataSet", ^{
+            DataSet* dataSet = [customerModelAdapter.activityInstance dataSetWithId:@"customersList"];
+            UITableView* tableView = [customerModelAdapter dataViewControlFor:dataSet];
+            assertThat(tableView, notNilValue());
         });
 
     });

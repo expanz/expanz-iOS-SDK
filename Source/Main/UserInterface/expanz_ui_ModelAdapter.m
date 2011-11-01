@@ -69,8 +69,7 @@
 
 
 - (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet {
-    return nil;
-
+    return [_dataSetMappings objectForKey:dataSet.dataId];
 }
 
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl {
