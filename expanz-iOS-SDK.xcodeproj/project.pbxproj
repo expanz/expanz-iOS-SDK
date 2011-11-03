@@ -23,6 +23,14 @@
 		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
+		6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
+		6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
+		6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
+		6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
+		6B7596D814626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
+		6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
+		6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
+		6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -511,6 +519,9 @@
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_CustomerViewController.h; sourceTree = "<group>"; };
+		6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_CustomerViewController.m; sourceTree = "<group>"; };
+		6B7596D314626CD1008CFFAF /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1077,8 +1088,11 @@
 				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */,
 				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
 				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
-				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
 				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
+				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
+				6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */,
+				6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */,
+				6B7596D314626CD1008CFFAF /* Sales.Customer.xib */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -1632,6 +1646,7 @@
 				6BF58DC81444245C0063E822 /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E870 /* azure.xml in Resources */,
 				6BF58DC81444245C0063E875 /* expanz.xml in Resources */,
+				6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1650,6 +1665,7 @@
 				6BF58DC81444245C0063E81F /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
+				6B7596D814626CD1008CFFAF /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1667,6 +1683,7 @@
 				6BF58DC81444245C0063E820 /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E86E /* azure.xml in Resources */,
 				6BF58DC81444245C0063E873 /* expanz.xml in Resources */,
+				6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1692,6 +1709,7 @@
 				6BF58DC81444245C0063E821 /* ESA.Sales.Customer.xib in Resources */,
 				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
+				6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1792,6 +1810,7 @@
 				6BC96AA8146020AA008DC5B0 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
+				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1882,6 +1901,7 @@
 				6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
+				6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1970,6 +1990,7 @@
 				6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */,
+				6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2093,6 +2114,7 @@
 				6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
+				6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2243,7 +2265,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2267,7 +2289,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};

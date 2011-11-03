@@ -142,10 +142,6 @@
 
 - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
-    if (dataSet == nil) {
-        LogDebug(@"Oh fuck");
-    }
-    LogDebug(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Hey!!!!!!!!!!!!!!!!!! %i", [dataSet.rows count]);
     return [dataSet.rows count];
 }
 
