@@ -469,6 +469,22 @@
 		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 		6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
+		6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
+		6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
+		6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
+		6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
+		6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
+		6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
+		6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
+		6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
+		6BF58DC81444245C0063E86D /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
+		6BF58DC81444245C0063E86E /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
+		6BF58DC81444245C0063E86F /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
+		6BF58DC81444245C0063E870 /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
+		6BF58DC81444245C0063E872 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
+		6BF58DC81444245C0063E873 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
+		6BF58DC81444245C0063E874 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
+		6BF58DC81444245C0063E875 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -491,7 +507,6 @@
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
-		6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_expanz_com_ServiceUrls.h; sourceTree = "<group>"; };
 		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
@@ -742,6 +757,12 @@
 		6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAdapterSpecHelper.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E85F /* ModelAdapterSpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelAdapterSpecHelper.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E860 /* NSObject+ExpanzConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExpanzConfiguration.h"; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExpanzConfiguration.m"; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKConfiguration.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKConfiguration.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E871 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,7 +859,8 @@
 		6B100BEA143E739000EABC94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				6B100BED143E744100EABC94 /* test_expanz_com_ServiceUrls.h */,
+				6BF58DC81444245C0063E871 /* expanz.xml */,
+				6BF58DC81444245C0063E86C /* azure.xml */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -905,6 +927,10 @@
 		6BC9F5511458EB82001AF204 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */,
+				6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */,
+				6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */,
+				6BF58DC81444245C0063E860 /* NSObject+ExpanzConfiguration.h */,
 				6BC9F5521458EB82001AF204 /* InfoPlist.strings */,
 				6BC9F5541458EB82001AF204 /* MainWindow.xib */,
 				6BC9F5561458EB82001AF204 /* expanz-iOS-SDK-Info.plist */,
@@ -1604,6 +1630,8 @@
 				6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BF58DC81444245C0063E81D /* ESA.Sales.Calc.xib in Resources */,
 				6BF58DC81444245C0063E822 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E870 /* azure.xml in Resources */,
+				6BF58DC81444245C0063E875 /* expanz.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1620,6 +1648,8 @@
 				6BF58DC81444245C0063E810 /* (null) in Resources */,
 				6BF58DC81444245C0063E81A /* ESA.Sales.Calc.xib in Resources */,
 				6BF58DC81444245C0063E81F /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
+				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,6 +1665,8 @@
 				6BF58DC81444245C0063E811 /* (null) in Resources */,
 				6BF58DC81444245C0063E81B /* ESA.Sales.Calc.xib in Resources */,
 				6BF58DC81444245C0063E820 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E86E /* azure.xml in Resources */,
+				6BF58DC81444245C0063E873 /* expanz.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1658,6 +1690,8 @@
 				6BF58DC81444245C0063E812 /* (null) in Resources */,
 				6BF58DC81444245C0063E81C /* ESA.Sales.Calc.xib in Resources */,
 				6BF58DC81444245C0063E821 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
+				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1756,6 +1790,8 @@
 				6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */,
 				6BC96AA7145FE3F0008DC5B0 /* ModelAdapterSpec.m in Sources */,
 				6BC96AA8146020AA008DC5B0 /* SDKAppDelegateSpec.m in Sources */,
+				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1844,6 +1880,8 @@
 				6BF58DC81444245C0063E83F /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84E /* (null) in Sources */,
 				6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */,
+				6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1930,6 +1968,8 @@
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84F /* (null) in Sources */,
 				6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */,
+				6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2051,6 +2091,8 @@
 				6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E858 /* (null) in Sources */,
 				6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */,
+				6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,23 +20,24 @@
 #import "expanz_ui_LoginViewController.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
+#import "expanz_iOS_SDKConfiguration.h"
 
-@interface expanz_ui_LoginViewController (private) 
-- (CATransition*) makeViewTransition; 
+@interface expanz_ui_LoginViewController (private)
+- (CATransition*) makeViewTransition;
 @end
 
 
 @implementation expanz_ui_LoginViewController
 
-@synthesize loginClient = _loginClient; 
+@synthesize loginClient = _loginClient;
 @synthesize loginButton = _loginButton;
-@synthesize spinner = _spinner; 
+@synthesize spinner = _spinner;
 @synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
 
 /* ================================================== Constructors ================================================== */
 
 - (id) init {
-    self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]]; 
+    self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
         _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
         [_loginClient retain];
@@ -49,7 +50,7 @@
 - (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -59,7 +60,7 @@
 
 
 - (void) viewDidLoad {
-    [super viewDidLoad];   
+    [super viewDidLoad];
     _userNameAndPasswordForm.backgroundColor = [UIColor clearColor];
 }
 
@@ -84,11 +85,11 @@
 
 
 - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2; 
+    return 2;
 }
 
 
--(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     static NSString* reuseId = @"userNameAndPasswordForm";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
@@ -97,25 +98,25 @@
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
         cell.accessoryType = UITableViewCellAccessoryNone;
-    }    
+    }
 
-    TextFieldTableCell* textFieldCell = (TextFieldTableCell*) cell; 
+    TextFieldTableCell* textFieldCell = (TextFieldTableCell*) cell;
     textFieldCell.textField.delegate = self;
-    
+
     if ([indexPath row] == 0) {
         textFieldCell.textLabel.text = @"User Name";
         textFieldCell.textField.placeholder = @"example@expanz.com";
         textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
-        textFieldCell.textField.returnKeyType = UIReturnKeyNext; 
-        _userNameField = [textFieldCell.textField retain]; 
+        textFieldCell.textField.returnKeyType = UIReturnKeyNext;
+        _userNameField = [textFieldCell.textField retain];
     }
     else {
         textFieldCell.textLabel.text = @"Password";
         textFieldCell.textField.placeholder = @"required";
         textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
         textFieldCell.textField.returnKeyType = UIReturnKeyDone;
-        textFieldCell.textField.secureTextEntry = YES;        
-        _passwordField = [textFieldCell.textField retain]; 
+        textFieldCell.textField.secureTextEntry = YES;
+        _passwordField = [textFieldCell.textField retain];
     }
     return cell;
 }
@@ -124,7 +125,7 @@
 #pragma mark UITextFieldDelegate    
 
 
--(BOOL) textFieldShouldReturn:(UITextField*) textField {
+- (BOOL) textFieldShouldReturn:(UITextField*)textField {
     [textField resignFirstResponder];
     if (textField == _userNameField) {
         [_passwordField becomeFirstResponder];
@@ -138,17 +139,20 @@
 /* ================================================================================================================== */
 #pragma mark User Actions
 
-- (void) loginWithUserNameAndPassword:(id)sender {    
-    _loginButton.enabled = NO; 
-    _userNameField.enabled = NO; 
+- (void) loginWithUserNameAndPassword:(id)sender {
+    _loginButton.enabled = NO;
+    _userNameField.enabled = NO;
     _passwordField.enabled = NO;
     [_spinner startAnimating];
 
-    SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:_userNameField.text 
-                                      password:_passwordField.text appSite:@"SALESAPP"];        
-    [_loginClient createSessionWith:sessionRequest delegate:self];    
+    NSString* user = _userNameField.text;
+    NSString* password = _passwordField.text;
+    NSString* appSite = [SDKConfiguration globalConfiguration].preferredSite;
+
+    SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:user password:password appSite:appSite];
+    [_loginClient createSessionWith:sessionRequest delegate:self];
     [sessionRequest release];
-    
+
 }
 
 
@@ -158,43 +162,45 @@
 - (void) requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
     LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
     [_spinner stopAnimating];
-    
+
     if (sessionContext.hasError) {
         _loginButton.enabled = YES;
-        _userNameField.enabled = YES; 
+        _userNameField.enabled = YES;
         _passwordField.enabled = YES;
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:sessionContext.message 
-                             delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+        UIAlertView* alert = [[[UIAlertView alloc]
+            initWithTitle:@"Error" message:sessionContext.message delegate:self cancelButtonTitle:@"OK"
+        otherButtonTitles:nil] autorelease];
         [alert show];
     }
-    else {                
+    else {
         [SessionContext setGlobalContext:sessionContext];
         ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
-        
-        SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] 
-                                                  initWithSessionToken:sessionContext.sessionToken];
+
+        SessionDataRequest
+            * sessionDataRequest = [[SessionDataRequest alloc] initWithSessionToken:sessionContext.sessionToken];
         [menuViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:menuViewController];
         [sessionDataRequest release];
-        
-        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-        delegate.navigationController = [[[UINavigationController alloc] 
-                                          initWithRootViewController:menuViewController] autorelease];                
-        [menuViewController release];
-        
-        [self.view removeFromSuperview]; 
 
-        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];    
+        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+        delegate.navigationController =
+            [[[UINavigationController alloc] initWithRootViewController:menuViewController] autorelease];
+        [menuViewController release];
+
+        [self.view removeFromSuperview];
+
+        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];
         [delegate.window addSubview:delegate.navigationController.view];
         [self release];
-    }    
+    }
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
     //TODO: System-wide error handler. 
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"There was a system error."
-                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    UIAlertView* alert = [[[UIAlertView alloc]
+        initWithTitle:@"Error" message:@"There was a system error." delegate:self cancelButtonTitle:@"OK"
+    otherButtonTitles:nil] autorelease];
     [alert show];
-    
+
 }
 
 /* ================================================== Utility Methods =============================================== */

@@ -31,9 +31,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6BF58B3B144410A50063E805"
-            BuildableName = "Instrumented.app"
-            BlueprintName = "Instrumented"
+            BlueprintIdentifier = "6BCAFB9614317B1B00575280"
+            BuildableName = "expanz-iOS-SDK.app"
+            BlueprintName = "Release"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -43,15 +43,15 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6BF58B3B144410A50063E805"
-            BuildableName = "Instrumented.app"
-            BlueprintName = "Instrumented"
+            BlueprintIdentifier = "6BCAFB9614317B1B00575280"
+            BuildableName = "expanz-iOS-SDK.app"
+            BlueprintName = "Release"
             ReferencedContainer = "container:expanz-iOS-SDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
