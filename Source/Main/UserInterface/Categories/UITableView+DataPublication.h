@@ -12,10 +12,30 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+* Adds Expanz data binding capability to a standard UITableView control.
+*/
 @interface UITableView (DataPublication)
 
+/**
+* Sets the dataPublicationId - should match the name of the component.
+* TODO: Try to infer this - possible, but performance is a concern.
+*/
 - (void) setDataPublicationId:(NSString*)dataPublicationId;
+
+/**
+* Sets the populate method for data binding. Defaults to 'ListMe'
+*/
 - (void) setPopulateMethod:(NSString*)populateMethod;
+
+/**
+* Sets the query to be used for data binding. If this property is set, it is used instead of populateMethod attribute.
+*/
+- (void) setQuery:(NSString*)query;
+
+/**
+* Sets autoPopulate for data binding. Defaults to YES.
+*/
 - (void) setAutoPopulate:(BOOL)autoPopulate;
 
 @end

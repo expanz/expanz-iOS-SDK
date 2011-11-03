@@ -85,8 +85,14 @@
     LogDebug(@"Requesting populateMethod: %@", populateMethod);
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setPopulateMethod:populateMethod];
-
 }
+
+- (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {
+    LogDebug(@"Requesting query: %@", query);
+    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    [publicationRequest setQuery:query];
+}
+
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
@@ -160,10 +166,11 @@
     }
 
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    TextCell* textLabelCell = [row.cells objectAtIndex:0]; 
-    cell.textLabel.text = textLabelCell.data;
-    TextCell* subTitleCell = [row.cells objectAtIndex:1];
-    cell.detailTextLabel.text = subTitleCell.data;
+    TextCell* firstName = [row.cells objectAtIndex:3];
+    TextCell* lastName = [row.cells objectAtIndex:4];
+    TextCell* email = [row.cells objectAtIndex:6];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstName.data, lastName.data];
+    cell.detailTextLabel.text = email.data;
 
     return cell;
 
@@ -205,7 +212,7 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
+- (void) dealloc {    
     [_spinner release];
     [_activityRequest release];
     [_activityInstance release];

@@ -15,7 +15,7 @@
 #import "expanz_iOS_SDKAppDelegate.h"
 
 /* ================================================================================================================== */
-@interface UITableView(DataPublication_private)
+@interface UITableView (DataPublication_private)
 
 - (ActivityInstanceViewController*) activityController;
 
@@ -33,6 +33,12 @@
     ActivityInstanceViewController* activityController = [self activityController];
     [activityController hasUITableView:self requestingPopulateMethod:populateMethod];
 }
+
+- (void) setQuery:(NSString*)query {
+    ActivityInstanceViewController* activityController = [self activityController];
+    [activityController hasUITableView:self requestingQuery:query];
+}
+
 
 - (void) setAutoPopulate:(BOOL)autoPopulate {
     ActivityInstanceViewController* activityController = [self activityController];

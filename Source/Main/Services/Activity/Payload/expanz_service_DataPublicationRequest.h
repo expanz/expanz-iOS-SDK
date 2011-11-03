@@ -14,10 +14,16 @@
 #import "xml_Serializable.h"
 
 
-@interface expanz_service_DataPublicationRequest : NSObject<xml_Serializable>
+@interface expanz_service_DataPublicationRequest : NSObject<xml_Serializable> {
+    NSString* _dataPublicationId;
+    NSString* _populateMethod;
+    NSString* _query;
+    BOOL _autoPopulate;
+}
 
 @property(nonatomic, retain) NSString* dataPublicationId;
 @property(nonatomic, retain) NSString* populateMethod;
+@property(nonatomic, retain) NSString* query;
 @property(nonatomic) BOOL autoPopulate;
 
 

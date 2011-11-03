@@ -25,16 +25,32 @@
     if (self) {
         //Set defaults.
         _populateMethod = @"ListMe";
+        _query = @"";
         _autoPopulate = YES;
     }
     return self; 
 }
 
+/* ================================================ Interface Methods =============================================== */
+- (NSString*) query {
+    return [[_query retain] autorelease];
+}
+
+- (void) setQuery:(NSString*)query {
+    if (query != _query) {
+        [_query release];
+        _query = [query retain];
+        [_populateMethod release];
+        _populateMethod = @"";
+    }
+}
+
+
 /* ================================================= Protocol Methods =============================================== */
 
-#define kXmlTemplate @"<DataPublication id=\"%@\" populateMethod=\"%@\" autoPopulate=\"%@\"/>"
+#define kXmlTemplate @"<DataPublication id=\"%@\" populateMethod=\"%@\" query=\"%@\" autoPopulate=\"%@\"/>"
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod,
+    return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod, _query,
             _autoPopulate == YES ? @"1" : @"0"];
 }
 

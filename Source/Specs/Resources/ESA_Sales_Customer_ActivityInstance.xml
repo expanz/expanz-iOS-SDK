@@ -1,103 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ExecXResponse xmlns="http://www.expanz.com/ESAService">
     <ExecXResult>
-        <ESA success="1" responseTime="7" xmlns="">
-            <Activity activityHandle="634555857251714201.57" title="Customer" titleField="Name" focusField="SearchCode"
-                      ActivityPersistentId="0">
-                <Field id="PersistentId" label="Customer Id" nullable="0" null="1" value="" datatype="number"/>
-                <Field id="AllowLogin" label="Allow Login" nullable="0" null="0" valid="1" value="0" datatype="bool"/>
-                <Field id="SearchCode" label="Search Code" nullable="0" maxLength="8" null="1" value=""
-                       datatype="string" textCase="upper" isSearchField="1" valid="0"/>
-                <Field id="EmailAddress" label="Email Address" maxLength="100" null="1" value="" datatype="string"
+        <ESA success="1" responseTime="68" xmlns="">
+            <Activity activityHandle="634559160839273410.35" title="Customers" ActivityPersistentId="0">
+                <Field id="PersistentId" nullable="0" null="1" value="" datatype="number"/>
+                <Field id="SearchCode" label="Customer" nullable="1" maxLength="20" null="0" value="[AUTO]"
+                       datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="FirstName" label="First Name" nullable="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="LastName" label="Last Name" nullable="1" maxLength="254" null="1" value="" datatype="string"
                        valid="1"/>
-                <Field id="Name" label="Name" disabled="1" nullable="0" maxLength="100" null="1" value=""
-                       datatype="string" valid="0"/>
-                <Field id="Street" label="Street" maxLength="80" null="1" value="" datatype="string" valid="1"/>
-                <Field id="Address" label="Address" maxLength="80" null="1" value="" datatype="string" valid="1"/>
-                <Field id="Phone" label="Telephone No" maxLength="20" null="1" value="" datatype="string" valid="1"/>
-                <Field id="MobilePhone" label="Mobile Phone" maxLength="20" null="1" value="" datatype="string"
+                <Field id="Phone" label="Phone" nullable="1" maxLength="254" null="1" value="" datatype="string"
                        valid="1"/>
-                <Field id="Image.FileName" label="Attachment Name" maxLength="200" null="1" value="" datatype="string"
+                <Field id="Email" label="Email" nullable="1" maxLength="254" null="1" value="" datatype="string"
                        valid="1"/>
-                <Field id="Image.FileContents" label="Binary Contents" null="1" datatype="BLOB" valid="1"></Field>
-                <Field id="Image.Timestamp" null="1" value="" date="" time="" DayOfWeek="" datatype="datetime"
+                <Field id="Discount" label="Discount" nullable="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="CustomerPhoto" label="Customer Photo:" nullable="1" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Company" label="Company:" nullable="1" maxLength="254" null="1" value="" datatype="string"
                        valid="1"/>
-                <Field id="RowClassType"/>
-                <Field id="Roles.PersistentId" nullable="0" null="1" value="" datatype="number"
-                       relationship="aggregate"/>
-                <Field id="Roles.Sequence" null="1" value="" datatype="number" valid="1"/>
-                <Field id="Roles.SecurityRole.PersistentId" disabled="0" nullable="0" null="1" value=""
-                       datatype="number"/>
-                <Field id="Roles.SecurityRole.Name" label="Role Name" disabled="0" nullable="0" maxLength="50" null="1"
-                       value="" datatype="string" valid="1"/>
-                <Field id="Roles.SecurityRole.BPMRoleID" label="BPM Role"
-                       hint="Name of the Role from Business Process Modelling document" disabled="1" maxLength="32"
-                       null="1" value="" text="" datatype="string" valid="1"/>
-                <Field id="Roles.SecurityRole.DefaultSequence" label="Sequence" disabled="1" null="1" value=""
-                       datatype="number" valid="1"/>
-                <Field id="Roles.SecurityRole.Description" label="Description" disabled="1" maxLength="400" null="1"
-                       value="$longData$" datatype="string" valid="1"></Field>
-                <Field id="FirstName" label="First Name" nullable="0" maxLength="50" null="1" value="" datatype="string"
-                       valid="0"/>
-                <Field id="LastName" label="Last Name" nullable="0" maxLength="50" null="1" value="" datatype="string"
-                       valid="0"/>
-                <Field id="Notes" label="Notes" maxLength="200" null="1" value="" datatype="string" valid="1"/>
-                <Field id="Discount" label="Discount" null="1" value="" datatype="number" valid="1"/>
-                <Field id="LoginCode" label="Login Code" maxLength="20" disabled="1" null="1" value="" datatype="string"
-                       valid="1"/>
-                <Field id="Password" maxLength="20" disabled="1" null="1" value="" datatype="string" secureChannel="1"
-                       valid="1"/>
+                <Field id="FullCustomerName" label="Full Customer Name:" nullable="1" maxLength="254" null="0" value=""
+                       datatype="string" valid="1"/>
                 <Types>
-                    <Type id="ESA.Sales.UserRole" image="UserRole"/>
-                    <Type id="ESA.Sales.Customer" image="Customer"/>
+                    <Type id="Sales.Customer" image="Customer"/>
                 </Types>
-                <Data id="customersList" source="ESA.Sales.Customer.ListMe">
+                <Data id="customersList" source="Sales.Customer.ListMe">
                     <Columns>
-                        <Column id="1" field="SearchCode" label="Search Code" datatype="string" width="70"/>
-                        <Column id="2" field="Name" label="Name" datatype="string" width="140"/>
+                        <Column id="1" field="PersistentId" label="PersistentId" datatype="number" width="100"
+                                SubDataType="integer"/>
+                        <Column id="2" field="SearchCode" label="Customer" datatype="string" width="100"/>
+                        <Column id="3" field="FirstName" label="First Name" datatype="string" width="100"/>
+                        <Column id="4" field="LastName" label="Last Name" datatype="string" width="100"/>
+                        <Column id="5" field="Phone" label="Phone" datatype="string" width="100"/>
+                        <Column id="6" field="Email" label="Email" datatype="string" width="100"/>
+                        <Column id="7" field="Discount" label="Discount" datatype="number" width="100"
+                                SubDataType="decimal"/>
+                        <Column id="8" field="CustomerPhoto" label="Customer Photo:" datatype="BLOB" width="100"/>
+                        <Column id="9" field="Company" label="Company:" datatype="string" width="100"/>
+                        <Column id="10" field="FullCustomerName" label="Full Customer Name:" datatype="string"
+                                width="100"/>
                     </Columns>
                     <Rows Type="cell">
-                        <Row Type="ESA.Sales.Customer" id="5">
-                            <Cell id="1">POE</Cell>
-                            <Cell id="2">Poe, Jesper</Cell>
+                        <Row Type="Sales.Customer" id="1">
+                            <Cell id="1" sortValue="0000000001">1</Cell>
+                            <Cell id="2">000001</Cell>
+                            <Cell id="3">Mary</Cell>
+                            <Cell id="4">Smith</Cell>
+                            <Cell id="5">0202020</Cell>
+                            <Cell id="6">mary.smith@co.com</Cell>
+                            <Cell id="7" sortValue="00000.0200">2%</Cell>
+                            <Cell id="8">
+                                https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/1?
+                            </Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
                         </Row>
-                        <Row Type="ESA.Sales.Customer" id="6">
-                            <Cell id="1">ADAMS</Cell>
-                            <Cell id="2">Adams, Ellen</Cell>
+                        <Row Type="Sales.Customer" id="2">
+                            <Cell id="1" sortValue="0000000002">2</Cell>
+                            <Cell id="2">000002</Cell>
+                            <Cell id="3">Steve</Cell>
+                            <Cell id="4">Sanchez</Cell>
+                            <Cell id="5">5555 5555</Cell>
+                            <Cell id="6">Stevie.Sanchez@ms.com</Cell>
+                            <Cell id="7" sortValue="00000.0100">1%</Cell>
+                            <Cell id="8">
+                                https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/2?
+                            </Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
                         </Row>
-                        <Row Type="ESA.Sales.Customer" id="8">
-                            <Cell id="1">HAMMER</Cell>
-                            <Cell id="2">Holder, Hamish</Cell>
+                        <Row Type="Sales.Customer" id="5">
+                            <Cell id="1" sortValue="0000000005">5</Cell>
+                            <Cell id="2">000005</Cell>
+                            <Cell id="3">Chris</Cell>
+                            <Cell id="4">Shuler</Cell>
+                            <Cell id="5">13421342134</Cell>
+                            <Cell id="6">cs@company.com</Cell>
+                            <Cell id="7" sortValue="00000.1000">10%</Cell>
+                            <Cell id="8">
+                                https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/5?
+                            </Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
                         </Row>
-                        <Row Type="ESA.Sales.Customer" id="9">
-                            <Cell id="1">GKEENAN</Cell>
-                            <Cell id="2">Keenan, Gareth</Cell>
-                        </Row>
-                        <Row Type="ESA.Sales.Customer" id="10">
-                            <Cell id="1">MCLARKE</Cell>
-                            <Cell id="2">Clarke, Matt</Cell>
-                        </Row>
-                        <Row Type="ESA.Sales.Customer" id="15">
-                            <Cell id="1">PETER</Cell>
-                            <Cell id="2">Helped, Pipper</Cell>
-                        </Row>
-                        <Row Type="ESA.Sales.Customer" id="20">
-                            <Cell id="1">BLUES</Cell>
-                            <Cell id="2">Blues, Jasper</Cell>
-                        </Row>
-                        <Row Type="ESA.Sales.Customer" id="21">
-                            <Cell id="1">ANDERSON</Cell>
-                            <Cell id="2">Anderson, Chris</Cell>
-                        </Row>
-                        <Row Type="ESA.Sales.Customer" id="24">
-                            <Cell id="1">CLARKE</Cell>
-                            <Cell id="2">Clarke, Matt</Cell>
+                        <Row Type="Sales.Customer" id="7">
+                            <Cell id="1" sortValue="0000000007">7</Cell>
+                            <Cell id="2">000007</Cell>
+                            <Cell id="3">Matt</Cell>
+                            <Cell id="4">Skidmore</Cell>
+                            <Cell id="5">41566565557</Cell>
+                            <Cell id="6">ms@company.com</Cell>
+                            <Cell id="7" sortValue="00000.5000">50%</Cell>
+                            <Cell id="8">
+                                https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/7?
+                            </Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
                         </Row>
                     </Rows>
                 </Data>
             </Activity>
         </ESA>
     </ExecXResult>
-    <sessionHandle>net.tcp://127.0.0.1:8197/SessionManager1#634555857211234131:321</sessionHandle>
+    <sessionHandle>net.tcp://10.186.112.126:20001/SessionManager1#634559160814431568:34</sessionHandle>
     <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
 </ExecXResponse>

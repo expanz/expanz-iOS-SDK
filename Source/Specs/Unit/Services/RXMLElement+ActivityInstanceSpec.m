@@ -80,7 +80,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             assertThat(data.source, notNilValue());
             
             //Columns
-            assertThatInt([data.columns count], equalToInt(2));
+            assertThatInt([data.columns count], equalToInt(10));
             for (Column* column in [data columns]) {
                 assertThat(column.columnId, notNilValue());
                 assertThat(column.field, notNilValue());
@@ -90,10 +90,10 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             }
             
             //Rows
-            assertThatInt([data.rows count], equalToInt(9));
+            assertThatInt([data.rows count], equalToInt(4));
             for (Row* row in [data rows]) {
                 assertThat(row.rowId, notNilValue());
-                assertThat(row.type, equalTo(@"ESA.Sales.Customer"));
+                assertThat(row.type, equalTo(@"Sales.Customer"));
                 for (TextCell* cell in [row cells]) {
                     assertThat(cell.cellId, notNilValue());
                     assertThat(cell.data, notNilValue());
