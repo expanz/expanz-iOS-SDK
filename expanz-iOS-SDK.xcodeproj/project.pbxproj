@@ -31,6 +31,7 @@
 		6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
+		6B78F9A114638D0A004BBD63 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -403,7 +404,6 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
-		6BCE7B871463885F0024EE21 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */; };
 		6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 		6BF58B74144410A50063E805 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
@@ -1828,7 +1828,7 @@
 				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E887 /* expanz_model_BaseCell.m in Sources */,
-				6BCE7B871463885F0024EE21 /* ActivityInstanceSpec.m in Sources */,
+				6B78F9A114638D0A004BBD63 /* TextCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

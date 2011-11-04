@@ -24,13 +24,15 @@
         _cellId = [cellId copy];
         _data = [data copy];
     }
+
     return self;
+
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_cellId release];
     [_data release];
+    [_cellId release];
     [super dealloc];
 }
 

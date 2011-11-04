@@ -1,7 +1,7 @@
 <ExecXResponse xmlns="http://www.expanz.com/ESAService">
     <ExecXResult>
-        <ESA success="1" responseTime="68" xmlns="">
-            <Activity activityHandle="634559160839273410.35" title="Customers" ActivityPersistentId="0">
+        <ESA success="1" responseTime="62" xmlns="">
+            <Activity activityHandle="634559722953181110.46" title="Customers" ActivityPersistentId="0">
                 <Field id="PersistentId" nullable="0" null="1" value="" datatype="number"/>
                 <Field id="SearchCode" label="Customer" nullable="1" maxLength="20" null="0" value="[AUTO]"
                        datatype="string" textCase="upper" isSearchField="1" valid="1"/>
@@ -101,6 +101,6 @@
             </Activity>
         </ESA>
     </ExecXResult>
-    <sessionHandle>net.tcp://10.186.112.126:20001/SessionManager1#634559160814431568:34</sessionHandle>
+    <sessionHandle>net.tcp://10.186.112.126:20001/SessionManager1#634559722915996942:139</sessionHandle>
     <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
 </ExecXResponse>
