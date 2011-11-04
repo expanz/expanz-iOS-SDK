@@ -33,7 +33,7 @@ SPEC_BEGIN(RowSpec)
 
     describe(@"Association with cells", ^{
         it(@"Should hold a collection of cells", ^{
-            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"];
+            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
             [row addCell:cell];
             [cell release];
 
@@ -41,11 +41,11 @@ SPEC_BEGIN(RowSpec)
         });
 
         it(@"Should allow returning a sorted list of all cells.", ^{
-            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"];
+            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
             [row addCell:cell];
             [cell release];
 
-            TextCell* another = [[TextCell alloc] initWithCellId:@"address" data:@"Metro Manila"];
+            TextCell* another = [[TextCell alloc] initWithCellId:@"address" text:@"Metro Manila"];
             [row addCell:another];
             [another release];
 

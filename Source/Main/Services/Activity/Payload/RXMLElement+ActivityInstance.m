@@ -141,7 +141,7 @@
     if (![self.tag isEqualToString:@"Cell"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Cell."];
     }
-    return [[[TextCell alloc] initWithCellId:[self attribute:@"id"] data:[self text]] autorelease];
+    return [[[TextCell alloc] initWithCellId:[self attribute:@"id"] text:[self text]] autorelease];
 }
 
 

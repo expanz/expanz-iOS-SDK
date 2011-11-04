@@ -18,7 +18,7 @@ SPEC_BEGIN(TextCellSpec)
 
     beforeEach(^{
 
-        cell = [[TextCell alloc] initWithCellId:@"firstName" data:@"Jasper"];        
+        cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
     });
     
     describe(@"Object creation", ^{
@@ -26,7 +26,7 @@ SPEC_BEGIN(TextCellSpec)
         it(@"should allow initialization with cellId and data attributes.", ^{
             assertThat(cell, notNilValue());
             assertThat(cell.cellId, equalTo(@"firstName"));
-            assertThat(cell.data, equalTo(@"Jasper"));
+            assertThat(cell.text, equalTo(@"Jasper"));
         });
     });
 

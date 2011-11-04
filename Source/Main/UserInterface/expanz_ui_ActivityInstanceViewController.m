@@ -169,8 +169,8 @@
     TextCell* firstName = [row.cells objectAtIndex:2];
     TextCell* lastName = [row.cells objectAtIndex:3];
     TextCell* email = [row.cells objectAtIndex:5];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstName.data, lastName.data];
-    cell.detailTextLabel.text = email.data;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstName.text, lastName.text];
+    cell.detailTextLabel.text = email.text;
 
     return cell;
 

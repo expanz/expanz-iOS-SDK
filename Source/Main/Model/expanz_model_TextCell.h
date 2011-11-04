@@ -18,9 +18,9 @@
 */
 @interface expanz_model_TextCell : expanz_model_BaseCell
 
-@property (nonatomic, readonly) NSString* data;
+@property (nonatomic, readonly) NSString* text;
 
-- (id) initWithCellId:(NSString*)cellId data:(NSString*)data;
+- (id) initWithCellId:(NSString*)cellId text:(NSString*)text;
 
 @end
 

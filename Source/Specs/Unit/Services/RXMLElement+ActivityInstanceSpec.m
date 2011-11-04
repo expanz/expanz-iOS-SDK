@@ -96,7 +96,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                 assertThat(row.type, equalTo(@"Sales.Customer"));
                 for (TextCell* cell in [row cells]) {
                     assertThat(cell.cellId, notNilValue());
-                    assertThat(cell.data, notNilValue());
+                    assertThat(cell.text, notNilValue());
                 }
             }
         });

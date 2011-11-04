@@ -16,13 +16,13 @@
 @implementation expanz_model_TextCell
 
 @synthesize cellId = _cellId; 
-@synthesize data = _data;
+@synthesize text = _text;
 
-- (id) initWithCellId:(NSString*)cellId data:(NSString*)data {
+- (id) initWithCellId:(NSString*)cellId text:(NSString*)text {
     self = [super init];
     if (self) {
         _cellId = [cellId copy];
-        _data = [data copy];
+        _text = [text copy];
     }
 
     return self;
@@ -31,7 +31,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_data release];
+    [_text release];
     [_cellId release];
     [super dealloc];
 }
