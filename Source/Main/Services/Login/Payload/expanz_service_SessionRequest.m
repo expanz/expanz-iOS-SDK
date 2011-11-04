@@ -26,9 +26,9 @@
 - (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {    
     self = [self init];   
     if (self) {
-        _userName = [userName retain];
-        _password = [password retain];
-        _appSite = [appSite retain];
+        _userName = [userName copy];
+        _password = [password copy];
+        _appSite = [appSite copy];
     }
     return self; 
 }

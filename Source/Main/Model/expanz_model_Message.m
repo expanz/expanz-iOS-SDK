@@ -35,7 +35,7 @@
                 [NSException raise:NSInternalInconsistencyException format:@"Unknown message type."];
                 break;
         }
-        _content = [content retain];
+        _content = [content copy];
     }
     return self;
 }

@@ -22,14 +22,14 @@
 - (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken {
     self = [super init];
     if (self) {
-        _activityName = [activityName retain];
+        _activityName = [activityName copy];
         if (style != nil) {
-            _style = [style retain];
+            _style = [style copy];
         }
         else {
             _style = @"";
         }
-        _sessionToken = [sessionToken retain];
+        _sessionToken = [sessionToken copy];
         _dataPublicationRequests = [[NSMutableDictionary alloc] init];
     }
     return self;

@@ -21,8 +21,8 @@
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title {
     self = [self init];
     if (self) {
-        _processId = [processId retain];
-        _title = [title retain];
+        _processId = [processId copy];
+        _title = [title copy];
         _activities = [[NSMutableSet alloc] init];
     }
     return self;

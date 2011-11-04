@@ -22,8 +22,8 @@
 - (id) initWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance methodName:(NSString*)methodName {
     self = [super init]; 
     if (self) {
-        _activityInstance = [activityInstance retain]; 
-        _methodName = [methodName retain];
+        _activityInstance = [activityInstance retain];
+        _methodName = [methodName copy];
     }
     return self;
 }

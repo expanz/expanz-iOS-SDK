@@ -28,10 +28,10 @@
     
     self = [super init]; 
     if (self) {
-        _columnId = [columnId retain];
-        _field = [field retain];
-        _label = [label retain];
-        _dataType = [dataType retain];
+        _columnId = [columnId copy];
+        _field = [field copy];
+        _label = [label copy];
+        _dataType = [dataType copy];
         _width = width;
     }
     return self;

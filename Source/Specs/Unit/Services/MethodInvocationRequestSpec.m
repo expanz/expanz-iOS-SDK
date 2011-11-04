@@ -16,37 +16,36 @@
 
 SPEC_BEGIN(MethodInvocationRequestSpec)
 
-__block MethodInvocationRequest* methodRequest;
+    __block MethodInvocationRequest* methodRequest;
 
-beforeEach(^{
-    ActivityInstance* activity = [[ActivityInstance alloc] initWithTitle:@"Calc" handle:@"1234" persistentId:@"0"];
-    methodRequest = [[MethodInvocationRequest alloc] initWithActivityInstance:activity methodName:@"Add"]; 
-    
-    [activity autorelease];
-    [methodRequest autorelease];
-});
-
-
-describe(@"Objection creation", ^{
-    
-    it(@"should allow creation with activityInstance and method name attributes.", ^{            
-        assertThat(methodRequest, notNilValue());
-        assertThat(methodRequest.activityInstance, notNilValue());
-        assertThat(methodRequest.methodName, notNilValue());
+    beforeEach(^{
+        ActivityInstance* activity =
+            [[[ActivityInstance alloc] initWithTitle:@"Calc" handle:@"1234" persistentId:@"0"] autorelease];
+        methodRequest =
+            [[[MethodInvocationRequest alloc] initWithActivityInstance:activity methodName:@"Add"] autorelease];
     });
-});
 
-describe(@"xml marshalling", ^{
-    
-    it(@"should allow marshalling to xml for sending to the service endpoint.", ^{
-        id<xml_Serializable> xmlable = (id<xml_Serializable>) methodRequest;
-        NSString* xml = [xmlable toXml]; 
-        LogDebug(@"Xml: %@", xml);
-        assertThat(xml, notNilValue());        
+
+    describe(@"Objection creation", ^{
+
+        it(@"should allow creation with activityInstance and method name attributes.", ^{
+            assertThat(methodRequest, notNilValue());
+            assertThat(methodRequest.activityInstance, notNilValue());
+            assertThat(methodRequest.methodName, notNilValue());
+        });
     });
-    
 
-});
+    describe(@"xml marshalling", ^{
+
+        it(@"should allow marshalling to xml for sending to the service endpoint.", ^{
+            id <xml_Serializable> xmlable = (id <xml_Serializable>) methodRequest;
+            NSString* xml = [xmlable toXml];
+            LogDebug(@"Xml: %@", xml);
+            assertThat(xml, notNilValue());
+        });
 
 
-SPEC_END
+    });
+
+
+    SPEC_END

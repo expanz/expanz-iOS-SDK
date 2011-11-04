@@ -34,10 +34,10 @@
     
     self = [super init]; 
     if (self) {
-        _fieldId = [fieldId retain]; 
-        _fieldValue = [fieldValue retain]; 
-        _activityHandle = [activityHandle retain]; 
-        _sessionToken = [sessionToken retain]; 
+        _fieldId = [fieldId copy];
+        _fieldValue = [fieldValue copy];
+        _activityHandle = [activityHandle copy];
+        _sessionToken = [sessionToken copy];
     }
     return self; 
 }

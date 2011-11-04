@@ -23,7 +23,7 @@
 - (id)initWithSessionToken:(NSString*)sessionToken {
     self = [self init];
     if (self) {
-        _sessionToken = [sessionToken retain];
+        _sessionToken = [sessionToken copy];
     }
     return self;
 }

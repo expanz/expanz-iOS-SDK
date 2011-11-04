@@ -23,8 +23,8 @@
 - (id) initWithRowId:(NSString*)rowId type:(NSString*)type {
     self = [super init];
     if (self) {
-        _rowId = [rowId retain];
-        _type = [type retain];
+        _rowId = [rowId copy];
+        _type = [type copy];
         _cells = [[NSMutableArray alloc] init];
     }
     return self;

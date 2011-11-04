@@ -10,28 +10,26 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_TextCell.h"
+#import "expanz_model_BaseCell.h"
 
 
-@implementation expanz_model_TextCell
+@implementation expanz_model_BaseCell
 
-@synthesize cellId = _cellId; 
-@synthesize data = _data;
+@synthesize cellId = _cellId;
 
-- (id) initWithCellId:(NSString*)cellId data:(NSString*)data {
+- (id) initWithCellId:(NSString*)cellId {
     self = [super init];
     if (self) {
         _cellId = [cellId copy];
-        _data = [data copy];
     }
     return self;
+
 }
 
-/* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_cellId release];
-    [_data release];
     [super dealloc];
 }
+
 
 @end

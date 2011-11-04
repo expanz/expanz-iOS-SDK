@@ -22,9 +22,9 @@
 - (id) initWithName:(NSString*)name title:(NSString*)title style:(NSString*)style {
     self = [self init];
     if (self) {
-        _name = [name retain];
-        _title = [title retain];
-        _style = [style retain];
+        _name = [name copy];
+        _title = [title copy];
+        _style = [style copy];
     }
     return self;
 }

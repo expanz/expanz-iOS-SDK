@@ -20,8 +20,8 @@
 - (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description {
     self = [super init];
     if (self) {
-        _roleId = [roleId retain];
-        _roleDescription = [description retain];
+        _roleId = [roleId copy];
+        _roleDescription = [description copy];
     }
     return self;
 }

@@ -34,12 +34,12 @@
 
     self = [super init];
     if (self) {
-        _fieldId = [fieldId retain];
+        _fieldId = [fieldId copy];
         _nullable = nullable;
-        _defaultValue = [defaultValue retain];
-        _datatype = [datatype retain];
-        _label = [label retain];
-        _hint = [hint retain];
+        _defaultValue = [defaultValue copy];
+        _datatype = [datatype copy];
+        _label = [label copy];
+        _hint = [hint copy];
     }
     return self;
 }

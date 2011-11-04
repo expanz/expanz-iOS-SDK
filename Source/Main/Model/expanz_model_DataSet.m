@@ -24,8 +24,8 @@
 - (id) initWithDataId:(NSString*)dataId source:(NSString*)source {
     self = [self init];
     if (self) {
-        _dataId = [dataId retain];
-        _source = [source retain];
+        _dataId = [dataId copy];
+        _source = [source copy];
         _columns = [[NSMutableArray alloc] init];
         _rows = [[NSMutableArray alloc] init];
     }

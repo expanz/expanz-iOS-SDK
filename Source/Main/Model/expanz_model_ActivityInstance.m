@@ -23,8 +23,8 @@
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
     self = [super initWithName:nil title:title style:NULL];
     if (self) {
-        _handle = [handle retain];
-        _persistentId = [persistentId retain];
+        _handle = [handle copy];
+        _persistentId = [persistentId copy];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
         _messages = [[NSMutableArray alloc] initWithCapacity:10];
         _dataSets = [[NSMutableArray alloc] initWithCapacity:2];

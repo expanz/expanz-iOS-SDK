@@ -18,7 +18,7 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _textField = [[UITextField alloc] init];
@@ -35,26 +35,26 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (void)layoutSubviews {
+- (void) layoutSubviews {
     [super layoutSubviews];
     _textField.frame = CGRectMake(120, 10, 185, 30);
     _textField.adjustsFontSizeToFitWidth = YES;
     _textField.textColor = [UIColor blackColor];
     _textField.backgroundColor = [UIColor clearColor];
-    _textField.autocorrectionType = UITextAutocorrectionTypeNo; 
-    _textField.autocapitalizationType = UITextAutocapitalizationTypeNone; 
+    _textField.autocorrectionType = UITextAutocorrectionTypeNo;
+    _textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     _textField.textAlignment = UITextAlignmentLeft;
     // no clear 'x' button to the right
-    _textField.clearButtonMode = UITextFieldViewModeNever; 
-    _textField.enabled = YES;    
-    [self addSubview:_textField];    
+    _textField.clearButtonMode = UITextFieldViewModeNever;
+    _textField.enabled = YES;
+    [self addSubview:_textField];
 }
 
 
 /* ================================================== Utility Methods =============================================== */
 
 - (void) dealloc {
-    [_textField release]; 
+    [_textField release];
     [super dealloc];
 }
 
