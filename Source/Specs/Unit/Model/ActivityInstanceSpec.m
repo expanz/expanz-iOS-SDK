@@ -26,7 +26,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
     describe(@"Object creation.", ^{
 
         it(@"should allow initialization with title, handle and persistent id", ^{
-//            assertThat(instance.title, equalTo(@"Calculator"));
+            assertThat(instance.title, equalTo(@"Calculator"));
             assertThat(instance.handle, equalTo(@"12345"));
             assertThat(instance.persistentId, equalTo(@"123"));
         });

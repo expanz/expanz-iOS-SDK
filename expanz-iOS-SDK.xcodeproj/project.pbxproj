@@ -31,7 +31,7 @@
 		6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
-		6B78F9A114638D0A004BBD63 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E851 /* TextCellSpec.m */; };
+		6B78F9B11463C4D2004BBD63 /* ImageCellSpec.m in Resources */ = {isa = PBXBuildFile; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -507,6 +507,7 @@
 		6BF58DC81444245C0063E88B /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
+		6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88F /* ImageCellSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -794,6 +795,7 @@
 		6BF58DC81444245C0063E888 /* expanz_model_BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_BaseCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ImageCell.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageCell.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E88F /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1193,6 +1195,7 @@
 		6BC9F6571458EB8C001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E88F /* ImageCellSpec.m */,
 				6BF58DC81444245C0063E87C /* DataTypeSpec.m */,
 				6BF58DC81444245C0063E851 /* TextCellSpec.m */,
 				6BF58DC81444245C0063E84A /* RowSpec.m */,
@@ -1673,6 +1676,7 @@
 				6BF58DC81444245C0063E870 /* azure.xml in Resources */,
 				6BF58DC81444245C0063E875 /* expanz.xml in Resources */,
 				6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6B78F9B11463C4D2004BBD63 /* ImageCellSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1836,7 +1840,6 @@
 				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E887 /* expanz_model_BaseCell.m in Sources */,
-				6B78F9A114638D0A004BBD63 /* TextCellSpec.m in Sources */,
 				6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2155,6 +2158,7 @@
 				6BF58DC81444245C0063E882 /* (null) in Sources */,
 				6BF58DC81444245C0063E886 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */,
+				6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

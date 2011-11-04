@@ -11,7 +11,36 @@
 
 
 #import "expanz_model_ImageCell.h"
+#import "ASIHTTPRequest.h"
 
 
 @implementation expanz_model_ImageCell
+
+@synthesize imageUrl = _imageUrl;
+@synthesize image = _image;
+
+- (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl {
+    self = [super initWithCellId:cellId];
+    if (self) {
+        _imageUrl = [imageUrl copy];
+        ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:imageUrl]];
+        [request setCompletionBlock:^{
+            _image = [UIImage imageWithData:[request responseData]];
+        }];
+
+        [request setFailedBlock:^{
+            //TOOD: Handle this
+            LogError(@"Can't download the image: %@",_imageUrl);
+        }];
+        [request startAsynchronous];
+    }
+    return self;
+}
+
+- (void) dealloc {
+    [_imageUrl release];
+    [super dealloc];
+}
+
+
 @end

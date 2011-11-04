@@ -11,10 +11,20 @@
 
 
 #import <Foundation/Foundation.h>
+#import "expanz_model_BaseCell.h"
+
+/**
+* Represents an image in an `expanz_model_Row` of a data grid. The image is fetched asynchronously, so that the table
+* rows can be presented as quickly as possible.
+*/
+@interface expanz_model_ImageCell : expanz_model_BaseCell
+- (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl;
 
 
-@interface expanz_model_ImageCell : NSObject {
-
-}
+@property(nonatomic, readonly) NSString* imageUrl;
+@property(nonatomic, readonly) UIImage* image;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias ImageCell expanz_model_ImageCell;

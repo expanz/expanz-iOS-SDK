@@ -11,6 +11,7 @@
 
 #import "SpecHelper.h"
 #import "expanz_model_TextCell.h"
+#import "expanz_model_ImageCell.h"
 
 SPEC_BEGIN(TextCellSpec)
 
@@ -20,9 +21,9 @@ SPEC_BEGIN(TextCellSpec)
 
         cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
     });
-    
+
     describe(@"Object creation", ^{
-        
+
         it(@"should allow initialization with cellId and data attributes.", ^{
             assertThat(cell, notNilValue());
             assertThat(cell.cellId, equalTo(@"firstName"));
@@ -36,4 +37,4 @@ SPEC_BEGIN(TextCellSpec)
 
 
 
-SPEC_END
+    SPEC_END

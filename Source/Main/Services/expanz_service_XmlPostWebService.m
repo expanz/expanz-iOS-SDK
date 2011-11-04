@@ -26,10 +26,8 @@
 }
 
 - (void) addPayload:(id<xml_Serializable>)xmlable {
-    [xmlable retain];
     LogDebug(@"Sending request: %@", [xmlable toXml]);
     [_request appendPostData:[[xmlable toXml] dataUsingEncoding:NSUTF8StringEncoding]];
-    [xmlable release];
 }
 
 /* ================================================== Utility Methods =============================================== */
