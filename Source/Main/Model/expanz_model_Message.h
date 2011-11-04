@@ -12,17 +12,15 @@
 #import <Foundation/Foundation.h>
 
 
-typedef enum
-{
-    MessageTypeWarning,
-    MessageTypeError
+typedef enum {
+    MessageTypeWarning, MessageTypeError
 } MessageType;
 
 
 /* ================================================================================================================== */
 
 /** 
- * Can be returned at the end of an actvity transaction, to provide additional user information. 
+ * Can be returned at the end of an activity transaction, to provide additional user information.
  */
 @interface expanz_model_Message : NSObject
 

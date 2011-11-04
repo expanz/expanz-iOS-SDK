@@ -65,8 +65,6 @@
 		6BBE269F145CEF0800052700 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2687145CEF0800052700 /* RXMLElement+ActivityInstance.m */; };
 		6BC12384145E962C00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
-		6BC96AA7145FE3F0008DC5B0 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */; };
-		6BC96AA8146020AA008DC5B0 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */; };
 		6BC9F5AB1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AC1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
 		6BC9F5AD1458EB82001AF204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5521458EB82001AF204 /* InfoPlist.strings */; };
@@ -181,7 +179,6 @@
 		6BC9F63D1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A51458EB82001AF204 /* expanz_ui_LoginViewController.m */; };
 		6BC9F63E1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A51458EB82001AF204 /* expanz_ui_LoginViewController.m */; };
 		6BC9F63F1458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
-		6BC9F6401458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BC9F6411458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BC9F6421458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BC9F6771458EB8C001AF204 /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6451458EB8C001AF204 /* XmlPostActivityClientIntegration.m */; };
@@ -406,6 +403,8 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
+		6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 		6BF58B74144410A50063E805 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6BF58B75144410A50063E805 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6BF58B76144410A50063E805 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
@@ -476,7 +475,6 @@
 		6BF58DC81444245C0063E858 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
-		6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 		6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
 		6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
 		6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
@@ -493,6 +491,11 @@
 		6BF58DC81444245C0063E873 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
 		6BF58DC81444245C0063E874 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
 		6BF58DC81444245C0063E875 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
+		6BF58DC81444245C0063E877 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E878 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E879 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* DataTypeSpec.m */; };
+		6BF58DC81444245C0063E87E /* DataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* DataTypeSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -774,6 +777,8 @@
 		6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKConfiguration.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E871 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E87B /* ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzDataType.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E87C /* DataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTypeSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -959,6 +964,7 @@
 		6BC9F55E1458EB82001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E87B /* ExpanzDataType.h */,
 				6BF58DC81444245C0063E843 /* expanz_model_TextCell.h */,
 				6BF58DC81444245C0063E83E /* expanz_model_TextCell.m */,
 				6BF58DC81444245C0063E83D /* expanz_model_Row.h */,
@@ -1168,6 +1174,7 @@
 		6BC9F6571458EB8C001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E87C /* DataTypeSpec.m */,
 				6BF58DC81444245C0063E851 /* TextCellSpec.m */,
 				6BF58DC81444245C0063E84A /* RowSpec.m */,
 				6BF58DC81444245C0063E847 /* ColumnSpec.m */,
@@ -1805,12 +1812,11 @@
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E85B /* (null) in Sources */,
-				6BF58DC81444245C0063E85E /* ModelAdapterSpecHelper.m in Sources */,
-				6BC96AA7145FE3F0008DC5B0 /* ModelAdapterSpec.m in Sources */,
-				6BC96AA8146020AA008DC5B0 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E87E /* DataTypeSpec.m in Sources */,
+				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1902,6 +1908,7 @@
 				6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E877 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1932,7 +1939,6 @@
 				6BC9F6341458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BC9F6381458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63C1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,
-				6BC9F6401458EB82001AF204 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BC9F7341458EBB6001AF204 /* ASIAuthenticationDialog.m in Sources */,
 				6BC9F7381458EBB6001AF204 /* ASIDataCompressor.m in Sources */,
 				6BC9F73C1458EBB6001AF204 /* ASIDataDecompressor.m in Sources */,
@@ -1991,6 +1997,8 @@
 				6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E878 /* (null) in Sources */,
+				6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2115,6 +2123,8 @@
 				6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6BF58DC81444245C0063E879 /* (null) in Sources */,
+				6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
