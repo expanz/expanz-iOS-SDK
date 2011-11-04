@@ -23,12 +23,7 @@
     self = [super init];
     if (self) {
         _activityName = [activityName copy];
-        if (style != nil) {
-            _style = [style copy];
-        }
-        else {
-            _style = @"";
-        }
+        _style = [style copy];
         _sessionToken = [sessionToken copy];
         _dataPublicationRequests = [[NSMutableDictionary alloc] init];
     }
@@ -65,7 +60,7 @@
     for (DataPublicationRequest* dataPublicationRequest in [_dataPublicationRequests allValues]) {
         [body appendString:[dataPublicationRequest toXml]];
     }
-    return [NSString stringWithFormat:kXmlTempate, _activityName, _style, body, _sessionToken];
+    return [NSString stringWithFormat:kXmlTempate, _activityName, _style != nil ? _style : @"", body, _sessionToken];
 }
 
 /* ================================================== Utility Methods =============================================== */

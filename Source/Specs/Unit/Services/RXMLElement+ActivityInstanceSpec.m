@@ -13,7 +13,6 @@
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
 #import "../../../Main/Model/expanz_model_DataSet.h"
-#import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
@@ -73,30 +72,28 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         it(@"Should add expanz_model_Data objects for each data node.", ^{
             ActivityInstance* activity = [activityElement asActivityInstance];
             assertThatInt([activity.dataSets count], equalToInt(1));
-            
-            DataSet* data = [activity.dataSets objectAtIndex:0]; 
+
+            DataSet* data = [activity.dataSets objectAtIndex:0];
             assertThat(data, notNilValue());
             assertThat(data.dataId, notNilValue());
             assertThat(data.source, notNilValue());
-            
+
             //Columns
             assertThatInt([data.columns count], equalToInt(10));
             for (Column* column in [data columns]) {
                 assertThat(column.columnId, notNilValue());
                 assertThat(column.field, notNilValue());
-                assertThat(column.dataType, notNilValue());
                 assertThat(column.label, notNilValue());
                 assertThatBool(column.width > 0, equalToBool(YES));
             }
-            
+
             //Rows
             assertThatInt([data.rows count], equalToInt(4));
             for (Row* row in [data rows]) {
                 assertThat(row.rowId, notNilValue());
                 assertThat(row.type, equalTo(@"Sales.Customer"));
-                for (TextCell* cell in [row cells]) {
+                for (BaseCell* cell in [row cells]) {
                     assertThat(cell.cellId, notNilValue());
-                    assertThat(cell.text, notNilValue());
                 }
             }
         });
@@ -147,4 +144,4 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
     });
 
-SPEC_END
+    SPEC_END

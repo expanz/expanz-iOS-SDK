@@ -38,7 +38,7 @@ SPEC_BEGIN(DataSetSpec)
 
         it(@"Should hold a reference to it's columns", ^{
             Column* column = [[Column alloc]
-                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
+                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:ExpanzDataTypeString width:70];
             [data addColumn:column];
             [column release];
 
@@ -47,7 +47,7 @@ SPEC_BEGIN(DataSetSpec)
 
         it(@"Should allow retrieving a column by id", ^{
             Column* column = [[Column alloc]
-                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
+                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:ExpanzDataTypeString width:70];
             [data addColumn:column];
             [column release];
 
@@ -62,12 +62,12 @@ SPEC_BEGIN(DataSetSpec)
 
         it(@"Should be able to return all columns by copy.", ^{
             Column* column = [[Column alloc]
-                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
+                initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:ExpanzDataTypeString width:70];
             [data addColumn:column];
             [column release];
 
             Column* another = [[Column alloc]
-                initWithColumnId:@"2" field:@"lastName" label:@"Customer Last Name" dataType:@"string" width:70];
+                initWithColumnId:@"2" field:@"lastName" label:@"Customer Last Name" dataType:ExpanzDataTypeString width:70];
             [data addColumn:another];
             [another release];
 

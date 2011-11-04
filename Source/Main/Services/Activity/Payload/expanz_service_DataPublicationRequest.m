@@ -21,14 +21,14 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) init {
-    self = [super init]; 
+    self = [super init];
     if (self) {
         //Set defaults.
         _populateMethod = @"ListMe";
         _query = @"";
         _autoPopulate = YES;
     }
-    return self; 
+    return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
@@ -39,9 +39,9 @@
 - (void) setQuery:(NSString*)query {
     if (query != _query) {
         [_query release];
-        _query = [query retain];
+        _query = [query copy];
         [_populateMethod release];
-        _populateMethod = @"";
+        _populateMethod = nil;
     }
 }
 
@@ -50,8 +50,8 @@
 
 #define kXmlTemplate @"<DataPublication id=\"%@\" populateMethod=\"%@\" query=\"%@\" autoPopulate=\"%@\"/>"
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod, _query,
-            _autoPopulate == YES ? @"1" : @"0"];
+    return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod != nil ? _populateMethod : @"",
+                                      _query, _autoPopulate == YES ? @"1" : @"0"];
 }
 
 /* ================================================== Utility Methods =============================================== */

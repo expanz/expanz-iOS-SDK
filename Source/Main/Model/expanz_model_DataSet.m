@@ -35,6 +35,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) addColumn:(Column*)column {
+    column.dataSet = self;
     [_columns addObject:column];
 }
 
@@ -53,6 +54,7 @@
 }
 
 - (void) addRow:(Row*)row {
+    row.dataSet = self;
     [_rows addObject:row];
 }
 

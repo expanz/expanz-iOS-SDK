@@ -113,7 +113,7 @@
     NSString* columnId = [self attribute:@"id"];
     NSString* field = [self attribute:@"field"];
     NSString* label = [self attribute:@"label"];
-    NSString* dataType = [self attribute:@"datatype"];
+    ExpanzDataType dataType = ExpanzDataTypeFromString([self attribute:@"datatype"]);
     NSInteger width = [[self attribute:@"width"] integerValue];
 
     Column* column =
@@ -130,19 +130,11 @@
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"Cell"]) {
-            [row addCell:[e asTextCell]];
+            [row addCellWithId:[e attribute:@"id"] data:[e text]];
         }
     }];
 
     return row;
 }
-
-- (TextCell*) asTextCell {
-    if (![self.tag isEqualToString:@"Cell"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Cell."];
-    }
-    return [[[TextCell alloc] initWithCellId:[self attribute:@"id"] text:[self text]] autorelease];
-}
-
 
 @end

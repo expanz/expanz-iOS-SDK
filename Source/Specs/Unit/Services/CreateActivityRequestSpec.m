@@ -24,6 +24,7 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             CreateActivityRequest* request = [[CreateActivityRequest alloc]
                 initWithActivityName:@"Calculator" style:nil sessionToken:@"EggResponderxx238b"];
             assertThat([request activityName], equalTo(@"Calculator"));
+            assertThat([request style], nilValue());
             assertThat([request sessionToken], equalTo(@"EggResponderxx238b"));
         });
 
@@ -56,6 +57,7 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             [another setAutoPopulate:NO];
 
             LogDebug(@"%@", [request toXml]);
+            assertThatInt([[request dataPublicationRequests] count], equalToInt(2));
             assertThat([request toXml], containsString(@"DataPublication id=\"customersList\""));
             assertThat([request toXml], containsString(@"DataPublication id=\"ordersList\""));
 

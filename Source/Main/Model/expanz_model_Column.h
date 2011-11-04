@@ -11,21 +11,30 @@
 
 
 #import <Foundation/Foundation.h>
+#import "ExpanzDataType.h"
+
+@class expanz_model_DataSet;
 
 
 /**
 * Represents a column in an `expanz_model_DataSet`.
 */
-@interface expanz_model_Column : NSObject
+@interface expanz_model_Column : NSObject {
 
-@property (nonatomic, readonly) NSString* columnId;
-@property (nonatomic, readonly) NSString* field;
-@property (nonatomic, readonly) NSString* label;
-@property (nonatomic, readonly) NSString* dataType;
-@property (nonatomic, readonly) NSInteger width;
+@private
+    expanz_model_DataSet* _dataSet;
 
-- (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label dataType:(NSString*)dataType
-                  width:(NSInteger)width;
+}
+
+@property(nonatomic, assign) expanz_model_DataSet* dataSet;
+@property(nonatomic, readonly) NSString* columnId;
+@property(nonatomic, readonly) NSString* field;
+@property(nonatomic, readonly) NSString* label;
+@property(nonatomic, readonly) ExpanzDataType dataType;
+@property(nonatomic, readonly) NSInteger width;
+
+- (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label
+               dataType:(ExpanzDataType)dataType width:(NSInteger)width;
 
 
 @end

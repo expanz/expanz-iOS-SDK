@@ -11,6 +11,8 @@
 
 
 #import "SpecHelper.h"
+#import "expanz_model_DataSet.h"
+#import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 
@@ -32,30 +34,35 @@ SPEC_BEGIN(RowSpec)
     });
 
     describe(@"Association with cells", ^{
-        it(@"Should hold a collection of cells", ^{
-            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
-            [row addCell:cell];
-            [cell release];
 
+        beforeEach(^{
+            Column* column1 = [[Column alloc]
+                initWithColumnId:@"firstName" field:@"firstName" label:nil dataType:ExpanzDataTypeString width:70];
+            Column* column2 = [[Column alloc]
+                initWithColumnId:@"address" field:@"address" label:nil dataType:ExpanzDataTypeString width:70];
+            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"foobar" source:@"zzz"];
+            [dataSet addColumn:column1];
+            [dataSet addColumn:column2];
+            [column1 release];
+            [column2 release];
+            [row setDataSet:dataSet];
+        });
+
+        it(@"Should hold a collection of cells", ^{
+            [row addCellWithId:@"firstName" data:@"Jasper"];
             assertThatInt([[row cells] count], equalToInt(1));
         });
 
         it(@"Should allow returning a sorted list of all cells.", ^{
-            TextCell* cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
-            [row addCell:cell];
-            [cell release];
-
-            TextCell* another = [[TextCell alloc] initWithCellId:@"address" text:@"Metro Manila"];
-            [row addCell:another];
-            [another release];
+            [row addCellWithId:@"firstName" data:@"Jasper"];
+            [row addCellWithId:@"address" data:@"Metro Manila"];
 
             NSArray* cells = [row cells];
             assertThatInt([cells count], equalToInt(2));
-            
-            //Cells are sorted. 
-            assertThat([cells objectAtIndex:0], equalTo(another));
-            assertThat([cells objectAtIndex:1], equalTo(cell));
 
+            //Cells are sorted. 
+            assertThat([[cells objectAtIndex:0] cellId], equalTo(@"address"));
+            assertThat([[cells objectAtIndex:1] cellId], equalTo(@"firstName"));
         });
 
     });

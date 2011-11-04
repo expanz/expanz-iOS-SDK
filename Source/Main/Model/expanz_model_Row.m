@@ -11,13 +11,17 @@
 
 
 #import "expanz_model_Row.h"
+#import "expanz_model_Column.h"
+#import "expanz_model_DataSet.h"
 #import "expanz_model_TextCell.h"
+#import "expanz_model_ImageCell.h"
 
 
 @implementation expanz_model_Row
 
-@synthesize rowId = _rowId; 
-@synthesize type = _type; 
+@synthesize dataSet = _dataSet;
+@synthesize rowId = _rowId;
+@synthesize type = _type;
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithRowId:(NSString*)rowId type:(NSString*)type {
@@ -25,19 +29,40 @@
     if (self) {
         _rowId = [rowId copy];
         _type = [type copy];
-        _cells = [[NSMutableArray alloc] init];
+        _cellDefinitions = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
-
-- (void) addCell:(expanz_model_TextCell*)cell {
-    [_cells addObject:cell];
+- (void) addCellWithId:(NSString*)cellId data:(NSString*)data {
+    [_cellDefinitions setValue:data forKey:cellId];
 }
 
+
 - (NSArray*) cells {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"cellId" ascending:YES] autorelease];
+    if (_cells == nil) {
+        _cells = [[NSMutableArray alloc] initWithCapacity:[_cellDefinitions count]];
+        for (NSString* cellId in [_cellDefinitions allKeys]) {
+            Column* column = [_dataSet columnWithId:cellId];
+            if (column == nil) {
+                [NSException raise:NSInternalInconsistencyException format:@"No column for cell with id: %@", cellId];
+            }
+
+            NSString* data = [_cellDefinitions valueForKey:cellId];
+            switch (column.dataType) {
+                case ExpanzDataTypeString:
+                case ExpanzDataTypeNumber:
+                    [_cells addObject:[[[TextCell alloc] initWithCellId:cellId text:data] autorelease]];
+                    break;
+                case ExpanzDataTypeImage:
+                    LogDebug("Adding image cell");
+                    [_cells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
+                    break;
+            }
+        }
+    }
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"cellId" ascending:YES];
     return [_cells sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -46,7 +71,7 @@
 - (void) dealloc {
     [_rowId release];
     [_type release];
-    [_cells release];
+    [_cellDefinitions release];
     [super dealloc];
 }
 

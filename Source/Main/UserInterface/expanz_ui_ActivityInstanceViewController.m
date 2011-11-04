@@ -166,9 +166,9 @@
     }
 
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    TextCell* firstName = [row.cells objectAtIndex:2];
-    TextCell* lastName = [row.cells objectAtIndex:3];
-    TextCell* email = [row.cells objectAtIndex:5];
+    TextCell* firstName = [row.cells objectAtIndex:3];
+    TextCell* lastName = [row.cells objectAtIndex:4];
+    TextCell* email = [row.cells objectAtIndex:6];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstName.text, lastName.text];
     cell.detailTextLabel.text = email.text;
 

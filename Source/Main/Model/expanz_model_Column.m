@@ -15,6 +15,7 @@
 
 @implementation expanz_model_Column
 
+@synthesize dataSet = _dataSet;
 @synthesize columnId = _columnId;
 @synthesize field = _field;
 @synthesize label = _label;
@@ -23,15 +24,15 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label dataType:(NSString*)dataType
-                  width:(NSInteger)width {
-    
-    self = [super init]; 
+- (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label
+               dataType:(ExpanzDataType)dataType width:(NSInteger)width {
+
+    self = [super init];
     if (self) {
         _columnId = [columnId copy];
         _field = [field copy];
         _label = [label copy];
-        _dataType = [dataType copy];
+        _dataType = dataType;
         _width = width;
     }
     return self;
@@ -43,7 +44,6 @@
     [_columnId release];
     [_field release];
     [_label release];
-    [_dataType release];
     [super dealloc];
 }
 

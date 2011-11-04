@@ -32,6 +32,7 @@
 
     SDKConfiguration* configuration = [[SDKConfiguration alloc] initWithBaseUrl:baseUrl preferredSite:preferredSite];
     [SDKConfiguration setGlobalConfiguration:configuration];
+    [configuration release];
 }
 
 

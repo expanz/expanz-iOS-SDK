@@ -53,9 +53,5 @@
 */
 - (expanz_model_Row*) asRow;
 
-/**
-* Maps the element onto an `expanz_model_TextCell` object.
-*/
-- (expanz_model_TextCell*) asTextCell;
 
 @end

@@ -18,7 +18,7 @@ SPEC_BEGIN(ColumnSpec)
 
     beforeEach(^{
         column = [[Column alloc]
-            initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:@"string" width:70];
+            initWithColumnId:@"1" field:@"firstName" label:@"Customer First Name" dataType:ExpanzDataTypeString width:70];
     });
 
     describe(@"Object creation.", ^{
@@ -27,7 +27,7 @@ SPEC_BEGIN(ColumnSpec)
             assertThat(column, notNilValue());
             assertThat(column.field, equalTo(@"firstName"));
             assertThat(column.label, equalTo(@"Customer First Name"));
-            assertThat(column.dataType, equalTo(@"string"));
+            assertThatInt(column.dataType, equalToInt(ExpanzDataTypeString));
             assertThatInt(column.width, equalToInt(70));
         });
     });

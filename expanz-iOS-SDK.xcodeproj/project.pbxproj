@@ -508,6 +508,7 @@
 		6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88F /* ImageCellSpec.m */; };
+		6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -796,6 +797,7 @@
 		6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ImageCell.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E88F /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPublicationRequestSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1216,6 +1218,7 @@
 		6BC9F6601458EB8C001AF204 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */,
 				6BC9F6611458EB8C001AF204 /* CreateActivityRequestSpec.m */,
 				6BC9F6621458EB8C001AF204 /* DeltaRequestSpec.m */,
 				6BC9F6631458EB8C001AF204 /* MethodInvocationRequestSpec.m */,
@@ -2159,6 +2162,7 @@
 				6BF58DC81444245C0063E886 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */,
 				6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */,
+				6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
