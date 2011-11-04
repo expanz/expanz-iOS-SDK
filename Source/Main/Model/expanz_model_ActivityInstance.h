@@ -9,8 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_ActivityDefinition.h"
-
+#import <Foundation/Foundation.h>
 @class expanz_model_Field;
 @class expanz_model_Message;
 @class expanz_model_DataSet;
@@ -18,8 +17,7 @@
 /**
  * Represents an activity in progress. 
  */
-@interface expanz_model_ActivityInstance : expanz_model_ActivityDefinition
-{
+@interface expanz_model_ActivityInstance : NSObject {
 
 @private
     NSMutableSet* _fields;
@@ -27,7 +25,7 @@
     NSMutableArray* _dataSets;
 }
 
-
+@property(nonatomic, readonly) NSString* title;
 @property(nonatomic, readonly) NSString* handle;
 @property(nonatomic, readonly) NSString* persistentId;
 @property(nonatomic, readonly) NSArray* fields;

@@ -16,13 +16,15 @@
 
 @implementation expanz_model_ActivityInstance
 
+@synthesize title = _title;
 @synthesize handle = _handle;
 @synthesize persistentId = _persistentId;
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
-    self = [super initWithName:nil title:title style:NULL];
+    self = [super init];
     if (self) {
+        _title = [title copy];
         _handle = [handle copy];
         _persistentId = [persistentId copy];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
@@ -91,7 +93,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", super.title, _handle,
+    return [NSString stringWithFormat:@"Activity Instance: title=%@, handle=%@, persistentId=%@", _title, _handle,
                                       _persistentId];
 }
 

@@ -403,6 +403,7 @@
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6BCE7B871463885F0024EE21 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6581458EB8C001AF204 /* ActivityInstanceSpec.m */; };
 		6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A71458EB82001AF204 /* expanz_ui_ModelAdapter.m */; };
 		6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
 		6BF58B74144410A50063E805 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
@@ -495,10 +496,9 @@
 		6BF58DC81444245C0063E878 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E879 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* DataTypeSpec.m */; };
-		6BF58DC81444245C0063E87E /* DataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* DataTypeSpec.m */; };
-		6BF58DC81444245C0063E880 /* NewClass.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E881 /* NewClass.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E882 /* NewClass.m in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E880 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E881 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E882 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E884 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E883 /* expanz_model_BaseCell.m */; };
 		6BF58DC81444245C0063E885 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E883 /* expanz_model_BaseCell.m */; };
 		6BF58DC81444245C0063E886 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E883 /* expanz_model_BaseCell.m */; };
@@ -1826,9 +1826,9 @@
 				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
-				6BF58DC81444245C0063E87E /* DataTypeSpec.m in Sources */,
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E887 /* expanz_model_BaseCell.m in Sources */,
+				6BCE7B871463885F0024EE21 /* ActivityInstanceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1921,7 +1921,7 @@
 				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 				6BF58DC81444245C0063E877 /* (null) in Sources */,
-				6BF58DC81444245C0063E880 /* NewClass.m in Sources */,
+				6BF58DC81444245C0063E880 /* (null) in Sources */,
 				6BF58DC81444245C0063E884 /* expanz_model_BaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2013,7 +2013,7 @@
 				6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 				6BF58DC81444245C0063E878 /* (null) in Sources */,
 				6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */,
-				6BF58DC81444245C0063E881 /* NewClass.m in Sources */,
+				6BF58DC81444245C0063E881 /* (null) in Sources */,
 				6BF58DC81444245C0063E885 /* expanz_model_BaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2141,7 +2141,7 @@
 				6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
 				6BF58DC81444245C0063E879 /* (null) in Sources */,
 				6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */,
-				6BF58DC81444245C0063E882 /* NewClass.m in Sources */,
+				6BF58DC81444245C0063E882 /* (null) in Sources */,
 				6BF58DC81444245C0063E886 /* expanz_model_BaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
