@@ -121,6 +121,7 @@
         SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
         [delegate.navigationController pushViewController:nextView animated:YES];
         [nextView release];
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
 

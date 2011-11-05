@@ -25,8 +25,7 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
-#import "Components/expanz_ui_components_ThumbnailImageTableCell.h"
-#import "TableCell.h"
+#import "expanz_ui_components_ThumbnailImageTableCell.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController

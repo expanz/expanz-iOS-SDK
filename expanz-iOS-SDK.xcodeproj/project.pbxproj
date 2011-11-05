@@ -35,10 +35,9 @@
 		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
-		6B6C3E1114652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3E1014652FFB005E7548 /* TableCell.m */; };
-		6B6C3E1214652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3E1014652FFB005E7548 /* TableCell.m */; };
-		6B6C3E1314652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3E1014652FFB005E7548 /* TableCell.m */; };
-		6B6C3E1414652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3E1014652FFB005E7548 /* TableCell.m */; };
+		6B6C3E1114652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; };
+		6B6C3E1314652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; };
+		6B6C3E1414652FFB005E7548 /* TableCell.m in Sources */ = {isa = PBXBuildFile; };
 		6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
 		6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
 		6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
@@ -555,8 +554,6 @@
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6B6C3E0F14652FFB005E7548 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
-		6B6C3E1014652FFB005E7548 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_CustomerViewController.h; sourceTree = "<group>"; };
 		6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_CustomerViewController.m; sourceTree = "<group>"; };
 		6B7596D314626CD1008CFFAF /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
@@ -1128,8 +1125,6 @@
 		6BC9F59A1458EB82001AF204 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6B6C3E0F14652FFB005E7548 /* TableCell.h */,
-				6B6C3E1014652FFB005E7548 /* TableCell.m */,
 				6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.h */,
 				6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */,
 				6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */,
@@ -2073,7 +2068,6 @@
 				6BF58DC81444245C0063E885 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88B /* expanz_model_ImageCell.m in Sources */,
 				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
-				6B6C3E1214652FFB005E7548 /* TableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
