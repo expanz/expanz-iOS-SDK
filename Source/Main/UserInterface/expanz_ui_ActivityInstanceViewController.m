@@ -25,6 +25,8 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
+#import "Components/expanz_ui_components_ThumbnailImageTableCell.h"
+#import "TableCell.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -32,6 +34,7 @@
 @synthesize modelAdapter = _modelAdapter;
 @synthesize activityInstance = _activityInstance;
 @synthesize spinner = _spinner;
+@synthesize tableCell;
 
 
 /* ================================================== Constructors ================================================== */
@@ -157,27 +160,24 @@
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     NSString* reuseId = [dataSet dataId];
 
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    ThumbnailImageTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell =
-            [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId] autorelease];
-        cell.textLabel.backgroundColor = [UIColor clearColor];
-        cell.detailTextLabel.textColor = [UIColor darkGrayColor];
-        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [[NSBundle mainBundle] loadNibNamed:@"TableCell2" owner:self options:nil];
+        cell = self.tableCell;
+        self.tableCell = nil;
     }
-
-    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
     
+    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
+
     TextCell* firstNameCell = (TextCell*) [row cellWithId:@"3"];
     TextCell* lastNameCell = (TextCell*) [row cellWithId:@"4"];
     TextCell* emailCell = (TextCell*) [row cellWithId:@"6"];
     ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
     [_modelAdapter startObserving:imageCell];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
-    cell.detailTextLabel.text = emailCell.text;
-    cell.imageView.image = imageCell.image;
+    cell.mainLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
+    cell.subLabel.text = emailCell.text;
+    cell.thumbnail.image = imageCell.image;
 
     return cell;
 
@@ -186,6 +186,11 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
 
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 71;
+}
+
 
 
 /* ================================================================================================================== */

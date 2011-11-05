@@ -16,6 +16,8 @@
 @class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
+@class expanz_ui_components_ThumbnailImageTableCell;
+@class TableCell;
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
@@ -29,6 +31,11 @@
 @property(nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
+
+/**
+ * Table cells assembled in interface builder will be injected via this property. 
+ */
+@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailImageTableCell* tableCell;
 
 /**
  * Initialize a new activity instance view controller with the supplied activity. 

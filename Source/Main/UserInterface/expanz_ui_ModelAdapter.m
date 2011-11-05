@@ -92,6 +92,7 @@
 
     for (UITableView* tableView in [_dataSetMappings allValues]) {
         [tableView reloadData];
+        [tableView setNeedsLayout];
     }
 }
 
