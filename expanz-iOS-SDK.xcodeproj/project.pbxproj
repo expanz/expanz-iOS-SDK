@@ -31,7 +31,7 @@
 		6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
 		6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
-		6B78F9B11463C4D2004BBD63 /* ImageCellSpec.m in Resources */ = {isa = PBXBuildFile; };
+		6B78F9B11463C4D2004BBD63 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -509,6 +509,10 @@
 		6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88F /* ImageCellSpec.m */; };
 		6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */; };
+		6BF58DC81444245C0063E894 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* 1.jpg */; };
+		6BF58DC81444245C0063E895 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* 1.jpg */; };
+		6BF58DC81444245C0063E896 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* 1.jpg */; };
+		6BF58DC81444245C0063E897 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -798,6 +802,7 @@
 		6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E88F /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPublicationRequestSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E893 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1094,6 +1099,7 @@
 		6BC9F5941458EB82001AF204 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E893 /* 1.jpg */,
 				6BC9F5951458EB82001AF204 /* ActivityMenu.xib */,
 				6BC9F5961458EB82001AF204 /* background.png */,
 				6BC9F5991458EB82001AF204 /* Login.xib */,
@@ -1679,7 +1685,8 @@
 				6BF58DC81444245C0063E870 /* azure.xml in Resources */,
 				6BF58DC81444245C0063E875 /* expanz.xml in Resources */,
 				6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
-				6B78F9B11463C4D2004BBD63 /* ImageCellSpec.m in Resources */,
+				6B78F9B11463C4D2004BBD63 /* (null) in Resources */,
+				6BF58DC81444245C0063E897 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1699,6 +1706,7 @@
 				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
 				6B7596D814626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E894 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1717,6 +1725,7 @@
 				6BF58DC81444245C0063E86E /* azure.xml in Resources */,
 				6BF58DC81444245C0063E873 /* expanz.xml in Resources */,
 				6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E895 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1743,6 +1752,7 @@
 				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 				6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E896 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2313,7 +2323,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2337,7 +2347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};

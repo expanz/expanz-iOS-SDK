@@ -25,12 +25,12 @@
         _imageUrl = [imageUrl copy];
         ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:imageUrl]];
         [request setCompletionBlock:^{
-            _image = [[UIImage imageWithData:[request responseData]] retain];
+            self.image = [[UIImage imageWithData:[request responseData]] retain];
         }];
 
         [request setFailedBlock:^{
             //TOOD: Handle this
-            LogError(@"Can't download the image: %@",_imageUrl);
+            LogError(@"Can't download the image: %@", _imageUrl);
         }];
         [request startAsynchronous];
     }

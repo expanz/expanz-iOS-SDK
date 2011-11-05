@@ -16,6 +16,9 @@
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 #import "expanz_model_DataSet.h"
+#import "expanz_model_Row.h"
+#import "expanz_model_BaseCell.h"
+#import "expanz_model_ImageCell.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -42,7 +45,6 @@
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
-        //weak reference.
         _activityInstance = viewController.activityInstance;
         _selectorNames = [[NSMutableArray alloc] init];
         _fieldMappings = [[NSMutableDictionary alloc] init];
@@ -78,6 +80,7 @@
 }
 
 - (void) updateUIControlsWithModelValues {
+    LogDebug(@"Updating . . . . . ");
     for (NSString* fieldId in [_fieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_fieldMappings valueForKey:fieldId];
@@ -92,6 +95,11 @@
     }
 }
 
+- (void) startObserving:(expanz_model_ImageCell*)cell {
+    [cell addObserver:self forKeyPath:@"image" options:0 context:nil];
+}
+
+
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_selectorNames release];
@@ -99,6 +107,13 @@
     [_labelMappings release];
     [_dataSetMappings release];
     [super dealloc];
+}
+
+- (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
+                        context:(void*)context {
+
+    //TODO: Should just update the table values.
+    [self updateUIControlsWithModelValues];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -114,7 +129,7 @@
             UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
             if (textField == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
-            }LogDebug(@"Mapping field: '%@' to UITextField.", selectorName);
+            }
             [_fieldMappings setObject:textField forKey:selectorName];
         }
     }
@@ -127,7 +142,7 @@
             UILabel* uiLabel = [controller performSelector:NSSelectorFromString(selectorName)];
             if (uiLabel == nil) {
                 LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
-            }LogDebug(@"Mapping label: '%@' to UILabel.", selectorName);
+            }
             [_labelMappings setObject:uiLabel forKey:fieldId];
         }
     }
@@ -139,15 +154,16 @@
             UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
             if (tableView == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
-            }LogDebug(@"Mapping data set: '%@' to UITableView.", selectorName);
+            }
             [_dataSetMappings setObject:tableView forKey:selectorName];
         }
     }
 }
 
-#define kControlIsNilTemplate @"The %@ named '%@' is nil. Has the connection been made in Interface Builder?"
 - (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName {
-    [NSException raise:NSObjectNotAvailableException format:kControlIsNilTemplate, typeName, controlName];
+    [NSException raise:NSObjectNotAvailableException
+                format:@"The %@ named '%@' is nil. Has the connection been made in Interface Builder?", typeName,
+                       controlName];
 }
 
 

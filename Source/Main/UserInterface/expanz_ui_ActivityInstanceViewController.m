@@ -172,11 +172,12 @@
     TextCell* firstNameCell = (TextCell*) [row cellWithId:@"3"];
     TextCell* lastNameCell = (TextCell*) [row cellWithId:@"4"];
     TextCell* emailCell = (TextCell*) [row cellWithId:@"6"];
-    //ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
+    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
+    [_modelAdapter startObserving:imageCell];
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
     cell.detailTextLabel.text = emailCell.text;
-    //cell.imageView.image = imageCell.image;
+    cell.imageView.image = imageCell.image;
 
     return cell;
 

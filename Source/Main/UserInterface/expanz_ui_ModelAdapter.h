@@ -10,26 +10,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field;
 @class expanz_ui_ActivityInstanceViewController;
 @class expanz_model_DataSet;
+@class expanz_model_BaseCell;
+@class expanz_model_ImageCell;
 
 @interface expanz_ui_ModelAdapter : NSObject {
-    
+
 @private
     NSMutableArray* _selectorNames;
     NSMutableDictionary* _fieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
-    
+
 }
 
-@property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance; 
+@property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 
 /**
- * Initializes a model adapter for the given view controller. 
- */
+* Initializes a model adapter for the given view controller.
+*/
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
 /**
@@ -55,7 +58,9 @@
 /**
  * Updates UI text fields and labels with values from the model object. 
  */
-- (void) updateUIControlsWithModelValues; 
+- (void) updateUIControlsWithModelValues;
+
+- (void) startObserving:(expanz_model_ImageCell*)cell;
 
 
 @end
