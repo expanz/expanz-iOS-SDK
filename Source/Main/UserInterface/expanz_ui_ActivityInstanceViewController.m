@@ -24,6 +24,7 @@
 #import "expanz_model_DataSet.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
+#import "expanz_model_ImageCell.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -152,13 +153,14 @@
 }
 
 
--(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     NSString* reuseId = [dataSet dataId];
-        
+
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId] autorelease];
+        cell =
+            [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId] autorelease];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -166,21 +168,21 @@
     }
 
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    for (BaseCell* cell in [row cells]) {
-        LogDebug(@"Cell: %@", cell.cellId);
-    }
     
-    TextCell* firstName = [row.cells objectAtIndex:3];
-    TextCell* lastName = [row.cells objectAtIndex:4];
-    TextCell* email = [row.cells objectAtIndex:6];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstName.text, lastName.text];
-    cell.detailTextLabel.text = email.text;
+    TextCell* firstNameCell = (TextCell*) [row cellWithId:@"3"];
+    TextCell* lastNameCell = (TextCell*) [row cellWithId:@"4"];
+    TextCell* emailCell = (TextCell*) [row cellWithId:@"6"];
+    //ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
+    cell.detailTextLabel.text = emailCell.text;
+    //cell.imageView.image = imageCell.image;
 
     return cell;
 
 }
 
-- (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
 
 }
 
@@ -216,7 +218,7 @@
 
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {    
+- (void) dealloc {
     [_spinner release];
     [_activityRequest release];
     [_activityInstance release];

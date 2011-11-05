@@ -25,7 +25,7 @@
         _imageUrl = [imageUrl copy];
         ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:imageUrl]];
         [request setCompletionBlock:^{
-            _image = [UIImage imageWithData:[request responseData]];
+            _image = [[UIImage imageWithData:[request responseData]] retain];
         }];
 
         [request setFailedBlock:^{
@@ -39,6 +39,7 @@
 
 - (void) dealloc {
     [_imageUrl release];
+    [_image release];
     [super dealloc];
 }
 
