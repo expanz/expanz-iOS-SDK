@@ -49,13 +49,21 @@ SPEC_BEGIN(RowSpec)
         });
 
         it(@"Should hold a collection of cells", ^{
-            [row addCellWithId:@"firstName" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
             assertThatInt([[row cells] count], equalToInt(1));
+        });
+        
+        it(@"should allow returning a cell by cellId", ^{
+            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"address" data:@"Metro Manila"];
+
+            BaseCell* retrieved = [row cellWithId:@"firstName"];
+            assertThat(retrieved.cellId, equalTo(@"firstName"));
         });
 
         it(@"Should allow returning a sorted list of all cells.", ^{
-            [row addCellWithId:@"firstName" data:@"Jasper"];
-            [row addCellWithId:@"address" data:@"Metro Manila"];
+            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"address" data:@"Metro Manila"];
 
             NSArray* cells = [row cells];
             assertThatInt([cells count], equalToInt(2));

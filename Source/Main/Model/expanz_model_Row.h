@@ -14,6 +14,7 @@
 
 @class expanz_model_TextCell;
 @class expanz_model_DataSet;
+@class expanz_model_BaseCell;
 
 /**
 * Represents a row in an `expanz_model_DataSet`.
@@ -25,15 +26,17 @@
     NSMutableArray* _cells;
 }
 
-@property (nonatomic, assign) expanz_model_DataSet* dataSet;
-@property (nonatomic, readonly) NSString* rowId;
-@property (nonatomic, readonly) NSString* type;
+@property(nonatomic, assign) expanz_model_DataSet* dataSet;
+@property(nonatomic, readonly) NSString* rowId;
+@property(nonatomic, readonly) NSString* type;
 
 - (id) initWithRowId:(NSString*)rowId type:(NSString*)type;
-- (void) addCellWithId:(NSString*)cellId data:(NSString*)data;
+
+- (void) addCellDefinitionWithId:(NSString*)cellId data:(NSString*)data;
+
+- (expanz_model_BaseCell*) cellWithId:(NSString*)cellId;
+
 - (NSArray*) cells;
-
-
 
 
 @end

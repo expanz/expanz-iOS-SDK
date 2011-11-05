@@ -166,6 +166,10 @@
     }
 
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
+    for (BaseCell* cell in [row cells]) {
+        LogDebug(@"Cell: %@", cell.cellId);
+    }
+    
     TextCell* firstName = [row.cells objectAtIndex:3];
     TextCell* lastName = [row.cells objectAtIndex:4];
     TextCell* email = [row.cells objectAtIndex:6];

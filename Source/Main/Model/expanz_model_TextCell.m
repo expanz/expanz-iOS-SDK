@@ -15,13 +15,11 @@
 
 @implementation expanz_model_TextCell
 
-@synthesize cellId = _cellId; 
 @synthesize text = _text;
 
 - (id) initWithCellId:(NSString*)cellId text:(NSString*)text {
-    self = [super init];
+    self = [super initWithCellId:cellId];
     if (self) {
-        _cellId = [cellId copy];
         _text = [text copy];
     }
 
@@ -32,7 +30,6 @@
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_text release];
-    [_cellId release];
     [super dealloc];
 }
 

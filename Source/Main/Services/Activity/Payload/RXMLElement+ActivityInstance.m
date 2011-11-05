@@ -130,7 +130,7 @@
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"Cell"]) {
-            [row addCellWithId:[e attribute:@"id"] data:[e text]];
+            [row addCellDefinitionWithId:[e attribute:@"id"] data:[e text]];
         }
     }];
 
