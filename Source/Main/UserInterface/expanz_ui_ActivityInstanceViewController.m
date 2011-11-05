@@ -165,7 +165,7 @@
         cell = self.tableCell;
         self.tableCell = nil;
     }
-    
+
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
 
     TextCell* firstNameCell = (TextCell*) [row cellWithId:@"3"];
@@ -177,6 +177,9 @@
     cell.mainLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
     cell.subLabel.text = emailCell.text;
     cell.thumbnail.image = imageCell.image;
+    cell.backgroundView.backgroundColor =
+        (indexPath.row % 2) ? [UIColor colorWithRed:0.942 green:0.942 blue:0.942 alpha:1] :
+            [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
 
     return cell;
 
@@ -186,8 +189,8 @@
 
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 71;
+- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+    return 75;
 }
 
 
