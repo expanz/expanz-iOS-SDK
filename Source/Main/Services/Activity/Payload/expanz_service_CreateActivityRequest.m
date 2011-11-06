@@ -58,13 +58,13 @@
 /* ================================================= Protocol Methods =============================================== */
 #pragma mark xml_Serializable
 
-
 #define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateActivity name=\"%@\" %@ %@>\
 %@</CreateActivity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
     NSString* styleAttribute = _style != nil ? [NSString stringWithFormat:@"style=\"%@\"", _style] : @"";
-    NSString* initialKeyAttribute = _initialKey != nil ? [NSString stringWithFormat:@"initialKey=\"%@\"", _style] : @"";
+    NSString* initialKeyAttribute =
+        _initialKey != nil ? [NSString stringWithFormat:@"initialKey=\"%@\"", _initialKey] : @"";
 
     NSMutableString* body = [[NSMutableString alloc] initWithString:@""];
     for (DataPublicationRequest* dataPublicationRequest in [_dataPublicationRequests allValues]) {

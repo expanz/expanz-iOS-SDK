@@ -26,24 +26,28 @@
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
 #import "expanz_ui_components_ThumbnailImageTableCell.h"
+#import "expanz_ui_ActivityManager.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
 
-@synthesize modelAdapter = _modelAdapter;
+@synthesize activityDefinition = _activityDefinition;
 @synthesize activityInstance = _activityInstance;
 @synthesize spinner = _spinner;
 @synthesize tableCell;
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey {
-    self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+                       initialKey:(NSString*)initialKey {
+
+    self = [super initWithNibName:activityDefinition.name bundle:[NSBundle mainBundle]];
     if (self) {
-        self.title = activity.title;
-        NSString* sessionToken = [SessionContext globalContext].sessionToken;
+        _activityDefinition = [activityDefinition retain];
+        self.title = _activityDefinition.title;
         _activityRequest = [[CreateActivityRequest alloc]
-            initWithActivityName:activity.name style:activity.style initialKey:initialKey sessionToken:sessionToken];
+            initWithActivityName:activityDefinition.name style:activityDefinition.style initialKey:initialKey
+                    sessionToken:[SessionContext globalContext].sessionToken];
         [_spinner startAnimating];
     }
     return self;
@@ -186,7 +190,11 @@
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-
+    ActivityDefinition* edit =
+        [[ActivityDefinition alloc] initWithName:_activityDefinition.name title:_activityDefinition.title style:nil];
+    if ([ActivityManager transitionToActivityWithDefinition:edit initialKey:@"1"]) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 - (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
@@ -229,6 +237,7 @@
 - (void) dealloc {
     [_spinner release];
     [_activityRequest release];
+    [_activityDefinition release];
     [_activityInstance release];
     [_modelAdapter release];
     [super dealloc];

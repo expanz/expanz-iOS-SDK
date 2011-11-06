@@ -17,7 +17,6 @@
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailImageTableCell;
-@class TableCell;
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
@@ -25,22 +24,21 @@
 
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
+    expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;
 }
 
-@property(nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
-@property(nonatomic, retain) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, readonly) expanz_model_ActivityDefinition* activityDefinition;
+@property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-
-/**
- * Table cells assembled in interface builder will be injected via this property. 
- */
 @property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailImageTableCell* tableCell;
+
+
 
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey;
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition initialKey:(NSString*)initialKey;
 
 
 /**
