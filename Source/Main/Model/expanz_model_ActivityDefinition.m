@@ -19,12 +19,12 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithName:(NSString*)name title:(NSString*)title style:(NSString*)style {
+- (id) initWithName:(NSString*)name title:(NSString*)title style:(ExpanzActivityStyle)style {
     self = [self init];
     if (self) {
         _name = [name copy];
         _title = [title copy];
-        _style = [style copy];
+        _style = style;
     }
     return self;
 }
@@ -37,7 +37,6 @@
 - (void) dealloc {
     [_name release];
     [_title release];
-    [_style release];
     [super dealloc];
 }
 

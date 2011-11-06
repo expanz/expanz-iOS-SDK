@@ -43,8 +43,7 @@ describe(@"Parsing children", ^{
         ProcessArea* processArea = [menu processAreaWithId:@"Sales"]; 
         ActivityDefinition* activity = [processArea activityWithName:@"ESA.Sales.Customer"]; 
         assertThat(activity, notNilValue());
-        assertThat(activity.style, notNilValue());    
-        assertThat(activity.style, equalTo(@"Browse"));
+        assertThat(activity.style, equalTo(ActivityStyleBrowse));
     });
     
 });

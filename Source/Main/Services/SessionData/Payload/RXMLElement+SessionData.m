@@ -29,8 +29,8 @@
     BOOL hasWorkFlowTrays = [[self attribute:@"hasWorkflowTrays"] boolValue];
     BOOL canChangeCompanyRoles = [[self attribute:@"canChangeCompanyRole"] boolValue];
 
-    Menu* menu = [[[Menu alloc] initWithHasWorkFlowTrays:hasWorkFlowTrays
-                                    canChangeCompanyRole:canChangeCompanyRoles] autorelease];
+    Menu* menu = [[[Menu alloc] initWithHasWorkFlowTrays:hasWorkFlowTrays canChangeCompanyRole:canChangeCompanyRoles]
+        autorelease];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
 
@@ -53,17 +53,18 @@
     if (![self.tag isEqualToString:@"ProcessArea"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a ProcessArea."];
     }
-    ProcessArea* processArea = [[[ProcessArea alloc] initWithProcessId:[self attribute:@"id"]
-                                                              andTitle:[self attribute:@"title"]] autorelease];
-    [self iterate:@"*" with:^(RXMLElement* e) {        
+    ProcessArea* processArea =
+        [[[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]] autorelease];
+    [self iterate:@"*" with:^(RXMLElement* e) {
         [processArea addActivityDefinition:[e asActivityDefinition]];
     }];
     return processArea;
 }
 
 - (ActivityDefinition*) asActivityDefinition {
-    return [[[ActivityDefinition alloc] initWithName:[self attribute:@"name"] title:[self attribute:@"title"] 
-                                              style:[self attribute:@"style"]] autorelease];
+    ExpanzActivityStyle style = ExpanzActivityStyleFromString([self attribute:@"style"]);
+    return [[[ActivityDefinition alloc]
+        initWithName:[self attribute:@"name"] title:[self attribute:@"title"] style:style] autorelease];
 }
 
 - (UserRole*) asUserRole {

@@ -41,7 +41,7 @@
 - (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                        initialKey:(NSString*)initialKey {
 
-    self = [super initWithNibName:activityDefinition.name bundle:[NSBundle mainBundle]];
+    self = [super initWithNibName:[ActivityManager nibNameFor:activityDefinition] bundle:[NSBundle mainBundle]];
     if (self) {
         _activityDefinition = [activityDefinition retain];
         self.title = _activityDefinition.title;
@@ -190,8 +190,8 @@
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ActivityDefinition* edit =
-        [[ActivityDefinition alloc] initWithName:_activityDefinition.name title:_activityDefinition.title style:nil];
+    ActivityDefinition* edit = [[ActivityDefinition alloc]
+        initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
     if ([ActivityManager transitionToActivityWithDefinition:edit initialKey:@"1"]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }

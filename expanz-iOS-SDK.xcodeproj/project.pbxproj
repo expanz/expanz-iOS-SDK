@@ -28,6 +28,10 @@
 		6B353A161444276C00C8E6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6B353A171444276C00C8E6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6B353A181444276C00C8E6C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
+		6B3CF8821466AAE700FD6309 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */; };
+		6B3CF8831466AAE700FD6309 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */; };
+		6B3CF8841466AAE700FD6309 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */; };
+		6B3CF8851466AAE700FD6309 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */; };
 		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
@@ -38,10 +42,10 @@
 		6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
 		6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
 		6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
-		6B7596D814626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
-		6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
-		6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
-		6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.xib */; };
+		6B7596D814626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
+		6B7596D914626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
+		6B7596DA14626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
+		6B7596DB14626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
 		6B78F9B11463C4D2004BBD63 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -457,10 +461,10 @@
 		6BF58DC81444245C0063E81B /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */; };
 		6BF58DC81444245C0063E81C /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */; };
 		6BF58DC81444245C0063E81D /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */; };
-		6BF58DC81444245C0063E81F /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */; };
-		6BF58DC81444245C0063E820 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */; };
-		6BF58DC81444245C0063E821 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */; };
-		6BF58DC81444245C0063E822 /* ESA.Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */; };
+		6BF58DC81444245C0063E81F /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */; };
+		6BF58DC81444245C0063E820 /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */; };
+		6BF58DC81444245C0063E821 /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */; };
+		6BF58DC81444245C0063E822 /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */; };
 		6BF58DC81444245C0063E824 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E826 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E827 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -554,12 +558,13 @@
 		6B07653A146504C300C1A034 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_CustomerViewController.h; sourceTree = "<group>"; };
 		6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_CustomerViewController.m; sourceTree = "<group>"; };
-		6B7596D314626CD1008CFFAF /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
+		6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.Browse.xib; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -789,7 +794,7 @@
 		6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ESA.Sales.Customer.xib; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ESA.Sales.Customer.Browse.xib; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E829 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E82E /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E82F /* expanz_model_DataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataSet.m; sourceTree = "<group>"; };
@@ -823,6 +828,7 @@
 		6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPublicationRequestSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityManager.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityManager.h; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzActivityStyle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1008,6 +1014,7 @@
 		6BC9F55E1458EB82001AF204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */,
 				6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */,
 				6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */,
 				6BF58DC81444245C0063E888 /* expanz_model_BaseCell.h */,
@@ -1145,14 +1152,15 @@
 			isa = PBXGroup;
 			children = (
 				6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */,
-				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.xib */,
+				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */,
 				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
 				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
 				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
 				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
 				6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */,
 				6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */,
-				6B7596D314626CD1008CFFAF /* Sales.Customer.xib */,
+				6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */,
+				6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -1706,13 +1714,14 @@
 				6BC9F7961458EBB6001AF204 /* README.markdown in Resources */,
 				6BF58DC81444245C0063E80E /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BF58DC81444245C0063E81D /* ESA.Sales.Calc.xib in Resources */,
-				6BF58DC81444245C0063E822 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E822 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BF58DC81444245C0063E870 /* azure.xml in Resources */,
 				6BF58DC81444245C0063E875 /* expanz.xml in Resources */,
-				6B7596DB14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6B7596DB14626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */,
 				6B78F9B11463C4D2004BBD63 /* (null) in Resources */,
 				6B07653E146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BF14655D0C005CFA19 /* blues.jpg in Resources */,
+				6B3CF8851466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1728,12 +1737,13 @@
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
 				6BF58DC81444245C0063E810 /* (null) in Resources */,
 				6BF58DC81444245C0063E81A /* ESA.Sales.Calc.xib in Resources */,
-				6BF58DC81444245C0063E81F /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E81F /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
-				6B7596D814626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6B7596D814626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */,
 				6B07653B146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BC14655D0C005CFA19 /* blues.jpg in Resources */,
+				6B3CF8821466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1748,12 +1758,13 @@
 				6BC9F6281458EB82001AF204 /* Login.xib in Resources */,
 				6BF58DC81444245C0063E811 /* (null) in Resources */,
 				6BF58DC81444245C0063E81B /* ESA.Sales.Calc.xib in Resources */,
-				6BF58DC81444245C0063E820 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E820 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BF58DC81444245C0063E86E /* azure.xml in Resources */,
 				6BF58DC81444245C0063E873 /* expanz.xml in Resources */,
-				6B7596D914626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6B7596D914626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */,
 				6B07653C146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BD14655D0C005CFA19 /* blues.jpg in Resources */,
+				6B3CF8831466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1776,12 +1787,13 @@
 				6BF58DC81444245C0063E80D /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BF58DC81444245C0063E812 /* (null) in Resources */,
 				6BF58DC81444245C0063E81C /* ESA.Sales.Calc.xib in Resources */,
-				6BF58DC81444245C0063E821 /* ESA.Sales.Customer.xib in Resources */,
+				6BF58DC81444245C0063E821 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
-				6B7596DA14626CD1008CFFAF /* Sales.Customer.xib in Resources */,
+				6B7596DA14626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */,
 				6B07653D146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BE14655D0C005CFA19 /* blues.jpg in Resources */,
+				6B3CF8841466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

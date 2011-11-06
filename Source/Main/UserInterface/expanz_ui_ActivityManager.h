@@ -24,6 +24,7 @@
 + (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                                  initialKey:(NSString*)initialKey;
 
++ (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition;
 
 @end
 

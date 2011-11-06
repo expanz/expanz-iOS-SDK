@@ -28,11 +28,11 @@
     return self;
 }
 
-- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style initialKey:(NSString*)initialKey
+- (id) initWithActivityName:(NSString*)activityName style:(ExpanzActivityStyle)style initialKey:(NSString*)initialKey
                sessionToken:(NSString*)sessionToken {
     self = [self init];
     _activityName = [activityName copy];
-    _style = [style copy];
+    _style = style;
     _initialKey = [initialKey copy];
     _sessionToken = [sessionToken copy];
     return self;
@@ -62,7 +62,7 @@
 %@</CreateActivity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    NSString* styleAttribute = _style != nil ? [NSString stringWithFormat:@"style=\"%@\"", _style] : @"";
+    NSString* styleAttribute = _style == ActivityStyleBrowse ? @"style=\"browse\"" : @"";
     NSString* initialKeyAttribute =
         _initialKey != nil ? [NSString stringWithFormat:@"initialKey=\"%@\"", _initialKey] : @"";
 
@@ -77,7 +77,6 @@
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_activityName release];
-    [_style release];
     [_sessionToken release];
     [_dataPublicationRequests release];
     [super dealloc];

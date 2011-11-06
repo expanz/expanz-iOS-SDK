@@ -10,14 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "ExpanzActivityStyle.h"
 
 @interface expanz_model_ActivityDefinition : NSObject
 
 @property(nonatomic, readonly) NSString* name;
 @property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) NSString* style;
+@property(nonatomic, readonly) ExpanzActivityStyle style;
 
-- (id) initWithName:(NSString*)name title:(NSString*)title style:(NSString*)style;
+- (id) initWithName:(NSString*)name title:(NSString*)title style:(ExpanzActivityStyle)style;
 
 @end
 

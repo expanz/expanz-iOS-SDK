@@ -14,10 +14,10 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
+#import "expanz_model_DataSet.h"
 #import "ESA_Sales_CalcViewController.h"
 #import "ModelAdapterSpecHelper.h"
 #import "ESA_Sales_CustomerViewController.h"
-#import "expanz_model_DataSet.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
@@ -26,8 +26,8 @@ SPEC_BEGIN(ModelAdapterSpec)
     __block ModelAdapter* calcModelAdapter;
 
     beforeEach(^{
-        ActivityDefinition
-            * activity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:NULL];
+        ActivityDefinition* activity =
+            [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:ActivityStyleDetail];
         calcViewController =
             [[[CalcViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
         NSString* xmlFile = @"ESA_Sales_Calc_ActivityInstance";
@@ -65,8 +65,8 @@ SPEC_BEGIN(ModelAdapterSpec)
         __block ModelAdapter* customerModelAdapter;
 
         beforeEach(^{
-            ActivityDefinition* activity =
-                [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Customer" title:@"Customer" style:NULL];
+            ActivityDefinition* activity = [[ActivityDefinition alloc]
+                initWithName:@"ESA.Sales.Customer" title:@"Customer" style:ActivityStyleBrowse];
             customerViewController =
                 [[[CustomerViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
             NSString* xmlFile = @"ESA_Sales_Customer_ActivityInstance";
@@ -103,6 +103,6 @@ SPEC_BEGIN(ModelAdapterSpec)
 
 
 
-SPEC_END
+    SPEC_END
 
 

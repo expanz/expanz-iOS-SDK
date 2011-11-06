@@ -51,5 +51,17 @@
     }
 }
 
++ (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
+    NSString* nibName;
+    if (activityDefinition.style == ActivityStyleBrowse) {
+        nibName = [NSString stringWithFormat:@"%@.Browse", activityDefinition.name];
+    }
+    else {        
+        nibName = activityDefinition.name;
+    }
+    LogDebug(@"Nib name: %@", nibName);
+    return nibName;
+}
+
 
 @end
