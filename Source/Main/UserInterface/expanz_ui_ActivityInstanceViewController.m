@@ -37,13 +37,17 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithActivity:(ActivityDefinition*)activity {
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity {
+    return [self initWithActivityDefinition:activity initialKey:nil];
+}
+
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = activity.title;
         NSString* sessionToken = [SessionContext globalContext].sessionToken;
         _activityRequest = [[CreateActivityRequest alloc]
-            initWithActivityName:activity.name style:activity.style sessionToken:sessionToken];
+            initWithActivityName:activity.name style:activity.style initialKey:initialKey sessionToken:sessionToken];
         [_spinner startAnimating];
     }
     return self;

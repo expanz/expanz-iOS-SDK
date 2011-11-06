@@ -23,6 +23,7 @@
 
 @property(nonatomic, readonly) NSString* activityName;
 @property(nonatomic, readonly) NSString* style;
+@property(nonatomic, readonly) NSString* initialKey;
 @property(nonatomic, readonly) NSString* sessionToken;
 @property(nonatomic, readonly) NSArray* dataPublicationRequests;
 
@@ -30,7 +31,8 @@
 /**
 * Initializes with activity name, and session token attribtues.
 */
-- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken;
+- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style initialKey:(NSString*)initialKey
+               sessionToken:(NSString*)sessionToken;
 
 /**
 * Creates or retrieves a DataPublicationRequest for associated with the supplied UITableView.

@@ -35,7 +35,7 @@
     }
     else {
         ActivityInstanceViewController* nextView = class_createInstance(clazz, 0);
-        nextView = [nextView initWithActivity:activity];
+        nextView = [nextView initWithActivityDefinition:activity];
         SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
         [delegate.navigationController pushViewController:nextView animated:YES];
         [nextView release];

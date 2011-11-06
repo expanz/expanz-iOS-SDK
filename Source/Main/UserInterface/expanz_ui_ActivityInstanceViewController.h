@@ -40,7 +40,13 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity. 
  */
-- (id) initWithActivity:(expanz_model_ActivityDefinition*)activity;
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity;
+
+/**
+ * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
+ */
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey;
+
 
 /**
  * Request model to update with new field value. 

@@ -16,22 +16,30 @@
 
 @synthesize activityName = _activityName;
 @synthesize style = _style;
+@synthesize initialKey = _initialKey;
 @synthesize sessionToken = _sessionToken;
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style sessionToken:(NSString*)sessionToken {
+- (id) init {
     self = [super init];
     if (self) {
-        _activityName = [activityName copy];
-        _style = [style copy];
-        _sessionToken = [sessionToken copy];
         _dataPublicationRequests = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
-/* ================================================ Interface Methods =============================================== */
+- (id) initWithActivityName:(NSString*)activityName style:(NSString*)style initialKey:(NSString*)initialKey
+               sessionToken:(NSString*)sessionToken {
+    self = [self init];
+    _activityName = [activityName copy];
+    _style = [style copy];
+    _initialKey = [initialKey copy];
+    _sessionToken = [sessionToken copy];
+    return self;
+}
 
+
+/* ================================================ Interface Methods =============================================== */
 - (NSArray*) dataPublicationRequests {
     return [_dataPublicationRequests allValues];
 }
@@ -52,15 +60,19 @@
 
 
 #define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA>\
-<CreateActivity name=\"%@\" style=\"%@\">%@</CreateActivity></ESA>\
+<CreateActivity name=\"%@\" style=\"%@\" initialKey=\"%@\">%@</CreateActivity></ESA>\
 </xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
+    NSString* styleAttribute = _style != nil ? _style : @"";
+    NSString* initialKeyAttribute = _initialKey != nil ? _initialKey : @"";
+
     NSMutableString* body = [[NSMutableString alloc] initWithString:@""];
     for (DataPublicationRequest* dataPublicationRequest in [_dataPublicationRequests allValues]) {
         [body appendString:[dataPublicationRequest toXml]];
     }
-    return [NSString stringWithFormat:kXmlTempate, _activityName, _style != nil ? _style : @"", body, _sessionToken];
+    return [NSString stringWithFormat:kXmlTempate, _activityName, styleAttribute, initialKeyAttribute, body,
+                                      _sessionToken];
 }
 
 /* ================================================== Utility Methods =============================================== */
