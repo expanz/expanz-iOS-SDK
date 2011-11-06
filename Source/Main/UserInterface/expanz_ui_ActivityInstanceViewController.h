@@ -38,11 +38,6 @@
 @property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailImageTableCell* tableCell;
 
 /**
- * Initialize a new activity instance view controller with the supplied activity. 
- */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity;
-
-/**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
 - (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey;

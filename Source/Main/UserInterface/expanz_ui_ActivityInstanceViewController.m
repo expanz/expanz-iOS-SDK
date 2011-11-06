@@ -37,10 +37,6 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity {
-    return [self initWithActivityDefinition:activity initialKey:nil];
-}
-
 - (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activity initialKey:(NSString*)initialKey {
     self = [super initWithNibName:activity.name bundle:[NSBundle mainBundle]];
     if (self) {

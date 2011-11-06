@@ -21,6 +21,9 @@
 
 + (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
 
++ (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+                                 initialKey:(NSString*)initialKey;
+
 
 @end
 

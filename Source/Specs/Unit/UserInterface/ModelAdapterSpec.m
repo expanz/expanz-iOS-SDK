@@ -28,7 +28,8 @@ SPEC_BEGIN(ModelAdapterSpec)
     beforeEach(^{
         ActivityDefinition
             * activity = [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:NULL];
-        calcViewController = [[[CalcViewController alloc] initWithActivityDefinition:activity] autorelease];
+        calcViewController =
+            [[[CalcViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
         NSString* xmlFile = @"ESA_Sales_Calc_ActivityInstance";
         calcModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:calcViewController xmlFileName:xmlFile];
     });
@@ -57,7 +58,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
     });
-    
+
     describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
 
         __block CustomerViewController* customerViewController;
@@ -66,11 +67,12 @@ SPEC_BEGIN(ModelAdapterSpec)
         beforeEach(^{
             ActivityDefinition* activity =
                 [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Customer" title:@"Customer" style:NULL];
-            customerViewController = [[[CustomerViewController alloc] initWithActivityDefinition:activity] autorelease];
+            customerViewController =
+                [[[CustomerViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
             NSString* xmlFile = @"ESA_Sales_Customer_ActivityInstance";
             customerModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:customerViewController xmlFileName:xmlFile];
         });
-        
+
         it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
             DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.customersList];
             assertThat(dataSet, notNilValue());
@@ -83,7 +85,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
     });
-    
+
 
     describe(@"Updating user interface controls with model values.", ^{
 
