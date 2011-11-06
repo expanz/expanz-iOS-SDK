@@ -4,10 +4,9 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONFIGURATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <property file="build-configuration.properties"/>
     <path id="headers">
-        <fileset dir="${basedir}">
+        <fileset dir="${source.main.dir}">
             <include name="**/*.h"/>
-            <exclude name="Dependencies/**/*"/>
-            <exclude name="Tests/**/*"/>
+            <exclude name="**/Examples/**/*"/>
         </fileset>
     </path>
     <path id="classes">
