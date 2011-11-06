@@ -524,6 +524,10 @@
 		6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */; };
 		6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88F /* ImageCellSpec.m */; };
 		6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */; };
+		6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
+		6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
+		6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
+		6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -817,6 +821,8 @@
 		6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E88F /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPublicationRequestSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityManager.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1094,6 +1100,8 @@
 		6BC9F5931458EB82001AF204 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */,
+				6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */,
 				6BC9F5941458EB82001AF204 /* Assets */,
 				6B2F2F32145BB95000D5C9C2 /* Categories */,
 				6BC9F59A1458EB82001AF204 /* Components */,
@@ -1877,6 +1885,7 @@
 				6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */,
 				6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1414652FFB005E7548 /* (null) in Sources */,
+				6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1974,6 +1983,7 @@
 				6BF58DC81444245C0063E88A /* expanz_model_ImageCell.m in Sources */,
 				6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1114652FFB005E7548 /* (null) in Sources */,
+				6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2068,6 +2078,7 @@
 				6BF58DC81444245C0063E885 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88B /* expanz_model_ImageCell.m in Sources */,
 				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
+				6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2201,6 +2212,7 @@
 				6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */,
 				6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1314652FFB005E7548 /* (null) in Sources */,
+				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

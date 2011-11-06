@@ -10,16 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "Objection.h"
-#import "expanz_iOS_SDKAppDelegate.h"
-#import "expanz_iOS_SDKExceptions.h"
-#import "expanz_model_SessionContext.h"
 #import "expanz_model_ProcessArea.h"
-#import "../Model/expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
 #import "expanz_ui_ActivityMenuViewController.h"
-#import "expanz_ui_ActivityInstanceViewController.h"
-#import "ESA_Sales_CalcViewController.h"
-
+#import "expanz_ui_ActivityManager.h"
 
 @implementation expanz_ui_ActivityMenuViewController
 
@@ -41,10 +36,10 @@
 
 /* ================================================ Delegate Methods ================================================ */
 
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -60,7 +55,7 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -82,45 +77,28 @@
 }
 
 
--(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     static NSString* reuseId = @"ActivityMenu";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
+        cell =
+            [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
+
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
     ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
-    cell.textLabel.text = [activity title];    
-    return cell;    
+    cell.textLabel.text = [activity title];
+    return cell;
 }
 
-- (void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
-    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section]; 
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
     ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
-    
-    //TODO: Look up view controller from formmapping.xml
-    NSMutableString* controllerClassName = [[NSMutableString alloc] init];
-    [controllerClassName appendString:[activity.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
-    [controllerClassName appendString:@"ViewController"];
-    id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
-    if (clazz == nil) {
-        NSString * errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self
-                                                  cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-        [alert release];
-    }
-    else {
-        ActivityInstanceViewController* nextView = class_createInstance(clazz, 0);
-        nextView = [nextView initWithActivity:activity];
-        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-        [delegate.navigationController pushViewController:nextView animated:YES];
-        [nextView release];
+    if ([ActivityManager transitionToActivityWithDefinition:activity]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
@@ -134,7 +112,7 @@
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    
+
 }
 
 /* ================================================== Utility Methods =============================================== */
@@ -142,9 +120,9 @@
 
 
 - (void) dealloc {
-    LogDebug(@"!!!!!!!!!!!!!!!!!!!! In dealloc!!!!!!!!!!!!"); 
-    [_sessionDataClient release]; 
-    [_menu release]; 
+    LogDebug(@"!!!!!!!!!!!!!!!!!!!! In dealloc!!!!!!!!!!!!");
+    [_sessionDataClient release];
+    [_menu release];
     [_menuTable release];
     [super dealloc];
 }
