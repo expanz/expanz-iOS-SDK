@@ -11,10 +11,18 @@
 
 
 #import <Foundation/Foundation.h>
+#import "expanz_ui_ActivityInstanceViewController.h"
 
 
-@interface Sales_Customer_ViewController : UIViewController {
+@interface Sales_Customer_ViewController : expanz_ui_ActivityInstanceViewController
 
-}
+@property (nonatomic, retain) IBOutlet UILabel* FirstNameLabel;
+@property (nonatomic, retain) IBOutlet UILabel* LastNameLabel;
+@property (nonatomic, retain) IBOutlet UILabel* EmailLabel;
+@property (nonatomic, retain) IBOutlet UILabel* PhoneLabel;
+@property (nonatomic, retain) IBOutlet UITextField* FirstName;
+@property (nonatomic, retain) IBOutlet UITextField* LastName;
+@property (nonatomic, retain) IBOutlet UITextField* Email;
+@property (nonatomic, retain) IBOutlet UITextField* Phone;
 
 @end

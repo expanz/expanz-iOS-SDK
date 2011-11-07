@@ -12,6 +12,27 @@
 
 #import "Sales_Customer_ViewController.h"
 
-
 @implementation Sales_Customer_ViewController
+
+@synthesize FirstNameLabel;
+@synthesize LastNameLabel;
+@synthesize EmailLabel;
+@synthesize PhoneLabel;
+@synthesize FirstName;
+@synthesize LastName;
+@synthesize Email;
+@synthesize Phone;
+
+- (void) dealloc {
+    [FirstNameLabel release];
+    [LastNameLabel release];
+    [EmailLabel release];
+    [PhoneLabel release];
+    [FirstName release];
+    [LastName release];
+    [Email release];
+    [Phone release];
+    [super dealloc];
+}
+
 @end

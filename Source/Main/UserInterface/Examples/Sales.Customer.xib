@@ -41,6 +41,7 @@
 						<string key="NSFrame">{{153, 20}, {147, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="309405440"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -76,6 +77,7 @@
 						<string key="NSFrame">{{153, 59}, {147, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="720782818"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -102,6 +104,7 @@
 						<string key="NSFrame">{{153, 98}, {147, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="898852963"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -128,6 +131,7 @@
 						<string key="NSFrame">{{153, 137}, {147, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -152,11 +156,10 @@
 				<string key="NSFrameSize">{320, 416}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="1073520"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="532162447"/>
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC44ODYyNzQ1MDk4IDAuOTA5ODAzOTIxNiAwLjkyMTU2ODYyNzUAA</bytes>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -177,7 +180,7 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="1073520"/>
 					</object>
-					<int key="connectionID">8</int>
+					<int key="connectionID">12</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -185,7 +188,7 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="309405440"/>
 					</object>
-					<int key="connectionID">9</int>
+					<int key="connectionID">13</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -193,7 +196,7 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="720782818"/>
 					</object>
-					<int key="connectionID">10</int>
+					<int key="connectionID">14</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -201,7 +204,7 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="898852963"/>
 					</object>
-					<int key="connectionID">11</int>
+					<int key="connectionID">15</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -257,7 +260,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">Browse_Sales_Customer_ViewController</string>
+				<string key="-1.CustomClassName">Sales_Customer_ViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -271,45 +274,60 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">Sales_CustomerViewController</string>
+					<string key="className">Sales_Customer_ViewController</string>
 					<string key="superclassName">expanz_ui_ActivityInstanceViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="Email">UITextField</string>
+						<string key="EmailLabel">UILabel</string>
 						<string key="FirstName">UITextField</string>
+						<string key="FirstNameLabel">UILabel</string>
 						<string key="LastName">UITextField</string>
+						<string key="LastNameLabel">UILabel</string>
 						<string key="Phone">UITextField</string>
-						<string key="customersList">UITableView</string>
+						<string key="PhoneLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="Email">
 							<string key="name">Email</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="EmailLabel">
+							<string key="name">EmailLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="FirstName">
 							<string key="name">FirstName</string>
 							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="FirstNameLabel">
+							<string key="name">FirstNameLabel</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="LastName">
 							<string key="name">LastName</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="LastNameLabel">
+							<string key="name">LastNameLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="Phone">
 							<string key="name">Phone</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="customersList">
-							<string key="name">customersList</string>
-							<string key="candidateClassName">UITableView</string>
+						<object class="IBToOneOutletInfo" key="PhoneLabel">
+							<string key="name">PhoneLabel</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/Sales_CustomerViewController.h</string>
+						<string key="minorKey">./Classes/Sales_Customer_ViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

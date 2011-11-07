@@ -144,7 +144,9 @@
             if (uiLabel == nil) {
                 LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
             }
-            [_labelMappings setObject:uiLabel forKey:fieldId];
+            else {
+                [_labelMappings setObject:uiLabel forKey:fieldId];
+            }
         }
     }
 }
