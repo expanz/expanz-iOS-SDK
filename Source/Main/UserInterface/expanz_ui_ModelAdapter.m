@@ -16,9 +16,9 @@
 #import "MARTNSObject.h"
 #import "RTMethod.h"
 #import "expanz_model_DataSet.h"
-#import "expanz_model_Row.h"
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
+#import "ExpanzDataType.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -80,7 +80,7 @@
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
 
-- (void) updateUIControlsWithModelValues {   
+- (void) updateUIControlsWithModelValues {
     [self updateLabelsWithModelValues];
     [self updateUITextFieldsWithModelValues];
     [self updateUIImagesWithModelValues];
@@ -88,7 +88,7 @@
 }
 
 - (void) updateLabelsWithModelValues {
-    for(NSString* fieldId in [_labelMappings allKeys]) {
+    for (NSString* fieldId in [_labelMappings allKeys]) {
         UILabel* label = [_labelMappings valueForKey:fieldId];
         Field* field = [_activityInstance fieldWithId:fieldId];
         [label setText:field.label];
@@ -101,7 +101,7 @@
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
         [textField setText:field.value];
         [textField setEnabled:!field.isDisabled];
-    }   
+    }
 }
 
 - (void) updateUIImagesWithModelValues {
@@ -145,12 +145,22 @@
 
 - (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _selectorNames) {
-        if ([_activityInstance fieldWithId:selectorName] != nil) {
-            UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
-            if (textField == nil) {
-                [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
+        Field* field = [_activityInstance fieldWithId:selectorName];
+        if (field != nil) {
+            if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
+                UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
+                if (textField == nil) {
+                    [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
+                }
+                [_textFieldMappings setObject:textField forKey:selectorName];
             }
-            [_textFieldMappings setObject:textField forKey:selectorName];
+            else if (field.datatype == ExpanzDataTypeImage) {
+                UIImageView* imageView = [controller performSelector:NSSelectorFromString(selectorName)];
+                if (imageView == nil) {
+                    [self raiseErrorForNonMappedControl:selectorName typeName:@"UIImageView"];
+                }
+                [_imageFieldMappings setObject:imageView forKey:selectorName];
+            }
         }
     }
 }

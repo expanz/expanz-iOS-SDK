@@ -57,7 +57,7 @@
     NSString* fieldId = [self attribute:@"id"];
     BOOL nullable = [[self attribute:@"nullable"] boolValue];
     NSString* defaultValue = [self attribute:@"null"];
-    NSString* datatype = [self attribute:@"datatype"];
+    ExpanzDataType datatype = ExpanzDataTypeFromString([self attribute:@"datatype"]);
     NSString* label = [self attribute:@"label"];
     NSString* hint = [self attribute:@"hint"];
 

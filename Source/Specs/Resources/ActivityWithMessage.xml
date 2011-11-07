@@ -7,7 +7,7 @@
                     <Message type="Warning" key="1013" source="Op1" messageSource="Framework">The
                         value adsfa of Operand 1 in Calc is not a valid number.</Message>
                 </Messages>
-                <Field id="Op1" value="0"/>
+                <Field id="Op1" value="0" />
             </Activity>
         </ESA>
     </ExecXResult>

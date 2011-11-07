@@ -10,12 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef enum {
-    ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage
+    ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeNull
 } ExpanzDataType;
 
 
 static ExpanzDataType ExpanzDataTypeFromString(NSString* string) {
-    if ([[string lowercaseString] isEqualToString:@"string"]) {
+    if (string == nil) {
+        return ExpanzDataTypeNull;
+    }
+    else if ([[string lowercaseString] isEqualToString:@"string"]) {
         return ExpanzDataTypeString;
     }
     else if ([[string lowercaseString] isEqualToString:@"number"]) {

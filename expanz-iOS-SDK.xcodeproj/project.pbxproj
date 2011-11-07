@@ -178,10 +178,10 @@
 		6BC9F62C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6BC9F62D1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6BC9F62E1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */; };
-		6BC9F62F1458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */; };
-		6BC9F6301458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */; };
-		6BC9F6311458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */; };
-		6BC9F6321458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */; };
+		6BC9F62F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */; };
+		6BC9F6301458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */; };
+		6BC9F6311458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */; };
+		6BC9F6321458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */; };
 		6BC9F6331458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A11458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BC9F6341458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A11458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BC9F6351458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F5A11458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m */; };
@@ -632,8 +632,8 @@
 		6BC9F5991458EB82001AF204 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
 		6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
-		6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CalcViewController.h; sourceTree = "<group>"; };
-		6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CalcViewController.m; sourceTree = "<group>"; };
+		6BC9F59E1458EB82001AF204 /* ESA_Sales_Calc_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_Calc_ViewController.h; sourceTree = "<group>"; };
+		6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_Calc_ViewController.m; sourceTree = "<group>"; };
 		6BC9F5A01458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6BC9F5A11458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6BC9F5A21458EB82001AF204 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
@@ -1145,8 +1145,8 @@
 				6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */,
 				6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */,
 				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */,
-				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
-				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
+				6BC9F59E1458EB82001AF204 /* ESA_Sales_Calc_ViewController.h */,
+				6BC9F59F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m */,
 				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
 				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
 				6B7596D114626CD1008CFFAF /* Browse_Sales_Customer_ViewController.h */,
@@ -1784,7 +1784,7 @@
 				6BC9F6121458EB82001AF204 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BC9F6161458EB82001AF204 /* RXMLElement+SessionData.m in Sources */,
 				6BC9F62E1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BC9F6321458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */,
+				6BC9F6321458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BC9F6361458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BC9F63A1458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63E1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,
@@ -1886,7 +1886,7 @@
 				6BC9F60F1458EB82001AF204 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BC9F6131458EB82001AF204 /* RXMLElement+SessionData.m in Sources */,
 				6BC9F62B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BC9F62F1458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */,
+				6BC9F62F1458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BC9F6331458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BC9F6371458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63B1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,
@@ -1983,7 +1983,7 @@
 				6BC9F6101458EB82001AF204 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BC9F6141458EB82001AF204 /* RXMLElement+SessionData.m in Sources */,
 				6BC9F62C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BC9F6301458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */,
+				6BC9F6301458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BC9F6341458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BC9F6381458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63C1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,
@@ -2075,7 +2075,7 @@
 				6BC9F6111458EB82001AF204 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BC9F6151458EB82001AF204 /* RXMLElement+SessionData.m in Sources */,
 				6BC9F62D1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BC9F6311458EB82001AF204 /* ESA_Sales_CalcViewController.m in Sources */,
+				6BC9F6311458EB82001AF204 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BC9F6351458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6BC9F6391458EB82001AF204 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BC9F63D1458EB82001AF204 /* expanz_ui_LoginViewController.m in Sources */,

@@ -30,14 +30,14 @@
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue
-              dataType:(NSString*)datatype label:(NSString*)label hint:(NSString*)hint {
+              dataType:(ExpanzDataType)datatype label:(NSString*)label hint:(NSString*)hint {
 
     self = [super init];
     if (self) {
         _fieldId = [fieldId copy];
         _nullable = nullable;
         _defaultValue = [defaultValue copy];
-        _datatype = [datatype copy];
+        _datatype = datatype;
         _label = [label copy];
         _hint = [hint copy];
     }
@@ -71,7 +71,6 @@
 - (void) dealloc {
     [_fieldId release];
     [_defaultValue release];
-    [_datatype release];
     [_label release];
     [_hint release];
     [super dealloc];

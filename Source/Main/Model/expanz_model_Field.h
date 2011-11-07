@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "ExpanzDataType.h"
 
 @class expanz_model_ActivityInstance;
 
@@ -30,8 +31,8 @@
 /** The value the field is initialized with, ie user is presented initially with this value. */
 @property(nonatomic, readonly) NSString* defaultValue;
 
-/** The field's datatype. TODO: This should not be represented by a string value. */
-@property(nonatomic, readonly) NSString* datatype;
+/** The field's datatype. */
+@property(nonatomic, readonly) ExpanzDataType datatype;
 
 /** Indicates the client model is not yet synchronized with the server model. */
 @property(nonatomic, readonly, getter = isDirty) BOOL dirty;
@@ -41,8 +42,6 @@
 
 /** Additional user instructions for the field. */
 @property(nonatomic, readonly) NSString* hint;
-
-
 
 /** Reference to the activity this field belongs to. */
 @property(nonatomic, readwrite, assign) expanz_model_ActivityInstance* parentActivity;
@@ -57,7 +56,7 @@
 /* ================================================================================================================== */
 
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue
-              dataType:(NSString*)datatype label:(NSString*)label hint:(NSString*)hint;
+              dataType:(ExpanzDataType)datatype label:(NSString*)label hint:(NSString*)hint;
 
 /**
  * Invoked when value is changed as a result of user edit. Marks the field as dirty. 
