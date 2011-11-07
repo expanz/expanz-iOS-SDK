@@ -193,7 +193,7 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    TextCell* keyCell =  [row cellWithId:@"1"];
+    TextCell* keyCell = (TextCell*) [row cellWithId:@"1"];
     
     ActivityDefinition* edit = [[ActivityDefinition alloc]
         initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
