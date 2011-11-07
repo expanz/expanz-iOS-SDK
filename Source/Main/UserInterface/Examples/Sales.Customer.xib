@@ -134,7 +134,7 @@
 						<string key="NSFrame">{{111, 137}, {189, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="155411024"/>
+						<reference key="NSNextKeyView" ref="158896448"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -249,7 +249,7 @@
 						<reference key="IBUIFontDescription" ref="864553150"/>
 						<reference key="IBUIFont" ref="836048347"/>
 					</object>
-					<object class="IBUIButton" id="155411024">
+					<object class="IBUIButton" id="158896448">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 372}, {280, 37}}</string>
@@ -285,7 +285,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="830904500">
+					<object class="IBUIImageView" id="766639684">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 186}, {280, 172}}</string>
@@ -386,7 +386,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">CustomerPhoto</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="830904500"/>
+						<reference key="destination" ref="766639684"/>
 					</object>
 					<int key="connectionID">26</int>
 				</object>
@@ -422,6 +422,15 @@
 					</object>
 					<int key="connectionID">30</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">Save</string>
+						<reference key="source" ref="158896448"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -443,8 +452,8 @@
 							<reference ref="101616726"/>
 							<reference ref="69417628"/>
 							<reference ref="158178281"/>
-							<reference ref="155411024"/>
-							<reference ref="830904500"/>
+							<reference ref="158896448"/>
+							<reference ref="766639684"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -501,12 +510,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
-						<reference key="object" ref="155411024"/>
+						<reference key="object" ref="158896448"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
-						<reference key="object" ref="830904500"/>
+						<reference key="object" ref="766639684"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -532,13 +541,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">Sales_Customer_ViewController</string>
 					<string key="superclassName">expanz_ui_ActivityInstanceViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">Save</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">Save</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">Save</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="CustomerPhoto">UIImageView</string>
 						<string key="Email">UITextField</string>

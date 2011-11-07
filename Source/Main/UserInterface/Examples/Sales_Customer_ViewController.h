@@ -26,4 +26,6 @@
 @property(nonatomic, retain) IBOutlet UITextField* Phone;
 @property(nonatomic, retain) IBOutlet UIImageView* CustomerPhoto;
 
+- (IBAction) Save;
+
 @end

@@ -151,6 +151,11 @@
     return YES;
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField*)textField {
+    return [self textFieldShouldEndEditing:textField];
+}
+
+
 /* ================================================================================================================== */
 #pragma mark UITableViewDelegate
 

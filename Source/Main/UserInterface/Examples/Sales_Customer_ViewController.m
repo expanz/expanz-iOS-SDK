@@ -24,6 +24,11 @@
 @synthesize Phone;
 @synthesize CustomerPhoto;
 
+
+- (IBAction) Save {
+    [super sendMethodInvocation:@"Save"];
+}
+
 - (void) dealloc {
     [FirstNameLabel release];
     [LastNameLabel release];
