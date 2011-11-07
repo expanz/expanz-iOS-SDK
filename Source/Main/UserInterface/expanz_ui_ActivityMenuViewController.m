@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "Objection.h"
+#import <Objection-iOS/Objection.h>
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
@@ -29,6 +29,7 @@
     if (self) {
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
+        _activityManger = [[JSObjection globalInjector] getObject:[ActivityManager class]];
     }
     return self;
 }
@@ -98,7 +99,7 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
     ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
-    if ([ActivityManager transitionToActivityWithDefinition:activity]) {
+    if ([_activityManger transitionToActivityWithDefinition:activity]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

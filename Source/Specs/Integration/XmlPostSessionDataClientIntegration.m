@@ -9,8 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <Objection-iOS/Objection.h>
 #import "SpecHelper.h"
-#import "Objection.h"
 #import "expanz_service_SessionDataClient.h"
 #import "IntegrationUtils.h"
 #import "expanz_model_SessionContext.h"

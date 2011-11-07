@@ -9,8 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <Objection-iOS/Objection.h>
 #import "expanz_service_XmlPostSessionDataClient.h"
-#import "Objection.h"
 #import "RXMLElement+SessionData.h"
 #import "expanz_service_SessionDataRequest.h"
 

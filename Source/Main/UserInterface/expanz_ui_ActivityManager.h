@@ -11,6 +11,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import <Objection-iOS/Objection.h>
 
 @class expanz_model_ActivityDefinition;
 
@@ -19,12 +20,10 @@
 */
 @interface expanz_ui_ActivityManager : NSObject
 
-+ (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
+- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
 
-+ (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                                  initialKey:(NSString*)initialKey;
-
-+ (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition;
 
 @end
 

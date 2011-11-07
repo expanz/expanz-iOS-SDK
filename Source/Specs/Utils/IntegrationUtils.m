@@ -9,11 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <Objection-iOS/Objection.h>
 #import "IntegrationUtils.h"
 #import "expanz_service_LoginClient.h" 
 #import "TestLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
-#import "Objection.h"
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_service_SessionRequest.h"
 #import "SpecHelper.h"
@@ -45,7 +45,7 @@
 + (ActivityInstance*) aValidActivity {
     JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 
     CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
-                                             style:nil initialKey:nil sessionToken:[SessionContext globalContext].sessionToken];
+                style:ActivityStyleBrowse initialKey:nil sessionToken:[SessionContext globalContext].sessionToken];
     
     id<expanz_service_ActivityClient> activityClient = [testInjector 
                                                         getObject:@protocol(expanz_service_ActivityClient)];

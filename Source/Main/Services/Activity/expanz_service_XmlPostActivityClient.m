@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "Objection.h"
+#import <Objection-iOS/Objection.h>
 #import "expanz_service_XmlPostActivityClient.h"
 #import "expanz_iOS_SDKExceptions.h"
 #import "expanz_service_CreateActivityRequest.h"

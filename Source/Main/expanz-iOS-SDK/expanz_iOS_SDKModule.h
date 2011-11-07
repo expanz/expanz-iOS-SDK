@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "Objection.h"
+#import <Objection-iOS/Objection.h>
 
 
 /** 

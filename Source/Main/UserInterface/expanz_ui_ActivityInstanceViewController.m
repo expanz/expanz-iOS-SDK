@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "Objection.h"
+#import <Objection-iOS/Objection.h>
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
@@ -38,11 +38,12 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
                        initialKey:(NSString*)initialKey {
-
-    self = [super initWithNibName:[ActivityManager nibNameFor:activityDefinition] bundle:[NSBundle mainBundle]];
+    
+    self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
+        _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
         _activityDefinition = [activityDefinition retain];
         self.title = _activityDefinition.title;
         _activityRequest = [[CreateActivityRequest alloc]
@@ -192,7 +193,7 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ActivityDefinition* edit = [[ActivityDefinition alloc]
         initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
-    if ([ActivityManager transitionToActivityWithDefinition:edit initialKey:@"1"]) {
+    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:@"1"]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

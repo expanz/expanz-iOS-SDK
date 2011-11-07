@@ -17,11 +17,13 @@
 
 //Current Environment
 #import "expanz_iOS_SDKConfiguration.h"
+#import "expanz_ui_ActivityManager.h"
 
 @implementation expanz_iOS_SDKModule
 
 - (void) configure {
     SDKConfiguration* config = [SDKConfiguration globalConfiguration];
+    [self registerEagerSingleton:[expanz_ui_ActivityManager class]];
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {

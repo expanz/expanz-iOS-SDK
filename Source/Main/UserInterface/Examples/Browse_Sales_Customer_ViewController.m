@@ -9,10 +9,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "Sales_CustomerViewController.h"
+#import "Browse_Sales_Customer_ViewController.h"
 
-@implementation Sales_CustomerViewController
+@implementation Browse_Sales_Customer_ViewController
 
 @synthesize customersList = _customersList;
+
+
+- (void) dealloc {
+    [_customersList release];
+    [super dealloc];
+}
 
 @end

@@ -29,7 +29,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         ActivityDefinition* activity =
             [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:ActivityStyleDetail];
         calcViewController =
-            [[[CalcViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
+            [[[CalcViewController alloc] initWithActivityDefinition:activity nibName:@"ESA.Sales.Calc" initialKey:nil] autorelease];
         NSString* xmlFile = @"ESA_Sales_Calc_ActivityInstance";
         calcModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:calcViewController xmlFileName:xmlFile];
     });
@@ -68,7 +68,8 @@ SPEC_BEGIN(ModelAdapterSpec)
             ActivityDefinition* activity = [[ActivityDefinition alloc]
                 initWithName:@"ESA.Sales.Customer" title:@"Customer" style:ActivityStyleBrowse];
             customerViewController =
-                [[[CustomerViewController alloc] initWithActivityDefinition:activity initialKey:nil] autorelease];
+                [[[CustomerViewController alloc] initWithActivityDefinition:activity
+                                               nibName:@"ESA.Sales.Customer.Browse" initialKey:nil] autorelease];
             NSString* xmlFile = @"ESA_Sales_Customer_ActivityInstance";
             customerModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:customerViewController xmlFileName:xmlFile];
         });

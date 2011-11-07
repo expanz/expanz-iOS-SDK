@@ -17,13 +17,14 @@
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailImageTableCell;
+@class expanz_ui_ActivityManager;
 
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
-    UITextFieldDelegate, UITableViewDelegate> {
+@interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate, UITextFieldDelegate, UITableViewDelegate> {
 
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
+    expanz_ui_ActivityManager* _activityManager;
     expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;
 }
@@ -38,8 +39,8 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition initialKey:(NSString*)initialKey;
-
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
+                       initialKey:(NSString*)initialKey;
 
 /**
  * Request model to update with new field value. 

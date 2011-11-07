@@ -18,7 +18,8 @@ SPEC_BEGIN(ActivitySpec)
 describe(@"Object instanciation", ^{
         
     it(@"should allow initialization with name and title.", ^{
-        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Calculator" title:@"Calculator Application" style:NULL];
+        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Calculator" 
+                                    title:@"Calculator Application" style:ActivityStyleDetail];
         assertThat(activity.name, equalTo(@"Calculator"));
         assertThat(activity.title, equalTo(@"Calculator Application"));
         assertThat([activity description], notNilValue());

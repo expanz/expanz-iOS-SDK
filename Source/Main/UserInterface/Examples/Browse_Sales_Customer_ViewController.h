@@ -10,9 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
+#import <netinet/in.h>
 #import "expanz_ui_ActivityInstanceViewController.h"
 
-@interface Sales_CustomerViewController : expanz_ui_ActivityInstanceViewController
+@interface Browse_Sales_Customer_ViewController : expanz_ui_ActivityInstanceViewController
 
 @property (nonatomic, retain) IBOutlet UITableView* customersList;
 

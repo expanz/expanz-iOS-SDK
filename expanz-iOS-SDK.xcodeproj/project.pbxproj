@@ -38,10 +38,10 @@
 		6B6C3E1114652FFB005E7548 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B6C3E1314652FFB005E7548 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B6C3E1414652FFB005E7548 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
-		6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
-		6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
-		6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */; };
+		6B7596D414626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
+		6B7596D514626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
+		6B7596D614626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
+		6B7596D714626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
 		6B7596D814626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
 		6B7596D914626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
 		6B7596DA14626CD1008CFFAF /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */; };
@@ -358,42 +358,33 @@
 		6BC9F7A81458EBB6001AF204 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */; };
 		6BC9F7A91458EBB6001AF204 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */; };
 		6BC9F7AA1458EBB6001AF204 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */; };
-		6BC9F7AB1458EBB6001AF204 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7091458EBB5001AF204 /* JSObjection.m */; };
-		6BC9F7AC1458EBB6001AF204 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7091458EBB5001AF204 /* JSObjection.m */; };
-		6BC9F7AD1458EBB6001AF204 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7091458EBB5001AF204 /* JSObjection.m */; };
-		6BC9F7AE1458EBB6001AF204 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7091458EBB5001AF204 /* JSObjection.m */; };
-		6BC9F7AF1458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */; };
-		6BC9F7B01458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */; };
-		6BC9F7B11458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */; };
-		6BC9F7B21458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */; };
-		6BC9F7B31458EBB6001AF204 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */; };
-		6BC9F7B41458EBB6001AF204 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */; };
-		6BC9F7B51458EBB6001AF204 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */; };
-		6BC9F7B61458EBB6001AF204 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */; };
-		6BC9F7B71458EBB6001AF204 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */; };
-		6BC9F7B81458EBB6001AF204 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */; };
-		6BC9F7B91458EBB6001AF204 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */; };
-		6BC9F7BA1458EBB6001AF204 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */; };
-		6BC9F7BB1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */; };
-		6BC9F7BC1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */; };
-		6BC9F7BD1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */; };
-		6BC9F7BE1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */; };
-		6BC9F7BF1458EBB6001AF204 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */; };
-		6BC9F7C01458EBB6001AF204 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */; };
-		6BC9F7C11458EBB6001AF204 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */; };
-		6BC9F7C21458EBB6001AF204 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */; };
-		6BC9F7C31458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */; };
-		6BC9F7C41458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */; };
-		6BC9F7C51458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */; };
-		6BC9F7C61458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */; };
-		6BC9F7C71458EBB6001AF204 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */; };
-		6BC9F7C81458EBB6001AF204 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */; };
-		6BC9F7C91458EBB6001AF204 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */; };
-		6BC9F7CA1458EBB6001AF204 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */; };
-		6BC9F7CB1458EBB6001AF204 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */; };
-		6BC9F7CC1458EBB6001AF204 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */; };
-		6BC9F7CD1458EBB6001AF204 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */; };
-		6BC9F7CE1458EBB6001AF204 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */; };
+		6BC9F7AB1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7AD1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7AE1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7AF1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B11458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B21458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B31458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B41458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B61458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B71458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B81458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7B91458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7BB1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7BD1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7BE1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C01458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C11458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C21458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C31458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C41458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C61458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C71458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7C91458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7CA1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7CB1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7CC1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BC9F7CE1458EBB6001AF204 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BC9F7CF1458EBB6001AF204 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F71D1458EBB6001AF204 /* NSDataAdditions.m */; };
 		6BC9F7D01458EBB6001AF204 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F71D1458EBB6001AF204 /* NSDataAdditions.m */; };
 		6BC9F7D11458EBB6001AF204 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F71D1458EBB6001AF204 /* NSDataAdditions.m */; };
@@ -532,6 +523,10 @@
 		6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
 		6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
 		6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
+		6BFACBA114679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
+		6BFACBA214679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
+		6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
+		6BFACBA414679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -562,8 +557,8 @@
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_CustomerViewController.h; sourceTree = "<group>"; };
-		6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_CustomerViewController.m; sourceTree = "<group>"; };
+		6B7596D114626CD1008CFFAF /* Browse_Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Browse_Sales_Customer_ViewController.h; sourceTree = "<group>"; };
+		6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Browse_Sales_Customer_ViewController.m; sourceTree = "<group>"; };
 		6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.Browse.xib; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -747,25 +742,6 @@
 		6BC9F7031458EBB5001AF204 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
 		6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
 		6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
-		6BC9F7081458EBB5001AF204 /* JSObjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjection.h; sourceTree = "<group>"; };
-		6BC9F7091458EBB5001AF204 /* JSObjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjection.m; sourceTree = "<group>"; };
-		6BC9F70A1458EBB5001AF204 /* JSObjectionBindingEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionBindingEntry.h; sourceTree = "<group>"; };
-		6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionBindingEntry.m; sourceTree = "<group>"; };
-		6BC9F70C1458EBB5001AF204 /* JSObjectionEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionEntry.h; sourceTree = "<group>"; };
-		6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionEntry.m; sourceTree = "<group>"; };
-		6BC9F70E1458EBB5001AF204 /* JSObjectionInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjector.h; sourceTree = "<group>"; };
-		6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjector.m; sourceTree = "<group>"; };
-		6BC9F7101458EBB5001AF204 /* JSObjectionInjectorEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjectorEntry.h; sourceTree = "<group>"; };
-		6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjectorEntry.m; sourceTree = "<group>"; };
-		6BC9F7121458EBB5001AF204 /* JSObjectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionModule.h; sourceTree = "<group>"; };
-		6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionModule.m; sourceTree = "<group>"; };
-		6BC9F7141458EBB5001AF204 /* JSObjectionProviderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionProviderEntry.h; sourceTree = "<group>"; };
-		6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionProviderEntry.m; sourceTree = "<group>"; };
-		6BC9F7161458EBB5001AF204 /* JSObjectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionUtils.h; sourceTree = "<group>"; };
-		6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionUtils.m; sourceTree = "<group>"; };
-		6BC9F7181458EBB5001AF204 /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
-		6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
-		6BC9F71A1458EBB5001AF204 /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
 		6BC9F71C1458EBB6001AF204 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		6BC9F71D1458EBB6001AF204 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		6BC9F71E1458EBB6001AF204 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
@@ -829,6 +805,7 @@
 		6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityManager.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityManager.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzActivityStyle.h; sourceTree = "<group>"; };
+		6BFACBA014679916007C725B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Objection-iOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -851,6 +828,7 @@
 				6BC9F7E21458EBB6001AF204 /* Cedar-iPhone.framework in Frameworks */,
 				6BC9F7E61458EBB6001AF204 /* OCHamcrestIOS.framework in Frameworks */,
 				6BC9F7EA1458EBB6001AF204 /* libOCMock.a in Frameworks */,
+				6BFACBA414679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,6 +846,7 @@
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
+				6BFACBA114679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +865,7 @@
 				6BF58B7B144410A50063E805 /* libxml2.dylib in Frameworks */,
 				6BF58B7C144410A50063E805 /* libsqlite3.dylib in Frameworks */,
 				6BF58B7D144410A50063E805 /* libz.dylib in Frameworks */,
+				6BFACBA214679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +888,7 @@
 				6BC9F7E11458EBB6001AF204 /* Cedar-iPhone.framework in Frameworks */,
 				6BC9F7E51458EBB6001AF204 /* OCHamcrestIOS.framework in Frameworks */,
 				6BC9F7E91458EBB6001AF204 /* libOCMock.a in Frameworks */,
+				6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,8 +1138,8 @@
 				6BC9F59F1458EB82001AF204 /* ESA_Sales_CalcViewController.m */,
 				6BF58DC81444245C0063E806 /* ESA_Sales_CustomerViewController.m */,
 				6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */,
-				6B7596D114626CD1008CFFAF /* Sales_CustomerViewController.h */,
-				6B7596D214626CD1008CFFAF /* Sales_CustomerViewController.m */,
+				6B7596D114626CD1008CFFAF /* Browse_Sales_Customer_ViewController.h */,
+				6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */,
 				6B7596D314626CD1008CFFAF /* Sales.Customer.Browse.xib */,
 				6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */,
 			);
@@ -1322,7 +1303,6 @@
 				6BC9F6BF1458EBB5001AF204 /* ASIHTTPRequest */,
 				6BC9F6F51458EBB5001AF204 /* Flexible-iOS-Logging-1.0 */,
 				6BC9F6F71458EBB5001AF204 /* MAObjCRuntime */,
-				6BC9F7061458EBB5001AF204 /* Objection-iOS */,
 				6BC9F71B1458EBB5001AF204 /* RaptureXML */,
 				6BC9F7221458EBB6001AF204 /* Reachability */,
 			);
@@ -1446,40 +1426,6 @@
 			path = MAObjCRuntime;
 			sourceTree = "<group>";
 		};
-		6BC9F7061458EBB5001AF204 /* Objection-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6BC9F7071458EBB5001AF204 /* build */,
-				6BC9F7081458EBB5001AF204 /* JSObjection.h */,
-				6BC9F7091458EBB5001AF204 /* JSObjection.m */,
-				6BC9F70A1458EBB5001AF204 /* JSObjectionBindingEntry.h */,
-				6BC9F70B1458EBB5001AF204 /* JSObjectionBindingEntry.m */,
-				6BC9F70C1458EBB5001AF204 /* JSObjectionEntry.h */,
-				6BC9F70D1458EBB5001AF204 /* JSObjectionEntry.m */,
-				6BC9F70E1458EBB5001AF204 /* JSObjectionInjector.h */,
-				6BC9F70F1458EBB5001AF204 /* JSObjectionInjector.m */,
-				6BC9F7101458EBB5001AF204 /* JSObjectionInjectorEntry.h */,
-				6BC9F7111458EBB5001AF204 /* JSObjectionInjectorEntry.m */,
-				6BC9F7121458EBB5001AF204 /* JSObjectionModule.h */,
-				6BC9F7131458EBB5001AF204 /* JSObjectionModule.m */,
-				6BC9F7141458EBB5001AF204 /* JSObjectionProviderEntry.h */,
-				6BC9F7151458EBB5001AF204 /* JSObjectionProviderEntry.m */,
-				6BC9F7161458EBB5001AF204 /* JSObjectionUtils.h */,
-				6BC9F7171458EBB5001AF204 /* JSObjectionUtils.m */,
-				6BC9F7181458EBB5001AF204 /* NSObject+Objection.h */,
-				6BC9F7191458EBB5001AF204 /* NSObject+Objection.m */,
-				6BC9F71A1458EBB5001AF204 /* Objection.h */,
-			);
-			path = "Objection-iOS";
-			sourceTree = "<group>";
-		};
-		6BC9F7071458EBB5001AF204 /* build */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = build;
-			sourceTree = "<group>";
-		};
 		6BC9F71B1458EBB5001AF204 /* RaptureXML */ = {
 			isa = PBXGroup;
 			children = (
@@ -1505,6 +1451,7 @@
 		6BC9F7251458EBB6001AF204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA014679916007C725B /* Objection-iOS.framework */,
 				6BC9F7261458EBB6001AF204 /* Cedar-iPhone.framework */,
 				6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */,
 			);
@@ -1861,15 +1808,14 @@
 				6BC9F7A21458EBB6001AF204 /* RTProperty.m in Sources */,
 				6BC9F7A61458EBB6001AF204 /* RTProtocol.m in Sources */,
 				6BC9F7AA1458EBB6001AF204 /* RTUnregisteredClass.m in Sources */,
-				6BC9F7AE1458EBB6001AF204 /* JSObjection.m in Sources */,
-				6BC9F7B21458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */,
-				6BC9F7B61458EBB6001AF204 /* JSObjectionEntry.m in Sources */,
-				6BC9F7BA1458EBB6001AF204 /* JSObjectionInjector.m in Sources */,
-				6BC9F7BE1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */,
-				6BC9F7C21458EBB6001AF204 /* JSObjectionModule.m in Sources */,
-				6BC9F7C61458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */,
-				6BC9F7CA1458EBB6001AF204 /* JSObjectionUtils.m in Sources */,
-				6BC9F7CE1458EBB6001AF204 /* NSObject+Objection.m in Sources */,
+				6BC9F7AE1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B21458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B61458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7BE1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C21458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C61458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7CA1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7CE1458EBB6001AF204 /* (null) in Sources */,
 				6BC9F7D21458EBB6001AF204 /* NSDataAdditions.m in Sources */,
 				6BC9F7D61458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7DA1458EBB6001AF204 /* TBXML.m in Sources */,
@@ -1891,7 +1837,7 @@
 				6BF58DC81444245C0063E85B /* (null) in Sources */,
 				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6B7596D714626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6B7596D714626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E887 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */,
@@ -1958,15 +1904,14 @@
 				6BC9F79F1458EBB6001AF204 /* RTProperty.m in Sources */,
 				6BC9F7A31458EBB6001AF204 /* RTProtocol.m in Sources */,
 				6BC9F7A71458EBB6001AF204 /* RTUnregisteredClass.m in Sources */,
-				6BC9F7AB1458EBB6001AF204 /* JSObjection.m in Sources */,
-				6BC9F7AF1458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */,
-				6BC9F7B31458EBB6001AF204 /* JSObjectionEntry.m in Sources */,
-				6BC9F7B71458EBB6001AF204 /* JSObjectionInjector.m in Sources */,
-				6BC9F7BB1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */,
-				6BC9F7BF1458EBB6001AF204 /* JSObjectionModule.m in Sources */,
-				6BC9F7C31458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */,
-				6BC9F7C71458EBB6001AF204 /* JSObjectionUtils.m in Sources */,
-				6BC9F7CB1458EBB6001AF204 /* NSObject+Objection.m in Sources */,
+				6BC9F7AB1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7AF1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B31458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B71458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7BB1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C31458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C71458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7CB1458EBB6001AF204 /* (null) in Sources */,
 				6BC9F7CF1458EBB6001AF204 /* NSDataAdditions.m in Sources */,
 				6BC9F7D31458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D71458EBB6001AF204 /* TBXML.m in Sources */,
@@ -1988,7 +1933,7 @@
 				6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6B7596D414626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6B7596D414626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E877 /* (null) in Sources */,
 				6BF58DC81444245C0063E880 /* (null) in Sources */,
 				6BF58DC81444245C0063E884 /* expanz_model_BaseCell.m in Sources */,
@@ -2054,15 +1999,11 @@
 				6BC9F7A01458EBB6001AF204 /* RTProperty.m in Sources */,
 				6BC9F7A41458EBB6001AF204 /* RTProtocol.m in Sources */,
 				6BC9F7A81458EBB6001AF204 /* RTUnregisteredClass.m in Sources */,
-				6BC9F7AC1458EBB6001AF204 /* JSObjection.m in Sources */,
-				6BC9F7B01458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */,
-				6BC9F7B41458EBB6001AF204 /* JSObjectionEntry.m in Sources */,
-				6BC9F7B81458EBB6001AF204 /* JSObjectionInjector.m in Sources */,
-				6BC9F7BC1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */,
-				6BC9F7C01458EBB6001AF204 /* JSObjectionModule.m in Sources */,
-				6BC9F7C41458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */,
-				6BC9F7C81458EBB6001AF204 /* JSObjectionUtils.m in Sources */,
-				6BC9F7CC1458EBB6001AF204 /* NSObject+Objection.m in Sources */,
+				6BC9F7B41458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B81458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C01458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C41458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7CC1458EBB6001AF204 /* (null) in Sources */,
 				6BC9F7D01458EBB6001AF204 /* NSDataAdditions.m in Sources */,
 				6BC9F7D41458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D81458EBB6001AF204 /* TBXML.m in Sources */,
@@ -2083,7 +2024,7 @@
 				6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6B7596D514626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6B7596D514626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E878 /* (null) in Sources */,
 				6BD295881463693D00148B07 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BF58DC81444245C0063E881 /* (null) in Sources */,
@@ -2178,15 +2119,12 @@
 				6BC9F7A11458EBB6001AF204 /* RTProperty.m in Sources */,
 				6BC9F7A51458EBB6001AF204 /* RTProtocol.m in Sources */,
 				6BC9F7A91458EBB6001AF204 /* RTUnregisteredClass.m in Sources */,
-				6BC9F7AD1458EBB6001AF204 /* JSObjection.m in Sources */,
-				6BC9F7B11458EBB6001AF204 /* JSObjectionBindingEntry.m in Sources */,
-				6BC9F7B51458EBB6001AF204 /* JSObjectionEntry.m in Sources */,
-				6BC9F7B91458EBB6001AF204 /* JSObjectionInjector.m in Sources */,
-				6BC9F7BD1458EBB6001AF204 /* JSObjectionInjectorEntry.m in Sources */,
-				6BC9F7C11458EBB6001AF204 /* JSObjectionModule.m in Sources */,
-				6BC9F7C51458EBB6001AF204 /* JSObjectionProviderEntry.m in Sources */,
-				6BC9F7C91458EBB6001AF204 /* JSObjectionUtils.m in Sources */,
-				6BC9F7CD1458EBB6001AF204 /* NSObject+Objection.m in Sources */,
+				6BC9F7AD1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B11458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7B91458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7BD1458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C11458EBB6001AF204 /* (null) in Sources */,
+				6BC9F7C91458EBB6001AF204 /* (null) in Sources */,
 				6BC9F7D11458EBB6001AF204 /* NSDataAdditions.m in Sources */,
 				6BC9F7D51458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D91458EBB6001AF204 /* TBXML.m in Sources */,
@@ -2214,7 +2152,7 @@
 				6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6B7596D614626CD1008CFFAF /* Sales_CustomerViewController.m in Sources */,
+				6B7596D614626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E879 /* (null) in Sources */,
 				6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */,
 				6BF58DC81444245C0063E882 /* (null) in Sources */,
