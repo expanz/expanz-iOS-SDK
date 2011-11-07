@@ -191,9 +191,13 @@
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
+    TextCell* keyCell =  [row cellWithId:@"1"];
+    
     ActivityDefinition* edit = [[ActivityDefinition alloc]
         initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
-    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:@"1"]) {
+    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:keyCell.text]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
