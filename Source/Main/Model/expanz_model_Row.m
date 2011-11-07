@@ -93,6 +93,8 @@
                 LogDebug("Adding image cell");
                 [_cells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
                 break;
+            case ExpanzDataTypeNull:
+                break;
         }
     }
 }

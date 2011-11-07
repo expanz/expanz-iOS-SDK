@@ -18,7 +18,6 @@
 #import "expanz_model_DataSet.h"
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
-#import "ExpanzDataType.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -61,6 +60,8 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
+#pragma mark Mapping UI controls to model
+
 - (UITextField*) textInputControlFor:(expanz_model_Field*)field {
     return [_textFieldMappings objectForKey:field.fieldId];
 }
@@ -79,6 +80,9 @@
     NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
+
+/* ================================================================================================================== */
+#pragma mark Synchronizing UI controls
 
 - (void) updateUIControlsWithModelValues {
     [self updateLabelsWithModelValues];
@@ -121,6 +125,8 @@
 
 
 /* ================================================== Utility Methods =============================================== */
+#pragma mark Utility Methods
+
 - (void) dealloc {
     [_selectorNames release];
     [_textFieldMappings release];
@@ -137,6 +143,8 @@
 }
 
 /* ================================================== Private Methods =============================================== */
+#pragma mark Private Methods
+
 - (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller {
     for (RTMethod* method in [[controller class] rt_methods]) {
         [_selectorNames addObject:[method selectorName]];
@@ -155,11 +163,13 @@
                 [_textFieldMappings setObject:textField forKey:selectorName];
             }
             else if (field.datatype == ExpanzDataTypeImage) {
+                LogDebug(@"Mapping image. . . . ");
                 UIImageView* imageView = [controller performSelector:NSSelectorFromString(selectorName)];
                 if (imageView == nil) {
                     [self raiseErrorForNonMappedControl:selectorName typeName:@"UIImageView"];
                 }
                 [_imageFieldMappings setObject:imageView forKey:selectorName];
+                break;
             }
         }
     }

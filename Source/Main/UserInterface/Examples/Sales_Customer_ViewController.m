@@ -22,6 +22,7 @@
 @synthesize LastName;
 @synthesize Email;
 @synthesize Phone;
+@synthesize CustomerPhoto;
 
 - (void) dealloc {
     [FirstNameLabel release];
@@ -32,6 +33,7 @@
     [LastName release];
     [Email release];
     [Phone release];
+    [CustomerPhoto release];
     [super dealloc];
 }
 
