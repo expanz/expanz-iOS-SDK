@@ -16,7 +16,6 @@
 #import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
-#import "expanz_model_TextCell.h"
 
 
 @implementation RXMLElement (ActivityInstance)
@@ -64,7 +63,19 @@
     Field* field = [[[Field alloc]
         initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint]
         autorelease];
-    [field setValue:[self attribute:@"value"]];
+
+    switch (field.datatype) {
+        case ExpanzDataTypeString:
+        case ExpanzDataTypeNumber:
+        case ExpanzDataTypeNull:
+            [field setValue:[self attribute:@"value"]];
+            break;
+
+        case ExpanzDataTypeImage:
+            [field setValue:[self attribute:@"url"]];
+            break;
+    }
+
     [field setDisabled:[[self attribute:@"disabled"] boolValue]];
     return field;
 }

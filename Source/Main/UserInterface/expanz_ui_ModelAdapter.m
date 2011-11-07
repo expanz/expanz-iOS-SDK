@@ -18,6 +18,7 @@
 #import "expanz_model_DataSet.h"
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
+#import "ASIHTTPRequest.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -109,6 +110,19 @@
 }
 
 - (void) updateUIImagesWithModelValues {
+    LogDebug(@"Updaging images . . . . ");
+    for (NSString* fieldId in [_imageFieldMappings allKeys]) {
+        Field* field = [_activityInstance fieldWithId:fieldId];
+        LogDebug(@"Field: %@", field);
+        LogDebug(@"Image url: %@", field.value);
+        ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:field.value]];
+        [request setCompletionBlock:^{
+            LogDebug(@"Running completion block");
+            UIImageView* imageView = [_imageFieldMappings valueForKey:fieldId];
+            imageView.image = [UIImage imageWithData:[request responseData]];
+        }];
+        [request startAsynchronous];
+    }
 
 }
 
