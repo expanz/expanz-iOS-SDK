@@ -531,6 +531,8 @@
 		6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
 		6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
 		6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
+		6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */; };
+		6BFACBA414679916007C7264 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -812,6 +814,7 @@
 		6BFACBA014679916007C725B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Objection-iOS.framework"; sourceTree = "<group>"; };
 		6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7261 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_ActivityInstanceDetail.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1189,6 +1192,7 @@
 		6BC9F6481458EB8C001AF204 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */,
 				6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */,
 				6BC9F6491458EB8C001AF204 /* ESA_Sales_Calc_ActivityInstance.xml */,
 				6BC9F64B1458EB8C001AF204 /* ActivityWithMessage.xml */,
@@ -1677,6 +1681,7 @@
 				6B07653E146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BF14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8851466AAE700FD6309 /* Sales.Customer.xib in Resources */,
+				6BFACBA414679916007C7264 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,6 +1754,7 @@
 				6B07653D146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BE14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8841466AAE700FD6309 /* Sales.Customer.xib in Resources */,
+				6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

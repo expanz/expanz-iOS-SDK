@@ -27,9 +27,9 @@
 
 - (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller;
 
-- (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller;
+- (void) mapFieldsForController:(ActivityInstanceViewController*)controller;
 
-- (void) mapUILabelsForController:(ActivityInstanceViewController*)controller;
+- (void) mapLabelsForController:(ActivityInstanceViewController*)controller;
 
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
 
@@ -47,13 +47,14 @@
     if (self) {
         _activityInstance = viewController.activityInstance;
         _selectorNames = [[NSMutableArray alloc] init];
-        _fieldMappings = [[NSMutableDictionary alloc] init];
+        _textFieldMappings = [[NSMutableDictionary alloc] init];
+        _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
 
         [self cacheSelectorNamesForController:viewController];
-        [self mapUITextFieldsForController:viewController];
-        [self mapUILabelsForController:viewController];
+        [self mapFieldsForController:viewController];
+        [self mapLabelsForController:viewController];
         [self mapUITableViewsForController:viewController];
     }
     return self;
@@ -61,11 +62,11 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (UITextField*) textInputControlFor:(expanz_model_Field*)field {
-    return [_fieldMappings objectForKey:field.fieldId];
+    return [_textFieldMappings objectForKey:field.fieldId];
 }
 
 - (Field*) fieldFor:(UITextField*)control {
-    NSArray* keys = [_fieldMappings allKeysForObject:control];
+    NSArray* keys = [_textFieldMappings allKeysForObject:control];
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
 }
 
@@ -79,17 +80,35 @@
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
 
-- (void) updateUIControlsWithModelValues {
-    LogDebug(@"Updating . . . . . ");
-    for (NSString* fieldId in [_fieldMappings allKeys]) {
-        Field* field = [_activityInstance fieldWithId:fieldId];
-        UITextField* textField = [_fieldMappings valueForKey:fieldId];
-        [textField setText:field.value];
-        [textField setEnabled:!field.isDisabled];
+- (void) updateUIControlsWithModelValues {   
+    [self updateLabelsWithModelValues];
+    [self updateUITextFieldsWithModelValues];
+    [self updateUIImagesWithModelValues];
+    [self updateDataGridsWithModelValues];
+}
+
+- (void) updateLabelsWithModelValues {
+    for(NSString* fieldId in [_labelMappings allKeys]) {
         UILabel* label = [_labelMappings valueForKey:fieldId];
+        Field* field = [_activityInstance fieldWithId:fieldId];
         [label setText:field.label];
     }
+}
 
+- (void) updateUITextFieldsWithModelValues {
+    for (NSString* fieldId in [_textFieldMappings allKeys]) {
+        Field* field = [_activityInstance fieldWithId:fieldId];
+        UITextField* textField = [_textFieldMappings valueForKey:fieldId];
+        [textField setText:field.value];
+        [textField setEnabled:!field.isDisabled];
+    }   
+}
+
+- (void) updateUIImagesWithModelValues {
+
+}
+
+- (void) updateDataGridsWithModelValues {
     for (UITableView* tableView in [_dataSetMappings allValues]) {
         [tableView reloadData];
         [tableView setNeedsLayout];
@@ -104,7 +123,8 @@
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_selectorNames release];
-    [_fieldMappings release];
+    [_textFieldMappings release];
+    [_imageFieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
     [super dealloc];
@@ -113,8 +133,7 @@
 - (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
                         context:(void*)context {
 
-    //TODO: Should just update the table values.
-    [self updateUIControlsWithModelValues];
+    [self updateDataGridsWithModelValues];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -124,19 +143,19 @@
     }
 }
 
-- (void) mapUITextFieldsForController:(ActivityInstanceViewController*)controller {
+- (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _selectorNames) {
         if ([_activityInstance fieldWithId:selectorName] != nil) {
             UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
             if (textField == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
             }
-            [_fieldMappings setObject:textField forKey:selectorName];
+            [_textFieldMappings setObject:textField forKey:selectorName];
         }
     }
 }
 
-- (void) mapUILabelsForController:(ActivityInstanceViewController*)controller {
+- (void) mapLabelsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _selectorNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];

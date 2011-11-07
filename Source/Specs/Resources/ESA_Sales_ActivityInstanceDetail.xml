@@ -1,0 +1,32 @@
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="116" xmlns="">
+            <Activity activityHandle="634562581095479004.95" title="Customers" ActivityPersistentId="2">
+                <Field id="PersistentId" nullable="0" null="0" value="2" datatype="number" valid="1"/>
+                <Field id="SearchCode" label="Customer" nullable="1" maxLength="20" null="0" value="000888"
+                       datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="FirstName" label="First Name" nullable="1" maxLength="254" null="0" value="Bill"
+                       datatype="string" valid="1"/>
+                <Field id="LastName" label="Last Name" nullable="1" maxLength="254" null="0" value="Hilf"
+                       datatype="string" valid="1"/>
+                <Field id="Phone" label="Phone" nullable="1" maxLength="254" null="0" value="80808080" datatype="string"
+                       valid="1"/>
+                <Field id="Email" label="Email" nullable="1" maxLength="254" null="0"
+                       value="Bill.Hilf@sportcloudkids.com" datatype="string" valid="1"/>
+                <Field id="Discount" label="Discount" nullable="1" null="0" value="19%" datatype="number" valid="1"/>
+                <Field id="CustomerPhoto" label="Customer Photo:" nullable="1" null="0" datatype="BLOB" valid="1"
+                       url="https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/2"
+                       fileExt=".jpg"></Field>
+                <Field id="Company" label="Company:" nullable="1" maxLength="254" null="0" value="Microsofts"
+                       datatype="string" valid="1"/>
+                <Field id="FullCustomerName" label="Full Customer Name:" nullable="1" maxLength="254" null="0"
+                       value="Bill Hilf" datatype="string" valid="1"/>
+                <Types>
+                    <Type id="Sales.Customer" image="Customer"/>
+                </Types>
+            </Activity>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://10.186.90.153:20001/SessionManager1#634562580978302754:319</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

@@ -22,7 +22,8 @@
 
 @private
     NSMutableArray* _selectorNames;
-    NSMutableDictionary* _fieldMappings;
+    NSMutableDictionary* _textFieldMappings;
+    NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
 
@@ -35,6 +36,8 @@
 */
 - (id) initWithViewController:(expanz_ui_ActivityInstanceViewController*)viewController;
 
+/* ================================================================================================================== */
+#pragma mark Mapping of Controls
 /**
  * Returns the UITextField corresponding to the model's field object.
  */
@@ -55,11 +58,36 @@
 */
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl;
 
+/* ================================================================================================================== */
+#pragma mark Synchronizing control values with model values.
 /**
- * Updates UI text fields and labels with values from the model object. 
+ * Updates all UI controls with values from the model object.
  */
 - (void) updateUIControlsWithModelValues;
 
+/**
+* Update UILabels with values from the model object.
+*/
+- (void) updateLabelsWithModelValues;
+
+/**
+* Updates UITextFields with values from the model object.
+*/
+- (void) updateUITextFieldsWithModelValues;
+
+/**
+* Updates UIImageViews with values from the model object.
+*/
+- (void) updateUIImagesWithModelValues;
+
+/**
+* Update data grids with values from the model object.
+*/
+- (void) updateDataGridsWithModelValues;
+
+/**
+* Prepares to update a data grid's image cell with an image, when it becomes available.
+*/
 - (void) startObserving:(expanz_model_ImageCell*)cell;
 
 
