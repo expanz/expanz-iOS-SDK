@@ -527,6 +527,10 @@
 		6BFACBA214679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA414679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
+		6BFACBA414679916007C725D /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
+		6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
+		6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
+		6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -806,6 +810,8 @@
 		6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityManager.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzActivityStyle.h; sourceTree = "<group>"; };
 		6BFACBA014679916007C725B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Objection-iOS.framework"; sourceTree = "<group>"; };
+		6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7261 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1132,6 +1138,8 @@
 		6BC9F59D1458EB82001AF204 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7261 /* Sales_Customer_ViewController.h */,
+				6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */,
 				6BF58DC81444245C0063E819 /* ESA.Sales.Calc.xib */,
 				6BF58DC81444245C0063E81E /* ESA.Sales.Customer.Browse.xib */,
 				6BC9F59E1458EB82001AF204 /* ESA_Sales_CalcViewController.h */,
@@ -1844,6 +1852,7 @@
 				6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1414652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */,
+				6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1941,6 +1950,7 @@
 				6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1114652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */,
+				6BFACBA414679916007C725D /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,6 +2042,7 @@
 				6BF58DC81444245C0063E88B /* expanz_model_ImageCell.m in Sources */,
 				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */,
+				6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2163,6 +2174,7 @@
 				6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6B6C3E1314652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
+				6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
