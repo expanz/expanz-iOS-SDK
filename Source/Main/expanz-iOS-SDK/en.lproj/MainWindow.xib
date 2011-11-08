@@ -114,7 +114,7 @@
 							<object class="IBUserDefinedRuntimeAttribute">
 								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
 								<string key="keyPath">expanzConfiguration</string>
-								<string key="value">azure</string>
+								<string key="value">expanz</string>
 							</object>
 						</array>
 					</object>

@@ -19,13 +19,14 @@
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
 #import "ASIHTTPRequest.h"
+#import "RTProperty.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
 
 - (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName;
 
-- (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller;
+- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller;
 
 - (void) mapFieldsForController:(ActivityInstanceViewController*)controller;
 
@@ -46,13 +47,13 @@
     self = [super init];
     if (self) {
         _activityInstance = viewController.activityInstance;
-        _selectorNames = [[NSMutableArray alloc] init];
+        _propertyNames = [[NSMutableArray alloc] init];
         _textFieldMappings = [[NSMutableDictionary alloc] init];
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
 
-        [self cacheSelectorNamesForController:viewController];
+        [self cachePropertyNamesForController:viewController];
         [self mapFieldsForController:viewController];
         [self mapLabelsForController:viewController];
         [self mapUITableViewsForController:viewController];
@@ -142,7 +143,7 @@
 #pragma mark Utility Methods
 
 - (void) dealloc {
-    [_selectorNames release];
+    [_propertyNames release];
     [_textFieldMappings release];
     [_imageFieldMappings release];
     [_labelMappings release];
@@ -159,26 +160,29 @@
 /* ================================================== Private Methods =============================================== */
 #pragma mark Private Methods
 
-- (void) cacheSelectorNamesForController:(ActivityInstanceViewController*)controller {
-    for (RTMethod* method in [[controller class] rt_methods]) {
-        [_selectorNames addObject:[method selectorName]];
+- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller {
+    for (RTProperty* property in [[controller class] rt_properties]) {
+        [_propertyNames addObject:[property name]];
     }
 }
 
 - (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
-    for (NSString* selectorName in _selectorNames) {
+    //TODO: This could be more efficient.
+    for (NSString* selectorName in _propertyNames) {
         Field* field = [_activityInstance fieldWithId:selectorName];
         if (field != nil) {
+            UIControl* uiControl = [controller performSelector:NSSelectorFromString(selectorName)];
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
-                UITextField* textField = [controller performSelector:NSSelectorFromString(selectorName)];
+                UITextField* textField = (UITextField*) uiControl;
                 if (textField == nil) {
                     [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
                 }
                 [_textFieldMappings setObject:textField forKey:selectorName];
+                id<UITextFieldDelegate> delegate = controller;
+                [textField setDelegate:delegate];
             }
             else if (field.datatype == ExpanzDataTypeImage) {
-                LogDebug(@"Mapping image. . . . ");
-                UIImageView* imageView = [controller performSelector:NSSelectorFromString(selectorName)];
+                UIImageView* imageView = (UIImageView*) uiControl;
                 if (imageView == nil) {
                     [self raiseErrorForNonMappedControl:selectorName typeName:@"UIImageView"];
                 }
@@ -190,7 +194,7 @@
 }
 
 - (void) mapLabelsForController:(ActivityInstanceViewController*)controller {
-    for (NSString* selectorName in _selectorNames) {
+    for (NSString* selectorName in _propertyNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
             UILabel* uiLabel = [controller performSelector:NSSelectorFromString(selectorName)];
@@ -205,13 +209,16 @@
 }
 
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
-    for (NSString* selectorName in _selectorNames) {
+    for (NSString* selectorName in _propertyNames) {
         if ([_activityInstance dataSetWithId:selectorName] != nil) {
             UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
             if (tableView == nil) {
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
             }
             [_dataSetMappings setObject:tableView forKey:selectorName];
+            id<UITableViewDelegate, UITableViewDataSource> delegate = controller;
+            [tableView setDelegate:delegate];
+            [tableView setDataSource:delegate];
         }
     }
 }
