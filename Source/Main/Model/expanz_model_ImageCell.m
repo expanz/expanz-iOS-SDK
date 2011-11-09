@@ -18,25 +18,35 @@
 
 @synthesize imageUrl = _imageUrl;
 @synthesize image = _image;
+@synthesize hasAskedImageToLoad = _hasAskedImageToLoad;
 
+/* ================================================== Constructors ================================================== */
 - (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl {
     self = [super initWithCellId:cellId];
     if (self) {
         _imageUrl = [imageUrl copy];
-        ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:imageUrl]];
-        [request setCompletionBlock:^{
-            self.image = [[UIImage imageWithData:[request responseData]] retain];
-        }];
-
-        [request setFailedBlock:^{
-            //TOOD: Handle this
-            LogError(@"Can't download the image: %@", _imageUrl);
-        }];
-        [request startAsynchronous];
+        [self loadImage];
     }
     return self;
 }
 
+/* ================================================ Interface Methods =============================================== */
+- (void) loadImage {
+    [self setHasAskedImageToLoad:YES];
+    ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:_imageUrl]];
+    [request setCompletionBlock:^{
+            self.image = [[UIImage imageWithData:[request responseData]] retain];
+        }];
+
+    [request setFailedBlock:^{
+            //TODO: Handle this?
+            LogError(@"Can't download the image: %@", _imageUrl);
+        }];
+    [request startAsynchronous];
+}
+
+
+/* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_imageUrl release];
     [_image release];

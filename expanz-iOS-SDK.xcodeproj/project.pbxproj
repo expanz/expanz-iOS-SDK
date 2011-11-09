@@ -18,6 +18,10 @@
 		6B07653E146504C300C1A034 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B07653A146504C300C1A034 /* TableCell2.xib */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
 		6B0E25B91445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B1B8B75146A0B96007636C4 /* canvas-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B8B74146A0B96007636C4 /* canvas-splash.png */; };
+		6B1B8B76146A0B96007636C4 /* canvas-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B8B74146A0B96007636C4 /* canvas-splash.png */; };
+		6B1B8B77146A0B96007636C4 /* canvas-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B8B74146A0B96007636C4 /* canvas-splash.png */; };
+		6B1B8B78146A0B96007636C4 /* canvas-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B8B74146A0B96007636C4 /* canvas-splash.png */; };
 		6B353A0C1444276C00C8E6C2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B353A0D1444276C00C8E6C2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6B353A0E1444276C00C8E6C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -558,6 +562,7 @@
 		6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailImageTableCell.m; sourceTree = "<group>"; };
 		6B07653A146504C300C1A034 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		6B1B8B74146A0B96007636C4 /* canvas-splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canvas-splash.png"; sourceTree = "<group>"; };
 		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
@@ -1118,6 +1123,7 @@
 		6BC9F5941458EB82001AF204 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6B1B8B74146A0B96007636C4 /* canvas-splash.png */,
 				6BEEE0BB14655D0C005CFA19 /* blues.jpg */,
 				6BC9F5951458EB82001AF204 /* ActivityMenu.xib */,
 				6BC9F5961458EB82001AF204 /* background.png */,
@@ -1682,6 +1688,7 @@
 				6BEEE0BF14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8851466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 				6BFACBA414679916007C7264 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
+				6B1B8B78146A0B96007636C4 /* canvas-splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1704,6 +1711,7 @@
 				6B07653B146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BC14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8821466AAE700FD6309 /* Sales.Customer.xib in Resources */,
+				6B1B8B75146A0B96007636C4 /* canvas-splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1725,6 +1733,7 @@
 				6B07653C146504C300C1A034 /* TableCell2.xib in Resources */,
 				6BEEE0BD14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8831466AAE700FD6309 /* Sales.Customer.xib in Resources */,
+				6B1B8B76146A0B96007636C4 /* canvas-splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1755,6 +1764,7 @@
 				6BEEE0BE14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8841466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 				6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
+				6B1B8B77146A0B96007636C4 /* canvas-splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2331,7 +2341,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2355,7 +2365,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};

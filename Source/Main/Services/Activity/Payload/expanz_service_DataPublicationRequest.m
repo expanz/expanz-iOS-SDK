@@ -18,12 +18,13 @@
 @synthesize dataPublicationId = _dataPublicationId;
 @synthesize populateMethod = _populateMethod;
 @synthesize autoPopulate = _autoPopulate;
+@synthesize useThumbnailImages = _useThumbnailImages;
 
 /* ================================================== Constructors ================================================== */
 - (id) init {
     self = [super init];
     if (self) {
-        //Set defaults.
+        _useThumbnailImages = YES;
         _populateMethod = @"ListMe";
         _query = @"";
         _autoPopulate = YES;
@@ -48,10 +49,13 @@
 
 /* ================================================= Protocol Methods =============================================== */
 
-#define kXmlTemplate @"<DataPublication id=\"%@\" populateMethod=\"%@\" query=\"%@\" autoPopulate=\"%@\"/>"
+#define kXmlTemplate @"<DataPublication useThumbNailImages=\"%@\" id=\"%@\" populateMethod=\"%@\" query=\"%@\" "\
+"autoPopulate=\"%@\"/>"
+
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _dataPublicationId, _populateMethod != nil ? _populateMethod : @"",
-                                      _query, _autoPopulate == YES ? @"1" : @"0"];
+    return [NSString stringWithFormat:kXmlTemplate, _useThumbnailImages == YES ? @"1" : @"0", _dataPublicationId,
+                                      _populateMethod != nil ? _populateMethod : @"", _query,
+                                      _autoPopulate == YES ? @"1" : @"0"];
 }
 
 /* ================================================== Utility Methods =============================================== */

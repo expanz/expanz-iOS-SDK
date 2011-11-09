@@ -25,7 +25,7 @@
 @property(nonatomic, retain) NSString* populateMethod;
 @property(nonatomic, retain) NSString* query;
 @property(nonatomic) BOOL autoPopulate;
-
+@property(nonatomic) BOOL useThumbnailImages;
 
 @end
 

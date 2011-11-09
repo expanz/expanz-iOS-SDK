@@ -40,7 +40,7 @@
 /* ================================================== Constructors ================================================== */
 - (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
                        initialKey:(NSString*)initialKey {
-    
+
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
         _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
@@ -108,14 +108,6 @@
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
-/* ================================================ Delegate Methods ================================================ */
-- (void) didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
-}
-
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
 
@@ -136,7 +128,24 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-/* ================================================================================================================== */
+- (void) didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    for (DataSet* dataSet in [_activityInstance dataSets]) {
+        for (Row* row in [dataSet rows]) {
+            for (BaseCell* cell in [row cells]) {
+                if ([cell isKindOfClass:[ImageCell class]]) {
+                    ImageCell* imageCell = (ImageCell*) cell;
+                    LogDebug(@"Releasing image.");
+                    [imageCell.image release];
+                    imageCell.image = nil;
+                    imageCell.hasAskedImageToLoad = NO;
+                }
+            }
+        }
+    }
+}
+
+/* ================================================ Delegate Methods ================================================ */
 #pragma mark UITextFieldDelegate
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
@@ -182,6 +191,9 @@
     TextCell* lastNameCell = (TextCell*) [row cellWithId:@"4"];
     TextCell* emailCell = (TextCell*) [row cellWithId:@"6"];
     ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
+    if (imageCell.hasAskedImageToLoad == NO) {
+        [imageCell loadImage];
+    }
     [_modelAdapter startObserving:imageCell];
 
     cell.mainLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
@@ -192,16 +204,15 @@
             [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
 
     return cell;
-
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
     TextCell* keyCell = (TextCell*) [row cellWithId:@"1"];
-    
-    ActivityDefinition* edit = [[ActivityDefinition alloc]
-        initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
+
+    ActivityDefinition* edit =
+        [[ActivityDefinition alloc] initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
     if ([_activityManager transitionToActivityWithDefinition:edit initialKey:keyCell.text]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }

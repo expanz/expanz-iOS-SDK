@@ -33,7 +33,7 @@
 @property(nonatomic, readonly) NSArray* dataSets;
 
 /**
-* Initializes new instance with the supplied parameters.
+* Initializes new instance  with the supplied parameters.
 */
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId;
 

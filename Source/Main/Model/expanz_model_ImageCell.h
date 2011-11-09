@@ -20,10 +20,14 @@
 * rows can be presented as quickly as possible.
 */
 @interface expanz_model_ImageCell : expanz_model_BaseCell
-- (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl;
 
 @property(nonatomic, readonly) NSString* imageUrl;
 @property(nonatomic, retain) UIImage* image;
+@property(nonatomic) BOOL hasAskedImageToLoad;
+
+
+- (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl;
+- (void) loadImage;
 
 @end
 

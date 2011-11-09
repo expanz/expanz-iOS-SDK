@@ -58,8 +58,8 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 
             LogDebug(@"%@", [request toXml]);
             assertThatInt([[request dataPublicationRequests] count], equalToInt(2));
-            assertThat([request toXml], containsString(@"DataPublication id=\"customersList\""));
-            assertThat([request toXml], containsString(@"DataPublication id=\"ordersList\""));
+            assertThat([request toXml], containsString(@"DataPublication useThumbNailImages=\"1\" id=\"customersList\""));
+            assertThat([request toXml], containsString(@"DataPublication useThumbNailImages=\"1\" id=\"ordersList\""));
 
             [request release];
         });
