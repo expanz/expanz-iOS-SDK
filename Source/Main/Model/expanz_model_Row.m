@@ -19,7 +19,7 @@
 /* ================================================================================================================== */
 @interface expanz_model_Row (private)
 
-- (void) buildCellsFromDefinitions;
+- (void) buildCellsIfRequired;
 
 @end
 
@@ -37,6 +37,8 @@
         _rowId = [rowId copy];
         _type = [type copy];
         _cellDefinitions = [[NSMutableDictionary alloc] init];
+        NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"cellId" ascending:YES];
+        _sortDescriptors = [[NSArray alloc] initWithObjects:sorter, nil];
     }
     return self;
 }
@@ -55,14 +57,22 @@
     return nil;
 }
 
-
 - (NSArray*) cells {
-    if (_cells == nil) {
-        [self buildCellsFromDefinitions];
-    }
-    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"cellId" ascending:YES];
-    return [_cells sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+    NSArray* allCells = [[self textCells] arrayByAddingObjectsFromArray:[self imageCells]];
+    return [allCells sortedArrayUsingDescriptors:_sortDescriptors];
 }
+
+- (NSArray*) textCells {
+    [self buildCellsIfRequired];
+    return [_textCells sortedArrayUsingDescriptors:_sortDescriptors];
+
+}
+
+- (NSArray*) imageCells {
+    [self buildCellsIfRequired];
+    return [_imageCells sortedArrayUsingDescriptors:_sortDescriptors];
+}
+
 
 
 /* ================================================== Utility Methods =============================================== */
@@ -70,31 +80,38 @@
     [_rowId release];
     [_type release];
     [_cellDefinitions release];
+    [_textCells release];
+    [_imageCells release];
+    [_sortDescriptors release];
     [super dealloc];
 }
 
 
 /* ================================================== Private Methods =============================================== */
-- (void) buildCellsFromDefinitions {
-    _cells = [[NSMutableArray alloc] initWithCapacity:[_cellDefinitions count]];
-    for (NSString* cellId in [_cellDefinitions allKeys]) {
-        Column* column = [_dataSet columnWithId:cellId];
-        if (column == nil) {
-            [NSException raise:NSInternalInconsistencyException format:@"No column for cell with id: %@", cellId];
-        }
+- (void) buildCellsIfRequired {
 
-        NSString* data = [_cellDefinitions valueForKey:cellId];
-        switch (column.dataType) {
-            case ExpanzDataTypeString:
-            case ExpanzDataTypeNumber:
-                [_cells addObject:[[[TextCell alloc] initWithCellId:cellId text:data] autorelease]];
-                break;
-            case ExpanzDataTypeImage:
-                LogDebug("Adding image cell");
-                [_cells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
-                break;
-            case ExpanzDataTypeNull:
-                break;
+    if (_textCells == nil || _imageCells == nil) {
+        _textCells = [[NSMutableArray alloc] init];
+        _imageCells = [[NSMutableArray alloc] init];
+
+        for (NSString* cellId in [_cellDefinitions allKeys]) {
+            Column* column = [_dataSet columnWithId:cellId];
+            if (column == nil) {
+                [NSException raise:NSInternalInconsistencyException format:@"No column for cell with id: %@", cellId];
+            }
+
+            NSString* data = [_cellDefinitions valueForKey:cellId];
+            switch (column.dataType) {
+                case ExpanzDataTypeString:
+                case ExpanzDataTypeNumber:
+                    [_textCells addObject:[[[TextCell alloc] initWithCellId:cellId text:data] autorelease]];
+                    break;
+                case ExpanzDataTypeImage:
+                    [_imageCells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
+                    break;
+                case ExpanzDataTypeNull:
+                    break;
+            }
         }
     }
 }

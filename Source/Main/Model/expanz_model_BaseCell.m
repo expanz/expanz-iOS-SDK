@@ -21,7 +21,6 @@
     self = [super init];
     if (self) {
         _cellId = [cellId copy];
-        LogDebug(@"Cell id: %@",_cellId);
     }
     return self;
 

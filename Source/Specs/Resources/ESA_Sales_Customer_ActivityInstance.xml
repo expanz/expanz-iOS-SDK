@@ -2,24 +2,24 @@
     <ExecXResult>
         <ESA success="1" responseTime="62" xmlns="">
             <Activity activityHandle="634559722953181110.46" title="Customers" ActivityPersistentId="0">
-                <Field id="PersistentId" nullable="0" null="1" value="" datatype="number"/>
-                <Field id="SearchCode" label="Customer" nullable="1" maxLength="20" null="0" value="[AUTO]"
-                       datatype="string" textCase="upper" isSearchField="1" valid="1"/>
-                <Field id="FirstName" label="First Name" nullable="1" maxLength="254" null="1" value=""
-                       datatype="string" valid="1"/>
-                <Field id="LastName" label="Last Name" nullable="1" maxLength="254" null="1" value="" datatype="string"
-                       valid="1"/>
-                <Field id="Phone" label="Phone" nullable="1" maxLength="254" null="1" value="" datatype="string"
-                       valid="1"/>
-                <Field id="Email" label="Email" nullable="1" maxLength="254" null="1" value="" datatype="string"
-                       valid="1"/>
-                <Field id="Discount" label="Discount" nullable="1" null="1" value="" datatype="number" valid="1"/>
-                <Field id="CustomerPhoto" label="Customer Photo:" nullable="1" null="1" datatype="BLOB"
-                       valid="1"></Field>
-                <Field id="Company" label="Company:" nullable="1" maxLength="254" null="1" value="" datatype="string"
-                       valid="1"/>
-                <Field id="FullCustomerName" label="Full Customer Name:" nullable="1" maxLength="254" null="0" value=""
-                       datatype="string" valid="1"/>
+                    <Field id="PersistentId" nullable="0" null="1" value="" datatype="number"/>
+                    <Field id="SearchCode" label="Customer" nullable="1" maxLength="20" null="0" value="[AUTO]"
+                           datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                    <Field id="FirstName" label="First Name" nullable="1" maxLength="254" null="1" value=""
+                           datatype="string" valid="1"/>
+                    <Field id="LastName" label="Last Name" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                           valid="1"/>
+                    <Field id="Phone" label="Phone" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                           valid="1"/>
+                    <Field id="Email" label="Email" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                           valid="1"/>
+                    <Field id="Discount" label="Discount" nullable="1" null="1" value="" datatype="number" valid="1"/>
+                    <Field id="CustomerPhoto" label="Customer Photo:" nullable="1" null="1" datatype="BLOB"
+                           valid="1"></Field>
+                    <Field id="Company" label="Company:" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                           valid="1"/>
+                    <Field id="FullCustomerName" label="Full Customer Name:" nullable="1" maxLength="254" null="0" value=""
+                           datatype="string" valid="1"/>
                 <Types>
                     <Type id="Sales.Customer" image="Customer"/>
                 </Types>

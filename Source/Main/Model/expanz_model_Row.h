@@ -23,7 +23,9 @@
 
 @private
     NSMutableDictionary* _cellDefinitions;
-    NSMutableArray* _cells;
+    NSMutableArray* _textCells;
+    NSMutableArray* _imageCells;
+    NSArray* _sortDescriptors;
 }
 
 @property(nonatomic, assign) expanz_model_DataSet* dataSet;
@@ -37,6 +39,10 @@
 - (expanz_model_BaseCell*) cellWithId:(NSString*)cellId;
 
 - (NSArray*) cells;
+
+- (NSArray*) textCells;
+
+- (NSArray*) imageCells;
 
 
 @end

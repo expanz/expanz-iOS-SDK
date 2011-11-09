@@ -116,7 +116,6 @@
     [[self activityClient] createActivityWith:_activityRequest delegate:self];
 }
 
-
 - (void) viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -132,18 +131,15 @@
     [super didReceiveMemoryWarning];
     for (DataSet* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
-            for (BaseCell* cell in [row cells]) {
-                if ([cell isKindOfClass:[ImageCell class]]) {
-                    ImageCell* imageCell = (ImageCell*) cell;
-                    LogDebug(@"Releasing image.");
-                    [imageCell.image release];
-                    imageCell.image = nil;
-                    imageCell.hasAskedImageToLoad = NO;
-                }
+            for (ImageCell* imageCell in [row imageCells]) {
+                [imageCell.image release];
+                imageCell.image = nil;
+                imageCell.hasAskedImageToLoad = NO;
             }
         }
     }
 }
+
 
 /* ================================================ Delegate Methods ================================================ */
 #pragma mark UITextFieldDelegate
