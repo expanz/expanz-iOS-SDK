@@ -14,7 +14,6 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "MARTNSObject.h"
-#import "RTMethod.h"
 #import "expanz_model_DataSet.h"
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
@@ -33,6 +32,8 @@
 - (void) mapLabelsForController:(ActivityInstanceViewController*)controller;
 
 - (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
+
+- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller;
 
 @end
 
@@ -57,6 +58,7 @@
         [self mapFieldsForController:viewController];
         [self mapLabelsForController:viewController];
         [self mapUITableViewsForController:viewController];
+        [self addTouchResponderToEditableImagesForController:viewController];
     }
     return self;
 }
@@ -167,26 +169,26 @@
 }
 
 - (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
-    //TODO: This could be more efficient.
-    for (NSString* selectorName in _propertyNames) {
-        Field* field = [_activityInstance fieldWithId:selectorName];
+
+    for (NSString* propertyName in _propertyNames) {
+        Field* field = [_activityInstance fieldWithId:propertyName];
         if (field != nil) {
-            UIControl* uiControl = [controller performSelector:NSSelectorFromString(selectorName)];
+            UIControl* uiControl = [controller performSelector:NSSelectorFromString(propertyName)];
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
                 UITextField* textField = (UITextField*) uiControl;
                 if (textField == nil) {
-                    [self raiseErrorForNonMappedControl:selectorName typeName:@"UITextField"];
+                    [self raiseErrorForNonMappedControl:propertyName typeName:@"UITextField"];
                 }
-                [_textFieldMappings setObject:textField forKey:selectorName];
+                [_textFieldMappings setObject:textField forKey:propertyName];
                 id<UITextFieldDelegate> delegate = controller;
                 [textField setDelegate:delegate];
             }
             else if (field.datatype == ExpanzDataTypeImage) {
                 UIImageView* imageView = (UIImageView*) uiControl;
                 if (imageView == nil) {
-                    [self raiseErrorForNonMappedControl:selectorName typeName:@"UIImageView"];
+                    [self raiseErrorForNonMappedControl:propertyName typeName:@"UIImageView"];
                 }
-                [_imageFieldMappings setObject:imageView forKey:selectorName];
+                [_imageFieldMappings setObject:imageView forKey:propertyName];
                 break;
             }
         }
@@ -220,6 +222,16 @@
             [tableView setDelegate:delegate];
             [tableView setDataSource:delegate];
         }
+    }
+}
+
+- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller {
+    for (UIImageView* imageView in [_imageFieldMappings allValues]) {
+        LogDebug(@"Here's the frame: %@", NSStringFromCGRect(imageView.frame));
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = imageView.frame;
+        [button addTarget:controller action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
+        [controller.view addSubview:button];
     }
 }
 

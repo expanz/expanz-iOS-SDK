@@ -66,6 +66,9 @@
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
 
+- (void) buttonPress:(id)sender;
+
+
 
 @end
 

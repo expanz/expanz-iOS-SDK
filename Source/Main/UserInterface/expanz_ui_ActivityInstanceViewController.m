@@ -108,6 +108,18 @@
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
+- (void) buttonPress:(id)sender {
+    UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
 
