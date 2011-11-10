@@ -21,13 +21,15 @@
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
-    UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource> {
+    UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate,
+    UIImagePickerControllerDelegate> {
 
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_ActivityManager* _activityManager;
     expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;
+    UIImageView* _currentlyEditingImageView;
 }
 
 @property(nonatomic, readonly) expanz_model_ActivityDefinition* activityDefinition;
@@ -66,7 +68,7 @@
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
 
-- (void) buttonPress:(id)sender;
+- (void) willCommenceEditForImageView:(UIButton*)sender;
 
 
 

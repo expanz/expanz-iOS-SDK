@@ -26,6 +26,7 @@
     NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
+    NSMutableDictionary* _imageButtonMappings;
 
 }
 
@@ -57,6 +58,8 @@
 * Returns the `expanz_model_DataSet` object backing the UITableView component.
 */
 - (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl;
+
+- (UIImageView*) imageViewForEditButton:(UIButton*)button;
 
 /* ================================================================================================================== */
 #pragma mark Synchronizing control values with model values.

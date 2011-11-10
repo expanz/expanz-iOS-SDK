@@ -53,6 +53,7 @@
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
+        _imageButtonMappings = [[NSMutableDictionary alloc] init];
 
         [self cachePropertyNamesForController:viewController];
         [self mapFieldsForController:viewController];
@@ -84,6 +85,11 @@
     NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
+
+- (UIImageView*) imageViewForEditButton:(UIButton*)button {
+    return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:button]];
+}
+
 
 /* ================================================================================================================== */
 #pragma mark Synchronizing UI controls
@@ -150,6 +156,7 @@
     [_imageFieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
+    [_imageButtonMappings release];
     [super dealloc];
 }
 
@@ -180,7 +187,7 @@
                     [self raiseErrorForNonMappedControl:propertyName typeName:@"UITextField"];
                 }
                 [_textFieldMappings setObject:textField forKey:propertyName];
-                id<UITextFieldDelegate> delegate = controller;
+                id <UITextFieldDelegate> delegate = controller;
                 [textField setDelegate:delegate];
             }
             else if (field.datatype == ExpanzDataTypeImage) {
@@ -218,7 +225,7 @@
                 [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
             }
             [_dataSetMappings setObject:tableView forKey:selectorName];
-            id<UITableViewDelegate, UITableViewDataSource> delegate = controller;
+            id <UITableViewDelegate, UITableViewDataSource> delegate = controller;
             [tableView setDelegate:delegate];
             [tableView setDataSource:delegate];
         }
@@ -227,11 +234,12 @@
 
 - (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller {
     for (UIImageView* imageView in [_imageFieldMappings allValues]) {
-        LogDebug(@"Here's the frame: %@", NSStringFromCGRect(imageView.frame));
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = imageView.frame;
-        [button addTarget:controller action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:controller action:@selector(willCommenceEditForImageView:)
+         forControlEvents:UIControlEventTouchUpInside];
         [controller.view addSubview:button];
+        [_imageButtonMappings setObject:imageView forKey:[NSValue valueWithPointer:button]];
     }
 }
 

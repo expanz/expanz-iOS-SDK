@@ -108,8 +108,10 @@
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
-- (void) buttonPress:(id)sender {
+- (void) willCommenceEditForImageView:(UIButton*)sender {
+    _currentlyEditingImageView = [_modelAdapter imageViewForEditButton:sender];
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
@@ -117,6 +119,7 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     [self presentModalViewController:imagePicker animated:YES];
+    [imagePicker release];
 }
 
 
@@ -229,6 +232,18 @@
 - (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
     return 75;
 }
+
+/* ================================================================================================================== */
+#pragma mark Image Picker Delegate 
+
+- (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
+                   editingInfo:(NSDictionary*)editingInfo {
+
+    _currentlyEditingImageView.image = image;
+    NSData* data = UIImageJPEGRepresentation(image, 4.0);
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
 
 
 
