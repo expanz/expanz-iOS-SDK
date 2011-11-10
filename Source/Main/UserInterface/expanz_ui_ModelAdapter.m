@@ -71,9 +71,18 @@
     return [_textFieldMappings objectForKey:field.fieldId];
 }
 
-- (Field*) fieldFor:(UITextField*)control {
-    NSArray* keys = [_textFieldMappings allKeysForObject:control];
+- (Field*) fieldFor:(UIView*)uiControl {
+
+    NSArray* keys;
+    if ([uiControl isKindOfClass:[UITextField class]]) {
+        keys = [_textFieldMappings allKeysForObject:uiControl];
+    }
+    else if ([uiControl isKindOfClass:[UIImageView class]]) {
+        keys = [_imageFieldMappings allKeysForObject:uiControl];
+    }
+
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
+
 }
 
 
@@ -86,8 +95,8 @@
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
 
-- (UIImageView*) imageViewForEditButton:(UIButton*)button {
-    return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:button]];
+- (UIImageView*) imageViewFor:(UIButton*)editButton {
+    return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:editButton]];
 }
 
 

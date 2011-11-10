@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Objection-iOS/Objection.h>
+#import "NSData+Base64.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
@@ -63,7 +64,7 @@
 - (void) sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
-        DeltaRequest* deltaRequest = [DeltaRequest fromField:field];
+        DeltaRequest* deltaRequest = [DeltaRequest forField:field];
         [[self activityClient] sendDeltaWith:deltaRequest delegate:self];
     }
 }
@@ -109,7 +110,7 @@
 }
 
 - (void) willCommenceEditForImageView:(UIButton*)sender {
-    _currentlyEditingImageView = [_modelAdapter imageViewForEditButton:sender];
+    _currentlyEditingImageView = [_modelAdapter imageViewFor:sender];
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -240,8 +241,16 @@
                    editingInfo:(NSDictionary*)editingInfo {
 
     _currentlyEditingImageView.image = image;
-    NSData* data = UIImageJPEGRepresentation(image, 4.0);
     [picker dismissModalViewControllerAnimated:YES];
+
+    NSString* fieldId = [_modelAdapter fieldFor:_currentlyEditingImageView].fieldId;
+    NSString* data = [UIImageJPEGRepresentation(image, 4.0) base64EncodedString];
+    NSString* sessionToken = [SessionContext globalContext].sessionToken;
+
+    DeltaRequest* deltaRequest = [[DeltaRequest alloc]
+        initWithFieldId:fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken];
+    //[[self activityClient] sendDeltaWith:deltaRequest delegate:self];
+    [deltaRequest release];
 }
 
 

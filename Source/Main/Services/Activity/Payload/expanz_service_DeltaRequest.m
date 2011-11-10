@@ -20,43 +20,61 @@
 @synthesize activityHandle = _activityHandle;
 @synthesize fieldId = _fieldId;
 @synthesize fieldValue = _fieldValue;
+@synthesize encoding = _encoding;
 
 /* ================================================= Class Methods ================================================== */
-+ (id) fromField:(Field*)field {
++ (id) forField:(expanz_model_Field*)field {
     NSString* sessionToken = [SessionContext globalContext].sessionToken;
-    return [[[DeltaRequest alloc] initWithFieldId:field.fieldId fieldValue:field.value
-                                  activityHandle:field.parentActivity.handle sessionToken:sessionToken] autorelease];
+    return [[[DeltaRequest alloc]
+        initWithFieldId:field.fieldId fieldValue:field.value activityHandle:field.parentActivity.handle
+           sessionToken:sessionToken] autorelease];
 }
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
           sessionToken:(NSString*)sessionToken {
-    
-    self = [super init]; 
+
+    return [self initWithFieldId:fieldId fieldValue:fieldValue activityHandle:activityHandle sessionToken:sessionToken
+                        encoding:DeltaEncodingDefault];
+
+}
+
+- (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
+          sessionToken:(NSString*)sessionToken encoding:(DeltaEncoding)encoding {
+
+    self = [super init];
     if (self) {
         _fieldId = [fieldId copy];
         _fieldValue = [fieldValue copy];
         _activityHandle = [activityHandle copy];
         _sessionToken = [sessionToken copy];
+        _encoding = encoding;
     }
-    return self; 
+    return self;
 }
+
 
 /* ================================================= Protocol Methods =============================================== */
 #define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
-<Delta id=\"%@\" value=\"%@\"/></Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
+<Delta id=\"%@\" %@ %@>%@</Delta></Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fieldId, _fieldValue, _sessionToken];
+    NSString* encodingAttribute = _encoding == DeltaEncodingBase64 ? @"encoding=\"BASE64\"" : @"";
+    NSString* valueAttribute = _encoding == DeltaEncodingBase64 ? @"value=\"$longData$\"" :
+        [NSString stringWithFormat:@"value=\"%@\"", _fieldValue];
+    NSString* base64Packet = _encoding == DeltaEncodingBase64 ? _fieldValue : @"";
+
+    return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fieldId, encodingAttribute, valueAttribute,
+                                      base64Packet, _sessionToken];
 }
 
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_sessionToken release]; 
-    [_activityHandle release]; 
-    [_fieldId release]; 
-    [_fieldValue release]; 
+    [_sessionToken release];
+    [_activityHandle release];
+    [_fieldId release];
+    [_fieldValue release];
     [super dealloc];
 }
 

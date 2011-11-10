@@ -533,6 +533,10 @@
 		6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */; };
 		6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */; };
 		6BFACBA414679916007C7264 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */; };
+		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
+		6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
+		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
+		6BFACBA414679916007C726B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -815,6 +819,8 @@
 		6BFACBA414679916007C725C /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7261 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_ActivityInstanceDetail.xml; sourceTree = "<group>"; };
+		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1317,6 +1323,7 @@
 				6BC9F6F71458EBB5001AF204 /* MAObjCRuntime */,
 				6BC9F71B1458EBB5001AF204 /* RaptureXML */,
 				6BC9F7221458EBB6001AF204 /* Reachability */,
+				6BFACBA414679916007C7265 /* NSData+Base64 */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -1549,6 +1556,15 @@
 			);
 			name = SDK;
 			path = "../expanz-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		6BFACBA414679916007C7265 /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				6BFACBA414679916007C7267 /* NSData+Base64.m */,
+				6BFACBA414679916007C7266 /* NSData+Base64.h */,
+			);
+			path = "NSData+Base64";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1859,6 +1875,7 @@
 				6B6C3E1414652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C726B /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1957,6 +1974,7 @@
 				6B6C3E1114652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725D /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2049,6 +2067,7 @@
 				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
 				6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2181,6 +2200,7 @@
 				6B6C3E1314652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C726A /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2331,7 +2351,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2355,7 +2375,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};

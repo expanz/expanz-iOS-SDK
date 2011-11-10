@@ -17,7 +17,7 @@ SPEC_BEGIN(FieldSpec)
 __block Field* field; 
 
 beforeEach(^{
-    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"First Name"
+    field = [[Field alloc] initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"First Name"
                                       hint:@"Try typing your name, doh."]; 
 });
 
@@ -27,7 +27,7 @@ describe(@"Object creation.", ^{
         assertThat([field fieldId], equalTo(@"op1")); 
         assertThatBool([field isNullable], equalToBool(NO)); 
         assertThat([field defaultValue], nilValue()); 
-        assertThat([field datatype], equalTo(@"number"));
+        assertThatInt([field datatype], equalToInt(ExpanzDataTypeNumber));
         assertThat([field hint], equalTo(@"Try typing your name, doh."));
     });
     

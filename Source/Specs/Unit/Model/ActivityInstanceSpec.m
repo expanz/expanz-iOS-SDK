@@ -46,7 +46,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
         it(@"should allow field references to be added.", ^{
             Field* field = [[Field alloc]
-                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"Operand 1"
+                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
             [field release];
@@ -55,7 +55,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
         it(@"should allow a stored field to be retrieved by fieldId", ^{
             Field* field = [[Field alloc]
-                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"Operand 1"
+                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
             [field release];
@@ -92,7 +92,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
             //Yes, if it has one field, that is synched with the server.
             Field* field = [[Field alloc]
-                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"Operand 1"
+                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             //Field is clean.
             assertThatBool(field.isDirty, equalToBool(NO));
@@ -103,7 +103,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
             //No, if one ore more fieds are dirty.
             Field* another = [[Field alloc]
-                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:@"number" label:@"Operand 1"
+                initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             //Make the field dirty.
             [another didFinishEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
