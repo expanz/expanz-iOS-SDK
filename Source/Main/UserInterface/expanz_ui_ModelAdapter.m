@@ -75,12 +75,14 @@
 
     NSArray* keys;
     if ([uiControl isKindOfClass:[UITextField class]]) {
+        LogDebug(@"Getting keys for text field.");
         keys = [_textFieldMappings allKeysForObject:uiControl];
     }
     else if ([uiControl isKindOfClass:[UIImageView class]]) {
+        LogDebug(@"Getting keys for image view.");
         keys = [_imageFieldMappings allKeysForObject:uiControl];
     }
-
+    LogDebug(@"Keys for uiControl: %@", keys);
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
 
 }

@@ -75,7 +75,7 @@
     while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         LogDebug(@"Waiting for model synchronization. . . ");
-        usleep(50000);
+        usleep(5000000);
     }
     MethodInvocationRequest* methodRequest =
         [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
@@ -240,17 +240,23 @@
 - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
                    editingInfo:(NSDictionary*)editingInfo {
 
-    _currentlyEditingImageView.image = image;
-    [picker dismissModalViewControllerAnimated:YES];
+    Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
+    //[field didFinishEditWithValue:image];
 
-    NSString* fieldId = [_modelAdapter fieldFor:_currentlyEditingImageView].fieldId;
-    NSString* data = [UIImageJPEGRepresentation(image, 4.0) base64EncodedString];
+    NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
+
+    NSString* data = [jpegRepresentation base64EncodedString];
     NSString* sessionToken = [SessionContext globalContext].sessionToken;
 
     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
-        initWithFieldId:fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken];
-    //[[self activityClient] sendDeltaWith:deltaRequest delegate:self];
+        initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken
+               encoding:DeltaEncodingBase64];
+    [[self activityClient] sendDeltaWith:deltaRequest delegate:self];
     [deltaRequest release];
+
+    _currentlyEditingImageView.image = image;
+    _currentlyEditingImageView = nil;
+    [picker dismissModalViewControllerAnimated:YES];
 }
 
 

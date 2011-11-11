@@ -66,6 +66,8 @@ activityHandle=\"234234\"><Delta id=\"op1\" encoding=\"BASE64\" value=\"$longDat
             NSString* base64String =
                 [[@"The quick brown fox" dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
 
+            LogDebug(@"%@", base64String);
+
             DeltaRequest* request = [[DeltaRequest alloc]
                 initWithFieldId:@"op1" fieldValue:base64String activityHandle:@"234234" sessionToken:@"tokenXXYY"
                        encoding:DeltaEncodingBase64];
