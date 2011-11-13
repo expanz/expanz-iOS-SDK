@@ -16,7 +16,7 @@
 @class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
-@class expanz_ui_components_ThumbnailImageTableCell;
+@class expanz_ui_components_ThumbnailTableCell;
 @class expanz_ui_ActivityManager;
 
 
@@ -35,7 +35,7 @@
 @property(nonatomic, readonly) expanz_model_ActivityDefinition* activityDefinition;
 @property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailImageTableCell* tableCell;
+@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
 
 
 

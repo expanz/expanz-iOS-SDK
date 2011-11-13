@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
-		6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */; };
-		6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */; };
-		6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */; };
-		6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */; };
+		6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */; };
 		6B07653B146504C300C1A034 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B07653A146504C300C1A034 /* TableCell2.xib */; };
 		6B07653C146504C300C1A034 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B07653A146504C300C1A034 /* TableCell2.xib */; };
 		6B07653D146504C300C1A034 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B07653A146504C300C1A034 /* TableCell2.xib */; };
@@ -559,8 +559,8 @@
 
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailImageTableCell.h; sourceTree = "<group>"; };
-		6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailImageTableCell.m; sourceTree = "<group>"; };
+		6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
+		6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
 		6B07653A146504C300C1A034 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6B353A1F1444276C00C8E6C2 /* Single Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1137,8 +1137,8 @@
 		6BC9F59A1458EB82001AF204 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.h */,
-				6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m */,
+				6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.h */,
+				6B07652C1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m */,
 				6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */,
 				6BC9F59C1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.m */,
 			);
@@ -1872,7 +1872,7 @@
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
 				6BF58DC81444245C0063E887 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88D /* expanz_model_ImageCell.m in Sources */,
-				6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
+				6B0765301464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6B6C3E1414652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */,
@@ -1971,7 +1971,7 @@
 				6BF58DC81444245C0063E880 /* (null) in Sources */,
 				6BF58DC81444245C0063E884 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88A /* expanz_model_ImageCell.m in Sources */,
-				6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
+				6B07652D1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6B6C3E1114652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725D /* Sales_Customer_ViewController.m in Sources */,
@@ -2065,7 +2065,7 @@
 				6BF58DC81444245C0063E881 /* (null) in Sources */,
 				6BF58DC81444245C0063E885 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88B /* expanz_model_ImageCell.m in Sources */,
-				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
+				6B07652E1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */,
@@ -2197,7 +2197,7 @@
 				6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */,
 				6BF58DC81444245C0063E890 /* ImageCellSpec.m in Sources */,
 				6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */,
-				6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailImageTableCell.m in Sources */,
+				6B07652F1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6B6C3E1314652FFB005E7548 /* (null) in Sources */,
 				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */,

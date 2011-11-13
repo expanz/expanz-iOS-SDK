@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_ui_components_ThumbnailImageTableCell : UITableViewCell
+@interface expanz_ui_components_ThumbnailTableCell : UITableViewCell
 
 @property(nonatomic, retain) IBOutlet UIImageView* thumbnail;
 @property(nonatomic, retain) IBOutlet UILabel* mainLabel;
@@ -22,4 +22,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ThumbnailImageTableCell expanz_ui_components_ThumbnailImageTableCell;
+@compatibility_alias ThumbnailTableCell expanz_ui_components_ThumbnailTableCell;

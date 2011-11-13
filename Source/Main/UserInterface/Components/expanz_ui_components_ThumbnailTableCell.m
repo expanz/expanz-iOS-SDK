@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_ui_components_ThumbnailImageTableCell.h"
+#import "expanz_ui_components_ThumbnailTableCell.h"
 
 
-@implementation expanz_ui_components_ThumbnailImageTableCell
+@implementation expanz_ui_components_ThumbnailTableCell
 
 @synthesize mainLabel = _mainLabel;
 @synthesize subLabel = _subLabel;

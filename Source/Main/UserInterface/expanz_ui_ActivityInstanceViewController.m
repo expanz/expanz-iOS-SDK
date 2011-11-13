@@ -26,7 +26,7 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
-#import "expanz_ui_components_ThumbnailImageTableCell.h"
+#import "Components/expanz_ui_components_ThumbnailTableCell.h"
 #import "expanz_ui_ActivityManager.h"
 
 
@@ -190,7 +190,7 @@
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     NSString* reuseId = [dataSet dataId];
 
-    ThumbnailImageTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"TableCell2" owner:self options:nil];
         cell = self.tableCell;
