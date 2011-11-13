@@ -15,13 +15,15 @@
 
 SPEC_BEGIN(ImageCellSpec)
 
+    __block ImageCell* imageCell;
+
     describe(@"Object creation", ^{
         it(@"should allow creation with cellId and imageUrl attributes", ^{
-            ImageCell
-                * imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:@"http://www.zzpics.net/jblues"];
+            imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:@"http://www.zzpics.net/jblues"];
             assertThat(imageCell, notNilValue());
             assertThat(imageCell.cellId, equalTo(@"mugShot"));
             assertThat(imageCell.imageUrl, equalTo(@"http://www.zzpics.net/jblues"));
+            [imageCell release];
         });
     });
 
@@ -29,9 +31,15 @@ SPEC_BEGIN(ImageCellSpec)
 
         it(@"should load the image in an asynchronous thead", ^{
             NSString* url = @"https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/1?";
-            ImageCell* imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:url];
+            imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:url];
             assertWillHappen(imageCell.image != nil);
+            [imageCell release];
         });
     });
+    
+    afterEach(^{
+        [imageCell release];
+    });
+    
 
     SPEC_END

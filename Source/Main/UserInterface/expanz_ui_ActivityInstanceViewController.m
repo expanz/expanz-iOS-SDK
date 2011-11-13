@@ -198,18 +198,16 @@
     }
 
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-
-    TextCell* firstNameCell = (TextCell*) [row cellWithId:@"3"];
-    TextCell* lastNameCell = (TextCell*) [row cellWithId:@"4"];
-    TextCell* emailCell = (TextCell*) [row cellWithId:@"6"];
-    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"8"];
+    TextCell* nameCell = (TextCell*) [row cellWithId:@"2"];
+    TextCell* phoneCell = (TextCell*) [row cellWithId:@"4"];
+    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"1"];
     if (imageCell.hasAskedImageToLoad == NO) {
         [imageCell loadImage];
     }
     [_modelAdapter startObserving:imageCell];
 
-    cell.mainLabel.text = [NSString stringWithFormat:@"%@ %@", firstNameCell.text, lastNameCell.text];
-    cell.subLabel.text = emailCell.text;
+    cell.mainLabel.text = nameCell.text;
+    cell.subLabel.text = phoneCell.text;
     cell.thumbnail.image = imageCell.image;
     cell.backgroundView.backgroundColor =
         (indexPath.row % 2) ? [UIColor colorWithRed:0.942 green:0.942 blue:0.942 alpha:1] :
@@ -221,11 +219,10 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    TextCell* keyCell = (TextCell*) [row cellWithId:@"1"];
 
     ActivityDefinition* edit =
         [[ActivityDefinition alloc] initWithName:_activityDefinition.name title:@"Edit" style:ActivityStyleDetail];
-    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:keyCell.text]) {
+    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
