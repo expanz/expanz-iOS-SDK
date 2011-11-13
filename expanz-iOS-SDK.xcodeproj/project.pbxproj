@@ -505,7 +505,7 @@
 		6BF58DC81444245C0063E877 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E878 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E879 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* DataTypeSpec.m */; };
+		6BF58DC81444245C0063E87D /* ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87C /* ExpanzDataTypeSpec.m */; };
 		6BF58DC81444245C0063E880 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E881 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E882 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -537,6 +537,7 @@
 		6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
+		6BFACBA414679916007C726D /* ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -805,7 +806,7 @@
 		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E871 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E87B /* ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzDataType.h; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E87C /* DataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTypeSpec.m; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E87C /* ExpanzDataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataTypeSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E883 /* expanz_model_BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_BaseCell.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E888 /* expanz_model_BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_BaseCell.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E889 /* expanz_model_ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ImageCell.m; sourceTree = "<group>"; };
@@ -1236,7 +1237,7 @@
 			isa = PBXGroup;
 			children = (
 				6BF58DC81444245C0063E88F /* ImageCellSpec.m */,
-				6BF58DC81444245C0063E87C /* DataTypeSpec.m */,
+				6BF58DC81444245C0063E87C /* ExpanzDataTypeSpec.m */,
 				6BF58DC81444245C0063E851 /* TextCellSpec.m */,
 				6BF58DC81444245C0063E84A /* RowSpec.m */,
 				6BF58DC81444245C0063E847 /* ColumnSpec.m */,
@@ -2190,7 +2191,7 @@
 				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D614626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E879 /* (null) in Sources */,
-				6BF58DC81444245C0063E87D /* DataTypeSpec.m in Sources */,
+				6BF58DC81444245C0063E87D /* ExpanzDataTypeSpec.m in Sources */,
 				6BF58DC81444245C0063E882 /* (null) in Sources */,
 				6BF58DC81444245C0063E886 /* expanz_model_BaseCell.m in Sources */,
 				6BF58DC81444245C0063E88C /* expanz_model_ImageCell.m in Sources */,
@@ -2201,6 +2202,7 @@
 				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726A /* NSData+Base64.m in Sources */,
+				6BFACBA414679916007C726D /* ExpanzDataTypeSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

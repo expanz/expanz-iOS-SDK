@@ -32,5 +32,5 @@ static ExpanzDataType ExpanzDataTypeFromString(NSString* string) {
             raise:NSInternalInconsistencyException format:@"There is no DataType corresponding to the string '%@'",
                                                           string];
     }
-    return 0;
+    return (ExpanzDataType) 0;
 }

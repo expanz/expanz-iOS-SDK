@@ -75,11 +75,16 @@ SPEC_BEGIN(ActivityInstanceSpec)
             [instance addDataSet:dataSet];
         });
 
-        it(@"should allow retrieval of stored DataSets by id", ^{    
+        it(@"should allow retrieval of stored DataSets by id", ^{
             DataSet* dataSet = [[DataSet alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
             [instance addDataSet:dataSet];
             DataSet* retrieved = [instance dataSetWithId:@"customersList"];
             assertThat(retrieved, equalTo(dataSet));
+        });
+        
+        it(@"should return nil when asked for a dataset of an id it isn't storing.", ^{    
+            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
+            assertThat([instance dataSetWithId:@"not.stored"], nilValue());
         });
     });
 

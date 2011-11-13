@@ -10,13 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "../../../Main/Model/ExpanzDataType.h"
+#import "ExpanzDataType.h"
 
 
-SPEC_BEGIN(DataTypeSpec)
+SPEC_BEGIN(ExpanzDataTypeSpec)
 
     describe(@"DataType from NSString", ^{
-    
+
         it(@"should return DataTypeString", ^{
             assertThatInt(ExpanzDataTypeFromString(@"string"), equalToInt(ExpanzDataTypeString));
             assertThatInt(ExpanzDataTypeFromString(@"String"), equalToInt(ExpanzDataTypeString));
@@ -38,18 +38,23 @@ SPEC_BEGIN(DataTypeSpec)
             assertThatInt(ExpanzDataTypeFromString(@"bLoB"), equalToInt(ExpanzDataTypeImage));
         });
 
+    });
+
+    describe(@"Exception handling", ^{
+
+        __block ExpanzDataType dataType;
+
         it(@"should throw NSInternalInconsistencyException for unnampped type", ^{
             @try {
-                ExpanzDataTypeFromString(@"foobar");
+                dataType = ExpanzDataTypeFromString(@"foobar");
                 [NSException raise:@"Should have thrown exception" format:@"foobar isn't an ExpanzDataType"];
             }
             @catch (NSException* e) {
-                //Expected behavior. 
+                //Expected behavior.
                 LogDebug("%@", [e description]);
             }
         });
-        
     });
 
 
-SPEC_END
+    SPEC_END
