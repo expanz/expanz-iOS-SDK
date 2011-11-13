@@ -85,5 +85,19 @@
          landmarkName = "-traverseResponderChainForActivityInstanceViewController"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Source/Specs/Unit/UserInterface/Components/ThumbnailTableCellSpec.mm"
+         timestampString = "342851423.581223"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "describe(@&quot;Properties&quot;, ^{ it(@&quot;should add a mutable mainLabel property to the UITableViewCell&quot;, ^{ UILabel* label = [[UILabel alloc] init]; tableCell = [[ThumbnailTableCell alloc] init]; tableCell.mainLabel = label; expect(label).to.(equal(label)); tableCell.mainLabel should equal(label); }); })"
+         landmarkType = "6">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

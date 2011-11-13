@@ -537,7 +537,9 @@
 		6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
-		6BFACBA414679916007C726D /* ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C726D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */; };
+		6BFACBA414679916007C7270 /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -822,6 +824,7 @@
 		6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_ActivityInstanceDetail.xml; sourceTree = "<group>"; };
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1286,6 +1289,7 @@
 		6BC9F66B1458EB8C001AF204 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */,
 				6BC9F66C1458EB8C001AF204 /* TextFieldTableCellSpec.m */,
 			);
 			path = Components;
@@ -1877,6 +1881,7 @@
 				6BF58DC81444245C0063E897 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726B /* NSData+Base64.m in Sources */,
+				6BFACBA414679916007C7270 /* ThumbnailTableCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2202,7 +2207,8 @@
 				6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725F /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726A /* NSData+Base64.m in Sources */,
-				6BFACBA414679916007C726D /* ExpanzDataTypeSpec.m in Sources */,
+				6BFACBA414679916007C726D /* (null) in Sources */,
+				6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2343,7 +2349,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -2353,7 +2359,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2366,7 +2372,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -2377,7 +2383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};
