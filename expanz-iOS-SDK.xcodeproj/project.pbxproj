@@ -486,10 +486,9 @@
 		6BF58DC81444245C0063E858 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
-		6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
-		6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
-		6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
-		6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */; };
+		6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
 		6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
 		6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
@@ -801,8 +800,6 @@
 		6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAdapterSpecHelper.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E85F /* ModelAdapterSpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelAdapterSpecHelper.h; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E860 /* NSObject+ExpanzConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExpanzConfiguration.h"; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExpanzConfiguration.m"; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKConfiguration.h; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKConfiguration.m; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
@@ -995,8 +992,6 @@
 			children = (
 				6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */,
 				6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */,
-				6BF58DC81444245C0063E861 /* NSObject+ExpanzConfiguration.m */,
-				6BF58DC81444245C0063E860 /* NSObject+ExpanzConfiguration.h */,
 				6BC9F5521458EB82001AF204 /* InfoPlist.strings */,
 				6BC9F5541458EB82001AF204 /* MainWindow.xib */,
 				6BC9F5561458EB82001AF204 /* expanz-iOS-SDK-Info.plist */,
@@ -1969,7 +1964,6 @@
 				6BF58DC81444245C0063E83F /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84E /* (null) in Sources */,
 				6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */,
-				6BF58DC81444245C0063E862 /* NSObject+ExpanzConfiguration.m in Sources */,
 				6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D414626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E877 /* (null) in Sources */,

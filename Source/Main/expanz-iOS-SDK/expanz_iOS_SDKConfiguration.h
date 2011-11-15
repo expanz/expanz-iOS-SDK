@@ -22,6 +22,8 @@
 
 + (expanz_iOS_SDKConfiguration*) globalConfiguration;
 
++ (void) setConfigurationFile:(NSString*)fileName;
+
 - (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site;
 
 - (NSURL*) createSessionUrl;

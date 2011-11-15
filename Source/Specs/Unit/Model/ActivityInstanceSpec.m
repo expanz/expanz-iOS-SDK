@@ -83,7 +83,6 @@ SPEC_BEGIN(ActivityInstanceSpec)
         });
         
         it(@"should return nil when asked for a dataset of an id not being stored", ^{
-            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
             assertThat([instance dataSetWithId:@"not.stored"], nilValue());
         });
     });

@@ -11,6 +11,7 @@
 
 
 #import "expanz_iOS_SDKConfiguration.h"
+#import "RXMLElement.h"
 
 
 @implementation expanz_iOS_SDKConfiguration
@@ -31,6 +32,24 @@ static SDKConfiguration* _globalConfiguration;
 + (SDKConfiguration*) globalConfiguration {
     return [[_globalConfiguration retain] autorelease];
 }
+
++ (void) setConfigurationFile:(NSString*)fileName {
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
+    NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    if (xmlString == nil) {
+        [NSException raise:NSInternalInconsistencyException format:@"Configuration file named '%@.xml' not found",
+                fileName];
+    }
+    RXMLElement* element = [RXMLElement elementFromXMLString:xmlString];
+
+    NSString* baseUrl = [element attribute:@"URL"];
+    NSString* preferredSite = [element attribute:@"preferredSite"];
+
+    SDKConfiguration* configuration = [[SDKConfiguration alloc] initWithBaseUrl:baseUrl preferredSite:preferredSite];
+    [SDKConfiguration setGlobalConfiguration:configuration];
+    [configuration release];
+}
+
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site {
@@ -66,4 +85,15 @@ static SDKConfiguration* _globalConfiguration;
     [_preferredSite release];
     [super dealloc];
 }
+
+
+/* ================================================== Private Methods =============================================== */
+
+/**
+* Allows setting through user defined runtime attributes, in Interface Builder.
+*/
+- (void) setConfigurationFile:(NSString*)fileName {
+    [SDKConfiguration setConfigurationFile:fileName];
+}
+
 @end
