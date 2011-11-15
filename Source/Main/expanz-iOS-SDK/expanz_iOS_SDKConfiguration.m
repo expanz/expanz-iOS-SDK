@@ -37,7 +37,7 @@ static SDKConfiguration* _globalConfiguration;
     NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
     NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     if (xmlString == nil) {
-        [NSException raise:NSInternalInconsistencyException format:@"Configuration file named '%@.xml' not found",
+        [NSException raise:NSInternalInconsistencyException format:@"Configuration file named '%@.xml' not found.",
                 fileName];
     }
     RXMLElement* element = [RXMLElement elementFromXMLString:xmlString];
@@ -63,15 +63,11 @@ static SDKConfiguration* _globalConfiguration;
 
 /* ================================================ Interface Methods =============================================== */
 - (NSURL*) createSessionUrl {
-    NSURL* url = [[NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]] retain];
-    LogDebug(@"CreateSession URL: %@", url);
-    return url;
+    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]] retain];
 }
 
 - (NSURL*) execUrl {
-    NSURL* url = [[NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]] retain];
-    LogDebug(@"ExecX URL: %@", url);
-    return url;
+    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]] retain];
 }
 
 

@@ -486,9 +486,9 @@
 		6BF58DC81444245C0063E858 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E85C /* ModelAdapterSpecHelper.m */; };
-		6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E863 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E864 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BF58DC81444245C0063E865 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E868 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
 		6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
 		6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E867 /* expanz_iOS_SDKConfiguration.m */; };
@@ -539,6 +539,9 @@
 		6BFACBA414679916007C726D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */; };
 		6BFACBA414679916007C7270 /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */; };
+		6BFACBA414679916007C7273 /* SDKConfigurationSpec.m in Resources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */; };
+		6BFACBA414679916007C7276 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -822,6 +825,7 @@
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -914,6 +918,7 @@
 		6B0D44CE145FA139006F16A7 /* expanz-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */,
 				6BF58DC81444245C0063E854 /* SDKAppDelegateSpec.m */,
 			);
 			path = "expanz-iOS-SDK";
@@ -1698,6 +1703,7 @@
 				6BEEE0BF14655D0C005CFA19 /* blues.jpg in Resources */,
 				6B3CF8851466AAE700FD6309 /* Sales.Customer.xib in Resources */,
 				6BFACBA414679916007C7264 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
+				6BFACBA414679916007C7273 /* SDKConfigurationSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1865,7 +1871,7 @@
 				6BF58DC81444245C0063E842 /* expanz_model_TextCell.m in Sources */,
 				6BC12385145E962D00C647BA /* expanz_model_Column.m in Sources */,
 				6BF58DC81444245C0063E85B /* (null) in Sources */,
-				6BF58DC81444245C0063E865 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E865 /* (null) in Sources */,
 				6BF58DC81444245C0063E86B /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D714626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BD295891463694C00148B07 /* ModelAdapterSpecHelper.m in Sources */,
@@ -1877,6 +1883,7 @@
 				6BFACBA414679916007C7260 /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726B /* NSData+Base64.m in Sources */,
 				6BFACBA414679916007C7270 /* ThumbnailTableCellSpec.m in Sources */,
+				6BFACBA414679916007C7276 /* SDKConfigurationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2056,7 +2063,7 @@
 				6BF58DC81444245C0063E840 /* expanz_model_TextCell.m in Sources */,
 				6BF58DC81444245C0063E84F /* (null) in Sources */,
 				6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */,
-				6BF58DC81444245C0063E863 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E863 /* (null) in Sources */,
 				6BF58DC81444245C0063E869 /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D514626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E878 /* (null) in Sources */,
@@ -2186,7 +2193,7 @@
 				6BF58DC81444245C0063E855 /* SDKAppDelegateSpec.m in Sources */,
 				6BF58DC81444245C0063E858 /* (null) in Sources */,
 				6BF58DC81444245C0063E85D /* ModelAdapterSpecHelper.m in Sources */,
-				6BF58DC81444245C0063E864 /* NSObject+ExpanzConfiguration.m in Sources */,
+				6BF58DC81444245C0063E864 /* (null) in Sources */,
 				6BF58DC81444245C0063E86A /* expanz_iOS_SDKConfiguration.m in Sources */,
 				6B7596D614626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */,
 				6BF58DC81444245C0063E879 /* (null) in Sources */,
@@ -2203,6 +2210,7 @@
 				6BFACBA414679916007C726A /* NSData+Base64.m in Sources */,
 				6BFACBA414679916007C726D /* (null) in Sources */,
 				6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */,
+				6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2353,7 +2361,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2377,7 +2385,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libz ${SDKROOT}/usr/include/libxml2";
 				VALIDATE_PRODUCT = YES;
 			};
