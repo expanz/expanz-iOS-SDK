@@ -542,6 +542,8 @@
 		6BFACBA414679916007C7273 /* SDKConfigurationSpec.m in Resources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */; };
 		6BFACBA414679916007C7276 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */; };
+		6BFACBA414679916007C7279 /* UITableView+DataPublicationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */; };
+		6BFACBA414679916007C727A /* UITableView+DataPublicationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -826,6 +828,7 @@
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublicationSpec.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1282,6 +1285,7 @@
 				6BC9F66B1458EB8C001AF204 /* Components */,
 				6BC9F66D1458EB8C001AF204 /* LoginViewControllerSpec.m */,
 				6BC9F66E1458EB8C001AF204 /* ModelAdapterSpec.m */,
+				6BFACBA414679916007C7277 /* Categories */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -1570,6 +1574,14 @@
 				6BFACBA414679916007C7266 /* NSData+Base64.h */,
 			);
 			path = "NSData+Base64";
+			sourceTree = "<group>";
+		};
+		6BFACBA414679916007C7277 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1884,6 +1896,7 @@
 				6BFACBA414679916007C726B /* NSData+Base64.m in Sources */,
 				6BFACBA414679916007C7270 /* ThumbnailTableCellSpec.m in Sources */,
 				6BFACBA414679916007C7276 /* SDKConfigurationSpec.m in Sources */,
+				6BFACBA414679916007C727A /* UITableView+DataPublicationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2211,6 +2224,7 @@
 				6BFACBA414679916007C726D /* (null) in Sources */,
 				6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */,
 				6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */,
+				6BFACBA414679916007C7279 /* UITableView+DataPublicationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
