@@ -661,6 +661,10 @@
 		6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */; };
 		6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */; };
 		6BFACBA414679916007C7279 /* UITableView+DataPublicationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */; };
+		6BFACBA414679916007C727B /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */; };
+		6BFACBA414679916007C727C /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */; };
+		6BFACBA414679916007C727D /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */; };
+		6BFACBA414679916007C727E /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1061,6 +1065,7 @@
 		6BFACBA414679916007C726E /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7274 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7278 /* UITableView+DataPublicationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublicationSpec.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKExceptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1233,6 +1238,7 @@
 				6BC9F5581458EB82001AF204 /* expanz_iOS_SDKAppDelegate.h */,
 				6BC9F5591458EB82001AF204 /* expanz_iOS_SDKAppDelegate.m */,
 				6BC9F55A1458EB82001AF204 /* expanz_iOS_SDKExceptions.h */,
+				6BFACBA414679916007C727A /* expanz_iOS_SDKExceptions.m */,
 				6BC9F55B1458EB82001AF204 /* expanz_iOS_SDKModule.h */,
 				6BC9F55C1458EB82001AF204 /* expanz_iOS_SDKModule.m */,
 				6BC9F55D1458EB82001AF204 /* main.m */,
@@ -2213,6 +2219,7 @@
 				6B1E5EBA147344D7004145D0 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6B1E5EBB147344D7004145D0 /* expanz_ui_LoginViewController.m in Sources */,
 				6B1E5EBC147344D7004145D0 /* expanz_ui_ModelAdapter.m in Sources */,
+				6BFACBA414679916007C727E /* expanz_iOS_SDKExceptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2296,6 +2303,7 @@
 				6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725D /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */,
+				6BFACBA414679916007C727B /* expanz_iOS_SDKExceptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2379,6 +2387,7 @@
 				6BF58DC81444245C0063E895 /* expanz_ui_ActivityManager.m in Sources */,
 				6BFACBA414679916007C725E /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C7269 /* NSData+Base64.m in Sources */,
+				6BFACBA414679916007C727C /* expanz_iOS_SDKExceptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2501,6 +2510,7 @@
 				6BFACBA414679916007C726F /* ThumbnailTableCellSpec.m in Sources */,
 				6BFACBA414679916007C7275 /* SDKConfigurationSpec.m in Sources */,
 				6BFACBA414679916007C7279 /* UITableView+DataPublicationSpec.m in Sources */,
+				6BFACBA414679916007C727D /* expanz_iOS_SDKExceptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2879,6 +2889,7 @@
 				6BD543621473595F0014F148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BF58B86144410A50063E805 /* Build configuration list for PBXNativeTarget "Instrumented" */ = {
 			isa = XCConfigurationList;

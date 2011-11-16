@@ -9,8 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Foundation/Foundation.h>
+#import "expanz_iOS_SDKExceptions.h"
 
-extern NSString * const ExXmlValidationException;
-extern NSString * const ExModelBindingException;
-
+NSString * const ExXmlValidationException = @"ExXmlValidationException";
+NSString * const ExModelBindingException = @"ExModelBindingException";
