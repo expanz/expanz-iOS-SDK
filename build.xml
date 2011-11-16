@@ -30,6 +30,13 @@
 
     <target name="clean" depends="--clean"/>
 
+    <target name="release">
+        <exec executable="xcodebuild" failonerror="true">
+            <arg line="-target expanz-iOS-SDK"/>
+        </exec>
+    </target>
+
+
     <target name="fast">
         <property name="fast" value="yes"/>
     </target>

@@ -14,24 +14,34 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Examples.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>Instrumented.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Single Test.xcscheme</key>
+		<key>framework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>library.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>expanz-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6B1E5E8414734404004145D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6B35397A1444275A00C8E6C2</key>
 		<dict>
 			<key>primary</key>
@@ -83,6 +93,16 @@
 			<true/>
 		</dict>
 		<key>6BCAFBBA14317B1C00575280</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BD5435B147358D40014F148</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BD5435F1473595F0014F148</key>
 		<dict>
 			<key>primary</key>
 			<true/>
