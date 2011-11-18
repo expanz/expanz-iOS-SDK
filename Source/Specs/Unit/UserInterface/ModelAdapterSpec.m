@@ -15,8 +15,10 @@
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_DataSet.h"
-#import "../../../Main/UserInterface/Examples/ESA_Sales_Calc_ViewController.h"
 #import "ModelAdapterSpecHelper.h"
+
+//TODO: Should have it's own test fixture. 
+#import "ESA_Sales_Calc_ViewController.h"
 #import "ESA_Sales_CustomerViewController.h"
 
 
