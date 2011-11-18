@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>expanz-iOS-SDK-StaticLib copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>framework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -93,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>6BCAFBBA14317B1C00575280</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BCF17E11476240400B068B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
