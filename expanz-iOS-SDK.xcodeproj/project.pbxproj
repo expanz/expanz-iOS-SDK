@@ -14,6 +14,7 @@
 				6BD54363147359930014F148 /* Build Static Lib */,
 				6BD5436414735A4C0014F148 /* Assemble Framework */,
 				6BD5436514735AD40014F148 /* Copy Headers */,
+				6B68E28E1473D490005F9021 /* Copy Resources */,
 			);
 			dependencies = (
 			);
@@ -79,6 +80,100 @@
 		6B3CF8841466AAE700FD6309 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CF8811466AAE700FD6309 /* Sales.Customer.xib */; };
 		6B3F1CF1145F8EEE00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
 		6B3F1CF2145F8EEF00BAD0DA /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E835 /* expanz_model_Column.m */; };
+		6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
+		6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
+		6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
+		6B68E2931473D4EE005F9021 /* ASIDataDecompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C51458EBB5001AF204 /* ASIDataDecompressor.h */; };
+		6B68E2941473D4EE005F9021 /* ASIDownloadCache.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C71458EBB5001AF204 /* ASIDownloadCache.h */; };
+		6B68E2951473D4EE005F9021 /* ASIFormDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C91458EBB5001AF204 /* ASIFormDataRequest.h */; };
+		6B68E2961473D4EE005F9021 /* ASIHTTPRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CB1458EBB5001AF204 /* ASIHTTPRequest.h */; };
+		6B68E2971473D4EE005F9021 /* ASIHTTPRequestConfig.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CD1458EBB5001AF204 /* ASIHTTPRequestConfig.h */; };
+		6B68E2981473D4EE005F9021 /* ASIHTTPRequestDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CE1458EBB5001AF204 /* ASIHTTPRequestDelegate.h */; };
+		6B68E2991473D4EE005F9021 /* ASIInputStream.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CF1458EBB5001AF204 /* ASIInputStream.h */; };
+		6B68E29A1473D4EE005F9021 /* ASINetworkQueue.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D11458EBB5001AF204 /* ASINetworkQueue.h */; };
+		6B68E29B1473D4EE005F9021 /* ASIProgressDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D31458EBB5001AF204 /* ASIProgressDelegate.h */; };
+		6B68E29C1473D4EE005F9021 /* ASIWebPageRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D51458EBB5001AF204 /* ASIWebPageRequest.h */; };
+		6B68E29D1473D4EE005F9021 /* ASICloudFilesCDNRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D81458EBB5001AF204 /* ASICloudFilesCDNRequest.h */; };
+		6B68E29E1473D4EE005F9021 /* ASICloudFilesContainer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DA1458EBB5001AF204 /* ASICloudFilesContainer.h */; };
+		6B68E29F1473D4EE005F9021 /* ASICloudFilesContainerRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DC1458EBB5001AF204 /* ASICloudFilesContainerRequest.h */; };
+		6B68E2A01473D4EE005F9021 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DE1458EBB5001AF204 /* ASICloudFilesContainerXMLParserDelegate.h */; };
+		6B68E2A11473D4EE005F9021 /* ASICloudFilesObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E01458EBB5001AF204 /* ASICloudFilesObject.h */; };
+		6B68E2A21473D4EE005F9021 /* ASICloudFilesObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E21458EBB5001AF204 /* ASICloudFilesObjectRequest.h */; };
+		6B68E2A31473D4EE005F9021 /* ASICloudFilesRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E41458EBB5001AF204 /* ASICloudFilesRequest.h */; };
+		6B68E2A41473D4EE005F9021 /* ASINSXMLParserCompat.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E71458EBB5001AF204 /* ASINSXMLParserCompat.h */; };
+		6B68E2A51473D4EE005F9021 /* ASIS3Bucket.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E81458EBB5001AF204 /* ASIS3Bucket.h */; };
+		6B68E2A61473D4EE005F9021 /* ASIS3BucketObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EA1458EBB5001AF204 /* ASIS3BucketObject.h */; };
+		6B68E2A71473D4EE005F9021 /* ASIS3BucketRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EC1458EBB5001AF204 /* ASIS3BucketRequest.h */; };
+		6B68E2A81473D4EE005F9021 /* ASIS3ObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EE1458EBB5001AF204 /* ASIS3ObjectRequest.h */; };
+		6B68E2A91473D4EE005F9021 /* ASIS3Request.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F01458EBB5001AF204 /* ASIS3Request.h */; };
+		6B68E2AA1473D4EE005F9021 /* ASIS3ServiceRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F21458EBB5001AF204 /* ASIS3ServiceRequest.h */; };
+		6B68E2AB1473D4EE005F9021 /* Logging.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F61458EBB5001AF204 /* Logging.h */; };
+		6B68E2AC1473D4EE005F9021 /* MARTNSObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */; };
+		6B68E2AD1473D4EE005F9021 /* RTIvar.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FC1458EBB5001AF204 /* RTIvar.h */; };
+		6B68E2AE1473D4EE005F9021 /* RTMethod.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FE1458EBB5001AF204 /* RTMethod.h */; };
+		6B68E2AF1473D4EE005F9021 /* RTProperty.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7001458EBB5001AF204 /* RTProperty.h */; };
+		6B68E2B01473D4EE005F9021 /* RTProtocol.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7021458EBB5001AF204 /* RTProtocol.h */; };
+		6B68E2B11473D4EE005F9021 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
+		6B68E2B21473D4EE005F9021 /* NSDataAdditions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71C1458EBB6001AF204 /* NSDataAdditions.h */; };
+		6B68E2B31473D4EE005F9021 /* RXMLElement.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71E1458EBB6001AF204 /* RXMLElement.h */; };
+		6B68E2B41473D4EE005F9021 /* TBXML.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
+		6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
+		6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
+		6B68E2B71473D50F005F9021 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */; };
+		6B68E2B81473D50F005F9021 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5581458EB82001AF204 /* expanz_iOS_SDKAppDelegate.h */; };
+		6B68E2B91473D50F005F9021 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55A1458EB82001AF204 /* expanz_iOS_SDKExceptions.h */; };
+		6B68E2BA1473D50F005F9021 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55B1458EB82001AF204 /* expanz_iOS_SDKModule.h */; };
+		6B68E2BB1473D50F005F9021 /* ExpanzActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */; };
+		6B68E2BC1473D50F005F9021 /* expanz_model_ImageCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */; };
+		6B68E2BD1473D50F005F9021 /* expanz_model_BaseCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E888 /* expanz_model_BaseCell.h */; };
+		6B68E2BE1473D50F005F9021 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87B /* ExpanzDataType.h */; };
+		6B68E2BF1473D50F005F9021 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E843 /* expanz_model_TextCell.h */; };
+		6B68E2C01473D50F005F9021 /* expanz_model_Row.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E83D /* expanz_model_Row.h */; };
+		6B68E2C11473D50F005F9021 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E837 /* expanz_model_Column.h */; };
+		6B68E2C21473D50F005F9021 /* expanz_model_DataSet.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E834 /* expanz_model_DataSet.h */; };
+		6B68E2C31473D50F005F9021 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55F1458EB82001AF204 /* expanz_model_ActivityDefinition.h */; };
+		6B68E2C41473D50F005F9021 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5611458EB82001AF204 /* expanz_model_ActivityInstance.h */; };
+		6B68E2C51473D50F005F9021 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5631458EB82001AF204 /* expanz_model_Field.h */; };
+		6B68E2C61473D50F005F9021 /* expanz_model_Menu.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5651458EB82001AF204 /* expanz_model_Menu.h */; };
+		6B68E2C71473D50F005F9021 /* expanz_model_Message.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5671458EB82001AF204 /* expanz_model_Message.h */; };
+		6B68E2C81473D50F005F9021 /* expanz_model_ProcessArea.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5691458EB82001AF204 /* expanz_model_ProcessArea.h */; };
+		6B68E2C91473D50F005F9021 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F56B1458EB82001AF204 /* expanz_model_SessionContext.h */; };
+		6B68E2CA1473D50F005F9021 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F56D1458EB82001AF204 /* expanz_model_UserRole.h */; };
+		6B68E2CB1473D50F005F9021 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE267A145CEF0800052700 /* expanz_service_ActivityClient.h */; };
+		6B68E2CC1473D50F005F9021 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE267B145CEF0800052700 /* expanz_service_XmlPostActivityClient.h */; };
+		6B68E2CD1473D50F005F9021 /* expanz_service_CreateActivityRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE267E145CEF0800052700 /* expanz_service_CreateActivityRequest.h */; };
+		6B68E2CE1473D50F005F9021 /* expanz_service_DataPublicationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE2680145CEF0800052700 /* expanz_service_DataPublicationRequest.h */; };
+		6B68E2CF1473D50F005F9021 /* expanz_service_DeltaRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE2682145CEF0800052700 /* expanz_service_DeltaRequest.h */; };
+		6B68E2D01473D50F005F9021 /* expanz_service_MethodInvocationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE2684145CEF0800052700 /* expanz_service_MethodInvocationRequest.h */; };
+		6B68E2D11473D50F005F9021 /* RXMLElement+ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE2686145CEF0800052700 /* RXMLElement+ActivityInstance.h */; };
+		6B68E2D21473D50F005F9021 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5821458EB82001AF204 /* expanz_service_LoginClient.h */; };
+		6B68E2D31473D50F005F9021 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5831458EB82001AF204 /* expanz_service_XmlPostLoginClient.h */; };
+		6B68E2D41473D50F005F9021 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5861458EB82001AF204 /* expanz_service_SessionRequest.h */; };
+		6B68E2D51473D50F005F9021 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5881458EB82001AF204 /* RXMLElement+SessionContext.h */; };
+		6B68E2D61473D50F005F9021 /* expanz_service_SessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F58B1458EB82001AF204 /* expanz_service_SessionDataClient.h */; };
+		6B68E2D71473D50F005F9021 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F58C1458EB82001AF204 /* expanz_service_XmlPostSessionDataClient.h */; };
+		6B68E2D81473D50F005F9021 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F58F1458EB82001AF204 /* expanz_service_SessionDataRequest.h */; };
+		6B68E2D91473D50F005F9021 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5911458EB82001AF204 /* RXMLElement+SessionData.h */; };
+		6B68E2DA1473D50F005F9021 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F57F1458EB82001AF204 /* expanz_service_XmlPostWebService.h */; };
+		6B68E2DB1473D50F005F9021 /* expanz_ui_ActivityManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */; };
+		6B68E2DC1473D50F005F9021 /* UITableView+DataPublication.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E82E /* UITableView+DataPublication.h */; };
+		6B68E2DD1473D50F005F9021 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B07652B1464F7A300C1A034 /* expanz_ui_components_ThumbnailTableCell.h */; };
+		6B68E2DE1473D50F005F9021 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F59B1458EB82001AF204 /* expanz_ui_components_TextFieldTableCell.h */; };
+		6B68E2DF1473D50F005F9021 /* Sales_Customer_ViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7261 /* Sales_Customer_ViewController.h */; };
+		6B68E2E01473D50F005F9021 /* ESA_Sales_Calc_ViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F59E1458EB82001AF204 /* ESA_Sales_Calc_ViewController.h */; };
+		6B68E2E11473D50F005F9021 /* ESA_Sales_CustomerViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E80B /* ESA_Sales_CustomerViewController.h */; };
+		6B68E2E21473D50F005F9021 /* Browse_Sales_Customer_ViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7596D114626CD1008CFFAF /* Browse_Sales_Customer_ViewController.h */; };
+		6B68E2E31473D50F005F9021 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A01458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6B68E2E41473D50F005F9021 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A21458EB82001AF204 /* expanz_ui_ActivityMenuViewController.h */; };
+		6B68E2E51473D50F005F9021 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A41458EB82001AF204 /* expanz_ui_LoginViewController.h */; };
+		6B68E2E61473D50F005F9021 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A61458EB82001AF204 /* expanz_ui_ModelAdapter.h */; };
+		6B68E2E71473D50F005F9021 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A91458EB82001AF204 /* CAFilter+Unlock.h */; };
+		6B68E2E81473D50F005F9021 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5AA1458EB82001AF204 /* xml_Serializable.h */; };
+		6B68E2E91473D53B005F9021 /* MainWindow.xib in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5541458EB82001AF204 /* MainWindow.xib */; };
+		6B68E2EA1473D53B005F9021 /* ActivityMenu.xib in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5951458EB82001AF204 /* ActivityMenu.xib */; };
+		6B68E2EB1473D53B005F9021 /* Login.xib in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
+		6B68E2EC1473D53B005F9021 /* TableCell2.xib in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6B07653A146504C300C1A034 /* TableCell2.xib */; };
+		6B68E2ED1473D546005F9021 /* background.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B7596D414626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
 		6B7596D514626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7596D214626CD1008CFFAF /* Browse_Sales_Customer_ViewController.m */; };
@@ -463,114 +558,6 @@
 		6BD5435514734FE80014F148 /* TBXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
 		6BD5435614734FE80014F148 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6BD5435714734FE80014F148 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
-		6BD5436614735B120014F148 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
-		6BD5436714735B120014F148 /* ASIAuthenticationDialog.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; };
-		6BD5436814735B120014F148 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
-		6BD5436914735B120014F148 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
-		6BD5436A14735B120014F148 /* ASIDataCompressor.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; };
-		6BD5436B14735B120014F148 /* ASIDataDecompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C51458EBB5001AF204 /* ASIDataDecompressor.h */; };
-		6BD5436C14735B120014F148 /* ASIDataDecompressor.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C61458EBB5001AF204 /* ASIDataDecompressor.m */; };
-		6BD5436D14735B120014F148 /* ASIDownloadCache.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C71458EBB5001AF204 /* ASIDownloadCache.h */; };
-		6BD5436E14735B120014F148 /* ASIDownloadCache.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C81458EBB5001AF204 /* ASIDownloadCache.m */; };
-		6BD5436F14735B120014F148 /* ASIFormDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C91458EBB5001AF204 /* ASIFormDataRequest.h */; };
-		6BD5437014735B120014F148 /* ASIFormDataRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CA1458EBB5001AF204 /* ASIFormDataRequest.m */; };
-		6BD5437114735B120014F148 /* ASIHTTPRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CB1458EBB5001AF204 /* ASIHTTPRequest.h */; };
-		6BD5437214735B120014F148 /* ASIHTTPRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CC1458EBB5001AF204 /* ASIHTTPRequest.m */; };
-		6BD5437314735B120014F148 /* ASIHTTPRequestConfig.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CD1458EBB5001AF204 /* ASIHTTPRequestConfig.h */; };
-		6BD5437414735B120014F148 /* ASIHTTPRequestDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CE1458EBB5001AF204 /* ASIHTTPRequestDelegate.h */; };
-		6BD5437514735B120014F148 /* ASIInputStream.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CF1458EBB5001AF204 /* ASIInputStream.h */; };
-		6BD5437614735B120014F148 /* ASIInputStream.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D01458EBB5001AF204 /* ASIInputStream.m */; };
-		6BD5437714735B120014F148 /* ASINetworkQueue.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D11458EBB5001AF204 /* ASINetworkQueue.h */; };
-		6BD5437814735B120014F148 /* ASINetworkQueue.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D21458EBB5001AF204 /* ASINetworkQueue.m */; };
-		6BD5437914735B120014F148 /* ASIProgressDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D31458EBB5001AF204 /* ASIProgressDelegate.h */; };
-		6BD5437A14735B120014F148 /* ASIWebPageRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D51458EBB5001AF204 /* ASIWebPageRequest.h */; };
-		6BD5437B14735B120014F148 /* ASIWebPageRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D61458EBB5001AF204 /* ASIWebPageRequest.m */; };
-		6BD5437C14735B120014F148 /* ASICloudFilesCDNRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D81458EBB5001AF204 /* ASICloudFilesCDNRequest.h */; };
-		6BD5437D14735B120014F148 /* ASICloudFilesCDNRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D91458EBB5001AF204 /* ASICloudFilesCDNRequest.m */; };
-		6BD5437E14735B120014F148 /* ASICloudFilesContainer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DA1458EBB5001AF204 /* ASICloudFilesContainer.h */; };
-		6BD5437F14735B120014F148 /* ASICloudFilesContainer.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DB1458EBB5001AF204 /* ASICloudFilesContainer.m */; };
-		6BD5438014735B120014F148 /* ASICloudFilesContainerRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DC1458EBB5001AF204 /* ASICloudFilesContainerRequest.h */; };
-		6BD5438114735B120014F148 /* ASICloudFilesContainerRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DD1458EBB5001AF204 /* ASICloudFilesContainerRequest.m */; };
-		6BD5438214735B120014F148 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DE1458EBB5001AF204 /* ASICloudFilesContainerXMLParserDelegate.h */; };
-		6BD5438314735B120014F148 /* ASICloudFilesContainerXMLParserDelegate.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DF1458EBB5001AF204 /* ASICloudFilesContainerXMLParserDelegate.m */; };
-		6BD5438414735B120014F148 /* ASICloudFilesObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E01458EBB5001AF204 /* ASICloudFilesObject.h */; };
-		6BD5438514735B120014F148 /* ASICloudFilesObject.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E11458EBB5001AF204 /* ASICloudFilesObject.m */; };
-		6BD5438614735B120014F148 /* ASICloudFilesObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E21458EBB5001AF204 /* ASICloudFilesObjectRequest.h */; };
-		6BD5438714735B120014F148 /* ASICloudFilesObjectRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E31458EBB5001AF204 /* ASICloudFilesObjectRequest.m */; };
-		6BD5438814735B120014F148 /* ASICloudFilesRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E41458EBB5001AF204 /* ASICloudFilesRequest.h */; };
-		6BD5438914735B120014F148 /* ASICloudFilesRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E51458EBB5001AF204 /* ASICloudFilesRequest.m */; };
-		6BD5438A14735B120014F148 /* ASINSXMLParserCompat.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E71458EBB5001AF204 /* ASINSXMLParserCompat.h */; };
-		6BD5438B14735B120014F148 /* ASIS3Bucket.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E81458EBB5001AF204 /* ASIS3Bucket.h */; };
-		6BD5438C14735B120014F148 /* ASIS3Bucket.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E91458EBB5001AF204 /* ASIS3Bucket.m */; };
-		6BD5438D14735B120014F148 /* ASIS3BucketObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EA1458EBB5001AF204 /* ASIS3BucketObject.h */; };
-		6BD5438E14735B120014F148 /* ASIS3BucketObject.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EB1458EBB5001AF204 /* ASIS3BucketObject.m */; };
-		6BD5438F14735B120014F148 /* ASIS3BucketRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EC1458EBB5001AF204 /* ASIS3BucketRequest.h */; };
-		6BD5439014735B120014F148 /* ASIS3BucketRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6ED1458EBB5001AF204 /* ASIS3BucketRequest.m */; };
-		6BD5439114735B120014F148 /* ASIS3ObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EE1458EBB5001AF204 /* ASIS3ObjectRequest.h */; };
-		6BD5439214735B120014F148 /* ASIS3ObjectRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EF1458EBB5001AF204 /* ASIS3ObjectRequest.m */; };
-		6BD5439314735B120014F148 /* ASIS3Request.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F01458EBB5001AF204 /* ASIS3Request.h */; };
-		6BD5439414735B120014F148 /* ASIS3Request.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F11458EBB5001AF204 /* ASIS3Request.m */; };
-		6BD5439514735B120014F148 /* ASIS3ServiceRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F21458EBB5001AF204 /* ASIS3ServiceRequest.h */; };
-		6BD5439614735B120014F148 /* ASIS3ServiceRequest.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F31458EBB5001AF204 /* ASIS3ServiceRequest.m */; };
-		6BD5439714735B120014F148 /* Logging.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F61458EBB5001AF204 /* Logging.h */; };
-		6BD5439814735B120014F148 /* LICENSE in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
-		6BD5439914735B120014F148 /* MARTNSObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */; };
-		6BD5439A14735B120014F148 /* MARTNSObject.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FA1458EBB5001AF204 /* MARTNSObject.m */; };
-		6BD5439B14735B120014F148 /* README.markdown in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FB1458EBB5001AF204 /* README.markdown */; };
-		6BD5439C14735B120014F148 /* RTIvar.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FC1458EBB5001AF204 /* RTIvar.h */; };
-		6BD5439D14735B120014F148 /* RTIvar.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FD1458EBB5001AF204 /* RTIvar.m */; };
-		6BD5439E14735B120014F148 /* RTMethod.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FE1458EBB5001AF204 /* RTMethod.h */; };
-		6BD5439F14735B120014F148 /* RTMethod.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FF1458EBB5001AF204 /* RTMethod.m */; };
-		6BD543A014735B120014F148 /* RTProperty.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7001458EBB5001AF204 /* RTProperty.h */; };
-		6BD543A114735B120014F148 /* RTProperty.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7011458EBB5001AF204 /* RTProperty.m */; };
-		6BD543A214735B120014F148 /* RTProtocol.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7021458EBB5001AF204 /* RTProtocol.h */; };
-		6BD543A314735B120014F148 /* RTProtocol.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7031458EBB5001AF204 /* RTProtocol.m */; };
-		6BD543A414735B120014F148 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
-		6BD543A514735B120014F148 /* RTUnregisteredClass.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */; };
-		6BD543A614735B120014F148 /* NSDataAdditions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71C1458EBB6001AF204 /* NSDataAdditions.h */; };
-		6BD543A714735B120014F148 /* NSDataAdditions.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71D1458EBB6001AF204 /* NSDataAdditions.m */; };
-		6BD543A814735B120014F148 /* RXMLElement.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71E1458EBB6001AF204 /* RXMLElement.h */; };
-		6BD543A914735B120014F148 /* RXMLElement.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71F1458EBB6001AF204 /* RXMLElement.m */; };
-		6BD543AA14735B120014F148 /* TBXML.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
-		6BD543AB14735B120014F148 /* TBXML.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7211458EBB6001AF204 /* TBXML.m */; };
-		6BD543AC14735B120014F148 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
-		6BD543AD14735B120014F148 /* Reachability.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7241458EBB6001AF204 /* Reachability.m */; };
-		6BD543AE14735B120014F148 /* NSData+Base64.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
-		6BD543AF14735B120014F148 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
-		6BD543B014735B270014F148 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E866 /* expanz_iOS_SDKConfiguration.h */; };
-		6BD543B114735B270014F148 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5581458EB82001AF204 /* expanz_iOS_SDKAppDelegate.h */; };
-		6BD543B214735B270014F148 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55A1458EB82001AF204 /* expanz_iOS_SDKExceptions.h */; };
-		6BD543B314735B270014F148 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55B1458EB82001AF204 /* expanz_iOS_SDKModule.h */; };
-		6BD543B414735B270014F148 /* ExpanzActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E899 /* ExpanzActivityStyle.h */; };
-		6BD543B514735B270014F148 /* expanz_model_ImageCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E88E /* expanz_model_ImageCell.h */; };
-		6BD543B614735B270014F148 /* expanz_model_BaseCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E888 /* expanz_model_BaseCell.h */; };
-		6BD543B714735B270014F148 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E87B /* ExpanzDataType.h */; };
-		6BD543B814735B270014F148 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E843 /* expanz_model_TextCell.h */; };
-		6BD543B914735B270014F148 /* expanz_model_Row.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E83D /* expanz_model_Row.h */; };
-		6BD543BA14735B270014F148 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E837 /* expanz_model_Column.h */; };
-		6BD543BB14735B270014F148 /* expanz_model_DataSet.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E834 /* expanz_model_DataSet.h */; };
-		6BD543BC14735B270014F148 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F55F1458EB82001AF204 /* expanz_model_ActivityDefinition.h */; };
-		6BD543BD14735B270014F148 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5611458EB82001AF204 /* expanz_model_ActivityInstance.h */; };
-		6BD543BE14735B270014F148 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5631458EB82001AF204 /* expanz_model_Field.h */; };
-		6BD543BF14735B270014F148 /* expanz_model_Menu.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5651458EB82001AF204 /* expanz_model_Menu.h */; };
-		6BD543C014735B270014F148 /* expanz_model_Message.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5671458EB82001AF204 /* expanz_model_Message.h */; };
-		6BD543C114735B270014F148 /* expanz_model_ProcessArea.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5691458EB82001AF204 /* expanz_model_ProcessArea.h */; };
-		6BD543C214735B270014F148 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F56B1458EB82001AF204 /* expanz_model_SessionContext.h */; };
-		6BD543C314735B270014F148 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F56D1458EB82001AF204 /* expanz_model_UserRole.h */; };
-		6BD543C414735B270014F148 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE267A145CEF0800052700 /* expanz_service_ActivityClient.h */; };
-		6BD543C514735B270014F148 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BBE267B145CEF0800052700 /* expanz_service_XmlPostActivityClient.h */; };
-		6BD543C614735B270014F148 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5821458EB82001AF204 /* expanz_service_LoginClient.h */; };
-		6BD543C714735B270014F148 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5831458EB82001AF204 /* expanz_service_XmlPostLoginClient.h */; };
-		6BD543C814735B270014F148 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5861458EB82001AF204 /* expanz_service_SessionRequest.h */; };
-		6BD543C914735B270014F148 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5881458EB82001AF204 /* RXMLElement+SessionContext.h */; };
-		6BD543CA14735B270014F148 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F57F1458EB82001AF204 /* expanz_service_XmlPostWebService.h */; };
-		6BD543CB14735B270014F148 /* expanz_ui_ActivityManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E898 /* expanz_ui_ActivityManager.h */; };
-		6BD543CC14735B270014F148 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A01458EB82001AF204 /* expanz_ui_ActivityInstanceViewController.h */; };
-		6BD543CD14735B270014F148 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A21458EB82001AF204 /* expanz_ui_ActivityMenuViewController.h */; };
-		6BD543CE14735B270014F148 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A41458EB82001AF204 /* expanz_ui_LoginViewController.h */; };
-		6BD543CF14735B270014F148 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A61458EB82001AF204 /* expanz_ui_ModelAdapter.h */; };
-		6BD543D014735B270014F148 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A91458EB82001AF204 /* CAFilter+Unlock.h */; };
-		6BD543D114735B270014F148 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5AA1458EB82001AF204 /* xml_Serializable.h */; };
 		6BD543D2147361290014F148 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6BEEE0BC14655D0C005CFA19 /* blues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEE0BB14655D0C005CFA19 /* blues.jpg */; };
@@ -678,120 +665,116 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6B68E28E1473D490005F9021 /* Copy Resources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
+			dstSubfolderSpec = 0;
+			files = (
+				6B68E2ED1473D546005F9021 /* background.png in Copy Resources */,
+				6B68E2E91473D53B005F9021 /* MainWindow.xib in Copy Resources */,
+				6B68E2EA1473D53B005F9021 /* ActivityMenu.xib in Copy Resources */,
+				6B68E2EB1473D53B005F9021 /* Login.xib in Copy Resources */,
+				6B68E2EC1473D53B005F9021 /* TableCell2.xib in Copy Resources */,
+			);
+			name = "Copy Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BD5436514735AD40014F148 /* Copy Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
-				6BD543B014735B270014F148 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
-				6BD543B114735B270014F148 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
-				6BD543B214735B270014F148 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
-				6BD543B314735B270014F148 /* expanz_iOS_SDKModule.h in Copy Headers */,
-				6BD543B414735B270014F148 /* ExpanzActivityStyle.h in Copy Headers */,
-				6BD543B514735B270014F148 /* expanz_model_ImageCell.h in Copy Headers */,
-				6BD543B614735B270014F148 /* expanz_model_BaseCell.h in Copy Headers */,
-				6BD543B714735B270014F148 /* ExpanzDataType.h in Copy Headers */,
-				6BD543B814735B270014F148 /* expanz_model_TextCell.h in Copy Headers */,
-				6BD543B914735B270014F148 /* expanz_model_Row.h in Copy Headers */,
-				6BD543BA14735B270014F148 /* expanz_model_Column.h in Copy Headers */,
-				6BD543BB14735B270014F148 /* expanz_model_DataSet.h in Copy Headers */,
-				6BD543BC14735B270014F148 /* expanz_model_ActivityDefinition.h in Copy Headers */,
-				6BD543BD14735B270014F148 /* expanz_model_ActivityInstance.h in Copy Headers */,
-				6BD543BE14735B270014F148 /* expanz_model_Field.h in Copy Headers */,
-				6BD543BF14735B270014F148 /* expanz_model_Menu.h in Copy Headers */,
-				6BD543C014735B270014F148 /* expanz_model_Message.h in Copy Headers */,
-				6BD543C114735B270014F148 /* expanz_model_ProcessArea.h in Copy Headers */,
-				6BD543C214735B270014F148 /* expanz_model_SessionContext.h in Copy Headers */,
-				6BD543C314735B270014F148 /* expanz_model_UserRole.h in Copy Headers */,
-				6BD543C414735B270014F148 /* expanz_service_ActivityClient.h in Copy Headers */,
-				6BD543C514735B270014F148 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
-				6BD543C614735B270014F148 /* expanz_service_LoginClient.h in Copy Headers */,
-				6BD543C714735B270014F148 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
-				6BD543C814735B270014F148 /* expanz_service_SessionRequest.h in Copy Headers */,
-				6BD543C914735B270014F148 /* RXMLElement+SessionContext.h in Copy Headers */,
-				6BD543CA14735B270014F148 /* expanz_service_XmlPostWebService.h in Copy Headers */,
-				6BD543CB14735B270014F148 /* expanz_ui_ActivityManager.h in Copy Headers */,
-				6BD543CC14735B270014F148 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
-				6BD543CD14735B270014F148 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
-				6BD543CE14735B270014F148 /* expanz_ui_LoginViewController.h in Copy Headers */,
-				6BD543CF14735B270014F148 /* expanz_ui_ModelAdapter.h in Copy Headers */,
-				6BD543D014735B270014F148 /* CAFilter+Unlock.h in Copy Headers */,
-				6BD543D114735B270014F148 /* xml_Serializable.h in Copy Headers */,
-				6BD5436614735B120014F148 /* ASIAuthenticationDialog.h in Copy Headers */,
-				6BD5436714735B120014F148 /* ASIAuthenticationDialog.m in Copy Headers */,
-				6BD5436814735B120014F148 /* ASICacheDelegate.h in Copy Headers */,
-				6BD5436914735B120014F148 /* ASIDataCompressor.h in Copy Headers */,
-				6BD5436A14735B120014F148 /* ASIDataCompressor.m in Copy Headers */,
-				6BD5436B14735B120014F148 /* ASIDataDecompressor.h in Copy Headers */,
-				6BD5436C14735B120014F148 /* ASIDataDecompressor.m in Copy Headers */,
-				6BD5436D14735B120014F148 /* ASIDownloadCache.h in Copy Headers */,
-				6BD5436E14735B120014F148 /* ASIDownloadCache.m in Copy Headers */,
-				6BD5436F14735B120014F148 /* ASIFormDataRequest.h in Copy Headers */,
-				6BD5437014735B120014F148 /* ASIFormDataRequest.m in Copy Headers */,
-				6BD5437114735B120014F148 /* ASIHTTPRequest.h in Copy Headers */,
-				6BD5437214735B120014F148 /* ASIHTTPRequest.m in Copy Headers */,
-				6BD5437314735B120014F148 /* ASIHTTPRequestConfig.h in Copy Headers */,
-				6BD5437414735B120014F148 /* ASIHTTPRequestDelegate.h in Copy Headers */,
-				6BD5437514735B120014F148 /* ASIInputStream.h in Copy Headers */,
-				6BD5437614735B120014F148 /* ASIInputStream.m in Copy Headers */,
-				6BD5437714735B120014F148 /* ASINetworkQueue.h in Copy Headers */,
-				6BD5437814735B120014F148 /* ASINetworkQueue.m in Copy Headers */,
-				6BD5437914735B120014F148 /* ASIProgressDelegate.h in Copy Headers */,
-				6BD5437A14735B120014F148 /* ASIWebPageRequest.h in Copy Headers */,
-				6BD5437B14735B120014F148 /* ASIWebPageRequest.m in Copy Headers */,
-				6BD5437C14735B120014F148 /* ASICloudFilesCDNRequest.h in Copy Headers */,
-				6BD5437D14735B120014F148 /* ASICloudFilesCDNRequest.m in Copy Headers */,
-				6BD5437E14735B120014F148 /* ASICloudFilesContainer.h in Copy Headers */,
-				6BD5437F14735B120014F148 /* ASICloudFilesContainer.m in Copy Headers */,
-				6BD5438014735B120014F148 /* ASICloudFilesContainerRequest.h in Copy Headers */,
-				6BD5438114735B120014F148 /* ASICloudFilesContainerRequest.m in Copy Headers */,
-				6BD5438214735B120014F148 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */,
-				6BD5438314735B120014F148 /* ASICloudFilesContainerXMLParserDelegate.m in Copy Headers */,
-				6BD5438414735B120014F148 /* ASICloudFilesObject.h in Copy Headers */,
-				6BD5438514735B120014F148 /* ASICloudFilesObject.m in Copy Headers */,
-				6BD5438614735B120014F148 /* ASICloudFilesObjectRequest.h in Copy Headers */,
-				6BD5438714735B120014F148 /* ASICloudFilesObjectRequest.m in Copy Headers */,
-				6BD5438814735B120014F148 /* ASICloudFilesRequest.h in Copy Headers */,
-				6BD5438914735B120014F148 /* ASICloudFilesRequest.m in Copy Headers */,
-				6BD5438A14735B120014F148 /* ASINSXMLParserCompat.h in Copy Headers */,
-				6BD5438B14735B120014F148 /* ASIS3Bucket.h in Copy Headers */,
-				6BD5438C14735B120014F148 /* ASIS3Bucket.m in Copy Headers */,
-				6BD5438D14735B120014F148 /* ASIS3BucketObject.h in Copy Headers */,
-				6BD5438E14735B120014F148 /* ASIS3BucketObject.m in Copy Headers */,
-				6BD5438F14735B120014F148 /* ASIS3BucketRequest.h in Copy Headers */,
-				6BD5439014735B120014F148 /* ASIS3BucketRequest.m in Copy Headers */,
-				6BD5439114735B120014F148 /* ASIS3ObjectRequest.h in Copy Headers */,
-				6BD5439214735B120014F148 /* ASIS3ObjectRequest.m in Copy Headers */,
-				6BD5439314735B120014F148 /* ASIS3Request.h in Copy Headers */,
-				6BD5439414735B120014F148 /* ASIS3Request.m in Copy Headers */,
-				6BD5439514735B120014F148 /* ASIS3ServiceRequest.h in Copy Headers */,
-				6BD5439614735B120014F148 /* ASIS3ServiceRequest.m in Copy Headers */,
-				6BD5439714735B120014F148 /* Logging.h in Copy Headers */,
-				6BD5439814735B120014F148 /* LICENSE in Copy Headers */,
-				6BD5439914735B120014F148 /* MARTNSObject.h in Copy Headers */,
-				6BD5439A14735B120014F148 /* MARTNSObject.m in Copy Headers */,
-				6BD5439B14735B120014F148 /* README.markdown in Copy Headers */,
-				6BD5439C14735B120014F148 /* RTIvar.h in Copy Headers */,
-				6BD5439D14735B120014F148 /* RTIvar.m in Copy Headers */,
-				6BD5439E14735B120014F148 /* RTMethod.h in Copy Headers */,
-				6BD5439F14735B120014F148 /* RTMethod.m in Copy Headers */,
-				6BD543A014735B120014F148 /* RTProperty.h in Copy Headers */,
-				6BD543A114735B120014F148 /* RTProperty.m in Copy Headers */,
-				6BD543A214735B120014F148 /* RTProtocol.h in Copy Headers */,
-				6BD543A314735B120014F148 /* RTProtocol.m in Copy Headers */,
-				6BD543A414735B120014F148 /* RTUnregisteredClass.h in Copy Headers */,
-				6BD543A514735B120014F148 /* RTUnregisteredClass.m in Copy Headers */,
-				6BD543A614735B120014F148 /* NSDataAdditions.h in Copy Headers */,
-				6BD543A714735B120014F148 /* NSDataAdditions.m in Copy Headers */,
-				6BD543A814735B120014F148 /* RXMLElement.h in Copy Headers */,
-				6BD543A914735B120014F148 /* RXMLElement.m in Copy Headers */,
-				6BD543AA14735B120014F148 /* TBXML.h in Copy Headers */,
-				6BD543AB14735B120014F148 /* TBXML.m in Copy Headers */,
-				6BD543AC14735B120014F148 /* Reachability.h in Copy Headers */,
-				6BD543AD14735B120014F148 /* Reachability.m in Copy Headers */,
-				6BD543AE14735B120014F148 /* NSData+Base64.m in Copy Headers */,
-				6BD543AF14735B120014F148 /* NSData+Base64.h in Copy Headers */,
+				6B68E2B71473D50F005F9021 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
+				6B68E2B81473D50F005F9021 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
+				6B68E2B91473D50F005F9021 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
+				6B68E2BA1473D50F005F9021 /* expanz_iOS_SDKModule.h in Copy Headers */,
+				6B68E2BB1473D50F005F9021 /* ExpanzActivityStyle.h in Copy Headers */,
+				6B68E2BC1473D50F005F9021 /* expanz_model_ImageCell.h in Copy Headers */,
+				6B68E2BD1473D50F005F9021 /* expanz_model_BaseCell.h in Copy Headers */,
+				6B68E2BE1473D50F005F9021 /* ExpanzDataType.h in Copy Headers */,
+				6B68E2BF1473D50F005F9021 /* expanz_model_TextCell.h in Copy Headers */,
+				6B68E2C01473D50F005F9021 /* expanz_model_Row.h in Copy Headers */,
+				6B68E2C11473D50F005F9021 /* expanz_model_Column.h in Copy Headers */,
+				6B68E2C21473D50F005F9021 /* expanz_model_DataSet.h in Copy Headers */,
+				6B68E2C31473D50F005F9021 /* expanz_model_ActivityDefinition.h in Copy Headers */,
+				6B68E2C41473D50F005F9021 /* expanz_model_ActivityInstance.h in Copy Headers */,
+				6B68E2C51473D50F005F9021 /* expanz_model_Field.h in Copy Headers */,
+				6B68E2C61473D50F005F9021 /* expanz_model_Menu.h in Copy Headers */,
+				6B68E2C71473D50F005F9021 /* expanz_model_Message.h in Copy Headers */,
+				6B68E2C81473D50F005F9021 /* expanz_model_ProcessArea.h in Copy Headers */,
+				6B68E2C91473D50F005F9021 /* expanz_model_SessionContext.h in Copy Headers */,
+				6B68E2CA1473D50F005F9021 /* expanz_model_UserRole.h in Copy Headers */,
+				6B68E2CB1473D50F005F9021 /* expanz_service_ActivityClient.h in Copy Headers */,
+				6B68E2CC1473D50F005F9021 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
+				6B68E2CD1473D50F005F9021 /* expanz_service_CreateActivityRequest.h in Copy Headers */,
+				6B68E2CE1473D50F005F9021 /* expanz_service_DataPublicationRequest.h in Copy Headers */,
+				6B68E2CF1473D50F005F9021 /* expanz_service_DeltaRequest.h in Copy Headers */,
+				6B68E2D01473D50F005F9021 /* expanz_service_MethodInvocationRequest.h in Copy Headers */,
+				6B68E2D11473D50F005F9021 /* RXMLElement+ActivityInstance.h in Copy Headers */,
+				6B68E2D21473D50F005F9021 /* expanz_service_LoginClient.h in Copy Headers */,
+				6B68E2D31473D50F005F9021 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
+				6B68E2D41473D50F005F9021 /* expanz_service_SessionRequest.h in Copy Headers */,
+				6B68E2D51473D50F005F9021 /* RXMLElement+SessionContext.h in Copy Headers */,
+				6B68E2D61473D50F005F9021 /* expanz_service_SessionDataClient.h in Copy Headers */,
+				6B68E2D71473D50F005F9021 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
+				6B68E2D81473D50F005F9021 /* expanz_service_SessionDataRequest.h in Copy Headers */,
+				6B68E2D91473D50F005F9021 /* RXMLElement+SessionData.h in Copy Headers */,
+				6B68E2DA1473D50F005F9021 /* expanz_service_XmlPostWebService.h in Copy Headers */,
+				6B68E2DB1473D50F005F9021 /* expanz_ui_ActivityManager.h in Copy Headers */,
+				6B68E2DC1473D50F005F9021 /* UITableView+DataPublication.h in Copy Headers */,
+				6B68E2DD1473D50F005F9021 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
+				6B68E2DE1473D50F005F9021 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
+				6B68E2DF1473D50F005F9021 /* Sales_Customer_ViewController.h in Copy Headers */,
+				6B68E2E01473D50F005F9021 /* ESA_Sales_Calc_ViewController.h in Copy Headers */,
+				6B68E2E11473D50F005F9021 /* ESA_Sales_CustomerViewController.h in Copy Headers */,
+				6B68E2E21473D50F005F9021 /* Browse_Sales_Customer_ViewController.h in Copy Headers */,
+				6B68E2E31473D50F005F9021 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
+				6B68E2E41473D50F005F9021 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
+				6B68E2E51473D50F005F9021 /* expanz_ui_LoginViewController.h in Copy Headers */,
+				6B68E2E61473D50F005F9021 /* expanz_ui_ModelAdapter.h in Copy Headers */,
+				6B68E2E71473D50F005F9021 /* CAFilter+Unlock.h in Copy Headers */,
+				6B68E2E81473D50F005F9021 /* xml_Serializable.h in Copy Headers */,
+				6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */,
+				6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */,
+				6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */,
+				6B68E2931473D4EE005F9021 /* ASIDataDecompressor.h in Copy Headers */,
+				6B68E2941473D4EE005F9021 /* ASIDownloadCache.h in Copy Headers */,
+				6B68E2951473D4EE005F9021 /* ASIFormDataRequest.h in Copy Headers */,
+				6B68E2961473D4EE005F9021 /* ASIHTTPRequest.h in Copy Headers */,
+				6B68E2971473D4EE005F9021 /* ASIHTTPRequestConfig.h in Copy Headers */,
+				6B68E2981473D4EE005F9021 /* ASIHTTPRequestDelegate.h in Copy Headers */,
+				6B68E2991473D4EE005F9021 /* ASIInputStream.h in Copy Headers */,
+				6B68E29A1473D4EE005F9021 /* ASINetworkQueue.h in Copy Headers */,
+				6B68E29B1473D4EE005F9021 /* ASIProgressDelegate.h in Copy Headers */,
+				6B68E29C1473D4EE005F9021 /* ASIWebPageRequest.h in Copy Headers */,
+				6B68E29D1473D4EE005F9021 /* ASICloudFilesCDNRequest.h in Copy Headers */,
+				6B68E29E1473D4EE005F9021 /* ASICloudFilesContainer.h in Copy Headers */,
+				6B68E29F1473D4EE005F9021 /* ASICloudFilesContainerRequest.h in Copy Headers */,
+				6B68E2A01473D4EE005F9021 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */,
+				6B68E2A11473D4EE005F9021 /* ASICloudFilesObject.h in Copy Headers */,
+				6B68E2A21473D4EE005F9021 /* ASICloudFilesObjectRequest.h in Copy Headers */,
+				6B68E2A31473D4EE005F9021 /* ASICloudFilesRequest.h in Copy Headers */,
+				6B68E2A41473D4EE005F9021 /* ASINSXMLParserCompat.h in Copy Headers */,
+				6B68E2A51473D4EE005F9021 /* ASIS3Bucket.h in Copy Headers */,
+				6B68E2A61473D4EE005F9021 /* ASIS3BucketObject.h in Copy Headers */,
+				6B68E2A71473D4EE005F9021 /* ASIS3BucketRequest.h in Copy Headers */,
+				6B68E2A81473D4EE005F9021 /* ASIS3ObjectRequest.h in Copy Headers */,
+				6B68E2A91473D4EE005F9021 /* ASIS3Request.h in Copy Headers */,
+				6B68E2AA1473D4EE005F9021 /* ASIS3ServiceRequest.h in Copy Headers */,
+				6B68E2AB1473D4EE005F9021 /* Logging.h in Copy Headers */,
+				6B68E2AC1473D4EE005F9021 /* MARTNSObject.h in Copy Headers */,
+				6B68E2AD1473D4EE005F9021 /* RTIvar.h in Copy Headers */,
+				6B68E2AE1473D4EE005F9021 /* RTMethod.h in Copy Headers */,
+				6B68E2AF1473D4EE005F9021 /* RTProperty.h in Copy Headers */,
+				6B68E2B01473D4EE005F9021 /* RTProtocol.h in Copy Headers */,
+				6B68E2B11473D4EE005F9021 /* RTUnregisteredClass.h in Copy Headers */,
+				6B68E2B21473D4EE005F9021 /* NSDataAdditions.h in Copy Headers */,
+				6B68E2B31473D4EE005F9021 /* RXMLElement.h in Copy Headers */,
+				6B68E2B41473D4EE005F9021 /* TBXML.h in Copy Headers */,
+				6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */,
+				6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */,
 			);
 			name = "Copy Headers";
 			runOnlyForDeploymentPostprocessing = 0;
