@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1059E51478FD43002DEBCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1059DB1478FD43002DEBCE /* AppDelegate.m */; };
+		6B1059E61478FD43002DEBCE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1059DC1478FD43002DEBCE /* Credits.rtf */; };
+		6B1059E71478FD43002DEBCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B1059DE1478FD43002DEBCE /* InfoPlist.strings */; };
+		6B1059E81478FD43002DEBCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1059E01478FD43002DEBCE /* MainMenu.xib */; };
+		6B1059EA1478FD43002DEBCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1059E41478FD43002DEBCE /* main.m */; };
+		6B1059F41478FE4A002DEBCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1059EF1478FE4A002DEBCE /* main.m */; };
 		6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
-		6BC1016F147775A40055CF03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1016D147775A40055CF03 /* InfoPlist.strings */; };
-		6BC10171147775A40055CF03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC10170147775A40055CF03 /* main.m */; };
-		6BC10175147775A40055CF03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC10173147775A40055CF03 /* Credits.rtf */; };
-		6BC10178147775A40055CF03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC10177147775A40055CF03 /* AppDelegate.m */; };
-		6BC1017B147775A40055CF03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC10179147775A40055CF03 /* MainMenu.xib */; };
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
-		6BC1018F1477A42F0055CF03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1018E1477A42F0055CF03 /* main.m */; };
-		6BC101931477A42F0055CF03 /* Specs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC101921477A42F0055CF03 /* Specs.1 */; };
 		6BC101991477A4650055CF03 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC101981477A4640055CF03 /* Cedar.framework */; };
-		6BC1019E1477A50A0055CF03 /* ProjectEditorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1019D1477A50A0055CF03 /* ProjectEditorSpec.m */; };
 		6BC101A41477A6D90055CF03 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC101A31477A6D90055CF03 /* OCHamcrest.framework */; };
 		6BC101A91477A7C10055CF03 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC101A31477A6D90055CF03 /* OCHamcrest.framework */; };
 		6BC101AA1477A7C10055CF03 /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC101981477A4640055CF03 /* Cedar.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B1059EB1478FD8B002DEBCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC10157147775A40055CF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC1015F147775A40055CF03;
+			remoteInfo = "Expanz iOS Code Generator";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6BC101871477A42F0055CF03 /* CopyFiles */ = {
@@ -30,7 +38,6 @@
 			dstPath = /Users/jblues/Library/Frameworks;
 			dstSubfolderSpec = 0;
 			files = (
-				6BC101931477A42F0055CF03 /* Specs.1 in CopyFiles */,
 				6BC101A91477A7C10055CF03 /* OCHamcrest.framework in CopyFiles */,
 				6BC101AA1477A7C10055CF03 /* Cedar.framework in CopyFiles */,
 			);
@@ -39,28 +46,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B1059DA1478FD43002DEBCE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B1059DB1478FD43002DEBCE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B1059DD1478FD43002DEBCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6B1059DF1478FD43002DEBCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B1059E11478FD43002DEBCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6B1059E21478FD43002DEBCE /* Expanz iOS Code Generator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Expanz iOS Code Generator-Info.plist"; sourceTree = "<group>"; };
+		6B1059E31478FD43002DEBCE /* Expanz iOS Code Generator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Expanz iOS Code Generator-Prefix.pch"; sourceTree = "<group>"; };
+		6B1059E41478FD43002DEBCE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B1059EF1478FE4A002DEBCE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B1059F01478FE4A002DEBCE /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		6B1059F11478FE4A002DEBCE /* Specs.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
 		6BC10160147775A40055CF03 /* Expanz iOS Code Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expanz iOS Code Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC10164147775A40055CF03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6BC10167147775A40055CF03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6BC10168147775A40055CF03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6BC10169147775A40055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6BC1016C147775A40055CF03 /* Expanz iOS Code Generator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Expanz iOS Code Generator-Info.plist"; sourceTree = "<group>"; };
-		6BC1016E147775A40055CF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6BC10170147775A40055CF03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BC10172147775A40055CF03 /* Expanz iOS Code Generator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expanz iOS Code Generator-Prefix.pch"; sourceTree = "<group>"; };
-		6BC10174147775A40055CF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		6BC10176147775A40055CF03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6BC10177147775A40055CF03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6BC1017A147775A40055CF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6BC101891477A42F0055CF03 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6BC1018E1477A42F0055CF03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BC101911477A42F0055CF03 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		6BC101921477A42F0055CF03 /* Specs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
 		6BC101981477A4640055CF03 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Dependencies/Frameworks/Cedar.framework; sourceTree = "<group>"; };
-		6BC1019D1477A50A0055CF03 /* ProjectEditorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectEditorSpec.m; sourceTree = "<group>"; };
 		6BC101A31477A6D90055CF03 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Dependencies/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
-		6BC101A81477A72A0055CF03 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +90,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1059D91478FD43002DEBCE /* Expanz iOS Code Generator */ = {
+			isa = PBXGroup;
+			children = (
+				6B1059DA1478FD43002DEBCE /* AppDelegate.h */,
+				6B1059DB1478FD43002DEBCE /* AppDelegate.m */,
+				6B1059DC1478FD43002DEBCE /* Credits.rtf */,
+				6B1059DE1478FD43002DEBCE /* InfoPlist.strings */,
+				6B1059E01478FD43002DEBCE /* MainMenu.xib */,
+				6B1059E21478FD43002DEBCE /* Expanz iOS Code Generator-Info.plist */,
+				6B1059E31478FD43002DEBCE /* Expanz iOS Code Generator-Prefix.pch */,
+				6B1059E41478FD43002DEBCE /* main.m */,
+			);
+			path = "Expanz iOS Code Generator";
+			sourceTree = "<group>";
+		};
+		6B1059ED1478FE4A002DEBCE /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				6B1059EE1478FE4A002DEBCE /* Integration */,
+				6B1059EF1478FE4A002DEBCE /* main.m */,
+				6B1059F01478FE4A002DEBCE /* Specs-Prefix.pch */,
+				6B1059F11478FE4A002DEBCE /* Specs.1 */,
+				6B1059F21478FE4A002DEBCE /* Unit */,
+				6B1059F31478FE4A002DEBCE /* Utils */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		6B1059EE1478FE4A002DEBCE /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		6B1059F21478FE4A002DEBCE /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		6B1059F31478FE4A002DEBCE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
 				6BC1019A1477A4D20055CF03 /* Source */,
-				6BC1016A147775A40055CF03 /* Expanz iOS Code Generator */,
-				6BC1018D1477A42F0055CF03 /* Specs */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6BC10161147775A40055CF03 /* Products */,
 			);
@@ -127,52 +179,11 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		6BC1016A147775A40055CF03 /* Expanz iOS Code Generator */ = {
-			isa = PBXGroup;
-			children = (
-				6BC10176147775A40055CF03 /* AppDelegate.h */,
-				6BC10177147775A40055CF03 /* AppDelegate.m */,
-				6BC10179147775A40055CF03 /* MainMenu.xib */,
-				6BC1016B147775A40055CF03 /* Supporting Files */,
-			);
-			path = "Expanz iOS Code Generator";
-			sourceTree = "<group>";
-		};
-		6BC1016B147775A40055CF03 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6BC1016C147775A40055CF03 /* Expanz iOS Code Generator-Info.plist */,
-				6BC1016D147775A40055CF03 /* InfoPlist.strings */,
-				6BC10170147775A40055CF03 /* main.m */,
-				6BC10172147775A40055CF03 /* Expanz iOS Code Generator-Prefix.pch */,
-				6BC10173147775A40055CF03 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6BC1018D1477A42F0055CF03 /* Specs */ = {
-			isa = PBXGroup;
-			children = (
-				6BC1018E1477A42F0055CF03 /* main.m */,
-				6BC101921477A42F0055CF03 /* Specs.1 */,
-				6BC101901477A42F0055CF03 /* Supporting Files */,
-			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		6BC101901477A42F0055CF03 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6BC101911477A42F0055CF03 /* Specs-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		6BC1019A1477A4D20055CF03 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				6BC1019B1477A4D20055CF03 /* Main */,
-				6BC1019C1477A4D20055CF03 /* Specs */,
+				6B1059ED1478FE4A002DEBCE /* Specs */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -180,41 +191,9 @@
 		6BC1019B1477A4D20055CF03 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6B1059D91478FD43002DEBCE /* Expanz iOS Code Generator */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		6BC1019C1477A4D20055CF03 /* Specs */ = {
-			isa = PBXGroup;
-			children = (
-				6BC101A51477A72A0055CF03 /* Integration */,
-				6BC101A61477A72A0055CF03 /* Unit */,
-				6BC101A71477A72A0055CF03 /* Utils */,
-				6BC1019D1477A50A0055CF03 /* ProjectEditorSpec.m */,
-			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		6BC101A51477A72A0055CF03 /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Integration;
-			sourceTree = "<group>";
-		};
-		6BC101A61477A72A0055CF03 /* Unit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Unit;
-			sourceTree = "<group>";
-		};
-		6BC101A71477A72A0055CF03 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				6BC101A81477A72A0055CF03 /* SpecHelper.h */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6B1059EC1478FD8B002DEBCE /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Specs;
@@ -286,9 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC1016F147775A40055CF03 /* InfoPlist.strings in Resources */,
-				6BC10175147775A40055CF03 /* Credits.rtf in Resources */,
-				6BC1017B147775A40055CF03 /* MainMenu.xib in Resources */,
+				6B1059E61478FD43002DEBCE /* Credits.rtf in Resources */,
+				6B1059E71478FD43002DEBCE /* InfoPlist.strings in Resources */,
+				6B1059E81478FD43002DEBCE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC10171147775A40055CF03 /* main.m in Sources */,
-				6BC10178147775A40055CF03 /* AppDelegate.m in Sources */,
+				6B1059E51478FD43002DEBCE /* AppDelegate.m in Sources */,
+				6B1059EA1478FD43002DEBCE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,34 +288,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC1018F1477A42F0055CF03 /* main.m in Sources */,
-				6BC1019E1477A50A0055CF03 /* ProjectEditorSpec.m in Sources */,
+				6B1059F41478FE4A002DEBCE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		6BC1016D147775A40055CF03 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BC1016E147775A40055CF03 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		6B1059EC1478FD8B002DEBCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BC1015F147775A40055CF03 /* Expanz iOS Code Generator */;
+			targetProxy = 6B1059EB1478FD8B002DEBCE /* PBXContainerItemProxy */;
 		};
-		6BC10173147775A40055CF03 /* Credits.rtf */ = {
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B1059DC1478FD43002DEBCE /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6BC10174147775A40055CF03 /* en */,
+				6B1059DD1478FD43002DEBCE /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		6BC10179147775A40055CF03 /* MainMenu.xib */ = {
+		6B1059DE1478FD43002DEBCE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6BC1017A147775A40055CF03 /* en */,
+				6B1059DF1478FD43002DEBCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B1059E01478FD43002DEBCE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B1059E11478FD43002DEBCE /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -392,8 +379,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Expanz iOS Code Generator/Expanz iOS Code Generator-Prefix.pch";
-				INFOPLIST_FILE = "Expanz iOS Code Generator/Expanz iOS Code Generator-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Main/Expanz iOS Code Generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/Expanz iOS Code Generator/Expanz iOS Code Generator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,8 +390,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Expanz iOS Code Generator/Expanz iOS Code Generator-Prefix.pch";
-				INFOPLIST_FILE = "Expanz iOS Code Generator/Expanz iOS Code Generator-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Main/Expanz iOS Code Generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/Expanz iOS Code Generator/Expanz iOS Code Generator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,7 +405,7 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Specs/Specs-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,7 +418,7 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Specs/Specs-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -464,6 +451,7 @@
 				6BC101951477A42F0055CF03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
