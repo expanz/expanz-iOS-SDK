@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Expanz iOS Code Generator' target in the 'Expanz iOS Code Generator' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
