@@ -9,20 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "AppDelegate.h"
 
-@implementation AppDelegate
+#import "SpecHelper.h" 
 
-@synthesize window = _window;
-
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-}
-
-@end
+SPEC_BEGIN(FooSpec)
+describe(@"Foo", ^{
+    beforeEach(^{
+        
+    });
+    
+    it(@"should do something", ^{
+        LogDebug(@"Hello");
+        assertThatInt(1, equalToInt(2));
+    });
+});
+SPEC_END

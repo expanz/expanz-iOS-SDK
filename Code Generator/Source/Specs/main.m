@@ -9,20 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "AppDelegate.h"
+#import <Cedar/Cedar.h>
 
-@implementation AppDelegate
-
-@synthesize window = _window;
-
-- (void)dealloc
-{
-    [super dealloc];
+int main (int argc, const char * argv[]) {
+    return runSpecs();
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-}
-
-@end

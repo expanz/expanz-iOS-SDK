@@ -13,12 +13,12 @@
 		6B1059E81478FD43002DEBCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1059E01478FD43002DEBCE /* MainMenu.xib */; };
 		6B1059EA1478FD43002DEBCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1059E41478FD43002DEBCE /* main.m */; };
 		6B1059F41478FE4A002DEBCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1059EF1478FE4A002DEBCE /* main.m */; };
+		6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A001479C807002DEBCE /* Cedar.framework */; };
+		6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A021479C85D002DEBCE /* OCHamcrest.framework */; };
+		6B105A081479CF9A002DEBCE /* README in Resources */ = {isa = PBXBuildFile; fileRef = 6B105A071479CF9A002DEBCE /* README */; };
 		6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
-		6BC101991477A4650055CF03 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC101981477A4640055CF03 /* Cedar.framework */; };
-		6BC101A41477A6D90055CF03 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC101A31477A6D90055CF03 /* OCHamcrest.framework */; };
-		6BC101A91477A7C10055CF03 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC101A31477A6D90055CF03 /* OCHamcrest.framework */; };
-		6BC101AA1477A7C10055CF03 /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC101981477A4640055CF03 /* Cedar.framework */; };
+		6BC101AA1477A7C10055CF05 /* ProjectEditorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC101AA1477A7C10055CF04 /* ProjectEditorSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 			dstPath = /Users/jblues/Library/Frameworks;
 			dstSubfolderSpec = 0;
 			files = (
-				6BC101A91477A7C10055CF03 /* OCHamcrest.framework in CopyFiles */,
-				6BC101AA1477A7C10055CF03 /* Cedar.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -57,6 +55,10 @@
 		6B1059EF1478FE4A002DEBCE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B1059F01478FE4A002DEBCE /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		6B1059F11478FE4A002DEBCE /* Specs.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
+		6B105A001479C807002DEBCE /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Dependencies/Frameworks/Cedar.framework; sourceTree = "<group>"; };
+		6B105A021479C85D002DEBCE /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Dependencies/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		6B105A061479CF9A002DEBCE /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		6B105A071479CF9A002DEBCE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		6BC10160147775A40055CF03 /* Expanz iOS Code Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expanz iOS Code Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC10164147775A40055CF03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6BC10167147775A40055CF03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -64,8 +66,8 @@
 		6BC10169147775A40055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC101891477A42F0055CF03 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6BC101981477A4640055CF03 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Dependencies/Frameworks/Cedar.framework; sourceTree = "<group>"; };
-		6BC101A31477A6D90055CF03 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Dependencies/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		6BC101AA1477A7C10055CF04 /* ProjectEditorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectEditorSpec.m; sourceTree = "<group>"; };
+		6BC101AA1477A7C10055CF06 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */,
-				6BC101991477A4650055CF03 /* Cedar.framework in Frameworks */,
-				6BC101A41477A6D90055CF03 /* OCHamcrest.framework in Frameworks */,
+				6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */,
+				6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +130,7 @@
 		6B1059F21478FE4A002DEBCE /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				6BC101AA1477A7C10055CF04 /* ProjectEditorSpec.m */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -135,8 +138,27 @@
 		6B1059F31478FE4A002DEBCE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6BC101AA1477A7C10055CF06 /* SpecHelper.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6B105A041479CF9A002DEBCE /* External */ = {
+			isa = PBXGroup;
+			children = (
+				6B105A051479CF9A002DEBCE /* objective-loggerheads */,
+			);
+			name = External;
+			path = Dependencies/External;
+			sourceTree = "<group>";
+		};
+		6B105A051479CF9A002DEBCE /* objective-loggerheads */ = {
+			isa = PBXGroup;
+			children = (
+				6B105A061479CF9A002DEBCE /* Logging.h */,
+				6B105A071479CF9A002DEBCE /* README */,
+			);
+			path = "objective-loggerheads";
 			sourceTree = "<group>";
 		};
 		6BC10155147775A40055CF03 = {
@@ -144,6 +166,7 @@
 			children = (
 				6BC1019A1477A4D20055CF03 /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
+				6B105A041479CF9A002DEBCE /* External */,
 				6BC10161147775A40055CF03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,8 +183,8 @@
 		6BC10163147775A40055CF03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BC101A31477A6D90055CF03 /* OCHamcrest.framework */,
-				6BC101981477A4640055CF03 /* Cedar.framework */,
+				6B105A021479C85D002DEBCE /* OCHamcrest.framework */,
+				6B105A001479C807002DEBCE /* Cedar.framework */,
 				6BC10164147775A40055CF03 /* Cocoa.framework */,
 				6BC1018B1477A42F0055CF03 /* Foundation.framework */,
 				6BC10166147775A40055CF03 /* Other Frameworks */,
@@ -269,6 +292,7 @@
 				6B1059E61478FD43002DEBCE /* Credits.rtf in Resources */,
 				6B1059E71478FD43002DEBCE /* InfoPlist.strings in Resources */,
 				6B1059E81478FD43002DEBCE /* MainMenu.xib in Resources */,
+				6B105A081479CF9A002DEBCE /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1059F41478FE4A002DEBCE /* main.m in Sources */,
+				6BC101AA1477A7C10055CF05 /* ProjectEditorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
