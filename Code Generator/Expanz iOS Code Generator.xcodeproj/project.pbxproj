@@ -19,6 +19,7 @@
 		6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
 		6BC101AA1477A7C10055CF05 /* ProjectEditorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC101AA1477A7C10055CF04 /* ProjectEditorSpec.m */; };
+		6BC101AA1477A7C10055CF08 /* expanz_codegen_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC101AA1477A7C10055CF07 /* expanz_codegen_ProjectEditor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC101AA1477A7C10055CF04 /* ProjectEditorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectEditorSpec.m; sourceTree = "<group>"; };
 		6BC101AA1477A7C10055CF06 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		6BC101AA1477A7C10055CF07 /* expanz_codegen_ProjectEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ProjectEditor.m; sourceTree = "<group>"; };
+		6BC101AA1477A7C10055CF09 /* expanz_codegen_ProjectEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ProjectEditor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 		6B1059D91478FD43002DEBCE /* Expanz iOS Code Generator */ = {
 			isa = PBXGroup;
 			children = (
+				6BC101AA1477A7C10055CF09 /* expanz_codegen_ProjectEditor.h */,
+				6BC101AA1477A7C10055CF07 /* expanz_codegen_ProjectEditor.m */,
 				6B1059DA1478FD43002DEBCE /* AppDelegate.h */,
 				6B1059DB1478FD43002DEBCE /* AppDelegate.m */,
 				6B1059DC1478FD43002DEBCE /* Credits.rtf */,
@@ -305,6 +310,7 @@
 			files = (
 				6B1059E51478FD43002DEBCE /* AppDelegate.m in Sources */,
 				6B1059EA1478FD43002DEBCE /* main.m in Sources */,
+				6BC101AA1477A7C10055CF08 /* expanz_codegen_ProjectEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
