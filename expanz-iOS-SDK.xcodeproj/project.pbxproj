@@ -212,7 +212,6 @@
 		6BAF958914734CBF00168E39 /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A61458EB82001AF204 /* expanz_ui_ModelAdapter.h */; };
 		6BAF958A14734CBF00168E39 /* CAFilter+Unlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A91458EB82001AF204 /* CAFilter+Unlock.h */; };
 		6BAF958B14734CBF00168E39 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5AA1458EB82001AF204 /* xml_Serializable.h */; };
-		6BAF958D14734E3600168E39 /* blues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEE0BB14655D0C005CFA19 /* blues.jpg */; };
 		6BAF958E14734E3600168E39 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5951458EB82001AF204 /* ActivityMenu.xib */; };
 		6BAF958F14734E3600168E39 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BAF959014734E3600168E39 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
@@ -552,7 +551,6 @@
 		6BCF18811476240400B068B9 /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A61458EB82001AF204 /* expanz_ui_ModelAdapter.h */; };
 		6BCF18821476240400B068B9 /* CAFilter+Unlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5A91458EB82001AF204 /* CAFilter+Unlock.h */; };
 		6BCF18831476240400B068B9 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F5AA1458EB82001AF204 /* xml_Serializable.h */; };
-		6BCF18851476240400B068B9 /* blues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEE0BB14655D0C005CFA19 /* blues.jpg */; };
 		6BCF18861476240400B068B9 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5951458EB82001AF204 /* ActivityMenu.xib */; };
 		6BCF18871476240400B068B9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5961458EB82001AF204 /* background.png */; };
 		6BCF18881476240400B068B9 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5991458EB82001AF204 /* Login.xib */; };
@@ -631,8 +629,6 @@
 		6BD5435714734FE80014F148 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
 		6BD543D2147361290014F148 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
-		6BEEE0BC14655D0C005CFA19 /* blues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEE0BB14655D0C005CFA19 /* blues.jpg */; };
-		6BEEE0BE14655D0C005CFA19 /* blues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEEE0BB14655D0C005CFA19 /* blues.jpg */; };
 		6BF58BBF14441E320063E805 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BF58BC014441E320063E805 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
 		6BF58BC114441E320063E805 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */; };
@@ -1033,7 +1029,6 @@
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BCF17DF1476223100B068B9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Examples/main.m; sourceTree = "<group>"; };
 		6BCF188D1476240400B068B9 /* libexpanz-iOS-SDK-StaticLib copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BEEE0BB14655D0C005CFA19 /* blues.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blues.jpg; sourceTree = "<group>"; };
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E829 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
@@ -1374,7 +1369,6 @@
 		6BC9F5941458EB82001AF204 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6BEEE0BB14655D0C005CFA19 /* blues.jpg */,
 				6BC9F5951458EB82001AF204 /* ActivityMenu.xib */,
 				6BC9F5961458EB82001AF204 /* background.png */,
 				6BC9F5991458EB82001AF204 /* Login.xib */,
@@ -2126,7 +2120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF6E0F5147B73810095D433 /* MainWindow.xib in Resources */,
-				6BAF958D14734E3600168E39 /* blues.jpg in Resources */,
 				6BAF958E14734E3600168E39 /* ActivityMenu.xib in Resources */,
 				6BAF958F14734E3600168E39 /* background.png in Resources */,
 				6BAF959014734E3600168E39 /* Login.xib in Resources */,
@@ -2148,7 +2141,6 @@
 				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
 				6B07653B146504C300C1A034 /* TableCell2.xib in Resources */,
-				6BEEE0BC14655D0C005CFA19 /* blues.jpg in Resources */,
 				6BFACBA414679916007C7288 /* ESA.Sales.Calc.xib in Resources */,
 				6BFACBA414679916007C728A /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BFACBA414679916007C728D /* Sales.Customer.xib in Resources */,
@@ -2160,7 +2152,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCF18851476240400B068B9 /* blues.jpg in Resources */,
 				6BCF18861476240400B068B9 /* ActivityMenu.xib in Resources */,
 				6BCF18871476240400B068B9 /* background.png in Resources */,
 				6BCF18881476240400B068B9 /* Login.xib in Resources */,
@@ -2189,7 +2180,6 @@
 				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 				6B07653D146504C300C1A034 /* TableCell2.xib in Resources */,
-				6BEEE0BE14655D0C005CFA19 /* blues.jpg in Resources */,
 				6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

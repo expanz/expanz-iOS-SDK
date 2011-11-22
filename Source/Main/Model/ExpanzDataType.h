@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef enum {
-    ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeNull
+    ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool, ExpanzDataTypeNull
 } ExpanzDataType;
 
 
@@ -25,6 +25,9 @@ static ExpanzDataType ExpanzDataTypeFromString(NSString* string) {
         return ExpanzDataTypeNumber;
     }
     else if ([[string lowercaseString] isEqualToString:@"blob"]) {
+        return ExpanzDataTypeImage;
+    }
+    else if ([[string lowercaseString] isEqualToString:@"bool"]) {
         return ExpanzDataTypeImage;
     }
     else {
