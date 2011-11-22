@@ -675,6 +675,7 @@
 		6BF58DC81444245C0063E892 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E891 /* DataPublicationRequestSpec.m */; };
 		6BF58DC81444245C0063E894 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
 		6BF58DC81444245C0063E896 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E893 /* expanz_ui_ActivityManager.m */; };
+		6BF6E0F5147B73810095D433 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F5541458EB82001AF204 /* MainWindow.xib */; };
 		6BFACBA114679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA414679916007C7263 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7262 /* ESA_Sales_ActivityInstanceDetail.xml */; };
@@ -2124,6 +2125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF6E0F5147B73810095D433 /* MainWindow.xib in Resources */,
 				6BAF958D14734E3600168E39 /* blues.jpg in Resources */,
 				6BAF958E14734E3600168E39 /* ActivityMenu.xib in Resources */,
 				6BAF958F14734E3600168E39 /* background.png in Resources */,
