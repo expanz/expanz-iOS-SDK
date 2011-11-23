@@ -16,22 +16,31 @@
 @implementation expanz_service_SessionRequest
 
 @synthesize userName = _userName;
-@synthesize password = _password; 
+@synthesize password = _password;
 @synthesize appSite = _appSite;
+@synthesize userType = _userType;
 
 
 /* ================================================== Constructors ================================================== */
 
 
-- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {    
-    self = [self init];   
+- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
+    return [self initWithUserName:userName password:password appSite:appSite userType:@"Primary"];
+}
+
+- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite
+              userType:(NSString*)userType {
+
+    self = [self init];
     if (self) {
         _userName = [userName copy];
         _password = [password copy];
         _appSite = [appSite copy];
+        _userType = [userType copy];
     }
-    return self; 
+    return self;
 }
+
 
 
 /* ================================================= Protocol Methods =============================================== */
@@ -41,18 +50,19 @@
 <CreateSession user=\"%@\" password=\"%@\" appSite=\"%@\" authenticationMode=\"%@\" clientVersion=\"%@\" \
 schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
 
-- (NSString*) toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _userName, _password, _appSite, kAuthenticationMode, 
-            kClientVersion, kSchemaVersion];
+- (NSString*)toXml {
+    return [NSString stringWithFormat:kXmlTemplate, _userName, _password, _appSite, _userType, kClientVersion,
+                                      kSchemaVersion];
 }
 
 
 /* ================================================== Utility Methods =============================================== */
 
-- (void) dealloc {
+- (void)dealloc {
     [_userName release];
-    [_password release]; 
+    [_password release];
     [_appSite release];
+    [_userType release];
     [super dealloc];
 }
 

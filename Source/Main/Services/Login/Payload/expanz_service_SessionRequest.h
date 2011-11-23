@@ -12,20 +12,26 @@
 #import <Foundation/Foundation.h>
 #import "xml_Serializable.h"
 
-@interface expanz_service_SessionRequest : NSObject<xml_Serializable>
+@interface expanz_service_SessionRequest : NSObject <xml_Serializable>
 
-#define kAuthenticationMode @"Primary" 
 #define kClientVersion @"iOS 1.0"
 #define kSchemaVersion @"2.0"
 
-@property (nonatomic, readonly) NSString* userName; 
-@property (nonatomic, readonly) NSString* password;
-@property (nonatomic, readonly) NSString* appSite;
+@property(nonatomic, readonly) NSString* userName;
+@property(nonatomic, readonly) NSString* password;
+@property(nonatomic, readonly) NSString* appSite;
+@property(nonatomic, readonly) NSString* userType;
 
 /**
- * Initializes an instance using the supplied session token. 
+ * Initializes an instance using the supplied parameters userName, password, appSite. User type defaults to 'primary'.
  */
-- (id) initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
+- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
+
+/**
+* Initializes an instance using the supplied userName, password, appSite and user type.
+*/
+- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite
+              userType:(NSString*)userType;
 
 @end
 
