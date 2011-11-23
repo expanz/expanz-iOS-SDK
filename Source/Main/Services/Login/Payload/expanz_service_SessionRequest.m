@@ -22,12 +22,6 @@
 
 
 /* ================================================== Constructors ================================================== */
-
-
-- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite {
-    return [self initWithUserName:userName password:password appSite:appSite userType:@"Primary"];
-}
-
 - (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite
               userType:(NSString*)userType {
 

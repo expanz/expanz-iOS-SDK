@@ -33,7 +33,7 @@
         
         id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)]; 
         SessionRequest* sessionRequest = [[[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo" 
-                                                                           appSite:@"SALESAPP"] autorelease]; 
+                                                                appSite:@"SALESAPP" userType:@"Primary"] autorelease]; 
         TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init]; 
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
         assertWillHappen(loginDelegate.sessionContext != nil); 

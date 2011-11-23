@@ -8,7 +8,7 @@ SPEC_BEGIN(SessionRequestSpec)
 describe(@"Properties", ^{
     it(@"should provide immutable userName, password and appSite properties.", ^{
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
-                                                                          appSite:@"SALESAPP"];
+                                                                          appSite:@"SALESAPP" userType:@"Primary"];
         
         assertThat(sessionRequest.userName, equalTo(@"demo"));
                         assertThat(sessionRequest.password, equalTo(@"demo3"));
@@ -27,7 +27,7 @@ describe(@"Serialization.", ^{
         
     it(@"Can be marshalled to XML for passing over the wire.", ^{
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
-                                                                          appSite:@"SALESAPP"];
+                                                                          appSite:@"SALESAPP" userType:@"Primary"];
 
         assertThat([sessionRequest toXml], equalTo(kXmlRequest));        
         [sessionRequest release];

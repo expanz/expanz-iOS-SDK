@@ -23,7 +23,7 @@
 #import "expanz_iOS_SDKConfiguration.h"
 
 @interface expanz_ui_LoginViewController (private)
-- (CATransition*) makeViewTransition;
+- (CATransition*)makeViewTransition;
 @end
 
 
@@ -36,7 +36,7 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
+- (id)init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
         _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
@@ -47,7 +47,7 @@
 
 
 /* ================================================ Delegate Methods ================================================ */
-- (void) didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 
@@ -59,19 +59,19 @@
 
 
 
-- (void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     _userNameAndPasswordForm.backgroundColor = [UIColor clearColor];
 }
 
 
-- (void) viewDidUnload {
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -79,17 +79,17 @@
 /* ================================================================================================================== */
 #pragma mark Login and Password Form
 
-- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
     return 1;
 }
 
 
-- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
 
-- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     static NSString* reuseId = @"userNameAndPasswordForm";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
@@ -125,7 +125,7 @@
 #pragma mark UITextFieldDelegate    
 
 
-- (BOOL) textFieldShouldReturn:(UITextField*)textField {
+- (BOOL)textFieldShouldReturn:(UITextField*)textField {
     [textField resignFirstResponder];
     if (textField == _userNameField) {
         [_passwordField becomeFirstResponder];
@@ -139,17 +139,20 @@
 /* ================================================================================================================== */
 #pragma mark User Actions
 
-- (void) loginWithUserNameAndPassword:(id)sender {
+- (void)loginWithUserNameAndPassword:(id)sender {
     _loginButton.enabled = NO;
     _userNameField.enabled = NO;
     _passwordField.enabled = NO;
     [_spinner startAnimating];
 
+    SDKConfiguration* configuration = [SDKConfiguration globalConfiguration];
     NSString* user = _userNameField.text;
     NSString* password = _passwordField.text;
-    NSString* appSite = [SDKConfiguration globalConfiguration].preferredSite;
+    NSString* appSite = configuration.preferredSite;
+    NSString* userType = configuration.userType;
 
-    SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:user password:password appSite:appSite];
+    SessionRequest* sessionRequest =
+        [[SessionRequest alloc] initWithUserName:user password:password appSite:appSite userType:userType];
     [_loginClient createSessionWith:sessionRequest delegate:self];
     [sessionRequest release];
 
@@ -159,7 +162,7 @@
 /* ================================================================================================================== */
 #pragma mark LoginClient delegate
 
-- (void) requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
+- (void)requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
     LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
     [_spinner stopAnimating];
 
@@ -194,7 +197,7 @@
     }
 }
 
-- (void) requestDidFailWithError:(NSError*)error {
+- (void)requestDidFailWithError:(NSError*)error {
     //TODO: System-wide error handler. 
     UIAlertView* alert = [[[UIAlertView alloc]
         initWithTitle:@"Error" message:@"There was a system error." delegate:self cancelButtonTitle:@"OK"
@@ -205,7 +208,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 
-- (void) dealloc {
+- (void)dealloc {
     [_loginClient release];
     [_userNameAndPasswordForm release];
     [_loginButton release];
@@ -218,7 +221,7 @@
 /* ================================================== Private Methods =============================================== */
 
 //TODO: Private API - replace this with library call. 
-- (CATransition*) makeViewTransition {
+- (CATransition*)makeViewTransition {
     static const NSTimeInterval kAnimationDuration = 0.75f;
     CATransition* transition = [CATransition animation];
     transition.duration = kAnimationDuration;

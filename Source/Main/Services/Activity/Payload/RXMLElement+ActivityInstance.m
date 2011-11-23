@@ -68,6 +68,7 @@
     switch (field.datatype) {
         case ExpanzDataTypeString:
         case ExpanzDataTypeNumber:
+        case ExpanzDataTypeBool:
         case ExpanzDataTypeNull:
             [field setValue:[self attribute:@"value"]];
             break;

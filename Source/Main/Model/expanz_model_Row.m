@@ -109,6 +109,9 @@
                 case ExpanzDataTypeImage:
                     [_imageCells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
                     break;
+                case ExpanzDataTypeBool:
+                    //TODO: Handle this!
+                    break;
                 case ExpanzDataTypeNull:
                     break;
             }

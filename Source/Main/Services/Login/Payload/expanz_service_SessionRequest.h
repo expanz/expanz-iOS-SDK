@@ -22,10 +22,6 @@
 @property(nonatomic, readonly) NSString* appSite;
 @property(nonatomic, readonly) NSString* userType;
 
-/**
- * Initializes an instance using the supplied parameters userName, password, appSite. User type defaults to 'primary'.
- */
-- (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite;
 
 /**
 * Initializes an instance using the supplied userName, password, appSite and user type.

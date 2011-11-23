@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <expanz:iOSConfig xmlns:expanz="com.expanz.*"
         URL="http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish"
-        preferredSite="SALES">
+        preferredSite="SALES"
+        userType="Alternate">
 </expanz:iOSConfig>

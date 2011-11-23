@@ -17,6 +17,7 @@
 
 @property(nonatomic, readonly) NSString* baseUrl;
 @property(nonatomic, readonly) NSString* preferredSite;
+@property(nonatomic, readonly) NSString* userType;
 
 + (void) setGlobalConfiguration:(expanz_iOS_SDKConfiguration*)configuration;
 
@@ -24,7 +25,7 @@
 
 + (void) setConfigurationFile:(NSString*)fileName;
 
-- (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site;
+- (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType;
 
 - (NSURL*) createSessionUrl;
 
