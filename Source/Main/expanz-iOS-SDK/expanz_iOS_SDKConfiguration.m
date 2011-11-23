@@ -45,7 +45,7 @@ static SDKConfiguration* _globalConfiguration;
 
     NSString* baseUrl = [element attribute:@"URL"];
     NSString* preferredSite = [element attribute:@"preferredSite"];
-    NSString* userType = [element attribute:@"userType"] == nil ? @"Primary" : [element attribute:userType];
+    NSString* userType = [element attribute:@"userType"] == nil ? @"Primary" : [element attribute:@"userType"];
 
     SDKConfiguration* configuration =
         [[SDKConfiguration alloc] initWithBaseUrl:baseUrl preferredSite:preferredSite userType:userType];

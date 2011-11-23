@@ -35,7 +35,6 @@
 @synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
 
 /* ================================================== Constructors ================================================== */
-
 - (id)init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
@@ -207,7 +206,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-
 - (void)dealloc {
     [_loginClient release];
     [_userNameAndPasswordForm release];
