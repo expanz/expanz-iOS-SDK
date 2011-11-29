@@ -65,7 +65,10 @@
 #pragma mark table view
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
-    return [_menu.processAreas count];
+    if (tableView.style == UITableViewStyleGrouped) {
+        return [_menu.processAreas count];
+    }
+    return 1;
 }
 
 

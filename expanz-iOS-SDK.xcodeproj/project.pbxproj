@@ -66,12 +66,62 @@
 		6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
+		6B8B800E14852E9700A24AC0 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */; };
+		6B8B800F14852E9700A24AC0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800B14852E9700A24AC0 /* background.png */; };
+		6B8B801014852E9700A24AC0 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800C14852E9700A24AC0 /* Login.xib */; };
+		6B8B801114852E9700A24AC0 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800D14852E9700A24AC0 /* TableCell2.xib */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
+		6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
+		6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
+		6BB7F58514852807007F2E99 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */; };
+		6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
+		6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */; };
+		6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */; };
+		6BB7F58914852807007F2E99 /* expanz_model_BaseCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */; };
+		6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
+		6BB7F58B14852807007F2E99 /* expanz_model_DataSet.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4D1484703F000ECE52 /* expanz_model_DataSet.h */; };
+		6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4F1484703F000ECE52 /* expanz_model_Field.h */; };
+		6BB7F58D14852807007F2E99 /* expanz_model_ImageCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C511484703F000ECE52 /* expanz_model_ImageCell.h */; };
+		6BB7F58E14852807007F2E99 /* expanz_model_Menu.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C531484703F000ECE52 /* expanz_model_Menu.h */; };
+		6BB7F58F14852807007F2E99 /* expanz_model_Message.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C551484703F000ECE52 /* expanz_model_Message.h */; };
+		6BB7F59014852807007F2E99 /* expanz_model_ProcessArea.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C571484703F000ECE52 /* expanz_model_ProcessArea.h */; };
+		6BB7F59114852807007F2E99 /* expanz_model_Row.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C591484703F000ECE52 /* expanz_model_Row.h */; };
+		6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5B1484703F000ECE52 /* expanz_model_SessionContext.h */; };
+		6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5D1484703F000ECE52 /* expanz_model_TextCell.h */; };
+		6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */; };
+		6BB7F59514852807007F2E99 /* ExpanzActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C611484703F000ECE52 /* ExpanzActivityStyle.h */; };
+		6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
+		6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
+		6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
+		6BB7F59914852807007F2E99 /* expanz_service_CreateActivityRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */; };
+		6BB7F59A14852807007F2E99 /* expanz_service_DataPublicationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6B1484703F000ECE52 /* expanz_service_DataPublicationRequest.h */; };
+		6BB7F59B14852807007F2E99 /* expanz_service_DeltaRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6D1484703F000ECE52 /* expanz_service_DeltaRequest.h */; };
+		6BB7F59C14852807007F2E99 /* expanz_service_MethodInvocationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6F1484703F000ECE52 /* expanz_service_MethodInvocationRequest.h */; };
+		6BB7F59D14852807007F2E99 /* RXMLElement+ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C711484703F000ECE52 /* RXMLElement+ActivityInstance.h */; };
+		6BB7F59E14852807007F2E99 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */; };
+		6BB7F59F14852807007F2E99 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */; };
+		6BB7F5A014852807007F2E99 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */; };
+		6BB7F5A114852807007F2E99 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */; };
+		6BB7F5A214852807007F2E99 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7C1484703F000ECE52 /* RXMLElement+SessionContext.h */; };
+		6BB7F5A314852807007F2E99 /* expanz_service_SessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */; };
+		6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
+		6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
+		6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */; };
+		6BB7F5A714852807007F2E99 /* UITableView+DataPublication.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */; };
+		6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */; };
+		6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */; };
+		6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6BB7F5AB14852807007F2E99 /* expanz_ui_ActivityManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */; };
+		6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
+		6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */; };
+		6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */; };
+		6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
+		6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
 		6BC9F7331458EBB6001AF204 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; };
 		6BC9F7351458EBB6001AF204 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; };
 		6BC9F7371458EBB6001AF204 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; };
@@ -426,22 +476,6 @@
 		6BD47D711484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
 		6BD47D721484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
 		6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
-		6BD47D741484703F000ECE52 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C891484703F000ECE52 /* ActivityMenu.xib */; };
-		6BD47D751484703F000ECE52 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C891484703F000ECE52 /* ActivityMenu.xib */; };
-		6BD47D761484703F000ECE52 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C891484703F000ECE52 /* ActivityMenu.xib */; };
-		6BD47D771484703F000ECE52 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C891484703F000ECE52 /* ActivityMenu.xib */; };
-		6BD47D781484703F000ECE52 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8A1484703F000ECE52 /* background.png */; };
-		6BD47D791484703F000ECE52 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8A1484703F000ECE52 /* background.png */; };
-		6BD47D7A1484703F000ECE52 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8A1484703F000ECE52 /* background.png */; };
-		6BD47D7B1484703F000ECE52 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8A1484703F000ECE52 /* background.png */; };
-		6BD47D7C1484703F000ECE52 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8B1484703F000ECE52 /* Login.xib */; };
-		6BD47D7D1484703F000ECE52 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8B1484703F000ECE52 /* Login.xib */; };
-		6BD47D7E1484703F000ECE52 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8B1484703F000ECE52 /* Login.xib */; };
-		6BD47D7F1484703F000ECE52 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8B1484703F000ECE52 /* Login.xib */; };
-		6BD47D801484703F000ECE52 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8C1484703F000ECE52 /* TableCell2.xib */; };
-		6BD47D811484703F000ECE52 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8C1484703F000ECE52 /* TableCell2.xib */; };
-		6BD47D821484703F000ECE52 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8C1484703F000ECE52 /* TableCell2.xib */; };
-		6BD47D831484703F000ECE52 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C8C1484703F000ECE52 /* TableCell2.xib */; };
 		6BD47D841484703F000ECE52 /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */; };
 		6BD47D851484703F000ECE52 /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */; };
 		6BD47D861484703F000ECE52 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */; };
@@ -686,6 +720,52 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
+				6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
+				6BB7F58514852807007F2E99 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
+				6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */,
+				6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */,
+				6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */,
+				6BB7F58914852807007F2E99 /* expanz_model_BaseCell.h in Copy Headers */,
+				6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */,
+				6BB7F58B14852807007F2E99 /* expanz_model_DataSet.h in Copy Headers */,
+				6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */,
+				6BB7F58D14852807007F2E99 /* expanz_model_ImageCell.h in Copy Headers */,
+				6BB7F58E14852807007F2E99 /* expanz_model_Menu.h in Copy Headers */,
+				6BB7F58F14852807007F2E99 /* expanz_model_Message.h in Copy Headers */,
+				6BB7F59014852807007F2E99 /* expanz_model_ProcessArea.h in Copy Headers */,
+				6BB7F59114852807007F2E99 /* expanz_model_Row.h in Copy Headers */,
+				6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */,
+				6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */,
+				6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */,
+				6BB7F59514852807007F2E99 /* ExpanzActivityStyle.h in Copy Headers */,
+				6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */,
+				6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */,
+				6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
+				6BB7F59914852807007F2E99 /* expanz_service_CreateActivityRequest.h in Copy Headers */,
+				6BB7F59A14852807007F2E99 /* expanz_service_DataPublicationRequest.h in Copy Headers */,
+				6BB7F59B14852807007F2E99 /* expanz_service_DeltaRequest.h in Copy Headers */,
+				6BB7F59C14852807007F2E99 /* expanz_service_MethodInvocationRequest.h in Copy Headers */,
+				6BB7F59D14852807007F2E99 /* RXMLElement+ActivityInstance.h in Copy Headers */,
+				6BB7F59E14852807007F2E99 /* expanz_service_XmlPostWebService.h in Copy Headers */,
+				6BB7F59F14852807007F2E99 /* expanz_service_LoginClient.h in Copy Headers */,
+				6BB7F5A014852807007F2E99 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
+				6BB7F5A114852807007F2E99 /* expanz_service_SessionRequest.h in Copy Headers */,
+				6BB7F5A214852807007F2E99 /* RXMLElement+SessionContext.h in Copy Headers */,
+				6BB7F5A314852807007F2E99 /* expanz_service_SessionDataClient.h in Copy Headers */,
+				6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
+				6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */,
+				6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */,
+				6BB7F5A714852807007F2E99 /* UITableView+DataPublication.h in Copy Headers */,
+				6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
+				6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
+				6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
+				6BB7F5AB14852807007F2E99 /* expanz_ui_ActivityManager.h in Copy Headers */,
+				6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
+				6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */,
+				6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */,
+				6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */,
+				6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */,
 				6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */,
 				6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */,
 				6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */,
@@ -739,6 +819,10 @@
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
+		6B8B800B14852E9700A24AC0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6B8B800C14852E9700A24AC0 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		6B8B800D14852E9700A24AC0 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -902,10 +986,6 @@
 		6BD47C841484703F000ECE52 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
 		6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
-		6BD47C891484703F000ECE52 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
-		6BD47C8A1484703F000ECE52 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		6BD47C8B1484703F000ECE52 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
-		6BD47C8C1484703F000ECE52 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
 		6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
 		6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
 		6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
@@ -1085,6 +1165,17 @@
 				6B1E5E8714734404004145D0 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B8B800914852E9700A24AC0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */,
+				6B8B800B14852E9700A24AC0 /* background.png */,
+				6B8B800C14852E9700A24AC0 /* Login.xib */,
+				6B8B800D14852E9700A24AC0 /* TableCell2.xib */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		6BC9F54F1458EB63001AF204 /* Source */ = {
@@ -1510,7 +1601,6 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				6BD47C881484703F000ECE52 /* Assets */,
 				6BD47C8D1484703F000ECE52 /* Categories */,
 				6BD47C901484703F000ECE52 /* Components */,
 				6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */,
@@ -1525,17 +1615,6 @@
 				6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		6BD47C881484703F000ECE52 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47C891484703F000ECE52 /* ActivityMenu.xib */,
-				6BD47C8A1484703F000ECE52 /* background.png */,
-				6BD47C8B1484703F000ECE52 /* Login.xib */,
-				6BD47C8C1484703F000ECE52 /* TableCell2.xib */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		6BD47C8D1484703F000ECE52 /* Categories */ = {
@@ -1724,6 +1803,7 @@
 		6BD47E2C14847065000ECE52 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				6B8B800914852E9700A24AC0 /* Assets */,
 				6BD47E2D14847065000ECE52 /* Browse_Sales_Customer_ViewController.h */,
 				6BD47E2E14847065000ECE52 /* Browse_Sales_Customer_ViewController.m */,
 				6BD47E2F14847065000ECE52 /* ESA.Sales.Calc.xib */,
@@ -2051,10 +2131,6 @@
 			files = (
 				6BD47CA21484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA61484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47D741484703F000ECE52 /* ActivityMenu.xib in Resources */,
-				6BD47D781484703F000ECE52 /* background.png in Resources */,
-				6BD47D7C1484703F000ECE52 /* Login.xib in Resources */,
-				6BD47D801484703F000ECE52 /* TableCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2069,14 +2145,14 @@
 				6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */,
 				6BD47CAD1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */,
-				6BD47D771484703F000ECE52 /* ActivityMenu.xib in Resources */,
-				6BD47D7B1484703F000ECE52 /* background.png in Resources */,
-				6BD47D7F1484703F000ECE52 /* Login.xib in Resources */,
-				6BD47D831484703F000ECE52 /* TableCell2.xib in Resources */,
 				6BD47E3D14847065000ECE52 /* ESA.Sales.Calc.xib in Resources */,
 				6BD47E3F14847065000ECE52 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BD47E4714847065000ECE52 /* Sales.Customer.Browse.xib in Resources */,
 				6BD47E4914847065000ECE52 /* Sales.Customer.xib in Resources */,
+				6B8B800E14852E9700A24AC0 /* ActivityMenu.xib in Resources */,
+				6B8B800F14852E9700A24AC0 /* background.png in Resources */,
+				6B8B801014852E9700A24AC0 /* Login.xib in Resources */,
+				6B8B801114852E9700A24AC0 /* TableCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2086,10 +2162,6 @@
 			files = (
 				6BD47CA31484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47D751484703F000ECE52 /* ActivityMenu.xib in Resources */,
-				6BD47D791484703F000ECE52 /* background.png in Resources */,
-				6BD47D7D1484703F000ECE52 /* Login.xib in Resources */,
-				6BD47D811484703F000ECE52 /* TableCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2104,10 +2176,6 @@
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47D761484703F000ECE52 /* ActivityMenu.xib in Resources */,
-				6BD47D7A1484703F000ECE52 /* background.png in Resources */,
-				6BD47D7E1484703F000ECE52 /* Login.xib in Resources */,
-				6BD47D821484703F000ECE52 /* TableCell2.xib in Resources */,
 				6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */,
 				6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */,
 				6BD47E011484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
