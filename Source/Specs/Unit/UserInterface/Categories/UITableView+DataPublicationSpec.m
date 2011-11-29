@@ -11,7 +11,6 @@
 
 #import "SpecHelper.h"
 #import "UITableView+DataPublication.h"
-#import "OCMockObject.h"
 
 SPEC_BEGIN(UITableView_DataPublicationSpec)
 

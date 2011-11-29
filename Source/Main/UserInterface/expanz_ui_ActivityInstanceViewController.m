@@ -34,6 +34,7 @@
 
 @synthesize activityDefinition = _activityDefinition;
 @synthesize activityInstance = _activityInstance;
+@synthesize modelAdapter = _modelAdapter;
 @synthesize spinner = _spinner;
 @synthesize tableCell;
 

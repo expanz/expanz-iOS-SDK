@@ -25,8 +25,6 @@
 
 @implementation IntegrationUtils
 
-
-
 + (void) loginWithDefaultUserIfRequired {
     if ([SessionContext globalContext] == nil) {
         JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 

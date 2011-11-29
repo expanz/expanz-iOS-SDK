@@ -30,7 +30,7 @@ SPEC_BEGIN(ImageCellSpec)
     describe(@"Loading images", ^{
 
         it(@"should load the image in an asynchronous thead", ^{
-            NSString* url = @"https://esaltstorage.blob.core.windows.net/blobs-sales-sales-customer-customerphoto/1?";
+            NSString* url = @"http://www.google.com.ph/images/srpr/logo3w.png";
             imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:url];
             assertWillHappen(imageCell.image != nil);
             [imageCell release];

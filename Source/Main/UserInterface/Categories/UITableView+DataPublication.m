@@ -17,30 +17,30 @@
 /* ================================================================================================================== */
 @interface UITableView (DataPublication_private)
 
-- (ActivityInstanceViewController*) activityController;
+- (ActivityInstanceViewController*)activityController;
 
 @end
 
 /* ================================================================================================================== */
 @implementation UITableView (DataPublication)
 
-- (void) setDataPublicationId:(NSString*)dataPublicationId {
+- (void)setDataPublicationId:(NSString*)dataPublicationId {
     ActivityInstanceViewController* activityController = [self activityController];
     [activityController hasUITableView:self requestingDataPublicationId:dataPublicationId];
 }
 
-- (void) setPopulateMethod:(NSString*)populateMethod {
+- (void)setPopulateMethod:(NSString*)populateMethod {
     ActivityInstanceViewController* activityController = [self activityController];
     [activityController hasUITableView:self requestingPopulateMethod:populateMethod];
 }
 
-- (void) setQuery:(NSString*)query {
+- (void)setQuery:(NSString*)query {
     ActivityInstanceViewController* activityController = [self activityController];
     [activityController hasUITableView:self requestingQuery:query];
 }
 
 
-- (void) setAutoPopulate:(BOOL)autoPopulate {
+- (void)setAutoPopulate:(BOOL)autoPopulate {
     ActivityInstanceViewController* activityController = [self activityController];
     [activityController hasUITableView:self requestingAutoPopulate:autoPopulate];
 }
@@ -48,14 +48,16 @@
 
 /* ================================================== Private Methods =============================================== */
 
-- (ActivityInstanceViewController*) activityController {
-    SDKAppDelegate* appDelegate = (SDKAppDelegate*) [UIApplication sharedApplication].delegate;
-    UINavigationController* navigationController = appDelegate.navigationController;
-    UIViewController* topController = navigationController.topViewController;
-    if ([topController isKindOfClass:[ActivityInstanceViewController class]]) {
+- (ActivityInstanceViewController*)activityController {
+    id appDelegate = (SDKAppDelegate*) [UIApplication sharedApplication].delegate;
+    if ([appDelegate isKindOfClass:[SDKAppDelegate class]]) {
+        UINavigationController* navigationController = [appDelegate navigationController];
+        UIViewController* topController = navigationController.topViewController;
         return (ActivityInstanceViewController*) topController;
     }
-    return nil;
+    else {
+        return nil;
+    }
 }
 
 @end

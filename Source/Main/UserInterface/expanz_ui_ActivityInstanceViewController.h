@@ -27,16 +27,15 @@
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_ActivityManager* _activityManager;
-    expanz_ui_ModelAdapter* _modelAdapter;
     UITextField* _currentlyEditingField;
     UIImageView* _currentlyEditingImageView;
 }
 
 @property(nonatomic, readonly) expanz_model_ActivityDefinition* activityDefinition;
 @property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 @property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
-
 
 
 /**
@@ -69,7 +68,6 @@
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
 
 - (void) willCommenceEditForImageView:(UIButton*)sender;
-
 
 
 @end

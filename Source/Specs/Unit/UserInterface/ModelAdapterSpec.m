@@ -15,97 +15,111 @@
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_DataSet.h"
-#import "ModelAdapterSpecHelper.h"
-
-//TODO: Should have it's own test fixture. 
-#import "ESA_Sales_Calc_ViewController.h"
-#import "ESA_Sales_CustomerViewController.h"
+#import "RXMLElement.h"
+#import "RXMLElement+ActivityInstance.h"
+#import "TestResource.h"
+#import "TestFixtureViewController.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
 
-    __block CalcViewController* calcViewController;
-    __block ModelAdapter* calcModelAdapter;
+    __block TestFixtureViewController* viewController;
+    __block ModelAdapter* modelAdapter;
 
     beforeEach(^{
         ActivityDefinition* activity =
             [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:ActivityStyleDetail];
-        calcViewController =
-            [[[CalcViewController alloc] initWithActivityDefinition:activity nibName:@"ESA.Sales.Calc" initialKey:nil] autorelease];
-        NSString* xmlFile = @"ESA_Sales_Calc_ActivityInstance";
-        calcModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:calcViewController xmlFileName:xmlFile];
+        viewController = [[[TestFixtureViewController alloc]
+            initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil] autorelease];
+        assertThat(viewController, notNilValue());
+        assertThat(viewController.view, notNilValue());
     });
 
     describe(@"Object creation", ^{
 
-        it(@"should allow instantiation with a view controller", ^{
-            assertThat(calcModelAdapter, notNilValue());
+        it(@"should be created by ActivityInstanceViewController after receiving activity data", ^{
+            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            ActivityInstance* activityInstance =
+                [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            [viewController requestDidFinishWithActivityInstance:activityInstance];
+
+            modelAdapter = viewController.modelAdapter;
+            assertThat(modelAdapter, notNilValue());
         });
 
     });
 
     describe(@"Mapping UITextField controls to expanz_model_Field items in an ActivityInstance", ^{
 
+        beforeEach(^{
+            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            ActivityInstance* activityInstance =
+                [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            [viewController requestDidFinishWithActivityInstance:activityInstance];
+            modelAdapter = viewController.modelAdapter;
+        });
+
         it(@"should return the Field corresponding to a UITextField", ^{
-            Field* field = [calcModelAdapter fieldFor:calcViewController.Op1];
+            Field* field = [modelAdapter fieldFor:viewController.Op1];
             assertThat(field, notNilValue());
             assertThat(field.fieldId, equalTo(@"Op1"));
         });
 
         it(@"should map the other way - return a UITextField for an expanz_model_field. ", ^{
-            Field* field = [calcModelAdapter.activityInstance fieldWithId:@"Op2"];
-            id textControl = [calcModelAdapter textInputControlFor:field];
+            Field* field = [modelAdapter.activityInstance fieldWithId:@"Op2"];
+            id textControl = [modelAdapter textInputControlFor:field];
             assertThat(textControl, notNilValue());
             LogDebug(@"Text Control: %@", textControl);
         });
 
     });
 
-    describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
-
-        __block CustomerViewController* customerViewController;
-        __block ModelAdapter* customerModelAdapter;
+    describe(@"Updating user interface controls with model values.", ^{
 
         beforeEach(^{
-            ActivityDefinition* activity = [[ActivityDefinition alloc]
-                initWithName:@"ESA.Sales.Customer" title:@"Customer" style:ActivityStyleBrowse];
-            customerViewController =
-                [[[CustomerViewController alloc] initWithActivityDefinition:activity
-                                               nibName:@"ESA.Sales.Customer.Browse" initialKey:nil] autorelease];
-            NSString* xmlFile = @"ESA_Sales_Customer_ActivityInstance";
-            customerModelAdapter = [ModelAdapterSpecHelper modelAdapterWith:customerViewController xmlFileName:xmlFile];
+            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            ActivityInstance* activityInstance =
+                [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            [viewController requestDidFinishWithActivityInstance:activityInstance];
+            modelAdapter = viewController.modelAdapter;
+        });
+
+        it(@"should update each user interface control with the corresponding model value. ", ^{
+
+            Field* op1 = [modelAdapter.activityInstance fieldWithId:@"Op1"];
+            op1.value = @"9999";
+
+            [modelAdapter updateUIControlsWithModelValues];
+            assertThat(viewController.Op1.text, equalTo(@"9999"));
+
+        });
+
+    });
+
+    describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
+
+        beforeEach(^{
+            NSString* xml = [TestResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
+            ActivityInstance* activityInstance =
+                [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            [viewController requestDidFinishWithActivityInstance:activityInstance];
+            modelAdapter = viewController.modelAdapter;
         });
 
         it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
-            DataSet* dataSet = [customerModelAdapter dataSetFor:customerViewController.customersList];
+            DataSet* dataSet = [modelAdapter dataSetFor:viewController.customersList];
             assertThat(dataSet, notNilValue());
         });
 
         it(@"should map the other directrion - return a UITableView corresponding to a DataSet", ^{
-            DataSet* dataSet = [customerModelAdapter.activityInstance dataSetWithId:@"customersList"];
-            UITableView* tableView = [customerModelAdapter dataViewControlFor:dataSet];
+            DataSet* dataSet = [modelAdapter.activityInstance dataSetWithId:@"customersList"];
+            UITableView* tableView = [modelAdapter dataViewControlFor:dataSet];
             assertThat(tableView, notNilValue());
         });
 
     });
 
 
-    describe(@"Updating user interface controls with model values.", ^{
-
-        it(@"should update each user interface control with the corresponding model value. ", ^{
-
-            Field* op1 = [calcModelAdapter.activityInstance fieldWithId:@"Op1"];
-            op1.value = @"9999";
-
-            [calcModelAdapter updateUIControlsWithModelValues];
-            assertThat(calcViewController.Op1.text, equalTo(@"9999"));
-
-        });
-
-    });
-
-
-
-    SPEC_END
+SPEC_END
 
 
