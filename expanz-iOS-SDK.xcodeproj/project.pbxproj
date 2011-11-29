@@ -553,8 +553,6 @@
 		6BD47E4914847065000ECE52 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E3714847065000ECE52 /* Sales.Customer.xib */; };
 		6BD47E4B14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47E3914847065000ECE52 /* Sales_Customer_ViewController.m */; };
 		6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixtureView.xib */; };
-		6BD50E561484E91A0004DF03 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47E3214847065000ECE52 /* ESA_Sales_Calc_ViewController.m */; };
-		6BD50E581484E9280004DF03 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47E3414847065000ECE52 /* ESA_Sales_CustomerViewController.m */; };
 		6BD5430F14734FBD0014F148 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; };
 		6BD5431014734FBD0014F148 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; };
 		6BD5431114734FBD0014F148 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C61458EBB5001AF204 /* ASIDataDecompressor.m */; };
@@ -2530,8 +2528,6 @@
 				6BFACBA414679916007C7273 /* (null) in Sources */,
 				6BFACBA414679916007C7277 /* ExpanzActivityStyle.m in Sources */,
 				6BFACBA414679916007C727A /* TestFixtureViewController.m in Sources */,
-				6BD50E561484E91A0004DF03 /* ESA_Sales_Calc_ViewController.m in Sources */,
-				6BD50E581484E9280004DF03 /* ESA_Sales_CustomerViewController.m in Sources */,
 				6BFACBA414679916007C727D /* TestResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
