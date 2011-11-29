@@ -16,6 +16,8 @@
         <expanz_service_LoginClientDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource> {
 
 @private
+    CGFloat _animatedDistance;
+    BOOL _scrolled;
     UITextField* _userNameField; 
     UITextField* _passwordField;             
 }

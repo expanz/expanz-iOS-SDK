@@ -1029,6 +1029,7 @@
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BCF17DF1476223100B068B9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Examples/main.m; sourceTree = "<group>"; };
 		6BCF188D1476240400B068B9 /* libexpanz-iOS-SDK-StaticLib copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BDEA53A147D051500844BE9 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../usr/lib/libprofile_rt.dylib; sourceTree = "<group>"; };
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58DC81444245C0063E80C /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E829 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
@@ -1745,6 +1746,7 @@
 		6BCAFB8C14317B1B00575280 = {
 			isa = PBXGroup;
 			children = (
+				6BDEA53A147D051500844BE9 /* libprofile_rt.dylib */,
 				6B3F4963143AD4B6005C0A7A /* build-configuration.properties */,
 				6B3F4964143AD4B7005C0A7A /* build.xml */,
 				6B100BEA143E739000EABC94 /* Configuration */,
