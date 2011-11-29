@@ -17,7 +17,6 @@
 #import "expanz_model_DataSet.h"
 #import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
-#import "TestResource.h"
 #import "TestFixtureViewController.h"
 
 

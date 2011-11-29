@@ -21,8 +21,7 @@ SPEC_BEGIN(RXMLELement_SessionDataSpec)
 __block RXMLElement* element;
 
 beforeEach(^{
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SessionData" ofType:@"xml"];
-    NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSString* xmlString = [TestResource withName:@"SessionData.xml"];
     element = [RXMLElement elementFromXMLString:xmlString];
 });
 
@@ -50,8 +49,7 @@ describe(@"Parsing children", ^{
 
 describe(@"Error handling", ^{
     it(@"should throw XML validation exception if you pass it the wrong kind of element", ^{
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"Dodgy" ofType:@"xml"]; 
-        NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        NSString* xmlString = [TestResource withName:@"Dodgy.xml"];
         RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
         
         @try {

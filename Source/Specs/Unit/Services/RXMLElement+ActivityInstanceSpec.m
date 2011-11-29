@@ -12,10 +12,11 @@
 #import "SpecHelper.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
-#import "../../../Main/Model/expanz_model_DataSet.h"
+#import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
+#import "expanz_iOS_SDKExceptions.h"
 
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
@@ -25,10 +26,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
     describe(@"Object creation", ^{
 
         beforeEach(^{
-            NSString
-                * filePath = [[NSBundle mainBundle] pathForResource:@"ESA_Sales_Calc_ActivityInstance" ofType:@"xml"];
-            NSString* xmlString =
-                [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+            NSString* xmlString = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
             RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
             activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
         });
@@ -45,9 +43,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
     describe(@"An activity with messages.", ^{
 
         beforeEach(^{
-            NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ActivityWithMessage" ofType:@"xml"];
-            NSString* xmlString =
-                [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+            NSString* xmlString = [TestResource withName:@"ActivityWithMessage.xml"];
             RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
             activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
         });
@@ -61,10 +57,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
     describe(@"Activity instance with data", ^{
 
         beforeEach(^{
-            NSString* filePath =
-                [[NSBundle mainBundle] pathForResource:@"ESA_Sales_Customer_ActivityInstance" ofType:@"xml"];
-            NSString* xmlString =
-                [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+            NSString* xmlString = [TestResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
             RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
             activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
         });

@@ -53,6 +53,7 @@ assertThat(outcome, equalTo(@"expression happened before 9 seconds."))
 
 #import "expanz_model_SessionContext.h"
 #import "expanz_iOS_SDKModule.h"
+#import "TestResource.h"
 
 
 

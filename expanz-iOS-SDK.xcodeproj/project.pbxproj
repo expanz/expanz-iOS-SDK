@@ -227,9 +227,6 @@
 		6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
 		6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
 		6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
-		6BD47CAA1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */; };
-		6BD47CAB1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */; };
-		6BD47CAC1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */; };
 		6BD47CAD1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */; };
 		6BD47CAE1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
 		6BD47CAF1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
@@ -2054,7 +2051,6 @@
 			files = (
 				6BD47CA21484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA61484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47CAA1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */,
 				6BD47D741484703F000ECE52 /* ActivityMenu.xib in Resources */,
 				6BD47D781484703F000ECE52 /* background.png in Resources */,
 				6BD47D7C1484703F000ECE52 /* Login.xib in Resources */,
@@ -2090,7 +2086,6 @@
 			files = (
 				6BD47CA31484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47CAB1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */,
 				6BD47D751484703F000ECE52 /* ActivityMenu.xib in Resources */,
 				6BD47D791484703F000ECE52 /* background.png in Resources */,
 				6BD47D7D1484703F000ECE52 /* Login.xib in Resources */,
@@ -2109,7 +2104,6 @@
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47CAC1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */,
 				6BD47D761484703F000ECE52 /* ActivityMenu.xib in Resources */,
 				6BD47D7A1484703F000ECE52 /* background.png in Resources */,
 				6BD47D7E1484703F000ECE52 /* Login.xib in Resources */,
