@@ -10,9 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-typedef enum {
-    ActivityStyleBrowse, ActivityStyleDetail
-} ExpanzActivityStyle;
+#import "ExpanzActivityStyle.h"
 
-
-ExpanzActivityStyle ExpanzActivityStyleFromString(NSString* string);
+ExpanzActivityStyle ExpanzActivityStyleFromString(NSString* string) {
+    if ([[string lowercaseString] isEqualToString:@"browse"]) {
+        return ActivityStyleBrowse;
+    }
+    else {
+        return ActivityStyleDetail;
+    }
+}

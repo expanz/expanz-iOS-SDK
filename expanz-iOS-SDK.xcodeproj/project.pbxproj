@@ -659,6 +659,13 @@
 		6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 		6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 		6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
+		6BFACBA414679916007C7271 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7272 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7273 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7275 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */; };
+		6BFACBA414679916007C7276 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */; };
+		6BFACBA414679916007C7277 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */; };
+		6BFACBA414679916007C7278 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1002,6 +1009,7 @@
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzActivityStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1385,6 +1393,7 @@
 		6BD47C441484703F000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */,
 				6BFACBA414679916007C726B /* ExpanzDataType.m */,
 				6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */,
 				6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */,
@@ -2230,6 +2239,8 @@
 				6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C7271 /* ExpanzActivityStyle.m in Sources */,
+				6BFACBA414679916007C7275 /* ExpanzActivityStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2315,6 +2326,7 @@
 				6BD47E4514847065000ECE52 /* main.m in Sources */,
 				6BD47E4B14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C7278 /* ExpanzActivityStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2395,6 +2407,8 @@
 				6BD47DAB1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB11484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C7272 /* ExpanzActivityStyle.m in Sources */,
+				6BFACBA414679916007C7276 /* ExpanzActivityStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2519,6 +2533,8 @@
 				6BD47E4214847065000ECE52 /* ESA_Sales_CustomerViewController.m in Sources */,
 				6BD47E4A14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */,
 				6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C7273 /* ExpanzActivityStyle.m in Sources */,
+				6BFACBA414679916007C7277 /* ExpanzActivityStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
