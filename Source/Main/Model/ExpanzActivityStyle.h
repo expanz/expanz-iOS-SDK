@@ -15,4 +15,9 @@ typedef enum {
 } ExpanzActivityStyle;
 
 
-ExpanzActivityStyle ExpanzActivityStyleFromString(NSString* string);
+@interface NSString (ExpanzActivityStyle)
+
+- (ExpanzActivityStyle) asExpanzActivityStyle;
+
+@end
+

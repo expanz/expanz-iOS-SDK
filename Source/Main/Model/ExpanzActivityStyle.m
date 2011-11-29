@@ -12,11 +12,17 @@
 
 #import "ExpanzActivityStyle.h"
 
-ExpanzActivityStyle ExpanzActivityStyleFromString(NSString* string) {
-    if ([[string lowercaseString] isEqualToString:@"browse"]) {
+
+@implementation NSString (ExpanzActivityStyle)
+
+- (ExpanzActivityStyle)asExpanzActivityStyle {
+    if ([[self lowercaseString] isEqualToString:@"browse"]) {
         return ActivityStyleBrowse;
     }
     else {
         return ActivityStyleDetail;
     }
 }
+
+
+@end

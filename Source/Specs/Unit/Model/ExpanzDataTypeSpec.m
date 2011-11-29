@@ -18,31 +18,31 @@ SPEC_BEGIN(ExpanzDataTypeSpec)
     describe(@"DataType from NSString", ^{
 
         it(@"should return DataTypeString", ^{
-            assertThatInt(ExpanzDataTypeFromString(@"string"), equalToInt(ExpanzDataTypeString));
-            assertThatInt(ExpanzDataTypeFromString(@"String"), equalToInt(ExpanzDataTypeString));
-            assertThatInt(ExpanzDataTypeFromString(@"STRING"), equalToInt(ExpanzDataTypeString));
-            assertThatInt(ExpanzDataTypeFromString(@"sTrInG"), equalToInt(ExpanzDataTypeString));
+            assertThatInt([@"string" asExpanzDataType], equalToInt(ExpanzDataTypeString));
+            assertThatInt([@"String" asExpanzDataType], equalToInt(ExpanzDataTypeString));
+            assertThatInt([@"STRING" asExpanzDataType], equalToInt(ExpanzDataTypeString));
+            assertThatInt([@"sTrInG" asExpanzDataType], equalToInt(ExpanzDataTypeString));
         });
 
         it(@"should return DataTypeString", ^{
-            assertThatInt(ExpanzDataTypeFromString(@"number"), equalToInt(ExpanzDataTypeNumber));
-            assertThatInt(ExpanzDataTypeFromString(@"Number"), equalToInt(ExpanzDataTypeNumber));
-            assertThatInt(ExpanzDataTypeFromString(@"NUMBER"), equalToInt(ExpanzDataTypeNumber));
-            assertThatInt(ExpanzDataTypeFromString(@"nUmBeR"), equalToInt(ExpanzDataTypeNumber));
+            assertThatInt([@"number" asExpanzDataType], equalToInt(ExpanzDataTypeNumber));
+            assertThatInt([@"Number" asExpanzDataType], equalToInt(ExpanzDataTypeNumber));
+            assertThatInt([@"NUMBER" asExpanzDataType], equalToInt(ExpanzDataTypeNumber));
+            assertThatInt([@"nUmBeR" asExpanzDataType], equalToInt(ExpanzDataTypeNumber));
         });
 
         it(@"should return DataTypeImage", ^{
-            assertThatInt(ExpanzDataTypeFromString(@"blob"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"Blob"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"BLOB"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"bLoB"), equalToInt(ExpanzDataTypeImage));
+            assertThatInt([@"blob" asExpanzDataType], equalToInt(ExpanzDataTypeImage));
+            assertThatInt([@"Blob" asExpanzDataType], equalToInt(ExpanzDataTypeImage));
+            assertThatInt([@"BLOB" asExpanzDataType], equalToInt(ExpanzDataTypeImage));
+            assertThatInt([@"bLoB" asExpanzDataType], equalToInt(ExpanzDataTypeImage));
         });
 
         it(@"should return DataTypeBool", ^{
-            assertThatInt(ExpanzDataTypeFromString(@"bool"), equalToInt(ExpanzDataTypeBool));
-            assertThatInt(ExpanzDataTypeFromString(@"Bool"), equalToInt(ExpanzDataTypeBool));
-            assertThatInt(ExpanzDataTypeFromString(@"BOOL"), equalToInt(ExpanzDataTypeBool));
-            assertThatInt(ExpanzDataTypeFromString(@"BoOl"), equalToInt(ExpanzDataTypeBool));
+            assertThatInt([@"bool" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
+            assertThatInt([@"Bool" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
+            assertThatInt([@"BOOL" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
+            assertThatInt([@"BoOl" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
         });
 
     });
@@ -53,7 +53,7 @@ SPEC_BEGIN(ExpanzDataTypeSpec)
 
         it(@"should throw NSInternalInconsistencyException for unnampped type", ^{
             @try {
-                dataType = ExpanzDataTypeFromString(@"foobar");
+                dataType = [@"foobar" asExpanzDataType];
                 [NSException raise:@"Should have thrown exception" format:@"foobar isn't an ExpanzDataType"];
             }
             @catch (NSException* e) {

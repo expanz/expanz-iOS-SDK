@@ -17,6 +17,7 @@
 #import "expanz_model_DataSet.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
+#import "ExpanzDataType.h"
 
 
 @implementation RXMLElement (ActivityInstance)
@@ -57,7 +58,7 @@
     NSString* fieldId = [self attribute:@"id"];
     BOOL nullable = [[self attribute:@"nullable"] boolValue];
     NSString* defaultValue = [self attribute:@"null"];
-    ExpanzDataType datatype = ExpanzDataTypeFromString([self attribute:@"datatype"]);
+    ExpanzDataType datatype = [[self attribute:@"datatype"] asExpanzDataType];
     NSString* label = [self attribute:@"label"];
     NSString* hint = [self attribute:@"hint"];
 
@@ -126,7 +127,7 @@
     NSString* columnId = [self attribute:@"id"];
     NSString* field = [self attribute:@"field"];
     NSString* label = [self attribute:@"label"];
-    ExpanzDataType dataType = ExpanzDataTypeFromString([self attribute:@"datatype"]);
+    ExpanzDataType dataType = [[self attribute:@"datatype"] asExpanzDataType];
     NSInteger width = [[self attribute:@"width"] integerValue];
 
     Column* column =

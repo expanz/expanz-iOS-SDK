@@ -13,5 +13,11 @@ typedef enum {
     ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool, ExpanzDataTypeNull
 } ExpanzDataType;
 
-ExpanzDataType ExpanzDataTypeFromString(NSString* string);
+@interface NSString (ExpanzDataType)
+
+- (ExpanzDataType) asExpanzDataType;
+
+@end
+
+
 

@@ -15,6 +15,7 @@
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
+#import "ExpanzActivityStyle.h"
 
 @implementation RXMLElement (SessionData)
 
@@ -63,7 +64,7 @@
 }
 
 - (ActivityDefinition*) asActivityDefinition {
-    ExpanzActivityStyle style = ExpanzActivityStyleFromString([self attribute:@"style"]);
+    ExpanzActivityStyle style = [[self attribute:@"style"] asExpanzActivityStyle];
     return [[[ActivityDefinition alloc]
         initWithName:[self attribute:@"name"] title:[self attribute:@"title"] style:style] autorelease];
 }
