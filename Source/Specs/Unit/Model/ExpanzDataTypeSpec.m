@@ -38,11 +38,11 @@ SPEC_BEGIN(ExpanzDataTypeSpec)
             assertThatInt(ExpanzDataTypeFromString(@"bLoB"), equalToInt(ExpanzDataTypeImage));
         });
 
-        it(@"should return DataTypeImage", ^{
-            assertThatInt(ExpanzDataTypeFromString(@"bool"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"Bool"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"BOOL"), equalToInt(ExpanzDataTypeImage));
-            assertThatInt(ExpanzDataTypeFromString(@"BoOl"), equalToInt(ExpanzDataTypeImage));
+        it(@"should return DataTypeBool", ^{
+            assertThatInt(ExpanzDataTypeFromString(@"bool"), equalToInt(ExpanzDataTypeBool));
+            assertThatInt(ExpanzDataTypeFromString(@"Bool"), equalToInt(ExpanzDataTypeBool));
+            assertThatInt(ExpanzDataTypeFromString(@"BOOL"), equalToInt(ExpanzDataTypeBool));
+            assertThatInt(ExpanzDataTypeFromString(@"BoOl"), equalToInt(ExpanzDataTypeBool));
         });
 
     });

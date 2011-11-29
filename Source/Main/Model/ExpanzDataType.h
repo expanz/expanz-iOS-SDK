@@ -28,7 +28,7 @@ static ExpanzDataType ExpanzDataTypeFromString(NSString* string) {
         return ExpanzDataTypeImage;
     }
     else if ([[string lowercaseString] isEqualToString:@"bool"]) {
-        return ExpanzDataTypeImage;
+        return ExpanzDataTypeBool;
     }
     else {
         [NSException
