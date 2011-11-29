@@ -13,27 +13,5 @@ typedef enum {
     ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool, ExpanzDataTypeNull
 } ExpanzDataType;
 
+ExpanzDataType ExpanzDataTypeFromString(NSString* string);
 
-static ExpanzDataType ExpanzDataTypeFromString(NSString* string) {
-    if (string == nil) {
-        return ExpanzDataTypeNull;
-    }
-    else if ([[string lowercaseString] isEqualToString:@"string"]) {
-        return ExpanzDataTypeString;
-    }
-    else if ([[string lowercaseString] isEqualToString:@"number"]) {
-        return ExpanzDataTypeNumber;
-    }
-    else if ([[string lowercaseString] isEqualToString:@"blob"]) {
-        return ExpanzDataTypeImage;
-    }
-    else if ([[string lowercaseString] isEqualToString:@"bool"]) {
-        return ExpanzDataTypeBool;
-    }
-    else {
-        [NSException
-            raise:NSInternalInconsistencyException format:@"There is no DataType corresponding to the string '%@'",
-                                                          string];
-    }
-    return (ExpanzDataType) 0;
-}

@@ -508,7 +508,6 @@
 		6BD47E041484705A000ECE52 /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC31484705A000ECE52 /* SessionData.xml */; };
 		6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC51484705A000ECE52 /* InfoPlist.strings */; };
 		6BD47E061484705A000ECE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DC71484705A000ECE52 /* main.m */; };
-		6BD47E071484705A000ECE52 /* TestRunner-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC81484705A000ECE52 /* TestRunner-Info.plist */; };
 		6BD47E081484705A000ECE52 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCB1484705A000ECE52 /* TestRunnerAppDelegate.m */; };
 		6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */; };
 		6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */; };
@@ -656,6 +655,10 @@
 		6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
+		6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
+		6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
+		6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
+		6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -998,6 +1001,7 @@
 		6BFACBA014679916007C725B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Objection-iOS.framework"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1381,6 +1385,7 @@
 		6BD47C441484703F000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C726B /* ExpanzDataType.m */,
 				6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */,
 				6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */,
 				6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */,
@@ -2107,7 +2112,6 @@
 				6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BD47E041484705A000ECE52 /* SessionData.xml in Resources */,
 				6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47E071484705A000ECE52 /* TestRunner-Info.plist in Resources */,
 				6BD47E3C14847065000ECE52 /* ESA.Sales.Calc.xib in Resources */,
 				6BD47E3E14847065000ECE52 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BD47E4614847065000ECE52 /* Sales.Customer.Browse.xib in Resources */,
@@ -2225,6 +2229,7 @@
 				6BD47DA41484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
+				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2309,6 +2314,7 @@
 				6BD47E4314847065000ECE52 /* ESA_Sales_CustomerViewController.m in Sources */,
 				6BD47E4514847065000ECE52 /* main.m in Sources */,
 				6BD47E4B14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2388,6 +2394,7 @@
 				6BD47DA51484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAB1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB11484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
+				6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2511,6 +2518,7 @@
 				6BD47E4014847065000ECE52 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BD47E4214847065000ECE52 /* ESA_Sales_CustomerViewController.m in Sources */,
 				6BD47E4A14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */,
+				6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
