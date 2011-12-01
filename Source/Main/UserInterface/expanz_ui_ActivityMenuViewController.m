@@ -24,7 +24,7 @@
 
 /* ================================================== Constructors ================================================== */
 
-- (id) init {
+- (id)init {
     self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"activities";
@@ -37,7 +37,7 @@
 
 /* ================================================ Delegate Methods ================================================ */
 
-- (void) didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 
@@ -46,17 +46,17 @@
 
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
-- (void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-- (void) viewDidUnload {
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -64,7 +64,7 @@
 /* ================================================================================================================== */
 #pragma mark table view
 
-- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
     if (tableView.style == UITableViewStyleGrouped) {
         return [_menu.processAreas count];
     }
@@ -74,16 +74,16 @@
 }
 
 
-- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView.style == UITableViewStyleGrouped) {
         return [[[_menu.processAreas objectAtIndex:section] activities] count];
     }
     else {
-        return 3;
-    }    
+        return [[_menu allActivities] count];
+    }
 }
 
-- (NSString*) tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
     if (tableView.style == UITableViewStyleGrouped) {
         return [[_menu.processAreas objectAtIndex:section] title];
     }
@@ -93,7 +93,7 @@
 }
 
 
-- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     static NSString* reuseId = @"ActivityMenu";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
@@ -105,13 +105,19 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-    ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
-    cell.textLabel.text = [activity title];
+    if (tableView.style == UITableViewStyleGrouped) {
+        ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
+        ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
+        cell.textLabel.text = [activity title];
+    }
+    else {
+        ActivityDefinition* activity = [[_menu allActivities] objectAtIndex:indexPath.row]; 
+        cell.textLabel.text = [activity title];
+    }
     return cell;
 }
 
-- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
     ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
     if ([_activityManger transitionToActivityWithDefinition:activity]) {
@@ -122,12 +128,12 @@
 /* ================================================================================================================== */
 #pragma mark SessionDataClientDelegate 
 
-- (void) requestDidFinishWithMenu:(Menu*)menu {
+- (void)requestDidFinishWithMenu:(Menu*)menu {
     _menu = [menu retain];
     [self.menuTable reloadData];
 }
 
-- (void) requestDidFailWithError:(NSError*)error {
+- (void)requestDidFailWithError:(NSError*)error {
 
 }
 
@@ -135,7 +141,7 @@
 
 
 
-- (void) dealloc {
+- (void)dealloc {
     LogDebug(@"!!!!!!!!!!!!!!!!!!!! In dealloc!!!!!!!!!!!!");
     [_sessionDataClient release];
     [_menu release];

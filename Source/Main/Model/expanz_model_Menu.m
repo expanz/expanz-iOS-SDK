@@ -20,7 +20,7 @@
 @synthesize canChangeCompanyRole = _canChangeCompanyRole;
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
+- (id)initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
     self = [super init];
     if (self) {
         _hasWorkflowTrays = hasWorkflowTrays;
@@ -32,16 +32,16 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSArray*) processAreas {
+- (NSArray*)processAreas {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
     return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addProcessArea:(ProcessArea*)processArea {
+- (void)addProcessArea:(ProcessArea*)processArea {
     [_processAreas addObject:processArea];
 }
 
-- (expanz_model_ProcessArea*) processAreaWithId:(NSString*)processAreaId {
+- (expanz_model_ProcessArea*)processAreaWithId:(NSString*)processAreaId {
     for (ProcessArea* processArea in _processAreas) {
         if ([processArea.processId isEqualToString:processAreaId]) {
             return processArea;
@@ -50,34 +50,36 @@
     return nil;
 }
 
-- (NSArray*) userRoles {
+- (NSArray*)userRoles {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
     return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addUserRole:(UserRole*)userRole {
+- (void)addUserRole:(UserRole*)userRole {
     [_userRoles addObject:userRole];
 }
 
 
-- (NSArray*) allActivities {
-    NSMutableArray* allActivities = [[NSMutableArray alloc] init];
-    for (ProcessArea* processArea in [self processAreas]) {
-        [allActivities addObjectsFromArray:[processArea activities]];
+- (NSArray*)allActivities {
+    if (_allActivities == nil) {
+        _allActivities = [[NSMutableArray alloc] init];
+        for (ProcessArea* processArea in [self processAreas]) {
+            [_allActivities addObjectsFromArray:[processArea activities]];
+        }
     }
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
-    return [allActivities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+    return [_allActivities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
-
 
 /* ================================================== Utility Methods =============================================== */
-- (NSString*) description {
+- (NSString*)description {
     return [NSString stringWithFormat:@"Menu: hasWorkFlowTrays=%@, canChangeCompanyRole=%@, processAreas=%@, \
-            userRoles=%@", _hasWorkflowTrays == YES ? @"YES" : @"NO",
-                                      _canChangeCompanyRole == YES ? @"YES" : @"NO", _processAreas, _userRoles];
+            userRoles=%@", _hasWorkflowTrays == YES ? @"YES" : @"NO", _canChangeCompanyRole == YES ? @"YES" : @"NO",
+                                      _processAreas, _userRoles];
 }
 
-- (void) dealloc {
+- (void)dealloc {
+    [_allActivities release];
     [_processAreas release];
     [_userRoles release];
     [super dealloc];

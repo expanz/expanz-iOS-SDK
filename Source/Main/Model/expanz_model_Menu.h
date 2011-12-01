@@ -14,10 +14,10 @@
 @class expanz_model_ProcessArea;
 @class expanz_model_UserRole;
 
-@interface expanz_model_Menu : NSObject
-{
+@interface expanz_model_Menu : NSObject {
 
 @private
+    NSMutableArray* _allActivities;
     NSMutableSet* _processAreas;
     NSMutableSet* _userRoles;
 }
