@@ -687,6 +687,10 @@
 		6BFACBA414679916007C7278 /* ExpanzActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7274 /* ExpanzActivityStyle.m */; };
 		6BFACBA414679916007C727A /* TestFixtureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixtureViewController.m */; };
 		6BFACBA414679916007C727D /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727C /* TestResource.m */; };
+		6BFACBA414679916007C7280 /* UINavigationController+ExpanzConfigurations.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7281 /* UINavigationController+ExpanzConfigurations.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7282 /* UINavigationController+ExpanzConfigurations.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7285 /* UINavigationController+ExpanzConfigurations.h in Headers */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1920,6 +1924,7 @@
 				6BD47DAE1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */,
 				6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */,
 				6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */,
+				6BFACBA414679916007C7285 /* UINavigationController+ExpanzConfigurations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2292,6 +2297,7 @@
 				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7271 /* (null) in Sources */,
 				6BFACBA414679916007C7275 /* ExpanzActivityStyle.m in Sources */,
+				6BFACBA414679916007C7280 /* UINavigationController+ExpanzConfigurations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2460,6 +2466,7 @@
 				6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7272 /* (null) in Sources */,
 				6BFACBA414679916007C7276 /* ExpanzActivityStyle.m in Sources */,
+				6BFACBA414679916007C7281 /* UINavigationController+ExpanzConfigurations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2583,6 +2590,7 @@
 				6BFACBA414679916007C7277 /* ExpanzActivityStyle.m in Sources */,
 				6BFACBA414679916007C727A /* TestFixtureViewController.m in Sources */,
 				6BFACBA414679916007C727D /* TestResource.m in Sources */,
+				6BFACBA414679916007C7282 /* UINavigationController+ExpanzConfigurations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -142,7 +142,6 @@
 
 
 - (void)dealloc {
-    LogDebug(@"!!!!!!!!!!!!!!!!!!!! In dealloc!!!!!!!!!!!!");
     [_sessionDataClient release];
     [_menu release];
     [_menuTable release];

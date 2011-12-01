@@ -49,7 +49,6 @@ SPEC_BEGIN(SDKAppDelegateSpec)
             [delegate application:application didFinishLaunchingWithOptions:nil];
             
             [window verify];
-            assertThat(delegate.navigationController, notNilValue());
         });
 
     });

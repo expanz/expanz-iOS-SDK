@@ -29,8 +29,8 @@
     JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
     [JSObjection setGlobalInjector:injector];
     
-    LoginViewController* loginViewController = [[LoginViewController alloc] init];    
-    _navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];    
+    LoginViewController* loginViewController = [[LoginViewController alloc] init];
+    [_navigationController pushViewController:loginViewController animated:NO];
     [_navigationController setNavigationBarHidden:YES];
     [loginViewController release];    
         

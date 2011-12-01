@@ -234,15 +234,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         [sessionDataRequest release];
 
         SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-        delegate.navigationController =
-            [[[UINavigationController alloc] initWithRootViewController:menuViewController] autorelease];
+        [delegate.navigationController pushViewController:menuViewController animated:NO];
+        [delegate.navigationController setNavigationBarHidden:NO];
+        [menuViewController.navigationItem setHidesBackButton:YES];
         [menuViewController release];
-
-        [self.view removeFromSuperview];
 
         [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];
         [delegate.window addSubview:delegate.navigationController.view];
-        [self release];
     }
 }
 
