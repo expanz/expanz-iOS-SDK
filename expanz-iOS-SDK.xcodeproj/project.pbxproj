@@ -26,6 +26,7 @@
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B0EAD2A148737F000E56C18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0EAD29148737F000E56C18 /* MainWindow.xib */; };
 		6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
 		6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
 		6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
@@ -273,10 +274,6 @@
 		6BD47CA31484703F000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C361484703F000ECE52 /* InfoPlist.strings */; };
 		6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C361484703F000ECE52 /* InfoPlist.strings */; };
 		6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C361484703F000ECE52 /* InfoPlist.strings */; };
-		6BD47CA61484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
-		6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
-		6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
-		6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
 		6BD47CAE1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
 		6BD47CAF1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
 		6BD47CB01484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
@@ -813,6 +810,7 @@
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		6B0EAD29148737F000E56C18 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
@@ -915,7 +913,6 @@
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BCF188D1476240400B068B9 /* libexpanz-iOS-SDK-StaticLib copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD47C371484703F000ECE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6BD47C391484703F000ECE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "expanz-iOS-SDK-Info.plist"; sourceTree = "<group>"; };
 		6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz-iOS-SDK-Prefix.pch"; sourceTree = "<group>"; };
 		6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKAppDelegate.h; sourceTree = "<group>"; };
@@ -1169,6 +1166,7 @@
 		6B8B800914852E9700A24AC0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6B0EAD29148737F000E56C18 /* MainWindow.xib */,
 				6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */,
 				6B8B800B14852E9700A24AC0 /* background.png */,
 				6B8B800C14852E9700A24AC0 /* Login.xib */,
@@ -1459,7 +1457,6 @@
 			isa = PBXGroup;
 			children = (
 				6BD47C361484703F000ECE52 /* InfoPlist.strings */,
-				6BD47C381484703F000ECE52 /* MainWindow.xib */,
 				6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */,
 				6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */,
 				6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */,
@@ -2129,7 +2126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD47CA21484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47CA61484703F000ECE52 /* MainWindow.xib in Resources */,
+				6B0EAD2A148737F000E56C18 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2142,7 +2139,6 @@
 				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
 				6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */,
 				6BD47E3D14847065000ECE52 /* ESA.Sales.Calc.xib in Resources */,
 				6BD47E3F14847065000ECE52 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BD47E4714847065000ECE52 /* Sales.Customer.Browse.xib in Resources */,
@@ -2159,7 +2155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD47CA31484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2173,7 +2168,6 @@
 				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
 				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */,
 				6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */,
 				6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */,
 				6BD47E011484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
@@ -2609,14 +2603,6 @@
 				6BD47C371484703F000ECE52 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6BD47C381484703F000ECE52 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BD47C391484703F000ECE52 /* en */,
-			);
-			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 		6BD47DC51484705A000ECE52 /* InfoPlist.strings */ = {
