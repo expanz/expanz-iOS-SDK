@@ -16,6 +16,11 @@
 SPEC_BEGIN(ExpanzDataTypeSpec)
 
     describe(@"DataType from NSString", ^{
+        
+        it(@"should return DataTypeNull", ^{
+            NSString* foobar = nil; 
+            assertThatInt([foobar asExpanzDataType], equalToInt(ExpanzDataTypeNull));
+        });
 
         it(@"should return DataTypeString", ^{
             assertThatInt([@"string" asExpanzDataType], equalToInt(ExpanzDataTypeString));

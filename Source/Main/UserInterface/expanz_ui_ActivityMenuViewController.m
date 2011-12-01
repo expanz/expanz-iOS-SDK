@@ -68,16 +68,28 @@
     if (tableView.style == UITableViewStyleGrouped) {
         return [_menu.processAreas count];
     }
-    return 1;
+    else {
+        return 1;
+    }
 }
 
 
 - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[_menu.processAreas objectAtIndex:section] activities] count];
+    if (tableView.style == UITableViewStyleGrouped) {
+        return [[[_menu.processAreas objectAtIndex:section] activities] count];
+    }
+    else {
+        return 3;
+    }    
 }
 
 - (NSString*) tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[_menu.processAreas objectAtIndex:section] title];
+    if (tableView.style == UITableViewStyleGrouped) {
+        return [[_menu.processAreas objectAtIndex:section] title];
+    }
+    else {
+        return nil;
+    }
 }
 
 

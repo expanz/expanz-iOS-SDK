@@ -19,10 +19,7 @@
 - (ExpanzDataType)asExpanzDataType {
 
     ExpanzDataType dataType;
-    if (self == nil) {
-        dataType = ExpanzDataTypeNull;
-    }
-    else if ([[self lowercaseString] isEqualToString:@"string"]) {
+    if ([[self lowercaseString] isEqualToString:@"string"]) {
         dataType = ExpanzDataTypeString;
     }
     else if ([[self lowercaseString] isEqualToString:@"number"]) {

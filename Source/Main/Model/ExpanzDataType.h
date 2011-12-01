@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef enum {
-    ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool, ExpanzDataTypeNull
+    ExpanzDataTypeNull, ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool
 } ExpanzDataType;
 
 @interface NSString (ExpanzDataType)

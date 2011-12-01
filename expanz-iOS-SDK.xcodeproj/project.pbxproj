@@ -277,7 +277,6 @@
 		6BD47CA71484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
 		6BD47CA81484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
 		6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C381484703F000ECE52 /* MainWindow.xib */; };
-		6BD47CAD1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */; };
 		6BD47CAE1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
 		6BD47CAF1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
 		6BD47CB01484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
@@ -2144,7 +2143,6 @@
 				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
 				6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47CA91484703F000ECE52 /* MainWindow.xib in Resources */,
-				6BD47CAD1484703F000ECE52 /* expanz-iOS-SDK-Info.plist in Resources */,
 				6BD47E3D14847065000ECE52 /* ESA.Sales.Calc.xib in Resources */,
 				6BD47E3F14847065000ECE52 /* ESA.Sales.Customer.Browse.xib in Resources */,
 				6BD47E4714847065000ECE52 /* Sales.Customer.Browse.xib in Resources */,

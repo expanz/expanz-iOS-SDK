@@ -59,6 +59,17 @@
     [_userRoles addObject:userRole];
 }
 
+
+- (NSArray*) allActivities {
+    NSMutableArray* allActivities = [[NSMutableArray alloc] init];
+    for (ProcessArea* processArea in [self processAreas]) {
+        [allActivities addObjectsFromArray:[processArea activities]];
+    }
+    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    return [allActivities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
+
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
     return [NSString stringWithFormat:@"Menu: hasWorkFlowTrays=%@, canChangeCompanyRole=%@, processAreas=%@, \

@@ -41,12 +41,12 @@
  */
 - (expanz_model_ProcessArea*) processAreaWithId:(NSString*)processAreaId;
 
-
 /**
 * Adds a ProcessArea to this menu.
 */
 - (void) addUserRole:(expanz_model_UserRole*)userRole;
 
+- (NSArray*) allActivities;
 
 @end
 
