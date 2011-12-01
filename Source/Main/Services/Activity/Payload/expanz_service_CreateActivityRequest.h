@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import "xml_Serializable.h"
-#import "ExpanzActivityStyle.h"
+#import "expanz_model_ActivityStyle.h"
 
 @class expanz_service_DataPublicationRequest;
 
@@ -23,7 +23,7 @@
 
 
 @property(nonatomic, readonly) NSString* activityName;
-@property(nonatomic, readonly) ExpanzActivityStyle style;
+@property(nonatomic, readonly) ActivityStyle* style;
 @property(nonatomic, readonly) NSString* initialKey;
 @property(nonatomic, readonly) NSString* sessionToken;
 @property(nonatomic, readonly) NSArray* dataPublicationRequests;
@@ -32,7 +32,7 @@
 /**
 * Initializes with activity name, and session token attribtues.
 */
-- (id) initWithActivityName:(NSString*)activityName style:(ExpanzActivityStyle)style initialKey:(NSString*)initialKey
+- (id) initWithActivityName:(NSString*)activityName style:(ActivityStyle*)style initialKey:(NSString*)initialKey
                sessionToken:(NSString*)sessionToken;
 
 /**

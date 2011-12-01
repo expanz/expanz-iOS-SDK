@@ -22,9 +22,9 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 
         it(@"should allow initialization with activityName and sessionToken parameters.", ^{
             CreateActivityRequest* request = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Calculator" style:ActivityStyleDetail initialKey:nil sessionToken:@"EggResponderxx238b"];
+                initWithActivityName:@"Calculator" style:[ActivityStyle browseStyle] initialKey:nil sessionToken:@"EggResponderxx238b"];
             assertThat([request activityName], equalTo(@"Calculator"));
-            assertThatInt([request style], equalToInt(ActivityStyleDetail));
+            assertThatBool([request.style isBrowse], equalToBool(YES));
             assertThat([request sessionToken], equalTo(@"EggResponderxx238b"));
         });
 
@@ -34,14 +34,14 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 
         it(@"should be able to marshal itself to XML to send over the wire as a web service request.", ^{
             id <xml_Serializable> request =
-                [[CreateActivityRequest alloc] initWithActivityName:@"Calculator" style:ActivityStyleBrowse initialKey:nil sessionToken:@"xx2348b"];
+                [[CreateActivityRequest alloc] initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil sessionToken:@"xx2348b"];
             RXMLElement* e = [RXMLElement elementFromXMLString:[request toXml]];
             assertThat(e, notNilValue());
         });
 
         it(@"Should allow inclusion of DataPublicationRequests in the request body", ^{
             CreateActivityRequest* request = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Calculator" style:ActivityStyleBrowse initialKey:nil sessionToken:@"xx2348b"];
+                initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil sessionToken:@"xx2348b"];
 
             UITableView* tableView = [[UITableView alloc] init];
 

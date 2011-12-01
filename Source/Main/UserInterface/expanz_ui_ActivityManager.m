@@ -21,9 +21,9 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityManager (private)
 
-- (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*)nibNameFor:(ActivityDefinition*)activityDefinition;
 
-- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition;
 
 @end
 
@@ -32,13 +32,13 @@
 
 objection_register_singleton(expanz_ui_ActivityManager)
 
-- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity {
+- (BOOL)transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity {
 
     return [self transitionToActivityWithDefinition:activity initialKey:nil];
 }
 
-- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity
-                                 initialKey:(NSString*)initialKey {
+- (BOOL)transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity
+                                initialKey:(NSString*)initialKey {
 
     NSString* controllerClassName = [self controllerClassNameFor:activity];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
@@ -62,26 +62,25 @@ objection_register_singleton(expanz_ui_ActivityManager)
 }
 
 /* ================================================== Private Methods =============================================== */
-- (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
+- (NSString*)nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
     NSString* nibName;
-    if (activityDefinition.style == ActivityStyleBrowse) {
-        nibName = [NSString stringWithFormat:@"%@.Browse", activityDefinition.name];
+    if ([activityDefinition.style isDefault]) {
+        nibName = activityDefinition.name;
     }
     else {
-        nibName = activityDefinition.name;
+        nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.name, activityDefinition.style.name];
     }
     LogDebug(@"Nib name: %@", nibName);
     return nibName;
 }
 
-- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition {
+- (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition {
     //TODO: Look up view controller from formmapping.xml
-    NSMutableString* controllerClassName = [[NSMutableString alloc] init];
-    if (activityDefinition.style == ActivityStyleBrowse) {
-            [controllerClassName appendString:@"Browse_"];
-        }
-    [controllerClassName
-        appendString:[activityDefinition.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
+    NSMutableString* controllerClassName = [NSMutableString stringWithString:
+        [activityDefinition.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
+    if (![activityDefinition.style isDefault]) {
+        [controllerClassName appendString:[NSString stringWithFormat:@"_%@", activityDefinition.style.name]];
+    }
     [controllerClassName appendString:@"_ViewController"];
     return controllerClassName;
 }

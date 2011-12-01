@@ -8,19 +8,21 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import "expanz_model_ActivityStyle.h"
 
-@interface expanz_model_ActivityDefinition : NSObject
 
-@property(nonatomic, readonly) NSString* name;
-@property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) ActivityStyle* style;
+@interface expanz_model_ActivityStyle : NSObject
 
-- (id) initWithName:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
+@property (nonatomic, readonly) NSString* name;
+
++ (expanz_model_ActivityStyle*) defaultStyle;
++ (expanz_model_ActivityStyle*) browseStyle;
++ (expanz_model_ActivityStyle*) fromString:(NSString*)string;
+
+- (id) initWithName:(NSString*)name;
+- (BOOL) isDefault;
+- (BOOL) isBrowse;
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias ActivityDefinition expanz_model_ActivityDefinition;
+@compatibility_alias ActivityStyle expanz_model_ActivityStyle;

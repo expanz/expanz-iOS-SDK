@@ -9,15 +9,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "Sales_Customer_Browse_ViewController.h"
 
-typedef enum {
-    ActivityStyleBrowse, ActivityStyleDetail
-} ExpanzActivityStyle;
+@implementation Sales_Customer_Browse_ViewController
+
+@synthesize customersList = _customersList;
 
 
-@interface NSString (ExpanzActivityStyle)
-
-- (ExpanzActivityStyle) asExpanzActivityStyle;
+- (void) dealloc {
+    [_customersList release];
+    [super dealloc];
+}
 
 @end
-

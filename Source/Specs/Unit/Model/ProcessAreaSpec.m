@@ -42,14 +42,14 @@ describe(@"Activities", ^{
     
     it(@"should store references to associated activites via an addActivity method", ^{
         ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Order a widget" 
-                                                title:@"Get your widgets here" style:ActivityStyleBrowse];
+                                                title:@"Get your widgets here" style:[ActivityStyle browseStyle]];
         [processArea addActivityDefinition:activity];
         assertThat(processArea.activities, hasCountOf(1));
     });
     
     it(@"should allow retrieving an activity by name.", ^{
         ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Order a widget" 
-                                                title:@"Get your widgets here" style:ActivityStyleBrowse];
+                                                title:@"Get your widgets here" style:[ActivityStyle browseStyle]];
         [processArea addActivityDefinition:activity];
 
         assertThat([processArea activityWithName:@"Order a widget"], equalTo(activity));

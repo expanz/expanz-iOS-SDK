@@ -25,7 +25,8 @@
     
     [self addPayload:sessionDataRequest];
     
-    [self.request setCompletionBlock:^{       
+    [self.request setCompletionBlock:^{
+        LogDebug(@"Response: %@", [self.request responseString]);
         RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];
         [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
     }];

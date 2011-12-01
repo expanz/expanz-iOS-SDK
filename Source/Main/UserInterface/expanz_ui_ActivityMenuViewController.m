@@ -118,9 +118,15 @@
 }
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-    ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
-    if ([_activityManger transitionToActivityWithDefinition:activity]) {
+    ActivityDefinition* activityDefinition;
+    if (tableView.style == UITableViewStyleGrouped) {
+        ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
+        activityDefinition = [processArea.activities objectAtIndex:indexPath.row];
+    }
+    else {
+        activityDefinition = [[_menu allActivities] objectAtIndex:indexPath.row];
+    }
+    if ([_activityManger transitionToActivityWithDefinition:activityDefinition]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

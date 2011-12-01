@@ -9,16 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "Browse_Sales_Customer_ViewController.h"
+#import <UIKit/UIKit.h>
+#import <netinet/in.h>
+#import "expanz_ui_ActivityInstanceViewController.h"
 
-@implementation Browse_Sales_Customer_ViewController
+@interface Sales_Customer_Browse_ViewController : expanz_ui_ActivityInstanceViewController
 
-@synthesize customersList = _customersList;
+@property (nonatomic, retain) IBOutlet UITableView* customersList;
 
-
-- (void) dealloc {
-    [_customersList release];
-    [super dealloc];
-}
 
 @end

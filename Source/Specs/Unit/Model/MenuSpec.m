@@ -64,27 +64,27 @@ SPEC_BEGIN(MenuSpec)
             ProcessArea* processArea1 =
                 [[[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"] autorelease];
 
-            ActivityDefinition* activity1 =
-                [[ActivityDefinition alloc] initWithName:@"Customers" title:@"Customers" style:ActivityStyleDetail];
-            ActivityDefinition* activity2 =
-                [[ActivityDefinition alloc] initWithName:@"Invoices" title:@"Invoices" style:ActivityStyleDetail];
+            ActivityDefinition* activity1 = [[ActivityDefinition alloc]
+                initWithName:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
+            ActivityDefinition* activity2 = [[ActivityDefinition alloc]
+                initWithName:@"Invoices" title:@"Invoices" style:[ActivityStyle defaultStyle]];
 
             [processArea1 addActivityDefinition:activity1];
             [processArea1 addActivityDefinition:activity2];
             [menu addProcessArea:processArea1];
-            
+
             ProcessArea* processArea2 =
                 [[[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"] autorelease];
 
-            ActivityDefinition* activity3 =
-                [[ActivityDefinition alloc] initWithName:@"Order Tracking" title:@"Order Tracking" style:ActivityStyleDetail];
-            ActivityDefinition* activity4 =
-                [[ActivityDefinition alloc] initWithName:@"Engagements" title:@"Engagements" style:ActivityStyleDetail];
+            ActivityDefinition* activity3 = [[ActivityDefinition alloc]
+                initWithName:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
+            ActivityDefinition* activity4 = [[ActivityDefinition alloc]
+                initWithName:@"Engagements" title:@"Engagements" style:[ActivityStyle defaultStyle]];
 
             [processArea2 addActivityDefinition:activity3];
             [processArea2 addActivityDefinition:activity4];
             [menu addProcessArea:processArea2];
-            
+
             ProcessArea* processArea3 =
                 [[[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"] autorelease];
             [menu addProcessArea:processArea3];

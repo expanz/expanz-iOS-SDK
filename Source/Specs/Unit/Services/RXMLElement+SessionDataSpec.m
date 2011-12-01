@@ -42,7 +42,7 @@ describe(@"Parsing children", ^{
         ProcessArea* processArea = [menu processAreaWithId:@"Sales"]; 
         ActivityDefinition* activity = [processArea activityWithName:@"ESA.Sales.Customer"]; 
         assertThat(activity, notNilValue());
-        assertThatInt(activity.style, equalToInt(ActivityStyleBrowse));
+        assertThatBool([activity.style isBrowse], equalToBool(YES));
     });
     
 });

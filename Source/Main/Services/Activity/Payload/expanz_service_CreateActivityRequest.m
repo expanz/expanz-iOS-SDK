@@ -28,11 +28,11 @@
     return self;
 }
 
-- (id) initWithActivityName:(NSString*)activityName style:(ExpanzActivityStyle)style initialKey:(NSString*)initialKey
+- (id) initWithActivityName:(NSString*)activityName style:(ActivityStyle*)style initialKey:(NSString*)initialKey
                sessionToken:(NSString*)sessionToken {
     self = [self init];
     _activityName = [activityName copy];
-    _style = style;
+    _style = [style retain];
     _initialKey = [initialKey copy];
     _sessionToken = [sessionToken copy];
     return self;
@@ -58,11 +58,10 @@
 /* ================================================= Protocol Methods =============================================== */
 #pragma mark xml_Serializable
 
-#define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateActivity name=\"%@\" %@ %@>\
-%@</CreateActivity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
+#define kXmlTempate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><CreateActivity name=\"%@\" \
+style=\"%@\" %@>%@</CreateActivity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*) toXml {
-    NSString* styleAttribute = _style == ActivityStyleBrowse ? @"style=\"browse\"" : @"";
     NSString* initialKeyAttribute =
         _initialKey != nil ? [NSString stringWithFormat:@"initialKey=\"%@\"", _initialKey] : @"";
 
@@ -70,13 +69,14 @@
     for (DataPublicationRequest* dataPublicationRequest in [_dataPublicationRequests allValues]) {
         [body appendString:[dataPublicationRequest toXml]];
     }
-    return [NSString stringWithFormat:kXmlTempate, _activityName, styleAttribute, initialKeyAttribute, body,
+    return [NSString stringWithFormat:kXmlTempate, _activityName, [_style name], initialKeyAttribute, body,
                                       _sessionToken];
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
     [_activityName release];
+    [_style release];
     [_sessionToken release];
     [_dataPublicationRequests release];
     [super dealloc];
