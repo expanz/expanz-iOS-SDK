@@ -8,17 +8,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "expanz_model_TreeData.h"
 
-typedef enum {
-    ExpanzDataTypeNull, ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool,
-    ExpanzDataTypeDate, ExpanzDataTypeDateTime
-} ExpanzDataType;
 
-@interface NSString (ExpanzDataType)
+@implementation expanz_model_TreeData {
 
-- (ExpanzDataType)asExpanzDataType;
+}
 
 @end
-
-
-

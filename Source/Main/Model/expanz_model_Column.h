@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "ExpanzDataType.h"
 
-@class expanz_model_DataSet;
+@class expanz_model_GridData;
 
 
 /**
@@ -22,11 +22,11 @@
 @interface expanz_model_Column : NSObject {
 
 @private
-    expanz_model_DataSet* _dataSet;
+    expanz_model_GridData* _dataSet;
 
 }
 
-@property(nonatomic, assign) expanz_model_DataSet* dataSet;
+@property(nonatomic, assign) expanz_model_GridData* dataSet;
 @property(nonatomic, readonly) NSString* columnId;
 @property(nonatomic, readonly) NSString* field;
 @property(nonatomic, readonly) NSString* label;

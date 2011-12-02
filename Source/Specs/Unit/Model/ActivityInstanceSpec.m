@@ -12,7 +12,7 @@
 #import "SpecHelper.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
-#import "expanz_model_DataSet.h"
+#import "../../../Main/Model/expanz_model_GridData.h"
 
 
 SPEC_BEGIN(ActivityInstanceSpec)
@@ -71,14 +71,14 @@ SPEC_BEGIN(ActivityInstanceSpec)
     describe(@"Relationship to DataSets", ^{
 
         it(@"should hold a collection of DataSets.", ^{
-            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
+            GridData* dataSet = [[GridData alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
             [instance addDataSet:dataSet];
         });
 
         it(@"should allow retrieval of stored DataSets by id", ^{
-            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
+            GridData* dataSet = [[GridData alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
             [instance addDataSet:dataSet];
-            DataSet* retrieved = [instance dataSetWithId:@"customersList"];
+            GridData* retrieved = [instance dataSetWithId:@"customersList"];
             assertThat(retrieved, equalTo(dataSet));
         });
         

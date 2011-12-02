@@ -14,7 +14,7 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
-#import "expanz_model_DataSet.h"
+#import "../../../Model/expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "ExpanzDataType.h"
@@ -71,6 +71,8 @@
         case ExpanzDataTypeNumber:
         case ExpanzDataTypeBool:
         case ExpanzDataTypeNull:
+        case ExpanzDataTypeDate:
+        case ExpanzDataTypeDateTime:
             [field setValue:[self attribute:@"value"]];
             break;
 
@@ -95,12 +97,12 @@
 
 /* ================================================================================================================== */
 #pragma mark DataSet and DataSet child elements.
-- (DataSet*) asData {
+- (GridData*) asData {
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
     }
-    DataSet* dataSet =
-        [[[DataSet alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
+    GridData* dataSet =
+        [[[GridData alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
 

@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 @class expanz_model_Field;
 @class expanz_model_Message;
-@class expanz_model_DataSet;
+@class expanz_model_GridData;
 
 /**
  * Represents an activity in progress. 
@@ -55,12 +55,12 @@
 /**
 * Adds a data set to the instance.
 */
-- (void) addDataSet:(expanz_model_DataSet*)data;
+- (void) addDataSet:(expanz_model_GridData*)data;
 
 /**
 * Returns the `expanz_model_DataSet` with the given id, or nil.
 */
-- (expanz_model_DataSet*) dataSetWithId:(NSString*)dataSetId;
+- (expanz_model_GridData*) dataSetWithId:(NSString*)dataSetId;
 
 /**
  * Indicates weather the activity in progress currently allows method invocations. For this to occur the client model

@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="38" xmlns="">
+            <Activity activityHandle="634584332045521107.40" ActivityPersistentId="0">
+                <Field id="PersistentId" nullable="0" null="1" value="" datatype="number"/>
+                <Field id="Title" label="Folders" nullable="0" maxLength="50" null="1" value=""
+                    datatype="string" valid="0"/>
+                <Field id="Description" label="Description" maxLength="250" null="1" value=""
+                    datatype="string" valid="1"/>
+                <Field id="ButtonTitle" label="Button Title" maxLength="254" null="1" value=""
+                    datatype="string" valid="1"/>
+                <Field id="Sequence" label="Sequence" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Inactive" label="Inactive" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="RoleAccess" label="Access" null="1" value="0" text="" datatype="string"
+                    valid="1"/>
+                <Field id="FileCount" label="File Count" null="1" value="" datatype="number"
+                    valid="1"/>
+                <Field id="File.PersistentId" nullable="0" null="1" value="" datatype="number"
+                    relationship="aggregate"/>
+                <Field id="File.Title" label="Files" nullable="0" valid="0" maxLength="50" null="1"
+                    value="" datatype="string"/>
+                <Field id="File.Description" label="Description" maxLength="250" null="1" value=""
+                    datatype="string" valid="1"/>
+                <Field id="File.Inactive" label="Inactive" null="0" valid="1" value="0"
+                    datatype="bool"/>
+                <Field id="File.Sequence" label="Sequence" null="1" value="" datatype="number"
+                    valid="1"/>
+                <Field id="File.Document" label="Document"/>
+                <Field id="File.Document.FileName" maxLength="200" null="1" value=""
+                    datatype="string" valid="1"/>
+                <Field id="File.Document.FileContents" null="1" datatype="BLOB" valid="1"/>
+                <Types>
+                    <Type id="Thermomix.DocFile" image="DocFile"/>
+                    <Type id="Thermomix.Folder" image="Folder"/>
+                </Types>
+                <Data id="DocumentsTree">
+                    <Folder id="13" title="Group Leader Forms" hint=""
+                        buttonTitle="Group Leader Forms" sequence="1">
+                        <File id="57" title="Consultant Absence Form (DOC)"
+                            hint="Consultant Absence Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Consultant Absence Form 160310  W.dot"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="37" title="Consultant Self Assesment Feedback (DOT/DOC)"
+                            hint="Consultant Self Assesment Demo Feedback Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Consultant Self Assessment Demo Feedback Auto Fill 311011 W.dot"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="51" title="Expo Feedback Form (PDF)" hint="Expo Feedback Form"
+                            filename="T:\all thermomix data\Forms\Cooking Class Forms\EXPO_Feedback Form W.pdf"
+                            sequence="5" type="Thermomix.DocFile" field="Document"/>
+                        <File id="38" title="Group Leader Absence Form (DOT/DOC)"
+                            hint="Group Leader Absence Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Group Leader Absence Form 160310 W.dot"
+                            sequence="7" type="Thermomix.DocFile" field="Document"/>
+                        <File id="59" title="Group Leader Business Plan (DOC)"
+                            hint="Group Leader Business Plan"
+                            filename="T:\all thermomix data\Group Leaders\Business Plan\BUSINESS PLAN 2010.doc"
+                            sequence="8" type="Thermomix.DocFile" field="Document"/>
+                        <File id="80" title="Group Leader Stationery Order Form (DOT/DOC)"
+                            hint="Group Leader Stationery Order Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Group Leader Stationery Order Form 051011 W.dot"
+                            sequence="9" type="Thermomix.DocFile" field="Document"/>
+                        <File id="39" title="Group Leader Stationery Order Form (PDF)"
+                            hint="Group Leader Stationery Form (PDF)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Group Leader Stationery Order Form 051011 W.pdf"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="58" title="Goup Leader MyBuy Stationery Order (DOT/DOC)"
+                            hint="Finance Order Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Group Leader MyBuy Stationery Order Form 080610 W.dot"
+                            sequence="11" type="Thermomix.DocFile" field="Document"/>
+                        <File id="198" title="Goup Leader MyBuy Stationery Order (PDF)"
+                            hint="Goup Leader MyBuy Stationery Order (PDF)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Group Leader MyBuy Stationery Order Form 080610 W.pdf"
+                            sequence="12" type="Thermomix.DocFile" field="Document"/>
+                        <File id="209" title="Group Leader Weekly Summary 2011 (XLS)"
+                            hint="Group Leader Weekly Summary 2011 (XLS)"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Group Leader Reports\GL Weekly Summary_Yearly Planner 020211 Master W.xls"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="40" title="Inactive Consultant Form"
+                            hint="Inactive Consultant Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Inactive Consultant Request 051011 W.dot"
+                            sequence="14" type="Thermomix.DocFile" field="Document"/>
+                        <File id="41" title="Jnr Gl Checklist (DOT/DOC)" hint="Jnr Gl Checklist"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\JGL Checklist BM or GL 010610 W.dot"
+                            sequence="15" type="Thermomix.DocFile" field="Document"/>
+                        <File id="197" title="Jnr GL Goal Challenge (DOT/DOC)"
+                            hint="Jnr GL Goal Challenge (DOT/DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\JGL Challenge Goal Progress 010611 W.dot"
+                            sequence="16" type="Thermomix.DocFile" field="Document"/>
+                        <File id="42" title="Jnr GL Interview (DOC)" hint="Jnr GL Interview"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Jnr GL Interview Form.doc"
+                            sequence="17" type="Thermomix.DocFile" field="Document"/>
+                        <File id="43" title="Open Day Register (DOT/DOC)" hint="Open Day Register"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Open Day Register W 051011.dot"
+                            sequence="18" type="Thermomix.DocFile" field="Document"/>
+                        <File id="211" title="Consultant Progress Report (PDF)"
+                            hint="Consultant Progress Report (PDF)"
+                            filename="T:\all thermomix data\Marketing Documents\Artwork PDFs\Passport Tracker\Thermomix Passport Tracker July2011 HR.pdf"
+                            sequence="19" type="Thermomix.DocFile" field="Document"/>
+                        <File id="212" title="Prospective Group Leader Outline (PDF)"
+                            hint="Prospective Group Leader Outline (PDF)"
+                            filename="T:\all thermomix data\Junior GL\Outline for Prospective Group Leader Interview Info 150509.pdf"
+                            sequence="20" type="Thermomix.DocFile" field="Document"/>
+                        <File id="50" title="Transfer Consultant Request Form (DOT/DOC)"
+                            hint="Transfer Consultant Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Transfer Consultant Form 051011 W.dot"
+                            sequence="21" type="Thermomix.DocFile" field="Document"/>
+                        <File id="199" title="Transfer Consultant Form to Head Office (DOT/DOC)"
+                            hint="Transfer Consultant Form to Head Office (DOT/DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Transfer Consultant to Head Office Form 060911 W.dot"
+                            sequence="22" type="Thermomix.DocFile" field="Document"/>
+                        <File id="213" title="Template for Branch Meetings (DOT/DOC)"
+                            hint="Template for Branch Meetings (DOT/DOC)"
+                            filename="T:\all thermomix data\Training\Group Leader Training\Meeting Agenda Template Branch Meeting 050809.doc"
+                            sequence="23" type="Thermomix.DocFile" field="Document"/>
+                        <File id="214" title="Template for BD Meetings (DOT/DOC)"
+                            hint="Template for BD Meetings (DOT/DOC)"
+                            filename="T:\all thermomix data\Training\Group Leader Training\Meeting Agenda Template BDM Meeting 050809.doc"
+                            sequence="24" type="Thermomix.DocFile" field="Document"/>
+                        <File id="226" title="Increasing Skills Training  (PDF)"
+                            hint="Increasing Skills Training (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Increasing Skills Training Form 071011 W.pdf"
+                            sequence="25" type="Thermomix.DocFile" field="Document"/>
+                        <File id="227" title="Increasing Skills Instruction Guide (PDF)"
+                            hint="Increasing Skills Instruction Guide (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Increasing Skills Instruction Guide 071011 W.pdf"
+                            sequence="26" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="14" title="Cooking Class Kit" hint="Cooking Class kit"
+                        buttonTitle="Group Leader Forms" sequence="2">
+                        <File id="54" title="Cooking Class Kit and Costing (PDF)"
+                            hint="Cooking Class Kit Costing"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Cooking Class Kit and Costing 200511 W.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="55" title="Cooking Class Kit Photo Checklist (PDF)"
+                            hint="Cooking Class Kit Photo Checklist"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Cooking Class Kit Photo Checklist 200511 W.pdf"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="44" title="Cooking Class Purchase Agreement (DOT/DOC)"
+                            hint="Cooking Class Purchase Agreement"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Cooking Class Kit Purchase Agreement 190511 W.dot"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="15" title="Cooking Class" hint="Cooking Class"
+                        buttonTitle="Group Leader Forms" sequence="3">
+                        <File id="49" title="Cooking Class Booking Form (DOT/DOC)"
+                            hint="Cooking Class Booking form Auto fill"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Group Leader Cooking Class Form Auto Fill 060911 W.dot"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="45" title="Cooking Class Booking Sheet (XLS)"
+                            hint="Cooking Class Booking Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Booking Form Cooking Class.xls"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="52" title="Cooking Class Feedback Form (DOT/DOC)"
+                            hint="Cooking Class Feedback Form"
+                            filename="T:\all thermomix data\Forms\Cooking Class Forms\Cooking Class Feedback Form Current 171108 W.dot"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                        <File id="48" title="Cooking Class B2B Menu List (DOC)"
+                            hint="B2B Cooking Class Menu"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class B2B Menu List 080410 W.doc"
+                            sequence="4" type="Thermomix.DocFile" field="Document"/>
+                        <File id="47" title="Coking Class B2B Running Sheet (DOC)"
+                            hint="B2B Cooking Class Running Sheet"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class B2B  Running List 220310 W.doc"
+                            sequence="5" type="Thermomix.DocFile" field="Document"/>
+                        <File id="46" title="Cooking Class Summary Form (DOT/DOC)"
+                            hint="Cooking Class Summary Form"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Cooking Class Forms\Group Leader Cooking Class Summary Form Auto Fill 060911 W.dot"
+                            sequence="6" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="25" title="Group Leader Reports" hint="Group Leader Reports"
+                        buttonTitle="Group Leader Forms" sequence="4">
+                        <File id="215" title="60 Day Program Summary (XLS)"
+                            hint="60 Day Program Summary (XLS)"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Group Leader Reports\60 Day Program Summary 200309 W.xls"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="200" title="Consultant Training Summary (DOT/DOC)"
+                            hint="Consultant Training Summary (DOT/DOC)"
+                            filename="T:\all thermomix data\Training\Consultant Training Summary\Thermomix Consultan1.doc"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="216" title="Go-Getters Summary (XLS)"
+                            hint="Go-Getters Summary (XLS)"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Group Leader Reports\GL Go-Getters Summary 280610 W.xls"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                        <File id="217" title="Lead Summary (XLS)" hint="Lead Summary (XLS)"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Group Leader Reports\GL Lead Summary Report 160811 rev W .xls"
+                            sequence="4" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="27" title="ThermoFest '12 Group Leader"
+                        hint="ThermoFest '12 Group Leader" buttonTitle="Group Leader Forms"
+                        sequence="6">
+                        <File id="218" title="ThermoFest '12 GL Goal Card"
+                            hint="ThermoFest '12 GL Goal Card"
+                            filename="T:\all thermomix data\Thermofest\ThermoFest 2012\thermofest12GLgoalcard.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="219" title="ThermoFest '12 GL Quals"
+                            hint="ThermoFest '12 GL Quals"
+                            filename="T:\all thermomix data\Thermofest\ThermoFest 2012\thermofest12GLQuals.pdf"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="28" title="Training" hint="GL Training"
+                        buttonTitle="Group Leader Forms" sequence="7">
+                        <File id="220" title="Base 1 Running Sheet (DOC)"
+                            hint="Base 1 Running Sheet (DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Base 1 Running Sheet 050809.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="221" title="Base 2 Running Sheet (DOC)"
+                            hint="Base 2 Running Sheet (DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Base 2 Running Sheet 050809.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="222" title="Practical Cooking Form Dish Allocation (DOC)"
+                            hint="Practical Cooking Form Dish Allocation (DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Practical Cooking Form Dish Allocation 030809 W.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="223" title="Practical Running Sheet (DOC)"
+                            hint="Practical Running Sheet (DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Practical Cooking Running Sheet 050809.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="224" title="TM Open Day Running Sheet (DOC)"
+                            hint="TM Open Day Running Sheet (DOC)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\TM Open Day Running Sheet Master 040809.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="225" title="Who Do You Know? (PDF)" hint="Who Do You Know? (PDF)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Who Do You Know 280410 W.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="29" title="New Consultant Interview Pack Contents"
+                        hint="New Consultant Interview Pack Contents" buttonTitle="Consultant Forms"
+                        sequence="8">
+                        <File id="229" title="Prospective Consultant Questionnaire (PDF)"
+                            hint="Prospective Consultant Questionnaire (PDF)"
+                            filename="T:\all thermomix data\Forms\Group Leader Forms\Prospective Consultant Questionnaire 050109 W.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="228" title="ABN Information (PDF)" hint="ABN Information (PDF)"
+                            filename="T:\all thermomix data\Interview Pack Contents\Taxation Information for New Consultants 010709W.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="2" title="Consultant Forms" hint="Forms you need as a consultant"
+                        buttonTitle="Consultant Forms" sequence="10">
+                        <File id="96" title="ABN Information for New Consultants (PDF)"
+                            hint="ABN Information for New Consultants (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Taxation Information for New Consultants 010709W.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="97" title="ABN Information for New Consultants (DOT)"
+                            hint="ABN Information for New Consultants (DOT)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Taxation Information for New Consultants 010709W.doc"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="7" title="Absence Form (DOT/DOC)" hint=""
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Consultant Absence Form 160310  W.dot"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="8" title="Absence Form ( PDF)" hint="Absence Form ( PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Consultant Absence Form 160310  W.pdf"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="12" title="Business Card Order Form (DOT/DOC)"
+                            hint="Business Card order form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Business Card Order Form 230409.dot"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                        <File id="35" title="Business Card Order Form (PDF)"
+                            hint="Business Card Order Form (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Business Card Order Form 230409 W.pdf"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                        <File id="10" title="Consultant Change of Address Form (DOT/DOC)"
+                            hint="Notification of Change of address."
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Consultant Change of Address Details 230409 W.doc"
+                            sequence="4" type="Thermomix.DocFile" field="Document"/>
+                        <File id="84" title="Consultant Change of Address Form (PDF)"
+                            hint="Consultant Change of Address Form (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Consultant Change of Address Details 230409 W.pdf"
+                            sequence="4" type="Thermomix.DocFile" field="Document"/>
+                        <File id="190" title="Collection of Goods Procedure (DOT/DOC)"
+                            hint="Collection of Goods Procedure (DOT/DOC)"
+                            filename="T:\all thermomix data\Procedures_Policy\Collection of Goods Procedure 310510.doc"
+                            sequence="5" type="Thermomix.DocFile" field="Document"/>
+                        <File id="191" title="Commercial Sales Policy (PDF)"
+                            hint="Commercial Sales Policy (PDF)"
+                            filename="T:\all thermomix data\Procedures_Policy\Commercial Sales Policy 141011 W.pdf"
+                            sequence="6" type="Thermomix.DocFile" field="Document"/>
+                        <File id="85" title="Consultant Order Form (PDF)"
+                            hint="Consultant Order Form (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Orders\Order Form Consultant 141011 W.pdf"
+                            sequence="7" type="Thermomix.DocFile" field="Document"/>
+                        <File id="83" title="Consultant Order Form (DOT/DOC)"
+                            hint="Consultant Order Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Orders\Order Form Consultant 141011 W.dot"
+                            sequence="7" type="Thermomix.DocFile" field="Document"/>
+                        <File id="25" title="Customer Contact Record (DOT/DOC)"
+                            hint="Customer Contact Record (DOT/DOC)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Customer Contact Record 060409 W.dot"
+                            sequence="8" type="Thermomix.DocFile" field="Document"/>
+                        <File id="86" title="Customer Contact Record (PDF)"
+                            hint="Customer Contact Record (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Customer Contact Record 060409 W.pdf"
+                            sequence="8" type="Thermomix.DocFile" field="Document"/>
+                        <File id="196" title="Customer Delivery Report (PDF)"
+                            hint="Customer Delivery Report (PDF)"
+                            filename="T:\all thermomix data\Marketing Documents\Artwork PDFs\Customer Delivery Report\Therm Cust Delivery Report Dec2010 HR.pdf"
+                            sequence="9" type="Thermomix.DocFile" field="Document"/>
+                        <File id="14" title="Customer Delivery Report-Support Doc (DOT/DOC)"
+                            hint="Customer Delivery Report"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Customer Delivery Report - Supporting document.doc"
+                            sequence="9" type="Thermomix.DocFile" field="Document"/>
+                        <File id="82" title="Customer Order Form (DOT/DOC)"
+                            hint="Customer Order Form"
+                            filename="T:\all thermomix data\Forms\Customer\Order Form Customer 101011 W.dot"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="270" title="Consultant Order Form In the Mix Only (DOC)"
+                            hint="In the Mix order form only"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Orders\In the Mix Book Offer Order Form Auto Fill 131011 W.doc"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="271" title="Consultant Order Form In the Mix Only (PDF)"
+                            hint="In the Mix order form only"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Orders\In the Mix Book Offer Order Form Auto Fill 131011 W.pdf"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="87" title="Customer Order Form (PDF)" hint="Customer Order Form"
+                            filename="T:\all thermomix data\Forms\Customer\Order Form Customer 101011 W.pdf"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="88" title="Gift Registry Form (PDF)" hint="Gift Registry Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Gift Registry Order Details 160709 W.pdf"
+                            sequence="11" type="Thermomix.DocFile" field="Document"/>
+                        <File id="17" title="Gift Registry Form (DOT/DOC)"
+                            hint="Gift Registry Form."
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Gift Registry Order Details 160709 W.dot"
+                            sequence="11" type="Thermomix.DocFile" field="Document"/>
+                        <File id="16" title="Prospective Consultant Form (DOT/DOC)"
+                            hint="Prospective Consultant Form."
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Prospective Cons Form 070111 W.dot"
+                            sequence="12" type="Thermomix.DocFile" field="Document"/>
+                        <File id="89" title="Prospective Consultant Form (PDF)"
+                            hint="Prospective Consultant Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Prospective Cons Form 070111 W.pdf"
+                            sequence="12" type="Thermomix.DocFile" field="Document"/>
+                        <File id="98" title="Public Liability Insurance Form (DOT/DOC)"
+                            hint="Public Liability Insurance Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Consultant Insurance Public Liability Form Auto Fill 220811 W.dot"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="99" title="Public Liability Information (PDF)"
+                            hint="Public Liability Information"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Consultant Insurance Public Liability Form Auto Fill 220811 W.pdf"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="100" title="Public Liability Insurance Form Increase (DOT)"
+                            hint="Public Liability Insurance Form Increase 20 Mil"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Consultant Insurance Public Liability Increase 20 mil 220811W.dot"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="101" title="Public Liability Insurance Form Increase (PDF)"
+                            hint="Public Liability Insurance Form Increase 20 Mil"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Consultant Insurance Public Liability Increase 20 mil 220811W.pdf"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="102" title="Public Liability Insurance Info Coverage (PDF)"
+                            hint="Public Liability Insurance Info Coverage (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Consultant Insurance Public Liability Info Coverage 220811 W.pdf"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                        <File id="24" title="Recipe Template (DOT/DOC)"
+                            hint="Recipe Template (DOT/DOC)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Recipe Template 160409 W.dot"
+                            sequence="14" type="Thermomix.DocFile" field="Document"/>
+                        <File id="15" title="Sales Referal Form (DOT/DOC)"
+                            hint="Sales booking Referal Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Sales Booking Referral Form 070111 W.dot"
+                            sequence="15" type="Thermomix.DocFile" field="Document"/>
+                        <File id="90" title="Sales Referal Form (PDF)"
+                            hint="Sales booking Referal Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Sales Booking Referral Form 070111 W.pdf"
+                            sequence="15" type="Thermomix.DocFile" field="Document"/>
+                        <File id="91" title="Service Advice Form (PDF)" hint="Service Advice Form"
+                            filename="T:\all thermomix data\Forms\Service\Customer Service Advice Form 311011.pdf"
+                            sequence="16" type="Thermomix.DocFile" field="Document"/>
+                        <File id="23" title="Service Advice Form (DOT/DOC)"
+                            hint="Service Advice Form (DOT/DOC)"
+                            filename="T:\all thermomix data\Forms\Service\Customer Service Advice Form 311011.dot"
+                            sequence="16" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="16" title="Consultant Promotions" hint="Consultant Promotions"
+                        buttonTitle="Consultant Forms" sequence="12">
+                        <File id="62" title="Go Getters' Club Guidelines (PDF)"
+                            hint="Go Getters' Club Guidelines"
+                            filename="T:\all thermomix data\Training\Go Getters\Thermomix Go-Getters Guidelines 170211 W.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="8" title="ThermoFest '12 Consultant"
+                        hint="ThermoFest '12 - Consultant" buttonTitle="ThermoFest" sequence="12">
+                        <File id="210" title="ThermoFest '12 Goal Card (PDF)"
+                            hint="ThermoFest '12 Goal Card"
+                            filename="T:\all thermomix data\Thermofest\ThermoFest 2012\thermofest12goalcard.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="194" title="Thermofest '12 Brochure"
+                            hint="Thermofest '12 Brochure"
+                            filename="T:\all thermomix data\Thermofest\ThermoFest 2012\Artwork\ThermoFest12 Brochure.pdf"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="3" title="Consultant Finance" hint="Finance Forms and Proceedures"
+                        buttonTitle="Consultant Forms" sequence="14">
+                        <File id="27" title="Authorisation to Pay (PDF)"
+                            hint="Authorisation to Pay (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Authorisation to  Pay 211011 W.pdf"
+                            sequence="1" type="Thermomix.DocFile" field="Document"/>
+                        <File id="92" title="Authorisation to Pay New Customer (PDF)"
+                            hint="Authorisation to Pay New Customer (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Authorisation to Pay Sample New Customer 211011 W.PDF"
+                            sequence="2" type="Thermomix.DocFile" field="Document"/>
+                        <File id="28" title="Authorisation to Pay MyBuy Customer (PDF)"
+                            hint="Authorisation to Pay Existing Customer"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Authorisation to Pay Exisiting MyBuy Customer 211011 W.PDF"
+                            sequence="3" type="Thermomix.DocFile" field="Document"/>
+                        <File id="30" title="Finance Consultant Proceedure Int Free (PDF)"
+                            hint="Finance Consultant Proceedure (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Interest Free Finance Folder\Finance Consultant Procedure Int Free 280611 W.doc"
+                            sequence="4" type="Thermomix.DocFile" field="Document"/>
+                        <File id="29" title="Finance Consultant Checklist Int Free (PDF)"
+                            hint="Finance Consultant Checklist (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Interest Free Finance Folder\Finance Consultant Checklist rev Int Free 251011 W.doc"
+                            sequence="5" type="Thermomix.DocFile" field="Document"/>
+                        <File id="31" title="Finance Customer Checklist (PDF)"
+                            hint="Finance Customer Checklist"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\No Deposit Payment Plan Customer Checklist Aug 10.pdf"
+                            sequence="6" type="Thermomix.DocFile" field="Document"/>
+                        <File id="94" title="Finance Customer Proof of ID (PDF)"
+                            hint="Finance Customer Proof of ID (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\MyBuy Identification Requirements Customer Proof of ID 070711 W.pdf"
+                            sequence="7" type="Thermomix.DocFile" field="Document"/>
+                        <File id="195" title="Finance Customer Flyer - EMAIL VERSION ONLY (PDF)"
+                            hint="Finance Customer Flyer - EMAIL VERSION ONLY (PDF)"
+                            filename="T:\all thermomix data\Marketing Documents\Artwork PDFs\Finance DL Flyer\Finance Flyer DL LR.pdf"
+                            sequence="8" type="Thermomix.DocFile" field="Document"/>
+                        <File id="34" title="Finance Information Sheet Int Free (PDF)"
+                            hint="Finance Information Sheet"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Interest Free Finance Folder\Finance Information Sheet Int Free Rev 271011 W.pdf"
+                            sequence="9" type="Thermomix.DocFile" field="Document"/>
+                        <File id="32" title="MyBuy Application Sample Int Free (PDF)"
+                            hint="Sample- Application Form"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Interest Free Finance Folder\Sample Once MyBuy Docs Interest Free 011111.pdf"
+                            sequence="10" type="Thermomix.DocFile" field="Document"/>
+                        <File id="95" title="MyBuy Applic Sample full set Int Free (PDF)"
+                            hint="MyBuy Application Sample 2 (with inclusion) (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Interest Free Finance Folder\MyBuy Finance Forms Sample full set as at 271011 W.pdf"
+                            sequence="11" type="Thermomix.DocFile" field="Document"/>
+                        <File id="93" title="MyBuy Remote Process Guidelines (PDF)"
+                            hint="MyBuy Remote Process Guidelines (PDF)"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\MyBuy Remote Process Guidelines 280611 W.pdf"
+                            sequence="12" type="Thermomix.DocFile" field="Document"/>
+                        <File id="272" title="Once Credit Guide" hint="Once Credit Guide"
+                            filename="T:\all thermomix data\Forms\Consultant Forms\Finance_Insurance_Tax\Once Credit Guide_About the Credit Guide.pdf"
+                            sequence="13" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="4" title="Consultant Weekly Summary Forms"
+                        hint="Consultant Weekly Summary Forms" buttonTitle="Consultant Forms"
+                        sequence="16">
+                        <File id="60" title="Consultant Weekly Summery Instructions (DOC)"
+                            hint="Consultant Weekly Summery Instructions"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Consultant Reports\Cons Weekly Summary Instructions 060911 W.doc"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="61" title="Consultant Weekly Summary 2011 (XLS)"
+                            hint="Consultant Weekly Summary 2011 (XLS)"
+                            filename="T:\all thermomix data\Reports\Reports Templates\Consultant Reports\Cons Weekly Summary 060911 Master W.xls"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="5" title="Consultant Go Getter Talks New South Wales"
+                        hint="Go Getter Talks NSW" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="103" title="Vanessa Taylor" hint="Vanessa Taylor's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Vanessa Taylor\Taylor_Vanessa_NSW.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="104" title="Vanessa Taylor Handout" hint="Vanessa Taylor Handout"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Vanessa Taylor\Vanessa Taylor Notes.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="105" title="Georgia De Graaff" hint="Georgia De Graaff's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Georgia de Graaff\Georgia_de Graaff_NSW.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="106" title="Sarah Morgan" hint="Sarah Morgan's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Sarah Morgan\Sarah Morgan_NSW.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="107" title="Lindy Culovic" hint="Lindy Culovic's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Lindy Culovic\Lindy Culovic_NSW.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="108" title="Johanne Rondeau" hint="Johanne Rondeau's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NSW\Johanne Rondeau-Wall\Johanne Rondeau-Wall_NSW.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="18" title="Consultant Go Getter Talks Queensland"
+                        hint="Go Getter Talks QLD" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="109" title="Angelina Jacobs" hint="Angelina Jacobs Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\QLD\Angelina Jacobs\Jacobs_Angelina_QLD.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="110" title="Margaret Lyon" hint="Margaret Lyon's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\QLD\Margaret Lyon QLD\Lyon_Margaret_QLD.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="111" title="Sharon Fagerlund" hint="Sharon Fagerlund's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\QLD\Sharon Fagerlund\Sharon_Fagerlund_QLD.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="112" title="Denise Long" hint="Denise Long's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\QLD\Denise Long\Denise_Long_QLD.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="113" title="Joanna Whitton" hint="Joanna Whitton's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\QLD\Joanna Whitton\Joanna_Whitton_QLD.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="19" title="Consultant Go Getter Talks South Australia"
+                        hint="Go Getter Talks SA" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="114" title="Anthea Brockbank" hint="Anthea Brockbank's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Anthea Brockbank\Brockbank_Anthea_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="115" title="Laura Kempt" hint="Laura Kempt's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Laura Kempt\Kempt_Laura_ SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="116" title="Guenter Nichols" hint="Guenter Nichols's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Guenter Nichols\Nichols_Guenter_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="117" title="Guenter Nichols Handout"
+                            hint="Guenter Nichols Handout"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Guenter Nichols\Guenter Nichols Talk.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="118" title="Robyn Wilkinson" hint="Robyn Wilkinson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Robyn Wilkinson\Wilkinson_Robyn_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="119" title="Sharon Weidenbach" hint="Sharon Weidenbach's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Sharon Weidenbach\Sharon_Weidenbach_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="120" title="Sue Majoros" hint="Sue Majoros' Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Sue  Majoros\Sue_Majoros_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="121" title="Nina Martin" hint="Nina Martin's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Nina Martin\Nina Martin_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="122" title="Lisa Madrussani" hint="Lisa Madrussani's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Lisa Madrussani\Lisa Madrussani_SA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="123" title="Bernadine Keough" hint="Bernadine Keough's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Bernadine  Keough\Bernadine Keough_SA - The One Minute Sales Person.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="124" title="Saffron Simpson" hint="Saffron Simpson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\SA\Saffron Simpson\Saffron Simpson_SA_Raw Food.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="20" title="Consultant Go Getter Talks Tasmania"
+                        hint="Go Getter Talks TAS" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="125" title="Heidi Carter" hint="Heidi Carter's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Heidi Carter\Heidi_Carter_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="126" title="Nicola Galea" hint="Nicola Galea's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Nicola Galea\Nicola_Galea_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="127" title="Tina Singline" hint="Tina Singline's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Tina Singline\Tina_Singline_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="128" title="Peter Franks" hint="Peter Franks Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Peter Franks\Franks_Peter_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="129" title="Fiona Hoskin" hint="Fiona Hoskin's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Fiona Hoskin\Hoskin_Fiona_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="130" title="Deidre Triffitt" hint="Deidre Triffitt's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\TAS\Deidre Triffitt\Deidre_Triffitt_TAS.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="21" title="Consultant Go Getter Talks Victoria"
+                        hint="Go Getter Talks VIC" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="131" title="Mary Anderson" hint="Mary Anderson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Mary Anderson\Mary_Anderson.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="132" title="Steph Berg" hint="Steph Berg's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Steph Berg\Steph_Berg_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="133" title="Lil Bowden" hint="Lil Bowden's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Lil Bowden\Bowden_Lil_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="134" title="Lolis Castilleja" hint="Lolis Castilleja's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Lolis Castilleja\Castilleja_Lolis_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="135" title="Lolis Castilleja's Talk (PPSX)"
+                            hint="Lolis Castilleja's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Lolis Castilleja\Lolis' go getters Talk.ppsx"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="136" title="Emma Harrison" hint="Emma Harrison's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Emma Harrison\Harrison_Emma_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="137" title="Kate Helder" hint="Kate Helder's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Kate Helder\Helder_Kate VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="138" title="Kate Helder's Talk (PPT)" hint="Kate Helder's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Kate Helder\Helder_Kate VIC PPT.ppt"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="139" title="Anna Jamieson" hint="Anna Jamieson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Anna Jamieson\Jamieson_Anna_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="140" title="Natalee Mahoney" hint="Natalee Mahoney's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Natalee Mahoney\Mahoney_Natalee_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="141" title="Annthea Matheson" hint="Annthea Matheson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Annthea Matheson\Matheson_Anthea_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="142" title="Annthea Matheson's Talk (PPT)"
+                            hint="Annthea Matheson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Annthea Matheson\Annthea Go getters.ppt"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="143" title="Paula McGowan" hint="Paula McGowan's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Paula McGowan\McGowan_Paula_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="144" title="Margaret Rossi" hint="Margaret Rossi's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Marg Rossi\Rossi_Marg_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="145" title="Maria Stuart" hint="Maria Stuart's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Maria Stuart\Stuart_Maria_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="146" title="Andrea Kavanagh" hint="Andrea Kavanagh's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Andrea Kavanagh\Andrea_Kavanagh_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="147" title="Anne Stanley" hint="Anne Stanley's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Anne Stanley\Anne_Stanley_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="148" title="Anne Stanley's Talk (PPT)" hint="Anne Stanley's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Anne Stanley\Anne Stanley.ppt"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="149" title="Bronwyn Jamieson" hint="Bronwyn Jamieson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Bronwyn Jamieson\Bronwyn_Jamieson_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="150" title="Kim Smith" hint="Kim Smith's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Kim Smith\Kim_Smith_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="202" title="Jude Hays" hint="Jude Hays Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Jude Hays\Jude_Hays_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="203" title="Anita Distasio" hint="Anita Distasio's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Anita DiStasio\Anita_DiStasio_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="204" title="Annie Frazier" hint="Annie Frazier's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Annie Frazier\Annie_Frazier_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="205" title="Geena Di Stefano" hint="Geena Di Stefano's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Geena Di Stefano\Geena_Di Stefano_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="206" title="Amanda Cook" hint="Amanda Cook's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Amanda Cook\Amanda_Cook_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="207" title="Cheryl Decker" hint="Cheryl Decker's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Cheryl Decker\Cheryl_Decker_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="208" title="Jo Paterson" hint="Jo Paterson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\VIC\Jo Paterson\Jo Paterson_VIC.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="22" title="Consultant Go Getter Talks Western Australia"
+                        hint="Go Getter Talks WA" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="151" title="Emma Jefferies" hint="Emma Jefferies Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Emma Jefferies\Jefferies_Emma_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="152" title="Sandy Burges" hint="Sandy Burges' Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Sandy Burges\Sandy_Burges_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="153" title="Lisa Barrow" hint="Lisa Barrow's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Lisa Barrow\Barrow_Lisa_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="154" title="Trisha Burgess" hint="Trisha Burgess Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Trisha Burgess\Burgess_Trisha_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="155" title="Tina Canestrari" hint="Tina Canestrari's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Tina Canestrari\Canestrari_Tina_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="156" title="Elaine Finn" hint="Elaine Finn's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Elaine Finn\Finn_Elaine_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="157" title="Belinda Gay" hint="Belinda Gay's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Belinda Gay\Gay_Belinda_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="158" title="Rebecca Hill" hint="Rebecca Hill's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Rebecca Hill\Hill_Rebecca_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="159" title="Melinda Hutchison" hint="Melinda Hutchison's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Melinda Hutchison\Hutchison_Melinda_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="160" title="Denise King" hint="Denise King's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Denise King\King_Denise_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="161" title="Sandy King" hint="Sandy King's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Sandy King\King_Sandy_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="162" title="Sheelagh Loss" hint="Sheelagh Loss Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Sheelagh Loss\Loss_Sheelagh_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="163" title="Karen Marsh" hint="Karen Marsh's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Karen Marsh\Marsh_Karen_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="164" title="Deb Morgan-Downey" hint="Deb Morgan-Downey's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Deb Morgan-Downey\Deb Morgan-Downey_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="165" title="Julie Munday" hint="Julie Munday's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Julie Munday\Munday_Julie_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="166" title="Lorelle Rafferty" hint="Lorelle Rafferty's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Lorelle Rafferty\Rafferty_Lorelle_ WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="167" title="Joanna Rusling" hint="Joanna Rusling's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Joanna Rusling\Rusling_Joanna_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="168" title="Joanna Rusling's Handout"
+                            hint="Joanna Rusling's Handout"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Joanna Rusling\Joanna Rusling GoGetters Info Handout.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="169" title="Machelle Tennent" hint="Machelle Tennent's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Machelle Tennant\Tennent_Machelle_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="170" title="Anne Tesconi" hint="Anne Tesconi's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Anne Tesconi\Tesconi_Anne_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="171" title="Karen Trezona" hint="Karen Trezona's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Karen Trezona\Trezona_Karen_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="172" title="Helen Vogiatzakis" hint="Helen Vogiatzakis Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Helen Vogiatzakis\Vogiatzakis_Helen_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="173" title="Vivianne Voss" hint="Vivianne Voss Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Vivianne Vos\Voss_Vivianne_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="174" title="Sarah Kelly" hint="Sarah Kelly's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Sarah Kelly\Kelly_Sarah_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="175" title="Nikki Banks" hint="Nikki Banks Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Nikki Banks\Banks_Nikki_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="176" title="Marta Osoba-Buttrose"
+                            hint="Marta Osoba-Buttrose's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Marta Osoba-Buttrose\Marta Osoba-Buttrose_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="177" title="Heidi Cheffers" hint="Heidi Cheffers Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Heidi Cheffers\Heidi_Cheffers_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="178" title="Meagan Quantock" hint="Meagan Quantock's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Meagan Quantock\Meagan_Quantock_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="179" title="DJ Baum" hint="DJ Baum's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\DJ Baum\DJ_Baum_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="180" title="Kylee MacDonald" hint="Kylee MacDonald's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Kylee MacDonald\Kylee_MacDonald_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="181" title="Cathy Mueller" hint="Cathy Mueller's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Cathy Mueller\Cathy_Mueller_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="182" title="Leanne Sloss" hint="Leanne Sloss Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Leanne Sloss\Leanne_Sloss_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="183" title="Jocelyn Sisson" hint="Jocelyn Sisson's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Jocelyn Sisson\Jocelyn_Sisson_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="184" title="Rene Hamilton" hint="Rene Hamilton's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Rene Hamilton\Rene Hamilton_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="185" title="Chrys Hu" hint="Chrys Hu's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Chrys Hu\Chrys Hu_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="186" title="Tina Old" hint="Tina Old's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Tina Old\Tina Old_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="187" title="Isaac and Sarah Moran"
+                            hint="Isaac and Sarah Moran's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\WA\Isaac and Sarah Moran\Isaac and Sarah Moran_WA.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="23" title="Consultant Go Getter Talks ACT"
+                        hint="Go Getter Talks ACT" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="188" title="Elmin Van Rensberg" hint="Elmin Van Rensberg's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\ACT\Elmin van Rensberg\Elmin_ACT.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="24" title="Consultant Go Getter Talks Northern Territory"
+                        hint="Go Getter Talks NT" buttonTitle="Consultant Forms" sequence="18">
+                        <File id="189" title="Catherine Posche" hint="Catherine Posche's Talk"
+                            filename="T:\all thermomix data\Go-Getters Talks_Notes\NT\Catherine Posch\Catherine_Posche_NT.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="12" title="Thermobiz 2008 Archive" hint="Thermobiz 2008 Archive"
+                        buttonTitle="ThermoFest" sequence="20">
+                        <File id="259" title="Thermobiz January 2008" hint="Thermobiz January 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\January 2008\Jan 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="260" title="Thermobiz March 2008" hint="Thermobiz March 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\March 2008\Thermobiz March 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="261" title="Thermobiz April 2008" hint="Thermobiz April 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\April 2008\Thermobiz April 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="262" title="Thermobiz May 2008" hint="Thermobiz May 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\May 2008\May 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="263" title="Thermobiz June 2008" hint="Thermobiz June 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\June 2008\Thermobiz June 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="264" title="Thermobiz July 2008" hint="Thermobiz July 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\July 2008\Thermobiz July 2008.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="265" title="Thermobiz August 2008" hint="Thermobiz August 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\August 2008\Thermobiz August.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="266" title="Thermobiz September 2008"
+                            hint="Thermobiz September 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\September 2008\Thermobiz September08.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="267" title="Thermobiz October 2008" hint="Thermobiz October 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\October 2008\Thermobiz October08.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="268" title="Thermobiz November 2008"
+                            hint="Thermobiz November 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\November 2008\Thermobiz November08.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="269" title="Thermobiz December 2008"
+                            hint="Thermobiz December 2008"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2008\December 2008\Thermobiz December 08_3.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="11" title="Thermobiz 2009 Archive" hint="Thermobiz 2009 Archive"
+                        buttonTitle="ThermoFest" sequence="21">
+                        <File id="247" title="Thermobiz January 2009" hint="Thermobiz January 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\January\Thermobiz January 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="248" title="Thermobiz February 2009"
+                            hint="Thermobiz February 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\February\Thermobiz February 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="249" title="Thermobiz March 2009" hint="Thermobiz March 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\March\Thermobiz March 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="250" title="Thermobiz April 2009" hint="Thermobiz April 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\April\Thermobiz April 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="251" title="Thermobiz May 2009" hint="Thermobiz May 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\May\Thermobiz May 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="252" title="Thermobiz June 2009" hint="Thermobiz June 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\June\Thermobiz June.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="253" title="Thermobiz July 2009" hint="Thermobiz July 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\July\Thermobiz July 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="254" title="Thermobiz August 2009" hint="Thermobiz August 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\August\Thermobiz August 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="255" title="Thermobiz September 2009"
+                            hint="Thermobiz September 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\September\Thermobiz September 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="256" title="Thermobiz October 2009" hint="Thermobiz October 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\October\Thermobiz October 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="257" title="Thermobiz November 2009"
+                            hint="Thermobiz November 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\November\Thermobiz November 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="258" title="Thermobiz December 2009"
+                            hint="Thermobiz December 2009"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2009\December\Thermobiz December 2009.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="10" title="Thermobiz 2010 Archive" hint="" buttonTitle="ThermoFest"
+                        sequence="22">
+                        <File id="235" title="Thermobiz January 2010" hint="Thermobiz January 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\January\Thermobiz January 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="236" title="Thermobiz February 2010"
+                            hint="Thermobiz February 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\February\Thermobiz February 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="237" title="Thermobiz March 2010" hint="Thermobiz March 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\March\Thermobiz March 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="238" title="Thermobiz April 2010" hint="Thermobiz April 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\April\Thermobiz April 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="239" title="Thermobiz May 2010" hint="Thermobiz May 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\May\Thermobiz May 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="240" title="Thermobiz June 2010" hint="Thermobiz June 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\June\Thermobiz June 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="241" title="Thermobiz July 2010" hint="Thermobiz July 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\July\Thermobiz July 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="242" title="Thermobiz August 2010" hint="Thermobiz August 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\August\Thermobiz August 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="243" title="Thermobiz September 2010"
+                            hint="Thermobiz September 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\September\Thermobiz September 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="244" title="Thermobiz October 2010" hint="Thermobiz October 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\October\Thermobiz October 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="245" title="Thermobiz November 2010"
+                            hint="Thermobiz November 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\November\Thermobiz November 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="246" title="Thermobiz December 2010"
+                            hint="Thermobiz December 2010"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2010\Australia\December\Thermobiz December 2010.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                    <Folder id="9" title="Thermobiz 2011 Archive" hint="" buttonTitle="ThermoFest"
+                        sequence="23">
+                        <File id="230" title="Thermobiz January 2011" hint="Thermobiz January 2011"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2011\Australia\January\Thermobiz January 2011.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="231" title="Thermobiz February 2011"
+                            hint="Thermobiz February 2011"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2011\Australia\February\Thermobiz February 2011.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="232" title="Thermobiz March 2011" hint="Thermobiz March 2011"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2011\Australia\March\Thermobiz March 2011.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="233" title="Thermobiz April 2011" hint="Thermobiz April 2011"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2011\Australia\April\Thermobiz April 2011.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                        <File id="234" title="Thermobiz May 2011" hint="Thermobiz May 2011"
+                            filename="T:\all thermomix data\Marketing Documents\Thermobiz\2011\Australia\May\Thermobiz May 2011.pdf"
+                            sequence="0" type="Thermomix.DocFile" field="Document"/>
+                    </Folder>
+                </Data>
+            </Activity>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/TMXTEST#634584329579029913:3</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

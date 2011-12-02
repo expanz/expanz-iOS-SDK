@@ -12,7 +12,7 @@
 #import "SpecHelper.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_DataSet.h"
+#import "../../../Main/Model/expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
@@ -66,7 +66,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             ActivityInstance* activity = [activityElement asActivityInstance];
             assertThatInt([activity.dataSets count], equalToInt(1));
 
-            DataSet* data = [activity.dataSets objectAtIndex:0];
+            GridData* data = [activity.dataSets objectAtIndex:0];
             assertThat(data, notNilValue());
             assertThat(data.dataId, notNilValue());
             assertThat(data.source, notNilValue());

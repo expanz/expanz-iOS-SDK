@@ -14,7 +14,7 @@
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field;
 @class expanz_ui_ActivityInstanceViewController;
-@class expanz_model_DataSet;
+@class expanz_model_GridData;
 @class expanz_model_BaseCell;
 @class expanz_model_ImageCell;
 
@@ -52,12 +52,12 @@
 /**
 * Returns the UITableView corresponding to the supplied `expanz_model_DataSet`.
 */
-- (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet;
+- (UITableView*) dataViewControlFor:(expanz_model_GridData*)dataSet;
 
 /**
 * Returns the `expanz_model_DataSet` object backing the UITableView component.
 */
-- (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl;
+- (expanz_model_GridData*) dataSetFor:(UITableView*)dataControl;
 
 /**
 * Returns the UIImageView underneath the touch area that allows editing the image.

@@ -11,14 +11,16 @@
 
 
 #import <Foundation/Foundation.h>
+#import "expanz_model_BaseData.h"
 
 @class expanz_model_Column;
 @class expanz_model_Row;
 
+
 /**
-* Top level container for holding repeating records of information in an `expanz_model_ActivityInstance`.
+* Repeating data arranged as columns and rows.
 */
-@interface expanz_model_DataSet : NSObject {
+@interface expanz_model_GridData : expanz_model_BaseData {
 
 @private
     NSMutableArray* _columns;
@@ -26,7 +28,6 @@
 
 }
 
-@property (nonatomic, readonly) NSString* dataId;
 @property (nonatomic, readonly) NSString* source;
 
 /**
@@ -67,4 +68,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias DataSet expanz_model_DataSet;
+@compatibility_alias GridData expanz_model_GridData;

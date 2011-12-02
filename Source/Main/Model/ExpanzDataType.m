@@ -31,6 +31,12 @@
     else if ([[self lowercaseString] isEqualToString:@"bool"]) {
         dataType = ExpanzDataTypeBool;
     }
+    else if ([[self lowercaseString] isEqualToString:@"date"]) {
+        dataType = ExpanzDataTypeDate;
+    }
+    else if ([[self lowercaseString] isEqualToString:@"datetime"]) {
+        dataType = ExpanzDataTypeDateTime;
+    }
     else {
         [NSException
             raise:NSInternalInconsistencyException format:@"There is no DataType corresponding to the string '%@'",

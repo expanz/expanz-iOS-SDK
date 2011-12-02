@@ -11,17 +11,17 @@
 
 
 #import "SpecHelper.h"
-#import "../../../Main/Model/expanz_model_DataSet.h"
+#import "../../../Main/Model/expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 
 SPEC_BEGIN(DataSetSpec)
 
 
-    __block DataSet* data;
+    __block GridData* data;
 
     beforeEach(^{
-        data = [[[DataSet alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"] autorelease];
+        data = [[[GridData alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"] autorelease];
     });
 
     describe(@"Object creation", ^{

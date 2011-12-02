@@ -14,7 +14,7 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "MARTNSObject.h"
-#import "expanz_model_DataSet.h"
+#import "../Model/expanz_model_GridData.h"
 #import "expanz_model_BaseCell.h"
 #import "expanz_model_ImageCell.h"
 #import "ASIHTTPRequest.h"
@@ -23,17 +23,15 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
 
-- (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName;
+- (void)cachePropertyNamesForController:(ActivityInstanceViewController*)controller;
 
-- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller;
+- (void)mapFieldsForController:(ActivityInstanceViewController*)controller;
 
-- (void) mapFieldsForController:(ActivityInstanceViewController*)controller;
+- (void)mapLabelsForController:(ActivityInstanceViewController*)controller;
 
-- (void) mapLabelsForController:(ActivityInstanceViewController*)controller;
+- (void)mapUITableViewsForController:(ActivityInstanceViewController*)controller;
 
-- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
-
-- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller;
+- (void)addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller;
 
 @end
 
@@ -44,7 +42,7 @@
 @synthesize activityInstance = _activityInstance;
 
 /* ================================================== Constructors ================================================== */
-- (id) initWithViewController:(ActivityInstanceViewController*)viewController {
+- (id)initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
         _activityInstance = viewController.activityInstance;
@@ -67,11 +65,11 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Mapping UI controls to model
 
-- (UITextField*) textInputControlFor:(expanz_model_Field*)field {
+- (UITextField*)textInputControlFor:(expanz_model_Field*)field {
     return [_textFieldMappings objectForKey:field.fieldId];
 }
 
-- (Field*) fieldFor:(UIView*)uiControl {
+- (Field*)fieldFor:(UIView*)uiControl {
 
     NSArray* keys;
     if ([uiControl isKindOfClass:[UITextField class]]) {
@@ -82,22 +80,21 @@
         LogDebug(@"Getting keys for image view.");
         keys = [_imageFieldMappings allKeysForObject:uiControl];
     }
-    LogDebug(@"Keys for uiControl: %@", keys);
     return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
 
 }
 
 
-- (UITableView*) dataViewControlFor:(expanz_model_DataSet*)dataSet {
+- (UITableView*)dataViewControlFor:(expanz_model_GridData*)dataSet {
     return [_dataSetMappings objectForKey:dataSet.dataId];
 }
 
-- (expanz_model_DataSet*) dataSetFor:(UITableView*)dataControl {
+- (expanz_model_GridData*)dataSetFor:(UITableView*)dataControl {
     NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
     return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
 }
 
-- (UIImageView*) imageViewFor:(UIButton*)editButton {
+- (UIImageView*)imageViewFor:(UIButton*)editButton {
     return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:editButton]];
 }
 
@@ -105,14 +102,14 @@
 /* ================================================================================================================== */
 #pragma mark Synchronizing UI controls
 
-- (void) updateUIControlsWithModelValues {
+- (void)updateUIControlsWithModelValues {
     [self updateLabelsWithModelValues];
     [self updateUITextFieldsWithModelValues];
     [self updateUIImagesWithModelValues];
     [self updateDataGridsWithModelValues];
 }
 
-- (void) updateLabelsWithModelValues {
+- (void)updateLabelsWithModelValues {
     for (NSString* fieldId in [_labelMappings allKeys]) {
         UILabel* label = [_labelMappings valueForKey:fieldId];
         Field* field = [_activityInstance fieldWithId:fieldId];
@@ -120,7 +117,7 @@
     }
 }
 
-- (void) updateUITextFieldsWithModelValues {
+- (void)updateUITextFieldsWithModelValues {
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
@@ -129,7 +126,7 @@
     }
 }
 
-- (void) updateUIImagesWithModelValues {
+- (void)updateUIImagesWithModelValues {
     LogDebug(@"Updaging images . . . . ");
     for (NSString* fieldId in [_imageFieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
@@ -146,14 +143,14 @@
 
 }
 
-- (void) updateDataGridsWithModelValues {
+- (void)updateDataGridsWithModelValues {
     for (UITableView* tableView in [_dataSetMappings allValues]) {
         [tableView reloadData];
         [tableView setNeedsLayout];
     }
 }
 
-- (void) startObserving:(expanz_model_ImageCell*)cell {
+- (void)startObserving:(expanz_model_ImageCell*)cell {
     [cell addObserver:self forKeyPath:@"image" options:0 context:nil];
 }
 
@@ -161,7 +158,7 @@
 /* ================================================== Utility Methods =============================================== */
 #pragma mark Utility Methods
 
-- (void) dealloc {
+- (void)dealloc {
     [_propertyNames release];
     [_textFieldMappings release];
     [_imageFieldMappings release];
@@ -171,8 +168,8 @@
     [super dealloc];
 }
 
-- (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
-                        context:(void*)context {
+- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
+                       context:(void*)context {
 
     [self updateDataGridsWithModelValues];
 }
@@ -180,13 +177,15 @@
 /* ================================================== Private Methods =============================================== */
 #pragma mark Private Methods
 
-- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller {
+#define kNoMappingWarning @"*** Warning *** %@ for %@ is nil. Has the connection been made in Interface Builder?"
+
+- (void)cachePropertyNamesForController:(ActivityInstanceViewController*)controller {
     for (RTProperty* property in [[controller class] rt_properties]) {
         [_propertyNames addObject:[property name]];
     }
 }
 
-- (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
+- (void)mapFieldsForController:(ActivityInstanceViewController*)controller {
 
     for (NSString* propertyName in _propertyNames) {
         Field* field = [_activityInstance fieldWithId:propertyName];
@@ -195,31 +194,34 @@
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
                 UITextField* textField = (UITextField*) uiControl;
                 if (textField == nil) {
-                    [self raiseErrorForNonMappedControl:propertyName typeName:@"UITextField"];
+                    LogInfo(kNoMappingWarning, @"UITextField", field.fieldId);
                 }
-                [_textFieldMappings setObject:textField forKey:propertyName];
-                id <UITextFieldDelegate> delegate = controller;
-                [textField setDelegate:delegate];
+                else {
+                    [_textFieldMappings setObject:textField forKey:propertyName];
+                    id <UITextFieldDelegate> delegate = controller;
+                    [textField setDelegate:delegate];
+                }
             }
             else if (field.datatype == ExpanzDataTypeImage) {
                 UIImageView* imageView = (UIImageView*) uiControl;
                 if (imageView == nil) {
-                    [self raiseErrorForNonMappedControl:propertyName typeName:@"UIImageView"];
+                    LogInfo(kNoMappingWarning, @"UIImageView", field.fieldId);
                 }
-                [_imageFieldMappings setObject:imageView forKey:propertyName];
-                break;
+                else {
+                    [_imageFieldMappings setObject:imageView forKey:propertyName];
+                }
             }
         }
     }
 }
 
-- (void) mapLabelsForController:(ActivityInstanceViewController*)controller {
+- (void)mapLabelsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _propertyNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
             UILabel* uiLabel = [controller performSelector:NSSelectorFromString(selectorName)];
             if (uiLabel == nil) {
-                LogInfo(@"***Warning*** UILabel for %@ is nil", selectorName);
+                LogInfo(kNoMappingWarning, @"UILabel", selectorName);
             }
             else {
                 [_labelMappings setObject:uiLabel forKey:fieldId];
@@ -228,22 +230,24 @@
     }
 }
 
-- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
+- (void)mapUITableViewsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _propertyNames) {
         if ([_activityInstance dataSetWithId:selectorName] != nil) {
             UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
             if (tableView == nil) {
-                [self raiseErrorForNonMappedControl:selectorName typeName:@"UITableView"];
+                LogInfo(kNoMappingWarning, @"UITableView", selectorName);
             }
-            [_dataSetMappings setObject:tableView forKey:selectorName];
-            id <UITableViewDelegate, UITableViewDataSource> delegate = controller;
-            [tableView setDelegate:delegate];
-            [tableView setDataSource:delegate];
+            else {
+                [_dataSetMappings setObject:tableView forKey:selectorName];
+                id <UITableViewDelegate, UITableViewDataSource> delegate = controller;
+                [tableView setDelegate:delegate];
+                [tableView setDataSource:delegate];
+            }
         }
     }
 }
 
-- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller {
+- (void)addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller {
     for (UIImageView* imageView in [_imageFieldMappings allValues]) {
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = imageView.frame;
@@ -252,12 +256,6 @@
         [controller.view addSubview:button];
         [_imageButtonMappings setObject:imageView forKey:[NSValue valueWithPointer:button]];
     }
-}
-
-- (void) raiseErrorForNonMappedControl:(NSString*)controlName typeName:(NSString*)typeName {
-    [NSException raise:NSObjectNotAvailableException
-                format:@"The %@ named '%@' is nil. Has the connection been made in Interface Builder?", typeName,
-                       controlName];
 }
 
 

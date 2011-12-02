@@ -22,7 +22,7 @@
 #import "expanz_model_Field.h"
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_service_DataPublicationRequest.h"
-#import "expanz_model_DataSet.h"
+#import "../Model/expanz_model_GridData.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
@@ -146,7 +146,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    for (DataSet* dataSet in [_activityInstance dataSets]) {
+    for (GridData* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
             for (ImageCell* imageCell in [row imageCells]) {
                 [imageCell.image release];
@@ -182,13 +182,13 @@
 #pragma mark UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
     return [dataSet.rows count];
 }
 
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
     NSString* reuseId = [dataSet dataId];
 
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
@@ -218,7 +218,7 @@
 }
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    DataSet* dataSet = [_modelAdapter dataSetFor:tableView];
+    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
     Row* row = [dataSet.rows objectAtIndex:indexPath.row];
 
     ActivityDefinition* edit = [[ActivityDefinition alloc]

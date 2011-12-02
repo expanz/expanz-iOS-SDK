@@ -11,7 +11,7 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_model_DataSet.h"
+#import "../../../Main/Model/expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
@@ -40,7 +40,7 @@ SPEC_BEGIN(RowSpec)
                 initWithColumnId:@"firstName" field:@"firstName" label:nil dataType:ExpanzDataTypeString width:70];
             Column* column2 = [[Column alloc]
                 initWithColumnId:@"address" field:@"address" label:nil dataType:ExpanzDataTypeString width:70];
-            DataSet* dataSet = [[DataSet alloc] initWithDataId:@"foobar" source:@"zzz"];
+            GridData* dataSet = [[GridData alloc] initWithDataId:@"foobar" source:@"zzz"];
             [dataSet addColumn:column1];
             [dataSet addColumn:column2];
             [column1 release];

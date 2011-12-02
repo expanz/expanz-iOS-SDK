@@ -8,17 +8,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import <Foundation/Foundation.h>
 
-typedef enum {
-    ExpanzDataTypeNull, ExpanzDataTypeString, ExpanzDataTypeNumber, ExpanzDataTypeImage, ExpanzDataTypeBool,
-    ExpanzDataTypeDate, ExpanzDataTypeDateTime
-} ExpanzDataType;
 
-@interface NSString (ExpanzDataType)
+@interface expanz_model_TreeData : NSObject {
 
-- (ExpanzDataType)asExpanzDataType;
+@private
+    NSMutableArray* _folders;
+}
+
+
 
 @end
-
-
-

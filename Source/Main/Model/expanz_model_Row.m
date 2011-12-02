@@ -12,7 +12,7 @@
 
 #import "expanz_model_Row.h"
 #import "expanz_model_Column.h"
-#import "expanz_model_DataSet.h"
+#import "expanz_model_GridData.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
 
@@ -104,6 +104,8 @@
             switch (column.dataType) {
                 case ExpanzDataTypeString:
                 case ExpanzDataTypeNumber:
+                case ExpanzDataTypeDate:
+                case ExpanzDataTypeDateTime:
                     [_textCells addObject:[[[TextCell alloc] initWithCellId:cellId text:data] autorelease]];
                     break;
                 case ExpanzDataTypeImage:

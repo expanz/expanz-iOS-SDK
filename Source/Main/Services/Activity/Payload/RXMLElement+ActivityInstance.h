@@ -13,7 +13,7 @@
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field; 
 @class expanz_model_Message;
-@class expanz_model_DataSet;
+@class expanz_model_GridData;
 @class expanz_model_Column;
 @class expanz_model_Row;
 @class expanz_model_TextCell;
@@ -41,7 +41,7 @@
 /**
 * Maps the element onto an `expanz_model_DataSet` object.
 */
-- (expanz_model_DataSet*) asData;
+- (expanz_model_GridData*) asData;
 
 /**
 * Maps the element onto an `expanz_model_Column` object.

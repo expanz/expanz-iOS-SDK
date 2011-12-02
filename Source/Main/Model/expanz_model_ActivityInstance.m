@@ -11,7 +11,7 @@
 
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
-#import "expanz_model_DataSet.h"
+#import "expanz_model_GridData.h"
 
 
 @implementation expanz_model_ActivityInstance
@@ -78,12 +78,12 @@
     return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];    
 }
 
-- (void) addDataSet:(expanz_model_DataSet*)dataSet {
+- (void) addDataSet:(expanz_model_GridData*)dataSet {
     [_dataSets addObject:dataSet];
 }
 
-- (DataSet*) dataSetWithId:(NSString*)dataSetId {
-    for (DataSet* dataSet in _dataSets) {
+- (GridData*) dataSetWithId:(NSString*)dataSetId {
+    for (GridData* dataSet in _dataSets) {
         if ([dataSet.dataId isEqualToString:dataSetId]) {
             return dataSet;
         }

@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_model_TextCell;
-@class expanz_model_DataSet;
+@class expanz_model_GridData;
 @class expanz_model_BaseCell;
 
 /**
@@ -28,7 +28,7 @@
     NSArray* _sortDescriptors;
 }
 
-@property(nonatomic, assign) expanz_model_DataSet* dataSet;
+@property(nonatomic, assign) expanz_model_GridData* dataSet;
 @property(nonatomic, readonly) NSString* rowId;
 @property(nonatomic, readonly) NSString* type;
 

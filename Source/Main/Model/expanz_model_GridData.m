@@ -10,21 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_DataSet.h"
+#import "expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 
 
-@implementation expanz_model_DataSet
+@implementation expanz_model_GridData
 
-@synthesize dataId = _dataId;
 @synthesize source = _source;
 
 /* ================================================== Constructors ================================================== */
 - (id) initWithDataId:(NSString*)dataId source:(NSString*)source {
-    self = [self init];
+    self = [super initWithDataId:dataId];
     if (self) {
-        _dataId = [dataId copy];
         _source = [source copy];
         _columns = [[NSMutableArray alloc] init];
         _rows = [[NSMutableArray alloc] init];
@@ -75,7 +73,6 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
-    [_dataId release];
     [_source release];
     [_columns release];
     [_rows release];
