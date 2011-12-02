@@ -9,10 +9,42 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_model_TreeData.h"
+#import "expanz_model_Folder.h"
 
 
-@implementation expanz_model_TreeData {
+@implementation expanz_model_TreeData
 
+/* ================================================== Constructors ================================================== */
+- (id) init {
+    [NSException raise:NSInvalidArgumentException format:@"dataId parameter is required."];
+    return nil;
 }
+
+- (id)initWithDataId:(NSString*)dataId {
+    self = [super initWithDataId:dataId];
+    if (self) {
+        _folders = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
+/* ================================================ Interface Methods =============================================== */
+- (NSArray*)folders {
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"sequence" ascending:YES];
+    return [_folders sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
+
+- (void)addFolder:(expanz_model_Folder*)folder {
+    [_folders addObject:folder];
+}
+
+/* ================================================== Utility Methods =============================================== */
+- (void)dealloc {
+    [_folders release];
+    [super dealloc];
+}
+
 
 @end

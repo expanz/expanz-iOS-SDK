@@ -9,14 +9,22 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
+#import "expanz_model_BaseData.h"
+
+@class expanz_model_Folder;
 
 
-@interface expanz_model_TreeData : NSObject {
+@interface expanz_model_TreeData : expanz_model_BaseData {
 
 @private
     NSMutableArray* _folders;
 }
 
+- (NSArray*) folders;
+- (void) addFolder:(expanz_model_Folder*)folder;
 
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias TreeData expanz_model_TreeData;

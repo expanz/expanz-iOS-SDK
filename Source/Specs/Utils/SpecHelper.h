@@ -51,6 +51,8 @@ assertThat(outcome, equalTo(@"expression happened before 9 seconds."))
 
 /* ================================================================================================================== */
 
+#define failWithReason(expression) [NSException raise:NSGenericException format:expression]
+
 #import "expanz_model_SessionContext.h"
 #import "expanz_iOS_SDKModule.h"
 #import "TestResource.h"
