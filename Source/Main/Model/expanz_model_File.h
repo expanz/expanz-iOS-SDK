@@ -25,3 +25,6 @@
              sequence:(NSString*)sequence type:(NSString*)type field:(NSString*)field;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias File expanz_model_File;

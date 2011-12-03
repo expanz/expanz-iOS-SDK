@@ -15,11 +15,6 @@
 @implementation expanz_model_TreeData
 
 /* ================================================== Constructors ================================================== */
-- (id) init {
-    [NSException raise:NSInvalidArgumentException format:@"dataId parameter is required."];
-    return nil;
-}
-
 - (id)initWithDataId:(NSString*)dataId {
     self = [super initWithDataId:dataId];
     if (self) {

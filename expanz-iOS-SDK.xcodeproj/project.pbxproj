@@ -724,6 +724,7 @@
 		6BFACBA414679916007C72AE /* expanz_model_File.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
 		6BFACBA414679916007C72AF /* expanz_model_File.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
 		6BFACBA414679916007C72B1 /* TreeDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B0 /* TreeDataSpec.m */; };
+		6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B2 /* FolderSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1127,6 +1128,7 @@
 		6BFACBA414679916007C72A8 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = expanz_model_File.m; path = Source/Main/Model/expanz_model_File.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72AD /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_model_File.h; path = Source/Main/Model/expanz_model_File.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B0 /* TreeDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDataSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72B2 /* FolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1770,6 +1772,7 @@
 		6BD47DD01484705A000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72B2 /* FolderSpec.m */,
 				6BFACBA414679916007C72B0 /* TreeDataSpec.m */,
 				6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */,
 				6BD47DD21484705A000ECE52 /* ActivitySpec.m */,
@@ -2677,6 +2680,7 @@
 				6BFACBA414679916007C72A3 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AB /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B1 /* TreeDataSpec.m in Sources */,
+				6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

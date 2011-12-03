@@ -24,17 +24,6 @@ SPEC_BEGIN(TreeDataSpec)
             assertThat(treeData.dataId, equalTo(@"1234"));
             [treeData release];
         });
-
-        it(@"should not allow creation without dataId attribute", ^{
-            @try {
-                TreeData* treeData = [[TreeData alloc] init];
-                [treeData description];
-                failWithReason(@"Should have thrown exception");
-            } @catch (NSException* e) {
-                assertThat([e reason], equalTo(@"dataId parameter is required."));
-            }
-
-        });
     });
 
     describe(@"Folders", ^{
@@ -65,7 +54,7 @@ SPEC_BEGIN(TreeDataSpec)
         it(@"should sort folders according to sequence attribute", ^{
             Folder* folder = [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"2"]
                 autorelease];
-            [treeData addFolder:folder];            
+            [treeData addFolder:folder];
             Folder* another =
                 [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"1"]
                     autorelease];
@@ -77,4 +66,4 @@ SPEC_BEGIN(TreeDataSpec)
 
     });
 
-SPEC_END
+    SPEC_END

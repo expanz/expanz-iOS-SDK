@@ -23,16 +23,12 @@
 
 
 /* ================================================== Constructors ================================================== */
-- (id) init {
-    [NSException raise:NSInvalidArgumentException format:@"folderId parameter is required."];
-    return nil;
-}
 - (id)initWithFolderId:(NSString*)folderId title:(NSString*)title hint:(NSString*)hint
            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence {
-    
-    self = [super init]; 
-    if (self) {        
-        _folderId = [folderId copy]; 
+
+    self = [super init];
+    if (self) {
+        _folderId = [folderId copy];
         _title = [title copy];
         _hint = [hint copy];
         _buttonTitle = [buttonTitle copy];
@@ -43,12 +39,17 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
+- (NSArray*)files {
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"sequence" ascending:YES];
+    return [_files sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
 - (void)addFile:(expanz_model_File*)file {
     [_files addObject:file];
 }
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
+- (void)dealloc {
     [_folderId release];
     [_title release];
     [_hint release];

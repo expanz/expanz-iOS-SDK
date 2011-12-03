@@ -28,6 +28,7 @@
 - (id)initWithFolderId:(NSString*)folderId title:(NSString*)title hint:(NSString*)hint
            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence;
 
+- (NSArray*) files;
 - (void) addFile:(expanz_model_File*)file;
 
 @end
