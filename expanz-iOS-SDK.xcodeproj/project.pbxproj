@@ -732,8 +732,7 @@
 		6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */; };
 		6BFACBA414679916007C72BC /* expanz_model_DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
 		6BFACBA414679916007C72BD /* expanz_model_DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
-		6BFACBA414679916007C72BF /* ActivityManagerSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BE /* ActivityManagerSpec.m */; };
-		6BFACBA414679916007C72C1 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72C1 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C4 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
@@ -749,6 +748,8 @@
 		6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
 		6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
 		6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */; };
+		6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */; };
+		6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1147,16 +1148,15 @@
 		6BFACBA414679916007C7295 /* expanz_model_BaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_BaseData.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7298 /* expanz_model_TreeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TreeData.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C729D /* expanz_model_TreeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TreeData.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72A0 /* expanz_model_Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = expanz_model_Folder.m; path = expanz_model_Folder.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72A5 /* expanz_model_Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_model_Folder.h; path = expanz_model_Folder.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72A8 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = expanz_model_File.m; path = expanz_model_File.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72AD /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_model_File.h; path = expanz_model_File.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72A0 /* expanz_model_Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Folder.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72A5 /* expanz_model_Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Folder.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72A8 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_File.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72AD /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_File.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B0 /* TreeDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDataSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B2 /* FolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B4 /* FileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataBuilder.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataBuilder.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72BE /* ActivityManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActivityManagerSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClientDelegate.h; sourceTree = "<group>"; };
@@ -1165,6 +1165,9 @@
 		6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventReporter.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubSystemEventReporter.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72D8 /* StubSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubSystemEventReporter.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityManagerSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CedarApplicationDelegate+Expanz.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CedarApplicationDelegate+Expanz.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1856,7 +1859,7 @@
 		6BD47DE91484705A000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				6BFACBA414679916007C72BE /* ActivityManagerSpec.m */,
+				6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */,
 				6BFACBA414679916007C727B /* TestFixture_ViewController.h */,
 				6BFACBA414679916007C7279 /* TestFixture_ViewController.m */,
 				6BD47DEA1484705A000ECE52 /* ActivityInstanceViewControllerSpec.m */,
@@ -1889,6 +1892,8 @@
 		6BD47DF41484705A000ECE52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */,
+				6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */,
 				6BFACBA414679916007C72D8 /* StubSystemEventReporter.h */,
 				6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */,
 				6BFACBA414679916007C727E /* TestResource.h */,
@@ -2034,7 +2039,7 @@
 				6BFACBA414679916007C72A6 /* expanz_model_Folder.h in Headers */,
 				6BFACBA414679916007C72AE /* expanz_model_File.h in Headers */,
 				6BFACBA414679916007C72BC /* expanz_model_DataBuilder.h in Headers */,
-				6BFACBA414679916007C72C1 /* expanz_service_ActivityClientDelegate.h in Headers */,
+				6BFACBA414679916007C72C1 /* (null) in Headers */,
 				6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */,
@@ -2311,7 +2316,6 @@
 				6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */,
 				6B77EE46148784AF00B80D1F /* MainWindow.xib in Resources */,
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
-				6BFACBA414679916007C72BF /* ActivityManagerSpec.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2753,6 +2757,8 @@
 				6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D1 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */,
+				6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */,
+				6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

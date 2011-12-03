@@ -50,10 +50,7 @@
 
 - (ActivityInstanceViewController*)activityController {
     id appDelegate = (SDKAppDelegate*) [UIApplication sharedApplication].delegate;
-    if ([appDelegate isKindOfClass:[SDKAppDelegate class]]) {
-        return (ActivityInstanceViewController*) [appDelegate navigationController].topViewController;
-    }
-    return nil;
+    return (ActivityInstanceViewController*) [appDelegate navigationController].topViewController;
 }
 
 @end

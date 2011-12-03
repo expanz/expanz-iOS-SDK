@@ -8,13 +8,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import "expanz_ui_SystemEventReporter.h"
+#import <Cedar-iPhone/CedarApplicationDelegate.h>
 
 
-@interface StubSystemEventReporter : NSObject<expanz_ui_SystemEventReporter>
+@interface CedarApplicationDelegate (Expanz)
 
-@property (nonatomic, retain) NSString* message;
+- (UINavigationController*) navigationController;
 
 @end
