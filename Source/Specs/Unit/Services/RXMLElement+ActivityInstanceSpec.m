@@ -12,11 +12,13 @@
 #import "SpecHelper.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
-#import "../../../Main/Model/expanz_model_GridData.h"
+#import "expanz_model_GridData.h"
+#import "expanz_model_TreeData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "expanz_model_File.h"
+#import "expanz_model_Folder.h"
 
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
@@ -54,7 +56,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         });
     });
 
-    describe(@"Activity instance with data", ^{
+    describe(@"Activity instance with grid data", ^{
 
         beforeEach(^{
             NSString* xmlString = [TestResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
@@ -62,7 +64,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
         });
 
-        it(@"Should add expanz_model_Data objects for each data node.", ^{
+        it(@"Should add expanz_model_Data objects for each grid data node.", ^{
             ActivityInstance* activity = [activityElement asActivityInstance];
             assertThatInt([activity.dataSets count], equalToInt(1));
 
@@ -89,6 +91,34 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                     assertThat(cell.cellId, notNilValue());
                 }
             }
+        });
+
+    });
+
+    describe(@"Activity instance with tree data.", ^{
+        
+        beforeEach(^{
+            NSString* xmlString = [TestResource withName:@"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"];
+            RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+            activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
+        });
+
+        it(@"Should add expamz_model_Data objects for each tree data node.", ^{
+            ActivityInstance* activity = [activityElement asActivityInstance];
+            assertThatInt([activity.dataSets count], equalToInt(1));
+
+            TreeData* data = [activity.dataSets objectAtIndex:0];
+            assertThat(data, notNilValue());
+            assertThat(data.dataId, equalTo(@"DocumentsTree"));
+
+            //Folders
+            assertThatInt([data.folders count], equalToInt(24));
+            Folder* folder = [data.folders objectAtIndex:0];
+            for (File* file in [folder files]) {
+                assertThat(file.fileId, notNilValue());
+                LogDebug(@"File: %@", file);
+            }
+
         });
 
     });

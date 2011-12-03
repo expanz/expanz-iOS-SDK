@@ -72,18 +72,18 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
         it(@"should hold a collection of DataSets.", ^{
             GridData* dataSet = [[GridData alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
-            [instance addDataSet:dataSet];
+            [instance addData:dataSet];
         });
 
         it(@"should allow retrieval of stored DataSets by id", ^{
             GridData* dataSet = [[GridData alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
-            [instance addDataSet:dataSet];
-            GridData* retrieved = [instance dataSetWithId:@"customersList"];
+            [instance addData:dataSet];
+            GridData* retrieved = [instance dataWithId:@"customersList"];
             assertThat(retrieved, equalTo(dataSet));
         });
         
         it(@"should return nil when asked for a dataset of an id not being stored", ^{
-            assertThat([instance dataSetWithId:@"not.stored"], nilValue());
+            assertThat([instance dataWithId:@"not.stored"], nilValue());
         });
     });
 

@@ -44,7 +44,6 @@
     return YES;
 }
 
-
 - (NSArray*) fields {
     NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"fieldId" ascending:YES] autorelease];
     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
@@ -78,11 +77,11 @@
     return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];    
 }
 
-- (void) addDataSet:(expanz_model_GridData*)dataSet {
-    [_dataSets addObject:dataSet];
+- (void) addData:(expanz_model_BaseData*)data {
+    [_dataSets addObject:data];
 }
 
-- (GridData*) dataSetWithId:(NSString*)dataSetId {
+- (expanz_model_BaseData*) dataWithId:(NSString*)dataSetId {
     for (GridData* dataSet in _dataSets) {
         if ([dataSet.dataId isEqualToString:dataSetId]) {
             return dataSet;

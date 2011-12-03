@@ -14,15 +14,17 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
-#import "../../../Model/expanz_model_GridData.h"
+#import "expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
-#import "ExpanzDataType.h"
+#import "expanz_model_DataBuilder.h"
+#import "expanz_model_Folder.h"
+#import "expanz_model_File.h"
 
 
 @implementation RXMLElement (ActivityInstance)
 
-- (ActivityInstance*) asActivityInstance {
+- (ActivityInstance*)asActivityInstance {
     if (![self.tag isEqualToString:@"Activity"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not an Activity."];
     }
@@ -36,14 +38,14 @@
             [activityInstance addField:[e asField]];
         }
 
-        if ([e.tag isEqualToString:@"Messages"]) {
+        else if ([e.tag isEqualToString:@"Messages"]) {
             [e iterate:@"*" with:^(RXMLElement* messageElement) {
                 [activityInstance addMessage:[messageElement asMessage]];
             }];
         }
 
-        if ([e.tag isEqualToString:@"Data"]) {
-            [activityInstance addDataSet:[e asData]];
+        else if ([e.tag isEqualToString:@"Data"]) {
+            [activityInstance addData:[e asData]];
         }
     }];
 
@@ -51,7 +53,7 @@
 }
 
 /* ================================================================================================================== */
-- (Field*) asField {
+- (Field*)asField {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Field."];
     }
@@ -86,7 +88,7 @@
 }
 
 /* ================================================================================================================== */
-- (Message*) asMessage {
+- (Message*)asMessage {
     if (![self.tag isEqualToString:@"Message"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Message."];
     }
@@ -97,32 +99,36 @@
 
 /* ================================================================================================================== */
 #pragma mark DataSet and DataSet child elements.
-- (GridData*) asData {
+- (BaseData*)asData {
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
     }
-    GridData* dataSet =
-        [[[GridData alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
+    DataBuilder* dataBuilder =
+        [[[DataBuilder alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Columns"]) {
             [e iterate:@"*" with:^(RXMLElement* columnElement) {
-                [dataSet addColumn:[columnElement asColumn]];
+                [dataBuilder addColumn:[columnElement asColumn]];
             }];
         }
 
-        if ([e.tag isEqualToString:@"Rows"]) {
+        else if ([e.tag isEqualToString:@"Rows"]) {
             [e iterate:@"*" with:^(RXMLElement* rowElement) {
-                [dataSet addRow:[rowElement asRow]];
+                [dataBuilder addRow:[rowElement asRow]];
             }];
+        }
+
+        else if ([e.tag isEqualToString:@"Folder"]) {
+            [dataBuilder addFolder:[e asFolder]];
         }
     }];
 
-    return dataSet;
+    return [dataBuilder build];
 }
 
-- (Column*) asColumn {
+- (Column*)asColumn {
     if (![self.tag isEqualToString:@"Column"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Column."];
     }
@@ -138,7 +144,7 @@
     return column;
 }
 
-- (Row*) asRow {
+- (Row*)asRow {
     if (![self.tag isEqualToString:@"Row"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Row."];
     }
@@ -152,5 +158,50 @@
 
     return row;
 }
+
+- (expanz_model_Folder*)asFolder {
+    if (![self.tag isEqualToString:@"Folder"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a Folder."];
+    }
+
+    NSString* id = [self attribute:@"id"];
+    NSString* title = [self attribute:@"title"];
+    NSString* hint = [self attribute:@"hint"];
+    NSString* buttonTitle = [self attribute:@"title"];
+    NSString* sequence = [self attribute:@"sequence"];
+
+    Folder* folder =
+        [[[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence]
+            autorelease];
+
+    [self iterate:@"*" with:^(RXMLElement* e) {
+        if ([e.tag isEqualToString:@"File"]) {
+            [folder addFile:[e asFile]];
+        }
+    }];
+
+    return folder;
+}
+
+- (expanz_model_File*)asFile {
+    if (![self.tag isEqualToString:@"File"]) {
+        [NSException raise:ExXmlValidationException format:@"Element is not a File."];
+    }
+
+    NSString* id = [self attribute:@"id"];
+    NSString* title = [self attribute:@"title"];
+    NSString* hint = [self attribute:@"hint"];
+    NSString* fileName = [self attribute:@"fileName"];
+    NSString* sequence = [self attribute:@"sequence"];
+    NSString* type = [self attribute:@"type"];
+    NSString* field = [self attribute:@"field"];
+
+    File* file = [[[File alloc]
+        initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field] autorelease];
+
+    return file;
+
+}
+
 
 @end

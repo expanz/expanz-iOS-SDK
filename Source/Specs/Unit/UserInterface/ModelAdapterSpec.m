@@ -111,7 +111,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
         it(@"should map the other directrion - return a UITableView corresponding to a DataSet", ^{
-            GridData* dataSet = [modelAdapter.activityInstance dataSetWithId:@"customersList"];
+            GridData* dataSet = [modelAdapter.activityInstance dataWithId:@"customersList"];
             UITableView* tableView = [modelAdapter dataViewControlFor:dataSet];
             assertThat(tableView, notNilValue());
         });

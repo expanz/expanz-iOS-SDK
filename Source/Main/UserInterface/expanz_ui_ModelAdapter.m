@@ -89,9 +89,9 @@
     return [_dataSetMappings objectForKey:dataSet.dataId];
 }
 
-- (expanz_model_GridData*)dataSetFor:(UITableView*)dataControl {
+- (expanz_model_BaseData*)dataSetFor:(UITableView*)dataControl {
     NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
-    return [_activityInstance dataSetWithId:[keys objectAtIndex:0]];
+    return [_activityInstance dataWithId:[keys objectAtIndex:0]];
 }
 
 - (UIImageView*)imageViewFor:(UIButton*)editButton {
@@ -232,7 +232,7 @@
 
 - (void)mapUITableViewsForController:(ActivityInstanceViewController*)controller {
     for (NSString* selectorName in _propertyNames) {
-        if ([_activityInstance dataSetWithId:selectorName] != nil) {
+        if ([_activityInstance dataWithId:selectorName] != nil) {
             UITableView* tableView = [controller performSelector:NSSelectorFromString(selectorName)];
             if (tableView == nil) {
                 LogInfo(kNoMappingWarning, @"UITableView", selectorName);

@@ -24,22 +24,22 @@
 /* ================================================== Constructors ================================================== */
 - (id)initWithFileId:(NSString*)fileId title:(NSString*)title hint:(NSString*)hint fileName:(NSString*)fileName
             sequence:(NSString*)sequence type:(NSString*)type field:(NSString*)field {
-    
-    self = [super init]; 
+
+    self = [super init];
     if (self) {
-        _fileId = [fileId copy]; 
+        _fileId = [fileId copy];
         _title = [title copy];
-        _hint = [hint copy]; 
+        _hint = [hint copy];
         _fileName = [fileName copy];
         _sequence = [sequence copy];
         _type = [type copy];
         _field = [field copy];
     }
-    return self; 
+    return self;
 }
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
+- (void)dealloc {
     [_fileId release];
     [_title release];
     [_hint release];
@@ -48,6 +48,12 @@
     [_type release];
     [_field release];
     [super dealloc];
+}
+
+- (NSString*)description {
+    return [NSString
+        stringWithFormat:@"File: fileId=%@, title=%@, hint=%@, fileName=%@, sequence=%@, type=%@, field=%@", _fileId,
+                         _title, _hint, _fileName, _sequence, _type, _field];
 }
 
 @end
