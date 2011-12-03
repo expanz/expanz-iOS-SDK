@@ -78,7 +78,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
         it(@"should allow retrieval of stored DataSets by id", ^{
             GridData* dataSet = [[GridData alloc] initWithDataId:@"customersList" source:@"ESA.Sales.Customer"];
             [instance addData:dataSet];
-            GridData* retrieved = [instance dataWithId:@"customersList"];
+            GridData* retrieved = (GridData*) [instance dataWithId:@"customersList"];
             assertThat(retrieved, equalTo(dataSet));
         });
         

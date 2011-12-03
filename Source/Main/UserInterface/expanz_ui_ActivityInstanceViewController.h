@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "expanz_service_ActivityClient.h"
+#import "expanz_service_ActivityClientDelegate.h"
 
 @class expanz_model_ActivityDefinition;
 @class expanz_model_Field;

@@ -14,7 +14,9 @@
 #import "expanz_service_XmlPostWebService.h"
 #import "expanz_service_SessionDataClient.h"
 
-@interface expanz_service_XmlPostSessionDataClient : XmlPostWebService<expanz_service_SessionDataClient> @end
+@interface expanz_service_XmlPostSessionDataClient : XmlPostWebService<expanz_service_SessionDataClient>
+
+@end
 
 /* ================================================================================================================== */
 @compatibility_alias XmlPostSessionDataClient expanz_service_XmlPostSessionDataClient;

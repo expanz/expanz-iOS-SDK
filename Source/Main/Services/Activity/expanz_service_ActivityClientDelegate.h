@@ -8,16 +8,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-#import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
-
 @class expanz_model_ActivityInstance;
 
-@interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
+@protocol expanz_service_ActivityClientDelegate<NSObject>
 
-@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, retain) NSError* error; 
+- (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance;
+- (void) requestDidFailWithError:(NSError*)error;
 
 @end

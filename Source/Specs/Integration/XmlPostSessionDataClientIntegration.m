@@ -13,9 +13,9 @@
 #import "SpecHelper.h"
 #import "expanz_service_SessionDataClient.h"
 #import "IntegrationUtils.h"
-#import "expanz_model_SessionContext.h"
-#import "expanz_model_Menu.h"
 #import "expanz_service_SessionDataRequest.h"
+#import "expanz_service_SessionDataClientDelegate.h"
+#import "expanz_model_Menu.h"
 #import "expanz_service_XmlPostSessionDataClient.h"
 
 /* ================================================================================================================== */

@@ -9,15 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
+@class expanz_model_Menu;
 
-@class expanz_model_ActivityInstance;
+@protocol expanz_service_SessionDataClientDelegate<NSObject>
 
-@interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
-
-@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, retain) NSError* error; 
+- (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu;
+- (void) requestDidFailWithError:(NSError*)error;
 
 @end

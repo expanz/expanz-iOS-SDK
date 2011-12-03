@@ -10,18 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "expanz_service_SessionDataClientDelegate.h"
+
 @class expanz_model_Menu;
 @class expanz_service_SessionDataRequest;
-
-/* ================================================================================================================== */
-@protocol expanz_service_SessionDataClientDelegate <NSObject>
-
-- (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu; 
-- (void) requestDidFailWithError:(NSError*)error; 
-
-@end
-
-/* ================================================================================================================== */
 
 @protocol expanz_service_SessionDataClient <NSObject>
 

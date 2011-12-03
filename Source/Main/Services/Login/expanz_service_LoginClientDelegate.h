@@ -9,15 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
+@class expanz_model_SessionContext;
 
-@class expanz_model_ActivityInstance;
+@protocol expanz_service_LoginClientDelegate<NSObject>
 
-@interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
-
-@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, retain) NSError* error; 
+- (void) requestDidFinishWithSessionContext:(expanz_model_SessionContext*)sessionContext;
+- (void) requestDidFailWithError:(NSError*)error;
 
 @end

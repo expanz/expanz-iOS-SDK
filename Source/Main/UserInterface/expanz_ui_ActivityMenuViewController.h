@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "expanz_service_SessionDataClient.h"
+#import "expanz_service_SessionDataClientDelegate.h"
 @class expanz_model_Menu;
 @class expanz_ui_ActivityManager;
 

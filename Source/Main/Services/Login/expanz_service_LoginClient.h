@@ -11,20 +11,10 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_LoginClient.h"
+#import "expanz_service_LoginClientDelegate.h"
+
 @class expanz_service_SessionRequest;
 @class expanz_model_SessionContext;
-
-
-/* ================================================================================================================== */
-@protocol expanz_service_LoginClientDelegate <NSObject>
-
-- (void) requestDidFinishWithSessionContext:(expanz_model_SessionContext*)sessionContext; 
-- (void) requestDidFailWithError:(NSError*)error; 
-
-@end
-
-/* ================================================================================================================== */
-
 
 @protocol expanz_service_LoginClient <NSObject>
 

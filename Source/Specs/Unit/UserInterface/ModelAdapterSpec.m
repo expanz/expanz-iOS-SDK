@@ -14,7 +14,7 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "../../../Main/Model/expanz_model_GridData.h"
+#import "expanz_model_GridData.h"
 #import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "TestFixtureViewController.h"
@@ -111,7 +111,7 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
         it(@"should map the other directrion - return a UITableView corresponding to a DataSet", ^{
-            GridData* dataSet = [modelAdapter.activityInstance dataWithId:@"customersList"];
+            GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"customersList"];
             UITableView* tableView = [modelAdapter dataViewControlFor:dataSet];
             assertThat(tableView, notNilValue());
         });

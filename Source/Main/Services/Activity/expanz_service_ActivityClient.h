@@ -10,21 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "expanz_service_ActivityClientDelegate.h"
+
 @class expanz_model_ActivityInstance;
 @class expanz_service_CreateActivityRequest;
 @class expanz_service_DeltaRequest;
 @class expanz_service_MethodInvocationRequest;
-
-
-/* ================================================================================================================== */
-@protocol expanz_service_ActivityClientDelegate <NSObject>
-
-- (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance; 
-- (void) requestDidFailWithError:(NSError*)error; 
-
-@end
-
-/* ================================================================================================================== */
 
 @protocol expanz_service_ActivityClient <NSObject>
 
