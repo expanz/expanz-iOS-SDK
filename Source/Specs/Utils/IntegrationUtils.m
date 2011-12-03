@@ -12,14 +12,14 @@
 #import <Objection-iOS/Objection.h>
 #import "IntegrationUtils.h"
 #import "expanz_service_LoginClient.h" 
-#import "TestLoginClientDelegate.h"
+#import "StubLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_service_SessionRequest.h"
 #import "SpecHelper.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_ActivityClient.h"
-#import "TestActivityClientDelegate.h"
+#import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
 
 
@@ -32,7 +32,7 @@
         id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)]; 
         SessionRequest* sessionRequest = [[[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo" 
                                                                 appSite:@"SALESAPP" userType:@"Primary"] autorelease]; 
-        TestLoginClientDelegate* loginDelegate = [[TestLoginClientDelegate alloc] init]; 
+        StubLoginClientDelegate* loginDelegate = [[StubLoginClientDelegate alloc] init];
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
         assertWillHappen(loginDelegate.sessionContext != nil); 
         [SessionContext setGlobalContext:loginDelegate.sessionContext];
@@ -48,7 +48,7 @@
     id<expanz_service_ActivityClient> activityClient = [testInjector 
                                                         getObject:@protocol(expanz_service_ActivityClient)];
     
-    TestActivityClientDelegate* delegate = [[[TestActivityClientDelegate alloc] init] autorelease];
+    StubActivityClientDelegate* delegate = [[[StubActivityClientDelegate alloc] init] autorelease];
     
     [activityClient createActivityWith:activityRequest delegate:delegate];
     assertWillHappen(delegate.activityInstance != nil);

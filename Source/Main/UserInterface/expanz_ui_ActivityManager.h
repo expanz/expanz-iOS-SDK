@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Objection-iOS/Objection.h>
-#import "expanz_ui_SystemEventPresenter.h"
+#import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_ActivityDefinition;
 
@@ -21,7 +21,7 @@
 */
 @interface expanz_ui_ActivityManager : NSObject
 
-@property (nonatomic, retain) id<expanz_ui_SystemEventPresenter> reporter;
+@property (nonatomic, retain) id<expanz_ui_SystemEventReporter> reporter;
 
 - (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
 

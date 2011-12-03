@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_SessionDataClient.h"
 #import "expanz_service_SessionDataClientDelegate.h"
-#import "expanz_ui_SystemEventPresenter.h"
+#import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_Menu;
 @class expanz_ui_ActivityManager;

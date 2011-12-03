@@ -10,12 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_LoginClient.h"
-@class expanz_model_SessionContext;
+#import "expanz_service_ActivityClient.h"
+#import "expanz_service_ActivityClientDelegate.h"
 
-@interface TestLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
+@class expanz_model_ActivityInstance;
 
-@property (nonatomic, retain) expanz_model_SessionContext* sessionContext;
+@interface StubActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate>
+
+@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
 @property (nonatomic, retain) NSError* error; 
 
 @end

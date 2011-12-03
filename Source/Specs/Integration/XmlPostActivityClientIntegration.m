@@ -17,19 +17,19 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_service_XmlPostActivityClient.h"
 #import "expanz_service_DeltaRequest.h"
-#import "TestActivityClientDelegate.h"
+#import "../Utils/StubActivityClientDelegate.h"
 #import "expanz_service_MethodInvocationRequest.h"
 
 SPEC_BEGIN(XmlPostActivityClientIntegration)
 
 __block id<expanz_service_ActivityClient> activityClient;
-__block TestActivityClientDelegate* delegate;
+__block StubActivityClientDelegate* delegate;
 
 beforeEach(^{
     [IntegrationUtils loginWithDefaultUserIfRequired];
     JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
     activityClient = [injector getObject:@protocol(expanz_service_ActivityClient)];
-    delegate = [[[TestActivityClientDelegate alloc] init] autorelease];            
+    delegate = [[[StubActivityClientDelegate alloc] init] autorelease];
 });
 
 

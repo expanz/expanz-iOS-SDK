@@ -9,12 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Objection-iOS/Objection.h>
-#import "expanz_ui_AlertBoxSystemEventPresenter.h"
+#import "expanz_ui_AlertBoxSystemEventReporter.h"
 
 
-@implementation expanz_ui_AlertBoxSystemEventPresenter
+@implementation expanz_ui_AlertBoxSystemEventReporter
 
-objection_register_singleton(expanz_ui_AlertBoxSystemEventPresenter)
+objection_register_singleton(expanz_ui_AlertBoxSystemEventReporter)
 
 @synthesize delegate = _delegate;
 

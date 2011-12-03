@@ -9,15 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
+@protocol expanz_ui_SystemEventReporter <NSObject>
 
-@class expanz_model_ActivityInstance;
-
-@interface TestActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate> 
-
-@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, retain) NSError* error; 
+- (void) reportErrorWithReason:(NSString*)reason; 
+- (void) reportWarningWithReason:(NSString*)reason; 
+- (void) reportMessageWithTitle:(NSString*)title message:(NSString*)message;
 
 @end

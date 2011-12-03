@@ -8,11 +8,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "StubSystemEventReporter.h"
 
-@protocol expanz_ui_SystemEventPresenter<NSObject>
 
-- (void) reportErrorWithReason:(NSString*)reason; 
-- (void) reportWarningWithReason:(NSString*)reason; 
-- (void) reportMessageWithTitle:(NSString*)title message:(NSString*)message;
+@implementation StubSystemEventReporter {
+
+}
 
 @end

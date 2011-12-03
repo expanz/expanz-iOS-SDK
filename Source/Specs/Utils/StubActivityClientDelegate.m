@@ -9,10 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "TestActivityClientDelegate.h"
+#import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
 
-@implementation TestActivityClientDelegate
+@implementation StubActivityClientDelegate
 
 @synthesize activityInstance = _activityInstance, error = _error;
 

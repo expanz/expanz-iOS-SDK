@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "expanz_ui_SystemEventPresenter.h"
+#import "expanz_ui_SystemEventReporter.h"
 
 
-@interface expanz_ui_AlertBoxSystemEventPresenter : NSObject<expanz_ui_SystemEventPresenter>
+@interface expanz_ui_AlertBoxSystemEventReporter : NSObject<expanz_ui_SystemEventReporter>
 
 @property (nonatomic, assign) id<UIAlertViewDelegate> delegate;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias AlertBoxSystemEventPresenter expanz_ui_AlertBoxSystemEventPresenter;
+@compatibility_alias AlertBoxSystemEventReporter expanz_ui_AlertBoxSystemEventReporter;

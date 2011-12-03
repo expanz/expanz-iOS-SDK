@@ -14,7 +14,7 @@
 #import "expanz_service_XmlPostLoginClient.h"
 #import "expanz_service_XmlPostSessionDataClient.h"
 #import "expanz_service_XmlPostActivityClient.h"
-#import "expanz_ui_AlertBoxSystemEventPresenter.h"
+#import "../UserInterface/expanz_ui_AlertBoxSystemEventReporter.h"
 
 #import "expanz_iOS_SDKConfiguration.h"
 #import "expanz_ui_ActivityManager.h"
@@ -48,7 +48,7 @@
         return (id) client;
     }    toProtocol:@protocol(expanz_service_ActivityClient)];
     /* ================================================================================================================== */
-    [self bindClass:[AlertBoxSystemEventPresenter class] toProtocol:@protocol(expanz_ui_SystemEventPresenter)];
+    [self bindClass:[AlertBoxSystemEventReporter class] toProtocol:@protocol(expanz_ui_SystemEventReporter)];
 
 }
 

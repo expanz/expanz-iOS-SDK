@@ -9,10 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "TestLoginClientDelegate.h"
+#import "StubLoginClientDelegate.h"
 #import "expanz_model_SessionContext.h"
 
-@implementation TestLoginClientDelegate
+@implementation StubLoginClientDelegate
 
 @synthesize sessionContext = _sessionContext, error = _error;
 

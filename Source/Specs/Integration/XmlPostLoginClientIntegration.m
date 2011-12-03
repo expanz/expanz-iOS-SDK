@@ -15,7 +15,7 @@
 #import "expanz_service_SessionRequest.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "expanz_iOS_SDKModule.h"
-#import "TestLoginClientDelegate.h"
+#import "../Utils/StubLoginClientDelegate.h"
 #import "IntegrationUtils.h"
 
 
@@ -25,12 +25,12 @@ SPEC_BEGIN(XmlPostLoginClientIntegration)
 describe(@"Authenticating with the site manager.", ^{
     
     __block XmlPostLoginClient* loginClient; 
-    __block TestLoginClientDelegate* loginDelegate; 
+    __block StubLoginClientDelegate* loginDelegate;
     
     beforeEach(^{
         JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
-        loginDelegate = [[TestLoginClientDelegate alloc] init];    
+        loginDelegate = [[StubLoginClientDelegate alloc] init];
     });
           
     it(@"should return a SessionContext, containing a valid session token, within 5 seconds", ^{
