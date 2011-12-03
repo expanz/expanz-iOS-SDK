@@ -31,6 +31,10 @@
 @implementation expanz_ui_ActivityManager
 
 objection_register_singleton(expanz_ui_ActivityManager)
+objection_requires(@"reporter")
+
+@synthesize reporter = _reporter;
+
 
 - (BOOL)transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity {
 
@@ -44,10 +48,7 @@ objection_register_singleton(expanz_ui_ActivityManager)
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
     if (clazz == nil) {
         NSString* errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
-        UIAlertView* alert = [[UIAlertView alloc]
-            initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        [alert release];
+        [_reporter reportErrorWithReason:errorMessage];
         return NO;
     }
     else {
@@ -70,12 +71,10 @@ objection_register_singleton(expanz_ui_ActivityManager)
     else {
         nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.name, activityDefinition.style.name];
     }
-    LogDebug(@"Nib name: %@", nibName);
     return nibName;
 }
 
 - (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition {
-    //TODO: Look up view controller from formmapping.xml
     NSMutableString* controllerClassName = [NSMutableString stringWithString:
         [activityDefinition.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
     if (![activityDefinition.style isDefault]) {
@@ -83,6 +82,12 @@ objection_register_singleton(expanz_ui_ActivityManager)
     }
     [controllerClassName appendString:@"_ViewController"];
     return controllerClassName;
+}
+
+/* ================================================== Utility Methods =============================================== */
+- (void) dealloc {
+    [_reporter release];
+    [super dealloc];
 }
 
 

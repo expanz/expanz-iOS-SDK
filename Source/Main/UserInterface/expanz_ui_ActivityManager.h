@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Objection-iOS/Objection.h>
+#import "expanz_ui_SystemEventPresenter.h"
 
 @class expanz_model_ActivityDefinition;
 
@@ -19,6 +20,8 @@
 * Responsible for initiating server-side activities and transferring to the activity view.
 */
 @interface expanz_ui_ActivityManager : NSObject
+
+@property (nonatomic, retain) id<expanz_ui_SystemEventPresenter> reporter;
 
 - (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
 

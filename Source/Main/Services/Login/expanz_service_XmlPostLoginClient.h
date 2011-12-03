@@ -16,7 +16,8 @@
 #import "expanz_service_LoginClient.h"
 
 
-@interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>@end
+@interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>
+@end
 
 /* ================================================================================================================== */
 @compatibility_alias XmlPostLoginClient expanz_service_XmlPostLoginClient;

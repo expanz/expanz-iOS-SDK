@@ -12,8 +12,11 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_SessionDataClient.h"
 #import "expanz_service_SessionDataClientDelegate.h"
+#import "expanz_ui_SystemEventPresenter.h"
+
 @class expanz_model_Menu;
 @class expanz_ui_ActivityManager;
+
 
 @interface expanz_ui_ActivityMenuViewController : UIViewController<expanz_service_SessionDataClientDelegate> {
 

@@ -740,6 +740,14 @@
 		6BFACBA414679916007C72C7 /* expanz_service_SessionDataClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
 		6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
 		6BFACBA414679916007C72CA /* expanz_service_LoginClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
+		6BFACBA414679916007C72CC /* expanz_ui_SystemEventPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CB /* expanz_ui_SystemEventPresenter.h */; };
+		6BFACBA414679916007C72CD /* expanz_ui_SystemEventPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CB /* expanz_ui_SystemEventPresenter.h */; };
+		6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */; };
+		6BFACBA414679916007C72D0 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */; };
+		6BFACBA414679916007C72D1 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */; };
+		6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */; };
+		6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventPresenter.h */; };
+		6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventPresenter.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1151,6 +1159,9 @@
 		6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClientDelegate.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72CB /* expanz_ui_SystemEventPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventPresenter.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AlertBoxSystemEventPresenter.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventPresenter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1681,6 +1692,9 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventPresenter.h */,
+				6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventPresenter.m */,
+				6BFACBA414679916007C72CB /* expanz_ui_SystemEventPresenter.h */,
 				6BD47C8D1484703F000ECE52 /* Categories */,
 				6BD47C901484703F000ECE52 /* Components */,
 				6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */,
@@ -2019,6 +2033,8 @@
 				6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */,
+				6BFACBA414679916007C72CC /* expanz_ui_SystemEventPresenter.h in Headers */,
+				6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventPresenter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2121,6 +2137,8 @@
 				6BFACBA414679916007C72C4 /* expanz_service_ActivityClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C7 /* expanz_service_SessionDataClientDelegate.h in Headers */,
 				6BFACBA414679916007C72CA /* expanz_service_LoginClientDelegate.h in Headers */,
+				6BFACBA414679916007C72CD /* expanz_ui_SystemEventPresenter.h in Headers */,
+				6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventPresenter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2412,6 +2430,7 @@
 				6BFACBA414679916007C72A1 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72A9 /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
+				6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2504,6 +2523,7 @@
 				6BFACBA414679916007C72A4 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AC /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */,
+				6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2593,6 +2613,7 @@
 				6BFACBA414679916007C72A2 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AA /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B8 /* expanz_model_DataBuilder.m in Sources */,
+				6BFACBA414679916007C72D0 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2725,6 +2746,7 @@
 				6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */,
 				6BFACBA414679916007C72B5 /* FileSpec.m in Sources */,
 				6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */,
+				6BFACBA414679916007C72D1 /* expanz_ui_AlertBoxSystemEventPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
