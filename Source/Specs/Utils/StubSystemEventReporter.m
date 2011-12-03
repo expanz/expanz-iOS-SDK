@@ -11,8 +11,15 @@
 #import "StubSystemEventReporter.h"
 
 
-@implementation StubSystemEventReporter {
+@implementation StubSystemEventReporter
 
+@synthesize message = _message;
+
+/* ================================================== Utility Methods =============================================== */
+- (void)dealloc {
+    [_message release];
+    [super dealloc];
 }
 
 @end
+

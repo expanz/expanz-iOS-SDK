@@ -581,7 +581,7 @@
 		6BD47E4714847065000ECE52 /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E3614847065000ECE52 /* Sales.Customer.Browse.xib */; };
 		6BD47E4914847065000ECE52 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E3714847065000ECE52 /* Sales.Customer.xib */; };
 		6BD47E4B14847065000ECE52 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47E3914847065000ECE52 /* Sales_Customer_ViewController.m */; };
-		6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixtureView.xib */; };
+		6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixture.xib */; };
 		6BD5430F14734FBD0014F148 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; };
 		6BD5431014734FBD0014F148 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; };
 		6BD5431114734FBD0014F148 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C61458EBB5001AF204 /* ASIDataDecompressor.m */; };
@@ -686,7 +686,7 @@
 		6BFACBA414679916007C7275 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7276 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7278 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C727A /* TestFixtureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixtureViewController.m */; };
+		6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixture_ViewController.m */; };
 		6BFACBA414679916007C727D /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727C /* TestResource.m */; };
 		6BFACBA414679916007C7280 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7281 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -1127,7 +1127,7 @@
 		6BD47E3714847065000ECE52 /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
 		6BD47E3814847065000ECE52 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
 		6BD47E3914847065000ECE52 /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
-		6BD47E5D14848839000ECE52 /* TestFixtureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixtureView.xib; sourceTree = "<group>"; };
+		6BD47E5D14848839000ECE52 /* TestFixture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixture.xib; sourceTree = "<group>"; };
 		6BDEA53A147D051500844BE9 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = /usr/lib/libprofile_rt.dylib; sourceTree = "<absolute>"; };
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
@@ -1136,8 +1136,8 @@
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C7279 /* TestFixtureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixtureViewController.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C727B /* TestFixtureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixtureViewController.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7279 /* TestFixture_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixture_ViewController.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C727B /* TestFixture_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixture_ViewController.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C727C /* TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestResource.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C727E /* TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResource.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityStyle.m; sourceTree = "<group>"; };
@@ -1857,14 +1857,14 @@
 			isa = PBXGroup;
 			children = (
 				6BFACBA414679916007C72BE /* ActivityManagerSpec.m */,
-				6BFACBA414679916007C727B /* TestFixtureViewController.h */,
-				6BFACBA414679916007C7279 /* TestFixtureViewController.m */,
+				6BFACBA414679916007C727B /* TestFixture_ViewController.h */,
+				6BFACBA414679916007C7279 /* TestFixture_ViewController.m */,
 				6BD47DEA1484705A000ECE52 /* ActivityInstanceViewControllerSpec.m */,
 				6BD47DEB1484705A000ECE52 /* Categories */,
 				6BD47DED1484705A000ECE52 /* Components */,
 				6BD47DF01484705A000ECE52 /* LoginViewControllerSpec.m */,
 				6BD47DF11484705A000ECE52 /* ModelAdapterSpec.m */,
-				6BD47E5D14848839000ECE52 /* TestFixtureView.xib */,
+				6BD47E5D14848839000ECE52 /* TestFixture.xib */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -2308,7 +2308,7 @@
 				6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BD47E041484705A000ECE52 /* SessionData.xml in Resources */,
 				6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */,
+				6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */,
 				6B77EE46148784AF00B80D1F /* MainWindow.xib in Resources */,
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
 				6BFACBA414679916007C72BF /* ActivityManagerSpec.m in Resources */,
@@ -2739,7 +2739,7 @@
 				6BD47E2B1484705A000ECE52 /* StubLoginClientDelegate.m in Sources */,
 				6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7273 /* (null) in Sources */,
-				6BFACBA414679916007C727A /* TestFixtureViewController.m in Sources */,
+				6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */,
 				6BFACBA414679916007C727D /* TestResource.m in Sources */,
 				6BFACBA414679916007C7282 /* (null) in Sources */,
 				6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */,

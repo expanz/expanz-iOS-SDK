@@ -12,6 +12,7 @@
 
 #import "SpecHelper.h"
 #import "expanz_ui_ActivityManager.h"
+#import "StubSystemEventReporter.h"
 
 
 SPEC_BEGIN(ActivityManagerSpec)
@@ -22,6 +23,8 @@ SPEC_BEGIN(ActivityManagerSpec)
         
         beforeEach(^{
             activityManager = [[[ActivityManager alloc] init] autorelease];
+            StubSystemEventReporter* reporter = [[[StubSystemEventReporter alloc] init] autorelease];
+            activityManager.reporter = reporter; 
         });
         
         it(@"", ^{

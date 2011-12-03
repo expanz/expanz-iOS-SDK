@@ -17,18 +17,18 @@
 #import "expanz_model_GridData.h"
 #import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
-#import "TestFixtureViewController.h"
+#import "TestFixture_ViewController.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
 
-    __block TestFixtureViewController* viewController;
+    __block TestFixture_ViewController* viewController;
     __block ModelAdapter* modelAdapter;
 
     beforeEach(^{
         ActivityDefinition* activity =
             [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
-        viewController = [[[TestFixtureViewController alloc]
+        viewController = [[[TestFixture_ViewController alloc]
             initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil] autorelease];
         assertThat(viewController, notNilValue());
         assertThat(viewController.view, notNilValue());

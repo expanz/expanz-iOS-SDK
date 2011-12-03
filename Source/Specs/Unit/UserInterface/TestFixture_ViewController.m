@@ -8,10 +8,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "TestFixtureViewController.h"
+#import "TestFixture_ViewController.h"
 
 
-@implementation TestFixtureViewController
+@implementation TestFixture_ViewController
 
 @synthesize ResultLabel = _ResultLabel;
 @synthesize Op1Label = _Op1Label;

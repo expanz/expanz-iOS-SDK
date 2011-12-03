@@ -12,7 +12,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 
 
-@interface TestFixtureViewController : expanz_ui_ActivityInstanceViewController
+@interface TestFixture_ViewController : expanz_ui_ActivityInstanceViewController
 
 
 

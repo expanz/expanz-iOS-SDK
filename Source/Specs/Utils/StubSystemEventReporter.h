@@ -10,8 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "../../Main/UserInterface/expanz_ui_SystemEventReporter.h"
+#import "expanz_ui_SystemEventReporter.h"
 
 
 @interface StubSystemEventReporter : NSObject
+
+@property (nonatomic, retain) NSString* message;
+
 @end
