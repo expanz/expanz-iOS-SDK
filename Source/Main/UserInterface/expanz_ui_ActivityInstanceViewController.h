@@ -36,7 +36,6 @@
 @property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
 
 
 /**

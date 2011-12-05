@@ -751,6 +751,13 @@
 		6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */; };
 		6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */; };
 		6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */; };
+		6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
+		6BFACBA414679916007C72E2 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
+		6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
+		6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
+		6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
+		6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
+		6BFACBA414679916007C72EA /* expanz_ui_DataRenderer.h in Headers */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1170,6 +1177,8 @@
 		6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CedarApplicationDelegate+Expanz.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CedarApplicationDelegate+Expanz.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBoxSystemEventReporterSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1700,6 +1709,8 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */,
+				6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */,
 				6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */,
 				6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */,
 				6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */,
@@ -2048,6 +2059,7 @@
 				6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */,
 				6BFACBA414679916007C72CC /* expanz_ui_SystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
+				6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2152,6 +2164,8 @@
 				6BFACBA414679916007C72CA /* expanz_service_LoginClientDelegate.h in Headers */,
 				6BFACBA414679916007C72CD /* expanz_ui_SystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
+				6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */,
+				6BFACBA414679916007C72EA /* expanz_ui_DataRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2443,6 +2457,7 @@
 				6BFACBA414679916007C72A9 /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2536,6 +2551,7 @@
 				6BFACBA414679916007C72AC /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2626,6 +2642,7 @@
 				6BFACBA414679916007C72AA /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B8 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6BFACBA414679916007C72E2 /* expanz_ui_GridDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2763,6 +2780,7 @@
 				6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */,
 				6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */,
 				6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */,
+				6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

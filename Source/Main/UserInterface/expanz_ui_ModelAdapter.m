@@ -14,11 +14,11 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "MARTNSObject.h"
-#import "../Model/expanz_model_GridData.h"
-#import "expanz_model_BaseCell.h"
-#import "expanz_model_ImageCell.h"
+#import "expanz_model_GridData.h"
 #import "ASIHTTPRequest.h"
 #import "RTProperty.h"
+#import "expanz_ui_GridDataRenderer.h"
+#import "expanz_model_ActivityDefinition.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -39,18 +39,21 @@
 @implementation expanz_ui_ModelAdapter
 
 
+@synthesize activityName = _activityName;
 @synthesize activityInstance = _activityInstance;
 
 /* ================================================== Constructors ================================================== */
 - (id)initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
+        _activityName = [viewController.activityDefinition.name copy];
         _activityInstance = viewController.activityInstance;
         _propertyNames = [[NSMutableArray alloc] init];
         _textFieldMappings = [[NSMutableDictionary alloc] init];
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
+        _dataRendererMappings = [[NSMutableDictionary alloc] init];
         _imageButtonMappings = [[NSMutableDictionary alloc] init];
 
         [self cachePropertyNamesForController:viewController];
@@ -84,15 +87,23 @@
 
 }
 
-
 - (UITableView*)dataViewControlFor:(expanz_model_GridData*)dataSet {
     return [_dataSetMappings objectForKey:dataSet.dataId];
 }
 
-- (expanz_model_BaseData*)dataSetFor:(UITableView*)dataControl {
-    NSArray* keys = [_dataSetMappings allKeysForObject:dataControl];
+- (expanz_model_BaseData*)dataSetFor:(UITableView*)tableView {
+    NSArray* keys = [_dataSetMappings allKeysForObject:tableView];
     return [_activityInstance dataWithId:[keys objectAtIndex:0]];
 }
+
+- (id <UITableViewDataSource>)dataSourceFor:(UITableView*)tableView {
+    return [_dataRendererMappings objectForKey:[NSValue valueWithPointer:tableView]];
+}
+
+- (id <UITableViewDelegate>)delegateFor:(UITableView*)tableView {
+    return [_dataRendererMappings objectForKey:[NSValue valueWithPointer:tableView]];
+}
+
 
 - (UIImageView*)imageViewFor:(UIButton*)editButton {
     return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:editButton]];
@@ -150,28 +161,22 @@
     }
 }
 
-- (void)startObserving:(expanz_model_ImageCell*)cell {
-    [cell addObserver:self forKeyPath:@"image" options:0 context:nil];
-}
+
 
 
 /* ================================================== Utility Methods =============================================== */
 #pragma mark Utility Methods
 
 - (void)dealloc {
+    [_activityName release];
     [_propertyNames release];
     [_textFieldMappings release];
     [_imageFieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
+    [_dataRendererMappings release];
     [_imageButtonMappings release];
     [super dealloc];
-}
-
-- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
-                       context:(void*)context {
-
-    [self updateDataGridsWithModelValues];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -242,6 +247,12 @@
                 id <UITableViewDelegate, UITableViewDataSource> delegate = controller;
                 [tableView setDelegate:delegate];
                 [tableView setDataSource:delegate];
+
+                GridData* data = (GridData*) [self dataSetFor:tableView];
+                GridDataRenderer* dataRenderer =
+                    [[GridDataRenderer alloc] initWithGridData:data tableView:tableView activityName:_activityName];
+                [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
+                [dataRenderer release];
             }
         }
     }

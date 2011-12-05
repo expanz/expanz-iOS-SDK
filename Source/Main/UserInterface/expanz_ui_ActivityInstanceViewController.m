@@ -27,7 +27,6 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
-#import "expanz_ui_components_ThumbnailTableCell.h"
 #import "expanz_ui_ActivityManager.h"
 
 
@@ -37,7 +36,6 @@
 @synthesize activityInstance = _activityInstance;
 @synthesize modelAdapter = _modelAdapter;
 @synthesize spinner = _spinner;
-@synthesize tableCell;
 
 
 /* ================================================== Constructors ================================================== */
@@ -183,55 +181,26 @@
 #pragma mark UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
-    return [dataSet.rows count];
+    id<UITableViewDataSource> dataSource = [_modelAdapter dataSourceFor:tableView];
+    return [dataSource tableView:tableView numberOfRowsInSection:section];
 }
 
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
-    NSString* reuseId = [dataSet dataId];
-
-    ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-    if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"TableCell2" owner:self options:nil];
-        cell = self.tableCell;
-        self.tableCell = nil;
-    }
-
-    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-    TextCell* nameCell = (TextCell*) [row cellWithId:@"2"];
-    TextCell* phoneCell = (TextCell*) [row cellWithId:@"4"];
-    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"1"];
-    if (imageCell.hasAskedImageToLoad == NO) {
-        [imageCell loadImage];
-    }
-    [_modelAdapter startObserving:imageCell];
-
-    cell.mainLabel.text = nameCell.text;
-    cell.subLabel.text = phoneCell.text;
-    cell.thumbnail.image = imageCell.image;
-    cell.backgroundView.backgroundColor =
-        (indexPath.row % 2) ? [UIColor colorWithRed:0.942 green:0.942 blue:0.942 alpha:1] :
-            [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
-
-    return cell;
-}
-
-- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    GridData* dataSet = [_modelAdapter dataSetFor:tableView];
-    Row* row = [dataSet.rows objectAtIndex:indexPath.row];
-
-    ActivityDefinition* edit = [[ActivityDefinition alloc]
-        initWithName:_activityDefinition.name title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
+    id<UITableViewDataSource> dataSource = [_modelAdapter dataSourceFor:tableView];
+    return [dataSource tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return 75;
+    id<UITableViewDelegate> delegate = [_modelAdapter delegateFor:tableView];
+    return [delegate tableView:tableView heightForRowAtIndexPath:indexPath];
 }
+
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+    id<UITableViewDelegate> delegate = [_modelAdapter delegateFor:tableView];
+    [delegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
 
 /* ================================================================================================================== */
 #pragma mark Image Picker Delegate 

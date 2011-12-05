@@ -17,6 +17,7 @@
 @class expanz_model_GridData;
 @class expanz_model_BaseCell;
 @class expanz_model_ImageCell;
+@class expanz_model_BaseData;
 
 @interface expanz_ui_ModelAdapter : NSObject {
 
@@ -26,10 +27,12 @@
     NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
+    NSMutableDictionary* _dataRendererMappings;
     NSMutableDictionary* _imageButtonMappings;
 
 }
 
+@property(nonatomic, readonly) NSString* activityName;
 @property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
 
 /**
@@ -55,9 +58,19 @@
 - (UITableView*) dataViewControlFor:(expanz_model_GridData*)dataSet;
 
 /**
-* Returns the `expanz_model_DataSet` object backing the UITableView component.
+* Returns the `expanz_model_BaseData` object backing the UITableView component.
 */
-- (expanz_model_GridData*) dataSetFor:(UITableView*)dataControl;
+- (expanz_model_BaseData*) dataSetFor:(UITableView*)tableView;
+
+/**
+* Returns the data renderer for the UITableView control.
+*/
+- (id <UITableViewDataSource>) dataSourceFor:(UITableView*)tableView;
+
+/**
+* Returns the data renderer for the UITableView control.
+*/
+- (id <UITableViewDelegate>) delegateFor:(UITableView*)tableView;
 
 /**
 * Returns the UIImageView underneath the touch area that allows editing the image.
@@ -91,10 +104,6 @@
 */
 - (void) updateDataGridsWithModelValues;
 
-/**
-* Prepares to update a data grid's image cell with an image, when it becomes available.
-*/
-- (void) startObserving:(expanz_model_ImageCell*)cell;
 
 
 @end
