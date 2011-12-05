@@ -177,34 +177,6 @@
     return [self textFieldShouldEndEditing:textField];
 }
 
-
-/* ================================================================================================================== */
-#pragma mark UITableViewDelegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
-    return [[_modelAdapter dataSourceFor:tableView] numberOfSectionsInTableView:tableView];
-}
-
-- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView titleForHeaderInSection:section];
-}
-
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView numberOfRowsInSection:section];
-}
-
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView cellForRowAtIndexPath:indexPath];
-}
-
-- (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return [[_modelAdapter delegateFor:tableView] tableView:tableView heightForRowAtIndexPath:indexPath];
-}
-
-- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    [[_modelAdapter delegateFor:tableView] tableView:tableView didSelectRowAtIndexPath:indexPath];
-}
-
 /* ================================================================================================================== */
 #pragma mark Image Picker Delegate 
 

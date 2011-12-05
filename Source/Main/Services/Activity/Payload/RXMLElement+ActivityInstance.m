@@ -99,7 +99,7 @@
 
 /* ================================================================================================================== */
 #pragma mark DataSet and DataSet child elements.
-- (BaseData*)asData {
+- (AbstractData*)asData {
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
     }

@@ -8,10 +8,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "expanz_model_BaseData.h"
+#import "expanz_model_AbstractData.h"
+#import "expanz_ui_AbstractDataRenderer.h"
 
 
-@implementation expanz_model_BaseData
+@implementation expanz_model_AbstractData
 
 @synthesize dataId = _dataId;
 
@@ -25,10 +26,15 @@
     return self;
 }
 
-
+/* ================================================ Interface Methods =============================================== */
+- (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
+    @throw ([NSException
+        exceptionWithName:NSInternalInconsistencyException reason:@"This class should not be instantiated directly."
+                 userInfo:nil]);
+}
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
+- (void)dealloc {
     [_dataId release];
     [super dealloc];
 }

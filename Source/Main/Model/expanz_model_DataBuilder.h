@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-@class expanz_model_BaseData;
+@class expanz_model_AbstractData;
 @class expanz_model_Row;
 @class expanz_model_Column;
 @class expanz_model_Folder;
@@ -22,7 +22,7 @@
 @interface expanz_model_DataBuilder : NSObject {
 
 @private
-    expanz_model_BaseData* _data;
+    expanz_model_AbstractData* _data;
 }
 
 @property (nonatomic, readonly) NSString* dataId;
@@ -30,7 +30,7 @@
 
 - (id) initWithDataId:(NSString*)dataId source:(NSString*)source;
 
-- (expanz_model_BaseData*) build;
+- (expanz_model_AbstractData*) build;
 
 - (void) addRow:(expanz_model_Row*)row;
 

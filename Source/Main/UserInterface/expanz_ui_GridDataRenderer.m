@@ -21,33 +21,20 @@
 
 @implementation expanz_ui_GridDataRenderer
 
-@synthesize gridData = _gridData;
-@synthesize tableView = _tableView;
-@synthesize activityName = _activityName;
 @synthesize tableCell = _tableCell;
 
 /* ================================================== Constructors ================================================== */
-- (id)initWithGridData:(GridData*)gridData tableView:(UITableView*)tableView activityName:(NSString*)activityName {
-    self = [super init];
+- (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
+      activityName:(NSString*)activityName {
+
+    self = [super initWithData:data tableView:tableView activityName:activityName];
     if (self) {
-        _gridData = gridData;
-        _tableView = tableView;
-        _activityName = [activityName copy];
-        _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
+        _gridData = (GridData*) self.data;
     }
     return self;
 }
 
 /* ================================================= Protocol Methods =============================================== */
-- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
-    return nil;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
-    return 1;
-}
-
-
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return [_gridData.rows count];
 }
@@ -87,8 +74,8 @@
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
 
     ActivityDefinition* edit =
-        [[ActivityDefinition alloc] initWithName:_activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
+        [[ActivityDefinition alloc] initWithName:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
+    if ([self.activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
@@ -100,13 +87,12 @@
 /* ================================================ Interface Methods =============================================== */
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
                        context:(void*)context {
-    [_tableView reloadData];
-    [_tableView setNeedsLayout];
+    [self.tableView reloadData];
+    [self.tableView setNeedsLayout];
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (void)dealloc {
-    [_activityName release];
     [super dealloc];
 }
 

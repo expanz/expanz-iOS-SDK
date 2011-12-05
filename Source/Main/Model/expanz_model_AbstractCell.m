@@ -10,13 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_BaseCell.h"
+#import "expanz_model_AbstractCell.h"
 
 
-@implementation expanz_model_BaseCell
+@implementation expanz_model_AbstractCell
 
 @synthesize cellId = _cellId;
 
+/* ================================================== Constructors ================================================== */
 - (id) initWithCellId:(NSString*)cellId {
     self = [super init];
     if (self) {

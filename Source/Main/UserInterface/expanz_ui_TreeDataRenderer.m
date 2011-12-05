@@ -8,34 +8,28 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Objection-iOS/JSObjectFactory.h>
-#import <Objection-iOS/JSObjection.h>
+
 #import "expanz_model_TreeData.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
 #import "expanz_ui_TreeDataRenderer.h"
-#import "expanz_ui_ActivityManager.h"
 #import "expanz_ui_components_TreeDataTableCell.h"
 
 @implementation expanz_ui_TreeDataRenderer
 
-@synthesize treeData = _treeData;
-@synthesize tableView = _tableView;
-@synthesize activityName = _activityName;
 @synthesize tableCell = _tableCell;
 
 /* ================================================== Constructors ================================================== */
-- (id)initWithTreeData:(expanz_model_TreeData*)gridData tableView:(UITableView*)tableView
-          activityName:(NSString*)activityName {
-    self = [super init];
+- (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
+      activityName:(NSString*)activityName {
+
+    self = [super initWithData:data tableView:tableView activityName:activityName];
     if (self) {
-        _treeData = gridData;
-        _tableView = tableView;
-        _activityName = [activityName copy];
-        _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
+        _treeData = (TreeData*) self.data;
     }
     return self;
 }
+
 
 /* ================================================= Protocol Methods =============================================== */
 - (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
@@ -93,10 +87,8 @@
 }
 
 
-
 /* ================================================== Utility Methods =============================================== */
 - (void)dealloc {
-    [_activityName release];
     [super dealloc];
 }
 

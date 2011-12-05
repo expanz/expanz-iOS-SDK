@@ -11,7 +11,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_BaseData.h"
+#import "expanz_model_AbstractData.h"
 
 @class expanz_model_Column;
 @class expanz_model_Row;
@@ -20,7 +20,7 @@
 /**
 * Repeating data arranged as columns and rows.
 */
-@interface expanz_model_GridData : expanz_model_BaseData {
+@interface expanz_model_GridData : expanz_model_AbstractData {
 
 @private
     NSMutableArray* _columns;

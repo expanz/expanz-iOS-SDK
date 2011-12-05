@@ -86,7 +86,7 @@
 		6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
 		6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */; };
 		6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */; };
-		6BB7F58914852807007F2E99 /* expanz_model_BaseCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */; };
+		6BB7F58914852807007F2E99 /* expanz_model_AbstractCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */; };
 		6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
 		6BB7F58B14852807007F2E99 /* expanz_model_GridData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4D1484703F000ECE52 /* expanz_model_GridData.h */; };
 		6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4F1484703F000ECE52 /* expanz_model_Field.h */; };
@@ -315,12 +315,12 @@
 		6BD47CD11484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C481484703F000ECE52 /* expanz_model_ActivityInstance.m */; };
 		6BD47CD21484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C481484703F000ECE52 /* expanz_model_ActivityInstance.m */; };
 		6BD47CD31484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C481484703F000ECE52 /* expanz_model_ActivityInstance.m */; };
-		6BD47CD41484703F000ECE52 /* expanz_model_BaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */; };
-		6BD47CD51484703F000ECE52 /* expanz_model_BaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */; };
-		6BD47CD61484703F000ECE52 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */; };
-		6BD47CD71484703F000ECE52 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */; };
-		6BD47CD81484703F000ECE52 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */; };
-		6BD47CD91484703F000ECE52 /* expanz_model_BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */; };
+		6BD47CD41484703F000ECE52 /* expanz_model_AbstractCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */; };
+		6BD47CD51484703F000ECE52 /* expanz_model_AbstractCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */; };
+		6BD47CD61484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */; };
+		6BD47CD71484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */; };
+		6BD47CD81484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */; };
+		6BD47CD91484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */; };
 		6BD47CDA1484703F000ECE52 /* expanz_model_Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
 		6BD47CDB1484703F000ECE52 /* expanz_model_Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
 		6BD47CDC1484703F000ECE52 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C4C1484703F000ECE52 /* expanz_model_Column.m */; };
@@ -699,12 +699,12 @@
 		6BFACBA414679916007C728C /* expanz_model_ActivityStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
 		6BFACBA414679916007C728D /* expanz_model_ActivityStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
 		6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */; };
-		6BFACBA414679916007C7291 /* expanz_model_BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_BaseData.m */; };
-		6BFACBA414679916007C7292 /* expanz_model_BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_BaseData.m */; };
-		6BFACBA414679916007C7293 /* expanz_model_BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_BaseData.m */; };
-		6BFACBA414679916007C7294 /* expanz_model_BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_BaseData.m */; };
-		6BFACBA414679916007C7296 /* expanz_model_BaseData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_BaseData.h */; };
-		6BFACBA414679916007C7297 /* expanz_model_BaseData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_BaseData.h */; };
+		6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
+		6BFACBA414679916007C7292 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
+		6BFACBA414679916007C7293 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
+		6BFACBA414679916007C7294 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
+		6BFACBA414679916007C7296 /* expanz_model_AbstractData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */; };
+		6BFACBA414679916007C7297 /* expanz_model_AbstractData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */; };
 		6BFACBA414679916007C7299 /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7298 /* expanz_model_TreeData.m */; };
 		6BFACBA414679916007C729A /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7298 /* expanz_model_TreeData.m */; };
 		6BFACBA414679916007C729B /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7298 /* expanz_model_TreeData.m */; };
@@ -774,6 +774,17 @@
 		6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
 		6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
 		6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
+		6BFACBA414679916007C7303 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7304 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7305 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7308 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
+		6BFACBA414679916007C730B /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
+		6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
+		6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
+		6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
+		6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
+		6BFACBA414679916007C7312 /* expanz_ui_DataRendererFactory.h in Headers */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -809,7 +820,7 @@
 				6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */,
 				6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */,
 				6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */,
-				6BB7F58914852807007F2E99 /* expanz_model_BaseCell.h in Copy Headers */,
+				6BB7F58914852807007F2E99 /* expanz_model_AbstractCell.h in Copy Headers */,
 				6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */,
 				6BB7F58B14852807007F2E99 /* expanz_model_GridData.h in Copy Headers */,
 				6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */,
@@ -1014,8 +1025,8 @@
 		6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityDefinition.m; sourceTree = "<group>"; };
 		6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityInstance.h; sourceTree = "<group>"; };
 		6BD47C481484703F000ECE52 /* expanz_model_ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityInstance.m; sourceTree = "<group>"; };
-		6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_BaseCell.h; sourceTree = "<group>"; };
-		6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_BaseCell.m; sourceTree = "<group>"; };
+		6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractCell.h; sourceTree = "<group>"; };
+		6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractCell.m; sourceTree = "<group>"; };
 		6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Column.h; sourceTree = "<group>"; };
 		6BD47C4C1484703F000ECE52 /* expanz_model_Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Column.m; sourceTree = "<group>"; };
 		6BD47C4D1484703F000ECE52 /* expanz_model_GridData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_GridData.h; sourceTree = "<group>"; };
@@ -1168,8 +1179,8 @@
 		6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityStyle.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityStyle.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml; sourceTree = "<group>"; };
-		6BFACBA414679916007C7290 /* expanz_model_BaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_BaseData.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C7295 /* expanz_model_BaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_BaseData.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7298 /* expanz_model_TreeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TreeData.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C729D /* expanz_model_TreeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TreeData.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72A0 /* expanz_model_Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Folder.m; sourceTree = "<group>"; };
@@ -1199,6 +1210,8 @@
 		6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TreeDataTableCell.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TreeDataTableCell.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1601,8 +1614,8 @@
 				6BFACBA414679916007C72A5 /* expanz_model_Folder.h */,
 				6BFACBA414679916007C729D /* expanz_model_TreeData.h */,
 				6BFACBA414679916007C7298 /* expanz_model_TreeData.m */,
-				6BFACBA414679916007C7295 /* expanz_model_BaseData.h */,
-				6BFACBA414679916007C7290 /* expanz_model_BaseData.m */,
+				6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */,
+				6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */,
 				6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */,
 				6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */,
 				6BFACBA414679916007C726B /* ExpanzDataType.m */,
@@ -1610,8 +1623,8 @@
 				6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */,
 				6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */,
 				6BD47C481484703F000ECE52 /* expanz_model_ActivityInstance.m */,
-				6BD47C491484703F000ECE52 /* expanz_model_BaseCell.h */,
-				6BD47C4A1484703F000ECE52 /* expanz_model_BaseCell.m */,
+				6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */,
+				6BD47C4A1484703F000ECE52 /* expanz_model_AbstractCell.m */,
 				6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */,
 				6BD47C4C1484703F000ECE52 /* expanz_model_Column.m */,
 				6BD47C4D1484703F000ECE52 /* expanz_model_GridData.h */,
@@ -1729,6 +1742,8 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */,
+				6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */,
 				6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */,
 				6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */,
 				6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */,
@@ -2031,7 +2046,7 @@
 				6BD47CC21484703F000ECE52 /* expanz_iOS_SDKModule.h in Headers */,
 				6BD47CC81484703F000ECE52 /* expanz_model_ActivityDefinition.h in Headers */,
 				6BD47CCE1484703F000ECE52 /* expanz_model_ActivityInstance.h in Headers */,
-				6BD47CD41484703F000ECE52 /* expanz_model_BaseCell.h in Headers */,
+				6BD47CD41484703F000ECE52 /* expanz_model_AbstractCell.h in Headers */,
 				6BD47CDA1484703F000ECE52 /* expanz_model_Column.h in Headers */,
 				6BD47CE01484703F000ECE52 /* expanz_model_GridData.h in Headers */,
 				6BD47CE61484703F000ECE52 /* expanz_model_Field.h in Headers */,
@@ -2072,7 +2087,7 @@
 				6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */,
 				6BFACBA414679916007C7285 /* (null) in Headers */,
 				6BFACBA414679916007C728C /* expanz_model_ActivityStyle.h in Headers */,
-				6BFACBA414679916007C7296 /* expanz_model_BaseData.h in Headers */,
+				6BFACBA414679916007C7296 /* expanz_model_AbstractData.h in Headers */,
 				6BFACBA414679916007C729E /* expanz_model_TreeData.h in Headers */,
 				6BFACBA414679916007C72A6 /* expanz_model_Folder.h in Headers */,
 				6BFACBA414679916007C72AE /* expanz_model_File.h in Headers */,
@@ -2087,6 +2102,9 @@
 				6BFACBA414679916007C72F1 /* expanz_ui_DataRenderer.h in Headers */,
 				6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */,
 				6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
+				6BFACBA414679916007C7308 /* expanz_ui_AbstractDataRenderer.h in Headers */,
+				6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */,
+				6BFACBA414679916007C7312 /* expanz_ui_DataRendererFactory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2140,7 +2158,7 @@
 				6BD47CC31484703F000ECE52 /* expanz_iOS_SDKModule.h in Headers */,
 				6BD47CC91484703F000ECE52 /* expanz_model_ActivityDefinition.h in Headers */,
 				6BD47CCF1484703F000ECE52 /* expanz_model_ActivityInstance.h in Headers */,
-				6BD47CD51484703F000ECE52 /* expanz_model_BaseCell.h in Headers */,
+				6BD47CD51484703F000ECE52 /* expanz_model_AbstractCell.h in Headers */,
 				6BD47CDB1484703F000ECE52 /* expanz_model_Column.h in Headers */,
 				6BD47CE11484703F000ECE52 /* expanz_model_GridData.h in Headers */,
 				6BD47CE71484703F000ECE52 /* expanz_model_Field.h in Headers */,
@@ -2181,7 +2199,7 @@
 				6BD47DB51484703F000ECE52 /* CAFilter+Unlock.h in Headers */,
 				6BD47DB71484703F000ECE52 /* xml_Serializable.h in Headers */,
 				6BFACBA414679916007C728D /* expanz_model_ActivityStyle.h in Headers */,
-				6BFACBA414679916007C7297 /* expanz_model_BaseData.h in Headers */,
+				6BFACBA414679916007C7297 /* expanz_model_AbstractData.h in Headers */,
 				6BFACBA414679916007C729F /* expanz_model_TreeData.h in Headers */,
 				6BFACBA414679916007C72A7 /* expanz_model_Folder.h in Headers */,
 				6BFACBA414679916007C72AF /* expanz_model_File.h in Headers */,
@@ -2195,6 +2213,7 @@
 				6BFACBA414679916007C72EA /* expanz_ui_DataRenderer.h in Headers */,
 				6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */,
 				6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
+				6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2442,7 +2461,7 @@
 				6BD47CC41484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
 				6BD47CCA1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD01484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
-				6BD47CD61484703F000ECE52 /* expanz_model_BaseCell.m in Sources */,
+				6BD47CD61484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */,
 				6BD47CDC1484703F000ECE52 /* expanz_model_Column.m in Sources */,
 				6BD47CE21484703F000ECE52 /* expanz_model_GridData.m in Sources */,
 				6BD47CE81484703F000ECE52 /* expanz_model_Field.m in Sources */,
@@ -2480,7 +2499,7 @@
 				6BFACBA414679916007C7275 /* (null) in Sources */,
 				6BFACBA414679916007C7280 /* (null) in Sources */,
 				6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */,
-				6BFACBA414679916007C7291 /* expanz_model_BaseData.m in Sources */,
+				6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C7299 /* expanz_model_TreeData.m in Sources */,
 				6BFACBA414679916007C72A1 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72A9 /* expanz_model_File.m in Sources */,
@@ -2490,6 +2509,8 @@
 				6BFACBA414679916007C72EC /* expanz_ui_DataRenderer.m in Sources */,
 				6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */,
+				6BFACBA414679916007C7303 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2536,7 +2557,7 @@
 				6BD47CC71484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
 				6BD47CCD1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD31484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
-				6BD47CD91484703F000ECE52 /* expanz_model_BaseCell.m in Sources */,
+				6BD47CD91484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */,
 				6BD47CDF1484703F000ECE52 /* expanz_model_Column.m in Sources */,
 				6BD47CE51484703F000ECE52 /* expanz_model_GridData.m in Sources */,
 				6BD47CEB1484703F000ECE52 /* expanz_model_Field.m in Sources */,
@@ -2577,7 +2598,7 @@
 				6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7278 /* (null) in Sources */,
 				6BFACBA414679916007C728A /* expanz_model_ActivityStyle.m in Sources */,
-				6BFACBA414679916007C7294 /* expanz_model_BaseData.m in Sources */,
+				6BFACBA414679916007C7294 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729C /* expanz_model_TreeData.m in Sources */,
 				6BFACBA414679916007C72A4 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AC /* expanz_model_File.m in Sources */,
@@ -2586,6 +2607,7 @@
 				6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */,
 				6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */,
+				6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2632,7 +2654,7 @@
 				6BD47CC51484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
 				6BD47CCB1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD11484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
-				6BD47CD71484703F000ECE52 /* expanz_model_BaseCell.m in Sources */,
+				6BD47CD71484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */,
 				6BD47CDD1484703F000ECE52 /* expanz_model_Column.m in Sources */,
 				6BD47CE31484703F000ECE52 /* expanz_model_GridData.m in Sources */,
 				6BD47CE91484703F000ECE52 /* expanz_model_Field.m in Sources */,
@@ -2670,7 +2692,7 @@
 				6BFACBA414679916007C7276 /* (null) in Sources */,
 				6BFACBA414679916007C7281 /* (null) in Sources */,
 				6BFACBA414679916007C7288 /* expanz_model_ActivityStyle.m in Sources */,
-				6BFACBA414679916007C7292 /* expanz_model_BaseData.m in Sources */,
+				6BFACBA414679916007C7292 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729A /* expanz_model_TreeData.m in Sources */,
 				6BFACBA414679916007C72A2 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AA /* expanz_model_File.m in Sources */,
@@ -2680,6 +2702,8 @@
 				6BFACBA414679916007C72ED /* expanz_ui_DataRenderer.m in Sources */,
 				6BFACBA414679916007C72F4 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */,
+				6BFACBA414679916007C7304 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C730B /* expanz_ui_AbstractDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2726,7 +2750,7 @@
 				6BD47CC61484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
 				6BD47CCC1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD21484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
-				6BD47CD81484703F000ECE52 /* expanz_model_BaseCell.m in Sources */,
+				6BD47CD81484703F000ECE52 /* expanz_model_AbstractCell.m in Sources */,
 				6BD47CDE1484703F000ECE52 /* expanz_model_Column.m in Sources */,
 				6BD47CE41484703F000ECE52 /* expanz_model_GridData.m in Sources */,
 				6BD47CEA1484703F000ECE52 /* expanz_model_Field.m in Sources */,
@@ -2804,7 +2828,7 @@
 				6BFACBA414679916007C727D /* TestResource.m in Sources */,
 				6BFACBA414679916007C7282 /* (null) in Sources */,
 				6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */,
-				6BFACBA414679916007C7293 /* expanz_model_BaseData.m in Sources */,
+				6BFACBA414679916007C7293 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729B /* expanz_model_TreeData.m in Sources */,
 				6BFACBA414679916007C72A3 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AB /* expanz_model_File.m in Sources */,
@@ -2821,6 +2845,8 @@
 				6BFACBA414679916007C72EE /* expanz_ui_DataRenderer.m in Sources */,
 				6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C72FD /* expanz_ui_components_TreeDataTableCell.m in Sources */,
+				6BFACBA414679916007C7305 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

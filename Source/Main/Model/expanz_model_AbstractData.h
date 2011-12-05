@@ -10,18 +10,23 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class expanz_ui_AbstractDataRenderer;
+
 
 /**
 * Top level container for holding repeating records of information in an `expanz_model_ActivityInstance`. This class
 * is not intended to be instantiated directly.
 */
-@interface expanz_model_BaseData : NSObject
+@interface expanz_model_AbstractData : NSObject
 
 @property (nonatomic, readonly) NSString* dataId;
 
 - (id) initWithDataId:(NSString*)dataId;
 
+- (expanz_ui_AbstractDataRenderer*) withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName;
+
+
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias BaseData expanz_model_BaseData;
+@compatibility_alias AbstractData expanz_model_AbstractData;

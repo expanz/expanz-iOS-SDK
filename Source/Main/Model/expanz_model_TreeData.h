@@ -9,12 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "expanz_model_BaseData.h"
+#import "expanz_model_AbstractData.h"
 
 @class expanz_model_Folder;
 
 
-@interface expanz_model_TreeData : expanz_model_BaseData {
+@interface expanz_model_TreeData : expanz_model_AbstractData {
 
 @private
     NSMutableArray* _folders;

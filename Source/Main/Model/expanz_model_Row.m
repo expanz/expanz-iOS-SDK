@@ -48,8 +48,8 @@
     [_cellDefinitions setValue:data forKey:cellId];
 }
 
-- (BaseCell*) cellWithId:(NSString*)cellId {
-    for (BaseCell* cell in [self cells]) {
+- (AbstractCell*) cellWithId:(NSString*)cellId {
+    for (AbstractCell* cell in [self cells]) {
         if ([cell.cellId isEqualToString:cellId]) {
             return cell;
         }

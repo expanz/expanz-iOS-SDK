@@ -21,6 +21,7 @@
 #import "expanz_ui_TreeDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
+#import "expanz_ui_AbstractDataRenderer.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -55,7 +56,6 @@
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
-        _dataRendererMappings = [[NSMutableDictionary alloc] init];
         _imageButtonMappings = [[NSMutableDictionary alloc] init];
 
         [self cachePropertyNamesForController:viewController];
@@ -92,20 +92,6 @@
 - (UITableView*)dataViewControlFor:(expanz_model_GridData*)dataSet {
     return [_dataSetMappings objectForKey:dataSet.dataId];
 }
-
-- (expanz_model_BaseData*)dataSetFor:(UITableView*)tableView {
-    NSArray* keys = [_dataSetMappings allKeysForObject:tableView];
-    return [_activityInstance dataWithId:[keys objectAtIndex:0]];
-}
-
-- (id <UITableViewDataSource>)dataSourceFor:(UITableView*)tableView {
-    return [_dataRendererMappings objectForKey:[NSValue valueWithPointer:tableView]];
-}
-
-- (id <UITableViewDelegate>)delegateFor:(UITableView*)tableView {
-    return [_dataRendererMappings objectForKey:[NSValue valueWithPointer:tableView]];
-}
-
 
 - (UIImageView*)imageViewFor:(UIButton*)editButton {
     return [_imageButtonMappings objectForKey:[NSValue valueWithPointer:editButton]];
@@ -176,7 +162,6 @@
     [_imageFieldMappings release];
     [_labelMappings release];
     [_dataSetMappings release];
-    [_dataRendererMappings release];
     [_imageButtonMappings release];
     [super dealloc];
 }
@@ -246,22 +231,10 @@
             }
             else {
                 [_dataSetMappings setObject:tableView forKey:selectorName];
-                id <UITableViewDelegate, UITableViewDataSource> delegate = controller;
-                [tableView setDelegate:delegate];
-                [tableView setDataSource:delegate];
-
-                if ([[self dataSetFor:tableView] isKindOfClass:[GridData class]]) {
-                    GridDataRenderer* dataRenderer = [[GridDataRenderer alloc]
-                        initWithGridData:[self dataSetFor:tableView] tableView:tableView activityName:_activityName];
-                    [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
-                    [dataRenderer release];
-                }
-                else if ([[self dataSetFor:tableView] isKindOfClass:[TreeData class]]) {
-                    TreeDataRenderer* dataRenderer = [[TreeDataRenderer alloc]
-                        initWithTreeData:[self dataSetFor:tableView] tableView:tableView activityName:_activityName];
-                    [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
-                    [dataRenderer release];
-                }
+                AbstractData* data = [_activityInstance dataWithId:selectorName];
+                AbstractDataRenderer* renderer = [data withDataRendererFor:tableView activityName:_activityName];
+                [tableView setDataSource:renderer];
+                [tableView setDelegate:renderer];
             }
         }
     }

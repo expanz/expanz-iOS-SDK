@@ -15,7 +15,7 @@
 /**
 * Base class representing a cell in an `expanz_model_Row`.
 */
-@interface expanz_model_BaseCell : NSObject
+@interface expanz_model_AbstractCell : NSObject
 
 @property(nonatomic, readonly) NSString*(cellId);
 
@@ -25,5 +25,5 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias BaseCell expanz_model_BaseCell;
+@compatibility_alias AbstractCell expanz_model_AbstractCell;
 

@@ -10,43 +10,23 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "expanz_ui_AbstractDataRenderer.h"
 
 
 @class expanz_ui_ActivityManager;
 @class expanz_ui_components_ThumbnailTableCell;
 @class expanz_model_GridData;
 
-@interface expanz_ui_GridDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate> {
+@interface expanz_ui_GridDataRenderer : expanz_ui_AbstractDataRenderer {
 
 @private
-    expanz_ui_ActivityManager* _activityManager;
+    expanz_model_GridData* _gridData;
 }
-
-/**
-* Data to be rendered. 
-*/
-@property(nonatomic, readonly) expanz_model_GridData* gridData;
-
-/**
-* UITableView to display the data. 
-*/
-@property(nonatomic, readonly) UITableView* tableView;
-
-/**
-* Activity name to use for showing detail of a grid data row. 
-*/
-@property(nonatomic, readonly) NSString* activityName;
 
 /**
 * Injection point for loading custom table cells from a nib.
 */
 @property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
-
-/**
-* Initializes the renderer with data. 
-*/
-- (id)initWithGridData:(expanz_model_GridData*)gridData tableView:(UITableView*)tableView
-          activityName:(NSString*)activityName;
 
 
 @end

@@ -22,8 +22,7 @@
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
-    UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate,
-    UIImagePickerControllerDelegate> {
+    UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
@@ -41,33 +40,33 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
-                       initialKey:(NSString*)initialKey;
+- (id)initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
+                      initialKey:(NSString*)initialKey;
 
 /**
  * Request model to update with new field value. 
  */
-- (void) sendDeltaForField:(expanz_model_Field*)textField;
+- (void)sendDeltaForField:(expanz_model_Field*)textField;
 
 /**
  * Invoke a method on the model. 
  */
-- (void) sendMethodInvocation:(NSString*)methodName;
+- (void)sendMethodInvocation:(NSString*)methodName;
 
 /** 
  * Returns activity client service. 
  */
-- (id <expanz_service_ActivityClient>) activityClient;
+- (id <expanz_service_ActivityClient>)activityClient;
 
-- (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId;
+- (void)hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId;
 
-- (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
+- (void)hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
 
-- (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query;
+- (void)hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query;
 
-- (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
+- (void)hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
 
-- (void) willCommenceEditForImageView:(UIButton*)sender;
+- (void)willCommenceEditForImageView:(UIButton*)sender;
 
 
 @end

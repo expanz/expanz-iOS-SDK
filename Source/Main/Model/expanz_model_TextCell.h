@@ -11,12 +11,12 @@
 
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_BaseCell.h"
+#import "expanz_model_AbstractCell.h"
 
 /**
 * Represents a cell belonging to an `expanz_model_Row`.
 */
-@interface expanz_model_TextCell : expanz_model_BaseCell
+@interface expanz_model_TextCell : expanz_model_AbstractCell
 
 @property (nonatomic, readonly) NSString* text;
 

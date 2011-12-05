@@ -57,7 +57,7 @@ SPEC_BEGIN(RowSpec)
             [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
             [row addCellDefinitionWithId:@"address" data:@"Metro Manila"];
 
-            BaseCell* retrieved = [row cellWithId:@"firstName"];
+            AbstractCell* retrieved = [row cellWithId:@"firstName"];
             assertThat(retrieved.cellId, equalTo(@"firstName"));
         });
 

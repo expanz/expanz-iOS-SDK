@@ -14,7 +14,7 @@
 
 @class expanz_model_TextCell;
 @class expanz_model_GridData;
-@class expanz_model_BaseCell;
+@class expanz_model_AbstractCell;
 
 /**
 * Represents a row in an `expanz_model_DataSet`.
@@ -36,7 +36,7 @@
 
 - (void) addCellDefinitionWithId:(NSString*)cellId data:(NSString*)data;
 
-- (expanz_model_BaseCell*) cellWithId:(NSString*)cellId;
+- (expanz_model_AbstractCell*) cellWithId:(NSString*)cellId;
 
 - (NSArray*) cells;
 

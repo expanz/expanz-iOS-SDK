@@ -15,9 +15,9 @@
 @class expanz_model_Field;
 @class expanz_ui_ActivityInstanceViewController;
 @class expanz_model_GridData;
-@class expanz_model_BaseCell;
+@class expanz_model_AbstractCell;
 @class expanz_model_ImageCell;
-@class expanz_model_BaseData;
+@class expanz_model_AbstractData;
 
 @interface expanz_ui_ModelAdapter : NSObject {
 
@@ -27,7 +27,6 @@
     NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
-    NSMutableDictionary* _dataRendererMappings;
     NSMutableDictionary* _imageButtonMappings;
 
 }
@@ -56,21 +55,6 @@
 * Returns the UITableView corresponding to the supplied `expanz_model_DataSet`.
 */
 - (UITableView*) dataViewControlFor:(expanz_model_GridData*)dataSet;
-
-/**
-* Returns the `expanz_model_BaseData` object backing the UITableView component.
-*/
-- (expanz_model_BaseData*) dataSetFor:(UITableView*)tableView;
-
-/**
-* Returns the data renderer for the UITableView control.
-*/
-- (id <UITableViewDataSource>) dataSourceFor:(UITableView*)tableView;
-
-/**
-* Returns the data renderer for the UITableView control.
-*/
-- (id <UITableViewDelegate>) delegateFor:(UITableView*)tableView;
 
 /**
 * Returns the UIImageView underneath the touch area that allows editing the image.

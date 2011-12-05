@@ -77,11 +77,11 @@
     return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];    
 }
 
-- (void) addData:(expanz_model_BaseData*)data {
+- (void) addData:(expanz_model_AbstractData*)data {
     [_dataSets addObject:data];
 }
 
-- (expanz_model_BaseData*) dataWithId:(NSString*)dataSetId {
+- (expanz_model_AbstractData*) dataWithId:(NSString*)dataSetId {
     for (GridData* dataSet in _dataSets) {
         if ([dataSet.dataId isEqualToString:dataSetId]) {
             return dataSet;

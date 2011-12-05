@@ -105,12 +105,7 @@ SPEC_BEGIN(ModelAdapterSpec)
             modelAdapter = viewController.modelAdapter;
         });
 
-        it(@"Should return the expanz_model_DataSet that backs a UITableView.", ^{
-            GridData* dataSet = [modelAdapter dataSetFor:viewController.customersList];
-            assertThat(dataSet, notNilValue());
-        });
-
-        it(@"should map the other directrion - return a UITableView corresponding to a DataSet", ^{
+        it(@"should return a UITableView corresponding to a DataSet", ^{
             GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"customersList"];
             UITableView* tableView = [modelAdapter dataViewControlFor:dataSet];
             assertThat(tableView, notNilValue());

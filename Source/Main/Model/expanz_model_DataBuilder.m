@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_model_DataBuilder.h"
-#import "expanz_model_BaseData.h"
+#import "expanz_model_AbstractData.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Folder.h"
@@ -32,7 +32,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (expanz_model_BaseData*)build {
+- (expanz_model_AbstractData*)build {
     return [[_data retain] autorelease];
 }
 
