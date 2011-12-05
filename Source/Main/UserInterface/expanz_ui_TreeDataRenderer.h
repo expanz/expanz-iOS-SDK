@@ -15,7 +15,6 @@
 @class expanz_ui_ActivityManager;
 @class expanz_model_TreeData;
 @class expanz_ui_components_ThumbnailTableCell;
-@class expanz_ui_components_TreeDataTableCell;
 
 
 @interface expanz_ui_TreeDataRenderer : expanz_ui_AbstractDataRenderer {
@@ -27,8 +26,7 @@
 /**
 * Injection point for loading custom table cells from a nib.
 */
-@property(nonatomic, assign) IBOutlet expanz_ui_components_TreeDataTableCell* tableCell;
-
+@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
 
 
 @end

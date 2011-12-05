@@ -13,7 +13,7 @@
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
 #import "expanz_ui_TreeDataRenderer.h"
-#import "expanz_ui_components_TreeDataTableCell.h"
+#import "expanz_ui_components_ThumbnailTableCell.h"
 
 @implementation expanz_ui_TreeDataRenderer
 
@@ -34,7 +34,6 @@
 /* ================================================= Protocol Methods =============================================== */
 - (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
     Folder* folder = [[_treeData folders] objectAtIndex:section];
-    LogDebug(@"Folder: %@", [folder title]);
     return [folder title];
 }
 
@@ -52,7 +51,7 @@
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     NSString* reuseId = [_treeData dataId];
 
-    TreeDataTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"TreeDataTableCell" owner:self options:nil];
         cell = self.tableCell;
@@ -63,7 +62,6 @@
     File* file = [[folder files] objectAtIndex:indexPath.row];
 
     cell.mainLabel.text = file.title;
-    cell.subLabel.text = file.fileName;
 
     cell.backgroundView.backgroundColor =
         (indexPath.row % 2) ? [UIColor colorWithRed:0.89 green:0.957 blue:0.918 alpha:1] /*#e3f4ea*/ :

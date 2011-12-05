@@ -768,12 +768,10 @@
 		6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
 		6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
 		6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
-		6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
-		6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
-		6BFACBA414679916007C72FD /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
-		6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
-		6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
-		6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
+		6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7303 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7304 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7305 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; };
@@ -1208,8 +1206,6 @@
 		6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TreeDataTableCell.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TreeDataTableCell.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1779,8 +1775,6 @@
 		6BD47C901484703F000ECE52 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */,
-				6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */,
 				6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */,
 				6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */,
 				6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */,
@@ -2101,7 +2095,6 @@
 				6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */,
 				6BFACBA414679916007C72F1 /* expanz_ui_DataRenderer.h in Headers */,
 				6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */,
-				6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
 				6BFACBA414679916007C7308 /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6BFACBA414679916007C7312 /* expanz_ui_DataRendererFactory.h in Headers */,
@@ -2844,7 +2837,6 @@
 				6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */,
 				6BFACBA414679916007C72EE /* expanz_ui_DataRenderer.m in Sources */,
 				6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C72FD /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 				6BFACBA414679916007C7305 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */,
 			);
