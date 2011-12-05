@@ -73,7 +73,7 @@
 		6B8B800E14852E9700A24AC0 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */; };
 		6B8B800F14852E9700A24AC0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800B14852E9700A24AC0 /* background.png */; };
 		6B8B801014852E9700A24AC0 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800C14852E9700A24AC0 /* Login.xib */; };
-		6B8B801114852E9700A24AC0 /* TableCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800D14852E9700A24AC0 /* TableCell2.xib */; };
+		6B8B801114852E9700A24AC0 /* GridDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B800D14852E9700A24AC0 /* GridDataTableCell.xib */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -758,6 +758,22 @@
 		6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
 		6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
 		6BFACBA414679916007C72EA /* expanz_ui_DataRenderer.h in Headers */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72EC /* expanz_ui_DataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72ED /* expanz_ui_DataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72EE /* expanz_ui_DataRenderer.m in Sources */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72F1 /* expanz_ui_DataRenderer.h in Headers */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
+		6BFACBA414679916007C72F4 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
+		6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
+		6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
+		6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
+		6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
+		6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
+		6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
+		6BFACBA414679916007C72FD /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
+		6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */; };
+		6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
+		6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -890,7 +906,7 @@
 		6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6B8B800B14852E9700A24AC0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6B8B800C14852E9700A24AC0 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
-		6B8B800D14852E9700A24AC0 /* TableCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell2.xib; sourceTree = "<group>"; };
+		6B8B800D14852E9700A24AC0 /* GridDataTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridDataTableCell.xib; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1179,6 +1195,10 @@
 		6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBoxSystemEventReporterSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TreeDataTableCell.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TreeDataTableCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1269,7 +1289,7 @@
 				6B8B800A14852E9700A24AC0 /* ActivityMenu.xib */,
 				6B8B800B14852E9700A24AC0 /* background.png */,
 				6B8B800C14852E9700A24AC0 /* Login.xib */,
-				6B8B800D14852E9700A24AC0 /* TableCell2.xib */,
+				6B8B800D14852E9700A24AC0 /* GridDataTableCell.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1709,6 +1729,8 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */,
+				6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */,
 				6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */,
 				6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */,
 				6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */,
@@ -1742,6 +1764,8 @@
 		6BD47C901484703F000ECE52 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C72FF /* expanz_ui_components_TreeDataTableCell.h */,
+				6BFACBA414679916007C72FA /* expanz_ui_components_TreeDataTableCell.m */,
 				6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */,
 				6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */,
 				6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */,
@@ -2060,6 +2084,9 @@
 				6BFACBA414679916007C72CC /* expanz_ui_SystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */,
+				6BFACBA414679916007C72F1 /* expanz_ui_DataRenderer.h in Headers */,
+				6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */,
+				6BFACBA414679916007C7300 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2166,6 +2193,8 @@
 				6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */,
 				6BFACBA414679916007C72EA /* expanz_ui_DataRenderer.h in Headers */,
+				6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */,
+				6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2299,7 +2328,7 @@
 				6B8B800E14852E9700A24AC0 /* ActivityMenu.xib in Resources */,
 				6B8B800F14852E9700A24AC0 /* background.png in Resources */,
 				6B8B801014852E9700A24AC0 /* Login.xib in Resources */,
-				6B8B801114852E9700A24AC0 /* TableCell2.xib in Resources */,
+				6B8B801114852E9700A24AC0 /* GridDataTableCell.xib in Resources */,
 				6B77EE47148784AF00B80D1F /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2458,6 +2487,9 @@
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6BFACBA414679916007C72EC /* expanz_ui_DataRenderer.m in Sources */,
+				6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2552,6 +2584,8 @@
 				6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2643,6 +2677,9 @@
 				6BFACBA414679916007C72B8 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72E2 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6BFACBA414679916007C72ED /* expanz_ui_DataRenderer.m in Sources */,
+				6BFACBA414679916007C72F4 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2781,6 +2818,9 @@
 				6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */,
 				6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */,
 				6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6BFACBA414679916007C72EE /* expanz_ui_DataRenderer.m in Sources */,
+				6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFACBA414679916007C72FD /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

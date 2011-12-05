@@ -191,7 +191,7 @@
     NSString* id = [self attribute:@"id"];
     NSString* title = [self attribute:@"title"];
     NSString* hint = [self attribute:@"hint"];
-    NSString* fileName = [self attribute:@"fileName"];
+    NSString* fileName = [self attribute:@"filename"];
     NSString* sequence = [self attribute:@"sequence"];
     NSString* type = [self attribute:@"type"];
     NSString* field = [self attribute:@"field"];

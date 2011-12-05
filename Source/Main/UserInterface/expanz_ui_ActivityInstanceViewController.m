@@ -84,6 +84,7 @@
     [methodRequest release];
 }
 
+/* ================================================================================================================== */
 - (void)hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
     LogDebug(@"Requesting dataPublicationId: %@", dataPublicationId);
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
@@ -102,13 +103,13 @@
     [publicationRequest setQuery:query];
 }
 
-
 - (void)hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
+/* ================================================================================================================== */
 - (void)willCommenceEditForImageView:(UIButton*)sender {
     _currentlyEditingImageView = [_modelAdapter imageViewFor:sender];
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
@@ -180,27 +181,29 @@
 /* ================================================================================================================== */
 #pragma mark UITableViewDelegate
 
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    id<UITableViewDataSource> dataSource = [_modelAdapter dataSourceFor:tableView];
-    return [dataSource tableView:tableView numberOfRowsInSection:section];
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
+    return [[_modelAdapter dataSourceFor:tableView] numberOfSectionsInTableView:tableView];
 }
 
+- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView titleForHeaderInSection:section];
+}
+
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView numberOfRowsInSection:section];
+}
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    id<UITableViewDataSource> dataSource = [_modelAdapter dataSourceFor:tableView];
-    return [dataSource tableView:tableView cellForRowAtIndexPath:indexPath];
+    return [[_modelAdapter dataSourceFor:tableView] tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    id<UITableViewDelegate> delegate = [_modelAdapter delegateFor:tableView];
-    return [delegate tableView:tableView heightForRowAtIndexPath:indexPath];
+    return [[_modelAdapter delegateFor:tableView] tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    id<UITableViewDelegate> delegate = [_modelAdapter delegateFor:tableView];
-    [delegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [[_modelAdapter delegateFor:tableView] tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-
 
 /* ================================================================================================================== */
 #pragma mark Image Picker Delegate 
@@ -226,8 +229,6 @@
     _currentlyEditingImageView = nil;
     [picker dismissModalViewControllerAnimated:YES];
 }
-
-
 
 
 /* ================================================================================================================== */
@@ -257,7 +258,6 @@
 - (void)requestDidFailWithError:(NSError*)error {
 
 }
-
 
 
 /* ================================================== Utility Methods =============================================== */

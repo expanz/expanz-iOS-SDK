@@ -16,6 +16,7 @@
 #import "expanz_model_ImageCell.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_ui_ActivityManager.h"
+#import "expanz_model_GridData.h"
 
 
 @implementation expanz_ui_GridDataRenderer
@@ -38,6 +39,14 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
+- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
+    return nil;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
+    return 1;
+}
+
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return [_gridData.rows count];
@@ -49,7 +58,7 @@
 
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"TableCell2" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"GridDataTableCell" owner:self options:nil];
         cell = self.tableCell;
         self.tableCell = nil;
     }
@@ -88,17 +97,17 @@
     return 75;
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_activityName release];
-    [super dealloc];
-}
-
+/* ================================================ Interface Methods =============================================== */
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
                        context:(void*)context {
     [_tableView reloadData];
     [_tableView setNeedsLayout];
 }
 
+/* ================================================== Utility Methods =============================================== */
+- (void)dealloc {
+    [_activityName release];
+    [super dealloc];
+}
 
 @end

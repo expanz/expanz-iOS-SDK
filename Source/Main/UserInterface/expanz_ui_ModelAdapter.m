@@ -9,16 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
-#import "expanz_ui_ModelAdapter.h"
-#import "expanz_ui_ActivityInstanceViewController.h"
 #import "MARTNSObject.h"
-#import "expanz_model_GridData.h"
 #import "ASIHTTPRequest.h"
 #import "RTProperty.h"
-#import "expanz_ui_GridDataRenderer.h"
+#import "expanz_model_ActivityInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_GridData.h"
+#import "expanz_model_TreeData.h"
+#import "expanz_ui_GridDataRenderer.h"
+#import "expanz_ui_TreeDataRenderer.h"
+#import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_ui_ModelAdapter.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -248,11 +250,18 @@
                 [tableView setDelegate:delegate];
                 [tableView setDataSource:delegate];
 
-                GridData* data = (GridData*) [self dataSetFor:tableView];
-                GridDataRenderer* dataRenderer =
-                    [[GridDataRenderer alloc] initWithGridData:data tableView:tableView activityName:_activityName];
-                [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
-                [dataRenderer release];
+                if ([[self dataSetFor:tableView] isKindOfClass:[GridData class]]) {
+                    GridDataRenderer* dataRenderer = [[GridDataRenderer alloc]
+                        initWithGridData:[self dataSetFor:tableView] tableView:tableView activityName:_activityName];
+                    [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
+                    [dataRenderer release];
+                }
+                else if ([[self dataSetFor:tableView] isKindOfClass:[TreeData class]]) {
+                    TreeDataRenderer* dataRenderer = [[TreeDataRenderer alloc]
+                        initWithTreeData:[self dataSetFor:tableView] tableView:tableView activityName:_activityName];
+                    [_dataRendererMappings setObject:dataRenderer forKey:[NSValue valueWithPointer:tableView]];
+                    [dataRenderer release];
+                }
             }
         }
     }

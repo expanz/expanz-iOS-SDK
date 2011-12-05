@@ -11,45 +11,48 @@
 
 #import <Foundation/Foundation.h>
 
-
 @class expanz_ui_ActivityManager;
+@class expanz_model_TreeData;
 @class expanz_ui_components_ThumbnailTableCell;
-@class expanz_model_GridData;
+@class expanz_ui_components_TreeDataTableCell;
 
-@interface expanz_ui_GridDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate> {
+
+@interface expanz_ui_TreeDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate> {
 
 @private
     expanz_ui_ActivityManager* _activityManager;
 }
 
 /**
-* Data to be rendered. 
+* Data to be rendered.
 */
-@property(nonatomic, readonly) expanz_model_GridData* gridData;
+@property(nonatomic, readonly) expanz_model_TreeData* treeData;
 
 /**
-* UITableView to display the data. 
+* UITableView to display the data.
 */
 @property(nonatomic, readonly) UITableView* tableView;
 
 /**
-* Activity name to use for showing detail of a grid data row. 
+* Activity name to use for showing detail of a grid data row.
 */
 @property(nonatomic, readonly) NSString* activityName;
 
 /**
 * Injection point for loading custom table cells from a nib.
 */
-@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
+@property(nonatomic, assign) IBOutlet expanz_ui_components_TreeDataTableCell* tableCell;
 
 /**
-* Initializes the renderer with data. 
+* Initializes the renderer with data.
 */
-- (id)initWithGridData:(expanz_model_GridData*)gridData tableView:(UITableView*)tableView
+- (id)initWithTreeData:(expanz_model_TreeData*)gridData tableView:(UITableView*)tableView
           activityName:(NSString*)activityName;
 
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias GridDataRenderer expanz_ui_GridDataRenderer;
+@compatibility_alias TreeDataRenderer expanz_ui_TreeDataRenderer;
+
+
