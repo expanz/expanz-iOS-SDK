@@ -215,9 +215,10 @@
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
         [[_modelAdapter textInputControlFor:field] setText:field.value];
     }
+    //TODO: This should use id<expanz_ui_SystemEventReporter>
     for (Message* message in activityInstance.messages) {
         UIAlertView* alert = [[UIAlertView alloc]
-            initWithTitle:message.messageTypeAsString message:message.content delegate:self cancelButtonTitle:@"OK"
+            initWithTitle:@"System Message" message:message.content delegate:self cancelButtonTitle:@"OK"
         otherButtonTitles:nil];
         [alert show];
         [alert release];
