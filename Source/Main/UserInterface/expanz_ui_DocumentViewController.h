@@ -9,11 +9,20 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
+#import "expanz_service_ActivityClient.h"
 
 
-@interface expanz_ui_DocumentViewController : UIViewController
+@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_ActivityClientDelegate> {
 
+@private
+    id<expanz_service_ActivityClient> _activityClient;
+}
+
+@property (nonatomic, retain) NSString* documentId;
+@property (nonatomic, retain) NSString* activityHandle; 
 @property (nonatomic, retain) IBOutlet UIWebView* documentView;
+
+- (id) initWithDocumentId:(NSString*)documentId activityHandle:(NSString*)activityHandle;
 
 @end
 

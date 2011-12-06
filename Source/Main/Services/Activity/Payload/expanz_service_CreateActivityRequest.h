@@ -30,7 +30,7 @@
 
 
 /**
-* Initializes with activity name, and session token attribtues.
+* Initializes with activity name, and session token attributes.
 */
 - (id) initWithActivityName:(NSString*)activityName style:(ActivityStyle*)style initialKey:(NSString*)initialKey
                sessionToken:(NSString*)sessionToken;

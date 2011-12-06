@@ -34,7 +34,7 @@
 - (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                                  initialKey:(NSString*)initialKey;
 
-- (BOOL)showDocument;
+- (BOOL)showDocument:(NSString*)documentId;
 
 @end
 

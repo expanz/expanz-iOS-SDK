@@ -14,13 +14,15 @@
 #import "expanz_service_ActivityClientDelegate.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_DeltaRequest.h"
+#import "expanz_service_FileRequest.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_service_MethodInvocationRequest.h"
 
 
-@interface expanz_service_XmlPostActivityClient (private) 
+@interface expanz_service_XmlPostActivityClient (private)
 
--(void) registerResponseParserFor:(id<expanz_service_ActivityClientDelegate>)delegate;
+- (void) doRequestWith:(id<xml_Serializable>)xmlPayload
+           forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate;
 
 @end
 
@@ -30,45 +32,50 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-- (void) createActivityWith:(CreateActivityRequest*)activityRequest 
-                delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+- (void) createActivityWith:(CreateActivityRequest*)activityRequest
+                   delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
-    [self newRequestWithPayload:activityRequest];
-    [self registerResponseParserFor:delegate];
-    [self.request startAsynchronous];
+    [self doRequestWith:activityRequest forDelegate:delegate];
 }
 
-- (void) sendDeltaWith:(DeltaRequest*)deltaRequest 
-                delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
-    
-    [self newRequestWithPayload:deltaRequest];
-    [self registerResponseParserFor:delegate];    
-    [self.request startAsynchronous];
-    
+- (void) sendDeltaWith:(DeltaRequest*)deltaRequest
+              delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+
+    [self doRequestWith:deltaRequest forDelegate:delegate];
 }
+
+- (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
+                    delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+
+    [self doRequestWith:fileRequest forDelegate:delegate];
+}
+
 
 - (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
-                delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
-    
-    [self newRequestWithPayload:methodRequest];
-    [self registerResponseParserFor:delegate];
-    [self.request startAsynchronous];
+                         delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+
+    [self doRequestWith:methodRequest forDelegate:delegate];
 }
 
 
 /* ================================================== Private Methods =============================================== */
-- (void) registerResponseParserFor:(id<expanz_service_ActivityClientDelegate>)delegate {
-    [self.request setCompletionBlock:^{       
+- (void) doRequestWith:(id<xml_Serializable>)xmlPayload
+           forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+
+    [self newRequestWithPayload:xmlPayload];
+
+    [self.request setCompletionBlock:^{
         LogDebug(@"Response: %@, ", [self.request responseString]);
-        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];                
-        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"]; 
+        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];
+        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
         [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
     }];
-    
-    [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]]; 
-    }];    
-}
 
+    [self.request setFailedBlock:^{
+        [delegate requestDidFailWithError:[self.request error]];
+    }];
+
+    [self.request startAsynchronous];
+}
 
 @end

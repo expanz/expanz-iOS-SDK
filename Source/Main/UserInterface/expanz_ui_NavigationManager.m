@@ -19,15 +19,16 @@
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_DocumentViewController.h"
+#import "expanz_model_ActivityInstance.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_NavigationManager (private)
 
-- (NSString*)nibNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition;
 
-- (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition;
 
-- (CATransition*)cubeViewTransition;
+- (CATransition*) cubeViewTransition;
 
 @end
 
@@ -41,7 +42,7 @@ objection_requires(@"reporter")
 
 
 /* ================================================== Constructors ================================================== */
-- (id)init {
+- (id) init {
     self = [super init];
     if (self) {
         SDKAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
@@ -51,7 +52,7 @@ objection_requires(@"reporter")
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (BOOL)showMainMenu {
+- (BOOL) showMainMenu {
     ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
     [_navigationController pushViewController:menuViewController animated:NO];
     [_navigationController setNavigationBarHidden:NO];
@@ -65,12 +66,12 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL)showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition {
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition {
     return [self showActivityWithDefinition:activityDefinition initialKey:nil];
 }
 
-- (BOOL)showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
-                        initialKey:(NSString*)initialKey {
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+                         initialKey:(NSString*)initialKey {
 
     NSString* controllerClassName = [self controllerClassNameFor:activityDefinition];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
@@ -90,9 +91,13 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL)showDocument {
+- (BOOL) showDocument:(NSString*)documentId {
+    ActivityInstanceViewController
+        * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];
+    NSString* activityHandle = [currentActivity activityInstance].handle;
+
     DocumentViewController* documentViewController =
-        [[DocumentViewController alloc] initWithNibName:@"DocumentView" bundle:[NSBundle mainBundle]];
+        [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
     [_navigationController pushViewController:documentViewController animated:YES];
     [documentViewController release];
     return YES;
@@ -100,13 +105,13 @@ objection_requires(@"reporter")
 
 
 /* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
+- (void) dealloc {
     [_reporter release];
     [super dealloc];
 }
 
 /* ================================================== Private Methods =============================================== */
-- (NSString*)nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
+- (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
     NSString* nibName;
     if ([activityDefinition.style isDefault]) {
         nibName = activityDefinition.name;
@@ -117,7 +122,7 @@ objection_requires(@"reporter")
     return nibName;
 }
 
-- (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition {
+- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition {
     NSMutableString* controllerClassName = [NSMutableString
         stringWithString:[activityDefinition.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
     if (![activityDefinition.style isDefault]) {
@@ -128,7 +133,7 @@ objection_requires(@"reporter")
 }
 
 //TODO: Private API - replace this with library call.
-- (CATransition*)cubeViewTransition {
+- (CATransition*) cubeViewTransition {
     static const NSTimeInterval kAnimationDuration = 0.75f;
     CATransition* transition = [CATransition animation];
     transition.duration = kAnimationDuration;

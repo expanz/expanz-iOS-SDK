@@ -38,11 +38,12 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
-#define kXmlTemplate @"<ESA sessionHandle=\"%@\"><Activity activityHandle=\"%@\"><Context id=\"%@\" Type=\"\" \
-contextObject=\"File\"/><MenuAction defaultAction=\"1\" contextObject=\"File\"/></Activity></ESA>"
+#define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
+<Context id=\"%@\" Type=\"\" contextObject=\"File\"/><MenuAction defaultAction=\"1\" contextObject=\"File\"/>\
+</Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
 - (NSString*)toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _sessionToken, _activityHandle, _fileId ];
+    return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fileId, _sessionToken];
 }
 
 

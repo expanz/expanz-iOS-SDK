@@ -39,7 +39,7 @@ SPEC_BEGIN(FileRequestSpec)
 
     });
 
-    describe(@"Xml serialization", ^{
+    fdescribe(@"Xml serialization", ^{
 
         it(@"should be able to serialize itself to xml", ^{
             FileRequest* fileRequest =

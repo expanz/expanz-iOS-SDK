@@ -72,7 +72,11 @@
 }
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    [self.activityManager showDocument];
+    Folder* folder = [[_treeData folders] objectAtIndex:indexPath.section]; 
+    File* file = [[folder files] objectAtIndex:indexPath.row];    
+    if ([self.activityManager showDocument:file.fileId]) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
