@@ -14,7 +14,7 @@
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
 #import "expanz_ui_ActivityMenuViewController.h"
-#import "expanz_ui_ActivityManager.h"
+#import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
@@ -30,7 +30,7 @@
     if (self) {
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
-        _activityManger = [[JSObjection globalInjector] getObject:[ActivityManager class]];
+        _activityManger = [[JSObjection globalInjector] getObject:[NavigationManager class]];
     }
     return self;
 }

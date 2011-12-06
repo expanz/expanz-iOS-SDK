@@ -15,7 +15,7 @@
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
 #import "expanz_model_ActivityDefinition.h"
-#import "expanz_ui_ActivityManager.h"
+#import "expanz_ui_NavigationManager.h"
 #import "expanz_model_GridData.h"
 
 

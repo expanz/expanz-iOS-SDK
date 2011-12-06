@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "expanz_ui_AbstractDataRenderer.h"
 
-@class expanz_ui_ActivityManager;
+@class expanz_ui_NavigationManager;
 @class expanz_model_TreeData;
 @class expanz_ui_components_ThumbnailTableCell;
 

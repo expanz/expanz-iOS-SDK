@@ -15,13 +15,13 @@
 #import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_Menu;
-@class expanz_ui_ActivityManager;
+@class expanz_ui_NavigationManager;
 
 
 @interface expanz_ui_ActivityMenuViewController : UIViewController<expanz_service_SessionDataClientDelegate> {
 
 @private
-    expanz_ui_ActivityManager* _activityManger;
+    expanz_ui_NavigationManager* _activityManger;
 }
         
 @property (nonatomic, readonly) id<expanz_service_SessionDataClient> sessionDataClient; 

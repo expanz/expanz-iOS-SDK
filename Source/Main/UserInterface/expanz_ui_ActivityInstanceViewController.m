@@ -27,7 +27,7 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
-#import "expanz_ui_ActivityManager.h"
+#import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -44,7 +44,7 @@
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
-        _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
+        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _activityDefinition = [activityDefinition retain];
         self.title = _activityDefinition.title;
         _activityRequest = [[CreateActivityRequest alloc]

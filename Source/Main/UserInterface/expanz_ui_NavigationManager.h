@@ -17,9 +17,13 @@
 @class expanz_model_ActivityDefinition;
 
 /**
-* Responsible for initiating server-side activities and transferring to the activity view.
+* Responsible for navigating between activity views.
 */
-@interface expanz_ui_ActivityManager : NSObject
+@interface expanz_ui_NavigationManager : NSObject {
+
+@private
+    UINavigationController* _navigationController;
+}
 
 @property (nonatomic, retain) id<expanz_ui_SystemEventReporter> reporter;
 
@@ -28,7 +32,9 @@
 - (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                                  initialKey:(NSString*)initialKey;
 
+- (BOOL) transitionToDocumentView;
+
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ActivityManager expanz_ui_ActivityManager;
+@compatibility_alias NavigationManager expanz_ui_NavigationManager;

@@ -14,6 +14,7 @@
 #import "expanz_model_File.h"
 #import "expanz_ui_TreeDataRenderer.h"
 #import "expanz_ui_components_ThumbnailTableCell.h"
+#import "expanz_ui_NavigationManager.h"
 
 @implementation expanz_ui_TreeDataRenderer
 
@@ -71,13 +72,7 @@
 }
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-//    Row* row = [_gridData.rows objectAtIndex:indexPath.row];
-//
-//    ActivityDefinition* edit =
-//        [[ActivityDefinition alloc] initWithName:_activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-//    if ([_activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
-//        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    }
+    [self.activityManager transitionToDocumentView];
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {

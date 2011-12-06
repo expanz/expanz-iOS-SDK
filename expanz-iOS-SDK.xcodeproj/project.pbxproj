@@ -120,7 +120,7 @@
 		6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */; };
 		6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */; };
 		6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */; };
-		6BB7F5AB14852807007F2E99 /* expanz_ui_ActivityManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */; };
+		6BB7F5AB14852807007F2E99 /* expanz_ui_NavigationManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */; };
 		6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
 		6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */; };
 		6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */; };
@@ -498,12 +498,12 @@
 		6BD47D991484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BD47D9A1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6BD47D9B1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
-		6BD47D9C1484703F000ECE52 /* expanz_ui_ActivityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */; };
-		6BD47D9D1484703F000ECE52 /* expanz_ui_ActivityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */; };
-		6BD47D9E1484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */; };
-		6BD47D9F1484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */; };
-		6BD47DA01484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */; };
-		6BD47DA11484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */; };
+		6BD47D9C1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */; };
+		6BD47D9D1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */; };
+		6BD47D9E1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
+		6BD47D9F1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
+		6BD47DA01484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
+		6BD47DA11484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
 		6BD47DA21484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
 		6BD47DA31484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
 		6BD47DA41484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */; };
@@ -783,6 +783,12 @@
 		6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
 		6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
 		6BFACBA414679916007C7312 /* expanz_ui_DataRendererFactory.h in Headers */ = {isa = PBXBuildFile; };
+		6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
+		6BFACBA414679916007C7315 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
+		6BFACBA414679916007C7316 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
+		6BFACBA414679916007C7317 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
+		6BFACBA414679916007C7319 /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */; };
+		6BFACBA414679916007C731A /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -852,7 +858,7 @@
 				6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
 				6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
 				6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
-				6BB7F5AB14852807007F2E99 /* expanz_ui_ActivityManager.h in Copy Headers */,
+				6BB7F5AB14852807007F2E99 /* expanz_ui_NavigationManager.h in Copy Headers */,
 				6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
 				6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */,
 				6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */,
@@ -1085,8 +1091,8 @@
 		6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
 		6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
-		6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityManager.h; sourceTree = "<group>"; };
-		6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityManager.m; sourceTree = "<group>"; };
+		6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
+		6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
 		6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
 		6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
 		6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
@@ -1208,6 +1214,8 @@
 		6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_DocumentViewController.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_DocumentViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1738,6 +1746,8 @@
 		6BD47C871484703F000ECE52 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */,
+				6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */,
 				6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */,
 				6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */,
 				6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */,
@@ -1751,8 +1761,8 @@
 				6BD47C901484703F000ECE52 /* Components */,
 				6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */,
 				6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */,
-				6BD47C971484703F000ECE52 /* expanz_ui_ActivityManager.h */,
-				6BD47C981484703F000ECE52 /* expanz_ui_ActivityManager.m */,
+				6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */,
+				6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */,
 				6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */,
 				6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */,
 				6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */,
@@ -2073,7 +2083,7 @@
 				6BD47D8A1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
 				6BD47D901484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
 				6BD47D961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
-				6BD47D9C1484703F000ECE52 /* expanz_ui_ActivityManager.h in Headers */,
+				6BD47D9C1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */,
 				6BD47DA21484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */,
 				6BD47DA81484703F000ECE52 /* expanz_ui_LoginViewController.h in Headers */,
 				6BD47DAE1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */,
@@ -2098,6 +2108,7 @@
 				6BFACBA414679916007C7308 /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6BFACBA414679916007C7312 /* expanz_ui_DataRendererFactory.h in Headers */,
+				6BFACBA414679916007C7319 /* expanz_ui_DocumentViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2185,7 +2196,7 @@
 				6BD47D8B1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
 				6BD47D911484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
 				6BD47D971484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
-				6BD47D9D1484703F000ECE52 /* expanz_ui_ActivityManager.h in Headers */,
+				6BD47D9D1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */,
 				6BD47DA31484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */,
 				6BD47DA91484703F000ECE52 /* expanz_ui_LoginViewController.h in Headers */,
 				6BD47DAF1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */,
@@ -2207,6 +2218,7 @@
 				6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */,
 				6BFACBA414679916007C7301 /* expanz_ui_components_TreeDataTableCell.h in Headers */,
 				6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */,
+				6BFACBA414679916007C731A /* expanz_ui_DocumentViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2483,7 +2495,7 @@
 				6BD47D8C1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6BD47D921484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6BD47D981484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47D9E1484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */,
+				6BD47D9E1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
 				6BD47DA41484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
@@ -2504,6 +2516,7 @@
 				6BFACBA414679916007C72FB /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 				6BFACBA414679916007C7303 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2579,7 +2592,7 @@
 				6BD47D8F1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6BD47D951484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6BD47D9B1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47DA11484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */,
+				6BD47DA11484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
 				6BD47DA71484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAD1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB31484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
@@ -2601,6 +2614,7 @@
 				6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C72FE /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 				6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C7317 /* expanz_ui_DocumentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2676,7 +2690,7 @@
 				6BD47D8D1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6BD47D931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6BD47D991484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47D9F1484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */,
+				6BD47D9F1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
 				6BD47DA51484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAB1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB11484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
@@ -2697,6 +2711,7 @@
 				6BFACBA414679916007C72FC /* expanz_ui_components_TreeDataTableCell.m in Sources */,
 				6BFACBA414679916007C7304 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C730B /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C7315 /* expanz_ui_DocumentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2772,7 +2787,7 @@
 				6BD47D8E1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6BD47D941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
 				6BD47D9A1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47DA01484703F000ECE52 /* expanz_ui_ActivityManager.m in Sources */,
+				6BD47DA01484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
 				6BD47DA61484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
 				6BD47DAC1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB21484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
@@ -2839,6 +2854,7 @@
 				6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFACBA414679916007C7305 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6BFACBA414679916007C7316 /* expanz_ui_DocumentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

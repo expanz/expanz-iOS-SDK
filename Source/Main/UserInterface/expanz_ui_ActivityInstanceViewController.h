@@ -18,7 +18,7 @@
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailTableCell;
-@class expanz_ui_ActivityManager;
+@class expanz_ui_NavigationManager;
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
@@ -26,7 +26,7 @@
 
 @private
     expanz_service_CreateActivityRequest* _activityRequest;
-    expanz_ui_ActivityManager* _activityManager;
+    expanz_ui_NavigationManager* _activityManager;
     UITextField* _currentlyEditingField;
     UIImageView* _currentlyEditingImageView;
 }

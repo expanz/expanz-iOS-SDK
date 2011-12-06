@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_ui_AbstractDataRenderer.h"
 #import "expanz_model_AbstractData.h"
-#import "expanz_ui_ActivityManager.h"
+#import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_AbstractDataRenderer
@@ -29,7 +29,7 @@
         _data = data;
         _tableView = tableView;
         _activityName = [activityName copy];
-        _activityManager = [[JSObjection globalInjector] getObject:[ActivityManager class]];
+        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
     }
     return self;
 }

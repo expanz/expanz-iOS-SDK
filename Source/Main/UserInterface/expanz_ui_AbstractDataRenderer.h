@@ -11,12 +11,12 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_model_AbstractData;
-@class expanz_ui_ActivityManager;
+@class expanz_ui_NavigationManager;
 
 
 @interface expanz_ui_AbstractDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, readonly) expanz_ui_ActivityManager* activityManager;
+@property (nonatomic, readonly) expanz_ui_NavigationManager* activityManager;
 
 /**
 * Data to be rendered.

@@ -11,7 +11,7 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_ui_ActivityManager.h"
+#import "../../../Main/UserInterface/expanz_ui_NavigationManager.h"
 #import "StubSystemEventReporter.h"
 #import "expanz_model_ActivityDefinition.h"
 
@@ -20,11 +20,11 @@ SPEC_BEGIN(ActivityManagerSpec)
 
     describe(@"Transitioning from a menu or activity to another activity view", ^{
 
-        __block ActivityManager* activityManager;
+        __block NavigationManager* activityManager;
         __block StubSystemEventReporter* reporter;
 
         beforeEach(^{
-            activityManager = [[[ActivityManager alloc] init] autorelease];
+            activityManager = [[[NavigationManager alloc] init] autorelease];
             reporter = [[[StubSystemEventReporter alloc] init] autorelease];
             activityManager.reporter = reporter;
         });

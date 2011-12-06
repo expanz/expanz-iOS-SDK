@@ -17,13 +17,13 @@
 #import "../UserInterface/expanz_ui_AlertBoxSystemEventReporter.h"
 
 #import "expanz_iOS_SDKConfiguration.h"
-#import "expanz_ui_ActivityManager.h"
+#import "../UserInterface/expanz_ui_NavigationManager.h"
 
 @implementation expanz_iOS_SDKModule
 
 - (void) configure {
     SDKConfiguration* config = [SDKConfiguration globalConfiguration];
-    [self registerEagerSingleton:[expanz_ui_ActivityManager class]];
+    [self registerEagerSingleton:[expanz_ui_NavigationManager class]];
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
