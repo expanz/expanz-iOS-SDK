@@ -27,11 +27,13 @@
 
 @implementation expanz_service_XmlPostActivityClient
 
+
+
 /* ================================================ Interface Methods =============================================== */
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
-    [self addPayload:activityRequest];
+    [self newRequestWithPayload:activityRequest];
     [self registerResponseParserFor:delegate];
     [self.request startAsynchronous];
 }
@@ -39,7 +41,7 @@
 - (void) sendDeltaWith:(DeltaRequest*)deltaRequest 
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
     
-    [self addPayload:deltaRequest]; 
+    [self newRequestWithPayload:deltaRequest];
     [self registerResponseParserFor:delegate];    
     [self.request startAsynchronous];
     
@@ -48,7 +50,7 @@
 - (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
                 delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
     
-    [self addPayload:methodRequest];
+    [self newRequestWithPayload:methodRequest];
     [self registerResponseParserFor:delegate];
     [self.request startAsynchronous];
 }

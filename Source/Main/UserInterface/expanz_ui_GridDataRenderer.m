@@ -75,7 +75,7 @@
 
     ActivityDefinition* edit =
         [[ActivityDefinition alloc] initWithName:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([self.activityManager transitionToActivityWithDefinition:edit initialKey:row.rowId]) {
+    if ([self.activityManager showActivityWithDefinition:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

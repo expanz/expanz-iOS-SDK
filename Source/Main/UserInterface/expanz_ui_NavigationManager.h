@@ -27,12 +27,14 @@
 
 @property (nonatomic, retain) id<expanz_ui_SystemEventReporter> reporter;
 
-- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
+- (BOOL) showMainMenu;
 
-- (BOOL) transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
+
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                                  initialKey:(NSString*)initialKey;
 
-- (BOOL) transitionToDocumentView;
+- (BOOL)showDocument;
 
 @end
 

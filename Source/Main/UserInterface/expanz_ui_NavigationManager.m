@@ -12,12 +12,13 @@
 
 #import <objc/runtime.h>
 #import <Objection-iOS/Objection.h>
+#import "CAFilter+Unlock.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_iOS_SDKAppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
+#import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_DocumentViewController.h"
-
 
 /* ================================================================================================================== */
 @interface expanz_ui_NavigationManager (private)
@@ -25,6 +26,8 @@
 - (NSString*)nibNameFor:(ActivityDefinition*)activityDefinition;
 
 - (NSString*)controllerClassNameFor:(ActivityDefinition*)activityDefinition;
+
+- (CATransition*)cubeViewTransition;
 
 @end
 
@@ -48,15 +51,28 @@ objection_requires(@"reporter")
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (BOOL)transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity {
+- (BOOL)showMainMenu {
+    ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
+    [_navigationController pushViewController:menuViewController animated:NO];
+    [_navigationController setNavigationBarHidden:NO];
+    [menuViewController.navigationItem setHidesBackButton:YES];
+    [menuViewController release];
 
-    return [self transitionToActivityWithDefinition:activity initialKey:nil];
+    SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    [delegate.window.layer addAnimation:[self cubeViewTransition] forKey:nil];
+    [delegate.window addSubview:delegate.navigationController.view];
+    return YES;
 }
 
-- (BOOL)transitionToActivityWithDefinition:(expanz_model_ActivityDefinition*)activity
-                                initialKey:(NSString*)initialKey {
 
-    NSString* controllerClassName = [self controllerClassNameFor:activity];
+- (BOOL)showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition {
+    return [self showActivityWithDefinition:activityDefinition initialKey:nil];
+}
+
+- (BOOL)showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+                        initialKey:(NSString*)initialKey {
+
+    NSString* controllerClassName = [self controllerClassNameFor:activityDefinition];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
     if (clazz == nil) {
         NSString* errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
@@ -65,8 +81,8 @@ objection_requires(@"reporter")
     }
     else {
         ActivityInstanceViewController* nextView = class_createInstance(clazz, 0);
-        NSString* nibName = [self nibNameFor:activity];
-        nextView = [nextView initWithActivityDefinition:activity nibName:nibName initialKey:initialKey];
+        NSString* nibName = [self nibNameFor:activityDefinition];
+        nextView = [nextView initWithActivityDefinition:activityDefinition nibName:nibName initialKey:initialKey];
         [_navigationController pushViewController:nextView animated:YES];
         [nextView release];
         return YES;
@@ -74,12 +90,19 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL)transitionToDocumentView {
+- (BOOL)showDocument {
     DocumentViewController* documentViewController =
         [[DocumentViewController alloc] initWithNibName:@"DocumentView" bundle:[NSBundle mainBundle]];
     [_navigationController pushViewController:documentViewController animated:YES];
     [documentViewController release];
     return YES;
+}
+
+
+/* ================================================== Utility Methods =============================================== */
+- (void)dealloc {
+    [_reporter release];
+    [super dealloc];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -104,10 +127,18 @@ objection_requires(@"reporter")
     return controllerClassName;
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_reporter release];
-    [super dealloc];
+//TODO: Private API - replace this with library call.
+- (CATransition*)cubeViewTransition {
+    static const NSTimeInterval kAnimationDuration = 0.75f;
+    CATransition* transition = [CATransition animation];
+    transition.duration = kAnimationDuration;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.subtype = kCATransitionFromRight;
+    transition.delegate = self;
+    CAFilter* filter = [CAFilter filterWithName:@"cube"];
+    [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
+    transition.filter = filter;
+    return transition;
 }
 
 

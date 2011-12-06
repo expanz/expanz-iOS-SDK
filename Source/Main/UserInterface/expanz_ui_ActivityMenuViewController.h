@@ -21,10 +21,11 @@
 @interface expanz_ui_ActivityMenuViewController : UIViewController<expanz_service_SessionDataClientDelegate> {
 
 @private
+    id<expanz_service_SessionDataClient> _sessionDataClient;
     expanz_ui_NavigationManager* _activityManger;
+    id<expanz_ui_SystemEventReporter> _reporter;
 }
-        
-@property (nonatomic, readonly) id<expanz_service_SessionDataClient> sessionDataClient; 
+
 @property (nonatomic, readonly) expanz_model_Menu* menu;
 @property (nonatomic, retain) IBOutlet UITableView* menuTable;
 

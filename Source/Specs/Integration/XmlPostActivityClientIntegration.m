@@ -46,10 +46,9 @@ describe(@"create activity. . . ", ^{
     it(@"should invoke the delegate's error handler, if the underlying ASIFormDataRequest fails.", ^{
         CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
                                      style:[ActivityStyle defaultStyle] initialKey:nil sessionToken:[SessionContext globalContext].sessionToken] autorelease];
-        
-        ASIFormDataRequest* requestThatWillFail = [IntegrationUtils requestThatWillFail]; 
+         
         id<expanz_service_ActivityClient> anotherClient = [[XmlPostActivityClient alloc] 
-                                                           initWithRequest:requestThatWillFail];
+                                                           initWithServiceUrl:[IntegrationUtils urlThatWillFail]];
         [anotherClient createActivityWith:activityRequest delegate:delegate]; 
         assertWillHappen(delegate.error != nil);
         LogDebug(@"Error %@", delegate.error);

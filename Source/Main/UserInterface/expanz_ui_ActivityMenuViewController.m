@@ -13,13 +13,14 @@
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
+#import "expanz_model_SessionContext.h"
+#import "expanz_service_SessionDataRequest.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
 
-@synthesize sessionDataClient = _sessionDataClient;
 @synthesize menu = _menu;
 @synthesize menuTable = _menuTable;
 
@@ -29,8 +30,14 @@
     self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"activities";
-        _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
-        _activityManger = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _sessionDataClient =
+            [[[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)] retain];
+        _activityManger = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
+        _reporter = [[[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)] retain];
+
+        SessionDataRequest* sessionDataRequest =
+            [[[SessionDataRequest alloc] initWithSessionToken:[SessionContext globalContext].sessionToken] autorelease];
+        [_sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:self];
     }
     return self;
 }
@@ -112,7 +119,7 @@
         cell.textLabel.text = [activity title];
     }
     else {
-        ActivityDefinition* activity = [[_menu allActivities] objectAtIndex:indexPath.row]; 
+        ActivityDefinition* activity = [[_menu allActivities] objectAtIndex:indexPath.row];
         cell.textLabel.text = [activity title];
     }
     return cell;
@@ -127,7 +134,7 @@
     else {
         activityDefinition = [[_menu allActivities] objectAtIndex:indexPath.row];
     }
-    if ([_activityManger transitionToActivityWithDefinition:activityDefinition]) {
+    if ([_activityManger showActivityWithDefinition:activityDefinition]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
@@ -141,15 +148,14 @@
 }
 
 - (void)requestDidFailWithError:(NSError*)error {
-
+    [_reporter reportErrorWithReason:@"There was an unrecoverable error accessing data for the main menu."];
 }
 
 /* ================================================== Utility Methods =============================================== */
-
-
-
 - (void)dealloc {
     [_sessionDataClient release];
+    [_activityManger release];
+    [_reporter release];
     [_menu release];
     [_menuTable release];
     [super dealloc];

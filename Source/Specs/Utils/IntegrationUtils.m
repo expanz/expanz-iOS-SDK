@@ -55,9 +55,8 @@
     return delegate.activityInstance;
 }
 
-+ (ASIFormDataRequest*) requestThatWillFail {
-    NSURL* url = [NSURL URLWithString:@"hhhhhtp:/bad.url"];
-    return [ASIFormDataRequest requestWithURL:url];
++ (NSURL*)urlThatWillFail {
+    return [NSURL URLWithString:@"hhhhhtp:/bad.url"];
 }
 
 

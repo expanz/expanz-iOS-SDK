@@ -12,6 +12,9 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_LoginClient.h"
 
+@class expanz_ui_NavigationManager;
+@protocol expanz_ui_SystemEventReporter;
+
 @interface expanz_ui_LoginViewController : UIViewController
         <expanz_service_LoginClientDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource> {
 
@@ -19,7 +22,9 @@
     CGFloat _animatedDistance;
     BOOL _scrolled;
     UITextField* _userNameField; 
-    UITextField* _passwordField;             
+    UITextField* _passwordField;
+    expanz_ui_NavigationManager* _navigationManager;
+    id<expanz_ui_SystemEventReporter> _reporter;
 }
 
 @property (nonatomic, readonly) id<expanz_service_LoginClient> loginClient; 

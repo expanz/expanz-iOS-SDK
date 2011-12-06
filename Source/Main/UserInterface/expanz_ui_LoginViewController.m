@@ -11,28 +11,22 @@
 
 
 #import <Objection-iOS/Objection.h>
-#import "CAFilter+Unlock.h"
-
-#import "expanz_iOS_SDKAppDelegate.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_ui_LoginViewController.h"
-#import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_components_TextFieldTableCell.h"
 #import "expanz_iOS_SDKConfiguration.h"
+#import "expanz_ui_NavigationManager.h"
 
-@interface expanz_ui_LoginViewController (private)
-- (CATransition*)makeViewTransition;
-@end
+
+@implementation expanz_ui_LoginViewController
 
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
-
-@implementation expanz_ui_LoginViewController
 
 @synthesize loginClient = _loginClient;
 @synthesize loginButton = _loginButton;
@@ -43,8 +37,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (id)init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
-        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
-        [_loginClient retain];
+        _loginClient = [[[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)] retain];
+        _navigationManager = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
+        _reporter = [[[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)] retain];
     }
     return self;
 }
@@ -226,36 +221,19 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     else {
         [SessionContext setGlobalContext:sessionContext];
-        ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
-
-        SessionDataRequest
-            * sessionDataRequest = [[SessionDataRequest alloc] initWithSessionToken:sessionContext.sessionToken];
-        [menuViewController.sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:menuViewController];
-        [sessionDataRequest release];
-
-        SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-        [delegate.navigationController pushViewController:menuViewController animated:NO];
-        [delegate.navigationController setNavigationBarHidden:NO];
-        [menuViewController.navigationItem setHidesBackButton:YES];
-        [menuViewController release];
-
-        [delegate.window.layer addAnimation:[self makeViewTransition] forKey:nil];
-        [delegate.window addSubview:delegate.navigationController.view];
+        [_navigationManager showMainMenu];
     }
 }
 
 - (void)requestDidFailWithError:(NSError*)error {
-    //TODO: System-wide error handler. 
-    UIAlertView* alert = [[[UIAlertView alloc]
-        initWithTitle:@"Error" message:@"There was a system error." delegate:self cancelButtonTitle:@"OK"
-    otherButtonTitles:nil] autorelease];
-    [alert show];
-
+    [_reporter reportErrorWithReason:@"There was an an unrecoverable system error accessing session data"];
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (void)dealloc {
     [_loginClient release];
+    [_navigationManager release];
+    [_reporter release];
     [_userNameAndPasswordForm release];
     [_loginButton release];
     [_spinner release];
@@ -264,20 +242,5 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [super dealloc];
 }
 
-/* ================================================== Private Methods =============================================== */
-
-//TODO: Private API - replace this with library call. 
-- (CATransition*)makeViewTransition {
-    static const NSTimeInterval kAnimationDuration = 0.75f;
-    CATransition* transition = [CATransition animation];
-    transition.duration = kAnimationDuration;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.subtype = kCATransitionFromRight;
-    transition.delegate = self;
-    CAFilter* filter = [CAFilter filterWithName:@"cube"];
-    [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
-    transition.filter = filter;
-    return transition;
-}
 
 @end

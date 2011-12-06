@@ -44,8 +44,8 @@ describe(@"Authenticating with the site manager.", ^{
     });
     
     it(@"should invoke the delegates requestDidFail method if the underlying ASIFormDataRequest fails.", ^{
-        ASIFormDataRequest* requestThatWillFail = [IntegrationUtils requestThatWillFail]; 
-        XmlPostLoginClient* anotherLoginClient = [[XmlPostLoginClient alloc] initWithRequest:requestThatWillFail];
+        XmlPostLoginClient* anotherLoginClient = [[XmlPostLoginClient alloc] initWithServiceUrl:[IntegrationUtils
+                                                                                                    urlThatWillFail]];
         [anotherLoginClient createSessionWith:nil delegate:loginDelegate];    
         assertWillHappen(loginDelegate.error != nil);
         [anotherLoginClient release];

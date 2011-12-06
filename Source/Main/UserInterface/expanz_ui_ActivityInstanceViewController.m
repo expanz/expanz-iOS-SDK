@@ -15,19 +15,20 @@
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Message.h"
-#import "expanz_service_CreateActivityRequest.h"
-#import "expanz_service_MethodInvocationRequest.h"
-#import "expanz_service_ActivityClientDelegate.h"
-#import "expanz_ui_ActivityInstanceViewController.h"
-#import "expanz_ui_ModelAdapter.h"
-#import "expanz_model_Field.h"
-#import "expanz_service_DeltaRequest.h"
-#import "expanz_service_DataPublicationRequest.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_Row.h"
 #import "expanz_model_TextCell.h"
 #import "expanz_model_ImageCell.h"
+#import "expanz_model_Field.h"
+#import "expanz_service_CreateActivityRequest.h"
+#import "expanz_service_MethodInvocationRequest.h"
+#import "expanz_service_ActivityClientDelegate.h"
+#import "expanz_service_DeltaRequest.h"
+#import "expanz_service_DataPublicationRequest.h"
+#import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
+
 
 
 @implementation expanz_ui_ActivityInstanceViewController
@@ -44,7 +45,8 @@
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
-        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _activityClient = [[[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)] retain];
+        _activityManager = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
         _activityDefinition = [activityDefinition retain];
         self.title = _activityDefinition.title;
         _activityRequest = [[CreateActivityRequest alloc]
@@ -56,16 +58,11 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (id <expanz_service_ActivityClient>)activityClient {
-    return [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
-}
-
-/* ================================================================================================================== */
 - (void)sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
         DeltaRequest* deltaRequest = [DeltaRequest forField:field];
-        [[self activityClient] sendDeltaWith:deltaRequest delegate:self];
+        [_activityClient sendDeltaWith:deltaRequest delegate:self];
     }
 }
 
@@ -80,7 +77,7 @@
     MethodInvocationRequest* methodRequest =
         [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
     [_spinner startAnimating];
-    [[self activityClient] sendMethodInvocationWith:methodRequest delegate:self];
+    [_activityClient sendMethodInvocationWith:methodRequest delegate:self];
     [methodRequest release];
 }
 
@@ -130,7 +127,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[self activityClient] createActivityWith:_activityRequest delegate:self];
+    [_activityClient createActivityWith:_activityRequest delegate:self];
 }
 
 - (void)viewDidUnload {
@@ -194,7 +191,7 @@
     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
         initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken
                encoding:DeltaEncodingBase64];
-    [[self activityClient] sendDeltaWith:deltaRequest delegate:self];
+    [_activityClient sendDeltaWith:deltaRequest delegate:self];
     [deltaRequest release];
 
     _currentlyEditingImageView.image = image;
@@ -235,6 +232,8 @@
 /* ================================================== Utility Methods =============================================== */
 - (void)dealloc {
     [_spinner release];
+    [_activityClient release];
+    [_activityManager release];
     [_activityRequest release];
     [_activityDefinition release];
     [_activityInstance release];

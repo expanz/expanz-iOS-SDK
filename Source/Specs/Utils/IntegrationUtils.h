@@ -17,6 +17,6 @@
 
 + (void) loginWithDefaultUserIfRequired; 
 + (expanz_model_ActivityInstance*) aValidActivity;
-+ (ASIFormDataRequest*) requestThatWillFail; 
++ (NSURL*)urlThatWillFail;
 
 @end

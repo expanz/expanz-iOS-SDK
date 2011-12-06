@@ -34,7 +34,7 @@ SPEC_BEGIN(ActivityManagerSpec)
             ActivityDefinition* definition = [[ActivityDefinition alloc]
                 initWithName:@"TestFixture" title:@"TestFixture" style:[ActivityStyle defaultStyle]];
 
-            [activityManager transitionToActivityWithDefinition:definition];
+            [activityManager showActivityWithDefinition:definition];
         });
 
         it(@"should report an error if the activity requires a controller that doesn't exist", ^{
@@ -42,7 +42,7 @@ SPEC_BEGIN(ActivityManagerSpec)
             ActivityDefinition* definition = [[ActivityDefinition alloc]
                 initWithName:@"My.Fun.Documents" title:@"My Fun Documents" style:[ActivityStyle browseStyle]];
 
-            [activityManager transitionToActivityWithDefinition:definition];
+            [activityManager showActivityWithDefinition:definition];
             assertThat(reporter.message, equalTo(@"No controller exists named My_Fun_Documents_Browse_ViewController"));
 
         });

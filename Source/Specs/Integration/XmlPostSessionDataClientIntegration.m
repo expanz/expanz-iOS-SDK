@@ -76,7 +76,7 @@ describe(@"Retrieve session data using an access token", ^{
     
     it(@"should invoke the delegate's failure handler if the underlying ASIFormDataRequest fails.", ^{
         XmlPostSessionDataClient* anotherClient = [[[XmlPostSessionDataClient alloc] 
-                                                   initWithRequest:[IntegrationUtils requestThatWillFail]] autorelease]; 
+                                                   initWithServiceUrl:[IntegrationUtils urlThatWillFail]] autorelease];
         [anotherClient retrieveSessionDataWith:nil delegate:delegate]; 
         assertWillHappen(delegate.error != nil); 
         LogDebug(@"Error: %@", delegate.error);

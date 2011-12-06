@@ -21,30 +21,25 @@
 
 @implementation expanz_iOS_SDKModule
 
-- (void) configure {
+- (void)configure {
     SDKConfiguration* config = [SDKConfiguration globalConfiguration];
-    [self registerEagerSingleton:[expanz_ui_NavigationManager class]];
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:config.createSessionUrl];
-        XmlPostLoginClient* client = [[[XmlPostLoginClient alloc] initWithRequest:request] autorelease];
-        [request release];
+        XmlPostLoginClient* client =
+            [[[XmlPostLoginClient alloc] initWithServiceUrl:config.createSessionUrl] autorelease];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_LoginClient)];
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:config.execUrl];
-        XmlPostSessionDataClient* client = [[[XmlPostSessionDataClient alloc] initWithRequest:request] autorelease];
-        [request release];
+        XmlPostSessionDataClient* client =
+            [[[XmlPostSessionDataClient alloc] initWithServiceUrl:config.execUrl] autorelease];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:config.execUrl];
-        XmlPostActivityClient* client = [[[XmlPostActivityClient alloc] initWithRequest:request] autorelease];
-        [request release];
+        XmlPostActivityClient* client = [[[XmlPostActivityClient alloc] initWithServiceUrl:config.execUrl] autorelease];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_ActivityClient)];
     /* ================================================================================================================== */

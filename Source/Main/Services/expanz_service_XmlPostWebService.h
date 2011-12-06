@@ -13,24 +13,24 @@
 #import "ASIFormDataRequest.h"
 #import "xml_Serializable.h"
 
+@class expanz_iOS_SDKConfiguration;
+@protocol expanz_ui_SystemEventReporter;
+
 
 /**
  * Abstract for Expanz XML post style web services. 
  */
 @interface expanz_service_XmlPostWebService : NSObject
 
+@property (nonatomic, readonly) NSURL* serviceUrl;
+@property (nonatomic, readonly) ASIFormDataRequest* request;
 
-@property (nonatomic, retain) ASIFormDataRequest* request; 
-
-/**
- * Initializes the request using an ASIFormDataRequest that has been mapped to the service endpoint. 
- */
-- (id) initWithRequest:(ASIFormDataRequest*)request;
+- (id) initWithServiceUrl:(NSURL*)serviceUrl;
 
 /**
  * Utility method for appending post data to the underlying request. 
  */
-- (void) addPayload:(id<xml_Serializable>)xmlable; 
+- (void) newRequestWithPayload:(id <xml_Serializable>)xmlable;
 
 @end
 

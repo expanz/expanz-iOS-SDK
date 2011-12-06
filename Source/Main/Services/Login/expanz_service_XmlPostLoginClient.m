@@ -24,7 +24,7 @@
 
 
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
-    [self addPayload:sessionRequest];
+    [self newRequestWithPayload:sessionRequest];
     
     [self.request setCompletionBlock:^{
         RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];

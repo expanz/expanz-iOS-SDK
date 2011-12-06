@@ -19,7 +19,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillDisappear:animated];
     LogDebug(@"Loading document. . . . ");
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"cv-jasper" ofType:@"doc"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"doc"];
     NSURL* url = [NSURL fileURLWithPath:path];
     LogDebug("URL: %@", url);
     NSURLRequest* request = [NSURLRequest requestWithURL:url];

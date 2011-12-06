@@ -25,6 +25,7 @@
     UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
 @private
+    id<expanz_service_ActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;
     UITextField* _currentlyEditingField;
@@ -52,11 +53,6 @@
  * Invoke a method on the model. 
  */
 - (void)sendMethodInvocation:(NSString*)methodName;
-
-/** 
- * Returns activity client service. 
- */
-- (id <expanz_service_ActivityClient>)activityClient;
 
 - (void)hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId;
 

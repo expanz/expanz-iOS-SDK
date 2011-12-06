@@ -24,7 +24,7 @@
 - (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
                         delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
     
-    [self addPayload:sessionDataRequest];
+    [self newRequestWithPayload:sessionDataRequest];
     
     [self.request setCompletionBlock:^{
         LogDebug(@"Response: %@", [self.request responseString]);
