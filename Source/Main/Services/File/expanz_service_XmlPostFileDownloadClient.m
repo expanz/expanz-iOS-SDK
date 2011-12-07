@@ -8,31 +8,27 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-#import <Objection-iOS/Objection.h>
-#import "ASIFormDataRequest.h"
-#import "RXMLElement+SessionContext.h"
-#import "expanz_service_SessionRequest.h"
-#import "expanz_model_SessionContext.h"
-#import "expanz_service_XmlPostLoginClient.h"
+#import "expanz_service_XmlPostFileDownloadClient.h"
 
 
-@implementation expanz_service_XmlPostLoginClient
+@implementation expanz_service_XmlPostFileDownloadClient
 
 
 /* ================================================= Protocol Methods =============================================== */
-- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
-    [self newRequestWithPayload:sessionRequest];
+- (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
+                 delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
     
     [self.request setCompletionBlock:^{
-        RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];
-        [delegate requestDidFinishWithSessionContext:[element asSessionContext]];                          
+        NSData* data = [self.request responseData];
+        LogDebug(@"Got data!");
+        [delegate requestDidFinishWithData:data];
     }];
     
     [self.request setFailedBlock:^{
         [delegate requestDidFailWithError:[self.request error]]; 
     }];
     [self.request startAsynchronous];
+
 }
 
 

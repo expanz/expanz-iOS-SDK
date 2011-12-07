@@ -67,13 +67,18 @@ static SDKConfiguration* _globalConfiguration;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSURL*)createSessionUrl {
+- (NSURL*) createSessionServiceUrl {
     return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]] retain];
 }
 
-- (NSURL*)execUrl {
+- (NSURL*) execXServiceUrl {
     return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]] retain];
 }
+
+- (NSURL*) getFileServiceUrl {
+    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/GetFile", _baseUrl]] retain];
+}
+
 
 
 /* ================================================== Utility Methods =============================================== */

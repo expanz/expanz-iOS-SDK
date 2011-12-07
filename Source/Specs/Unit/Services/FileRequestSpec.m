@@ -12,8 +12,9 @@
 #import "SpecHelper.h"
 #import "expanz_service_FileRequest.h"
 
-#define kExpectedXml @"<ESA sessionHandle=\"1234\"><Activity activityHandle=\"1234\"><Context id=\"22\" Type=\"\" \
-contextObject=\"File\"/><MenuAction defaultAction=\"1\" contextObject=\"File\"/></Activity></ESA>"
+#define kExpectedXml @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"1234\">\
+<Context id=\"22\" Type=\"\" contextObject=\"File\"/><MenuAction defaultAction=\"1\" contextObject=\"File\"/>\
+</Activity></ESA></xml><sessionHandle>1234</sessionHandle></ExecX>"
 
 SPEC_BEGIN(FileRequestSpec)
 
@@ -39,7 +40,7 @@ SPEC_BEGIN(FileRequestSpec)
 
     });
 
-    fdescribe(@"Xml serialization", ^{
+    describe(@"Xml serialization", ^{
 
         it(@"should be able to serialize itself to xml", ^{
             FileRequest* fileRequest =

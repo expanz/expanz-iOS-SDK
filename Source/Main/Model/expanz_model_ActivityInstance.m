@@ -12,6 +12,7 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_GridData.h"
+#import "expanz_model_FileResource.h"
 
 
 @implementation expanz_model_ActivityInstance
@@ -28,6 +29,7 @@
         _handle = [handle copy];
         _persistentId = [persistentId copy];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
+        _fileResources = [[NSMutableSet alloc] initWithCapacity:4];
         _messages = [[NSMutableArray alloc] initWithCapacity:10];
         _dataSets = [[NSMutableArray alloc] initWithCapacity:2];
     }
@@ -45,7 +47,7 @@
 }
 
 - (NSArray*) fields {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"fieldId" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"fieldId" ascending:YES];
     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -63,8 +65,17 @@
     return nil;
 }
 
+- (NSArray*) fileResources {
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
+    return [_fileResources sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
+- (void) addFileResource:(expanz_model_FileResource*)fileResource {
+    [_fileResources addObject:fileResource];
+}
+
 - (NSArray*) messages {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"content" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"content" ascending:YES];
     return [_messages sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -73,8 +84,8 @@
 }
 
 - (NSArray*) dataSets {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"dataId" ascending:YES] autorelease];
-    return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];    
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"dataId" ascending:YES];
+    return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (void) addData:(expanz_model_AbstractData*)data {
@@ -100,6 +111,7 @@
     [_handle release];
     [_persistentId release];
     [_fields release];
+    [_fileResources release];
     [_messages release];
     [_dataSets release];
     [super dealloc];

@@ -10,7 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-
+/**
+* Represents a file within a `expanz_model_Folder`, as part of a `expanz_model_TreeData` set.
+*/
 @interface expanz_model_File : NSObject
 
 @property (nonatomic, readonly) NSString* fileId;

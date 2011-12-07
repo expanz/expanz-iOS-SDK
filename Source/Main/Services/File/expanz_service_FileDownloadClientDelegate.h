@@ -11,7 +11,7 @@
 
 @protocol expanz_service_FileDownloadClientDelegate
 
-- (void) requestDidFinishWithData:(id)data;
+- (void) requestDidFinishWithData:(NSData*)data;
 - (void) requestDidFailWithError:(NSError*)error;
 
 @end

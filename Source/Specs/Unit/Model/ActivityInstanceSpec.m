@@ -12,7 +12,8 @@
 #import "SpecHelper.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
-#import "../../../Main/Model/expanz_model_GridData.h"
+#import "expanz_model_GridData.h"
+#import "expanz_model_FileResource.h"
 
 
 SPEC_BEGIN(ActivityInstanceSpec)
@@ -81,7 +82,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
             GridData* retrieved = (GridData*) [instance dataWithId:@"customersList"];
             assertThat(retrieved, equalTo(dataSet));
         });
-        
+
         it(@"should return nil when asked for a dataset of an id not being stored", ^{
             assertThat([instance dataWithId:@"not.stored"], nilValue());
         });
@@ -119,10 +120,24 @@ SPEC_BEGIN(ActivityInstanceSpec)
         });
     });
 
+    describe(@"File resources", ^{
+
+        it(@"should allow adding file resources", ^{
+
+            FileResource* fileResource =
+                [[[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"] autorelease];
+            [instance addFileResource:fileResource];
+
+            assertThatInt([[instance fileResources] count], equalToInt(1));
+
+        });
+
+    });
+
 
     afterEach(^{
         [instance release];
     });
 
 
-SPEC_END
+    SPEC_END

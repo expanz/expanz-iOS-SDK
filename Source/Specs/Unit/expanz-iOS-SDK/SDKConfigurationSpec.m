@@ -41,8 +41,8 @@ SPEC_BEGIN(SDKConfigurationSpec)
             assertThat(globalConfiguration, notNilValue());
             assertThat(globalConfiguration.baseUrl, notNilValue());
             assertThat(globalConfiguration.preferredSite, notNilValue());
-            assertThat([globalConfiguration createSessionUrl], notNilValue());
-            assertThat([globalConfiguration execUrl], notNilValue());
+            assertThat([globalConfiguration createSessionServiceUrl], notNilValue());
+            assertThat([globalConfiguration execXServiceUrl], notNilValue());
         });
 
         it(@"should allow setting the global configuration via a class method (API style invocation)", ^{

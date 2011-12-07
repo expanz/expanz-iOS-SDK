@@ -27,6 +27,7 @@
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
 		6B0EAD2A148737F000E56C18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0EAD29148737F000E56C18 /* MainWindow.xib */; };
+		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
 		6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
 		6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
 		6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
@@ -79,7 +80,6 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6B9F5EA9148E52E6008FBAAF /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
 		6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
@@ -807,6 +807,20 @@
 		6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
 		6BFACBA414679916007C7332 /* expanz_service_FileDownloadClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
 		6BFACBA414679916007C7334 /* FileDownloadRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */; };
+		6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
+		6BFACBA414679916007C7337 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
+		6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
+		6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
+		6BFACBA414679916007C733B /* expanz_service_XmlPostFileDownloadClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6BFACBA414679916007C733C /* expanz_service_XmlPostFileDownloadClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
+		6BFACBA414679916007C733F /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
+		6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
+		6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
+		6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
+		6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
+		6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
+		6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1242,6 +1256,11 @@
 		6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadRequest.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequestSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostFileDownloadClient.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostFileDownloadClient.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C733D /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7342 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7345 /* FileResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileResourceSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1636,6 +1655,8 @@
 		6BD47C441484703F000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7342 /* expanz_model_FileResource.h */,
+				6BFACBA414679916007C733D /* expanz_model_FileResource.m */,
 				6BFACBA414679916007C72A8 /* expanz_model_File.m */,
 				6BFACBA414679916007C72AD /* expanz_model_File.h */,
 				6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */,
@@ -1904,6 +1925,7 @@
 		6BD47DD01484705A000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7345 /* FileResourceSpec.m */,
 				6BFACBA414679916007C72B4 /* FileSpec.m */,
 				6BFACBA414679916007C72B2 /* FolderSpec.m */,
 				6BFACBA414679916007C72B0 /* TreeDataSpec.m */,
@@ -2031,6 +2053,8 @@
 		6BFACBA414679916007C7323 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */,
+				6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */,
 				6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */,
 				6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */,
 				6BFACBA414679916007C7324 /* Payload */,
@@ -2163,6 +2187,8 @@
 				6BFACBA414679916007C7326 /* expanz_service_FileDownloadClient.h in Headers */,
 				6BFACBA414679916007C732E /* expanz_service_FileDownloadRequest.h in Headers */,
 				6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */,
+				6BFACBA414679916007C733B /* expanz_service_XmlPostFileDownloadClient.h in Headers */,
+				6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2277,6 +2303,8 @@
 				6BFACBA414679916007C7327 /* expanz_service_FileDownloadClient.h in Headers */,
 				6BFACBA414679916007C732F /* expanz_service_FileDownloadRequest.h in Headers */,
 				6BFACBA414679916007C7332 /* expanz_service_FileDownloadClientDelegate.h in Headers */,
+				6BFACBA414679916007C733C /* expanz_service_XmlPostFileDownloadClient.h in Headers */,
+				6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2576,8 +2604,10 @@
 				6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */,
-				6B9F5EA9148E52E6008FBAAF /* FileRequestSpec.m in Sources */,
 				6BFACBA414679916007C7329 /* expanz_service_FileDownloadRequest.m in Sources */,
+				6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */,
+				6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2678,6 +2708,8 @@
 				6BFACBA414679916007C7317 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731F /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */,
+				6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2777,6 +2809,8 @@
 				6BFACBA414679916007C7315 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731D /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732A /* expanz_service_FileDownloadRequest.m in Sources */,
+				6BFACBA414679916007C7337 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C733F /* expanz_model_FileResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2923,6 +2957,10 @@
 				6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732B /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7334 /* FileDownloadRequestSpec.m in Sources */,
+				6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */,
+				6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */,
+				6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

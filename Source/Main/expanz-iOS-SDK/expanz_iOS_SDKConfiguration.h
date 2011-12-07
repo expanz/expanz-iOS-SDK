@@ -19,17 +19,20 @@
 @property(nonatomic, readonly) NSString* preferredSite;
 @property(nonatomic, readonly) NSString* userType;
 
-+ (void) setGlobalConfiguration:(expanz_iOS_SDKConfiguration*)configuration;
 
 + (expanz_iOS_SDKConfiguration*) globalConfiguration;
+
++ (void) setGlobalConfiguration:(expanz_iOS_SDKConfiguration*)configuration;
 
 + (void) setConfigurationFile:(NSString*)fileName;
 
 - (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType;
 
-- (NSURL*) createSessionUrl;
+- (NSURL*) createSessionServiceUrl;
 
-- (NSURL*) execUrl;
+- (NSURL*) execXServiceUrl;
+
+- (NSURL*) getFileServiceUrl;
 
 @end
 
