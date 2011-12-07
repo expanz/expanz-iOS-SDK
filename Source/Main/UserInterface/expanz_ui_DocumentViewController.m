@@ -45,6 +45,7 @@
     [_spinner startAnimating];
     FileRequest* fileRequest = [FileRequest forFileId:_documentId activityHandle:_activityHandle];
     [_fileDownloadClient sendFileRequestWith:fileRequest delegate:self];
+    [_documentView setHidden:YES];
 }
 
 - (IBAction) print {
@@ -95,6 +96,7 @@
     LogDebug("URL: %@", url);
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [_documentView loadRequest:request];
+    [_documentView setHidden:NO];
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
