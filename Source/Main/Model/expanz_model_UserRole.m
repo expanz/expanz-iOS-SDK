@@ -16,7 +16,7 @@
 @synthesize roleId = _roleId;
 @synthesize roleDescription = _roleDescription;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithRoleId:(NSString*)roleId andDescription:(NSString*)description {
     self = [super init];
     if (self) {

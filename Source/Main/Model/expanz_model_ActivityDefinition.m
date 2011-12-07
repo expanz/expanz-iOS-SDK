@@ -18,7 +18,7 @@
 @synthesize style = _style;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithName:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style {
     self = [self init];
     if (self) {

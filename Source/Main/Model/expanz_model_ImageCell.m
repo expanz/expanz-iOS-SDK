@@ -20,7 +20,7 @@
 @synthesize image = _image;
 @synthesize hasAskedImageToLoad = _hasAskedImageToLoad;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl {
     self = [super initWithCellId:cellId];
     if (self) {

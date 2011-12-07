@@ -20,7 +20,7 @@
 @synthesize autoPopulate = _autoPopulate;
 @synthesize useThumbnailImages = _useThumbnailImages;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) init {
     self = [super init];
     if (self) {

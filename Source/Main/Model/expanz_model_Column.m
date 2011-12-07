@@ -23,7 +23,7 @@
 @synthesize width = _width;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label
                dataType:(ExpanzDataType)dataType width:(NSInteger)width {
 

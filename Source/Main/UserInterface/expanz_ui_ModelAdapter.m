@@ -45,7 +45,7 @@
 @synthesize activityName = _activityName;
 @synthesize activityInstance = _activityInstance;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {

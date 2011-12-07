@@ -31,7 +31,7 @@
 
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillDisappear:animated];
     LogDebug(@"Loading document. . . . ");

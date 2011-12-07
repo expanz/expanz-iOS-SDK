@@ -39,7 +39,7 @@
 @synthesize spinner = _spinner;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
                       initialKey:(NSString*)initialKey {
 

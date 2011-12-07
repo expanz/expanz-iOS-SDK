@@ -55,7 +55,7 @@ static SDKConfiguration* _globalConfiguration;
 }
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType {
     self = [super init];
     if (self) {

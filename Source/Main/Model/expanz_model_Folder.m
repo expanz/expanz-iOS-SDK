@@ -22,7 +22,7 @@
 @synthesize sequence = _sequence;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithFolderId:(NSString*)folderId title:(NSString*)title hint:(NSString*)hint
            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence {
 

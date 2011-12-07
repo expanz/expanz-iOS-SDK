@@ -29,7 +29,7 @@
     return [[[ActivityStyle alloc] initWithName:string] autorelease];
 }
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithName:(NSString*)name {
     self = [super init];
     if (self) {

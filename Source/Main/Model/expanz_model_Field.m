@@ -28,7 +28,7 @@
 @synthesize value = _value;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue
               dataType:(ExpanzDataType)datatype label:(NSString*)label hint:(NSString*)hint {
 

@@ -20,7 +20,7 @@
 @synthesize handle = _handle;
 @synthesize persistentId = _persistentId;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
     self = [super init];
     if (self) {

@@ -19,7 +19,7 @@
 @synthesize hasWorkflowTrays = _hasWorkflowTrays;
 @synthesize canChangeCompanyRole = _canChangeCompanyRole;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole {
     self = [super init];
     if (self) {

@@ -21,7 +21,7 @@
 @synthesize type = _type;
 @synthesize field = _field;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithFileId:(NSString*)fileId title:(NSString*)title hint:(NSString*)hint fileName:(NSString*)fileName
             sequence:(NSString*)sequence type:(NSString*)type field:(NSString*)field {
 

@@ -19,7 +19,7 @@
 @synthesize userType = _userType;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithUserName:(NSString*)userName password:(NSString*)password appSite:(NSString*)appSite
               userType:(NSString*)userType {
 

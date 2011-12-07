@@ -35,7 +35,7 @@ static SessionContext* globalContext;
 }
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithSessionToken:(NSString*)sessionToken hasError:(BOOL)hasError hasWarning:(BOOL)hasWarning
                     message:(NSString*)message {
 

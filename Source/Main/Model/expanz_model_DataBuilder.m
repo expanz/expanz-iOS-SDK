@@ -21,7 +21,7 @@
 @synthesize dataId = _dataId;
 @synthesize source = _source;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithDataId:(NSString*)dataId source:(NSString*)source {
     self = [super init];
     if (self) {

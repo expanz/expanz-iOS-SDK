@@ -33,7 +33,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 @synthesize spinner = _spinner;
 @synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {

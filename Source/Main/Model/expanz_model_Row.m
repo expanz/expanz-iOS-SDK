@@ -30,7 +30,7 @@
 @synthesize rowId = _rowId;
 @synthesize type = _type;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithRowId:(NSString*)rowId type:(NSString*)type {
     self = [super init];
     if (self) {

@@ -8,48 +8,55 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
+#import "expanz_service_FileDownloadRequest.h"
 #import "expanz_model_SessionContext.h"
-#import "expanz_service_FileRequest.h"
 
 
-@implementation expanz_service_FileRequest
+@implementation expanz_service_FileDownloadRequest
 
-@synthesize fileId = _fileId;
+@synthesize blobId = _blobId;
+@synthesize isByteArray = _isByteArray;
 @synthesize activityHandle = _activityHandle;
 @synthesize sessionToken = _sessionToken;
 
 /* ================================================= Class Methods ================================================== */
-+ (id)forFileId:(NSString*)fileId activityHandle:(NSString*)activityHandle {
-    return [[[FileRequest alloc]
-        initWithFileId:fileId activityHandle:activityHandle sessionToken:[SessionContext globalContext].sessionToken]
-        autorelease];
++ (id) withBlobId:(NSString*)blobId isByteArray:(BOOL)isByteArray activityHandle:(NSString*)activityHandle {
+    return [[FileDownloadRequest alloc] initWithBlobId:blobId isByteArray:isByteArray activityHandle:activityHandle
+                                          sessionToken:[SessionContext globalContext].sessionToken];
 }
 
+
 /* ================================================== Initializers ================================================== */
-- (id)initWithFileId:(NSString*)fileId activityHandle:(NSString*)activityHandle sessionToken:(NSString*)sessionToken {
+- (id) initWithBlobId:(NSString*)blobId isByteArray:(BOOL)isByteArray activityHandle:(NSString*)activityHandle
+         sessionToken:(NSString*)sessionToken {
+
     self = [super init];
     if (self) {
-        _fileId = [fileId copy];
+        _blobId = [blobId copy];
+        _isByteArray = isByteArray;
         _activityHandle = [activityHandle copy];
         _sessionToken = [sessionToken copy];
     }
     return self;
+
 }
 
 /* ================================================= Protocol Methods =============================================== */
-#define kXmlTemplate @"<ExecX xmlns=\"http://www.expanz.com/ESAService\"><xml><ESA><Activity activityHandle=\"%@\">\
-<Context id=\"%@\" Type=\"\" contextObject=\"File\"/><MenuAction defaultAction=\"1\" contextObject=\"File\"/>\
-</Activity></ESA></xml><sessionHandle>%@</sessionHandle></ExecX>"
 
-- (NSString*)toXml {
-    return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fileId, _sessionToken];
+#define kXmlTemplate @"<GetBlob xmlns=\"http://www.expanz.com/ESAService\"><sessionHandle>%@</sessionHandle>\
+<activityHandle>%@</activityHandle><blobId>%@</blobId><isbyteArray>%@</isbyteArray></GetBlob>"
+
+- (NSString*) toXml {
+    return [NSString stringWithFormat:kXmlTemplate, _sessionToken, _activityHandle, _blobId,
+                                      _isByteArray == YES ? @"true" : @"false"];
+
 }
 
 
+
 /* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_fileId release];
+- (void) dealloc {
+    [_blobId release];
     [_activityHandle release];
     [_sessionToken release];
     [super dealloc];

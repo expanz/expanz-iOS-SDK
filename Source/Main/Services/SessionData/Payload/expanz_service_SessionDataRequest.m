@@ -18,7 +18,7 @@
 
 @synthesize sessionToken = _sessionToken;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 
 - (id)initWithSessionToken:(NSString*)sessionToken {
     self = [self init];

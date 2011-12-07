@@ -17,7 +17,7 @@
 @synthesize processId = _processId;
 @synthesize title = _title;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithProcessId:(NSString*)processId andTitle:(NSString*)title {
     self = [self init];
     if (self) {

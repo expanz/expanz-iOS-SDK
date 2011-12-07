@@ -30,7 +30,7 @@
            sessionToken:sessionToken] autorelease];
 }
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
           sessionToken:(NSString*)sessionToken {
 

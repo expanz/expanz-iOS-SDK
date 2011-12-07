@@ -18,7 +18,7 @@
 @synthesize activityInstance = _activityInstance;
 @synthesize methodName = _methodName;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) initWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance methodName:(NSString*)methodName {
     self = [super init]; 
     if (self) {

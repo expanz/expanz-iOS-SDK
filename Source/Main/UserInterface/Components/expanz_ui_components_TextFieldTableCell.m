@@ -16,7 +16,7 @@
 
 @synthesize textField = _textField;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

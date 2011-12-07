@@ -20,7 +20,7 @@
 
 @synthesize tableCell = _tableCell;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
       activityName:(NSString*)activityName {
 

@@ -18,7 +18,7 @@
 @synthesize serviceUrl = _serviceUrl;
 @synthesize request = _request;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithServiceUrl:(NSURL*)serviceUrl {
     self = [super init];
     if (self) {

@@ -19,7 +19,7 @@
 @synthesize initialKey = _initialKey;
 @synthesize sessionToken = _sessionToken;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id) init {
     self = [super init];
     if (self) {

@@ -24,7 +24,7 @@
 @synthesize menu = _menu;
 @synthesize menuTable = _menuTable;
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 
 - (id)init {
     self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];

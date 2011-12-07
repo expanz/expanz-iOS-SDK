@@ -18,7 +18,7 @@
 @synthesize content = _content;
 
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 
 - (id) initWithMessageType:(MessageType)messageType content:(NSString*)content {
     self = [super init];

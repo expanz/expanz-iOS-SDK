@@ -15,7 +15,7 @@
 
 @implementation expanz_model_TreeData
 
-/* ================================================== Constructors ================================================== */
+/* ================================================== Initializers ================================================== */
 - (id)initWithDataId:(NSString*)dataId {
     self = [super initWithDataId:dataId];
     if (self) {
