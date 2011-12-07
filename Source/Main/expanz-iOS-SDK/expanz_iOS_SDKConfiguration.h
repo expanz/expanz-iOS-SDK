@@ -32,7 +32,7 @@
 
 - (NSURL*) execXServiceUrl;
 
-- (NSURL*) getFileServiceUrl;
+- (NSURL*) getBlobServiceUrl;
 
 @end
 

@@ -23,7 +23,7 @@
 @interface expanz_service_XmlPostWebService : NSObject
 
 @property (nonatomic, readonly) NSURL* serviceUrl;
-@property (nonatomic, readonly) ASIFormDataRequest* request;
+@property (nonatomic, retain) ASIFormDataRequest* request;
 
 - (id) initWithServiceUrl:(NSURL*)serviceUrl;
 

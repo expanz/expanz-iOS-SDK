@@ -10,11 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_FileDownloadClientDelegate.h"
+#import "expanz_service_FileDownloadClientDelegate.h"
 
 @class expanz_service_FileDownloadRequest;
+@class expanz_service_FileRequest;
 
 
-@protocol expanz_service_FileDownloadClient
+@protocol expanz_service_FileDownloadClient<NSObject>
+
+- (void)sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
+                   delegate:(id <expanz_service_FileDownloadClientDelegate>)delegate;
 
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate;

@@ -35,4 +35,9 @@
     [_field release];
 }
 
+- (NSString*) description {
+    return [NSString stringWithFormat:@"FileResource: path='%@', ext='%@', field='%@'", _path, _ext, _field];
+}
+
+
 @end

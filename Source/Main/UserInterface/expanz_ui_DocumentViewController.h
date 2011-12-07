@@ -9,18 +9,22 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
+#import "expanz_service_FileDownloadClientDelegate.h"
+
+@protocol expanz_service_FileDownloadClient;
 
 
-@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_ActivityClientDelegate> {
+@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_FileDownloadClientDelegate> {
 
 @private
-    id<expanz_service_ActivityClient> _activityClient;
+    id<expanz_service_FileDownloadClient> _fileDownloadClient;
 }
 
-@property (nonatomic, retain) NSString* documentId;
-@property (nonatomic, retain) NSString* activityHandle; 
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 @property (nonatomic, retain) IBOutlet UIWebView* documentView;
+@property (nonatomic, retain) NSString* documentId;
+@property (nonatomic, retain) NSString* activityHandle;
+@property (nonatomic, retain) NSString* ext;
 
 - (id) initWithDocumentId:(NSString*)documentId activityHandle:(NSString*)activityHandle;
 

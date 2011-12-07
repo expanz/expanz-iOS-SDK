@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_service_FileDownloadRequest.h"
 #import "expanz_model_SessionContext.h"
+#import "expanz_model_FileResource.h"
 
 
 @implementation expanz_service_FileDownloadRequest
@@ -24,7 +25,6 @@
     return [[FileDownloadRequest alloc] initWithBlobId:blobId isByteArray:isByteArray activityHandle:activityHandle
                                           sessionToken:[SessionContext globalContext].sessionToken];
 }
-
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithBlobId:(NSString*)blobId isByteArray:(BOOL)isByteArray activityHandle:(NSString*)activityHandle

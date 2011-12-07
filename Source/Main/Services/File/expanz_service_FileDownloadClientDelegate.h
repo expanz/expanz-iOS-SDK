@@ -9,8 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+@class expanz_model_ResourceCollection;
+
 @protocol expanz_service_FileDownloadClientDelegate
 
+- (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection;
 - (void) requestDidFinishWithData:(NSData*)data;
 - (void) requestDidFailWithError:(NSError*)error;
 

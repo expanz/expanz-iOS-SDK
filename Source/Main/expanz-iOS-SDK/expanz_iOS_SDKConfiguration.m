@@ -75,8 +75,8 @@ static SDKConfiguration* _globalConfiguration;
     return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]] retain];
 }
 
-- (NSURL*) getFileServiceUrl {
-    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/GetFile", _baseUrl]] retain];
+- (NSURL*) getBlobServiceUrl {
+    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/GetBlob", _baseUrl]] retain];
 }
 
 

@@ -104,7 +104,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
     if ([indexPath row] == 0) {
         textFieldCell.textLabel.text = @"User Name";
-        textFieldCell.textField.placeholder = @"example@expanz.com";
+        textFieldCell.textField.placeholder = @"Consultant Id";
         textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
         textFieldCell.textField.returnKeyType = UIReturnKeyNext;
         _userNameField = [textFieldCell.textField retain];

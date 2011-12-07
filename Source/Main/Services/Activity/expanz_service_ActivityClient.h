@@ -26,9 +26,6 @@
 - (void)sendDeltaWith:(expanz_service_DeltaRequest*)deltaRequest
              delegate:(id <expanz_service_ActivityClientDelegate>)delegate;
 
-- (void)sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
-                   delegate:(id <expanz_service_ActivityClientDelegate>)delegate;
-
 - (void)sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
                         delegate:(id <expanz_service_ActivityClientDelegate>)delegate;
 

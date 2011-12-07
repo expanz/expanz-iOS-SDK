@@ -11,6 +11,8 @@
 #import <Foundation/Foundation.h>
 #import "xml_Serializable.h"
 
+@class expanz_model_FileResource;
+
 @interface expanz_service_FileDownloadRequest : NSObject<xml_Serializable>
 
 

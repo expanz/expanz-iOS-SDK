@@ -9,52 +9,67 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Objection-iOS/JSObjection.h>
-#import "expanz_ui_DocumentViewController.h"
+#import "expanz_model_FileResource.h"
+#import "expanz_model_ResourceCollection.h"
 #import "expanz_service_FileRequest.h"
+#import "expanz_service_FileDownloadClient.h"
+#import "expanz_service_FileDownloadRequest.h"
+#import "expanz_ui_DocumentViewController.h"
 
 
 @implementation expanz_ui_DocumentViewController
 
+@synthesize spinner = _spinner;
 @synthesize documentView = _documentView;
 @synthesize documentId = _documentId;
 @synthesize activityHandle = _activityHandle;
+@synthesize ext = _ext;
 
+/* ================================================== Initializers ================================================== */
 - (id) initWithDocumentId:(NSString*)documentId activityHandle:(NSString*)activityHandle {
     self = [super initWithNibName:@"DocumentView" bundle:[NSBundle mainBundle]];
     if (self) {
         _documentId = [documentId copy];
         _activityHandle = [activityHandle copy];
-        _activityClient = [[[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)] retain];
+        _fileDownloadClient =
+            [[[JSObjection globalInjector] getObject:@protocol(expanz_service_FileDownloadClient)] retain];
     }
     return self;
 }
 
 
-
-/* ================================================== Initializers ================================================== */
+/* ================================================ Interface Methods =============================================== */
 - (void) viewWillAppear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+    [super viewWillAppear:animated];
+    [_spinner startAnimating];
+    FileRequest* fileRequest = [FileRequest forFileId:_documentId activityHandle:_activityHandle];
+    [_fileDownloadClient sendFileRequestWith:fileRequest delegate:self];
+}
+
+/* ================================================= Protocol Methods =============================================== */
+- (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection {
+    FileResource* fileResource = [[collection fileResources] objectAtIndex:0];
+    self.title = fileResource.path;
+    self.ext = fileResource.ext;
+   
+    FileDownloadRequest* request =
+        [[FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle] autorelease];
+    [_fileDownloadClient downloadFileWith:request delegate:self];
+
+}
+
+- (void) requestDidFinishWithData:(NSData*)data {
+    [_spinner stopAnimating];
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSString* fileName = [@"current-document" stringByAppendingString:self.ext];
+    NSString* filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    [data writeToFile:filePath atomically:YES];
     LogDebug(@"Loading document. . . . ");
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"doc"];
-    NSURL* url = [NSURL fileURLWithPath:path];
+    NSURL* url = [NSURL fileURLWithPath:filePath];
     LogDebug("URL: %@", url);
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [_documentView loadRequest:request];
-}
-
-
-/* ================================================ Interface Methods =============================================== */
-- (void) viewDidLoad {
-    [super viewDidLoad];
-    FileRequest* fileRequest = [FileRequest forFileId:_documentId activityHandle:_activityHandle];
-    [_activityClient sendFileRequestWith:fileRequest delegate:self];
-}
-
-
-/* ================================================= Protocol Methods =============================================== */
-- (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance {
-    LogDebug(@"Got response");
-
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
@@ -63,12 +78,14 @@
 }
 
 
+
 /* ================================================== Utility Methods =============================================== */
 - (void) dealloc {
+    [_spinner release];
     [_documentView release];
     [_documentId release];
     [_activityHandle release];
-    [_activityClient release];
+    [_fileDownloadClient release];
     [super dealloc];
 }
 

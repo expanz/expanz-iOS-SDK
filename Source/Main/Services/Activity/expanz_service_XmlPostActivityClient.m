@@ -44,13 +44,6 @@
     [self doRequestWith:deltaRequest forDelegate:delegate];
 }
 
-- (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
-                    delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
-
-    [self doRequestWith:fileRequest forDelegate:delegate];
-}
-
-
 - (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
                          delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
