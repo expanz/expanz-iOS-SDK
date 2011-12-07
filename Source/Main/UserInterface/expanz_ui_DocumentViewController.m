@@ -21,6 +21,7 @@
 
 @synthesize spinner = _spinner;
 @synthesize documentView = _documentView;
+@synthesize printButton = _printButton;
 @synthesize documentId = _documentId;
 @synthesize activityHandle = _activityHandle;
 @synthesize ext = _ext;
@@ -46,12 +47,36 @@
     [_fileDownloadClient sendFileRequestWith:fileRequest delegate:self];
 }
 
+- (IBAction) print {
+    UIPrintInteractionController* pic = [UIPrintInteractionController sharedPrintController];
+    //pic.delegate = self;
+
+    UIPrintInfo* printInfo = [UIPrintInfo printInfo];
+    printInfo.outputType = UIPrintInfoOutputGeneral;
+    printInfo.jobName = self.title;
+    pic.printInfo = printInfo;
+
+    pic.printFormatter = [_documentView viewPrintFormatter];
+    pic.showsPageRange = YES;
+
+    void(^completionHandler)(UIPrintInteractionController*, BOOL, NSError*) =
+        ^(UIPrintInteractionController* printController, BOOL completed, NSError* error) {
+            if (!completed && error) {
+                NSLog(@"Printing could not complete because of error: %@", error);
+            }
+        };
+
+    [pic presentAnimated:YES completionHandler:completionHandler];
+
+
+}
+
 /* ================================================= Protocol Methods =============================================== */
 - (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection {
     FileResource* fileResource = [[collection fileResources] objectAtIndex:0];
     self.title = fileResource.path;
     self.ext = fileResource.ext;
-   
+
     FileDownloadRequest* request =
         [[FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle] autorelease];
     [_fileDownloadClient downloadFileWith:request delegate:self];
@@ -83,6 +108,7 @@
 - (void) dealloc {
     [_spinner release];
     [_documentView release];
+    [_printButton release];
     [_documentId release];
     [_activityHandle release];
     [_fileDownloadClient release];

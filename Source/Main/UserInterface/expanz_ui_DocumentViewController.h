@@ -14,19 +14,24 @@
 @protocol expanz_service_FileDownloadClient;
 
 
-@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_FileDownloadClientDelegate> {
+@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_FileDownloadClientDelegate,
+    UIPrintInteractionControllerDelegate> {
 
 @private
     id<expanz_service_FileDownloadClient> _fileDownloadClient;
 }
 
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-@property (nonatomic, retain) IBOutlet UIWebView* documentView;
-@property (nonatomic, retain) NSString* documentId;
-@property (nonatomic, retain) NSString* activityHandle;
-@property (nonatomic, retain) NSString* ext;
+
+@property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
+@property(nonatomic, retain) IBOutlet UIWebView* documentView;
+@property(nonatomic, retain) IBOutlet UIBarButtonItem* printButton;
+@property(nonatomic, retain) NSString* documentId;
+@property(nonatomic, retain) NSString* activityHandle;
+@property(nonatomic, retain) NSString* ext;
 
 - (id) initWithDocumentId:(NSString*)documentId activityHandle:(NSString*)activityHandle;
+
+- (IBAction) print;
 
 @end
 
