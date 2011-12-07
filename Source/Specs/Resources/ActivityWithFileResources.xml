@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="85" xmlns="">
+            <Activity activityHandle="634588545095309801.47">
+                <Field id="File.PersistentId" null="0" valid="1" value="209"/>
+                <Field id="File.Title" null="0" valid="1"
+                    value="Group Leader Weekly Summary 2011 (XLS)"/>
+                <Field id="File.Description" null="0" valid="1"
+                    value="Group Leader Weekly Summary 2011 (XLS)"/>
+                <Field id="File.Inactive" null="0" valid="1" value="0"/>
+                <Field id="File.Sequence" null="0" valid="1" value="13"/>
+                <Field id="File.Document.FileName" null="0" valid="1"
+                    value="T:\all thermomix data\Reports\Reports Templates\Group Leader Reports\GL Weekly Summary_Yearly Planner 020211 Master W.xls"/>
+                <Field id="File.Document.FileContents" null="0" valid="1" fileExt=".xls"
+                    url="blobs\TMXTEST\Thermomix.DocFile\Document\209.xls"/>
+            </Activity>
+            <Files>
+                <File path="blobs\TMXTEST\Thermomix.DocFile\Document\209.xls" ext=".xls"
+                    field="File.Document.FileContents"/>
+            </Files>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/TMXTEST#634588544585221855:2</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

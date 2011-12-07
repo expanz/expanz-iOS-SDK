@@ -29,7 +29,6 @@
         _handle = [handle copy];
         _persistentId = [persistentId copy];
         _fields = [[NSMutableSet alloc] initWithCapacity:20];
-        _fileResources = [[NSMutableSet alloc] initWithCapacity:4];
         _messages = [[NSMutableArray alloc] initWithCapacity:10];
         _dataSets = [[NSMutableArray alloc] initWithCapacity:2];
     }
@@ -65,14 +64,6 @@
     return nil;
 }
 
-- (NSArray*) fileResources {
-    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
-    return [_fileResources sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
-}
-
-- (void) addFileResource:(expanz_model_FileResource*)fileResource {
-    [_fileResources addObject:fileResource];
-}
 
 - (NSArray*) messages {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"content" ascending:YES];
@@ -111,7 +102,6 @@
     [_handle release];
     [_persistentId release];
     [_fields release];
-    [_fileResources release];
     [_messages release];
     [_dataSets release];
     [super dealloc];

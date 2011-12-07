@@ -96,7 +96,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
     });
 
     describe(@"Activity instance with tree data.", ^{
-        
+
         beforeEach(^{
             NSString* xmlString = [TestResource withName:@"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"];
             RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];

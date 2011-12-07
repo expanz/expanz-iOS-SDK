@@ -23,7 +23,6 @@
 
 @private
     NSMutableSet* _fields;
-    NSMutableSet* _fileResources;
     NSMutableArray* _messages;
     NSMutableArray* _dataSets;
 }
@@ -32,7 +31,6 @@
 @property(nonatomic, readonly) NSString* handle;
 @property(nonatomic, readonly) NSString* persistentId;
 @property(nonatomic, readonly) NSArray* fields;
-@property(nonatomic, readonly) NSArray* fileResources;
 @property(nonatomic, readonly) NSArray* messages;
 @property(nonatomic, readonly) NSArray* dataSets;
 
@@ -50,8 +48,6 @@
 * Returns the `expanz_model_Field` matching the supplied fieldId, or nil.
 */
 - (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
-
-- (void) addFileResource:(expanz_model_FileResource*)fileResource;
 
 /** 
 * Adds a message to the instance.

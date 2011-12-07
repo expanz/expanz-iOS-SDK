@@ -120,21 +120,6 @@ SPEC_BEGIN(ActivityInstanceSpec)
         });
     });
 
-    describe(@"File resources", ^{
-
-        it(@"should allow adding file resources", ^{
-
-            FileResource* fileResource =
-                [[[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"] autorelease];
-            [instance addFileResource:fileResource];
-
-            assertThatInt([[instance fileResources] count], equalToInt(1));
-
-        });
-
-    });
-
-
     afterEach(^{
         [instance release];
     });

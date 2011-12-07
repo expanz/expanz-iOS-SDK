@@ -20,11 +20,12 @@
 #import "expanz_model_DataBuilder.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
+#import "expanz_model_FileResource.h"
 
 
 @implementation RXMLElement (ActivityInstance)
 
-- (ActivityInstance*)asActivityInstance {
+- (ActivityInstance*) asActivityInstance {
     if (![self.tag isEqualToString:@"Activity"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not an Activity."];
     }
@@ -53,7 +54,7 @@
 }
 
 /* ================================================================================================================== */
-- (Field*)asField {
+- (Field*) asField {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Field."];
     }
@@ -88,7 +89,7 @@
 }
 
 /* ================================================================================================================== */
-- (Message*)asMessage {
+- (Message*) asMessage {
     if (![self.tag isEqualToString:@"Message"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Message."];
     }
@@ -99,7 +100,7 @@
 
 /* ================================================================================================================== */
 #pragma mark DataSet and DataSet child elements.
-- (AbstractData*)asData {
+- (AbstractData*) asData {
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
     }
@@ -128,7 +129,7 @@
     return [dataBuilder build];
 }
 
-- (Column*)asColumn {
+- (Column*) asColumn {
     if (![self.tag isEqualToString:@"Column"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Column."];
     }
@@ -144,7 +145,7 @@
     return column;
 }
 
-- (Row*)asRow {
+- (Row*) asRow {
     if (![self.tag isEqualToString:@"Row"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Row."];
     }
@@ -159,7 +160,7 @@
     return row;
 }
 
-- (expanz_model_Folder*)asFolder {
+- (expanz_model_Folder*) asFolder {
     if (![self.tag isEqualToString:@"Folder"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Folder."];
     }
@@ -183,7 +184,7 @@
     return folder;
 }
 
-- (expanz_model_File*)asFile {
+- (expanz_model_File*) asFile {
     if (![self.tag isEqualToString:@"File"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a File."];
     }

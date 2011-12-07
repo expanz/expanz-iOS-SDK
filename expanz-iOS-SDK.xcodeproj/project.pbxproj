@@ -25,6 +25,7 @@
 
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
+		6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
 		6B0EAD2A148737F000E56C18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0EAD29148737F000E56C18 /* MainWindow.xib */; };
 		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
@@ -821,6 +822,20 @@
 		6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
 		6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
 		6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
+		6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */; };
+		6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
+		6BFACBA414679916007C734C /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
+		6BFACBA414679916007C734D /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
+		6BFACBA414679916007C734E /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
+		6BFACBA414679916007C7350 /* expanz_model_ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
+		6BFACBA414679916007C7351 /* expanz_model_ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
+		6BFACBA414679916007C7353 /* ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */; };
+		6BFACBA414679916007C7355 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
+		6BFACBA414679916007C7356 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
+		6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
+		6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
+		6BFACBA414679916007C735A /* RXMLElement+ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
+		6BFACBA414679916007C735B /* RXMLElement+ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1261,6 +1276,13 @@
 		6BFACBA414679916007C733D /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7342 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7345 /* FileResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileResourceSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithFileResources.xml; sourceTree = "<group>"; };
+		6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ResourceCollection.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceCollectionSpec.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
+		6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ResourceCollectionSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1655,6 +1677,8 @@
 		6BD47C441484703F000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */,
+				6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */,
 				6BFACBA414679916007C7342 /* expanz_model_FileResource.h */,
 				6BFACBA414679916007C733D /* expanz_model_FileResource.m */,
 				6BFACBA414679916007C72A8 /* expanz_model_File.m */,
@@ -1731,6 +1755,8 @@
 		6BD47C681484703F000ECE52 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */,
+				6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */,
 				6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */,
 				6BFACBA414679916007C731B /* expanz_service_FileRequest.m */,
 				6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */,
@@ -1878,6 +1904,7 @@
 		6BD47DBD1484705A000ECE52 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */,
 				6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */,
 				6BD47DBE1484705A000ECE52 /* ActivityWithMessage.xml */,
 				6BD47DBF1484705A000ECE52 /* Dodgy.xml */,
@@ -1925,6 +1952,7 @@
 		6BD47DD01484705A000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */,
 				6BFACBA414679916007C7345 /* FileResourceSpec.m */,
 				6BFACBA414679916007C72B4 /* FileSpec.m */,
 				6BFACBA414679916007C72B2 /* FolderSpec.m */,
@@ -1950,6 +1978,7 @@
 		6BD47DDF1484705A000ECE52 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */,
 				6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */,
 				6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */,
 				6BD47DE01484705A000ECE52 /* CreateActivityRequestSpec.m */,
@@ -2189,6 +2218,8 @@
 				6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */,
 				6BFACBA414679916007C733B /* expanz_service_XmlPostFileDownloadClient.h in Headers */,
 				6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */,
+				6BFACBA414679916007C7350 /* expanz_model_ResourceCollection.h in Headers */,
+				6BFACBA414679916007C735A /* RXMLElement+ResourceCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2305,6 +2336,8 @@
 				6BFACBA414679916007C7332 /* expanz_service_FileDownloadClientDelegate.h in Headers */,
 				6BFACBA414679916007C733C /* expanz_service_XmlPostFileDownloadClient.h in Headers */,
 				6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */,
+				6BFACBA414679916007C7351 /* expanz_model_ResourceCollection.h in Headers */,
+				6BFACBA414679916007C735B /* RXMLElement+ResourceCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2472,6 +2505,7 @@
 				6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */,
 				6B77EE46148784AF00B80D1F /* MainWindow.xib in Resources */,
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
+				6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2608,6 +2642,8 @@
 				6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
 				6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */,
+				6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */,
+				6BFACBA414679916007C7355 /* RXMLElement+ResourceCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2710,6 +2746,8 @@
 				6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
 				6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */,
+				6BFACBA414679916007C734E /* expanz_model_ResourceCollection.m in Sources */,
+				6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2811,6 +2849,8 @@
 				6BFACBA414679916007C732A /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7337 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
 				6BFACBA414679916007C733F /* expanz_model_FileResource.m in Sources */,
+				6BFACBA414679916007C734C /* expanz_model_ResourceCollection.m in Sources */,
+				6BFACBA414679916007C7356 /* RXMLElement+ResourceCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2961,6 +3001,10 @@
 				6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */,
 				6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */,
+				6BFACBA414679916007C734D /* expanz_model_ResourceCollection.m in Sources */,
+				6BFACBA414679916007C7353 /* ResourceCollectionSpec.m in Sources */,
+				6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */,
+				6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

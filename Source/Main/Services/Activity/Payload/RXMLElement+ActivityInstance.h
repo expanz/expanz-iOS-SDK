@@ -19,6 +19,7 @@
 @class expanz_model_TextCell;
 @class expanz_model_Folder;
 @class expanz_model_File;
+@class expanz_model_FileResource;
 
 /**
  * Adds methods to RXMLElement for parsing results of XmlPostActivityClient invocations. 
