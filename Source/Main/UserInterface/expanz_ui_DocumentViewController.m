@@ -8,7 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Objection-iOS/JSObjection.h>
+#import "Objection.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_service_FileRequest.h"

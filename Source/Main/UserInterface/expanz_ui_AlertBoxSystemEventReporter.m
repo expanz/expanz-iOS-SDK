@@ -8,7 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_ui_AlertBoxSystemEventReporter.h"
 
 

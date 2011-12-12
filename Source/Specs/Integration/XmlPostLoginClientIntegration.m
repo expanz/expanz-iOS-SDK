@@ -9,13 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "SpecHelper.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "expanz_iOS_SDKModule.h"
-#import "../Utils/StubLoginClientDelegate.h"
+#import "StubLoginClientDelegate.h"
 #import "IntegrationUtils.h"
 
 

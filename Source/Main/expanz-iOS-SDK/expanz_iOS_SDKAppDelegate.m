@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////`
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_iOS_SDKAppDelegate.h"
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_ui_LoginViewController.h"

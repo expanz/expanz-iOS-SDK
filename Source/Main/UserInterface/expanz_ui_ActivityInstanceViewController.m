@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "NSData+Base64.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityDefinition.h"

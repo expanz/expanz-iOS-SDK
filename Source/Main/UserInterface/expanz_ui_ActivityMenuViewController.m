@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"

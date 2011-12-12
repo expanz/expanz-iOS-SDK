@@ -81,6 +81,29 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
+		6B9A9AED1490CFED00830937 /* expanz_service_ActivityClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
+		6B9A9AEF1490D04D00830937 /* expanz_model_ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
+		6B9A9AF01490D04D00830937 /* expanz_model_FileResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
+		6B9A9AF11490D04D00830937 /* expanz_model_File.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
+		6B9A9AF21490D04D00830937 /* expanz_model_DataBuilder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
+		6B9A9AF31490D04D00830937 /* expanz_model_Folder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72A5 /* expanz_model_Folder.h */; };
+		6B9A9AF41490D04D00830937 /* expanz_model_TreeData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C729D /* expanz_model_TreeData.h */; };
+		6B9A9AF51490D04D00830937 /* expanz_model_AbstractData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */; };
+		6B9A9AF61490D04D00830937 /* expanz_model_ActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
+		6B9A9AF71490D04D00830937 /* RXMLElement+ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
+		6B9A9AF81490D04D00830937 /* expanz_service_FileRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */; };
+		6B9A9AF91490D04D00830937 /* expanz_service_LoginClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
+		6B9A9AFA1490D04D00830937 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
+		6B9A9AFB1490D04D00830937 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
+		6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */; };
+		6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
+		6B9A9AFF1490D04D00830937 /* expanz_ui_DocumentViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */; };
+		6B9A9B001490D04D00830937 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
+		6B9A9B011490D04D00830937 /* expanz_ui_TreeDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
+		6B9A9B021490D04D00830937 /* expanz_ui_GridDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
+		6B9A9B031490D04D00830937 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
+		6B9A9B041490D04D00830937 /* expanz_ui_SystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
 		6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
@@ -100,7 +123,6 @@
 		6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5B1484703F000ECE52 /* expanz_model_SessionContext.h */; };
 		6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5D1484703F000ECE52 /* expanz_model_TextCell.h */; };
 		6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */; };
-		6BB7F59514852807007F2E99 /* (null) in Copy Headers */ = {isa = PBXBuildFile; };
 		6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
 		6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
 		6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
@@ -234,7 +256,6 @@
 		6BCF18011476240400B068B9 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7211458EBB6001AF204 /* TBXML.m */; };
 		6BCF18021476240400B068B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7241458EBB6001AF204 /* Reachability.m */; };
 		6BCF18031476240400B068B9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
-		6BCF182C1476240400B068B9 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BCF182D1476240400B068B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6BCF182F1476240400B068B9 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
 		6BCF18301476240400B068B9 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
@@ -389,7 +410,6 @@
 		6BD47D191484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
 		6BD47D1A1484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
 		6BD47D1B1484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
-		6BD47D1D1484703F000ECE52 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BD47D1E1484703F000ECE52 /* ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
 		6BD47D1F1484703F000ECE52 /* ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
 		6BD47D201484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
@@ -656,7 +676,6 @@
 		6BD5435514734FE80014F148 /* TBXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
 		6BD5435614734FE80014F148 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6BD5435714734FE80014F148 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
-		6BD543D2147361290014F148 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6BF58BBF14441E320063E805 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BF58BC014441E320063E805 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -674,26 +693,17 @@
 		6BF58DC81444245C0063E86F /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
 		6BF58DC81444245C0063E872 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
 		6BF58DC81444245C0063E874 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
-		6BFACBA114679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
-		6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFACBA014679916007C725B /* Objection-iOS.framework */; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 		6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 		6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
 		6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
-		6BFACBA414679916007C7271 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7272 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7273 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7275 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7276 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7278 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixture_ViewController.m */; };
 		6BFACBA414679916007C727D /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727C /* TestResource.m */; };
-		6BFACBA414679916007C7280 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7281 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7282 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7285 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
 		6BFACBA414679916007C7288 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
 		6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
@@ -734,7 +744,6 @@
 		6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */; };
 		6BFACBA414679916007C72BC /* expanz_model_DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
 		6BFACBA414679916007C72BD /* expanz_model_DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
-		6BFACBA414679916007C72C1 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C4 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
@@ -759,32 +768,21 @@
 		6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
 		6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
 		6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
-		6BFACBA414679916007C72EA /* (null) in Headers */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C72EC /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C72ED /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C72EE /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C72F1 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
 		6BFACBA414679916007C72F4 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
 		6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
 		6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
 		6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
 		6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
-		6BFACBA414679916007C72FB /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C72FC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C72FE /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7301 /* (null) in Headers */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7303 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7304 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7305 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFACBA414679916007C7308 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
 		6BFACBA414679916007C730B /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
 		6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
 		6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
 		6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
 		6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
-		6BFACBA414679916007C7312 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
 		6BFACBA414679916007C7315 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
 		6BFACBA414679916007C7316 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
@@ -820,7 +818,6 @@
 		6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
 		6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
 		6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
-		6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
 		6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
 		6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */; };
 		6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
@@ -836,6 +833,68 @@
 		6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
 		6BFACBA414679916007C735A /* RXMLElement+ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
 		6BFACBA414679916007C735B /* RXMLElement+ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
+		6BFDE7391495FA01005D332F /* JSObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7241495FA01005D332F /* JSObjectFactory.h */; };
+		6BFDE73A1495FA01005D332F /* JSObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7241495FA01005D332F /* JSObjectFactory.h */; };
+		6BFDE73B1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; };
+		6BFDE73C1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; };
+		6BFDE73D1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; };
+		6BFDE73E1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; };
+		6BFDE73F1495FA01005D332F /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7261495FA01005D332F /* JSObjection.h */; };
+		6BFDE7401495FA01005D332F /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7261495FA01005D332F /* JSObjection.h */; };
+		6BFDE7411495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; };
+		6BFDE7421495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; };
+		6BFDE7431495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; };
+		6BFDE7441495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; };
+		6BFDE7451495FA01005D332F /* JSObjectionBindingEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7281495FA01005D332F /* JSObjectionBindingEntry.h */; };
+		6BFDE7461495FA01005D332F /* JSObjectionBindingEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7281495FA01005D332F /* JSObjectionBindingEntry.h */; };
+		6BFDE7471495FA01005D332F /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */; };
+		6BFDE7481495FA01005D332F /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */; };
+		6BFDE7491495FA01005D332F /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */; };
+		6BFDE74A1495FA01005D332F /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */; };
+		6BFDE74B1495FA01005D332F /* JSObjectionEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72A1495FA01005D332F /* JSObjectionEntry.h */; };
+		6BFDE74C1495FA01005D332F /* JSObjectionEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72A1495FA01005D332F /* JSObjectionEntry.h */; };
+		6BFDE74D1495FA01005D332F /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */; };
+		6BFDE74E1495FA01005D332F /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */; };
+		6BFDE74F1495FA01005D332F /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */; };
+		6BFDE7501495FA01005D332F /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */; };
+		6BFDE7511495FA01005D332F /* JSObjectionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72C1495FA01005D332F /* JSObjectionInjector.h */; };
+		6BFDE7521495FA01005D332F /* JSObjectionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72C1495FA01005D332F /* JSObjectionInjector.h */; };
+		6BFDE7531495FA01005D332F /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */; };
+		6BFDE7541495FA01005D332F /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */; };
+		6BFDE7551495FA01005D332F /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */; };
+		6BFDE7561495FA01005D332F /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */; };
+		6BFDE7571495FA01005D332F /* JSObjectionInjectorEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72E1495FA01005D332F /* JSObjectionInjectorEntry.h */; };
+		6BFDE7581495FA01005D332F /* JSObjectionInjectorEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72E1495FA01005D332F /* JSObjectionInjectorEntry.h */; };
+		6BFDE7591495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */; };
+		6BFDE75A1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */; };
+		6BFDE75B1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */; };
+		6BFDE75C1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */; };
+		6BFDE75D1495FA01005D332F /* JSObjectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7301495FA01005D332F /* JSObjectionModule.h */; };
+		6BFDE75E1495FA01005D332F /* JSObjectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7301495FA01005D332F /* JSObjectionModule.h */; };
+		6BFDE75F1495FA01005D332F /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7311495FA01005D332F /* JSObjectionModule.m */; };
+		6BFDE7601495FA01005D332F /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7311495FA01005D332F /* JSObjectionModule.m */; };
+		6BFDE7611495FA01005D332F /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7311495FA01005D332F /* JSObjectionModule.m */; };
+		6BFDE7621495FA01005D332F /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7311495FA01005D332F /* JSObjectionModule.m */; };
+		6BFDE7631495FA01005D332F /* JSObjectionProviderEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7321495FA01005D332F /* JSObjectionProviderEntry.h */; };
+		6BFDE7641495FA01005D332F /* JSObjectionProviderEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7321495FA01005D332F /* JSObjectionProviderEntry.h */; };
+		6BFDE7651495FA01005D332F /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */; };
+		6BFDE7661495FA01005D332F /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */; };
+		6BFDE7671495FA01005D332F /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */; };
+		6BFDE7681495FA01005D332F /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */; };
+		6BFDE7691495FA01005D332F /* JSObjectionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7341495FA01005D332F /* JSObjectionUtils.h */; };
+		6BFDE76A1495FA01005D332F /* JSObjectionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7341495FA01005D332F /* JSObjectionUtils.h */; };
+		6BFDE76B1495FA01005D332F /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7351495FA01005D332F /* JSObjectionUtils.m */; };
+		6BFDE76C1495FA01005D332F /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7351495FA01005D332F /* JSObjectionUtils.m */; };
+		6BFDE76D1495FA01005D332F /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7351495FA01005D332F /* JSObjectionUtils.m */; };
+		6BFDE76E1495FA01005D332F /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7351495FA01005D332F /* JSObjectionUtils.m */; };
+		6BFDE76F1495FA01005D332F /* NSObject+Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7361495FA01005D332F /* NSObject+Objection.h */; };
+		6BFDE7701495FA01005D332F /* NSObject+Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7361495FA01005D332F /* NSObject+Objection.h */; };
+		6BFDE7711495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; };
+		6BFDE7721495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; };
+		6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; };
+		6BFDE7741495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; };
+		6BFDE7751495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
+		6BFDE7761495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -865,6 +924,29 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6B9A9AEF1490D04D00830937 /* expanz_model_ResourceCollection.h in Copy Headers */,
+				6B9A9AF01490D04D00830937 /* expanz_model_FileResource.h in Copy Headers */,
+				6B9A9AF11490D04D00830937 /* expanz_model_File.h in Copy Headers */,
+				6B9A9AF21490D04D00830937 /* expanz_model_DataBuilder.h in Copy Headers */,
+				6B9A9AF31490D04D00830937 /* expanz_model_Folder.h in Copy Headers */,
+				6B9A9AF41490D04D00830937 /* expanz_model_TreeData.h in Copy Headers */,
+				6B9A9AF51490D04D00830937 /* expanz_model_AbstractData.h in Copy Headers */,
+				6B9A9AF61490D04D00830937 /* expanz_model_ActivityStyle.h in Copy Headers */,
+				6B9A9AF71490D04D00830937 /* RXMLElement+ResourceCollection.h in Copy Headers */,
+				6B9A9AF81490D04D00830937 /* expanz_service_FileRequest.h in Copy Headers */,
+				6B9A9AF91490D04D00830937 /* expanz_service_LoginClientDelegate.h in Copy Headers */,
+				6B9A9AFA1490D04D00830937 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */,
+				6B9A9AFB1490D04D00830937 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */,
+				6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */,
+				6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */,
+				6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */,
+				6B9A9AFF1490D04D00830937 /* expanz_ui_DocumentViewController.h in Copy Headers */,
+				6B9A9B001490D04D00830937 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */,
+				6B9A9B011490D04D00830937 /* expanz_ui_TreeDataRenderer.h in Copy Headers */,
+				6B9A9B021490D04D00830937 /* expanz_ui_GridDataRenderer.h in Copy Headers */,
+				6B9A9B031490D04D00830937 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */,
+				6B9A9B041490D04D00830937 /* expanz_ui_SystemEventReporter.h in Copy Headers */,
+				6B9A9AED1490CFED00830937 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
 				6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
 				6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
 				6BB7F58514852807007F2E99 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
@@ -883,7 +965,6 @@
 				6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */,
 				6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */,
 				6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */,
-				6BB7F59514852807007F2E99 /* (null) in Copy Headers */,
 				6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */,
 				6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */,
 				6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
@@ -1220,7 +1301,6 @@
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
 		6BF58DC81444245C0063E871 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
-		6BFACBA014679916007C725B /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Objection-iOS.framework"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
@@ -1283,6 +1363,27 @@
 		6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ResourceCollectionSpec.m; sourceTree = "<group>"; };
+		6BFDE7241495FA01005D332F /* JSObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectFactory.h; sourceTree = "<group>"; };
+		6BFDE7251495FA01005D332F /* JSObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectFactory.m; sourceTree = "<group>"; };
+		6BFDE7261495FA01005D332F /* JSObjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjection.h; sourceTree = "<group>"; };
+		6BFDE7271495FA01005D332F /* JSObjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjection.m; sourceTree = "<group>"; };
+		6BFDE7281495FA01005D332F /* JSObjectionBindingEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionBindingEntry.h; sourceTree = "<group>"; };
+		6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionBindingEntry.m; sourceTree = "<group>"; };
+		6BFDE72A1495FA01005D332F /* JSObjectionEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionEntry.h; sourceTree = "<group>"; };
+		6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionEntry.m; sourceTree = "<group>"; };
+		6BFDE72C1495FA01005D332F /* JSObjectionInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjector.h; sourceTree = "<group>"; };
+		6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjector.m; sourceTree = "<group>"; };
+		6BFDE72E1495FA01005D332F /* JSObjectionInjectorEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionInjectorEntry.h; sourceTree = "<group>"; };
+		6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionInjectorEntry.m; sourceTree = "<group>"; };
+		6BFDE7301495FA01005D332F /* JSObjectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionModule.h; sourceTree = "<group>"; };
+		6BFDE7311495FA01005D332F /* JSObjectionModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionModule.m; sourceTree = "<group>"; };
+		6BFDE7321495FA01005D332F /* JSObjectionProviderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionProviderEntry.h; sourceTree = "<group>"; };
+		6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionProviderEntry.m; sourceTree = "<group>"; };
+		6BFDE7341495FA01005D332F /* JSObjectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectionUtils.h; sourceTree = "<group>"; };
+		6BFDE7351495FA01005D332F /* JSObjectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectionUtils.m; sourceTree = "<group>"; };
+		6BFDE7361495FA01005D332F /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
+		6BFDE7371495FA01005D332F /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
+		6BFDE7381495FA01005D332F /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1290,7 +1391,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD543D2147361290014F148 /* Objection-iOS.framework in Frameworks */,
 				6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1309,7 +1409,6 @@
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
-				6BFACBA114679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,7 +1416,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCF182C1476240400B068B9 /* Objection-iOS.framework in Frameworks */,
 				6BCF182D1476240400B068B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1341,7 +1439,6 @@
 				6BC9F7E11458EBB6001AF204 /* Cedar-iPhone.framework in Frameworks */,
 				6BC9F7E51458EBB6001AF204 /* OCHamcrestIOS.framework in Frameworks */,
 				6BC9F7E91458EBB6001AF204 /* libOCMock.a in Frameworks */,
-				6BFACBA314679916007C725B /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,7 +1491,6 @@
 				6BC9F6BE1458EBB5001AF204 /* External */,
 				6BC9F7251458EBB6001AF204 /* Frameworks */,
 				6BC9F7281458EBB6001AF204 /* Libraries */,
-				6BCAFB9A14317B1C00575280 /* SDK */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -1402,6 +1498,7 @@
 		6BC9F6BE1458EBB5001AF204 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7231495FA01005D332F /* objection */,
 				6BC9F6BF1458EBB5001AF204 /* ASIHTTPRequest */,
 				6BC9F6F51458EBB5001AF204 /* Flexible-iOS-Logging-1.0 */,
 				6BC9F6F71458EBB5001AF204 /* MAObjCRuntime */,
@@ -1554,7 +1651,7 @@
 		6BC9F7251458EBB6001AF204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BFACBA014679916007C725B /* Objection-iOS.framework */,
+				6BCAFB9A14317B1C00575280 /* SDK */,
 				6BC9F7261458EBB6001AF204 /* Cedar-iPhone.framework */,
 				6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */,
 			);
@@ -1640,7 +1737,7 @@
 				6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */,
 			);
 			name = SDK;
-			path = "../expanz-iOS-SDK";
+			path = "../../expanz-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		6BD47C341484703F000ECE52 /* Main */ = {
@@ -2100,6 +2197,34 @@
 			path = Payload;
 			sourceTree = "<group>";
 		};
+		6BFDE7231495FA01005D332F /* objection */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7241495FA01005D332F /* JSObjectFactory.h */,
+				6BFDE7251495FA01005D332F /* JSObjectFactory.m */,
+				6BFDE7261495FA01005D332F /* JSObjection.h */,
+				6BFDE7271495FA01005D332F /* JSObjection.m */,
+				6BFDE7281495FA01005D332F /* JSObjectionBindingEntry.h */,
+				6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */,
+				6BFDE72A1495FA01005D332F /* JSObjectionEntry.h */,
+				6BFDE72B1495FA01005D332F /* JSObjectionEntry.m */,
+				6BFDE72C1495FA01005D332F /* JSObjectionInjector.h */,
+				6BFDE72D1495FA01005D332F /* JSObjectionInjector.m */,
+				6BFDE72E1495FA01005D332F /* JSObjectionInjectorEntry.h */,
+				6BFDE72F1495FA01005D332F /* JSObjectionInjectorEntry.m */,
+				6BFDE7301495FA01005D332F /* JSObjectionModule.h */,
+				6BFDE7311495FA01005D332F /* JSObjectionModule.m */,
+				6BFDE7321495FA01005D332F /* JSObjectionProviderEntry.h */,
+				6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */,
+				6BFDE7341495FA01005D332F /* JSObjectionUtils.h */,
+				6BFDE7351495FA01005D332F /* JSObjectionUtils.m */,
+				6BFDE7361495FA01005D332F /* NSObject+Objection.h */,
+				6BFDE7371495FA01005D332F /* NSObject+Objection.m */,
+				6BFDE7381495FA01005D332F /* Objection.h */,
+			);
+			path = objection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2192,25 +2317,20 @@
 				6BD47DAE1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */,
 				6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */,
 				6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */,
-				6BFACBA414679916007C7285 /* (null) in Headers */,
 				6BFACBA414679916007C728C /* expanz_model_ActivityStyle.h in Headers */,
 				6BFACBA414679916007C7296 /* expanz_model_AbstractData.h in Headers */,
 				6BFACBA414679916007C729E /* expanz_model_TreeData.h in Headers */,
 				6BFACBA414679916007C72A6 /* expanz_model_Folder.h in Headers */,
 				6BFACBA414679916007C72AE /* expanz_model_File.h in Headers */,
 				6BFACBA414679916007C72BC /* expanz_model_DataBuilder.h in Headers */,
-				6BFACBA414679916007C72C1 /* (null) in Headers */,
 				6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */,
 				6BFACBA414679916007C72CC /* expanz_ui_SystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */,
-				6BFACBA414679916007C72F1 /* (null) in Headers */,
 				6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */,
-				6BFACBA414679916007C7308 /* (null) in Headers */,
 				6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */,
-				6BFACBA414679916007C7312 /* (null) in Headers */,
 				6BFACBA414679916007C7319 /* expanz_ui_DocumentViewController.h in Headers */,
 				6BFACBA414679916007C7321 /* expanz_service_FileRequest.h in Headers */,
 				6BFACBA414679916007C7326 /* expanz_service_FileDownloadClient.h in Headers */,
@@ -2220,6 +2340,17 @@
 				6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */,
 				6BFACBA414679916007C7350 /* expanz_model_ResourceCollection.h in Headers */,
 				6BFACBA414679916007C735A /* RXMLElement+ResourceCollection.h in Headers */,
+				6BFDE7391495FA01005D332F /* JSObjectFactory.h in Headers */,
+				6BFDE73F1495FA01005D332F /* JSObjection.h in Headers */,
+				6BFDE7451495FA01005D332F /* JSObjectionBindingEntry.h in Headers */,
+				6BFDE74B1495FA01005D332F /* JSObjectionEntry.h in Headers */,
+				6BFDE7511495FA01005D332F /* JSObjectionInjector.h in Headers */,
+				6BFDE7571495FA01005D332F /* JSObjectionInjectorEntry.h in Headers */,
+				6BFDE75D1495FA01005D332F /* JSObjectionModule.h in Headers */,
+				6BFDE7631495FA01005D332F /* JSObjectionProviderEntry.h in Headers */,
+				6BFDE7691495FA01005D332F /* JSObjectionUtils.h in Headers */,
+				6BFDE76F1495FA01005D332F /* NSObject+Objection.h in Headers */,
+				6BFDE7751495FA01005D332F /* Objection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2285,7 +2416,6 @@
 				6BD47D0B1484703F000ECE52 /* expanz_model_SessionContext.h in Headers */,
 				6BD47D111484703F000ECE52 /* expanz_model_TextCell.h in Headers */,
 				6BD47D171484703F000ECE52 /* expanz_model_UserRole.h in Headers */,
-				6BD47D1D1484703F000ECE52 /* (null) in Headers */,
 				6BD47D1F1484703F000ECE52 /* ExpanzDataType.h in Headers */,
 				6BD47D211484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */,
 				6BD47D231484703F000ECE52 /* expanz_service_XmlPostActivityClient.h in Headers */,
@@ -2325,9 +2455,7 @@
 				6BFACBA414679916007C72CD /* expanz_ui_SystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72D5 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
 				6BFACBA414679916007C72E7 /* expanz_ui_GridDataRenderer.h in Headers */,
-				6BFACBA414679916007C72EA /* (null) in Headers */,
 				6BFACBA414679916007C72F9 /* expanz_ui_TreeDataRenderer.h in Headers */,
-				6BFACBA414679916007C7301 /* (null) in Headers */,
 				6BFACBA414679916007C7310 /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6BFACBA414679916007C731A /* expanz_ui_DocumentViewController.h in Headers */,
 				6BFACBA414679916007C7322 /* expanz_service_FileRequest.h in Headers */,
@@ -2338,6 +2466,17 @@
 				6BFACBA414679916007C7344 /* expanz_model_FileResource.h in Headers */,
 				6BFACBA414679916007C7351 /* expanz_model_ResourceCollection.h in Headers */,
 				6BFACBA414679916007C735B /* RXMLElement+ResourceCollection.h in Headers */,
+				6BFDE73A1495FA01005D332F /* JSObjectFactory.h in Headers */,
+				6BFDE7401495FA01005D332F /* JSObjection.h in Headers */,
+				6BFDE7461495FA01005D332F /* JSObjectionBindingEntry.h in Headers */,
+				6BFDE74C1495FA01005D332F /* JSObjectionEntry.h in Headers */,
+				6BFDE7521495FA01005D332F /* JSObjectionInjector.h in Headers */,
+				6BFDE7581495FA01005D332F /* JSObjectionInjectorEntry.h in Headers */,
+				6BFDE75E1495FA01005D332F /* JSObjectionModule.h in Headers */,
+				6BFDE7641495FA01005D332F /* JSObjectionProviderEntry.h in Headers */,
+				6BFDE76A1495FA01005D332F /* JSObjectionUtils.h in Headers */,
+				6BFDE7701495FA01005D332F /* NSObject+Objection.h in Headers */,
+				6BFDE7761495FA01005D332F /* Objection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2620,9 +2759,6 @@
 				6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
-				6BFACBA414679916007C7271 /* (null) in Sources */,
-				6BFACBA414679916007C7275 /* (null) in Sources */,
-				6BFACBA414679916007C7280 /* (null) in Sources */,
 				6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C7299 /* expanz_model_TreeData.m in Sources */,
@@ -2631,19 +2767,25 @@
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */,
-				6BFACBA414679916007C72EC /* (null) in Sources */,
 				6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C72FB /* (null) in Sources */,
-				6BFACBA414679916007C7303 /* (null) in Sources */,
 				6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C7329 /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
 				6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */,
-				6BFACBA414679916007C7346 /* FileResourceSpec.m in Sources */,
 				6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7355 /* RXMLElement+ResourceCollection.m in Sources */,
+				6BFDE73B1495FA01005D332F /* JSObjectFactory.m in Sources */,
+				6BFDE7411495FA01005D332F /* JSObjection.m in Sources */,
+				6BFDE7471495FA01005D332F /* JSObjectionBindingEntry.m in Sources */,
+				6BFDE74D1495FA01005D332F /* JSObjectionEntry.m in Sources */,
+				6BFDE7531495FA01005D332F /* JSObjectionInjector.m in Sources */,
+				6BFDE7591495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */,
+				6BFDE75F1495FA01005D332F /* JSObjectionModule.m in Sources */,
+				6BFDE7651495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
+				6BFDE76B1495FA01005D332F /* JSObjectionUtils.m in Sources */,
+				6BFDE7711495FA01005D332F /* NSObject+Objection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2748,6 +2890,16 @@
 				6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C734E /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */,
+				6BFDE73E1495FA01005D332F /* JSObjectFactory.m in Sources */,
+				6BFDE7441495FA01005D332F /* JSObjection.m in Sources */,
+				6BFDE74A1495FA01005D332F /* JSObjectionBindingEntry.m in Sources */,
+				6BFDE7501495FA01005D332F /* JSObjectionEntry.m in Sources */,
+				6BFDE7561495FA01005D332F /* JSObjectionInjector.m in Sources */,
+				6BFDE75C1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */,
+				6BFDE7621495FA01005D332F /* JSObjectionModule.m in Sources */,
+				6BFDE7681495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
+				6BFDE76E1495FA01005D332F /* JSObjectionUtils.m in Sources */,
+				6BFDE7741495FA01005D332F /* NSObject+Objection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2828,9 +2980,6 @@
 				6BD47DAB1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
 				6BD47DB11484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726D /* ExpanzDataType.m in Sources */,
-				6BFACBA414679916007C7272 /* (null) in Sources */,
-				6BFACBA414679916007C7276 /* (null) in Sources */,
-				6BFACBA414679916007C7281 /* (null) in Sources */,
 				6BFACBA414679916007C7288 /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7292 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729A /* expanz_model_TreeData.m in Sources */,
@@ -2839,10 +2988,7 @@
 				6BFACBA414679916007C72B8 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C72D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72E2 /* expanz_ui_GridDataRenderer.m in Sources */,
-				6BFACBA414679916007C72ED /* (null) in Sources */,
 				6BFACBA414679916007C72F4 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C72FC /* (null) in Sources */,
-				6BFACBA414679916007C7304 /* (null) in Sources */,
 				6BFACBA414679916007C730B /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6BFACBA414679916007C7315 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731D /* expanz_service_FileRequest.m in Sources */,
@@ -2851,6 +2997,16 @@
 				6BFACBA414679916007C733F /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C734C /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7356 /* RXMLElement+ResourceCollection.m in Sources */,
+				6BFDE73C1495FA01005D332F /* JSObjectFactory.m in Sources */,
+				6BFDE7421495FA01005D332F /* JSObjection.m in Sources */,
+				6BFDE7481495FA01005D332F /* JSObjectionBindingEntry.m in Sources */,
+				6BFDE74E1495FA01005D332F /* JSObjectionEntry.m in Sources */,
+				6BFDE7541495FA01005D332F /* JSObjectionInjector.m in Sources */,
+				6BFDE75A1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */,
+				6BFDE7601495FA01005D332F /* JSObjectionModule.m in Sources */,
+				6BFDE7661495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
+				6BFDE76C1495FA01005D332F /* JSObjectionUtils.m in Sources */,
+				6BFDE7721495FA01005D332F /* NSObject+Objection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3005,6 +3161,16 @@
 				6BFACBA414679916007C7353 /* ResourceCollectionSpec.m in Sources */,
 				6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */,
 				6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */,
+				6BFDE73D1495FA01005D332F /* JSObjectFactory.m in Sources */,
+				6BFDE7431495FA01005D332F /* JSObjection.m in Sources */,
+				6BFDE7491495FA01005D332F /* JSObjectionBindingEntry.m in Sources */,
+				6BFDE74F1495FA01005D332F /* JSObjectionEntry.m in Sources */,
+				6BFDE7551495FA01005D332F /* JSObjectionInjector.m in Sources */,
+				6BFDE75B1495FA01005D332F /* JSObjectionInjectorEntry.m in Sources */,
+				6BFDE7611495FA01005D332F /* JSObjectionModule.m in Sources */,
+				6BFDE7671495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
+				6BFDE76D1495FA01005D332F /* JSObjectionUtils.m in Sources */,
+				6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3045,11 +3211,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3063,11 +3240,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3135,6 +3323,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3145,6 +3337,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "expanz-iOS-SDK";
@@ -3159,6 +3355,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3169,6 +3369,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "expanz-iOS-SDK";
@@ -3184,11 +3388,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
+				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
 					"-fprofile-arcs",
@@ -3209,11 +3424,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
+				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-ftest-coverage",
@@ -3231,7 +3457,7 @@
 		6BD543611473595F0014F148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExpanzIOS;
 				SRCROOT = "Source/Main/expanz-iOS-SDK";
 			};
 			name = Debug;
@@ -3239,7 +3465,7 @@
 		6BD543621473595F0014F148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExpanzIOS;
 				SRCROOT = "Source/Main/expanz-iOS-SDK";
 			};
 			name = Release;
@@ -3251,6 +3477,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3267,6 +3497,10 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
@@ -3293,6 +3527,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
+					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3310,6 +3548,10 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
+					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",

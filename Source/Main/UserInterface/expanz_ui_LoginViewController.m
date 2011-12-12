@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////y
 
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"

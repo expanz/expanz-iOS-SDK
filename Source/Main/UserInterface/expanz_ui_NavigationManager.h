@@ -11,7 +11,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_ActivityDefinition;

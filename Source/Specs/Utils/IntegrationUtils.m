@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Objection-iOS/Objection.h>
+#import "Objection.h"
 #import "IntegrationUtils.h"
 #import "expanz_service_LoginClient.h" 
 #import "StubLoginClientDelegate.h"
