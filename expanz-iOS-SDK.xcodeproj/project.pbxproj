@@ -689,10 +689,10 @@
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BF58DC81444245C0063E810 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E812 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		6BF58DC81444245C0063E86D /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
-		6BF58DC81444245C0063E86F /* azure.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* azure.xml */; };
-		6BF58DC81444245C0063E872 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
-		6BF58DC81444245C0063E874 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* expanz.xml */; };
+		6BF58DC81444245C0063E86D /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* production_environment.xml */; };
+		6BF58DC81444245C0063E86F /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E86C /* production_environment.xml */; };
+		6BF58DC81444245C0063E872 /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* test_environment.xml */; };
+		6BF58DC81444245C0063E874 /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BF58DC81444245C0063E871 /* test_environment.xml */; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; };
 		6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
@@ -1299,8 +1299,8 @@
 		6BD47E5D14848839000ECE52 /* TestFixture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixture.xib; sourceTree = "<group>"; };
 		6BDEA53A147D051500844BE9 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = /usr/lib/libprofile_rt.dylib; sourceTree = "<absolute>"; };
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BF58DC81444245C0063E86C /* azure.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = azure.xml; sourceTree = "<group>"; };
-		6BF58DC81444245C0063E871 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E86C /* production_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = production_environment.xml; sourceTree = "<group>"; };
+		6BF58DC81444245C0063E871 /* test_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_environment.xml; sourceTree = "<group>"; };
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
@@ -1448,8 +1448,8 @@
 		6B100BEA143E739000EABC94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				6BF58DC81444245C0063E871 /* expanz.xml */,
-				6BF58DC81444245C0063E86C /* azure.xml */,
+				6BF58DC81444245C0063E871 /* test_environment.xml */,
+				6BF58DC81444245C0063E86C /* production_environment.xml */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -2600,8 +2600,8 @@
 			files = (
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
 				6BF58DC81444245C0063E810 /* (null) in Resources */,
-				6BF58DC81444245C0063E86D /* azure.xml in Resources */,
-				6BF58DC81444245C0063E872 /* expanz.xml in Resources */,
+				6BF58DC81444245C0063E86D /* production_environment.xml in Resources */,
+				6BF58DC81444245C0063E872 /* test_environment.xml in Resources */,
 				6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47E3D14847065000ECE52 /* ESA.Sales.Calc.xib in Resources */,
 				6BD47E3F14847065000ECE52 /* ESA.Sales.Customer.Browse.xib in Resources */,
@@ -2631,8 +2631,8 @@
 				6BC9F78D1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7951458EBB6001AF204 /* README.markdown in Resources */,
 				6BF58DC81444245C0063E812 /* (null) in Resources */,
-				6BF58DC81444245C0063E86F /* azure.xml in Resources */,
-				6BF58DC81444245C0063E874 /* expanz.xml in Resources */,
+				6BF58DC81444245C0063E86F /* production_environment.xml in Resources */,
+				6BF58DC81444245C0063E874 /* test_environment.xml in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */,
 				6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */,
@@ -3323,10 +3323,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3355,10 +3351,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;

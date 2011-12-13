@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Ancestors</key>
+		<array>
+			<string>com.expanz.bundlebase</string>
+			<string>com.apple.dt.unit.base</string>						
+			<string>com.expanz.dependencies</string>			
+		</array>
+		<key>Concrete</key>
+		<true/>
+
+		<key>Description</key>
+		<string>Creates an Expanz iPhone client shell, ready for adding activities.</string>
+		<key>Identifier</key>
+		<string>com.expanz.Expanz iOS Client</string>
+		<key>Kind</key>
+		<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+		
+		<key>Targets</key>
+		<array>
+			<dict>
+				<key>SharedSettings</key>
+				<dict>
+					<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+					<string>YES</string>
+					<key>GCC_PREFIX_HEADER</key>
+					<string>___PACKAGENAME___/Prefix.pch</string>
+					<key>INFOPLIST_FILE</key>
+					<string>___PACKAGENAME___/Info.plist</string>										
+				</dict>
+			</dict>
+		</array>
+
+		<key>Definitions</key>	
+		<dict>
+			<key>Prefix.pch</key>
+			<dict>
+				<key>Group</key>
+				<array/>
+				<key>Path</key>
+				<string>Prefix.pch</string>
+				<key>TargetIndices</key>
+				<array/>
+			</dict>
+			<key>Info.plist</key>
+			<dict>				
+				<key>Group</key>
+				<array/>
+				<key>Path</key>
+				<string>Info.plist</string>
+				<key>TargetIndices</key>
+				<array/>
+			</dict>			
+			<key>Assets/ActivityMenu.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/ActivityMenu.xib</string>
+			</dict>
+			<key>Assets/background.png</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/background.png</string>
+			</dict>
+			<key>Assets/DocumentView.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/DocumentView.xib</string>
+			</dict>
+			<key>Assets/GridDataTableCell.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/GridDataTableCell.xib</string>
+			</dict>
+			<key>Assets/Icon.png</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/Icon.png</string>
+			</dict>
+			<key>Assets/Login.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/Login.xib</string>
+			</dict>
+			<key>Assets/MainWindow.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/MainWindow.xib</string>
+			</dict>
+			<key>Assets/TreeDataTableCell.xib</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Assets</string>
+				</array>
+				<key>Path</key>
+				<string>Assets/TreeDataTableCell.xib</string>
+			</dict>
+			<key>main.m</key>
+			<dict>
+				<key>Group</key>
+				<array>					
+				</array>
+				<key>Path</key>
+				<string>main.m</string>
+			</dict>
+			<key>Supporting Files/en.lproj/InfoPlist.strings</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Supporting Files</string>
+					<string>en.lproj</string>
+				</array>
+				<key>Path</key>
+				<string>Supporting Files/en.lproj/InfoPlist.strings</string>
+			</dict>
+			<key>Supporting Files/production_environment.xml</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Supporting Files</string>
+				</array>
+				<key>Path</key>
+				<string>Supporting Files/production_environment.xml</string>
+			</dict>
+			<key>Supporting Files/test_environment.xml</key>
+			<dict>
+				<key>Group</key>
+				<array>
+					<string>Supporting Files</string>
+				</array>
+				<key>Path</key>
+				<string>Supporting Files/test_environment.xml</string>
+			</dict>
+		</dict>
+		<key>Nodes</key>
+		<array>
+			<string>Info.plist</string>
+			<string>Prefix.pch</string>
+			<string>Assets/ActivityMenu.xib</string>
+			<string>Assets/background.png</string>
+			<string>Assets/DocumentView.xib</string>			
+			<string>Assets/GridDataTableCell.xib</string>
+			<string>Assets/Icon.png</string>
+			<string>Assets/Login.xib</string>
+			<string>Assets/MainWindow.xib</string>
+			<string>Assets/TreeDataTableCell.xib</string>
+			<string>main.m</string>
+			<string>Supporting Files/en.lproj/InfoPlist.strings</string>
+			<string>Supporting Files/production_environment.xml</string>
+			<string>Supporting Files/test_environment.xml</string>			
+		</array>
+	</dict>
+
+</plist>
