@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import "expanz_iOS_SDKConfiguration.h"
+#import <ExpanzIOS/expanz_iOS_SDKConfiguration.h>
 
 int main(int argc, char *argv[]) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];

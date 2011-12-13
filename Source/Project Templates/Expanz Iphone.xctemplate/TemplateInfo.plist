@@ -26,30 +26,34 @@
 					<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 					<string>YES</string>
 					<key>GCC_PREFIX_HEADER</key>
-					<string>___PACKAGENAME___/Prefix.pch</string>
+					<string>___PACKAGENAME___/Supporting Files/Prefix.pch</string>
 					<key>INFOPLIST_FILE</key>
-					<string>___PACKAGENAME___/Info.plist</string>										
+					<string>___PACKAGENAME___/Supporting Files/Info.plist</string>										
 				</dict>
 			</dict>
 		</array>
 
 		<key>Definitions</key>	
 		<dict>
-			<key>Prefix.pch</key>
+			<key>Supporting Files/Prefix.pch</key>
 			<dict>
 				<key>Group</key>
-				<array/>
+				<array>
+					<string>Supporting Files</string>
+				</array>
 				<key>Path</key>
-				<string>Prefix.pch</string>
+				<string>Supporting Files/Prefix.pch</string>
 				<key>TargetIndices</key>
 				<array/>
 			</dict>
-			<key>Info.plist</key>
+			<key>Supporting Files/Info.plist</key>
 			<dict>				
 				<key>Group</key>
-				<array/>
+				<array>
+					<string>Supporting Files</string>
+				</array>
 				<key>Path</key>
-				<string>Info.plist</string>
+				<string>Supporting Files/Info.plist</string>
 				<key>TargetIndices</key>
 				<array/>
 			</dict>			
@@ -164,8 +168,9 @@
 		</dict>
 		<key>Nodes</key>
 		<array>
-			<string>Info.plist</string>
-			<string>Prefix.pch</string>
+			<string>main.m</string>
+			<string>Supporting Files/Info.plist</string>
+			<string>Supporting Files/Prefix.pch</string>
 			<string>Assets/ActivityMenu.xib</string>
 			<string>Assets/background.png</string>
 			<string>Assets/DocumentView.xib</string>			
@@ -173,8 +178,7 @@
 			<string>Assets/Icon.png</string>
 			<string>Assets/Login.xib</string>
 			<string>Assets/MainWindow.xib</string>
-			<string>Assets/TreeDataTableCell.xib</string>
-			<string>main.m</string>
+			<string>Assets/TreeDataTableCell.xib</string>			
 			<string>Supporting Files/en.lproj/InfoPlist.strings</string>
 			<string>Supporting Files/production_environment.xml</string>
 			<string>Supporting Files/test_environment.xml</string>			
