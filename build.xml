@@ -18,17 +18,17 @@
     </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
-        --make.dirs,
         --clean,
-        --simulator.launch,
         --make.dirs,
+        --simulator.launch,
         --unit.tests.build,
         --tests.run,
         --assemble.coverage.data,
         --coverage.report,
         --api.report,
         --compile.framework,
-        --compile.installer"/>
+        --compile.installer,
+        --prepare.artifacts"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
@@ -45,7 +45,6 @@
         <mkdir dir="${temp.dir}/coverage-data"/>
         <mkdir dir="${reports.dir}"/>
         <mkdir dir="${reports.dir}/tests"/>
-        <mkdir dir="${installer.dir}"/>
     </target>
 
     <target name="--clean" unless="fast">
@@ -69,6 +68,12 @@
         <exec executable="${packager.path}">
             <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
         </exec>
+
+    </target>
+
+    <target name="--prepare.artifacts">
+        <delete dir="${target.dir}/temp"/>
+        <delete dir="${target.dir}/expanz-iOS-SDK.build"/>
     </target>
 
     <target name="--simulator.launch">
