@@ -18,24 +18,17 @@
     </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
-    --make.dirs,
-    --clean, 
-    --simulator.launch,
-    --make.dirs,
-    --unit.tests.build,
-    --tests.run,
-    --assemble.coverage.data,
-    --coverage.report,
-    --api.report"/>
-
-    <target name="clean" depends="--clean"/>
-
-    <target name="release">
-        <exec executable="xcodebuild" failonerror="true">
-            <arg line="-target expanz-iOS-SDK"/>
-        </exec>
-    </target>
-
+        --make.dirs,
+        --clean,
+        --simulator.launch,
+        --make.dirs,
+        --unit.tests.build,
+        --tests.run,
+        --assemble.coverage.data,
+        --coverage.report,
+        --api.report,
+        --compile.framework,
+        --compile.installer"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
@@ -63,6 +56,18 @@
         </exec>
 
         <delete dir="${target.dir}"/>
+    </target>
+
+    <target name="--compile.framework">
+        <exec executable="xcodebuild" failonerror="true">
+            <arg line="-target expanz-iOS-SDK"/>
+        </exec>
+    </target>
+
+    <target name="--compile.installer">
+        <exec executable="${packager.path}">
+            <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
+        </exec>
     </target>
 
     <target name="--simulator.launch">
