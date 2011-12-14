@@ -45,6 +45,7 @@
         <mkdir dir="${temp.dir}/coverage-data"/>
         <mkdir dir="${reports.dir}"/>
         <mkdir dir="${reports.dir}/tests"/>
+        <mkdir dir="${installer.dir}"/>
     </target>
 
     <target name="--clean" unless="fast">
