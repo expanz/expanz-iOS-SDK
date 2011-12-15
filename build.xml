@@ -48,6 +48,9 @@
     </target>
 
     <target name="--clean" unless="fast">
+        <mkdir dir="${target.dir}"/>
+        <mkdir dir="${temp.dir}"/>
+            
         <echo file="${temp.dir}/quit-simulator.script">
             tell application "${simulator.path}" to quit
         </echo>
