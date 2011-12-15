@@ -9,6 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <Foundation/Foundation.h>
+
 @protocol expanz_ui_SystemEventReporter <NSObject>
 
 - (void) reportErrorWithReason:(NSString*)reason; 
