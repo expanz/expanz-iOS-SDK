@@ -5,7 +5,6 @@
 		<key>Ancestors</key>
 		<array>
 			<string>com.expanz.bundlebase</string>
-			<string>com.apple.dt.unit.base</string>						
 			<string>com.expanz.dependencies</string>			
 		</array>
 		<key>Concrete</key>
