@@ -21,9 +21,8 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) newRequestWithPayload:(id<xml_Serializable>)payload {
-    [self.request release];
-    
-    
+    self.request = nil;
+
     SDKConfiguration* configuration = [SDKConfiguration globalConfiguration];
     if ([payload isKindOfClass:[FileRequest class]]) {
         self.request = [[ASIFormDataRequest alloc] initWithURL:configuration.execXServiceUrl];
@@ -44,16 +43,17 @@
                     delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
     [self newRequestWithPayload:fileRequest];
-
+    
+    __weak XmlPostFileDownloadClient* client = self; 
     [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [self.request responseString]);
-        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];
+        LogDebug(@"Response: %@, ", [client.request responseString]);
+        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[client.request responseString]];
         RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
         [delegate requestDidFinishWithResourceCollection:[resourceElement asResourceCollection]];
     }];
 
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]];
+        [delegate requestDidFailWithError:[client.request error]];
     }];
 
     [self.request startAsynchronous];
@@ -64,15 +64,16 @@
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
     [self newRequestWithPayload:downloadRequest];
+    __weak XmlPostFileDownloadClient* client = self; 
 
     [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [self.request responseString]);
-        NSData* data = [self.request responseData];
+        LogDebug(@"Response: %@, ", [client.request responseString]);
+        NSData* data = [client.request responseData];
         [delegate requestDidFinishWithData:data];
     }];
 
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]];
+        [delegate requestDidFailWithError:[client.request error]];
     }];
     [self.request startAsynchronous];
 

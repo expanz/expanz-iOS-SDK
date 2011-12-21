@@ -24,14 +24,11 @@ static SessionContext* globalContext;
 
 /* ================================================= Class Methods ================================================== */
 + (void) setGlobalContext:(SessionContext*)context {
-    if (globalContext != context) {
-        [globalContext release];
-        globalContext = [context retain];
-    }
+    globalContext = context;
 }
 
 + (SessionContext*) globalContext {
-    return [[globalContext retain] autorelease];
+    return globalContext;
 }
 
 
@@ -41,20 +38,12 @@ static SessionContext* globalContext;
 
     self = [super init];
     if (self) {
-        _sessionToken = [sessionToken retain];
+        _sessionToken = [sessionToken copy];
         _hasError = hasError;
         _hasWarning = hasWarning;
-        _message = [message retain];
+        _message = [message copy];
     }
     return self;
 }
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_sessionToken release];
-    [_message release];
-    [super dealloc];
-}
-
 
 @end

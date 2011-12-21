@@ -28,11 +28,12 @@
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
     NSMutableDictionary* _imageButtonMappings;
+    NSMutableArray* _dataRenderers; 
 
 }
 
-@property(nonatomic, readonly) NSString* activityName;
-@property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, strong, readonly) NSString* activityName;
+@property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
 
 /**
 * Initializes a model adapter for the given view controller.

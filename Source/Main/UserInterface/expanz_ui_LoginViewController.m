@@ -37,9 +37,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (id)init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
-        _loginClient = [[[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)] retain];
-        _navigationManager = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
-        _reporter = [[[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)] retain];
+        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
+        _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
     }
     return self;
 }
@@ -92,8 +92,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     static NSString* reuseId = @"userNameAndPasswordForm";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[TextFieldTableCell alloc] initWithReuseIdentifier:reuseId] autorelease];
-        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell = [[TextFieldTableCell alloc] initWithReuseIdentifier:reuseId];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -107,7 +106,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         textFieldCell.textField.placeholder = @"Consultant Id";
         textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
         textFieldCell.textField.returnKeyType = UIReturnKeyNext;
-        _userNameField = [textFieldCell.textField retain];
+        _userNameField = textFieldCell.textField;
     }
     else {
         textFieldCell.textLabel.text = @"Password";
@@ -115,7 +114,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
         textFieldCell.textField.returnKeyType = UIReturnKeyDone;
         textFieldCell.textField.secureTextEntry = YES;
-        _passwordField = [textFieldCell.textField retain];
+        _passwordField = textFieldCell.textField;
     }
     return cell;
 }
@@ -199,7 +198,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     SessionRequest* sessionRequest =
         [[SessionRequest alloc] initWithUserName:user password:password appSite:appSite userType:userType];
     [_loginClient createSessionWith:sessionRequest delegate:self];
-    [sessionRequest release];
 }
 
 
@@ -214,9 +212,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         _loginButton.enabled = YES;
         _userNameField.enabled = YES;
         _passwordField.enabled = YES;
-        UIAlertView* alert = [[[UIAlertView alloc]
+        UIAlertView* alert = [[UIAlertView alloc]
             initWithTitle:@"Error" message:sessionContext.message delegate:self cancelButtonTitle:@"OK"
-        otherButtonTitles:nil] autorelease];
+        otherButtonTitles:nil];
         [alert show];
     }
     else {
@@ -228,19 +226,5 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)requestDidFailWithError:(NSError*)error {
     [_reporter reportErrorWithReason:@"There was an an unrecoverable system error accessing session data"];
 }
-
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_loginClient release];
-    [_navigationManager release];
-    [_reporter release];
-    [_userNameAndPasswordForm release];
-    [_loginButton release];
-    [_spinner release];
-    [_userNameField release];
-    [_passwordField release];
-    [super dealloc];
-}
-
 
 @end

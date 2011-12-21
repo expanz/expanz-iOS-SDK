@@ -21,7 +21,7 @@
 */
 @interface expanz_model_ImageCell : expanz_model_AbstractCell
 
-@property(nonatomic, readonly) NSString* imageUrl;
+@property(nonatomic, strong, readonly) NSString* imageUrl;
 @property(nonatomic, retain) UIImage* image;
 @property(nonatomic) BOOL hasAskedImageToLoad;
 

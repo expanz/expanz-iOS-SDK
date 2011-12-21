@@ -19,11 +19,11 @@
     NSMutableArray* _files;
 }
 
-@property(nonatomic, readonly) NSString* folderId;
-@property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) NSString* hint;
-@property(nonatomic, readonly) NSString* buttonTitle;
-@property(nonatomic, readonly) NSString* sequence;
+@property(nonatomic, strong, readonly) NSString* folderId;
+@property(nonatomic, strong, readonly) NSString* title;
+@property(nonatomic, strong, readonly) NSString* hint;
+@property(nonatomic, strong, readonly) NSString* buttonTitle;
+@property(nonatomic, strong, readonly) NSString* sequence;
 
 - (id)initWithFolderId:(NSString*)folderId title:(NSString*)title hint:(NSString*)hint
            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence;

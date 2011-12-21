@@ -26,8 +26,8 @@
     id<expanz_ui_SystemEventReporter> _reporter;
 }
 
-@property (nonatomic, readonly) expanz_model_Menu* menu;
-@property (nonatomic, retain) IBOutlet UITableView* menuTable;
+@property(nonatomic, strong) expanz_model_Menu* menu;
+@property(nonatomic, strong) IBOutlet UITableView* menuTable;
 
 @end
 

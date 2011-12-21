@@ -34,14 +34,12 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSString*) query {
-    return [[_query retain] autorelease];
+    return _query;
 }
 
 - (void) setQuery:(NSString*)query {
     if (query != _query) {
-        [_query release];
         _query = [query copy];
-        [_populateMethod release];
         _populateMethod = nil;
     }
 }
@@ -57,13 +55,5 @@
                                       _populateMethod != nil ? _populateMethod : @"", _query,
                                       _autoPopulate == YES ? @"1" : @"0"];
 }
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_dataPublicationId release];
-    [_populateMethod release];
-    [super dealloc];
-}
-
 
 @end

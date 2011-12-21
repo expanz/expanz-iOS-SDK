@@ -15,8 +15,8 @@
 
 @interface expanz_service_MethodInvocationRequest : NSObject<xml_Serializable>
 
-@property (nonatomic, readonly) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, readonly) NSString* methodName; 
+@property(nonatomic, strong) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, strong) NSString* methodName;
 
 - (id) initWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance methodName:(NSString*)methodName;
 

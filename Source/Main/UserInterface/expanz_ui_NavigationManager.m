@@ -57,7 +57,6 @@ objection_requires(@"reporter")
     [_navigationController pushViewController:menuViewController animated:NO];
     [_navigationController setNavigationBarHidden:NO];
     [menuViewController.navigationItem setHidesBackButton:YES];
-    [menuViewController release];
 
     SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
     [delegate.window.layer addAnimation:[self cubeViewTransition] forKey:nil];
@@ -81,11 +80,10 @@ objection_requires(@"reporter")
         return NO;
     }
     else {
-        ActivityInstanceViewController* nextView = class_createInstance(clazz, 0);
+        ActivityInstanceViewController* nextView = [clazz alloc];
         NSString* nibName = [self nibNameFor:activityDefinition];
         nextView = [nextView initWithActivityDefinition:activityDefinition nibName:nibName initialKey:initialKey];
         [_navigationController pushViewController:nextView animated:YES];
-        [nextView release];
         return YES;
     }
 }
@@ -99,16 +97,9 @@ objection_requires(@"reporter")
     DocumentViewController* documentViewController =
         [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
     [_navigationController pushViewController:documentViewController animated:YES];
-    [documentViewController release];
     return YES;
 }
 
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_reporter release];
-    [super dealloc];
-}
 
 /* ================================================== Private Methods =============================================== */
 - (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {

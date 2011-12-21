@@ -15,7 +15,7 @@
 
 @interface StubLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
 
-@property (nonatomic, retain) expanz_model_SessionContext* sessionContext;
-@property (nonatomic, retain) NSError* error; 
+@property(nonatomic, strong) expanz_model_SessionContext* sessionContext;
+@property(nonatomic, strong) NSError* error;
 
 @end

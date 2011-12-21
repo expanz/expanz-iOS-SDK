@@ -29,9 +29,9 @@
     if (![self.tag isEqualToString:@"Activity"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not an Activity."];
     }
-    ActivityInstance* activityInstance = [[[ActivityInstance alloc]
+    ActivityInstance* activityInstance = [[ActivityInstance alloc]
         initWithTitle:[self attribute:@"title"] handle:[self attribute:@"activityHandle"]
-         persistentId:[self attribute:@"persistentId"]] autorelease];
+         persistentId:[self attribute:@"persistentId"]];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
 
@@ -65,9 +65,8 @@
     NSString* label = [self attribute:@"label"];
     NSString* hint = [self attribute:@"hint"];
 
-    Field* field = [[[Field alloc]
-        initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint]
-        autorelease];
+    Field* field = [[Field alloc]
+        initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint];
 
     switch (field.datatype) {
         case ExpanzDataTypeString:
@@ -95,7 +94,7 @@
     }
     MessageType
         messageType = [[self attribute:@"type"] isEqualToString:@"Warning"] ? MessageTypeWarning : MessageTypeError;
-    return [[[Message alloc] initWithMessageType:messageType content:[self text]] autorelease];
+    return [[Message alloc] initWithMessageType:messageType content:[self text]];
 }
 
 /* ================================================================================================================== */
@@ -105,7 +104,7 @@
         [NSException raise:ExXmlValidationException format:@"Element is not Data."];
     }
     DataBuilder* dataBuilder =
-        [[[DataBuilder alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]] autorelease];
+        [[DataBuilder alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
 
@@ -140,7 +139,7 @@
     NSInteger width = [[self attribute:@"width"] integerValue];
 
     Column* column =
-        [[[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width] autorelease];
+        [[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width];
 
     return column;
 }
@@ -149,7 +148,7 @@
     if (![self.tag isEqualToString:@"Row"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a Row."];
     }
-    Row* row = [[[Row alloc] initWithRowId:[self attribute:@"id"] type:[self attribute:@"Type"]] autorelease];
+    Row* row = [[Row alloc] initWithRowId:[self attribute:@"id"] type:[self attribute:@"Type"]];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"Cell"]) {
@@ -172,8 +171,7 @@
     NSString* sequence = [self attribute:@"sequence"];
 
     Folder* folder =
-        [[[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence]
-            autorelease];
+        [[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"File"]) {
@@ -197,8 +195,8 @@
     NSString* type = [self attribute:@"type"];
     NSString* field = [self attribute:@"field"];
 
-    File* file = [[[File alloc]
-        initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field] autorelease];
+    File* file = [[File alloc]
+        initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field];
 
     return file;
 

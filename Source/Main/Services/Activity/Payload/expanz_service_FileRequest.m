@@ -21,9 +21,8 @@
 
 /* ================================================= Class Methods ================================================== */
 + (id)forFileId:(NSString*)fileId activityHandle:(NSString*)activityHandle {
-    return [[[FileRequest alloc]
-        initWithFileId:fileId activityHandle:activityHandle sessionToken:[SessionContext globalContext].sessionToken]
-        autorelease];
+    return [[FileRequest alloc]
+        initWithFileId:fileId activityHandle:activityHandle sessionToken:[SessionContext globalContext].sessionToken];
 }
 
 /* ================================================== Initializers ================================================== */
@@ -47,12 +46,5 @@
 }
 
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_fileId release];
-    [_activityHandle release];
-    [_sessionToken release];
-    [super dealloc];
-}
 
 @end

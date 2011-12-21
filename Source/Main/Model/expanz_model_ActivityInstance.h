@@ -27,12 +27,12 @@
     NSMutableArray* _dataSets;
 }
 
-@property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) NSString* handle;
-@property(nonatomic, readonly) NSString* persistentId;
-@property(nonatomic, readonly) NSArray* fields;
-@property(nonatomic, readonly) NSArray* messages;
-@property(nonatomic, readonly) NSArray* dataSets;
+@property(nonatomic, strong, readonly) NSString* title;
+@property(nonatomic, strong, readonly) NSString* handle;
+@property(nonatomic, strong, readonly) NSString* persistentId;
+@property(nonatomic, strong, readonly) NSArray* fields;
+@property(nonatomic, strong, readonly) NSArray* messages;
+@property(nonatomic, strong, readonly) NSArray* dataSets;
 
 /**
 * Initializes new instance  with the supplied parameters.

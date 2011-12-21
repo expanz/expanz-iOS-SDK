@@ -56,16 +56,18 @@
            forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
     [self newRequestWithPayload:xmlPayload];
-
+    
+    __weak XmlPostActivityClient* client = self;
+    
     [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [self.request responseString]);
-        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[self.request responseString]];
+        LogDebug(@"Response: %@, ", [client.request responseString]);
+        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[client.request responseString]];
         RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
         [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
     }];
 
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]];
+        [delegate requestDidFailWithError:[client.request error]];
     }];
 
     [self.request startAsynchronous];

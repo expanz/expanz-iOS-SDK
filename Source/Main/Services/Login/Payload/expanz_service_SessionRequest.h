@@ -17,10 +17,10 @@
 #define kClientVersion @"iOS 1.0"
 #define kSchemaVersion @"2.0"
 
-@property(nonatomic, readonly) NSString* userName;
-@property(nonatomic, readonly) NSString* password;
-@property(nonatomic, readonly) NSString* appSite;
-@property(nonatomic, readonly) NSString* userType;
+@property(nonatomic, strong, readonly) NSString* userName;
+@property(nonatomic, strong, readonly) NSString* password;
+@property(nonatomic, strong, readonly) NSString* appSite;
+@property(nonatomic, strong, readonly) NSString* userType;
 
 
 /**

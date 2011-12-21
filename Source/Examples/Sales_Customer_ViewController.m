@@ -29,17 +29,6 @@
     [super sendMethodInvocation:@"Save"];
 }
 
-- (void) dealloc {
-    [FirstNameLabel release];
-    [LastNameLabel release];
-    [EmailLabel release];
-    [PhoneLabel release];
-    [FirstName release];
-    [LastName release];
-    [Email release];
-    [Phone release];
-    [CustomerPhoto release];
-    [super dealloc];
-}
+
 
 @end

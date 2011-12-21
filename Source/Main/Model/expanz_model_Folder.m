@@ -48,15 +48,4 @@
     [_files addObject:file];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_folderId release];
-    [_title release];
-    [_hint release];
-    [_buttonTitle release];
-    [_sequence release];
-    [_files release];
-    [super dealloc];
-}
-
 @end

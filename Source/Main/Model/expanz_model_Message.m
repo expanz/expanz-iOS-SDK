@@ -41,13 +41,4 @@
 }
 
 
-
-/* ================================================== Utility Methods =============================================== */
-
-- (void) dealloc {
-    [_messageTypeAsString release];
-    [_content release];
-    [super dealloc];
-}
-
 @end

@@ -26,12 +26,11 @@
 
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
-    JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+    JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
     [JSObjection setGlobalInjector:injector];
     LoginViewController* loginViewController = [[LoginViewController alloc] init];
     [_navigationController pushViewController:loginViewController animated:NO];
     [_navigationController setNavigationBarHidden:YES];
-    [loginViewController release];        
     [self.window addSubview: [_navigationController view]];
     [self.window makeKeyAndVisible];    
 
@@ -80,12 +79,5 @@
      */
 //}
 
-/* ================================================== Utility Methods =============================================== */
-
-- (void)dealloc {
-    [_window release];
-    [_navigationController release];
-    [super dealloc];
-}
 
 @end

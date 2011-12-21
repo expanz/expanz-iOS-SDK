@@ -27,29 +27,26 @@
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostActivityClient
-            * client = [[[XmlPostActivityClient alloc] initWithServiceUrl:config.execXServiceUrl] autorelease];
+        XmlPostActivityClient* client = [[XmlPostActivityClient alloc] initWithServiceUrl:config.execXServiceUrl];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_ActivityClient)];
-    /* ================================================================================================================== */
-    [self bindBlock:^(JSObjectionInjector* context) {
-            XmlPostFileDownloadClient
-                * client = [[[XmlPostFileDownloadClient alloc] initWithServiceUrl:config.execXServiceUrl] autorelease];
-            return (id) client;
-        }    toProtocol:@protocol(expanz_service_FileDownloadClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostLoginClient
-            * client = [[[XmlPostLoginClient alloc] initWithServiceUrl:config.createSessionServiceUrl] autorelease];
+        XmlPostFileDownloadClient* client =
+            [[XmlPostFileDownloadClient alloc] initWithServiceUrl:config.execXServiceUrl];
+        return (id) client;
+    }    toProtocol:@protocol(expanz_service_FileDownloadClient)];
+    /* ============================================================================================================== */
+    [self bindBlock:^(JSObjectionInjector* context) {
+        XmlPostLoginClient* client = [[XmlPostLoginClient alloc] initWithServiceUrl:config.createSessionServiceUrl];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_LoginClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostSessionDataClient
-            * client = [[[XmlPostSessionDataClient alloc] initWithServiceUrl:config.execXServiceUrl] autorelease];
+        XmlPostSessionDataClient* client = [[XmlPostSessionDataClient alloc] initWithServiceUrl:config.execXServiceUrl];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
-    /* ================================================================================================================== */
+    /* ============================================================================================================== */
 
 
 }

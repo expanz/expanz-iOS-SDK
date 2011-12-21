@@ -16,9 +16,9 @@
 @interface expanz_service_FileDownloadRequest : NSObject<xml_Serializable>
 
 
-@property(nonatomic, readonly) NSString* blobId;
-@property(nonatomic, readonly) NSString* activityHandle;
-@property(nonatomic, readonly) NSString* sessionToken;
+@property(nonatomic, strong, readonly) NSString* blobId;
+@property(nonatomic, strong, readonly) NSString* activityHandle;
+@property(nonatomic, strong, readonly) NSString* sessionToken;
 @property(nonatomic, readonly) BOOL isByteArray;
 
 + (id) withBlobId:(NSString*)blobId isByteArray:(BOOL)isByteArray activityHandle:(NSString*)activityHandle;

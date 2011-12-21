@@ -30,13 +30,13 @@
         if (error != nil) {
             hasWarning = YES;  
         }
-        sessionContext = [[[SessionContext alloc] initWithSessionToken:sessionToken.text hasError:NO 
-                                                            hasWarning:hasWarning message:message] autorelease];
+        sessionContext = [[SessionContext alloc] initWithSessionToken:sessionToken.text hasError:NO
+                                                            hasWarning:hasWarning message:message];
      }
      else {            
          if (error != nil) {
-                sessionContext = [[[SessionContext alloc] initWithSessionToken:nil hasError:YES 
-                                                                hasWarning:NO message:message] autorelease];
+                sessionContext = [[SessionContext alloc] initWithSessionToken:nil hasError:YES
+                                                                hasWarning:NO message:message];
             }
             else {
                 [NSException raise:ExXmlValidationException 

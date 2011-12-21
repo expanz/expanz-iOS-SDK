@@ -38,14 +38,4 @@
     return self;
 }
 
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_columnId release];
-    [_field release];
-    [_label release];
-    [super dealloc];
-}
-
-
 @end

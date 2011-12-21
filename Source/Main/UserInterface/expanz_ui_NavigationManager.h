@@ -25,7 +25,7 @@
     UINavigationController* _navigationController;
 }
 
-@property (nonatomic, retain) id<expanz_ui_SystemEventReporter> reporter;
+@property(nonatomic, strong) id<expanz_ui_SystemEventReporter> reporter;
 
 - (BOOL) showMainMenu;
 

@@ -18,15 +18,15 @@
 
 /* ================================================= Class Methods ================================================== */
 + (expanz_model_ActivityStyle*)defaultStyle {
-    return [[[ActivityStyle alloc] initWithName:nil] autorelease];
+    return [[ActivityStyle alloc] initWithName:nil];
 }
 
 + (expanz_model_ActivityStyle*)browseStyle {
-    return [[[ActivityStyle alloc] initWithName:@"browse"] autorelease];
+    return [[ActivityStyle alloc] initWithName:@"browse"];
 }
 
 + (expanz_model_ActivityStyle*)fromString:(NSString*)string {
-    return [[[ActivityStyle alloc] initWithName:string] autorelease];
+    return [[ActivityStyle alloc] initWithName:string];
 }
 
 /* ================================================== Initializers ================================================== */
@@ -54,12 +54,6 @@
 
 - (BOOL)isBrowse {
     return [[_name lowercaseString] isEqualToString:@"browse"];
-}
-
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_name release];
-    [super dealloc];
 }
 
 @end

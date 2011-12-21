@@ -73,14 +73,8 @@
 
 /* ================================================= Protocol Methods =============================================== */
 - (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
-    return [[[GridDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName] autorelease];
+    return [[GridDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_source release];
-    [_columns release];
-    [_rows release];
-}
 
 @end

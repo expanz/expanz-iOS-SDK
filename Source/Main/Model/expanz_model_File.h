@@ -15,13 +15,13 @@
 */
 @interface expanz_model_File : NSObject
 
-@property (nonatomic, readonly) NSString* fileId;
-@property (nonatomic, readonly) NSString* title;
-@property (nonatomic, readonly) NSString* hint;
-@property (nonatomic, readonly) NSString* fileName;
-@property (nonatomic, readonly) NSString* sequence;
-@property (nonatomic, readonly) NSString* type;
-@property (nonatomic, readonly) NSString* field;
+@property(nonatomic, strong) NSString* fileId;
+@property(nonatomic, strong) NSString* title;
+@property(nonatomic, strong) NSString* hint;
+@property(nonatomic, strong) NSString* fileName;
+@property(nonatomic, strong) NSString* sequence;
+@property(nonatomic, strong) NSString* type;
+@property(nonatomic, strong) NSString* field;
  
 - (id) initWithFileId:(NSString*)fileId title:(NSString*)title hint:(NSString*)hint fileName:(NSString*)fileName 
              sequence:(NSString*)sequence type:(NSString*)type field:(NSString*)field;

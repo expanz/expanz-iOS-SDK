@@ -15,9 +15,9 @@
 */
 @interface expanz_model_FileResource : NSObject
 
-@property (nonatomic, readonly) NSString* path;
-@property (nonatomic, readonly) NSString* ext;
-@property (nonatomic, readonly) NSString* field;
+@property(nonatomic, strong) NSString* path;
+@property(nonatomic, strong) NSString* ext;
+@property(nonatomic, strong) NSString* field;
 
 - (id) initWithPath:(NSString*)path ext:(NSString*)ext field:(NSString*)field;
 

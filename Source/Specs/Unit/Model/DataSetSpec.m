@@ -30,7 +30,6 @@ SPEC_BEGIN(DataSetSpec)
             assertThat(data, notNilValue());
             assertThat(data.dataId, notNilValue());
             assertThat(data.source, notNilValue());
-            [data release];
         });
     });
 

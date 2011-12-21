@@ -33,7 +33,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (expanz_model_AbstractData*)build {
-    return [[_data retain] autorelease];
+    return _data;
 }
 
 - (void)addRow:(expanz_model_Row*)row {
@@ -72,13 +72,5 @@
     [treeData addFolder:folder];
 }
 
-
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_data release];
-    [_dataId release];
-    [_source release];
-    [super dealloc];
-}
 
 @end

@@ -17,7 +17,7 @@
 
 
 
-@property (nonatomic, readonly) NSString* sessionToken;
+@property(nonatomic, strong) NSString* sessionToken;
 
 - (id) initWithSessionToken:(NSString*)sessionToken; 
 

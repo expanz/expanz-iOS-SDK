@@ -98,13 +98,4 @@
                                       _persistentId];
 }
 
-- (void) dealloc {
-    [_handle release];
-    [_persistentId release];
-    [_fields release];
-    [_messages release];
-    [_dataSets release];
-    [super dealloc];
-}
-
 @end

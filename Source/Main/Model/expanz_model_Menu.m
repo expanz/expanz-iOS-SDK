@@ -33,7 +33,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*)processAreas {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     return [_processAreas sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -51,7 +51,7 @@
 }
 
 - (NSArray*)userRoles {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [[NSSortDescriptor alloc] initWithKey:@"description" ascending:YES];
     return [_userRoles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -67,7 +67,7 @@
             [_allActivities addObjectsFromArray:[processArea activities]];
         }
     }
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     return [_allActivities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -78,11 +78,5 @@
                                       _processAreas, _userRoles];
 }
 
-- (void)dealloc {
-    [_allActivities release];
-    [_processAreas release];
-    [_userRoles release];
-    [super dealloc];
-}
 
 @end

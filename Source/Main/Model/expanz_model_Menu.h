@@ -24,8 +24,8 @@
 
 @property(nonatomic, readonly, getter = hasWorkflowTrays) BOOL hasWorkflowTrays;
 @property(nonatomic, readonly, getter = canChangeCompanyRole) BOOL canChangeCompanyRole;
-@property(nonatomic, readonly) NSArray* processAreas;
-@property(nonatomic, readonly) NSArray* userRoles;
+@property(nonatomic, strong, readonly) NSArray* processAreas;
+@property(nonatomic, strong, readonly) NSArray* userRoles;
 
 
 - (id) initWithHasWorkFlowTrays:(BOOL)hasWorkflowTrays canChangeCompanyRole:(BOOL)canChangeCompanyRole;

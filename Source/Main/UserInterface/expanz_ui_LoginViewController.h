@@ -27,10 +27,10 @@
     id<expanz_ui_SystemEventReporter> _reporter;
 }
 
-@property (nonatomic, readonly) id<expanz_service_LoginClient> loginClient; 
-@property (nonatomic, retain) IBOutlet UIBarButtonItem* loginButton; 
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner; 
-@property (nonatomic, retain) IBOutlet UITableView* userNameAndPasswordForm; 
+@property(nonatomic, strong) id<expanz_service_LoginClient> loginClient;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem* loginButton;
+@property(nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
+@property(nonatomic, strong) IBOutlet UITableView* userNameAndPasswordForm;
 
 /**
  * Initialize using the default nib name, from the main bundle. 

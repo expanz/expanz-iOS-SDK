@@ -17,7 +17,7 @@
 */
 @interface expanz_model_AbstractCell : NSObject
 
-@property(nonatomic, readonly) NSString*(cellId);
+@property(nonatomic, strong, readonly) NSString*(cellId);
 
 - (id) initWithCellId:(NSString*)aCellId;
 

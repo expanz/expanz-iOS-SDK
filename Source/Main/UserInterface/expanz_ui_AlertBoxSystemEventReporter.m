@@ -24,14 +24,12 @@ objection_register_singleton(expanz_ui_AlertBoxSystemEventReporter)
     UIAlertView* alert = [[UIAlertView alloc]
         initWithTitle:@"Error" message:reason delegate:_delegate cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    [alert release];
 }
 
 - (void)reportWarningWithReason:(NSString*)reason {
     UIAlertView* alert = [[UIAlertView alloc]
         initWithTitle:@"Warning" message:reason delegate:_delegate cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    [alert release];
 
 }
 
@@ -39,7 +37,6 @@ objection_register_singleton(expanz_ui_AlertBoxSystemEventReporter)
     UIAlertView* alert = [[UIAlertView alloc]
         initWithTitle:title message:message delegate:_delegate cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    [alert release];
 }
 
 

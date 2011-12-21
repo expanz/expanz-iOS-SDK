@@ -32,9 +32,9 @@
     UIImageView* _currentlyEditingImageView;
 }
 
-@property(nonatomic, readonly) expanz_model_ActivityDefinition* activityDefinition;
-@property(nonatomic, readonly) expanz_model_ActivityInstance* activityInstance;
-@property(nonatomic, readonly) expanz_ui_ModelAdapter* modelAdapter;
+@property(nonatomic, strong, readonly) expanz_model_ActivityDefinition* activityDefinition;
+@property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, strong, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 
 

@@ -25,8 +25,8 @@ typedef enum {
 @interface expanz_model_Message : NSObject
 
 @property(nonatomic, readonly) MessageType messageType;
-@property(nonatomic, readonly) NSString* messageTypeAsString;
-@property(nonatomic, readonly) NSString* content;
+@property(nonatomic, strong, readonly) NSString* messageTypeAsString;
+@property(nonatomic, strong, readonly) NSString* content;
 
 
 - (id) initWithMessageType:(MessageType)messageType content:(NSString*)content;

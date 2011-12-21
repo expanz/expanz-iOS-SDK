@@ -15,9 +15,9 @@
 
 @interface expanz_iOS_SDKConfiguration : NSObject
 
-@property(nonatomic, readonly) NSString* baseUrl;
-@property(nonatomic, readonly) NSString* preferredSite;
-@property(nonatomic, readonly) NSString* userType;
+@property(nonatomic, strong, readonly) NSString* baseUrl;
+@property(nonatomic, strong, readonly) NSString* preferredSite;
+@property(nonatomic, strong, readonly) NSString* userType;
 
 
 + (expanz_iOS_SDKConfiguration*) globalConfiguration;

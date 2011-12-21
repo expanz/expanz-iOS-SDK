@@ -19,7 +19,7 @@
 */
 @interface expanz_model_AbstractData : NSObject
 
-@property (nonatomic, readonly) NSString* dataId;
+@property(nonatomic, strong) NSString* dataId;
 
 - (id) initWithDataId:(NSString*)dataId;
 

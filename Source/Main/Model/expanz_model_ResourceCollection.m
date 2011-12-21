@@ -34,11 +34,4 @@
 }
 
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_fileResources release];
-    [super dealloc];
-}
-
-
 @end

@@ -24,7 +24,7 @@
     if (self) {
         _name = [name copy];
         _title = [title copy];
-        _style = [style retain];
+        _style = style;
     }
     return self;
 }
@@ -33,13 +33,5 @@
 - (NSString*) description {
     return [NSString stringWithFormat:@"Activity name=%@, title=%@", _name, _title];
 }
-
-- (void) dealloc {
-    [_name release];
-    [_title release];
-    [_style release];
-    [super dealloc];
-}
-
 
 @end

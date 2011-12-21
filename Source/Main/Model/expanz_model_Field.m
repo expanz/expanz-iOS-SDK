@@ -48,30 +48,14 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) didFinishEditWithValue:(NSString*)value {
     LogDebug(@"%@', did finish edit with new value '%@'", [self description], value);
-    if (![_value isEqualToString:value]) {
-        [_value release];
-        _value = [value retain];
-        _dirty = YES;
-    }
+    _value = value;
+    _dirty = YES;
+
 }
 
-- (void) didSynchronizeStateWithServerModel:(NSString*)validatedValue
-{
-    if (validatedValue != _value) {
-        [_value release];
-        _value = [validatedValue retain];
-    }
+- (void) didSynchronizeStateWithServerModel:(NSString*)validatedValue {
+    _value = validatedValue;
     _dirty = NO;
-}
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_fieldId release];
-    [_defaultValue release];
-    [_label release];
-    [_hint release];
-    [super dealloc];
 }
 
 - (NSString*) description {

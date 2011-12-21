@@ -19,14 +19,4 @@
 @synthesize subLabel = _subLabel;
 @synthesize thumbnail = _thumbnail;
 
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_mainLabel release];
-    [_subLabel release];
-    [_thumbnail release];
-    [super dealloc];
-}
-
 @end

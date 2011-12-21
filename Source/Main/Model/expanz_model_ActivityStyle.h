@@ -13,7 +13,7 @@
 
 @interface expanz_model_ActivityStyle : NSObject
 
-@property (nonatomic, readonly) NSString* name;
+@property(nonatomic, strong) NSString* name;
 
 + (expanz_model_ActivityStyle*) defaultStyle;
 + (expanz_model_ActivityStyle*) browseStyle;

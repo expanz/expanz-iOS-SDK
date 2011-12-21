@@ -25,15 +25,16 @@
                         delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
     
     [self newRequestWithPayload:sessionDataRequest];
+    __weak XmlPostSessionDataClient* client = self; 
     
     [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@", [self.request responseString]);
-        RXMLElement* response = [RXMLElement elementFromXMLString:[self.request responseString]];
+        LogDebug(@"Response: %@", [client.request responseString]);
+        RXMLElement* response = [RXMLElement elementFromXMLString:[client.request responseString]];
         [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
     }];
     
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]]; 
+        [delegate requestDidFailWithError:[client.request error]]; 
     }];
     [self.request startAsynchronous];
 }

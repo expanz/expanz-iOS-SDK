@@ -31,10 +31,4 @@
     return [NSString stringWithFormat:@"UserRole: roleId=%@, description=%@", _roleId, _roleDescription];
 }
 
-- (void) dealloc {
-    [_roleId release];
-    [_roleDescription release];
-    [super dealloc];
-}
-
 @end

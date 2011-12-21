@@ -25,9 +25,9 @@
 /* ================================================= Class Methods ================================================== */
 + (id) forField:(expanz_model_Field*)field {
     NSString* sessionToken = [SessionContext globalContext].sessionToken;
-    return [[[DeltaRequest alloc]
+    return [[DeltaRequest alloc]
         initWithFieldId:field.fieldId fieldValue:field.value activityHandle:field.parentActivity.handle
-           sessionToken:sessionToken] autorelease];
+           sessionToken:sessionToken];
 }
 
 /* ================================================== Initializers ================================================== */
@@ -66,16 +66,6 @@
 
     return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fieldId, encodingAttribute, valueAttribute,
                                       base64Packet, _sessionToken];
-}
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_sessionToken release];
-    [_activityHandle release];
-    [_fieldId release];
-    [_fieldValue release];
-    [super dealloc];
 }
 
 @end

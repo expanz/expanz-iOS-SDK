@@ -24,13 +24,15 @@
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
     [self newRequestWithPayload:sessionRequest];
     
+    __weak ASIHTTPRequest* request = self.request; 
+    
     [self.request setCompletionBlock:^{
-        RXMLElement* element = [RXMLElement elementFromXMLString:[self.request responseString]];
+        RXMLElement* element = [RXMLElement elementFromXMLString:[request responseString]];
         [delegate requestDidFinishWithSessionContext:[element asSessionContext]];                          
     }];
     
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[self.request error]]; 
+        [delegate requestDidFailWithError:[request error]]; 
     }];
     [self.request startAsynchronous];
 }

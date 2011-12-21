@@ -22,7 +22,7 @@
 - (id) initWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance methodName:(NSString*)methodName {
     self = [super init]; 
     if (self) {
-        _activityInstance = [activityInstance retain];
+        _activityInstance = activityInstance;
         _methodName = [methodName copy];
     }
     return self;
@@ -38,11 +38,5 @@
     return [NSString stringWithFormat:kXmlTemplate, _activityInstance.handle, _methodName, sessionToken];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_activityInstance release]; 
-    [_methodName release];
-    [super dealloc];
-}
 
 @end

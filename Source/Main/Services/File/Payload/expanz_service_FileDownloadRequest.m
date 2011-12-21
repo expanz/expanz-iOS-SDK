@@ -54,12 +54,4 @@
 
 
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_blobId release];
-    [_activityHandle release];
-    [_sessionToken release];
-    [super dealloc];
-}
-
 @end

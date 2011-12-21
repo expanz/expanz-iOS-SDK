@@ -15,9 +15,9 @@
 
 @interface expanz_service_FileRequest : NSObject<xml_Serializable>
 
-@property (nonatomic, retain) NSString* fileId;
-@property (nonatomic, retain) NSString* activityHandle;
-@property (nonatomic, retain) NSString* sessionToken;
+@property(nonatomic, strong) NSString* fileId;
+@property(nonatomic, strong) NSString* activityHandle;
+@property(nonatomic, strong) NSString* sessionToken;
 
 
 + (id) forFileId:(NSString*)fileId activityHandle:(NSString*)activityHandle;

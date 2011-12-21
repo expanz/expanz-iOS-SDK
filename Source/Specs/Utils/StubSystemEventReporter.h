@@ -15,6 +15,6 @@
 
 @interface StubSystemEventReporter : NSObject<expanz_ui_SystemEventReporter>
 
-@property (nonatomic, retain) NSString* message;
+@property(nonatomic, strong) NSString* message;
 
 @end

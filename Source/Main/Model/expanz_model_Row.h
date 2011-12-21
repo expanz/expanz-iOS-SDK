@@ -29,8 +29,8 @@
 }
 
 @property(nonatomic, assign) expanz_model_GridData* dataSet;
-@property(nonatomic, readonly) NSString* rowId;
-@property(nonatomic, readonly) NSString* type;
+@property(nonatomic, strong, readonly) NSString* rowId;
+@property(nonatomic, strong, readonly) NSString* type;
 
 - (id) initWithRowId:(NSString*)rowId type:(NSString*)type;
 

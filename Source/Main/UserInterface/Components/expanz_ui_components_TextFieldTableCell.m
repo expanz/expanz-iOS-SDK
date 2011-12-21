@@ -50,12 +50,4 @@
     [self addSubview:_textField];
 }
 
-
-/* ================================================== Utility Methods =============================================== */
-
-- (void) dealloc {
-    [_textField release];
-    [super dealloc];
-}
-
 @end

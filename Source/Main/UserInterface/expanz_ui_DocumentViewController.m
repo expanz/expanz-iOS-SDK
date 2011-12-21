@@ -32,8 +32,7 @@
     if (self) {
         _documentId = [documentId copy];
         _activityHandle = [activityHandle copy];
-        _fileDownloadClient =
-            [[[JSObjection globalInjector] getObject:@protocol(expanz_service_FileDownloadClient)] retain];
+        _fileDownloadClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_FileDownloadClient)];
     }
     return self;
 }
@@ -79,7 +78,7 @@
     self.ext = fileResource.ext;
 
     FileDownloadRequest* request =
-        [[FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle] autorelease];
+        [FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle];
     [_fileDownloadClient downloadFileWith:request delegate:self];
 
 }
@@ -104,17 +103,5 @@
 
 }
 
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_spinner release];
-    [_documentView release];
-    [_printButton release];
-    [_documentId release];
-    [_activityHandle release];
-    [_fileDownloadClient release];
-    [super dealloc];
-}
 
 @end

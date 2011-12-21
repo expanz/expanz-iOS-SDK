@@ -22,10 +22,10 @@ typedef enum {
 
 @interface expanz_service_DeltaRequest : NSObject<xml_Serializable>
 
-@property (nonatomic, readonly) NSString* fieldId;
-@property (nonatomic, readonly) NSString* fieldValue;
-@property (nonatomic, readonly) NSString* sessionToken;
-@property (nonatomic, readonly) NSString* activityHandle;
+@property (nonatomic, strong, readonly) NSString* fieldId;
+@property (nonatomic, strong, readonly) NSString* fieldValue;
+@property (nonatomic, strong, readonly) NSString* sessionToken;
+@property (nonatomic, strong, readonly) NSString* activityHandle;
 @property (nonatomic, readonly) DeltaEncoding encoding;
 
 /**

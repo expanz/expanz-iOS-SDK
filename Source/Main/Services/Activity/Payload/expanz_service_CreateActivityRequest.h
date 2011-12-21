@@ -22,11 +22,11 @@
 }
 
 
-@property(nonatomic, readonly) NSString* activityName;
-@property(nonatomic, readonly) ActivityStyle* style;
-@property(nonatomic, readonly) NSString* initialKey;
-@property(nonatomic, readonly) NSString* sessionToken;
-@property(nonatomic, readonly) NSArray* dataPublicationRequests;
+@property(nonatomic, strong, readonly) NSString* activityName;
+@property(nonatomic, strong, readonly) ActivityStyle* style;
+@property(nonatomic, strong, readonly) NSString* initialKey;
+@property(nonatomic, strong, readonly) NSString* sessionToken;
+@property(nonatomic, strong, readonly) NSArray* dataPublicationRequests;
 
 
 /**

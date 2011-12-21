@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "xml_Serializable.h"
 
@@ -22,15 +23,15 @@
  */
 @interface expanz_service_XmlPostWebService : NSObject
 
-@property (nonatomic, readonly) NSURL* serviceUrl;
-@property (nonatomic, retain) ASIFormDataRequest* request;
+@property(nonatomic, strong) NSURL* serviceUrl;
+@property(nonatomic, strong) ASIFormDataRequest* request;
 
 - (id) initWithServiceUrl:(NSURL*)serviceUrl;
 
 /**
  * Utility method for appending post data to the underlying request. 
  */
-- (void) newRequestWithPayload:(id <xml_Serializable>)xmlable;
+- (void) newRequestWithPayload:(id<xml_Serializable>)xmlable;
 
 @end
 

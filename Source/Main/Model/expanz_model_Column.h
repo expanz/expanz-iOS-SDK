@@ -22,14 +22,14 @@
 @interface expanz_model_Column : NSObject {
 
 @private
-    expanz_model_GridData* _dataSet;
+    __weak expanz_model_GridData* _dataSet;
 
 }
 
-@property(nonatomic, assign) expanz_model_GridData* dataSet;
-@property(nonatomic, readonly) NSString* columnId;
-@property(nonatomic, readonly) NSString* field;
-@property(nonatomic, readonly) NSString* label;
+@property(nonatomic, weak) expanz_model_GridData* dataSet;
+@property(nonatomic, strong, readonly) NSString* columnId;
+@property(nonatomic, strong, readonly) NSString* field;
+@property(nonatomic, strong, readonly) NSString* label;
 @property(nonatomic, readonly) ExpanzDataType dataType;
 @property(nonatomic, readonly) NSInteger width;
 

@@ -32,7 +32,7 @@
                sessionToken:(NSString*)sessionToken {
     self = [self init];
     _activityName = [activityName copy];
-    _style = [style retain];
+    _style = style;
     _initialKey = [initialKey copy];
     _sessionToken = [sessionToken copy];
     return self;
@@ -45,12 +45,11 @@
 }
 
 - (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView {
-    NSValue* key = [NSValue valueWithPointer:tableView];
+    NSValue* key = [NSValue valueWithPointer:(__bridge void*) tableView];
     DataPublicationRequest* publicationRequest = [_dataPublicationRequests objectForKey:key];
     if (publicationRequest == nil) {
         publicationRequest = [[DataPublicationRequest alloc] init];
         [_dataPublicationRequests setObject:publicationRequest forKey:key];
-        [publicationRequest release];
     }
     return publicationRequest;
 }
@@ -71,15 +70,6 @@ style=\"%@\" %@>%@</CreateActivity></ESA></xml><sessionHandle>%@</sessionHandle>
     }
     return [NSString stringWithFormat:kXmlTempate, _activityName, [_style name], initialKeyAttribute, body,
                                       _sessionToken];
-}
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_activityName release];
-    [_style release];
-    [_sessionToken release];
-    [_dataPublicationRequests release];
-    [super dealloc];
 }
 
 @end

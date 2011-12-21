@@ -91,9 +91,5 @@
     [self.tableView setNeedsLayout];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end

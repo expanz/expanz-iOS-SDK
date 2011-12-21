@@ -9,9 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "ASIHTTPRequest.h"
 #import "expanz_service_XmlPostWebService.h"
-#import "expanz_iOS_SDKConfiguration.h"
-#import "expanz_ui_SystemEventReporter.h"
 
 @implementation expanz_service_XmlPostWebService
 
@@ -19,29 +18,22 @@
 @synthesize request = _request;
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithServiceUrl:(NSURL*)serviceUrl {
+- (id) initWithServiceUrl:(NSURL*)serviceUrl {
     self = [super init];
     if (self) {
-        _serviceUrl = [serviceUrl retain];
+        _serviceUrl = serviceUrl;
     }
     return self;
 }
 
 
-- (void) newRequestWithPayload:(id <xml_Serializable>)xmlable {
-    [_request release];
+- (void) newRequestWithPayload:(id<xml_Serializable>)xmlable {
+    _request = nil;
     _request = [[ASIFormDataRequest alloc] initWithURL:_serviceUrl];
     [_request addRequestHeader:@"Content-Type" value:@"text/xml"];
     [_request appendPostData:[[xmlable toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     LogDebug(@"Sending request: %@", [xmlable toXml]);
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_serviceUrl release];
-    [_request release];
-    [_serviceUrl release];
-    [super dealloc];
-}
 
 @end

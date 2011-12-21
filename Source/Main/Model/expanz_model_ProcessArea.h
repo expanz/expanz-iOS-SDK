@@ -20,9 +20,9 @@
     NSMutableSet* _activities;
 }
 
-@property(nonatomic, readonly) NSString* processId;
-@property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) NSArray* activities;
+@property(nonatomic, strong, readonly) NSString* processId;
+@property(nonatomic, strong, readonly) NSString* title;
+@property(nonatomic, strong, readonly) NSArray* activities;
 
 /**
 * Initializes with the supplied processId and title parameters.

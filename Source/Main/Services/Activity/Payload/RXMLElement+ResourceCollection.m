@@ -21,7 +21,7 @@
     if (![self.tag isEqualToString:@"Files"]) {
         [NSException raise:ExXmlValidationException format:@"Element name is not Files."];
     }
-    ResourceCollection* collection = [[[ResourceCollection alloc] init] autorelease];
+    ResourceCollection* collection = [[ResourceCollection alloc] init];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         [collection addFileResource:[e asFileResource]];
@@ -34,8 +34,8 @@
     if (![self.tag isEqualToString:@"File"]) {
         [NSException raise:ExXmlValidationException format:@"Element is not a File."];
     }
-    return [[[FileResource alloc]
-        initWithPath:[self attribute:@"path"] ext:[self attribute:@"ext"] field:[self attribute:@"field"]] autorelease];
+    return [[FileResource alloc]
+        initWithPath:[self attribute:@"path"] ext:[self attribute:@"ext"] field:[self attribute:@"field"]];
 
 }
 

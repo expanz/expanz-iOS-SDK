@@ -16,22 +16,22 @@
 
 @interface expanz_ui_AbstractDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, readonly) expanz_ui_NavigationManager* activityManager;
+@property(nonatomic, strong) expanz_ui_NavigationManager* activityManager;
 
 /**
 * Data to be rendered.
 */
-@property(nonatomic, readonly) expanz_model_AbstractData* data;
+@property(nonatomic, strong, readonly) expanz_model_AbstractData* data;
 
 /**
 * UITableView to display the data.
 */
-@property(nonatomic, readonly) UITableView* tableView;
+@property(nonatomic, strong, readonly) UITableView* tableView;
 
 /**
 * Activity name to use for showing detail of a grid data row.
 */
-@property(nonatomic, readonly) NSString* activityName;
+@property(nonatomic, strong, readonly) NSString* activityName;
 
 
 /**

@@ -28,7 +28,7 @@
 
 }
 
-@property (nonatomic, readonly) NSString* source;
+@property (nonatomic, strong, readonly) NSString* source;
 
 /**
 * Initializes an instance with the supplied id and source attributes.

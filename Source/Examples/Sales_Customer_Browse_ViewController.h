@@ -15,7 +15,7 @@
 
 @interface Sales_Customer_Browse_ViewController : expanz_ui_ActivityInstanceViewController
 
-@property (nonatomic, retain) IBOutlet UITableView* customersList;
+@property(nonatomic, strong) IBOutlet UITableView* customersList;
 
 
 @end

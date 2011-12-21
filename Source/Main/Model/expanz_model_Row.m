@@ -74,19 +74,6 @@
 }
 
 
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_rowId release];
-    [_type release];
-    [_cellDefinitions release];
-    [_textCells release];
-    [_imageCells release];
-    [_sortDescriptors release];
-    [super dealloc];
-}
-
-
 /* ================================================== Private Methods =============================================== */
 - (void) buildCellsIfRequired {
 
@@ -106,10 +93,10 @@
                 case ExpanzDataTypeNumber:
                 case ExpanzDataTypeDate:
                 case ExpanzDataTypeDateTime:
-                    [_textCells addObject:[[[TextCell alloc] initWithCellId:cellId text:data] autorelease]];
+                    [_textCells addObject:[[TextCell alloc] initWithCellId:cellId text:data]];
                     break;
                 case ExpanzDataTypeImage:
-                    [_imageCells addObject:[[[ImageCell alloc] initWithCellId:cellId imageUrl:data] autorelease]];
+                    [_imageCells addObject:[[ImageCell alloc] initWithCellId:cellId imageUrl:data]];
                     break;
                 case ExpanzDataTypeBool:
                     //TODO: Handle this!

@@ -16,7 +16,7 @@
 */
 @interface expanz_ui_components_TextFieldTableCell : UITableViewCell<UITextFieldDelegate>
 
-@property (nonatomic, retain) IBOutlet UITextField* textField;
+@property(nonatomic, strong) IBOutlet UITextField* textField;
 
 - (id) initWithReuseIdentifier:(NSString*)reuseIdentifier; 
 

@@ -31,12 +31,12 @@
     if (self) {
         self.title = @"activities";
         _sessionDataClient =
-            [[[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)] retain];
-        _activityManger = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
-        _reporter = [[[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)] retain];
+            [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
+        _activityManger = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
 
         SessionDataRequest* sessionDataRequest =
-            [[[SessionDataRequest alloc] initWithSessionToken:[SessionContext globalContext].sessionToken] autorelease];
+            [[SessionDataRequest alloc] initWithSessionToken:[SessionContext globalContext].sessionToken];
         [_sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:self];
     }
     return self;
@@ -105,8 +105,7 @@
     static NSString* reuseId = @"ActivityMenu";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell =
-            [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -143,7 +142,7 @@
 #pragma mark SessionDataClientDelegate 
 
 - (void)requestDidFinishWithMenu:(Menu*)menu {
-    _menu = [menu retain];
+    _menu = menu;
     [self.menuTable reloadData];
 }
 
@@ -151,15 +150,6 @@
     [_reporter reportErrorWithReason:@"There was an unrecoverable error accessing data for the main menu."];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_sessionDataClient release];
-    [_activityManger release];
-    [_reporter release];
-    [_menu release];
-    [_menuTable release];
-    [super dealloc];
-}
 
 
 @end

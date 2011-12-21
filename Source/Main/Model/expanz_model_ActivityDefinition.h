@@ -14,9 +14,9 @@
 
 @interface expanz_model_ActivityDefinition : NSObject
 
-@property(nonatomic, readonly) NSString* name;
-@property(nonatomic, readonly) NSString* title;
-@property(nonatomic, readonly) ActivityStyle* style;
+@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* title;
+@property(nonatomic, strong, readonly) ActivityStyle* style;
 
 - (id) initWithName:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
 

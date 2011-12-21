@@ -25,8 +25,8 @@
     expanz_model_AbstractData* _data;
 }
 
-@property (nonatomic, readonly) NSString* dataId;
-@property (nonatomic, readonly) NSString* source;
+@property(nonatomic, strong) NSString* dataId;
+@property(nonatomic, strong) NSString* source;
 
 - (id) initWithDataId:(NSString*)dataId source:(NSString*)source;
 

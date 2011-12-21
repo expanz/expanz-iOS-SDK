@@ -16,10 +16,5 @@
 
 @synthesize customersList = _customersList;
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_customersList release];
-    [super dealloc];
-}
 
 @end

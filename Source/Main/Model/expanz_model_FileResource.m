@@ -29,12 +29,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_path release];
-    [_ext release];
-    [_field release];
-}
-
 - (NSString*) description {
     return [NSString stringWithFormat:@"FileResource: path='%@', ext='%@', field='%@'", _path, _ext, _field];
 }

@@ -33,24 +33,16 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) loadImage {
     [self setHasAskedImageToLoad:YES];
-    ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:_imageUrl]];
+    __weak ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:_imageUrl]];
     [request setCompletionBlock:^{
-            self.image = [[UIImage imageWithData:[request responseData]] retain];
-        }];
+        self.image = [UIImage imageWithData:[request responseData]];
+    }];
 
     [request setFailedBlock:^{
-            //TODO: Handle this?
-            LogError(@"Can't download the image: %@", _imageUrl);
-        }];
+        //TODO: Handle this?
+        LogError(@"Can't download the image: %@", _imageUrl);
+    }];
     [request startAsynchronous];
-}
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_imageUrl release];
-    [_image release];
-    [super dealloc];
 }
 
 

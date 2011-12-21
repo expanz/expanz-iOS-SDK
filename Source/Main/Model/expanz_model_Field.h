@@ -23,13 +23,13 @@
 /* ================================================================================================================== */
 
 /** Unique identifier. */
-@property(nonatomic, readonly) NSString* fieldId;
+@property(nonatomic, strong, readonly) NSString* fieldId;
 
 /** Indicates if the field is mandatory. */
 @property(nonatomic, readonly, getter = isNullable) BOOL nullable;
 
 /** The value the field is initialized with, ie user is presented initially with this value. */
-@property(nonatomic, readonly) NSString* defaultValue;
+@property(nonatomic, strong, readonly) NSString* defaultValue;
 
 /** The field's datatype. */
 @property(nonatomic, readonly) ExpanzDataType datatype;
@@ -38,10 +38,10 @@
 @property(nonatomic, readonly, getter = isDirty) BOOL dirty;
 
 /** Label to display next to the field */
-@property(nonatomic, readonly) NSString* label;
+@property(nonatomic, strong, readonly) NSString* label;
 
 /** Additional user instructions for the field. */
-@property(nonatomic, readonly) NSString* hint;
+@property(nonatomic, strong, readonly) NSString* hint;
 
 /** Reference to the activity this field belongs to. */
 @property(nonatomic, readwrite, assign) expanz_model_ActivityInstance* parentActivity;

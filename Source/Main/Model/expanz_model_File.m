@@ -39,17 +39,6 @@
 }
 
 /* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_fileId release];
-    [_title release];
-    [_hint release];
-    [_fileName release];
-    [_sequence release];
-    [_type release];
-    [_field release];
-    [super dealloc];
-}
-
 - (NSString*)description {
     return [NSString
         stringWithFormat:@"File: fileId=%@, title=%@, hint=%@, fileName=%@, sequence=%@, type=%@, field=%@", _fileId,

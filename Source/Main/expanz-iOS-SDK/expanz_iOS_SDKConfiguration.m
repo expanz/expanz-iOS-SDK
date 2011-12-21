@@ -23,18 +23,15 @@ static SDKConfiguration* _globalConfiguration;
 @synthesize userType = _userType;
 
 /* ================================================= Class Methods ================================================== */
-+ (void)setGlobalConfiguration:(SDKConfiguration*)configuration {
-    if (_globalConfiguration != configuration) {
-        [_globalConfiguration release];
-        _globalConfiguration = [configuration retain];
-    }
++ (void) setGlobalConfiguration:(SDKConfiguration*)configuration {
+    _globalConfiguration = configuration;
 }
 
-+ (SDKConfiguration*)globalConfiguration {
-    return [[_globalConfiguration retain] autorelease];
++ (SDKConfiguration*) globalConfiguration {
+    return _globalConfiguration;
 }
 
-+ (void)setConfigurationFile:(NSString*)fileName {
++ (void) setConfigurationFile:(NSString*)fileName {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
     NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     if (xmlString == nil) {
@@ -51,12 +48,11 @@ static SDKConfiguration* _globalConfiguration;
         [[SDKConfiguration alloc] initWithBaseUrl:baseUrl preferredSite:preferredSite userType:userType];
 
     [SDKConfiguration setGlobalConfiguration:configuration];
-    [configuration release];
 }
 
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType {
+- (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType {
     self = [super init];
     if (self) {
         _baseUrl = [url copy];
@@ -68,38 +64,28 @@ static SDKConfiguration* _globalConfiguration;
 
 /* ================================================ Interface Methods =============================================== */
 - (NSURL*) createSessionServiceUrl {
-    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]] retain];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]];
 }
 
 - (NSURL*) execXServiceUrl {
-    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]] retain];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]];
 }
 
 - (NSURL*) getBlobServiceUrl {
-    return [[NSURL URLWithString:[NSString stringWithFormat:@"%@/GetBlob", _baseUrl]] retain];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/GetBlob", _baseUrl]];
 }
-
-
 
 /* ================================================== Utility Methods =============================================== */
-- (NSString*)description {
+- (NSString*) description {
     return [NSString stringWithFormat:@"SDKConfiguration: url=%@, preferredSite=%@", _baseUrl, _preferredSite];
 }
-
-- (void)dealloc {
-    [_baseUrl release];
-    [_preferredSite release];
-    [_userType release];
-    [super dealloc];
-}
-
 
 /* ================================================== Private Methods =============================================== */
 
 /**
 * Allows setting through user defined runtime attributes, in Interface Builder.
 */
-- (void)setConfigurationFile:(NSString*)fileName {
+- (void) setConfigurationFile:(NSString*)fileName {
     [SDKConfiguration setConfigurationFile:fileName];
 }
 

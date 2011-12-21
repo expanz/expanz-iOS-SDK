@@ -47,16 +47,4 @@ schemaVersion=\"%@\"/></ESA></xml></CreateSessionX>"
                                       kSchemaVersion];
 }
 
-
-/* ================================================== Utility Methods =============================================== */
-
-- (void)dealloc {
-    [_userName release];
-    [_password release];
-    [_appSite release];
-    [_userType release];
-    [super dealloc];
-}
-
-
 @end

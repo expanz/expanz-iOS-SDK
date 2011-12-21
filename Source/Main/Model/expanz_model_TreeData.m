@@ -38,14 +38,7 @@
 
 /* ================================================= Protocol Methods =============================================== */
 - (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
-    return [[[TreeDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName] autorelease];
+    return [[TreeDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName];
 }
-
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_folders release];
-    [super dealloc];
-}
-
 
 @end

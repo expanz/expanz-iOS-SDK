@@ -21,7 +21,7 @@
 
 }
 
-@property(nonatomic, readonly) NSArray* fileResources;
+@property(nonatomic, strong, readonly) NSArray* fileResources;
 
 
 - (void) addFileResource:(expanz_model_FileResource*)fileResource;

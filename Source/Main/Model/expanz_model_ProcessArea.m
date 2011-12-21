@@ -30,7 +30,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*) activities {
-    NSSortDescriptor* sorter = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
+    NSSortDescriptor* sorter = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
@@ -51,12 +51,6 @@
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
     return [NSString stringWithFormat:@"ProcessArea: id=%@, title=%@, activities: %@", _processId, _title, _activities];
-}
-
-- (void) dealloc {
-    [_processId release];
-    [_title release];
-    [super dealloc];
 }
 
 @end

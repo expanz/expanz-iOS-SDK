@@ -45,9 +45,9 @@
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
-        _activityClient = [[[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)] retain];
-        _activityManager = [[[JSObjection globalInjector] getObject:[NavigationManager class]] retain];
-        _activityDefinition = [activityDefinition retain];
+        _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
+        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _activityDefinition = activityDefinition;
         self.title = _activityDefinition.title;
         _activityRequest = [[CreateActivityRequest alloc]
             initWithActivityName:activityDefinition.name style:activityDefinition.style initialKey:initialKey
@@ -78,7 +78,6 @@
         [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
     [_spinner startAnimating];
     [_activityClient sendMethodInvocationWith:methodRequest delegate:self];
-    [methodRequest release];
 }
 
 /* ================================================================================================================== */
@@ -118,7 +117,6 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     [self presentModalViewController:imagePicker animated:YES];
-    [imagePicker release];
 }
 
 
@@ -146,7 +144,6 @@
     for (GridData* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
             for (ImageCell* imageCell in [row imageCells]) {
-                [imageCell.image release];
                 imageCell.image = nil;
                 imageCell.hasAskedImageToLoad = NO;
             }
@@ -192,7 +189,6 @@
         initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken
                encoding:DeltaEncodingBase64];
     [_activityClient sendDeltaWith:deltaRequest delegate:self];
-    [deltaRequest release];
 
     _currentlyEditingImageView.image = image;
     _currentlyEditingImageView = nil;
@@ -206,7 +202,7 @@
 - (void)requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
-        _activityInstance = [activityInstance retain];
+        _activityInstance = activityInstance;
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
         [_modelAdapter updateUIControlsWithModelValues];
     }
@@ -221,7 +217,6 @@
             initWithTitle:@"System Message" message:message.content delegate:self cancelButtonTitle:@"OK"
         otherButtonTitles:nil];
         [alert show];
-        [alert release];
     }
 }
 
@@ -230,16 +225,5 @@
 }
 
 
-/* ================================================== Utility Methods =============================================== */
-- (void)dealloc {
-    [_spinner release];
-    [_activityClient release];
-    [_activityManager release];
-    [_activityRequest release];
-    [_activityDefinition release];
-    [_activityInstance release];
-    [_modelAdapter release];
-    [super dealloc];
-}
 
 @end

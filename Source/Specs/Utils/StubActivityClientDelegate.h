@@ -17,7 +17,7 @@
 
 @interface StubActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate>
 
-@property (nonatomic, retain) expanz_model_ActivityInstance* activityInstance; 
-@property (nonatomic, retain) NSError* error; 
+@property(nonatomic, strong) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, strong) NSError* error;
 
 @end
