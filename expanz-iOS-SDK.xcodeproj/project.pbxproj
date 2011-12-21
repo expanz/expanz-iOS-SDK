@@ -586,7 +586,7 @@
 		6BD47E291484705A000ECE52 /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF61484705A000ECE52 /* IntegrationUtils.m */; };
 		6BD47E2A1484705A000ECE52 /* StubActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF91484705A000ECE52 /* StubActivityClientDelegate.m */; };
 		6BD47E2B1484705A000ECE52 /* StubLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DFB1484705A000ECE52 /* StubLoginClientDelegate.m */; };
-		6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixture.xib */; };
+		6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixtureView.xib */; };
 		6BD5430F14734FBD0014F148 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5431014734FBD0014F148 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5431114734FBD0014F148 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C61458EBB5001AF204 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -889,6 +889,8 @@
 		6BFDE7741495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7751495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
 		6BFDE7761495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
+		6BFDE7761495FA01005D3331 /* expanz.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3330 /* expanz.xml */; };
+		6BFDE7761495FA01005D3333 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3332 /* Login.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1272,7 +1274,7 @@
 		6BD47DF91484705A000ECE52 /* StubActivityClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubActivityClientDelegate.m; sourceTree = "<group>"; };
 		6BD47DFA1484705A000ECE52 /* StubLoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubLoginClientDelegate.h; sourceTree = "<group>"; };
 		6BD47DFB1484705A000ECE52 /* StubLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubLoginClientDelegate.m; sourceTree = "<group>"; };
-		6BD47E5D14848839000ECE52 /* TestFixture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixture.xib; sourceTree = "<group>"; };
+		6BD47E5D14848839000ECE52 /* TestFixtureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixtureView.xib; sourceTree = "<group>"; };
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
@@ -1379,6 +1381,8 @@
 		6BFDE7361495FA01005D332F /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
 		6BFDE7371495FA01005D332F /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BFDE7381495FA01005D332F /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3330 /* expanz.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = expanz.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3332 /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1974,6 +1978,8 @@
 		6BD47DBD1484705A000ECE52 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D3332 /* Login.xib */,
+				6BFDE7761495FA01005D3330 /* expanz.xml */,
 				6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */,
 				6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */,
 				6BD47DBE1484705A000ECE52 /* ActivityWithMessage.xml */,
@@ -2076,7 +2082,7 @@
 				6BD47DED1484705A000ECE52 /* Components */,
 				6BD47DF01484705A000ECE52 /* LoginViewControllerSpec.m */,
 				6BD47DF11484705A000ECE52 /* ModelAdapterSpec.m */,
-				6BD47E5D14848839000ECE52 /* TestFixture.xib */,
+				6BD47E5D14848839000ECE52 /* TestFixtureView.xib */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -2634,9 +2640,11 @@
 				6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BD47E041484705A000ECE52 /* SessionData.xml in Resources */,
 				6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47E5E14848839000ECE52 /* TestFixture.xib in Resources */,
+				6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */,
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
 				6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */,
+				6BFDE7761495FA01005D3331 /* expanz.xml in Resources */,
+				6BFDE7761495FA01005D3333 /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
