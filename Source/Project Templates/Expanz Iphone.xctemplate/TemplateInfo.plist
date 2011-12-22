@@ -11,9 +11,9 @@
 		<true/>
 
 		<key>Description</key>
-		<string>Creates an Expanz iPhone client shell, ready for adding activities.</string>
+		<string>Creates an expanz iPhone client shell, ready for adding activities.</string>
 		<key>Identifier</key>
-		<string>com.expanz.Expanz iOS Client</string>
+		<string>com.expanz.expanz iOS Client</string>
 		<key>Kind</key>
 		<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 		
