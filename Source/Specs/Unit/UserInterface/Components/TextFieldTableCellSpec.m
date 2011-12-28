@@ -17,7 +17,7 @@ SPEC_BEGIN(TextFieldTableCellSpec)
 describe(@"Object creation", ^{
     
     it(@"should allow initialization with reusde identifier", ^{
-        TextFieldTableCell* tableCell = [[[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"] autorelease];
+        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"];
         assertThat(tableCell, notNilValue());
     });
 
@@ -26,7 +26,7 @@ describe(@"Object creation", ^{
 describe(@"Layout sub views", ^{
 
     it(@"should include a text field control in the table cell.", ^{
-        TextFieldTableCell* tableCell = [[[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"] autorelease];
+        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"];
         [tableCell layoutSubviews]; 
         
         assertThat(tableCell.textField, notNilValue());

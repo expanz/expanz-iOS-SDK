@@ -27,7 +27,6 @@ SPEC_BEGIN(DeltaRequestSpec)
             assertThat(request.activityHandle, notNilValue());
             assertThat(request.sessionToken, notNilValue());
 
-            [request release];
         });
 
         it(@"Should provide a factory method to convert a field model instance into a delta request. ", ^{
@@ -35,7 +34,6 @@ SPEC_BEGIN(DeltaRequestSpec)
                 initWithFieldId:@"customerName" nullable:YES defaultValue:nil dataType:ExpanzDataTypeString
                           label:@"Enter a customer name" hint:@"Figure it out, dude!"];
             DeltaRequest* deltaRequest = [DeltaRequest forField:field];
-            [field release];
 
             assertThat(deltaRequest, notNilValue());
         });
@@ -57,7 +55,6 @@ activityHandle=\"234234\"><Delta id=\"op1\" encoding=\"BASE64\" value=\"$longDat
 
             LogDebug(@"%@", [request toXml]);
             assertThat([request toXml], equalTo(kExpectedXml));
-            [request release];
 
         });
 

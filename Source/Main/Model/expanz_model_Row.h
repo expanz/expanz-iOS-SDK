@@ -28,7 +28,7 @@
     NSArray* _sortDescriptors;
 }
 
-@property(nonatomic, assign) expanz_model_GridData* dataSet;
+@property(nonatomic, weak) expanz_model_GridData* gridData;
 @property(nonatomic, strong, readonly) NSString* rowId;
 @property(nonatomic, strong, readonly) NSString* type;
 

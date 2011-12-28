@@ -20,9 +20,9 @@ SPEC_BEGIN(MethodInvocationRequestSpec)
 
     beforeEach(^{
         ActivityInstance* activity =
-            [[[ActivityInstance alloc] initWithTitle:@"Calc" handle:@"1234" persistentId:@"0"] autorelease];
+            [[ActivityInstance alloc] initWithTitle:@"Calc" handle:@"1234" persistentId:@"0"];
         methodRequest =
-            [[[MethodInvocationRequest alloc] initWithActivityInstance:activity methodName:@"Add"] autorelease];
+            [[MethodInvocationRequest alloc] initWithActivityInstance:activity methodName:@"Add"];
     });
 
 

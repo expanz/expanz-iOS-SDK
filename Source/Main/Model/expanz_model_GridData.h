@@ -29,6 +29,8 @@
 }
 
 @property (nonatomic, strong, readonly) NSString* source;
+@property (nonatomic, strong, readonly) NSArray* rows; 
+@property (nonatomic, strong, readonly) NSArray* columns; 
 
 /**
 * Initializes an instance with the supplied id and source attributes.

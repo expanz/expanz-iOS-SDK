@@ -18,17 +18,11 @@
 
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
     LogDebug(@"Got activity instance: %@", activityInstance);
-    _activityInstance = [activityInstance retain]; 
+    _activityInstance = activityInstance;
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    _error = [error retain];
-}
-
-- (void) dealloc {
-    [_activityInstance release]; 
-    [_error release]; 
-    [super dealloc]; 
+    _error = error;
 }
 
 @end

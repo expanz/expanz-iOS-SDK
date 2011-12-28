@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////
 //
 //  EXPANZ
 //  Copyright 2008-2011 EXPANZ
@@ -26,7 +26,7 @@
 /* ================================================================================================================== */
 @implementation expanz_model_Row
 
-@synthesize dataSet = _dataSet;
+@synthesize gridData = _gridData;
 @synthesize rowId = _rowId;
 @synthesize type = _type;
 
@@ -82,7 +82,7 @@
         _imageCells = [[NSMutableArray alloc] init];
 
         for (NSString* cellId in [_cellDefinitions allKeys]) {
-            Column* column = [_dataSet columnWithId:cellId];
+            Column* column = [_gridData columnWithId:cellId];
             if (column == nil) {
                 [NSException raise:NSInternalInconsistencyException format:@"No column for cell with id: %@", cellId];
             }

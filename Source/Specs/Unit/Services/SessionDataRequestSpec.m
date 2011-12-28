@@ -30,7 +30,6 @@ describe(@"Serves as the contract for a request to GetSessionData service method
         SessionDataRequest* sessionDataRequest = [[SessionDataRequest alloc] initWithSessionToken:@"abcd1234"];
         NSString* xml = [sessionDataRequest toXml];
         assertThat(xml, equalTo(kSessionDataRequestXml));
-        [sessionDataRequest release];        
     });
 });
 

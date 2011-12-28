@@ -32,8 +32,7 @@ SPEC_BEGIN(FileSpec)
             assertThat(file.sequence, equalTo(@"1"));
             assertThat(file.type, equalTo(@"txt"));
             assertThat(file.field, equalTo(@"foobar")); 
-            
-            [file release];
+
         });
 
     });

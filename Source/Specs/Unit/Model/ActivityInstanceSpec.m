@@ -50,7 +50,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
-            [field release];
+
             assertThatInt([instance.fields count], equalToInt(1));
         });
 
@@ -59,7 +59,6 @@ SPEC_BEGIN(ActivityInstanceSpec)
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
-            [field release];
 
             Field* retrieved = [instance fieldWithId:@"op1"];
             assertThat(retrieved, equalTo(field));
@@ -102,7 +101,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
             //Field is clean.
             assertThatBool(field.isDirty, equalToBool(NO));
             [instance addField:field];
-            [field release];
+
             assertThatBool([instance allowsMethodInvocations], equalToBool(YES));
 
 
@@ -113,15 +112,10 @@ SPEC_BEGIN(ActivityInstanceSpec)
             //Make the field dirty.
             [another didFinishEditWithValue:@"One two three"]; assertThatBool([another isDirty], equalToBool(YES));
             [instance addField:another];
-            [another release];
 
             assertThatBool([instance allowsMethodInvocations], equalToBool(NO));
 
         });
-    });
-
-    afterEach(^{
-        [instance release];
     });
 
 

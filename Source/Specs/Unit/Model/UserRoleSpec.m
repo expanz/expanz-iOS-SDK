@@ -20,7 +20,6 @@ describe(@"Object creation", ^{
         assertThat(role.roleId, equalTo(@"234"));
         assertThat(role.roleDescription, equalTo(@"Sales Manager"));
         assertThat([role description], equalTo(@"UserRole: roleId=234, description=Sales Manager"));
-        [role release];
     });
 });
 

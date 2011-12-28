@@ -13,14 +13,15 @@
 #import "expanz_iOS_SDKConfiguration.h"
 
 int main(int argc, char *argv[]) {
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    
-    //This is normally invoked on main window, via interface builder. But we can invoke it on any object, to get 
-    //environment configuration done. It points to an XML file called expanz.xml
-    [SDKConfiguration setConfigurationFile:@"expanz"];
-    //This lets the simulator get itself in order.
-    [NSThread sleepForTimeInterval:0.5];
-    int retVal = UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");
-    [pool release];
-    return retVal; 
+
+
+    @autoreleasepool {
+        //This is normally invoked on main window, via interface builder. But we can invoke it on any object, to get
+        //environment configuration done. It points to an XML file called expanz.xml
+        [SDKConfiguration setConfigurationFile:@"expanz"];
+        //This lets the simulator get itself in order.
+        [NSThread sleepForTimeInterval:0.5];
+        return UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");
+    }
+
 }

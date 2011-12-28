@@ -21,6 +21,7 @@ SPEC_BEGIN(RowSpec)
 
     __block Row* row;
 
+
     beforeEach(^{
         row = [[Row alloc] initWithRowId:@"1" type:@"ESA.Sales.Customer"];
     });
@@ -35,17 +36,17 @@ SPEC_BEGIN(RowSpec)
 
     describe(@"Association with cells", ^{
 
+        __block GridData* dataSet;
+
         beforeEach(^{
             Column* column1 = [[Column alloc]
                 initWithColumnId:@"firstName" field:@"firstName" label:nil dataType:ExpanzDataTypeString width:70];
             Column* column2 = [[Column alloc]
                 initWithColumnId:@"address" field:@"address" label:nil dataType:ExpanzDataTypeString width:70];
-            GridData* dataSet = [[GridData alloc] initWithDataId:@"foobar" source:@"zzz"];
+            dataSet = [[GridData alloc] initWithDataId:@"foobar" source:@"zzz"];
             [dataSet addColumn:column1];
             [dataSet addColumn:column2];
-            [column1 release];
-            [column2 release];
-            [row setDataSet:dataSet];
+            [dataSet addRow:row];
         });
 
         it(@"Should hold a collection of cells", ^{

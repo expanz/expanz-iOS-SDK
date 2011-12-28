@@ -24,10 +24,4 @@
     self.error = error;     
 }
 
-- (void) dealloc {
-    [_sessionContext release];
-    [_error release];
-    [super dealloc];    
-}
-
 @end

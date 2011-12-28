@@ -19,7 +19,7 @@ SPEC_BEGIN(ResourceCollectionSpec)
     __block ResourceCollection* resourceCollection;
     
     beforeEach(^{
-        resourceCollection = [[[ResourceCollection alloc] init] autorelease];
+        resourceCollection = [[ResourceCollection alloc] init];
     });
     
 
@@ -28,7 +28,7 @@ SPEC_BEGIN(ResourceCollectionSpec)
            it(@"should allow adding file resources", ^{
 
                FileResource* fileResource =
-                   [[[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"] autorelease];
+                   [[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"];
                [resourceCollection addFileResource:fileResource];
 
                assertThatInt([[resourceCollection fileResources] count], equalToInt(1));

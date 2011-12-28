@@ -28,8 +28,8 @@ SPEC_BEGIN(ModelAdapterSpec)
     beforeEach(^{
         ActivityDefinition* activity =
             [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
-        viewController = [[[TestFixture_ViewController alloc]
-            initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil] autorelease];
+        viewController = [[TestFixture_ViewController alloc]
+            initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil];
         assertThat(viewController, notNilValue());
         assertThat(viewController.view, notNilValue());
     });

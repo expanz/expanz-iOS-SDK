@@ -28,27 +28,27 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
 
     beforeEach(^{
         [IntegrationUtils loginWithDefaultUserIfRequired];
-        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
         activityClient = [injector getObject:@protocol(expanz_service_ActivityClient)];
-        delegate = [[[StubActivityClientDelegate alloc] init] autorelease];
+        delegate = [[StubActivityClientDelegate alloc] init];
     });
 
 
     describe(@"create activity. . . ", ^{
 
         it(@"should return activity details upon invocation", ^{
-            CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc]
+            CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
                 initWithActivityName:@"ESA.Sales.Calc" style:[ActivityStyle defaultStyle] initialKey:nil
-                        sessionToken:[SessionContext globalContext].sessionToken] autorelease];
+                        sessionToken:[SessionContext globalContext].sessionToken];
 
             [activityClient createActivityWith:activityRequest delegate:delegate];
             assertWillHappen(delegate.activityInstance != nil);
         });
 
         it(@"should invoke the delegate's error handler, if the underlying ASIFormDataRequest fails.", ^{
-            CreateActivityRequest* activityRequest = [[[CreateActivityRequest alloc]
+            CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
                 initWithActivityName:@"ESA.Sales.Calc" style:[ActivityStyle defaultStyle] initialKey:nil
-                        sessionToken:[SessionContext globalContext].sessionToken] autorelease];
+                        sessionToken:[SessionContext globalContext].sessionToken];
 
             id<expanz_service_ActivityClient>
                 anotherClient = [[XmlPostActivityClient alloc] initWithServiceUrl:[IntegrationUtils urlThatWillFail]];

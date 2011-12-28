@@ -22,7 +22,7 @@ SPEC_BEGIN(TreeDataSpec)
             TreeData* treeData = [[TreeData alloc] initWithDataId:@"1234"];
             assertThat(treeData, notNilValue());
             assertThat(treeData.dataId, equalTo(@"1234"));
-            [treeData release];
+
         });
     });
 
@@ -31,7 +31,7 @@ SPEC_BEGIN(TreeDataSpec)
         __block TreeData* treeData;
 
         beforeEach(^{
-            treeData = [[[TreeData alloc] initWithDataId:@"1234"] autorelease];
+            treeData = [[TreeData alloc] initWithDataId:@"1234"];
         });
 
         it(@"should start with an empty collection of folders", ^{
@@ -39,25 +39,25 @@ SPEC_BEGIN(TreeDataSpec)
         });
 
         it(@"should allow adding folders", ^{
-            Folder* folder = [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"2"]
-                autorelease];
+            Folder* folder = [[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"2"];
+
             [treeData addFolder:folder];
             assertThatInt([[treeData folders] count], equalToInt(1));
 
             Folder* another =
-                [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"1"]
-                    autorelease];
+                [[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"1"];
+
             [treeData addFolder:another];
             assertThatInt([[treeData folders] count], equalToInt(2));
         });
 
         it(@"should sort folders according to sequence attribute", ^{
-            Folder* folder = [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"2"]
-                autorelease];
+            Folder* folder = [[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"2"];
+
             [treeData addFolder:folder];
             Folder* another =
-                [[[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"1"]
-                    autorelease];
+                [[Folder alloc] initWithFolderId:@"1234" title:nil hint:nil buttonTitle:nil sequence:@"1"];
+
             [treeData addFolder:another];
 
             assertThat([[treeData folders] objectAtIndex:0], equalTo(another));

@@ -13,9 +13,7 @@ describe(@"Properties", ^{
         assertThat(sessionRequest.userName, equalTo(@"demo"));
                         assertThat(sessionRequest.password, equalTo(@"demo3"));
         assertThat(sessionRequest.appSite, equalTo(@"SALESAPP"));
-        
-        [sessionRequest release];
-        
+
     });
 });
 
@@ -29,8 +27,7 @@ describe(@"Serialization.", ^{
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
                                                                           appSite:@"SALESAPP" userType:@"Primary"];
 
-        assertThat([sessionRequest toXml], equalTo(kXmlRequest));        
-        [sessionRequest release];
+        assertThat([sessionRequest toXml], equalTo(kXmlRequest));
     });
                 
 });

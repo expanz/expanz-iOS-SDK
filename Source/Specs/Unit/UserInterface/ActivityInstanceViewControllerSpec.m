@@ -30,7 +30,7 @@ describe(@"objc runtime. . . ", ^{
 
     it(@"can i use NSValue to store a pointer to an object, to use as a key in a dictionary?", ^{
         UITableView* tableView = [[UITableView alloc] init];
-        NSValue* value = [NSValue valueWithPointer:tableView];
+        NSValue* value = [NSValue valueWithPointer:(__bridge void*) tableView];
         LogDebug(@"Address: %@", value);
 
 

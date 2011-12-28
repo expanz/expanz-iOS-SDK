@@ -29,7 +29,7 @@ SPEC_BEGIN(FileDownloadRequestSpec)
             assertThatBool(request.isByteArray, equalToBool(NO));
             assertThat(request.activityHandle, equalTo(@"1234"));
             assertThat(request.sessionToken, equalTo(@"zzzyyy"));
-            [request release];
+
         });
 
         it(@"should provide a convenience factory method that emits autoreleased instances.", ^{

@@ -25,7 +25,6 @@ describe(@"object creation", ^{
         assertThatInt(message.messageType, equalToInt(MessageTypeWarning)); 
         assertThat(message.content, equalTo(@"abcd is not a valid number."));
         assertThat([message messageTypeAsString], equalTo(@"Warning"));
-        [message release];                
         
         message = [[Message alloc] initWithMessageType:MessageTypeError content:@"abcd is not a valid number."]; 
         assertThat([message messageTypeAsString], equalTo(@"Error"));                    

@@ -28,7 +28,7 @@ describe(@"Authenticating with the site manager.", ^{
     __block StubLoginClientDelegate* loginDelegate;
     
     beforeEach(^{
-        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
         loginDelegate = [[StubLoginClientDelegate alloc] init];
     });
@@ -38,8 +38,7 @@ describe(@"Authenticating with the site manager.", ^{
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
                                                                           appSite:@"SALESAPP" userType:@"Primpary"];
             
-        [loginClient createSessionWith:sessionRequest delegate:loginDelegate];                 
-        [sessionRequest release];
+        [loginClient createSessionWith:sessionRequest delegate:loginDelegate];
         assertWillHappen(loginDelegate.sessionContext != nil);              
     });
     
@@ -48,12 +47,8 @@ describe(@"Authenticating with the site manager.", ^{
                                                                                                     urlThatWillFail]];
         [anotherLoginClient createSessionWith:nil delegate:loginDelegate];    
         assertWillHappen(loginDelegate.error != nil);
-        [anotherLoginClient release];
     });    
-    
-    afterEach(^{
-        [loginDelegate release];
-    });
+
 });
 
 

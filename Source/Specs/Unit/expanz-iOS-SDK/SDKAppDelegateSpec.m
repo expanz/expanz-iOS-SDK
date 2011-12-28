@@ -21,15 +21,15 @@ SPEC_BEGIN(SDKAppDelegateSpec)
     __block SDKAppDelegate* delegate;
 
     beforeEach(^{
-        delegate = [[[SDKAppDelegate alloc] init] autorelease];
+        delegate = [[SDKAppDelegate alloc] init];
     });
 
     describe(@"Object creation & configuration", ^{
 
         it(@"should allow configuration with window and navigationController properties", ^{
 
-            delegate.window = [[[UIWindow alloc] init] autorelease];
-            delegate.navigationController = [[[UINavigationController alloc] init] autorelease];
+            delegate.window = [[UIWindow alloc] init];
+            delegate.navigationController = [[UINavigationController alloc] init];
 
             assertThat(delegate.window, notNilValue());
             assertThat(delegate.navigationController, notNilValue());

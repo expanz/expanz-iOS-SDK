@@ -67,9 +67,5 @@ describe(@"synchronizing state with the server/cloud.", ^{
 
 });
 
-afterEach(^{
-    [field release];
-});
-
 
 SPEC_END

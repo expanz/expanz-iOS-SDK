@@ -29,7 +29,7 @@ SPEC_BEGIN(FileRequestSpec)
             assertThat(fileRequest.fileId, equalTo(@"22"));
             assertThat(fileRequest.activityHandle, equalTo(@"1234"));
             assertThat(fileRequest.sessionToken, equalTo(@"xxx1234"));
-            [fileRequest release];
+
         });
 
         it(@"should provide a convenience auto-release factory method.", ^{

@@ -46,15 +46,15 @@ SPEC_BEGIN(FolderSpec)
         });
 
         it(@"should allow adding files", ^{
-            File* file = [[[File alloc]
+            File* file = [[File alloc]
                 initWithFileId:@"12345" title:@"The Foobar" hint:@"Foobars be here." fileName:@"foobar.txt"
-                      sequence:@"1" type:@"txt" field:@"foobar"] autorelease];
+                      sequence:@"1" type:@"txt" field:@"foobar"];
             [folder addFile:file];
             assertThatInt([[folder files] count], equalToInt(1));
 
-            File* another = [[[File alloc]
+            File* another = [[File alloc]
                 initWithFileId:@"12345" title:@"The Foobar" hint:@"Foobars be here." fileName:@"foobar.txt"
-                      sequence:@"1" type:@"txt" field:@"foobar"] autorelease];
+                      sequence:@"1" type:@"txt" field:@"foobar"];
             [folder addFile:another];
 
             assertThatInt([[folder files] count], equalToInt(2));

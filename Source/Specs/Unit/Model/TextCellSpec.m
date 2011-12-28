@@ -31,9 +31,6 @@ SPEC_BEGIN(TextCellSpec)
         });
     });
 
-    afterEach(^{
-        [cell release];
-    });
 
 
 

@@ -43,11 +43,5 @@ SPEC_BEGIN(ThumbnailTableCellSpec)
         });
     });
 
-    afterEach(^{
-        [tableCell release];
-    });
-    
-
-
 
 SPEC_END

@@ -53,7 +53,7 @@
 }
 
 - (void)addRow:(Row*)row {
-    row.dataSet = self;
+    [row setGridData:self];
     [_rows addObject:row];
 }
 

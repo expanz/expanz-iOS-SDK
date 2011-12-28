@@ -63,9 +63,5 @@ SPEC_BEGIN(SDKConfigurationSpec)
     });
 
 
-    afterEach(^{
-        [configuration release];
-    });
-
 
     SPEC_END

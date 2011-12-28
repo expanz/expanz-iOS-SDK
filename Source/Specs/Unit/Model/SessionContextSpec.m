@@ -47,7 +47,6 @@ describe(@"Object creation", ^{
 
     
     afterEach(^{
-        [contextHolder release];
         [SessionContext setGlobalContext:nil];
     });
         

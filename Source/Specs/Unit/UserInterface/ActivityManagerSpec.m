@@ -24,8 +24,8 @@ SPEC_BEGIN(ActivityManagerSpec)
         __block StubSystemEventReporter* reporter;
 
         beforeEach(^{
-            activityManager = [[[NavigationManager alloc] init] autorelease];
-            reporter = [[[StubSystemEventReporter alloc] init] autorelease];
+            activityManager = [[NavigationManager alloc] init];
+            reporter = [[StubSystemEventReporter alloc] init];
             activityManager.reporter = reporter;
         });
 

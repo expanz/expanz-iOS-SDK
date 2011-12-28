@@ -34,10 +34,6 @@ SPEC_BEGIN(UITableView_DataPublicationSpec)
     it(@"should add an autoPopulate method to UITableView", ^{
         [tableView setAutoPopulate:NO];
     });
-    
-    afterEach(^{
-        [tableView release];
-    });
-    
+
 
 SPEC_END

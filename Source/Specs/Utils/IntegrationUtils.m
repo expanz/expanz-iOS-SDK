@@ -27,11 +27,11 @@
 
 + (void) loginWithDefaultUserIfRequired {
     if ([SessionContext globalContext] == nil) {
-        JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 
+        JSObjectionInjector* testInjector = [JSObjection createInjector:[[SDKModule alloc] init]];
         
         id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)]; 
-        SessionRequest* sessionRequest = [[[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo" 
-                                                                appSite:@"SALESAPP" userType:@"Primary"] autorelease]; 
+        SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo"
+                                                                appSite:@"SALESAPP" userType:@"Primary"];
         StubLoginClientDelegate* loginDelegate = [[StubLoginClientDelegate alloc] init];
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
         assertWillHappen(loginDelegate.sessionContext != nil); 
@@ -41,14 +41,14 @@
 }
 
 + (ActivityInstance*) aValidActivity {
-    JSObjectionInjector* testInjector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]]; 
+    JSObjectionInjector* testInjector = [JSObjection createInjector:[[SDKModule alloc] init]];
     CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
                 style:[ActivityStyle browseStyle] initialKey:nil sessionToken:[SessionContext globalContext].sessionToken];
     
     id<expanz_service_ActivityClient> activityClient = [testInjector 
                                                         getObject:@protocol(expanz_service_ActivityClient)];
     
-    StubActivityClientDelegate* delegate = [[[StubActivityClientDelegate alloc] init] autorelease];
+    StubActivityClientDelegate* delegate = [[StubActivityClientDelegate alloc] init];
     
     [activityClient createActivityWith:activityRequest delegate:delegate];
     assertWillHappen(delegate.activityInstance != nil);

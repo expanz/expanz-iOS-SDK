@@ -24,7 +24,7 @@ SPEC_BEGIN(MenuSpec)
             assertThatBool(menu.hasWorkflowTrays, equalToBool(YES));
             assertThatBool(menu.canChangeCompanyRole, equalToBool(NO));
             assertThat([menu description], notNilValue());
-            [menu release];
+
         });
     });
 
@@ -41,15 +41,13 @@ SPEC_BEGIN(MenuSpec)
         });
 
         it(@"should store a process area reference via an add method.", ^{
-            ProcessArea
-                * processArea = [[[ProcessArea alloc] initWithProcessId:@"1234" andTitle:@"My Process"] autorelease];
+            ProcessArea* processArea = [[ProcessArea alloc] initWithProcessId:@"1234" andTitle:@"My Process"];
             [menu addProcessArea:processArea];
             assertThat(menu.processAreas, hasCountOf(1));
         });
 
         it(@"should allow returning a process area by id", ^{
-            ProcessArea
-                * processArea = [[[ProcessArea alloc] initWithProcessId:@"1234" andTitle:@"My Process"] autorelease];
+            ProcessArea* processArea = [[ProcessArea alloc] initWithProcessId:@"1234" andTitle:@"My Process"];
             [menu addProcessArea:processArea];
 
             ProcessArea* retrieved = [menu processAreaWithId:@"1234"];
@@ -61,8 +59,7 @@ SPEC_BEGIN(MenuSpec)
         });
 
         it(@"should allow returning the activities for all process areas as a single sorted collection", ^{
-            ProcessArea* processArea1 =
-                [[[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"] autorelease];
+            ProcessArea* processArea1 = [[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"];
 
             ActivityDefinition* activity1 = [[ActivityDefinition alloc]
                 initWithName:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
@@ -73,8 +70,7 @@ SPEC_BEGIN(MenuSpec)
             [processArea1 addActivityDefinition:activity2];
             [menu addProcessArea:processArea1];
 
-            ProcessArea* processArea2 =
-                [[[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"] autorelease];
+            ProcessArea* processArea2 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
 
             ActivityDefinition* activity3 = [[ActivityDefinition alloc]
                 initWithName:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
@@ -85,16 +81,12 @@ SPEC_BEGIN(MenuSpec)
             [processArea2 addActivityDefinition:activity4];
             [menu addProcessArea:processArea2];
 
-            ProcessArea* processArea3 =
-                [[[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"] autorelease];
+            ProcessArea* processArea3 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
             [menu addProcessArea:processArea3];
 
             assertThatInt([[menu allActivities] count], equalToInt(4));
         });
 
-        afterEach(^{
-            [menu release];
-        });
     });
 
     describe(@"User Roles. . . ", ^{
@@ -109,14 +101,11 @@ SPEC_BEGIN(MenuSpec)
         });
 
         it(@"should store a user role reference, via an add method.", ^{
-            UserRole* userRole = [[[UserRole alloc] initWithRoleId:@"123" andDescription:@"Sales Manager"] autorelease];
+            UserRole* userRole = [[UserRole alloc] initWithRoleId:@"123" andDescription:@"Sales Manager"];
             [menu addUserRole:userRole];
             assertThat(menu.userRoles, hasCountOf(1));
         });
 
-        afterEach(^{
-            [menu release];
-        });
     });
 
     SPEC_END

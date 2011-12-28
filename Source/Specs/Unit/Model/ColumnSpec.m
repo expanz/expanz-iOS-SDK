@@ -32,9 +32,6 @@ SPEC_BEGIN(ColumnSpec)
         });
     });
 
-    afterEach(^{
-        [column release];
-    });
     
 
     SPEC_END

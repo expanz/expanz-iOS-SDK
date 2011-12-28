@@ -26,21 +26,5 @@
 @synthesize customersList = _customersList;
 
 
-- (void) dealloc {
-    [_ResultLabel release];
-    [_Op1Label release];
-    [_Op2Label release];
-    [_ResultField release];
-    [_Op1Field release];
-    [_Op2Field release];
-    [_add release];
-    [_subtract release];
-    [_multiply release];
-    [_divide release];
-
-    [_customersList release];
-    [super dealloc];
-}
-
 
 @end

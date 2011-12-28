@@ -24,7 +24,7 @@ describe(@"Object initialization", ^{
         assertThat(processArea.processId, equalTo(@"Calculator"));
         assertThat(processArea.title, equalTo(@"Calculator"));        
         assertThat([processArea description], notNilValue());
-        [processArea release];
+
     });        
 });
 
@@ -55,10 +55,7 @@ describe(@"Activities", ^{
         assertThat([processArea activityWithName:@"Order a widget"], equalTo(activity));
         assertThat([processArea activityWithName:@"zzzzzz"], nilValue());
     });
-    
-    afterEach(^{    
-        [processArea release];
-    });
+
 });
 
 SPEC_END

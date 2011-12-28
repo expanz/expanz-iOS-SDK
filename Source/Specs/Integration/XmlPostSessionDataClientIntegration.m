@@ -23,8 +23,8 @@
 
 @interface TestSessionDataClientDelegate : NSObject<expanz_service_SessionDataClientDelegate> 
 
-@property (nonatomic, readonly) Menu* menu;
-@property (nonatomic, readonly) NSError* error; 
+@property (nonatomic, strong, readonly) Menu* menu;
+@property (nonatomic, strong, readonly) NSError* error;
 
 @end
 
@@ -34,17 +34,12 @@
 @synthesize error = _error;
 
 - (void) requestDidFinishWithMenu:(Menu*)menu {
-    _menu = [menu retain];    
+    _menu = menu;
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    _error = [error retain];
+    _error = error;
     
-}
-
-- (void) dealloc {
-    [_menu release]; 
-    [super dealloc];
 }
 
 @end
@@ -60,23 +55,22 @@ describe(@"Retrieve session data using an access token", ^{
     
     beforeEach(^{
         [IntegrationUtils loginWithDefaultUserIfRequired];        
-        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
         sessionDataClient = [injector getObject:@protocol(expanz_service_SessionDataClient)];
-        delegate = [[[TestSessionDataClientDelegate alloc] init] autorelease];
+        delegate = [[TestSessionDataClientDelegate alloc] init];
     });
     
     it(@"should retrieve session data", ^{
         NSString* sessionToken = [SessionContext globalContext].sessionToken; 
         SessionDataRequest* request = [[SessionDataRequest alloc] initWithSessionToken:sessionToken]; 
-        [sessionDataClient retrieveSessionDataWith:request delegate:delegate];  
-        [request release];        
+        [sessionDataClient retrieveSessionDataWith:request delegate:delegate];
         assertWillHappen(delegate.menu != nil); 
         LogDebug("Request finished with: %@", delegate.menu);        
     });
     
     it(@"should invoke the delegate's failure handler if the underlying ASIFormDataRequest fails.", ^{
-        XmlPostSessionDataClient* anotherClient = [[[XmlPostSessionDataClient alloc] 
-                                                   initWithServiceUrl:[IntegrationUtils urlThatWillFail]] autorelease];
+        XmlPostSessionDataClient* anotherClient = [[XmlPostSessionDataClient alloc]
+                                                   initWithServiceUrl:[IntegrationUtils urlThatWillFail]];
         [anotherClient retrieveSessionDataWith:nil delegate:delegate]; 
         assertWillHappen(delegate.error != nil); 
         LogDebug(@"Error: %@", delegate.error);

@@ -23,7 +23,6 @@ describe(@"Object instanciation", ^{
         assertThat(activity.name, equalTo(@"Calculator"));
         assertThat(activity.title, equalTo(@"Calculator Application"));
         assertThat([activity description], notNilValue());
-        [activity release];        
     });    
 });
 

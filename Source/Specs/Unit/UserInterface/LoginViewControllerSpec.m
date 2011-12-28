@@ -18,12 +18,12 @@ describe(@"Object creation", ^{
     
     
     beforeEach(^{
-        JSObjectionInjector* injector = [JSObjection createInjector:[[[SDKModule alloc] init] autorelease]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
         [JSObjection setGlobalInjector:injector];
     });
     
     it(@"should provide a default initializer that loads the default nib from the main bundle.", ^{
-        LoginViewController* loginController = [[[LoginViewController alloc] init] autorelease]; 
+        LoginViewController* loginController = [[LoginViewController alloc] init];
         assertThat(loginController, notNilValue());
         assertThat(loginController.view, notNilValue());
         assertThat(loginController.loginClient, notNilValue());

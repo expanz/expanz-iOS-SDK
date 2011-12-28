@@ -23,7 +23,6 @@ SPEC_BEGIN(ImageCellSpec)
             assertThat(imageCell, notNilValue());
             assertThat(imageCell.cellId, equalTo(@"mugShot"));
             assertThat(imageCell.imageUrl, equalTo(@"http://www.zzpics.net/jblues"));
-            [imageCell release];
         });
     });
 
@@ -33,13 +32,9 @@ SPEC_BEGIN(ImageCellSpec)
             NSString* url = @"http://www.google.com.ph/images/srpr/logo3w.png";
             imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:url];
             assertWillHappen(imageCell.image != nil);
-            [imageCell release];
         });
     });
-    
-    afterEach(^{
-        [imageCell release];
-    });
+
     
 
     SPEC_END

@@ -61,7 +61,6 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             assertThat([request toXml], containsString(@"DataPublication useThumbNailImages=\"1\" id=\"customersList\""));
             assertThat([request toXml], containsString(@"DataPublication useThumbNailImages=\"1\" id=\"ordersList\""));
 
-            [request release];
         });
     });
 
