@@ -3211,22 +3211,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3242,22 +3232,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3338,10 +3318,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "expanz-iOS-SDK";
@@ -3369,10 +3345,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "expanz-iOS-SDK";
@@ -3388,22 +3360,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
 					"-fprofile-arcs",
@@ -3424,22 +3386,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
 				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-ftest-coverage",
@@ -3477,10 +3429,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3497,10 +3445,6 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
@@ -3527,10 +3471,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test\"",
-					"\"$(SRCROOT)/../objection/Vendor\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
@@ -3548,10 +3488,6 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphonesimulator\"",
-					"\"$(SRCROOT)/../objection/build/Release-iphoneuniversal\"",
-					"\"$(SRCROOT)/../objection/Examples/ObjectionExample/Libraries/Test/OCMock\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
