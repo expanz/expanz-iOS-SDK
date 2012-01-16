@@ -24,6 +24,9 @@ static SDKConfiguration* _globalConfiguration;
 
 /* ================================================= Class Methods ================================================== */
 + (void) setGlobalConfiguration:(SDKConfiguration*)configuration {
+    if (_globalConfiguration != nil) {
+        [NSException raise:NSInternalInconsistencyException format:@"The global configuration has already been set"];
+    }
     _globalConfiguration = configuration;
 }
 

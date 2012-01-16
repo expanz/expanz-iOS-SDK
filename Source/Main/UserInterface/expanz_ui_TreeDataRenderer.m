@@ -54,7 +54,7 @@
 
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"TreeDataTableCell" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"TableCellForTreeData" owner:self options:nil];
         cell = self.tableCell;
         self.tableCell = nil;
     }

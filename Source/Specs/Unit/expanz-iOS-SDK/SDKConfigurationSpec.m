@@ -34,22 +34,6 @@ SPEC_BEGIN(SDKConfigurationSpec)
 
     describe(@"loading configuration file", ^{
 
-        it(@"should allow setting the global configuration via an instance method (interface builder integration)", ^{
-            [(id) configuration setConfigurationFile:@"expanz"];
-
-            SDKConfiguration* globalConfiguration = [SDKConfiguration globalConfiguration];
-            assertThat(globalConfiguration, notNilValue());
-            assertThat(globalConfiguration.baseUrl, notNilValue());
-            assertThat(globalConfiguration.preferredSite, notNilValue());
-            assertThat([globalConfiguration createSessionServiceUrl], notNilValue());
-            assertThat([globalConfiguration execXServiceUrl], notNilValue());
-        });
-
-        it(@"should allow setting the global configuration via a class method (API style invocation)", ^{
-            [SDKConfiguration setConfigurationFile:@"expanz"];
-            assertThat([SDKConfiguration globalConfiguration], notNilValue());
-        });
-
         it(@"should throw exception for invalid configuration file name", ^{
             @try {
                 [SDKConfiguration setConfigurationFile:@"foobar"];

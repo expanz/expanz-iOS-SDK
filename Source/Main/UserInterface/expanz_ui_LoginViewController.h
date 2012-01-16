@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "expanz_service_LoginClient.h"
+#import "expanz_ui_components_TextFieldTableCell.h"
 
 @class expanz_ui_NavigationManager;
 @protocol expanz_ui_SystemEventReporter;
@@ -21,8 +22,6 @@
 @private
     CGFloat _animatedDistance;
     BOOL _scrolled;
-    UITextField* _userNameField; 
-    UITextField* _passwordField;
     expanz_ui_NavigationManager* _navigationManager;
     id<expanz_ui_SystemEventReporter> _reporter;
 }
@@ -31,6 +30,9 @@
 @property(nonatomic, strong) IBOutlet UIBarButtonItem* loginButton;
 @property(nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
 @property(nonatomic, strong) IBOutlet UITableView* userNameAndPasswordForm;
+@property(nonatomic, strong) IBOutlet expanz_ui_components_TextFieldTableCell* userNameCell;
+@property(nonatomic, strong) IBOutlet expanz_ui_components_TextFieldTableCell* passwordCell;
+
 
 /**
  * Initialize using the default nib name, from the main bundle. 

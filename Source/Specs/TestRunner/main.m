@@ -9,16 +9,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <UIKit/UIKit.h>
 #import "expanz_iOS_SDKConfiguration.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 
 
     @autoreleasepool {
-        //This is normally invoked on main window, via interface builder. But we can invoke it on any object, to get
-        //environment configuration done. It points to an XML file called expanz.xml
-        [SDKConfiguration setConfigurationFile:@"expanz"];
+        SDKConfiguration* configuration = [[SDKConfiguration alloc]
+            initWithBaseUrl:@"http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish" preferredSite:@"SALES"
+                   userType:@"Alternate"];
+        [SDKConfiguration setGlobalConfiguration:configuration];
+
         //This lets the simulator get itself in order.
         [NSThread sleepForTimeInterval:0.5];
         return UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");

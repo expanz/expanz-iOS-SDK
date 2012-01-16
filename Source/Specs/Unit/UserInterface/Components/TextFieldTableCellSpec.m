@@ -23,14 +23,5 @@ describe(@"Object creation", ^{
 
 });
 
-describe(@"Layout sub views", ^{
-
-    it(@"should include a text field control in the table cell.", ^{
-        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"];
-        [tableCell layoutSubviews]; 
-        
-        assertThat(tableCell.textField, notNilValue());
-    });
-});
 
 SPEC_END

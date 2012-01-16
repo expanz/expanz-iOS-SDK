@@ -24,6 +24,7 @@ static SessionContext* globalContext;
 
 /* ================================================= Class Methods ================================================== */
 + (void) setGlobalContext:(SessionContext*)context {
+    LogDebug(@"The global context is now: %@", context);
     globalContext = context;
 }
 

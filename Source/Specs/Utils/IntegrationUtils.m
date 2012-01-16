@@ -15,47 +15,48 @@
 #import "StubLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_iOS_SDKModule.h"
-#import "expanz_service_SessionRequest.h"
 #import "SpecHelper.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_ActivityClient.h"
 #import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
+#import "expanz_iOS_SDKConfiguration.h"
 
 
 @implementation IntegrationUtils
 
 + (void) loginWithDefaultUserIfRequired {
+
     if ([SessionContext globalContext] == nil) {
         JSObjectionInjector* testInjector = [JSObjection createInjector:[[SDKModule alloc] init]];
-        
-        id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)]; 
-        SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo"
-                                                                appSite:@"SALESAPP" userType:@"Primary"];
+
+        id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)];
+        SessionRequest* sessionRequest =
+            [[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo" appSite:@"SALES" userType:@"Alternate"];
         StubLoginClientDelegate* loginDelegate = [[StubLoginClientDelegate alloc] init];
-        [loginClient createSessionWith:sessionRequest delegate:loginDelegate]; 
-        assertWillHappen(loginDelegate.sessionContext != nil); 
+        [loginClient createSessionWith:sessionRequest delegate:loginDelegate];
+        assertWillHappen(loginDelegate.sessionContext != nil);
         [SessionContext setGlobalContext:loginDelegate.sessionContext];
-    }
-    LogDebug(@"Global session context is: %@", [SessionContext globalContext]);
+    }LogDebug(@"Global session token is now: %@", [SessionContext globalContext].sessionToken);
 }
 
 + (ActivityInstance*) aValidActivity {
     JSObjectionInjector* testInjector = [JSObjection createInjector:[[SDKModule alloc] init]];
-    CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc] initWithActivityName:@"ESA.Sales.Calc" 
-                style:[ActivityStyle browseStyle] initialKey:nil sessionToken:[SessionContext globalContext].sessionToken];
-    
-    id<expanz_service_ActivityClient> activityClient = [testInjector 
-                                                        getObject:@protocol(expanz_service_ActivityClient)];
-    
+    CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
+        initWithActivityName:@"Sales.Customer" style:[ActivityStyle browseStyle] initialKey:nil
+                sessionToken:[SessionContext globalContext].sessionToken];
+
+    id<expanz_service_ActivityClient>
+        activityClient = [testInjector getObject:@protocol(expanz_service_ActivityClient)];
+
     StubActivityClientDelegate* delegate = [[StubActivityClientDelegate alloc] init];
-    
+
     [activityClient createActivityWith:activityRequest delegate:delegate];
     assertWillHappen(delegate.activityInstance != nil);
     return delegate.activityInstance;
 }
 
-+ (NSURL*)urlThatWillFail {
++ (NSURL*) urlThatWillFail {
     return [NSURL URLWithString:@"hhhhhtp:/bad.url"];
 }
 

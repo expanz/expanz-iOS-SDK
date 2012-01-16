@@ -36,10 +36,10 @@ describe(@"Authenticating with the site manager.", ^{
     it(@"should return a SessionContext, containing a valid session token, within 5 seconds", ^{
             
         SessionRequest* sessionRequest = [[SessionRequest alloc] initWithUserName:@"demo" password:@"demo3" 
-                                                                          appSite:@"SALESAPP" userType:@"Primpary"];
+                                                                          appSite:@"SALES" userType:@"Primpary"];
             
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate];
-        assertWillHappen(loginDelegate.sessionContext != nil);              
+        assertWillHappen(loginDelegate.sessionContext.sessionToken != nil);
     });
     
     it(@"should invoke the delegates requestDidFail method if the underlying ASIFormDataRequest fails.", ^{

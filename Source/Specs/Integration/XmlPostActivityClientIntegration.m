@@ -38,7 +38,7 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
 
         it(@"should return activity details upon invocation", ^{
             CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
-                initWithActivityName:@"ESA.Sales.Calc" style:[ActivityStyle defaultStyle] initialKey:nil
+                initWithActivityName:@"Sales.Customer" style:[ActivityStyle defaultStyle] initialKey:nil
                         sessionToken:[SessionContext globalContext].sessionToken];
 
             [activityClient createActivityWith:activityRequest delegate:delegate];
@@ -47,7 +47,7 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
 
         it(@"should invoke the delegate's error handler, if the underlying ASIFormDataRequest fails.", ^{
             CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
-                initWithActivityName:@"ESA.Sales.Calc" style:[ActivityStyle defaultStyle] initialKey:nil
+                initWithActivityName:@"Sales.Customer" style:[ActivityStyle defaultStyle] initialKey:nil
                         sessionToken:[SessionContext globalContext].sessionToken];
 
             id<expanz_service_ActivityClient>
@@ -66,7 +66,7 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
             NSString* activityHandle = [IntegrationUtils aValidActivity].handle;
             LogDebug(@"Activity handle: %@", activityHandle);
             DeltaRequest* deltaRequest = [[DeltaRequest alloc]
-                initWithFieldId:@"Op1" fieldValue:@"623" activityHandle:activityHandle
+                initWithFieldId:@"FirstName" fieldValue:@"Jasper" activityHandle:activityHandle
                    sessionToken:[SessionContext globalContext].sessionToken];
             LogDebug(@"%@", [deltaRequest toXml]);
             [activityClient sendDeltaWith:deltaRequest delegate:delegate];

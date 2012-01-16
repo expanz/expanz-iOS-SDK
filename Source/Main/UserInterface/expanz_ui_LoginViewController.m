@@ -32,9 +32,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 @synthesize loginButton = _loginButton;
 @synthesize spinner = _spinner;
 @synthesize userNameAndPasswordForm = _userNameAndPasswordForm;
+@synthesize userNameCell = _userNameCell;
+@synthesize passwordCell = _passwordCell;
+
 
 /* ================================================== Initializers ================================================== */
-- (id)init {
+- (id) init {
     self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
         _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
@@ -46,7 +49,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
 /* ================================================ Delegate Methods ================================================ */
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 
@@ -58,19 +61,19 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
     _userNameAndPasswordForm.backgroundColor = [UIColor clearColor];
 }
 
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -78,84 +81,71 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 /* ================================================================================================================== */
 #pragma mark Login and Password Form
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
+- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
     return 1;
 }
 
 
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    static NSString* reuseId = @"userNameAndPasswordForm";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-    if (cell == nil) {
-        cell = [[TextFieldTableCell alloc] initWithReuseIdentifier:reuseId];
-        cell.detailTextLabel.textColor = [UIColor darkGrayColor];
-        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-
-    TextFieldTableCell* textFieldCell = (TextFieldTableCell*) cell;
-    textFieldCell.textField.delegate = self;
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
 
     if ([indexPath row] == 0) {
-        textFieldCell.textLabel.text = @"User Name";
-        textFieldCell.textField.placeholder = @"example@expanz.com";
-        textFieldCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
-        textFieldCell.textField.returnKeyType = UIReturnKeyNext;
-        _userNameField = textFieldCell.textField;
+        return self.userNameCell;
     }
     else {
-        textFieldCell.textLabel.text = @"Password";
-        textFieldCell.textField.placeholder = @"required";
-        textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
-        textFieldCell.textField.returnKeyType = UIReturnKeyDone;
-        textFieldCell.textField.secureTextEntry = YES;
-        _passwordField = textFieldCell.textField;
+        return self.passwordCell;
     }
-    return cell;
+}
+
+- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+    return 44;
 }
 
 /* ================================================================================================================== */
 #pragma mark UITextFieldDelegate    
 
-- (void)textFieldDidBeginEditing:(UITextField*)textField {
+- (void) textFieldDidBeginEditing:(UITextField*)textField {
     if (!_scrolled) {
-        _scrolled = YES;
-        CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
-        CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
-        CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-        CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-        CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
-        CGFloat heightFraction = numerator / denominator;
-        if (heightFraction < 0.0) {
-            heightFraction = 0.0;
-        }
-        else if (heightFraction > 1.0) {
-            heightFraction = 1.0;
-        }
-        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
-            _animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
-        }
-        else {
-            _animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
-        }
-        CGRect viewFrame = self.view.frame;
-        viewFrame.origin.y -= _animatedDistance;
 
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationBeginsFromCurrentState:YES];
-        [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-        [self.view setFrame:viewFrame];
-        [UIView commitAnimations];
+        CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
+        if (textFieldRect.origin.y >= 285) {
+            _scrolled = YES;
+            CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
+            CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
+            CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
+            CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
+            CGFloat heightFraction = numerator / denominator;
+            if (heightFraction < 0.0) {
+                heightFraction = 0.0;
+            }
+            else if (heightFraction > 1.0) {
+                heightFraction = 1.0;
+            }
+            UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+            if (orientation == UIInterfaceOrientationPortrait || orientation ==
+                UIInterfaceOrientationPortraitUpsideDown) {
+                _animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+            }
+            else {
+                _animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+            }
+            CGRect viewFrame = self.view.frame;
+            viewFrame.origin.y -= _animatedDistance;
+
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationBeginsFromCurrentState:YES];
+            [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
+            [self.view setFrame:viewFrame];
+            [UIView commitAnimations];
+        }
     }
 }
 
-- (void)textFieldDidEndEditing:(UITextField*)textField {
+- (void) textFieldDidEndEditing:(UITextField*)textField {
     if (_scrolled) {
         _scrolled = NO;
         CGRect viewFrame = self.view.frame;
@@ -169,12 +159,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField*)textField {
+- (BOOL) textFieldShouldReturn:(UITextField*)textField {
     [textField resignFirstResponder];
-    if (textField == _userNameField) {
-        [_passwordField becomeFirstResponder];
+    if (textField == _userNameCell.textField) {
+        [_passwordCell.textField becomeFirstResponder];
     }
-    else if (textField == _passwordField && _userNameField.text.length > 0 && _passwordField.text.length > 0) {
+    else if (textField == _passwordCell.textField && _userNameCell.textField.text.length > 0 &&
+        _passwordCell.textField.text.length > 0) {
+
         [self loginWithUserNameAndPassword:nil];
     }
     return YES;
@@ -183,15 +175,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 /* ================================================================================================================== */
 #pragma mark User Actions
 
-- (void)loginWithUserNameAndPassword:(id)sender {
+- (void) loginWithUserNameAndPassword:(id)sender {
     _loginButton.enabled = NO;
-    _userNameField.enabled = NO;
-    _passwordField.enabled = NO;
+    _userNameCell.textField.enabled = NO;
+    _passwordCell.textField.enabled = NO;
     [_spinner startAnimating];
 
     SDKConfiguration* configuration = [SDKConfiguration globalConfiguration];
-    NSString* user = _userNameField.text;
-    NSString* password = _passwordField.text;
+    NSString* user = _userNameCell.textField.text;
+    NSString* password = _passwordCell.textField.text;
     NSString* appSite = configuration.preferredSite;
     NSString* userType = configuration.userType;
 
@@ -204,14 +196,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 /* ================================================================================================================== */
 #pragma mark LoginClient delegate
 
-- (void)requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
+- (void) requestDidFinishWithSessionContext:(SessionContext*)sessionContext {
     LogDebug(@"Request finished. Has error? %@", sessionContext.hasError ? @"YES" : @"NO");
     [_spinner stopAnimating];
 
     if (sessionContext.hasError) {
         _loginButton.enabled = YES;
-        _userNameField.enabled = YES;
-        _passwordField.enabled = YES;
+        _userNameCell.textField.enabled = YES;
+        _passwordCell.textField.enabled = YES;
         UIAlertView* alert = [[UIAlertView alloc]
             initWithTitle:@"Error" message:sessionContext.message delegate:self cancelButtonTitle:@"OK"
         otherButtonTitles:nil];
@@ -223,7 +215,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
-- (void)requestDidFailWithError:(NSError*)error {
+- (void) requestDidFailWithError:(NSError*)error {
     [_reporter reportErrorWithReason:@"There was an an unrecoverable system error accessing session data"];
 }
 

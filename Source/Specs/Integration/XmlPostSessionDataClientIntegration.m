@@ -61,7 +61,8 @@ describe(@"Retrieve session data using an access token", ^{
     });
     
     it(@"should retrieve session data", ^{
-        NSString* sessionToken = [SessionContext globalContext].sessionToken; 
+        NSString* sessionToken = [SessionContext globalContext].sessionToken;
+        LogDebug(@"Here's the sessionToken: %@", sessionToken);
         SessionDataRequest* request = [[SessionDataRequest alloc] initWithSessionToken:sessionToken]; 
         [sessionDataClient retrieveSessionDataWith:request delegate:delegate];
         assertWillHappen(delegate.menu != nil); 

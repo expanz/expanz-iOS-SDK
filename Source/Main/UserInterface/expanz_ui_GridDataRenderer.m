@@ -45,7 +45,7 @@
 
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"GridDataTableCell" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"TableCellForGridData" owner:self options:nil];
         cell = self.tableCell;
         self.tableCell = nil;
     }
