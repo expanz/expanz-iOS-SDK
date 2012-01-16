@@ -83,14 +83,14 @@
 				<key>Path</key>
 				<string>Assets/DocumentView.xib</string>
 			</dict>
-			<key>Assets/GridDataTableCell.xib</key>
+			<key>Assets/TableCellForGridDataCell.xib</key>
 			<dict>
 				<key>Group</key>
 				<array>
 					<string>Assets</string>
 				</array>
 				<key>Path</key>
-				<string>Assets/GridDataTableCell.xib</string>
+				<string>Assets/TableCellForGridData.xib</string>
 			</dict>
 			<key>Assets/Icon.png</key>
 			<dict>
@@ -119,14 +119,14 @@
 				<key>Path</key>
 				<string>Assets/MainWindow.xib</string>
 			</dict>
-			<key>Assets/TreeDataTableCell.xib</key>
+			<key>Assets/TableCellForTreeData.xib</key>
 			<dict>
 				<key>Group</key>
 				<array>
 					<string>Assets</string>
 				</array>
 				<key>Path</key>
-				<string>Assets/TreeDataTableCell.xib</string>
+				<string>Assets/TableCellForTreeData.xib</string>
 			</dict>
 			<key>main.m</key>
 			<dict>
@@ -173,11 +173,11 @@
 			<string>Assets/ActivityMenu.xib</string>
 			<string>Assets/background.png</string>
 			<string>Assets/DocumentView.xib</string>			
-			<string>Assets/GridDataTableCell.xib</string>
+			<string>Assets/TableCellForGridData.xib</string>
 			<string>Assets/Icon.png</string>
 			<string>Assets/Login.xib</string>
 			<string>Assets/MainWindow.xib</string>
-			<string>Assets/TreeDataTableCell.xib</string>			
+			<string>Assets/TableCellForTreeData.xib</string>			
 			<string>Supporting Files/en.lproj/InfoPlist.strings</string>
 			<string>Supporting Files/production_environment.xml</string>
 			<string>Supporting Files/test_environment.xml</string>			
