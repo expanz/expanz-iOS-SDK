@@ -83,7 +83,7 @@
 				<key>Path</key>
 				<string>Assets/DocumentView.xib</string>
 			</dict>
-			<key>Assets/TableCellForGridDataCell.xib</key>
+			<key>Assets/TableCellForGridData.xib</key>
 			<dict>
 				<key>Group</key>
 				<array>
