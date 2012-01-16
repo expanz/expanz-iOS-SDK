@@ -51,10 +51,10 @@
     }
 
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
-    TextCell* nameCell = (TextCell*) [row cellWithId:@"2"];
-    TextCell* phoneCell = (TextCell*) [row cellWithId:@"4"];
+    TextCell* nameCell = (TextCell*) [row cellWithId:@"8"];
+    TextCell* phoneCell = (TextCell*) [row cellWithId:@"6"];
 
-    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"1"];
+    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"9"];
     if (imageCell.hasAskedImageToLoad == NO) {
         [imageCell loadImage];
     }

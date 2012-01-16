@@ -687,7 +687,6 @@
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
-		6BF58DC81444245C0063E810 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6BF58DC81444245C0063E812 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -2585,7 +2584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */,
-				6BF58DC81444245C0063E810 /* (null) in Resources */,
 				6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BDAB02A1499828800541056 /* ActivityMenu.xib in Resources */,
 				6BDAB02B1499828800541056 /* background.png in Resources */,

@@ -1,4 +1,4 @@
 #!/bin/sh
-rm -fr /Developer/Library/Frameworks/Expanz.framework
-rm -fr /Developer/Library/Xcode/Templates/Expanz
-rm -fr  ~/Library/Developer/Xcode/Templates/Expanz
+rm -fr /Developer/Library/Frameworks/expanzIOS.framework
+rm -fr /Developer/Library/Xcode/Templates/expanz
+rm -fr  ~/Library/Developer/Xcode/Templates/expanz
