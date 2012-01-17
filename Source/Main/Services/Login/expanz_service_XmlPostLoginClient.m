@@ -27,12 +27,16 @@
     __weak ASIHTTPRequest* request = self.request; 
     
     [self.request setCompletionBlock:^{
-        RXMLElement* element = [RXMLElement elementFromXMLString:[request responseString]];
+        NSString* responseString = [request responseString];
+        LogDebug(@"Response: %@", responseString);
+        RXMLElement* element = [RXMLElement elementFromXMLString:responseString];
         [delegate requestDidFinishWithSessionContext:[element asSessionContext]];                          
     }];
     
     [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[request error]]; 
+        NSError* error = [request error];
+        LogDebug(@"Request failed with error: %@", error);
+        [delegate requestDidFailWithError:error];
     }];
     [self.request startAsynchronous];
 }
