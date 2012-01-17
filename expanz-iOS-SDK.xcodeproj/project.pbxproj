@@ -3771,8 +3771,6 @@
 				<string>6BDAB0391499828800541056</string>
 				<string>6BDAB03A1499828800541056</string>
 				<string>7e551e9854c1e5d4d4177db7</string>
-				<string>7e551e9854c1e5d4d4177db7</string>
-				<string>7e551e9854c1e5d4d4177db7</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>

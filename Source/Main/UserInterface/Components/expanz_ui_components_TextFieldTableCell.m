@@ -18,15 +18,11 @@
 @synthesize label = _label;
 @synthesize textField = _textField;
 
-/* ================================================== Initializers ================================================== */
 
-- (id) init {
-    self = [super init];
-    if (self) {
-        LogDebug(@"Initializing text field table cell");
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
-    return self;
+- (void) awakeFromNib {
+    [super awakeFromNib];
+    LogDebug(@"Initializing text field table cell");
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 
