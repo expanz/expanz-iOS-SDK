@@ -20,17 +20,13 @@
 
 /* ================================================== Initializers ================================================== */
 
-- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (id) init {
+    self = [super init];
     if (self) {
-        _textField.delegate = self;
+        LogDebug(@"Initializing text field table cell");
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
-}
-
-- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier {
-    return [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
 }
 
 

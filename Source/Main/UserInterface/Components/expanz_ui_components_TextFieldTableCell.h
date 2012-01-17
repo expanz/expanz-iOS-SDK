@@ -19,7 +19,6 @@
 @property(nonatomic, strong) IBOutlet UILabel* label;
 @property(nonatomic, strong) IBOutlet UITextField* textField;
 
-- (id) initWithReuseIdentifier:(NSString*)reuseIdentifier;
 
 
 @end

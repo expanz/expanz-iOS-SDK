@@ -25,15 +25,20 @@
         --tests.run,
         --assemble.coverage.data,
         --coverage.report,
-        --api.report,
-        --compile.framework,
-        --compile.installer,
-        --prepare.artifacts"/>
+        --api.report"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
     </target>
 
+    <target name="release" depends="
+        --compile.framework,
+        --compile.installer,
+        --prepare.artifacts" />
+
+    <target name="install" depends="
+        --release,
+        install"/>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -212,6 +217,14 @@
         <property name="docs.dir" value="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
         <copy todir="${reports.dir}/api">
             <fileset dir="${docs.dir}/${module.company}.${module.name}.docset/Contents/Resources/Documents"/>
+        </copy>
+    </target>
+
+    <target name="--install">
+        <delete dir="/Developer/expanz/Frameworks/ExpanzIOS.framework"/>
+        <mkdir dir="/Developer/expanz/Frameworks/ExpanzIOS.framework"/>
+        <copy todir="/Developer/expanz/Frameworks/ExpanzIOS.framework">
+            <fileset dir="${target.dir}/Release-iphoneuniversal/ExpanzIOS.framework"/>
         </copy>
     </target>
 

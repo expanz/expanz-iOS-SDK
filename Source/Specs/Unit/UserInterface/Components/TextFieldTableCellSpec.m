@@ -17,7 +17,7 @@ SPEC_BEGIN(TextFieldTableCellSpec)
 describe(@"Object creation", ^{
     
     it(@"should allow initialization with reusde identifier", ^{
-        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] initWithReuseIdentifier:@"CellXY"];
+        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] init];
         assertThat(tableCell, notNilValue());
     });
 
