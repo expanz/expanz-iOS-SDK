@@ -21,7 +21,6 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-    LogDebug(@"Initializing text field table cell");
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
