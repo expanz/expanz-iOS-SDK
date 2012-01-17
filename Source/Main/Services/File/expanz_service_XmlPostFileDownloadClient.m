@@ -9,9 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+
 #import "expanz_iOS_SDKConfiguration.h"
+#import "expanz_model_ActivityInstance.h"
+#import "expanz_model_Field.h"
+#import "expanz_model_ResourceCollection.h"
 #import "expanz_service_XmlPostFileDownloadClient.h"
 #import "RXMLElement+ResourceCollection.h"
+#import "RXMLElement+ActivityInstance.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_service_FileDownloadRequest.h"
 
@@ -30,7 +35,7 @@
     else if ([payload isKindOfClass:[FileDownloadRequest class]]) {
         self.request = [[ASIFormDataRequest alloc] initWithURL:configuration.getBlobServiceUrl];
     }
-    
+
     [self.request addRequestHeader:@"Content-Type" value:@"text/xml"];
     [self.request appendPostData:[[payload toXml] dataUsingEncoding:NSUTF8StringEncoding]];
     LogDebug(@"Sending request: %@", [payload toXml]);
@@ -43,13 +48,19 @@
                     delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
     [self newRequestWithPayload:fileRequest];
-    
-    __weak XmlPostFileDownloadClient* client = self; 
+
+    __weak XmlPostFileDownloadClient* client = self;
     [self.request setCompletionBlock:^{
         LogDebug(@"Response: %@, ", [client.request responseString]);
         RXMLElement* responseElement = [RXMLElement elementFromXMLString:[client.request responseString]];
+        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
         RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
-        [delegate requestDidFinishWithResourceCollection:[resourceElement asResourceCollection]];
+
+        Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
+        LogDebug("Creating resource collection with title: %@", titleField.value);
+        ResourceCollection* resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
+        LogDebug(@"Created resource collection: %@", resourceCollection);
+        [delegate requestDidFinishWithResourceCollection:resourceCollection];
     }];
 
     [self.request setFailedBlock:^{
@@ -64,7 +75,7 @@
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
     [self newRequestWithPayload:downloadRequest];
-    __weak XmlPostFileDownloadClient* client = self; 
+    __weak XmlPostFileDownloadClient* client = self;
 
     [self.request setCompletionBlock:^{
         LogDebug(@"Response: %@, ", [client.request responseString]);

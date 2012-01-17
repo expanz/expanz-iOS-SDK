@@ -28,7 +28,8 @@ SPEC_BEGIN(RXMLElement_ResourceCollection)
         });
 
         it(@"should add a FileResource for each file resource in the xml response.", ^{
-            ResourceCollection* collection = [resourceElement asResourceCollection];
+            ResourceCollection* collection = [resourceElement asResourceCollectionWithTitle:@"Foobar"];
+            LogDebug(@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%@", collection);
             assertThatInt([[collection fileResources] count], equalToInt(1));
         });
 

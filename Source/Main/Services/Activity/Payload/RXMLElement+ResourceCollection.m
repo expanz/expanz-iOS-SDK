@@ -17,11 +17,11 @@
 @implementation RXMLElement (ResourceCollection)
 
 
-- (ResourceCollection*) asResourceCollection {
+- (ResourceCollection*) asResourceCollectionWithTitle:(NSString*)title {
     if (![self.tag isEqualToString:@"Files"]) {
         [NSException raise:ExXmlValidationException format:@"Element name is not Files."];
     }
-    ResourceCollection* collection = [[ResourceCollection alloc] init];
+    ResourceCollection* collection = [[ResourceCollection alloc] initWithTitle:title];
 
     [self iterate:@"*" with:^(RXMLElement* e) {
         [collection addFileResource:[e asFileResource]];

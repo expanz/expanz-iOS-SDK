@@ -21,8 +21,10 @@
 
 }
 
+@property(nonatomic, strong, readonly) NSString* title;
 @property(nonatomic, strong, readonly) NSArray* fileResources;
 
+- (id) initWithTitle:(NSString*)title;
 
 - (void) addFileResource:(expanz_model_FileResource*)fileResource;
 

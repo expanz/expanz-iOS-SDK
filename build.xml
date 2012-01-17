@@ -38,7 +38,8 @@
         --prepare.artifacts" />
 
     <target name="install" depends="
-        release,
+        --clean,
+        --compile.framework,
         --install"/>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

@@ -73,8 +73,12 @@
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection {
+    //TODO: Support pages with multiple documents in a collection.
     FileResource* fileResource = [[collection fileResources] objectAtIndex:0];
-    self.title = fileResource.path;
+
+    LogDebug(@"Document Title: %@", collection.title);
+    LogDebug(@"File resource: %@", fileResource);
+    self.title = collection.title;
     self.ext = fileResource.ext;
 
     FileDownloadRequest* request =
@@ -99,7 +103,7 @@
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    //To change the template use AppCode | Preferences | File Templates.
+
 
 }
 

@@ -14,13 +14,20 @@
 
 @implementation expanz_model_ResourceCollection
 
+@synthesize title = _title;
+
 /* ================================================== Initializers ================================================== */
-- (id) init {
+- (id) initWithTitle:(NSString*)title {
     self = [super init];
     if (self) {
+        _title = [title copy];
         _fileResources = [[NSMutableSet alloc] initWithCapacity:4];
     }
     return self;
+}
+
+- (id) init {
+    return [self initWithTitle:nil];
 }
 
 /* ================================================ Interface Methods =============================================== */
@@ -33,5 +40,9 @@
     [_fileResources addObject:fileResource];
 }
 
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"ResourceCollection: title=%@, fileResources: %@", _title, _fileResources];
+}
 
 @end

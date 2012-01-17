@@ -1119,8 +1119,8 @@
 		6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ResourceCollection.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceCollectionSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
-		6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
+		6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RXMLElement+ResourceCollection.m"; path = "../../Activity/Payload/RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
+		6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RXMLElement+ResourceCollection.h"; path = "../../Activity/Payload/RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ResourceCollectionSpec.m; sourceTree = "<group>"; };
 		6BFDE7241495FA01005D332F /* JSObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectFactory.h; sourceTree = "<group>"; };
 		6BFDE7251495FA01005D332F /* JSObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectFactory.m; sourceTree = "<group>"; };
@@ -1581,8 +1581,6 @@
 		6BD47C681484703F000ECE52 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
-				6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */,
-				6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */,
 				6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */,
 				6BFACBA414679916007C731B /* expanz_service_FileRequest.m */,
 				6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */,
@@ -1944,6 +1942,8 @@
 		6BFACBA414679916007C7324 /* Payload */ = {
 			isa = PBXGroup;
 			children = (
+				6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */,
+				6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */,
 				6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */,
 				6BFACBA414679916007C7328 /* expanz_service_FileDownloadRequest.m */,
 			);

@@ -16,7 +16,7 @@
 
 @interface RXMLElement (ResourceCollection)
 
-- (expanz_model_ResourceCollection*) asResourceCollection;
+- (expanz_model_ResourceCollection*) asResourceCollectionWithTitle:(NSString*)title;
 
 - (expanz_model_FileResource*) asFileResource;
 
