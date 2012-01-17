@@ -68,8 +68,6 @@
 		6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
-		6B8B5AD114C5460D0023D860 /* foobar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8B5ACF14C5460D0023D860 /* foobar.h */; };
-		6B8B5AD214C5460D0023D860 /* foobar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B5AD014C5460D0023D860 /* foobar.m */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
@@ -806,8 +804,6 @@
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6B8B5ACF14C5460D0023D860 /* foobar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = foobar.h; sourceTree = "<group>"; };
-		6B8B5AD014C5460D0023D860 /* foobar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foobar.m; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1216,8 +1212,6 @@
 				6BDAB0121499828800541056 /* Examples */,
 				6BD47DB81484705A000ECE52 /* Specs */,
 				6BD47C341484703F000ECE52 /* Main */,
-				6B8B5ACF14C5460D0023D860 /* foobar.h */,
-				6B8B5AD014C5460D0023D860 /* foobar.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -2110,7 +2104,6 @@
 				6BFDE7691495FA01005D332F /* JSObjectionUtils.h in Headers */,
 				6BFDE76F1495FA01005D332F /* NSObject+Objection.h in Headers */,
 				6BFDE7751495FA01005D332F /* Objection.h in Headers */,
-				6B8B5AD114C5460D0023D860 /* foobar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2388,7 +2381,6 @@
 				6BFDE7651495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
 				6BFDE76B1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7711495FA01005D332F /* NSObject+Objection.m in Sources */,
-				6B8B5AD214C5460D0023D860 /* foobar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
