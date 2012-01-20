@@ -33,6 +33,8 @@
 
 - (void) mapModelFieldsToUILabels;
 
+- (void) mapModelFieldsToUIImages;
+
 - (void) mapModelFieldsToUITableViews;
 
 - (void) addTouchResponderToEditableImages;
@@ -70,6 +72,7 @@
         [self cachePropertyNames];
         [self mapModelFieldsToUITextFields];
         [self mapModelFieldsToUILabels];
+        [self mapModelFieldsToUIImages];
         [self mapModelFieldsToUITableViews];
         [self addTouchResponderToEditableImages];
     }
@@ -126,7 +129,6 @@
 }
 
 - (void) updateUITextFieldsWithModelValues {
-    LogDebug(@"Text field mappings: %@", _textFieldMappings);
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
@@ -137,6 +139,7 @@
         else {
             [self destroyReadOnlyControlFor:textField];
             [textField setText:field.value];
+            [textField setHidden:NO];
         }
     }
 }
@@ -184,19 +187,29 @@
 
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
-            //UIControl* uiControl = [controller performSelector:NSSelectorFromString(propertyName)];
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
                 UITextField* textField = (UITextField*) uiControl;
                 if (textField == nil) {
                     LogInfo(kNoMappingWarning, @"UITextField", field.fieldId);
                 }
                 else {
+                    [textField setHidden:YES];
                     [_textFieldMappings setObject:textField forKey:propertyName];
                     id<UITextFieldDelegate> delegate = _controller;
                     [textField setDelegate:delegate];
                 }
             }
-            else if (field.datatype == ExpanzDataTypeImage) {
+        }
+    }
+}
+
+- (void) mapModelFieldsToUIImages {
+    for (NSString* propertyName in _propertyNames) {
+        Field* field = [_activityInstance fieldWithId:propertyName];
+
+        if (field != nil) {
+            UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
+            if (field.datatype == ExpanzDataTypeImage) {
                 UIImageView* imageView = (UIImageView*) uiControl;
                 if (imageView == nil) {
                     LogInfo(kNoMappingWarning, @"UIImageView", field.fieldId);
