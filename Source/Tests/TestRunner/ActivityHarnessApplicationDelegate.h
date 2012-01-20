@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityStubApplicationDelegate : NSObject<UIApplicationDelegate>
+@interface ActivityHarnessApplicationDelegate : NSObject<UIApplicationDelegate>
 
 @property(nonatomic, strong) UIWindow* window;
 @property(nonatomic, strong) UINavigationController* navigationController;

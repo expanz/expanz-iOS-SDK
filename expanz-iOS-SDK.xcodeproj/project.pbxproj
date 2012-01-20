@@ -27,7 +27,6 @@
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
-		6B22FB4B14C6F26E00177535 /* ActivityStubApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */; };
 		6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
 		6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
 		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
@@ -402,8 +401,6 @@
 		6BD47E021484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC11484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml */; };
 		6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC21484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml */; };
 		6BD47E041484705A000ECE52 /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC31484705A000ECE52 /* SessionData.xml */; };
-		6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC51484705A000ECE52 /* InfoPlist.strings */; };
-		6BD47E061484705A000ECE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DC71484705A000ECE52 /* main.m */; };
 		6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */; };
 		6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */; };
 		6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */; };
@@ -674,6 +671,16 @@
 		6BFDE7741495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7751495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
 		6BFDE7761495FA01005D3333 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3332 /* Login.xib */; };
+		6BFDE7761495FA01005D3335 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */; };
+		6BFDE7761495FA01005D3339 /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */; };
+		6BFDE7761495FA01005D333D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D333C /* InfoPlist.strings */; };
+		6BFDE7761495FA01005D333F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D333E /* main.m */; };
+		6BFDE7761495FA01005D3345 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3344 /* DocumentView.xib */; };
+		6BFDE7761495FA01005D3347 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3346 /* Icon.png */; };
+		6BFDE7761495FA01005D3349 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3348 /* insurance.png */; };
+		6BFDE7761495FA01005D334B /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334A /* my details.png */; };
+		6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1002,12 +1009,6 @@
 		6BD47DC11484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Calc_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BD47DC21484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BD47DC31484705A000ECE52 /* SessionData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SessionData.xml; sourceTree = "<group>"; };
-		6BD47DC61484705A000ECE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6BD47DC71484705A000ECE52 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BD47DC81484705A000ECE52 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
-		6BD47DC91484705A000ECE52 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestRunner-Prefix.pch"; sourceTree = "<group>"; };
-		6BD47DCA1484705A000ECE52 /* ActivityStubApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityStubApplicationDelegate.h; sourceTree = "<group>"; };
-		6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityStubApplicationDelegate.m; sourceTree = "<group>"; };
 		6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
 		6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
 		6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
@@ -1154,6 +1155,20 @@
 		6BFDE7371495FA01005D332F /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BFDE7381495FA01005D332F /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3332 /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Thermomix_TMXConsultant_MyDetails.xml; path = ../Resources/Thermomix_TMXConsultant_MyDetails.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3337 /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D333B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D333E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3340 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3342 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestRunner-Prefix.pch"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3344 /* DocumentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3346 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3348 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D334A /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D334E /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1220,7 +1235,7 @@
 			isa = PBXGroup;
 			children = (
 				6BDAB0121499828800541056 /* Examples */,
-				6BD47DB81484705A000ECE52 /* Specs */,
+				6BD47DB81484705A000ECE52 /* Tests */,
 				6BD47C341484703F000ECE52 /* Main */,
 			);
 			name = Source;
@@ -1712,17 +1727,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		6BD47DB81484705A000ECE52 /* Specs */ = {
+		6BD47DB81484705A000ECE52 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				6BD47DB91484705A000ECE52 /* Integration */,
 				6BD47DBD1484705A000ECE52 /* Resources */,
-				6BD47DC41484705A000ECE52 /* TestRunner */,
 				6BD47DCC1484705A000ECE52 /* Unit */,
 				6BD47DF41484705A000ECE52 /* Utils */,
+				6BFDE7761495FA01005D3336 /* TestRunner */,
+				6BFDE7761495FA01005D3343 /* HarnessActivities */,
 			);
-			name = Specs;
-			path = Source/Specs;
+			name = Tests;
+			path = Source/Tests;
 			sourceTree = "<group>";
 		};
 		6BD47DB91484705A000ECE52 /* Integration */ = {
@@ -1749,19 +1765,6 @@
 				6BD47DC31484705A000ECE52 /* SessionData.xml */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6BD47DC41484705A000ECE52 /* TestRunner */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */,
-				6BD47DCA1484705A000ECE52 /* ActivityStubApplicationDelegate.h */,
-				6BD47DC51484705A000ECE52 /* InfoPlist.strings */,
-				6BD47DC71484705A000ECE52 /* main.m */,
-				6BD47DC81484705A000ECE52 /* TestRunner-Info.plist */,
-				6BD47DC91484705A000ECE52 /* TestRunner-Prefix.pch */,
-			);
-			path = TestRunner;
 			sourceTree = "<group>";
 		};
 		6BD47DCC1484705A000ECE52 /* Unit */ = {
@@ -1986,6 +1989,42 @@
 				6BFDE7381495FA01005D332F /* Objection.h */,
 			);
 			path = objection;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D3336 /* TestRunner */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D3342 /* TestRunner-Prefix.pch */,
+				6BFDE7761495FA01005D3340 /* TestRunner-Info.plist */,
+				6BFDE7761495FA01005D333E /* main.m */,
+				6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */,
+				6BFDE7761495FA01005D3337 /* ActivityHarnessApplicationDelegate.h */,
+				6BFDE7761495FA01005D333A /* en.lproj */,
+			);
+			path = TestRunner;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D333A /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D333C /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D3343 /* HarnessActivities */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */,
+				6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
+				6BFDE7761495FA01005D334E /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
+				6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */,
+				6BFDE7761495FA01005D334A /* my details.png */,
+				6BFDE7761495FA01005D3348 /* insurance.png */,
+				6BFDE7761495FA01005D3346 /* Icon.png */,
+				6BFDE7761495FA01005D3344 /* DocumentView.xib */,
+			);
+			path = HarnessActivities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2244,7 +2283,6 @@
 				6BD47E021484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */,
 				6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
 				6BD47E041484705A000ECE52 /* SessionData.xml in Resources */,
-				6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */,
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
 				6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */,
@@ -2259,6 +2297,13 @@
 				6BBD515B14C910970024DEEA /* Sales.Customer.Browse.xib in Resources */,
 				6BBD515C14C9109D0024DEEA /* TableCellForGridData.xib in Resources */,
 				6BBD515D14C910A00024DEEA /* TableCellForTreeData.xib in Resources */,
+				6BFDE7761495FA01005D3335 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */,
+				6BFDE7761495FA01005D333D /* InfoPlist.strings in Resources */,
+				6BFDE7761495FA01005D3345 /* DocumentView.xib in Resources */,
+				6BFDE7761495FA01005D3347 /* Icon.png in Resources */,
+				6BFDE7761495FA01005D3349 /* insurance.png in Resources */,
+				6BFDE7761495FA01005D334B /* my details.png in Resources */,
+				6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2594,7 +2639,6 @@
 				6BD47DFC1484705A000ECE52 /* XmlPostActivityClientIntegration.m in Sources */,
 				6BD47DFD1484705A000ECE52 /* XmlPostLoginClientIntegration.m in Sources */,
 				6BD47DFE1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m in Sources */,
-				6BD47E061484705A000ECE52 /* main.m in Sources */,
 				6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */,
 				6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */,
 				6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */,
@@ -2671,8 +2715,10 @@
 				6BFDE7671495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
 				6BFDE76D1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */,
-				6B22FB4B14C6F26E00177535 /* ActivityStubApplicationDelegate.m in Sources */,
 				6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */,
+				6BFDE7761495FA01005D3339 /* ActivityHarnessApplicationDelegate.m in Sources */,
+				6BFDE7761495FA01005D333F /* main.m in Sources */,
+				6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2687,10 +2733,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		6BD47DC51484705A000ECE52 /* InfoPlist.strings */ = {
+		6BFDE7761495FA01005D333C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6BD47DC61484705A000ECE52 /* en */,
+				6BFDE7761495FA01005D333B /* InfoPlist.strings */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2878,14 +2924,14 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Specs/TestRunner/TestRunner-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Tests/TestRunner/TestRunner-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
 					"${SRCROOT}/Dependencies/Libraries/**",
 				);
-				INFOPLIST_FILE = "Source/Specs/TestRunner/TestRunner-Info.plist";
+				INFOPLIST_FILE = "Source/Tests/TestRunner/TestRunner-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2923,7 +2969,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Specs/TestRunner/TestRunner-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Tests/TestRunner/TestRunner-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "LOGGING_ENABLED=0";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
@@ -2931,7 +2977,7 @@
 					"$SDKROOT/usr/include/libsqllite/**",
 					"${SRCROOT}/Dependencies/Libraries/**",
 				);
-				INFOPLIST_FILE = "Source/Specs/TestRunner/TestRunner-Info.plist";
+				INFOPLIST_FILE = "Source/Tests/TestRunner/TestRunner-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

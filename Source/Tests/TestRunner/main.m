@@ -10,14 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_iOS_SDKConfiguration.h"
+#import <UIKit/UIKit.h>
 
+/**
+* Run with the argument 'Harness' to run ActivityHarness, otherwise runs all specs.
+*/
 int main(int argc, char* argv[]) {
 
 
     @autoreleasepool {
-        LogDebug(@"Number of args: %d", argc);
         if (argc == 2 && strcmp(argv[1], "Harness") == 0) {
-            return UIApplicationMain(argc, argv, nil, @"ActivityStubApplicationDelegate");
+            return UIApplicationMain(argc, argv, nil, @"ActivityHarnessApplicationDelegate");
         }
         else {
             SDKConfiguration* configuration = [[SDKConfiguration alloc]

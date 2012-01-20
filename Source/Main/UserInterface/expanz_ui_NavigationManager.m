@@ -88,7 +88,6 @@ objection_requires(@"reporter")
     }
 }
 
-
 - (BOOL) showDocument:(NSString*)documentId {
     ActivityInstanceViewController
         * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];

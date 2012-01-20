@@ -1,0 +1,1303 @@
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="1315" xmlns="">
+            <Activity activityHandle="634626699403641052.23" title="Consultant" titleField="DescriptionEx"
+                      focusField="SearchCode" ActivityPersistentId="257">
+                <Field id="PersistentId" label="Person Id" nullable="0" null="0" value="257" datatype="number" valid="1"
+                       static="1"/>
+                <Field id="SearchCode" label="&amp;Search Code" nullable="0" maxLength="8" null="0" value="00224"
+                       datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="EmailAddress" label="Email Address" maxLength="100" null="0"
+                       value="prbmanly@internode.on.net" datatype="string" contentType="email" valid="1"/>
+                <Field id="EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on" null="0"
+                       valid="1" value="1" datatype="bool"/>
+                <Field id="Name" label="Name" nullable="0" maxLength="254" null="0" value="Byrne, Rosemary"
+                       datatype="string" valid="1" disabled="1"/>
+                <Field id="Street" label="Street" maxLength="200" null="0" value="50 Catamaran Street" datatype="string"
+                       valid="1"/>
+                <Field id="AddressNotes" label="AddressNotes" maxLength="80" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Phone" label="Telephone No" maxLength="20" null="0" value="(07) 3396 0612" datatype="string"
+                       contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="MobilePhone" label="Mobile Phone" maxLength="20" null="0" value="0403 020 408"
+                       datatype="string" valid="1"/>
+                <Field id="Fax" label="Fax No" maxLength="20" null="1" value="" datatype="string" valid="1"/>
+                <Field id="WebURL" label="Web Address" maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="CreationNotes" label="Creation Notes" maxLength="500" null="0" value="$longData$"
+                       datatype="string" valid="1">Created by RADEK at 2/05/2010 4:48 PM
+                </Field>
+                <Field id="PrivateNotes" label="Private Notes" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="CreateDate" label="Create Date" disabled="1" null="0" valid="1" value="11/07/2006"
+                       date="11/07/2006" time="00:00" DayOfWeek="Tuesday" datatype="datetime"/>
+                <Field id="Notes" label="Notes" maxLength="500" null="0" value="$longData$" datatype="string" valid="1">
+                    From 3 confirmed GL in her barnch PersonalTeam sales paid at $60 after 3 months
+                </Field>
+                <Field id="Active" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Image.FileName" label="Attachment Name" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Image.FileContents" label="Binary Contents" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="ThumbImage.FileName" label="Attachment Name" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="RowClassType"/>
+                <Field id="Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1" null="0"
+                       value="$longData$" datatype="string" valid="1">Debtor(Login:Branch Manager), Creditor
+                </Field>
+                <Field id="OwnerList" label="Relations" disabled="1" maxLength="254" null="0" value="" datatype="string"
+                       valid="1"/>
+                <Field id="MergeBEID" label="Merge ID" null="1" value="" datatype="number" valid="1"/>
+                <Field id="LastActionDate" label="Last Action Date" disabled="1" forcequeryval="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="PreferredEngagementMethod" label="Engage Method" null="0" valid="1" value="99"
+                       text="Not Specified" datatype="string"/>
+                <Field id="LegalEntityType" label="My Legal Entity" null="1" value="0" text="" datatype="string"
+                       valid="1"/>
+                <Field id="ExternalReference" label="External Reference" null="1" value="" datatype="number" valid="1"/>
+                <Field id="OwnerHostCompany" disabled="1" null="0" value="3" datatype="number" valid="1"/>
+                <Field id="ParentCompanyId" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="DuplicateSearchCode" label="Search code of manually found duplicate" maxLength="8" null="1"
+                       value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="UdefNumber1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="UdefNumber2" null="1" value="" datatype="number" valid="1"/>
+                <Field id="UdefString1" maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="AusState" disabled="1" maxLength="254" null="0" value="NSW" datatype="string" valid="1"/>
+                <Field id="AusStateFilter" label="State" hint="Limit search results to this state" maxLength="254"
+                       null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="BaseCurrencyId" label="Base Currency" null="0" valid="1" value="1" datatype="number"/>
+                <Field id="contactListFilter" label="Contact List Filter" null="0" valid="1" value="1" text="All"
+                       datatype="string"/>
+                <Field id="Location.PersistentId" label="Location Id" disabled="0" nullable="0" null="0" valid="1"
+                       value="131" datatype="number"/>
+                <Field id="Location.ParentId" disabled="1" nullable="0" null="0" valid="1" value="0" datatype="number"/>
+                <Field id="Location.Name" label="Name" disabled="0" nullable="0" maxLength="80" null="0"
+                       value="Hmas Kuttabul" datatype="string" valid="1"/>
+                <Field id="Location.Disabled" label="Disallow usage on new entries" disabled="1" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="Location.ParentName" label="Parent" disabled="1" maxLength="254" null="0" value="[root]"
+                       datatype="string" valid="1"/>
+                <Field id="Location.Depth" label="Level" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Location.ChildCount" disabled="1" null="0" value="0" datatype="number" valid="1"/>
+                <Field id="Location.MakeChildOf" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Location.Comments" label="Comments" disabled="1" maxLength="50" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Location.Udef" label="Postcode" disabled="0" maxLength="50" null="0" value="2011"
+                       datatype="string" valid="1"/>
+                <Field id="Location.Sequence" label="Sequence" disabled="1" nullable="0" minValue="0" null="0" valid="1"
+                       value="0" datatype="number"/>
+                <Field id="Location.ExtendedName" label="Location" disabled="1" maxLength="80" null="0"
+                       value="Hmas Kuttabul NSW 2011 : &#xD;&#xA;Australia" datatype="string" valid="1"/>
+                <Field id="Location.FindCode" label="Find" hint="Enter a Postcode or [partial] suburb name to find"
+                       maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Location.CitySuburb" label="Suburb" maxLength="254" null="0" value="Hmas Kuttabul"
+                       datatype="string" valid="1"/>
+                <Field id="Location.State" label="State" maxLength="254" null="0" value="NSW" datatype="string"
+                       valid="1"/>
+                <Field id="Location.Country" label="Country" maxLength="254" null="0" value="Australia"
+                       datatype="string" valid="1"/>
+                <Field id="Location.Postcode" label="Postcode" maxLength="254" null="0" value="2011" datatype="string"
+                       valid="1"/>
+                <Field id="Location.LocationType" label="Type" disabled="1" nullable="0" null="0" valid="1" value="3"
+                       text="Suburb" datatype="string"/>
+                <Field id="Location.ParentType" label="Parent Type" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Location.ParentFind" label="Find Parent" hint="Enter a [partial] name to find"
+                       maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BEContactDetail.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="BEContactDetail.ContactDetail" label="Detail" nullable="0" valid="0" maxLength="100" null="1"
+                       value="" datatype="string"/>
+                <Field id="BEContactDetail.ContactType.PersistentId" disabled="0" nullable="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="BEContactDetail.ContactType.Key" label="Key" disabled="0" nullable="0" maxLength="32"
+                       null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="BEContactDetail.ContactType.ContactMethod" label="Contact Method" disabled="1" nullable="0"
+                       null="0" valid="1" value="1" text="Email" datatype="string"/>
+                <Field id="BEContactDetail.ContactType.Description" label="Description" disabled="1" nullable="0"
+                       maxLength="50" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Profile.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="Profile.StringValue" label="Value" maxLength="500" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Profile.NumberValue" label="Value" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Profile.ProfileValue" value="" visualType="none" datatype="string" valid="1"/>
+                <Field id="Profile.LastMaintDate" label="Last Touched" disabled="1" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Profile.ItemProfile.PersistentId" label="Profile" disabled="0" nullable="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="Profile.ItemProfile.Name" label="Name" disabled="0" nullable="0" maxLength="50" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Profile.ItemProfile.Type" label="Type" disabled="1" nullable="0" null="0" valid="1" value="1"
+                       text="String" datatype="string"/>
+                <Field id="Profile.ItemProfile.Measure" label="Measure" disabled="1" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Profile.ItemProfile.Usage" label="Usage" disabled="1" nullable="0" null="0" valid="1"
+                       value="1" text="All" datatype="string"/>
+                <Field id="Profile.ItemProfile.SpecialType" label="Special Type" disabled="1" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Profile.ItemProfile.SpecialTypeFilter" label="Filter" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Profile.ItemProfile.UserMaintainable" label="User Maintainable"
+                       hint="Can a Person maintain their own value for this profile" disabled="1" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="Profile.ItemProfile.Disabled" label="Disabled" hint="Disallow new entries for this profile"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Profile.ItemProfile.UseDropdown" label="Use Dropdown"
+                       hint="Show a distinct list of values in an editable dropdown" disabled="1" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="Profile.ItemProfile.CompanyId" disabled="1" null="0" value="3" datatype="number" valid="1"
+                       static="1"/>
+                <Field id="Profile.ItemProfile.ExternalReference" label="ExternalReference" disabled="1" maxLength="32"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Profile.ItemProfile.ItemProfileValue.PersistentId" label="Value Id" disabled="0" nullable="0"
+                       null="1" value="" datatype="number" relationship="aggregate"/>
+                <Field id="Profile.ItemProfile.ItemProfileValue.Text" label="Value" disabled="1" nullable="0"
+                       maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Certificate.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="Certificate.CertificateType" label="Type" null="0" valid="1" value="100"
+                       text="Public Liability Insurance" datatype="string"/>
+                <Field id="Certificate.CertificateSubType" label="Sub Type" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Certificate.CertificateDate" label="Date" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="date" valid="1"/>
+                <Field id="Certificate.CertificateIdentification" label="Number" maxLength="64" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Certificate.LinkType" label="Type" maxLength="64" null="0" value="ERP.Service"
+                       datatype="string" valid="1"/>
+                <Field id="Certificate.LinkId" label="Link" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Certificate.Document" label="Document"/>
+                <Field id="Certificate.Document.FileName" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Certificate.Document.FileContents" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Certificate.Valid.From" label="Valid From" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="Certificate.Valid.To" label="Valid To" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="Correspondence.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="Correspondence.Date" label="Date/Time" null="0" valid="1" value="20/01/2012 15:25"
+                       date="20/01/2012" time="15:25" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="Correspondence.Method" label="Method" nullable="0" null="0" valid="1" value="1" text="Email"
+                       datatype="string"/>
+                <Field id="Correspondence.Subject" label="Subject" nullable="0" valid="0" maxLength="80" null="1"
+                       value="" datatype="string"/>
+                <Field id="Correspondence.Incoming" label="Incoming" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Correspondence.PrivateNotes" label="Private Notes" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Correspondence.Contents" label="Contents" maxLength="4000" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Correspondence.FromTo" label="From/To" maxLength="100" null="0" value="Byrne, Rosemary"
+                       datatype="string" valid="1"/>
+                <Field id="Correspondence.CompanyID" static="1" null="0" valid="1" value="3" datatype="number"/>
+                <Field id="Correspondence.SentEmailId" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Correspondence.Archived" nullable="0" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Correspondence.SourceID" label="Link to ID" hint="Private/Internal id of linked item"
+                       disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Correspondence.SourceType" label="Link to" maxLength="64" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Correspondence.ShowArchives" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="FirstName" label="First Name" nullable="0" maxLength="50" null="0" value="Rosemary"
+                       datatype="string" valid="1" disabled="1"/>
+                <Field id="LastName" label="Last Name" nullable="0" maxLength="50" null="0" value="Byrne"
+                       datatype="string" valid="1" disabled="1"/>
+                <Field id="SecondName" label="2nd Name/Initial" maxLength="20" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Title" label="Title" nullable="1" maxLength="6" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Gender" label="Gender" null="1" valid="1" value="0" text="" datatype="string"/>
+                <Field id="BirthDate" label="DOB" null="0" value="31/03/1955" date="31/03/1955" time="00:00"
+                       DayOfWeek="Thursday" datatype="datetime" valid="1"/>
+                <Field id="Age" label="Age" disabled="1" null="1" value="" datatype="number" valid="1"
+                       forcequeryval="1"/>
+                <Field id="CultureInfo" label="Culture" maxLength="32" null="0" valid="1" value="default" text="Default"
+                       datatype="string"/>
+                <Field id="Language" label="Language" maxLength="3" null="1" value="" text="" datatype="string"
+                       valid="1"/>
+                <Field id="Competency" label="View" null="0" valid="1" value="10" text="Beginner" datatype="string"/>
+                <Field id="Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="DriverLicense" maxLength="12" null="1" value="" datatype="string" valid="1"/>
+                <Field id="PrimaryEmployer" label="Company" maxLength="60" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="PrimaryRole" label="Position" maxLength="60" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Department" label="Department" maxLength="60" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Biography.FileName" label="Bio Name" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Biography.FileContents" label="Bio File" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="LoginCode" label="Login Code" maxLength="50" disabled="0" null="0" value="0"
+                       datatype="string" textCase="upper" valid="1"/>
+                <Field id="Password" label="Password" maxLength="20"/>
+                <Field id="LastModifiedDate" label="Last Modified" null="0" value="19/01/2012" date="19/01/2012"
+                       time="00:00" DayOfWeek="Thursday" datatype="datetime" valid="1"/>
+                <Field id="LastModifiedUser" label="Modified By" maxLength="10" null="0" value="0" datatype="string"
+                       valid="1"/>
+                <Field id="PasswordHint" label="Password Hint" hint="A short to remind you of your password"
+                       maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="SpecificType" label="Type" nullable="0" null="0" valid="1" value="5" text="Branch Manager"
+                       datatype="string"/>
+                <Field id="Status" label="Status" nullable="0" null="0" valid="1" value="10" text="Active"
+                       datatype="string"/>
+                <Field id="ABN" maxLength="18" label="ABN" null="0" value="37 747 097 378" datatype="string"
+                       contentType="ABN" valid="1" disabled="1"/>
+                <Field id="TradingName" label="Trading Name" hint="This will be copied into debtor and creditor records"
+                       maxLength="254" null="1" value="" datatype="string" valid="1" disabled="0"/>
+                <Field id="GSTRegistered" label="GST?" hint="This consultant is registerd for GST" nullable="0" null="0"
+                       valid="1" value="1" datatype="bool" disabled="1"/>
+                <Field id="DescriptionEx" disabled="1" maxLength="254" null="0"
+                       value="Byrne, Rosemary : Branch Manager - NSW [00224]" datatype="string" valid="1"/>
+                <Field id="TargetYear" null="0" valid="1" value="2012" datatype="number"/>
+                <Field id="Target" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Manager.PersistentId" label="Person Id" disabled="0" nullable="0" null="0" valid="1"
+                       value="257" datatype="number"/>
+                <Field id="Manager.SearchCode" label="&amp;Search Code" disabled="0" nullable="0" maxLength="8" null="0"
+                       value="00224" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Manager.EmailAddress" label="Email Address" disabled="1" maxLength="100" null="0"
+                       value="prbmanly@internode.on.net" datatype="string" contentType="email" valid="1"/>
+                <Field id="Manager.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Manager.Name" label="Name" disabled="1" nullable="0" maxLength="254" null="0"
+                       value="Byrne, Rosemary" datatype="string" valid="1"/>
+                <Field id="Manager.Street" label="Street" disabled="1" maxLength="200" null="0"
+                       value="50 Catamaran Street" datatype="string" valid="1"/>
+                <Field id="Manager.AddressNotes" label="AddressNotes" disabled="1" maxLength="80" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Phone" label="Telephone No" disabled="1" maxLength="20" null="0"
+                       value="(07) 3396 0612" datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="Manager.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20" null="0"
+                       value="0403 020 408" datatype="string" valid="1"/>
+                <Field id="Manager.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Manager.WebURL" label="Web Address" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.CreationNotes" label="Creation Notes" disabled="1" maxLength="500" null="0"
+                       value="$longData$" datatype="string" valid="1">Created by RADEK at 2/05/2010 4:48 PM
+                </Field>
+                <Field id="Manager.PrivateNotes" label="Private Notes" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.CreateDate" label="Create Date" disabled="1" null="0" valid="1" value="11/07/2006"
+                       date="11/07/2006" time="00:00" DayOfWeek="Tuesday" datatype="datetime"/>
+                <Field id="Manager.Notes" label="Notes" disabled="1" maxLength="500" null="0" value="$longData$"
+                       datatype="string" valid="1">From 3 confirmed GL in her barnch PersonalTeam sales paid at $60
+                    after 3 months
+                </Field>
+                <Field id="Manager.Active" disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Manager.Image.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Manager.Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Manager.ThumbImage.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Manager.ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Manager.RowClassType"/>
+                <Field id="Manager.Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Manager.OwnerList" label="Relations" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.MergeBEID" label="Merge ID" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Manager.LastActionDate" label="Last Action Date" disabled="1" forcequeryval="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Manager.PreferredEngagementMethod" label="Engage Method" disabled="1" null="0" valid="1"
+                       value="99" text="Not Specified" datatype="string"/>
+                <Field id="Manager.LegalEntityType" label="My Legal Entity" disabled="1" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.ExternalReference" label="External Reference" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="Manager.OwnerHostCompany" disabled="1" null="0" value="3" datatype="number" valid="1"/>
+                <Field id="Manager.ParentCompanyId" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Manager.ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Manager.DuplicateSearchCode" label="Search code of manually found duplicate" maxLength="8"
+                       null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Manager.DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="Manager.UdefNumber1" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Manager.UdefNumber2" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Manager.UdefString1" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Manager.AusState" disabled="1" maxLength="254" null="0" value="NSW" datatype="string"
+                       valid="1"/>
+                <Field id="Manager.AusStateFilter" label="State" hint="Limit search results to this state"
+                       maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Manager.BaseCurrencyId" label="Base Currency" disabled="1" null="0" valid="1" value="1"
+                       datatype="number"/>
+                <Field id="Manager.contactListFilter" label="Contact List Filter" null="0" valid="1" value="1"
+                       text="All" datatype="string"/>
+                <Field id="Manager.FirstName" label="First Name" disabled="1" nullable="0" maxLength="50" null="0"
+                       value="Rosemary" datatype="string" valid="1"/>
+                <Field id="Manager.LastName" label="Last Name" disabled="1" nullable="0" maxLength="50" null="0"
+                       value="Byrne" datatype="string" valid="1"/>
+                <Field id="Manager.SecondName" label="2nd Name/Initial" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Title" label="Title" disabled="1" nullable="1" maxLength="6" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Gender" label="Gender" disabled="1" null="1" valid="1" value="0" text=""
+                       datatype="string"/>
+                <Field id="Manager.BirthDate" label="DOB" disabled="1" null="0" value="31/03/1955" date="31/03/1955"
+                       time="00:00" DayOfWeek="Thursday" datatype="datetime" valid="1"/>
+                <Field id="Manager.Age" label="Age" disabled="1" null="1" value="" datatype="number" valid="1"
+                       forcequeryval="1"/>
+                <Field id="Manager.CultureInfo" label="Culture" disabled="1" maxLength="32" null="0" valid="1"
+                       value="default" text="Default" datatype="string"/>
+                <Field id="Manager.Language" label="Language" disabled="1" maxLength="3" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Competency" label="View" disabled="1" null="0" valid="1" value="10" text="Beginner"
+                       datatype="string"/>
+                <Field id="Manager.Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Manager.DriverLicense" disabled="1" maxLength="12" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Manager.PrimaryEmployer" label="Company" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.PrimaryRole" label="Position" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Department" label="Department" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Biography.FileName" label="Bio Name" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Manager.Biography.FileContents" label="Bio File" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Manager.LoginCode" label="Login Code" disabled="1" maxLength="50" null="0" value="0"
+                       datatype="string" textCase="upper" valid="1"/>
+                <Field id="Manager.Password" label="Password" disabled="1" maxLength="20"/>
+                <Field id="Manager.LastModifiedDate" label="Last Modified" disabled="1" null="0" value="19/01/2012"
+                       date="19/01/2012" time="00:00" DayOfWeek="Thursday" datatype="datetime" valid="1"/>
+                <Field id="Manager.LastModifiedUser" label="Modified By" disabled="1" maxLength="10" null="0" value="0"
+                       datatype="string" valid="1"/>
+                <Field id="Manager.PasswordHint" label="Password Hint" hint="A short to remind you of your password"
+                       disabled="1" maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="History.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="History.ChangeType" label="Change Type" nullable="0" null="0" valid="1" value="99"
+                       text="Other" datatype="string"/>
+                <Field id="History.EffectiveDate" label="Effective Date" nullable="0" null="0" valid="1"
+                       value="20/01/2012" date="20/01/2012" time="00:00" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="History.ChangeUser" label="Change User" disabled="1" nullable="0" valid="0" maxLength="64"
+                       null="1" value="" datatype="string"/>
+                <Field id="History.ManagerId" label="Manager" null="1" value="" datatype="number" valid="1"/>
+                <Field id="History.Status" label="Status" null="1" value="0" text="" datatype="string" valid="1"/>
+                <Field id="History.SpecificType" label="Type" null="1" value="0" text="" datatype="string" valid="1"/>
+                <Field id="History.OldValueDescription" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Training.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="Training.TrainingDate" label="Date" nullable="0" valid="0" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime"/>
+                <Field id="Training.Comments" label="Comments" maxLength="500" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Training.Course.PersistentId" disabled="0" nullable="0" null="1" value="" datatype="number"/>
+                <Field id="Training.Course.SearchCode" label="Search Code" disabled="1" nullable="0" maxLength="20"
+                       null="1" value="" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Training.Course.Name" label="Name" disabled="1" maxLength="80" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Course.Description" label="Description" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Training.Trainer.PersistentId" label="Business Entity Id" disabled="0" nullable="0" null="1"
+                       value="" datatype="number"/>
+                <Field id="Training.Trainer.SearchCode" label="&amp;Search Code" disabled="0" nullable="0" maxLength="8"
+                       null="1" value="" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Training.Trainer.EmailAddress" label="Email Address" disabled="1" maxLength="100" null="1"
+                       value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="Training.Trainer.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Training.Trainer.Name" label="Name" disabled="1" nullable="0" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.Street" label="Street" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Trainer.AddressNotes" label="AddressNotes" disabled="1" maxLength="80" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.Phone" label="Telephone No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="Training.Trainer.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Trainer.WebURL" label="Web Address" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Trainer.CreationNotes" label="Creation Notes" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Training.Trainer.PrivateNotes" label="Private Notes" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.CreateDate" label="Create Date" disabled="1" null="0" valid="1"
+                       value="20/01/2012" date="20/01/2012" time="00:00" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="Training.Trainer.Notes" label="Notes" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Training.Trainer.Active" disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Training.Trainer.Image.FileName" label="Attachment Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Training.Trainer.ThumbImage.FileName" label="Attachment Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Training.Trainer.RowClassType"/>
+                <Field id="Training.Trainer.Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1"
+                       null="1" value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Training.Trainer.OwnerList" label="Relations" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Trainer.MergeBEID" label="Merge ID" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Training.Trainer.LastActionDate" label="Last Action Date" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Training.Trainer.PreferredEngagementMethod" label="Engage Method" disabled="1" null="0"
+                       valid="1" value="99" text="Not Specified" datatype="string"/>
+                <Field id="Training.Trainer.LegalEntityType" label="My Legal Entity" disabled="1" null="1" value="0"
+                       text="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.ExternalReference" label="External Reference" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="Training.Trainer.OwnerHostCompany" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Training.Trainer.ParentCompanyId" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Training.Trainer.ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.DuplicateSearchCode" label="Search code of manually found duplicate"
+                       maxLength="8" null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Training.Trainer.DuplicateFindMethod" label="Method" null="0" valid="1" value="10" text=""
+                       datatype="string"/>
+                <Field id="Training.Trainer.UdefNumber1" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Training.Trainer.UdefNumber2" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Training.Trainer.UdefString1" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Training.Trainer.AusState" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Training.Trainer.AusStateFilter" label="State" hint="Limit search results to this state"
+                       maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Training.Trainer.BaseCurrencyId" label="Base Currency" disabled="1" null="0" valid="1"
+                       value="1" datatype="number"/>
+                <Field id="Training.Trainer.contactListFilter" label="Contact List Filter" null="0" valid="1" value="1"
+                       text="All" datatype="string"/>
+                <Field id="PerformanceNotes.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="PerformanceNotes.NoteDate" label="Date" nullable="0" valid="0" null="1" value="" date=""
+                       time="" DayOfWeek="" datatype="date"/>
+                <Field id="PerformanceNotes.Note" label="Notes" maxLength="800" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="PerformanceNotes.Confidential" label="Confidential" null="0" valid="1" value="0"
+                       datatype="bool" disabled="1"/>
+                <Field id="InductionOption" label="Purchase Option" nullable="0" null="0" value="2" text="Option 2"
+                       datatype="string" valid="1"/>
+                <Field id="UnpaidOption2" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="ReportingManagerId" label="True reporting manager"
+                       hint="Only select if the Manager is not the true reporting manager" null="1" value="" text=""
+                       datatype="number" valid="1" disabled="0"/>
+                <Field id="SixtyDayPeriod.From" label="From" null="0" value="1/09/2006" date="1/09/2006" time="00:00"
+                       DayOfWeek="Friday" datatype="datetime" valid="1"/>
+                <Field id="SixtyDayPeriod.To" label="To" null="0" value="30/10/2006" date="30/10/2006" time="00:00"
+                       DayOfWeek="Monday" datatype="datetime" valid="1"/>
+                <Field id="ProbationaryPeriod.From" label="From" null="0" value="1/06/2010" date="1/06/2010"
+                       time="00:00" DayOfWeek="Tuesday" datatype="datetime" valid="1"/>
+                <Field id="ProbationaryPeriod.To" label="To" null="0" value="30/11/2010" date="30/11/2010" time="00:00"
+                       DayOfWeek="Tuesday" datatype="datetime" valid="1"/>
+                <Field id="IsAmbassador" label="Is Ambassador" nullable="0" null="0" valid="1" value="0" datatype="bool"
+                       disabled="1"/>
+                <Field id="InactiveDate" label="Inactive Date" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="IsRemoteLocation" label="Is Remote"
+                       hint="They are far enough away from GL to waive shipping fees (one order per month)" nullable="0"
+                       null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="IsGoGetter" label="Is Go Getter" nullable="0" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="GoGetterDate" label="Date" null="0" value="1/09/2009" date="1/09/2009" time="00:00"
+                       DayOfWeek="Tuesday" datatype="datetime" valid="1"/>
+                <Field id="IsPomotionProspect" label="Is Prospective BM" null="1" valid="1" value="0" datatype="bool"/>
+                <Field id="SpecialType" label="SpecialType" nullable="0" null="0" valid="1" value="99" text="NA"
+                       datatype="string"/>
+                <Field id="BonusPoints" label="Business points" disabled="1" null="0" value="0" datatype="number"
+                       valid="1" hint="You have not earned any points yet"/>
+                <Field id="BonusPointsAsAt" label="Last Calculated" disabled="1" null="0" value="9/09/2011 13:24"
+                       date="9/09/2011" time="13:24" DayOfWeek="Friday" datatype="datetime" valid="1"/>
+                <Field id="BonusPointsCalc" label="Bonus Points Calc" disabled="1" maxLength="200" null="0"
+                       value="0 sales; 0 recruits with 3+ sales:n/a" datatype="string" valid="1"/>
+                <Field id="CommissionAdjustment" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="CommissionAdjustmentNote" disabled="1" maxLength="200" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="TreeViewMode" label="Display" null="0" valid="1" value="20" text="By State/GL"
+                       datatype="string"/>
+                <Field id="RowCount" label="Row Count" hint="Number of records returned." disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="ShowReport" label="Report" null="1" value="0" text="" datatype="string" valid="1"/>
+                <Field id="StateFilter" maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="ShowInactive" label="Show Inactive" hint="Show inactive consultants, leaders and managers"
+                       null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="AsAt" label="As At" hint="Display the consultant structure as at this date" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="CommissionYear" label="Year" static="1" null="0" valid="1" value="2012" datatype="number"/>
+                <Field id="CommissionMonth" label="Month" hint="Create/Display commissions for this month" static="1"
+                       null="0" valid="1" value="0" text="" datatype="string"/>
+                <Field id="CommissionStatusDesc" label="Status" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ThisMonthSales" label="This months sales" disabled="1" null="0" value="0" datatype="number"
+                       valid="1"/>
+                <Field id="LastMonthSales" label="Last months sales" disabled="1" null="0" value="0" datatype="number"
+                       valid="1"/>
+                <Field id="YTDSales" label="YTD sales" disabled="1" null="0" value="0" datatype="number" valid="1"/>
+                <Field id="AllSales" label="All sales" disabled="1" null="0" value="201" datatype="number" valid="1"/>
+                <Field id="Sales60Days" label="60 Day sales" disabled="1" null="0" value="3" datatype="number"
+                       valid="1"/>
+                <Field id="TeamSize" label="Team Size" hint="For GLs only" null="0" value="1" text="Small"
+                       datatype="string" valid="1"/>
+                <Field id="ApprovalToReactivate" label="Approval to Reactivate"
+                       hint="Requires documented management approval to reactivate" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="matchFirstName" label="First Name" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="partialMatchFirstName" label="First Name partial match"
+                       hint="Match one first name containing another, e.g. Fred = Fred****" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="matchLastName" label="Last Name" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="matchEmail" label="Email" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="matchLocation" label="Location" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="matchAddress" label="Address" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="matchPhone" label="Phone" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="matchMobile" label="Mobile" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="dupesCount" label="Matching groups found" null="0" valid="1" value="0" datatype="number"/>
+                <Field id="ServicesSelected" label="Services" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="DeliveryStreet" label="Delivery Street" maxLength="254" null="0" value="test st"
+                       datatype="string" valid="1"/>
+                <Field id="JGLnoBM" label="JGL has no designated BM" hint="JGL has no designated BM" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="ActivitySummary.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="ActivitySummary.GenerateJournals" static="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="ActivitySummary.Year" disabled="0" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.Month" disabled="0" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.IsActive" nullable="0" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="ActivitySummary.SpecificType" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.LeaderId" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.LeaderType" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.PersonalClosedSales" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.PersonalClosedSalesIDList" disabled="1" maxLength="300" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="ActivitySummary.Easy3SalesStart" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.Easy3SalesFinish" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.Easy3SalesFinishIDList" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.Option2Sales" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.Option2Finish" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.Option2FinishIDList" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.GroupClosedSales" label="Personal Team Sales" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="ActivitySummary.Referrals" label="Referrals/Deliveries" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="ActivitySummary.ReferralsIDList" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.ReferralsPaid" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.ReferralsPaidIDList" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.Recruitments" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.RecruitmentsIDList" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.RecruitmentsPaid" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="ActivitySummary.RecruitmentsPaidIDList" disabled="1" maxLength="400" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="ActivitySummary.Trainings" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.TrainingsDesc" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.SecondBowlAndBlade" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.SecondBowlAndBladeDesc" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.JGLGLCommission" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.JGLGLCommissionDesc" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.JBMBMCommission" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.JBMBMCommissionDesc" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ActivitySummary.PromoteOut" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="ActivitySummary.GST" disabled="1" nullable="0" null="0" valid="1" value="$0.00"
+                       datatype="number"/>
+                <Field id="ActivitySummary.CommissionPaid" disabled="1" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="ActivitySummary.Transcript" disabled="1" maxLength="3000" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Delegation.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="Delegation.Period.From" label="From" nullable="0" valid="0" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime"/>
+                <Field id="Delegation.Period.To" label="To" nullable="0" valid="0" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime"/>
+                <Field id="Delegation.Pct" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Delegation.Delegate.PersistentId" label="Person Id" disabled="0" nullable="0" null="0"
+                       valid="1" value="0" datatype="number"/>
+                <Field id="Delegation.Delegate.SearchCode" label="&amp;Search Code" disabled="0" nullable="0"
+                       maxLength="8" null="1" value="" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Delegation.Delegate.EmailAddress" label="Email Address" disabled="1" maxLength="100" null="1"
+                       value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="Delegation.Delegate.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Delegation.Delegate.Name" label="Name" disabled="1" nullable="0" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Street" label="Street" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.AddressNotes" label="AddressNotes" disabled="1" maxLength="80" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Phone" label="Telephone No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="Delegation.Delegate.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.WebURL" label="Web Address" disabled="1" maxLength="100" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.CreationNotes" label="Creation Notes" disabled="1" maxLength="500"
+                       null="1" value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Delegation.Delegate.PrivateNotes" label="Private Notes" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.CreateDate" label="Create Date" disabled="1" null="0" valid="1"
+                       value="20/01/2012" date="20/01/2012" time="00:00" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="Delegation.Delegate.Notes" label="Notes" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Delegation.Delegate.Active" disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Delegation.Delegate.Image.FileName" label="Attachment Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Delegation.Delegate.ThumbImage.FileName" label="Attachment Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Delegation.Delegate.RowClassType"/>
+                <Field id="Delegation.Delegate.Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1"
+                       null="1" value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Delegation.Delegate.OwnerList" label="Relations" disabled="1" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.MergeBEID" label="Merge ID" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Delegation.Delegate.LastActionDate" label="Last Action Date" disabled="1" forcequeryval="1"
+                       null="1" value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Delegation.Delegate.PreferredEngagementMethod" label="Engage Method" disabled="1" null="0"
+                       valid="1" value="99" text="Not Specified" datatype="string"/>
+                <Field id="Delegation.Delegate.LegalEntityType" label="My Legal Entity" disabled="1" null="1" value="0"
+                       text="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.ExternalReference" label="External Reference" disabled="1" null="1"
+                       value="" datatype="number" valid="1"/>
+                <Field id="Delegation.Delegate.OwnerHostCompany" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Delegation.Delegate.ParentCompanyId" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="Delegation.Delegate.ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.DuplicateSearchCode" label="Search code of manually found duplicate"
+                       maxLength="8" null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Delegation.Delegate.DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="Delegation.Delegate.UdefNumber1" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Delegation.Delegate.UdefNumber2" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Delegation.Delegate.UdefString1" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.AusState" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.AusStateFilter" label="State" hint="Limit search results to this state"
+                       maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.BaseCurrencyId" label="Base Currency" disabled="1" null="0" valid="1"
+                       value="1" datatype="number"/>
+                <Field id="Delegation.Delegate.contactListFilter" label="Contact List Filter" null="0" valid="1"
+                       value="1" text="All" datatype="string"/>
+                <Field id="Delegation.Delegate.FirstName" label="First Name" disabled="1" nullable="0" maxLength="50"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.LastName" label="Last Name" disabled="1" nullable="0" maxLength="50"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.SecondName" label="2nd Name/Initial" disabled="1" maxLength="20" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Title" label="Title" disabled="1" nullable="1" maxLength="6" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Gender" label="Gender" disabled="1" null="0" valid="1" value="0" text=""
+                       datatype="string"/>
+                <Field id="Delegation.Delegate.BirthDate" label="DOB" disabled="1" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Delegation.Delegate.Age" label="Age" disabled="1" null="1" value="" datatype="number"
+                       valid="1" forcequeryval="1"/>
+                <Field id="Delegation.Delegate.CultureInfo" label="Culture" disabled="1" maxLength="32" null="0"
+                       valid="1" value="default" text="Default" datatype="string"/>
+                <Field id="Delegation.Delegate.Language" label="Language" disabled="1" maxLength="3" null="1" value=""
+                       text="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Competency" label="View" disabled="1" null="0" valid="1" value="10"
+                       text="Beginner" datatype="string"/>
+                <Field id="Delegation.Delegate.Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Delegation.Delegate.DriverLicense" disabled="1" maxLength="12" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.PrimaryEmployer" label="Company" disabled="1" maxLength="60" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.PrimaryRole" label="Position" disabled="1" maxLength="60" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Department" label="Department" disabled="1" maxLength="60" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Biography.FileName" label="Bio Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.Biography.FileContents" label="Bio File" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Delegation.Delegate.LoginCode" label="Login Code" disabled="1" maxLength="50" null="1"
+                       value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Delegation.Delegate.Password" label="Password" disabled="1" maxLength="20"/>
+                <Field id="Delegation.Delegate.LastModifiedDate" label="Last Modified" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Delegation.Delegate.LastModifiedUser" label="Modified By" disabled="1" maxLength="10"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="Delegation.Delegate.PasswordHint" label="Password Hint"
+                       hint="A short to remind you of your password" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.PersistentId" label="Person Id" disabled="0" nullable="0" null="0" valid="1"
+                       value="218" datatype="number"/>
+                <Field id="Recruiter.SearchCode" label="&amp;Search Code" disabled="0" nullable="0" maxLength="8"
+                       null="0" value="00185" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Recruiter.EmailAddress" label="Email Address" disabled="1" maxLength="100" null="0"
+                       value="gdotti@bigpond.com" datatype="string" contentType="email" valid="1"/>
+                <Field id="Recruiter.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Recruiter.Name" label="Name" disabled="1" nullable="0" maxLength="254" null="0"
+                       value="Dotti, Gillian****" datatype="string" valid="1"/>
+                <Field id="Recruiter.Street" label="Street" disabled="1" maxLength="200" null="0" value="P.O.Box 899"
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.AddressNotes" label="AddressNotes" disabled="1" maxLength="80" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Phone" label="Telephone No" disabled="1" maxLength="20" null="0"
+                       value="(07) 4063 3756" datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="Recruiter.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20" null="0"
+                       value="0417 633 612" datatype="string" valid="1"/>
+                <Field id="Recruiter.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Recruiter.WebURL" label="Web Address" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.CreationNotes" label="Creation Notes" disabled="1" maxLength="500" null="0"
+                       value="$longData$" datatype="string" valid="1">Created by RADEK at 2/05/2010 4:48 PM
+                </Field>
+                <Field id="Recruiter.PrivateNotes" label="Private Notes" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.CreateDate" label="Create Date" disabled="1" null="0" valid="1" value="2/03/2006"
+                       date="2/03/2006" time="00:00" DayOfWeek="Thursday" datatype="datetime"/>
+                <Field id="Recruiter.Notes" label="Notes" disabled="1" maxLength="500" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Recruiter.Active" disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Recruiter.Image.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Recruiter.Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Recruiter.ThumbImage.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Recruiter.ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Recruiter.RowClassType"/>
+                <Field id="Recruiter.Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Recruiter.OwnerList" label="Relations" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.MergeBEID" label="Merge ID" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Recruiter.LastActionDate" label="Last Action Date" disabled="1" forcequeryval="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Recruiter.PreferredEngagementMethod" label="Engage Method" disabled="1" null="0" valid="1"
+                       value="99" text="Not Specified" datatype="string"/>
+                <Field id="Recruiter.LegalEntityType" label="My Legal Entity" disabled="1" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.ExternalReference" label="External Reference" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="Recruiter.OwnerHostCompany" disabled="1" null="0" value="3" datatype="number" valid="1"/>
+                <Field id="Recruiter.ParentCompanyId" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Recruiter.ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Recruiter.DuplicateSearchCode" label="Search code of manually found duplicate" maxLength="8"
+                       null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Recruiter.DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="Recruiter.UdefNumber1" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Recruiter.UdefNumber2" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Recruiter.UdefString1" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Recruiter.AusState" disabled="1" maxLength="254" null="0" value="QLD" datatype="string"
+                       valid="1"/>
+                <Field id="Recruiter.AusStateFilter" label="State" hint="Limit search results to this state"
+                       maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Recruiter.BaseCurrencyId" label="Base Currency" disabled="1" null="0" valid="1" value="1"
+                       datatype="number"/>
+                <Field id="Recruiter.contactListFilter" label="Contact List Filter" null="0" valid="1" value="1"
+                       text="All" datatype="string"/>
+                <Field id="Recruiter.FirstName" label="First Name" disabled="1" nullable="0" maxLength="50" null="0"
+                       value="Gillian****" datatype="string" valid="1"/>
+                <Field id="Recruiter.LastName" label="Last Name" disabled="1" nullable="0" maxLength="50" null="0"
+                       value="Dotti" datatype="string" valid="1"/>
+                <Field id="Recruiter.SecondName" label="2nd Name/Initial" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Title" label="Title" disabled="1" nullable="1" maxLength="6" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Gender" label="Gender" disabled="1" null="1" valid="1" value="0" text=""
+                       datatype="string"/>
+                <Field id="Recruiter.BirthDate" label="DOB" disabled="1" null="0" value="6/04/1968" date="6/04/1968"
+                       time="00:00" DayOfWeek="Saturday" datatype="datetime" valid="1"/>
+                <Field id="Recruiter.Age" label="Age" disabled="1" null="1" value="" datatype="number" valid="1"
+                       forcequeryval="1"/>
+                <Field id="Recruiter.CultureInfo" label="Culture" disabled="1" maxLength="32" null="0" valid="1"
+                       value="default" text="Default" datatype="string"/>
+                <Field id="Recruiter.Language" label="Language" disabled="1" maxLength="3" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Competency" label="View" disabled="1" null="0" valid="1" value="10" text="Beginner"
+                       datatype="string"/>
+                <Field id="Recruiter.Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Recruiter.DriverLicense" disabled="1" maxLength="12" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Recruiter.PrimaryEmployer" label="Company" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.PrimaryRole" label="Position" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Department" label="Department" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Biography.FileName" label="Bio Name" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Recruiter.Biography.FileContents" label="Bio File" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Recruiter.LoginCode" label="Login Code" disabled="1" maxLength="50" null="0" value="00185"
+                       datatype="string" textCase="upper" valid="1"/>
+                <Field id="Recruiter.Password" label="Password" disabled="1" maxLength="20"/>
+                <Field id="Recruiter.LastModifiedDate" label="Last Modified" disabled="1" null="0" value="24/02/2011"
+                       date="24/02/2011" time="00:00" DayOfWeek="Thursday" datatype="datetime" valid="1"/>
+                <Field id="Recruiter.LastModifiedUser" label="Modified By" disabled="1" maxLength="10" null="0"
+                       value="JOYS" datatype="string" valid="1"/>
+                <Field id="Recruiter.PasswordHint" label="Password Hint" hint="A short to remind you of your password"
+                       disabled="1" maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Trainer.PersistentId" label="Person Id" disabled="0" nullable="0" null="0" valid="1" value=""
+                       datatype="number"/>
+                <Field id="Trainer.SearchCode" label="&amp;Search Code" disabled="0" nullable="0" maxLength="8" null="1"
+                       value="" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="Trainer.EmailAddress" label="Email Address" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" contentType="email" valid="1"/>
+                <Field id="Trainer.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="Trainer.Name" label="Name" disabled="1" nullable="0" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Street" label="Street" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.AddressNotes" label="AddressNotes" disabled="1" maxLength="80" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Phone" label="Telephone No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="Trainer.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Trainer.WebURL" label="Web Address" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.CreationNotes" label="Creation Notes" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Trainer.PrivateNotes" label="Private Notes" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.CreateDate" label="Create Date" disabled="1" null="0" valid="1" value="20/01/2012"
+                       date="20/01/2012" time="00:00" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="Trainer.Notes" label="Notes" disabled="1" maxLength="500" null="1" value="$longData$"
+                       datatype="string" valid="1"></Field>
+                <Field id="Trainer.Active" disabled="1" null="0" valid="1" value="1" datatype="bool"/>
+                <Field id="Trainer.Image.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Trainer.Image.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Trainer.ThumbImage.FileName" label="Attachment Name" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Trainer.ThumbImage.FileContents" label="Binary Contents" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="Trainer.RowClassType"/>
+                <Field id="Trainer.Roles" label="Roles" disabled="1" maxLength="1000" forcequeryval="1" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="Trainer.OwnerList" label="Relations" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.MergeBEID" label="Merge ID" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Trainer.LastActionDate" label="Last Action Date" disabled="1" forcequeryval="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Trainer.PreferredEngagementMethod" label="Engage Method" disabled="1" null="0" valid="1"
+                       value="99" text="Not Specified" datatype="string"/>
+                <Field id="Trainer.LegalEntityType" label="My Legal Entity" disabled="1" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.ExternalReference" label="External Reference" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="Trainer.OwnerHostCompany" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Trainer.ParentCompanyId" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Trainer.ParentCompanyName" label="Parent/owner" disabled="1" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Trainer.DuplicateSearchCode" label="Search code of manually found duplicate" maxLength="8"
+                       null="1" value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="Trainer.DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="Trainer.UdefNumber1" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Trainer.UdefNumber2" disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="Trainer.UdefString1" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Trainer.AusState" disabled="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Trainer.AusStateFilter" label="State" hint="Limit search results to this state"
+                       maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="Trainer.BaseCurrencyId" label="Base Currency" disabled="1" null="0" valid="1" value="1"
+                       datatype="number"/>
+                <Field id="Trainer.contactListFilter" label="Contact List Filter" null="0" valid="1" value="1"
+                       text="All" datatype="string"/>
+                <Field id="Trainer.FirstName" label="First Name" disabled="1" nullable="0" maxLength="50" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Trainer.LastName" label="Last Name" disabled="1" nullable="0" maxLength="50" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="Trainer.SecondName" label="2nd Name/Initial" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Title" label="Title" disabled="1" nullable="1" maxLength="6" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Gender" label="Gender" disabled="1" null="0" valid="1" value="0" text=""
+                       datatype="string"/>
+                <Field id="Trainer.BirthDate" label="DOB" disabled="1" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="Trainer.Age" label="Age" disabled="1" null="1" value="" datatype="number" valid="1"
+                       forcequeryval="1"/>
+                <Field id="Trainer.CultureInfo" label="Culture" disabled="1" maxLength="32" null="0" valid="1"
+                       value="default" text="Default" datatype="string"/>
+                <Field id="Trainer.Language" label="Language" disabled="1" maxLength="3" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Competency" label="View" disabled="1" null="0" valid="1" value="10" text="Beginner"
+                       datatype="string"/>
+                <Field id="Trainer.Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Trainer.DriverLicense" disabled="1" maxLength="12" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="Trainer.PrimaryEmployer" label="Company" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.PrimaryRole" label="Position" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Department" label="Department" disabled="1" maxLength="60" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Biography.FileName" label="Bio Name" disabled="1" maxLength="200" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.Biography.FileContents" label="Bio File" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="Trainer.LoginCode" label="Login Code" disabled="1" maxLength="50" null="1" value=""
+                       datatype="string" textCase="upper" valid="1"/>
+                <Field id="Trainer.Password" label="Password" disabled="1" maxLength="20"/>
+                <Field id="Trainer.LastModifiedDate" label="Last Modified" disabled="1" null="1" value="" date=""
+                       time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Trainer.LastModifiedUser" label="Modified By" disabled="1" maxLength="10" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Trainer.PasswordHint" label="Password Hint" hint="A short to remind you of your password"
+                       disabled="1" maxLength="100" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.PersistentId" nullable="0" null="1" value="" datatype="number"
+                       relationship="aggregate"/>
+                <Field id="BreakawayBonus.BonusAmount" label="Amount" nullable="0" valid="0" null="1" value=""
+                       datatype="number"/>
+                <Field id="BreakawayBonus.BonusType" label="Type" nullable="0" valid="0" maxLength="254" null="1"
+                       value="" datatype="string"/>
+                <Field id="BreakawayBonus.Period.From" label="From" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Period.To" label="To" null="1" value="" date="" time="" DayOfWeek=""
+                       datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.SaleType" label="Sale Type" null="1" value="0" text="" datatype="string"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.PersistentId" label="Person Id" disabled="0" nullable="0" null="1"
+                       value="" datatype="number"/>
+                <Field id="BreakawayBonus.Beneficiary.SearchCode" label="&amp;Search Code" disabled="0" nullable="0"
+                       maxLength="8" null="1" value="" datatype="string" textCase="upper" isSearchField="1" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.EmailAddress" label="Email Address" disabled="1" maxLength="100"
+                       null="1" value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.EmailAddressIsDelegate" label="Is Delegate"
+                       hint="Indicates the address is not owned by this entity, and the real owner can pass on"
+                       disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.Name" label="Name" disabled="1" nullable="0" maxLength="254"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Street" label="Street" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.AddressNotes" label="AddressNotes" disabled="1" maxLength="80"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Phone" label="Telephone No" disabled="1" maxLength="20" null="1"
+                       value="" datatype="string" contentType="phone" mask="(00) 0000 0000" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.MobilePhone" label="Mobile Phone" disabled="1" maxLength="20"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Fax" label="Fax No" disabled="1" maxLength="20" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.WebURL" label="Web Address" disabled="1" maxLength="100" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CreationNotes" label="Creation Notes" disabled="1" maxLength="500"
+                       null="1" value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.PrivateNotes" label="Private Notes" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CreateDate" label="Create Date" disabled="1" null="0" valid="1"
+                       value="20/01/2012" date="20/01/2012" time="00:00" DayOfWeek="Friday" datatype="datetime"/>
+                <Field id="BreakawayBonus.Beneficiary.Notes" label="Notes" disabled="1" maxLength="500" null="1"
+                       value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.Active" disabled="1" null="0" valid="1" value="1"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.Image.FileName" label="Attachment Name" disabled="1"
+                       maxLength="200" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Image.FileContents" label="Binary Contents" null="1"
+                       datatype="BLOB" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.ThumbImage.FileName" label="Attachment Name" disabled="1"
+                       maxLength="200" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ThumbImage.FileContents" label="Binary Contents" null="1"
+                       datatype="BLOB" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.RowClassType"/>
+                <Field id="BreakawayBonus.Beneficiary.Roles" label="Roles" disabled="1" maxLength="1000"
+                       forcequeryval="1" null="1" value="$longData$" datatype="string" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.OwnerList" label="Relations" disabled="1" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.MergeBEID" label="Merge ID" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.LastActionDate" label="Last Action Date" disabled="1"
+                       forcequeryval="1" null="1" value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.PreferredEngagementMethod" label="Engage Method" disabled="1"
+                       null="0" valid="1" value="99" text="Not Specified" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.LegalEntityType" label="My Legal Entity" disabled="1" null="1"
+                       value="0" text="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ExternalReference" label="External Reference" disabled="1"
+                       null="1" value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.OwnerHostCompany" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ParentCompanyId" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ParentCompanyName" label="Parent/owner" disabled="1"
+                       maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.DuplicateSearchCode"
+                       label="Search code of manually found duplicate" maxLength="8" null="1" value="" datatype="string"
+                       textCase="upper" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.DuplicateFindMethod" label="Method" null="0" valid="1" value="10"
+                       text="First Name/Last Name Exact" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.UdefNumber1" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.UdefNumber2" disabled="1" null="1" value="" datatype="number"
+                       valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.UdefString1" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.AusState" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.AusStateFilter" label="State"
+                       hint="Limit search results to this state" maxLength="254" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.BaseCurrencyId" label="Base Currency" disabled="1" null="0"
+                       valid="1" value="1" datatype="number"/>
+                <Field id="BreakawayBonus.Beneficiary.contactListFilter" label="Contact List Filter" null="0" valid="1"
+                       value="1" text="All" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.FirstName" label="First Name" disabled="1" nullable="0"
+                       maxLength="50" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.LastName" label="Last Name" disabled="1" nullable="0"
+                       maxLength="50" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.SecondName" label="2nd Name/Initial" disabled="1" maxLength="20"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Title" label="Title" disabled="1" nullable="1" maxLength="6"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Gender" label="Gender" disabled="1" null="0" valid="1" value="0"
+                       text="" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.BirthDate" label="DOB" disabled="1" null="1" value="" date=""
+                       time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Age" label="Age" disabled="1" null="1" value="" datatype="number"
+                       valid="1" forcequeryval="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CultureInfo" label="Culture" disabled="1" maxLength="32" null="0"
+                       valid="1" value="default" text="Default" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.Language" label="Language" disabled="1" maxLength="3" null="1"
+                       value="" text="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Competency" label="View" disabled="1" null="0" valid="1"
+                       value="10" text="Beginner" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.Signature" null="1" datatype="BLOB" valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.DriverLicense" disabled="1" maxLength="12" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.PrimaryEmployer" label="Company" disabled="1" maxLength="60"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.PrimaryRole" label="Position" disabled="1" maxLength="60" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Department" label="Department" disabled="1" maxLength="60"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Biography.FileName" label="Bio Name" disabled="1" maxLength="200"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Biography.FileContents" label="Bio File" null="1" datatype="BLOB"
+                       valid="1"></Field>
+                <Field id="BreakawayBonus.Beneficiary.LoginCode" label="Login Code" disabled="1" maxLength="50" null="1"
+                       value="" datatype="string" textCase="upper" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Password" label="Password" disabled="1" maxLength="20"/>
+                <Field id="BreakawayBonus.Beneficiary.LastModifiedDate" label="Last Modified" disabled="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.LastModifiedUser" label="Modified By" disabled="1" maxLength="10"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.PasswordHint" label="Password Hint"
+                       hint="A short to remind you of your password" disabled="1" maxLength="100" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.SpecificType" label="Type" disabled="1" nullable="0" null="0"
+                       valid="1" value="1" text="Consultant" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.Status" label="Status" disabled="1" nullable="0" null="0"
+                       valid="1" value="10" text="Active" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.ABN" disabled="0" maxLength="18" label="ABN" null="1" value=""
+                       datatype="string" contentType="ABN" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.TradingName" label="Trading Name"
+                       hint="This will be copied into debtor and creditor records" maxLength="254" null="1" value=""
+                       datatype="string" valid="1" disabled="0"/>
+                <Field id="BreakawayBonus.Beneficiary.GSTRegistered" label="GST?"
+                       hint="This consultant is registerd for GST" disabled="1" nullable="0" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.DescriptionEx" disabled="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.TargetYear" null="0" valid="1" value="2012" datatype="number"/>
+                <Field id="BreakawayBonus.Beneficiary.Target" null="1" value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.InductionOption" label="Purchase Option" disabled="1" nullable="0"
+                       null="1" value="0" text="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.UnpaidOption2" disabled="1" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.ReportingManagerId" label="True reporting manager"
+                       hint="Only select if the Manager is not the true reporting manager" disabled="1" null="1"
+                       value="" text="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.SixtyDayPeriod.From" label="From" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.SixtyDayPeriod.To" label="To" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ProbationaryPeriod.From" label="From" disabled="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ProbationaryPeriod.To" label="To" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.IsAmbassador" label="Is Ambassador" disabled="1" nullable="0"
+                       null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.InactiveDate" label="Inactive Date" disabled="1" null="1" value=""
+                       date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.IsRemoteLocation" label="Is Remote"
+                       hint="They are far enough away from GL to waive shipping fees (one order per month)" disabled="1"
+                       nullable="0" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.IsGoGetter" label="Is Go Getter" disabled="1" nullable="0"
+                       null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.GoGetterDate" label="Date" disabled="1" null="1" value="" date=""
+                       time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.IsPomotionProspect" label="Is Prospective BM" disabled="1"
+                       null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.SpecialType" label="SpecialType" disabled="1" nullable="0"
+                       null="0" valid="1" value="99" text="NA" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.BonusPoints" label="Business points" disabled="1" null="1"
+                       value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.BonusPointsAsAt" label="Last Calculated" disabled="1" null="1"
+                       value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.BonusPointsCalc" label="Bonus Points Calc" disabled="1"
+                       maxLength="200" null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CommissionAdjustment" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CommissionAdjustmentNote" disabled="1" maxLength="200" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.TreeViewMode" label="Display" null="0" valid="1" value="20"
+                       text="By State/GL" datatype="string"/>
+                <Field id="BreakawayBonus.Beneficiary.RowCount" label="Row Count" hint="Number of records returned."
+                       disabled="1" null="1" value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ShowReport" label="Report" null="1" value="0" text=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.StateFilter" maxLength="254" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ShowInactive" label="Show Inactive"
+                       hint="Show inactive consultants, leaders and managers" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.AsAt" label="As At"
+                       hint="Display the consultant structure as at this date" null="1" value="" date="" time=""
+                       DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CommissionYear" label="Year" static="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CommissionMonth" label="Month"
+                       hint="Create/Display commissions for this month" static="1"/>
+                <Field id="BreakawayBonus.Beneficiary.CommissionStatusDesc" label="Status" disabled="1" maxLength="254"
+                       null="1" value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ThisMonthSales" label="This months sales" disabled="1" null="1"
+                       value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.LastMonthSales" label="Last months sales" disabled="1" null="1"
+                       value="" datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.YTDSales" label="YTD sales" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.AllSales" label="All sales" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.Sales60Days" label="60 Day sales" disabled="1" null="1" value=""
+                       datatype="number" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.TeamSize" label="Team Size" hint="For GLs only" disabled="1"
+                       null="1" value="0" text="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.ApprovalToReactivate" label="Approval to Reactivate"
+                       hint="Requires documented management approval to reactivate" disabled="1" null="0" valid="1"
+                       value="0" datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchFirstName" label="First Name" null="0" valid="1" value="1"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.partialMatchFirstName" label="First Name partial match"
+                       hint="Match one first name containing another, e.g. Fred = Fred****" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchLastName" label="Last Name" null="0" valid="1" value="1"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchEmail" label="Email" null="0" valid="1" value="1"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchLocation" label="Location" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchAddress" label="Address" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchPhone" label="Phone" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.matchMobile" label="Mobile" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="BreakawayBonus.Beneficiary.dupesCount" label="Matching groups found" null="0" valid="1"
+                       value="0" datatype="number"/>
+                <Field id="BreakawayBonus.Beneficiary.ServicesSelected" label="Services" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.DeliveryStreet" label="Delivery Street" maxLength="254" null="1"
+                       value="" datatype="string" valid="1"/>
+                <Field id="BreakawayBonus.Beneficiary.JGLnoBM" label="JGL has no designated BM"
+                       hint="JGL has no designated BM" disabled="1" null="0" valid="1" value="0" datatype="bool"/>
+                <Field id="DeliveryLocation.PersistentId" label="Location Id" nullable="0" null="0" valid="1"
+                       value="152" datatype="number"/>
+                <Field id="DeliveryLocation.ParentId" nullable="0" null="0" valid="1" value="4" datatype="number"/>
+                <Field id="DeliveryLocation.Name" label="Name" nullable="0" maxLength="80" null="0" valid="1"
+                       value="Moore Park" datatype="string"/>
+                <Field id="DeliveryLocation.Disabled" label="Disallow usage on new entries" null="0" valid="1" value="0"
+                       datatype="bool"/>
+                <Field id="DeliveryLocation.ParentName" label="Parent" disabled="1" maxLength="254"/>
+                <Field id="DeliveryLocation.Depth" label="Level" disabled="1" null="0" value="1" datatype="number"
+                       valid="1"/>
+                <Field id="DeliveryLocation.ChildCount" disabled="1" null="0" valid="1" value="0" datatype="number"/>
+                <Field id="DeliveryLocation.MakeChildOf"/>
+                <Field id="DeliveryLocation.Comments" label="Comments" maxLength="50" null="1" value=""
+                       datatype="string"/>
+                <Field id="DeliveryLocation.Udef" label="Postcode" maxLength="50" null="0" valid="1" value="2021"
+                       datatype="string"/>
+                <Field id="DeliveryLocation.Sequence" label="Sequence" nullable="0" minValue="0" null="0" valid="1"
+                       value="0" datatype="number"/>
+                <Field id="DeliveryLocation.ExtendedName" label="Full Name" disabled="1" maxLength="80" null="0"
+                       valid="1" value="Moore Park NSW 2021 : &#xD;&#xA;Australia" datatype="string"/>
+                <Field id="DeliveryLocation.FindCode" label="Find"
+                       hint="Enter a Postcode or [partial] suburb name to find" maxLength="254"/>
+                <Field id="DeliveryLocation.CitySuburb" label="Suburb" maxLength="254"/>
+                <Field id="DeliveryLocation.State" label="State" maxLength="254"/>
+                <Field id="DeliveryLocation.Country" label="Country" maxLength="254"/>
+                <Field id="DeliveryLocation.Postcode" label="Postcode" maxLength="254" null="0" valid="1" value="2021"
+                       datatype="string"/>
+                <Field id="DeliveryLocation.LocationType" label="Type" nullable="0" null="0" valid="1" value="3"
+                       text="Suburb" datatype="string"/>
+                <Field id="DeliveryLocation.ParentType" label="Parent Type"/>
+                <Field id="DeliveryLocation.ParentFind" label="Find Parent" hint="Enter a [partial] name to find"
+                       maxLength="254"/>
+                <Types>
+                    <Type id="ERP.Location" image="Location"/>
+                    <Type id="ERP.BusinessEntityContactDetail" image="BusinessEntityContactDetail"/>
+                    <Type id="ERP.BusinessEntityProfile" image="BusinessEntityProfile"/>
+                    <Type id="Thermomix.TMXCertificate" image="TMXCertificate"/>
+                    <Type id="ERP.Correspondence" image="Correspondence"/>
+                    <Type id="ERP.Person" image="Person"/>
+                    <Type id="ERP.Company" image="Company"/>
+                    <Type id="ERP.Consultant" image="Consultant"/>
+                    <Type id="ERP.HostCompany" image="HostCompany"/>
+                    <Type id="Thermomix.TMXConsultantHistory" image="TMXConsultantHistory"/>
+                    <Type id="ERP.ConsultantTraining" image="ConsultantTraining"/>
+                    <Type id="ERP.PerformanceNote" image="PerformanceNote"/>
+                    <Type id="Thermomix.MonthlyActivitySummary" image="MonthlyActivitySummary"/>
+                    <Type id="Thermomix.ConsultantDelegation" image="ConsultantDelegation"/>
+                    <Type id="Thermomix.TMXBreakawayBonus" image="TMXBreakawayBonus"/>
+                    <Type id="Thermomix.TMXConsultant" image="TMXConsultant"/>
+                    <Type id="Consultant" image="Consultant.ico"/>
+                    <Type id="JuniorGroupLeader" image="JuniorGroupLeader.ico"/>
+                    <Type id="GroupLeader" image="GroupLeader.ico"/>
+                    <Type id="JuniorBranchManager" image="JuniorBranchManager.ico"/>
+                    <Type id="BranchManager" image="BranchManager.ico"/>
+                    <Type id="AusState" image="AusState.ico"/>
+                </Types>
+                <Field id="SixtyDayPeriod" timeDuration="60" timeDurationUnit="DaysPlus1"/>
+                <Field id="ProbationaryPeriod" timeDuration="183" timeDurationUnit="DaysPlus1"/>
+            </Activity>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8210/TMXTEST#634626699108532987:36</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

@@ -119,6 +119,7 @@
 }
 
 - (void) updateUITextFieldsWithModelValues {
+    LogDebug(@"Text field mappings: %@", _textFieldMappings);
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
@@ -166,7 +167,9 @@
 - (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
 
     for (NSString* propertyName in _propertyNames) {
+        LogDebug(@"Property name: %@", propertyName);
         Field* field = [_activityInstance fieldWithId:propertyName];
+
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(controller, NSSelectorFromString(propertyName));
             //UIControl* uiControl = [controller performSelector:NSSelectorFromString(propertyName)];
