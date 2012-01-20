@@ -49,7 +49,7 @@
 /* ================================================ Interface Methods =============================================== */
 
 - (BOOL)isDefault {
-    return [[_name lowercaseString] isEqualToString:@""];
+    return [_name isEqualToString:@""];
 }
 
 - (BOOL)isBrowse {

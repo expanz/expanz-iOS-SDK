@@ -223,10 +223,10 @@
     </target>
 
     <target name="--install">
-        <delete dir="/Developer/expanz/Frameworks/ExpanzIOS.framework"/>
-        <mkdir dir="/Developer/expanz/Frameworks/ExpanzIOS.framework"/>
-        <copy todir="/Developer/expanz/Frameworks/ExpanzIOS.framework">
-            <fileset dir="${target.dir}/Release-iphoneuniversal/ExpanzIOS.framework"/>
+        <delete dir="/Developer/expanz/Frameworks/expanziOS.framework"/>
+        <mkdir dir="/Developer/expanz/Frameworks/expanziOS.framework"/>
+        <copy todir="/Developer/expanz/Frameworks/expanziOS.framework">
+            <fileset dir="${target.dir}/Release-iphoneuniversal/expanziOS.framework"/>
         </copy>
     </target>
 

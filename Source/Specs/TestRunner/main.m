@@ -15,14 +15,20 @@ int main(int argc, char* argv[]) {
 
 
     @autoreleasepool {
-        SDKConfiguration* configuration = [[SDKConfiguration alloc]
-            initWithBaseUrl:@"http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish" preferredSite:@"SALES"
-                   userType:@"Alternate"];
-        [SDKConfiguration setGlobalConfiguration:configuration];
+        LogDebug(@"Number of args: %d", argc);
+        if (argc == 2 && strcmp(argv[1], "Harness") == 0) {
+            return UIApplicationMain(argc, argv, nil, @"ActivityStubApplicationDelegate");
+        }
+        else {
+            SDKConfiguration* configuration = [[SDKConfiguration alloc]
+                initWithBaseUrl:@"http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish" preferredSite:@"SALES"
+                       userType:@"Alternate"];
+            [SDKConfiguration setGlobalConfiguration:configuration];
 
-        //This lets the simulator get itself in order.
-        [NSThread sleepForTimeInterval:0.5];
-        return UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");
+            //This lets the simulator get itself in order.
+            [NSThread sleepForTimeInterval:0.5];
+            return UIApplicationMain(argc, argv, nil, @"CedarApplicationDelegate");
+        }
     }
 
 }

@@ -69,7 +69,7 @@ objection_requires(@"reporter")
     return [self showActivityWithDefinition:activityDefinition initialKey:nil];
 }
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (BOOL)   showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
                          initialKey:(NSString*)initialKey {
 
     NSString* controllerClassName = [self controllerClassNameFor:activityDefinition];
@@ -102,7 +102,7 @@ objection_requires(@"reporter")
 
 
 /* ================================================== Private Methods =============================================== */
-- (NSString*) nibNameFor:(expanz_model_ActivityDefinition*)activityDefinition {
+- (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition {
     NSString* nibName;
     if ([activityDefinition.style isDefault]) {
         nibName = activityDefinition.name;
@@ -110,6 +110,7 @@ objection_requires(@"reporter")
     else {
         nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.name, activityDefinition.style.name];
     }
+    LogDebug(@"Nib name: %@", nibName);
     return nibName;
 }
 
@@ -120,6 +121,7 @@ objection_requires(@"reporter")
         [controllerClassName appendString:[NSString stringWithFormat:@"_%@", activityDefinition.style.name]];
     }
     [controllerClassName appendString:@"_ViewController"];
+    LogDebug(@"Controller class name: %@", controllerClassName);
     return controllerClassName;
 }
 

@@ -27,6 +27,9 @@
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B22FB4B14C6F26E00177535 /* ActivityStubApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */; };
+		6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
+		6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
 		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
 		6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
 		6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
@@ -142,6 +145,15 @@
 		6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */; };
 		6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
 		6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
+		6BBD515414C910800024DEEA /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
+		6BBD515614C910830024DEEA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0151499828800541056 /* background.png */; };
+		6BBD515714C910870024DEEA /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */; };
+		6BBD515814C9108C0024DEEA /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0171499828800541056 /* ESA.Sales.Customer.Browse.xib */; };
+		6BBD515914C910910024DEEA /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0191499828800541056 /* Login.xib */; };
+		6BBD515A14C910940024DEEA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01A1499828800541056 /* MainWindow.xib */; };
+		6BBD515B14C910970024DEEA /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */; };
+		6BBD515C14C9109D0024DEEA /* TableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* TableCellForGridData.xib */; };
+		6BBD515D14C910A00024DEEA /* TableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* TableCellForTreeData.xib */; };
 		6BC9F7331458EBB6001AF204 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC9F7351458EBB6001AF204 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC9F7371458EBB6001AF204 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -392,7 +404,6 @@
 		6BD47E041484705A000ECE52 /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC31484705A000ECE52 /* SessionData.xml */; };
 		6BD47E051484705A000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC51484705A000ECE52 /* InfoPlist.strings */; };
 		6BD47E061484705A000ECE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DC71484705A000ECE52 /* main.m */; };
-		6BD47E081484705A000ECE52 /* TestRunnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCB1484705A000ECE52 /* TestRunnerAppDelegate.m */; };
 		6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */; };
 		6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */; };
 		6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */; };
@@ -528,7 +539,6 @@
 		6BF58DC41444245C0063E805 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6BF58DC71444245C0063E805 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
-		6BF58DC81444245C0063E812 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
@@ -996,8 +1006,8 @@
 		6BD47DC71484705A000ECE52 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BD47DC81484705A000ECE52 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
 		6BD47DC91484705A000ECE52 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestRunner-Prefix.pch"; sourceTree = "<group>"; };
-		6BD47DCA1484705A000ECE52 /* TestRunnerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunnerAppDelegate.h; sourceTree = "<group>"; };
-		6BD47DCB1484705A000ECE52 /* TestRunnerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunnerAppDelegate.m; sourceTree = "<group>"; };
+		6BD47DCA1484705A000ECE52 /* ActivityStubApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityStubApplicationDelegate.h; sourceTree = "<group>"; };
+		6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityStubApplicationDelegate.m; sourceTree = "<group>"; };
 		6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
 		6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
 		6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
@@ -1744,12 +1754,12 @@
 		6BD47DC41484705A000ECE52 /* TestRunner */ = {
 			isa = PBXGroup;
 			children = (
+				6BD47DCB1484705A000ECE52 /* ActivityStubApplicationDelegate.m */,
+				6BD47DCA1484705A000ECE52 /* ActivityStubApplicationDelegate.h */,
 				6BD47DC51484705A000ECE52 /* InfoPlist.strings */,
 				6BD47DC71484705A000ECE52 /* main.m */,
 				6BD47DC81484705A000ECE52 /* TestRunner-Info.plist */,
 				6BD47DC91484705A000ECE52 /* TestRunner-Prefix.pch */,
-				6BD47DCA1484705A000ECE52 /* TestRunnerAppDelegate.h */,
-				6BD47DCB1484705A000ECE52 /* TestRunnerAppDelegate.m */,
 			);
 			path = TestRunner;
 			sourceTree = "<group>";
@@ -2227,7 +2237,6 @@
 			files = (
 				6BC9F78D1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7951458EBB6001AF204 /* README.markdown in Resources */,
-				6BF58DC81444245C0063E812 /* (null) in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
 				6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */,
 				6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */,
@@ -2240,6 +2249,16 @@
 				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
 				6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */,
 				6BFDE7761495FA01005D3333 /* Login.xib in Resources */,
+				6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */,
+				6BBD515414C910800024DEEA /* ActivityMenu.xib in Resources */,
+				6BBD515614C910830024DEEA /* background.png in Resources */,
+				6BBD515714C910870024DEEA /* ESA.Sales.Calc.xib in Resources */,
+				6BBD515814C9108C0024DEEA /* ESA.Sales.Customer.Browse.xib in Resources */,
+				6BBD515914C910910024DEEA /* Login.xib in Resources */,
+				6BBD515A14C910940024DEEA /* MainWindow.xib in Resources */,
+				6BBD515B14C910970024DEEA /* Sales.Customer.Browse.xib in Resources */,
+				6BBD515C14C9109D0024DEEA /* TableCellForGridData.xib in Resources */,
+				6BBD515D14C910A00024DEEA /* TableCellForTreeData.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2576,7 +2595,6 @@
 				6BD47DFD1484705A000ECE52 /* XmlPostLoginClientIntegration.m in Sources */,
 				6BD47DFE1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m in Sources */,
 				6BD47E061484705A000ECE52 /* main.m in Sources */,
-				6BD47E081484705A000ECE52 /* TestRunnerAppDelegate.m in Sources */,
 				6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */,
 				6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */,
 				6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */,
@@ -2653,6 +2671,8 @@
 				6BFDE7671495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
 				6BFDE76D1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */,
+				6B22FB4B14C6F26E00177535 /* ActivityStubApplicationDelegate.m in Sources */,
+				6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
