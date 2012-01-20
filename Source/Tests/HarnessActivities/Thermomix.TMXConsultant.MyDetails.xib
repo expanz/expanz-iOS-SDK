@@ -190,6 +190,7 @@
 						<string key="NSFrame">{{91, 231}, {221, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="938961984"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -216,6 +217,7 @@
 						<string key="NSFrame">{{194, 270}, {118, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="836116741"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -10079,11 +10081,11 @@ AAEAAQABA</bytes>
 							<bytes key="NSWhite">MAA</bytes>
 							<reference key="NSCustomColorSpace" ref="532162447"/>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="329838658">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont">
+						<object class="NSFont" key="IBUIFont" id="280748172">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
@@ -10095,6 +10097,7 @@ AAEAAQABA</bytes>
 						<string key="NSFrame">{{293, 383}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1030</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -10120,15 +10123,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="22962238">
-							<int key="type">1</int>
-							<double key="pointSize">15</double>
-						</object>
-						<object class="NSFont" key="IBUIFont" id="730306790">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">15</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUILabel" id="832314399">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -10148,8 +10144,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<reference key="IBUIFontDescription" ref="22962238"/>
-						<reference key="IBUIFont" ref="730306790"/>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUILabel" id="579883586">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -10169,8 +10165,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<reference key="IBUIFontDescription" ref="22962238"/>
-						<reference key="IBUIFont" ref="730306790"/>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUILabel" id="1026561136">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -10190,8 +10186,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<reference key="IBUIFontDescription" ref="22962238"/>
-						<reference key="IBUIFont" ref="730306790"/>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUILabel" id="311537919">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -10211,8 +10207,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<reference key="IBUIFontDescription" ref="22962238"/>
-						<reference key="IBUIFont" ref="730306790"/>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUILabel" id="290244251">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -10232,8 +10228,8 @@ AAEAAQABA</bytes>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<reference key="IBUIFontDescription" ref="22962238"/>
-						<reference key="IBUIFont" ref="730306790"/>
+						<reference key="IBUIFontDescription" ref="329838658"/>
+						<reference key="IBUIFont" ref="280748172"/>
 					</object>
 					<object class="IBUITabBar" id="836116741">
 						<reference key="NSNextResponder" ref="191373211"/>

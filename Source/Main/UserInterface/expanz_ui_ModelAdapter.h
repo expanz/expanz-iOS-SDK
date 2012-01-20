@@ -24,6 +24,7 @@
 @private
     NSMutableArray* _propertyNames;
     NSMutableDictionary* _textFieldMappings;
+    NSMutableDictionary* _readOnlyTextFields;
     NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _dataSetMappings;
@@ -33,7 +34,8 @@
 }
 
 @property(nonatomic, strong, readonly) NSString* activityName;
-@property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, weak, readonly) expanz_model_ActivityInstance* activityInstance;
+@property(nonatomic, weak, readonly) expanz_ui_ActivityInstanceViewController* controller;
 
 /**
 * Initializes a model adapter for the given view controller.

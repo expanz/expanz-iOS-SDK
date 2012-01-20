@@ -27,15 +27,19 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
 
-- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller;
+- (void) cachePropertyNames;
 
-- (void) mapFieldsForController:(ActivityInstanceViewController*)controller;
+- (void) mapModelFieldsToUITextFields;
 
-- (void) mapLabelsForController:(ActivityInstanceViewController*)controller;
+- (void) mapModelFieldsToUILabels;
 
-- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller;
+- (void) mapModelFieldsToUITableViews;
 
-- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller;
+- (void) addTouchResponderToEditableImages;
+
+- (void) makeReadOnlyControlFor:(UITextField*)textField andSetText:(NSString*)text;
+
+- (void) destroyReadOnlyControlFor:(UITextField*)textField;
 
 @end
 
@@ -45,6 +49,7 @@
 
 @synthesize activityName = _activityName;
 @synthesize activityInstance = _activityInstance;
+@synthesize controller = _controller;
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
@@ -52,19 +57,21 @@
     if (self) {
         _activityName = [viewController.activityDefinition.name copy];
         _activityInstance = viewController.activityInstance;
+        _controller = viewController;
         _propertyNames = [[NSMutableArray alloc] init];
         _textFieldMappings = [[NSMutableDictionary alloc] init];
+        _readOnlyTextFields = [[NSMutableDictionary alloc] init];
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
         _dataSetMappings = [[NSMutableDictionary alloc] init];
         _imageButtonMappings = [[NSMutableDictionary alloc] init];
-        _dataRenderers = [[NSMutableArray alloc] init]; 
+        _dataRenderers = [[NSMutableArray alloc] init];
 
-        [self cachePropertyNamesForController:viewController];
-        [self mapFieldsForController:viewController];
-        [self mapLabelsForController:viewController];
-        [self mapUITableViewsForController:viewController];
-        [self addTouchResponderToEditableImagesForController:viewController];
+        [self cachePropertyNames];
+        [self mapModelFieldsToUITextFields];
+        [self mapModelFieldsToUILabels];
+        [self mapModelFieldsToUITableViews];
+        [self addTouchResponderToEditableImages];
     }
     return self;
 }
@@ -123,8 +130,14 @@
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
         Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
-        [textField setText:field.value];
-        [textField setEnabled:!field.isDisabled];
+
+        if ([field isDisabled]) {
+            [self makeReadOnlyControlFor:textField andSetText:field.value];
+        }
+        else {
+            [self destroyReadOnlyControlFor:textField];
+            [textField setText:field.value];
+        }
     }
 }
 
@@ -158,20 +171,19 @@
 
 #define kNoMappingWarning @"*** Warning *** %@ for %@ is nil. Has the connection been made in Interface Builder?"
 
-- (void) cachePropertyNamesForController:(ActivityInstanceViewController*)controller {
-    for (RTProperty* property in [[controller class] rt_properties]) {
+- (void) cachePropertyNames {
+    for (RTProperty* property in [[_controller class] rt_properties]) {
         [_propertyNames addObject:[property name]];
     }
 }
 
-- (void) mapFieldsForController:(ActivityInstanceViewController*)controller {
+- (void) mapModelFieldsToUITextFields {
 
     for (NSString* propertyName in _propertyNames) {
-        LogDebug(@"Property name: %@", propertyName);
         Field* field = [_activityInstance fieldWithId:propertyName];
 
         if (field != nil) {
-            UIControl* uiControl = objc_msgSend(controller, NSSelectorFromString(propertyName));
+            UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
             //UIControl* uiControl = [controller performSelector:NSSelectorFromString(propertyName)];
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
                 UITextField* textField = (UITextField*) uiControl;
@@ -180,7 +192,7 @@
                 }
                 else {
                     [_textFieldMappings setObject:textField forKey:propertyName];
-                    id<UITextFieldDelegate> delegate = controller;
+                    id<UITextFieldDelegate> delegate = _controller;
                     [textField setDelegate:delegate];
                 }
             }
@@ -197,11 +209,11 @@
     }
 }
 
-- (void) mapLabelsForController:(ActivityInstanceViewController*)controller {
+- (void) mapModelFieldsToUILabels {
     for (NSString* selectorName in _propertyNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
-            UILabel* uiLabel = objc_msgSend(controller, NSSelectorFromString(selectorName));
+            UILabel* uiLabel = objc_msgSend(_controller, NSSelectorFromString(selectorName));
             if (uiLabel == nil) {
                 LogInfo(kNoMappingWarning, @"UILabel", selectorName);
             }
@@ -212,10 +224,10 @@
     }
 }
 
-- (void) mapUITableViewsForController:(ActivityInstanceViewController*)controller {
+- (void) mapModelFieldsToUITableViews {
     for (NSString* selectorName in _propertyNames) {
         if ([_activityInstance dataWithId:selectorName] != nil) {
-            UITableView* tableView = objc_msgSend(controller, NSSelectorFromString(selectorName));
+            UITableView* tableView = objc_msgSend(_controller, NSSelectorFromString(selectorName));
             if (tableView == nil) {
                 LogInfo(kNoMappingWarning, @"UITableView", selectorName);
             }
@@ -231,14 +243,43 @@
     }
 }
 
-- (void) addTouchResponderToEditableImagesForController:(ActivityInstanceViewController*)controller {
+- (void) addTouchResponderToEditableImages {
     for (UIImageView* imageView in [_imageFieldMappings allValues]) {
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = imageView.frame;
-        [button addTarget:controller action:@selector(willCommenceEditForImageView:)
+        [button addTarget:_controller action:@selector(willCommenceEditForImageView:)
          forControlEvents:UIControlEventTouchUpInside];
-        [controller.view addSubview:button];
+        [_controller.view addSubview:button];
         [_imageButtonMappings setObject:imageView forKey:[NSValue valueWithPointer:(__bridge void*) button]];
+    }
+}
+
+- (void) makeReadOnlyControlFor:(UITextField*)textField andSetText:(NSString*)text {
+    NSValue* labelKey = [NSValue valueWithPointer:(__bridge void*) textField];
+    UILabel* label = [_readOnlyTextFields objectForKey:labelKey];
+    if (label == nil) {
+        UILabel* label = [[UILabel alloc] init];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setFrame:UIEdgeInsetsInsetRect([textField frame], UIEdgeInsetsMake(0, 3, 0, 3))];
+        [label setFont:[textField font]];
+        [label setTextColor:[textField textColor]];
+        [label setText:text];
+
+
+        [_controller.view addSubview:label];
+        [_readOnlyTextFields setObject:label forKey:labelKey];
+        [textField setHidden:YES];
+    }
+}
+
+- (void) destroyReadOnlyControlFor:(UITextField*)textField {
+    NSValue* labelKey = [NSValue valueWithPointer:(__bridge void*) textField];
+    UILabel* label = [_readOnlyTextFields objectForKey:labelKey];
+    if (label != nil) {
+        LogDebug(@"Destroying read only label for text field");
+        [label removeFromSuperview];
+        [_readOnlyTextFields removeObjectForKey:labelKey];
+        [textField setHidden:NO];
     }
 }
 
