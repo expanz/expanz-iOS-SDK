@@ -17,12 +17,9 @@
 #import "expanz_model_Field.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_GridData.h"
-#import "expanz_model_TreeData.h"
 #import "expanz_ui_GridDataRenderer.h"
-#import "expanz_ui_TreeDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "expanz_ui_AbstractDataRenderer.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -193,7 +190,6 @@
                     LogInfo(kNoMappingWarning, @"UITextField", field.fieldId);
                 }
                 else {
-                    [textField setHidden:YES];
                     [_textFieldMappings setObject:textField forKey:propertyName];
                     id<UITextFieldDelegate> delegate = _controller;
                     [textField setDelegate:delegate];

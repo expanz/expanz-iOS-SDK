@@ -9,6 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <objc/message.h>
+#import "MARTNSObject.h"
+#import "RTProperty.h"
 #import "Objection.h"
 #import "NSData+Base64.h"
 #import "expanz_model_SessionContext.h"
@@ -125,6 +128,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for (RTProperty* property in [[self class] rt_properties]) {
+        NSObject* object = objc_msgSend(self, NSSelectorFromString([property name]));
+        if ([object isKindOfClass:[UITextField class] ]) {
+            UITextField* textField = (UITextField*) textField;
+            [textField setHidden:YES];
+        }
+    }
     [_activityClient createActivityWith:_activityRequest delegate:self];
 }
 
