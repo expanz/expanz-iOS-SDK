@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_ActivityClientDelegate.h"
+#import "MBProgressHUD.h"
 
 @class expanz_model_ActivityDefinition;
 @class expanz_model_Field;
@@ -19,13 +20,15 @@
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailTableCell;
 @class expanz_ui_NavigationManager;
+@class MBProgressHUD;
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
-    UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+    UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, MBProgressHUDDelegate> {
 
 @private
     NSMutableDictionary* _subViewStateCache;
+    MBProgressHUD* _loadingHud;
     id<expanz_service_ActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;
@@ -37,6 +40,7 @@
 @property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, strong, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
+
 
 
 /**

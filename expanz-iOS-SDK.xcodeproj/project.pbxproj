@@ -27,6 +27,72 @@
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
+		6B1107CA14CD3DDC00D0A4FE /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */; };
+		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
+		6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
+		6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
+		6B1107F114CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
+		6B1107F214CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
+		6B1107F314CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
+		6B1107F414CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
+		6B1107F514CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
+		6B1107F614CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
+		6B1107F714CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
+		6B1107F814CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
+		6B1107F914CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
+		6B1107FA14CD3F1F00D0A4FE /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */; };
+		6B1107FB14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
+		6B1107FC14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
+		6B1107FD14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
+		6B1107FE14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */; };
+		6B1107FF14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B11080014CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B11080114CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B11080214CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */; };
+		6B11080314CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B11080414CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B11080514CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B11080614CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */; };
+		6B11080714CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
+		6B11080814CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
+		6B11080914CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
+		6B11080A14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */; };
+		6B11080B14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B11080C14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B11080D14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B11080E14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */; };
+		6B11080F14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
+		6B11081014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
+		6B11081114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
+		6B11081214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */; };
+		6B11081314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B11081414CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B11081514CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B11081614CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */; };
+		6B11081714CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
+		6B11081814CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
+		6B11081914CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
+		6B11081A14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */; };
+		6B11081B14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
+		6B11081C14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
+		6B11081D14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
+		6B11081E14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */; };
+		6B11081F14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
+		6B11082014CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
+		6B11082114CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
+		6B11082214CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */; };
+		6B11082314CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
+		6B11082414CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
+		6B11082514CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
+		6B11082614CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */; };
+		6B11082714CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
+		6B11082814CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
+		6B11082914CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
+		6B11082A14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */; };
+		6B11082B14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */; };
+		6B11082C14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
+		6B11082D14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
+		6B11082E14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
 		6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
 		6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
 		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
@@ -92,12 +158,6 @@
 		6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
 		6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */; };
 		6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
-		6B9A9AFF1490D04D00830937 /* expanz_ui_DocumentViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */; };
-		6B9A9B001490D04D00830937 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
-		6B9A9B011490D04D00830937 /* expanz_ui_TreeDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
-		6B9A9B021490D04D00830937 /* expanz_ui_GridDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
-		6B9A9B031490D04D00830937 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
-		6B9A9B041490D04D00830937 /* expanz_ui_SystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
 		6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
 		6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
@@ -134,14 +194,6 @@
 		6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
 		6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
 		6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */; };
-		6BB7F5A714852807007F2E99 /* UITableView+DataPublication.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */; };
-		6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */; };
-		6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */; };
-		6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */; };
-		6BB7F5AB14852807007F2E99 /* expanz_ui_NavigationManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */; };
-		6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
-		6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */; };
-		6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */; };
 		6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
 		6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
 		6BBD515414C910800024DEEA /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
@@ -358,38 +410,6 @@
 		6BD47D701484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
 		6BD47D721484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
 		6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
-		6BD47D841484703F000ECE52 /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */; };
-		6BD47D861484703F000ECE52 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */; };
-		6BD47D881484703F000ECE52 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */; };
-		6BD47D891484703F000ECE52 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */; };
-		6BD47D8A1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */; };
-		6BD47D8C1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */; };
-		6BD47D8E1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */; };
-		6BD47D8F1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */; };
-		6BD47D901484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */; };
-		6BD47D921484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6BD47D941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6BD47D951484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6BD47D961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */; };
-		6BD47D981484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
-		6BD47D9A1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
-		6BD47D9B1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */; };
-		6BD47D9C1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */; };
-		6BD47D9E1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
-		6BD47DA01484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
-		6BD47DA11484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */; };
-		6BD47DA21484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */; };
-		6BD47DA41484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */; };
-		6BD47DA61484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */; };
-		6BD47DA71484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */; };
-		6BD47DA81484703F000ECE52 /* expanz_ui_LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */; };
-		6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9C1484703F000ECE52 /* expanz_ui_LoginViewController.m */; };
-		6BD47DAC1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9C1484703F000ECE52 /* expanz_ui_LoginViewController.m */; };
-		6BD47DAD1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9C1484703F000ECE52 /* expanz_ui_LoginViewController.m */; };
-		6BD47DAE1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */; };
-		6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */; };
-		6BD47DB21484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */; };
-		6BD47DB31484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */; };
 		6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
 		6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
 		6BD47DFC1484705A000ECE52 /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DBA1484705A000ECE52 /* XmlPostActivityClientIntegration.m */; };
@@ -574,31 +594,10 @@
 		6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
 		6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
-		6BFACBA414679916007C72CC /* expanz_ui_SystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */; };
-		6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6BFACBA414679916007C72D1 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
 		6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */; };
 		6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */; };
 		6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */; };
 		6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */; };
-		6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
-		6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
-		6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */; };
-		6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */; };
-		6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
-		6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
-		6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */; };
-		6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */; };
-		6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
-		6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
-		6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */; };
-		6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */; };
-		6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
-		6BFACBA414679916007C7316 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
-		6BFACBA414679916007C7317 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */; };
-		6BFACBA414679916007C7319 /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */; };
 		6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
 		6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
 		6BFACBA414679916007C731F /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
@@ -716,12 +715,6 @@
 				6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */,
 				6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */,
 				6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */,
-				6B9A9AFF1490D04D00830937 /* expanz_ui_DocumentViewController.h in Copy Headers */,
-				6B9A9B001490D04D00830937 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */,
-				6B9A9B011490D04D00830937 /* expanz_ui_TreeDataRenderer.h in Copy Headers */,
-				6B9A9B021490D04D00830937 /* expanz_ui_GridDataRenderer.h in Copy Headers */,
-				6B9A9B031490D04D00830937 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */,
-				6B9A9B041490D04D00830937 /* expanz_ui_SystemEventReporter.h in Copy Headers */,
 				6B9A9AED1490CFED00830937 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
 				6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
 				6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
@@ -758,14 +751,6 @@
 				6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
 				6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */,
 				6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */,
-				6BB7F5A714852807007F2E99 /* UITableView+DataPublication.h in Copy Headers */,
-				6BB7F5A814852807007F2E99 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
-				6BB7F5A914852807007F2E99 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
-				6BB7F5AA14852807007F2E99 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
-				6BB7F5AB14852807007F2E99 /* expanz_ui_NavigationManager.h in Copy Headers */,
-				6BB7F5AC14852807007F2E99 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
-				6BB7F5AD14852807007F2E99 /* expanz_ui_LoginViewController.h in Copy Headers */,
-				6BB7F5AE14852807007F2E99 /* expanz_ui_ModelAdapter.h in Copy Headers */,
 				6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */,
 				6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */,
 				6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */,
@@ -816,6 +801,38 @@
 /* Begin PBXFileReference section */
 		6B039BA21435D81B0036F9B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		6B1107D214CD3F1F00D0A4FE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
+		6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
+		6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
+		6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
+		6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
+		6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
+		6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
+		6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
+		6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
+		6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
+		6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
+		6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
+		6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventReporter.h; sourceTree = "<group>"; };
+		6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AlertBoxSystemEventReporter.m; sourceTree = "<group>"; };
+		6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_DocumentViewController.h; sourceTree = "<group>"; };
+		6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_DocumentViewController.m; sourceTree = "<group>"; };
+		6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
+		6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
+		6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
+		6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
+		6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ModelAdapter.h; sourceTree = "<group>"; };
+		6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ModelAdapter.m; sourceTree = "<group>"; };
+		6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
+		6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
+		6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventReporter.h; sourceTree = "<group>"; };
+		6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
+		6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
@@ -982,22 +999,6 @@
 		6BD47C841484703F000ECE52 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
 		6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
-		6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
-		6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
-		6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
-		6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
-		6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
-		6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
-		6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
-		6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
-		6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
-		6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
-		6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
-		6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
-		6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
-		6BD47C9C1484703F000ECE52 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
-		6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ModelAdapter.h; sourceTree = "<group>"; };
-		6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ModelAdapter.m; sourceTree = "<group>"; };
 		6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAFilter+Unlock.h"; sourceTree = "<group>"; };
 		6BD47CA11484703F000ECE52 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
 		6BD47DBA1484705A000ECE52 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
@@ -1097,23 +1098,12 @@
 		6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClientDelegate.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventReporter.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AlertBoxSystemEventReporter.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventReporter.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubSystemEventReporter.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72D8 /* StubSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubSystemEventReporter.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityManagerSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CedarApplicationDelegate+Expanz.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CedarApplicationDelegate+Expanz.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBoxSystemEventReporterSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_DocumentViewController.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_DocumentViewController.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C731B /* expanz_service_FileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileRequest.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileRequest.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadClient.h; sourceTree = "<group>"; };
@@ -1222,6 +1212,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1107C714CD3DDC00D0A4FE /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */,
+				6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		6B1107CF14CD3F1F00D0A4FE /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6B1107D014CD3F1F00D0A4FE /* Assets */,
+				6B1107D414CD3F1F00D0A4FE /* Categories */,
+				6B1107D714CD3F1F00D0A4FE /* Components */,
+				6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */,
+				6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */,
+				6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */,
+				6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */,
+				6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */,
+				6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */,
+				6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */,
+				6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */,
+				6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */,
+				6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */,
+				6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */,
+				6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */,
+				6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */,
+				6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */,
+				6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */,
+				6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */,
+				6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */,
+				6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */,
+				6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */,
+				6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */,
+				6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		6B1107D014CD3F1F00D0A4FE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */,
+				6B1107D214CD3F1F00D0A4FE /* Icon.png */,
+				6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6B1107D414CD3F1F00D0A4FE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */,
+				6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6B1107D714CD3F1F00D0A4FE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */,
+				6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */,
+				6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */,
+				6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		6B1E5E8614734404004145D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1254,6 +1314,7 @@
 		6BC9F6BE1458EBB5001AF204 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6B1107C714CD3DDC00D0A4FE /* MBProgressHUD */,
 				6BFDE7231495FA01005D332F /* objection */,
 				6BC9F6BF1458EBB5001AF204 /* ASIHTTPRequest */,
 				6BC9F6F51458EBB5001AF204 /* Flexible-iOS-Logging-1.0 */,
@@ -1500,7 +1561,7 @@
 				6BD47C351484703F000ECE52 /* expanz-iOS-SDK */,
 				6BD47C441484703F000ECE52 /* Model */,
 				6BD47C631484703F000ECE52 /* Services */,
-				6BD47C871484703F000ECE52 /* UserInterface */,
+				6B1107CF14CD3F1F00D0A4FE /* UserInterface */,
 				6BD47C9F1484703F000ECE52 /* Utils */,
 			);
 			name = Main;
@@ -1666,56 +1727,6 @@
 				6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */,
 			);
 			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BD47C871484703F000ECE52 /* UserInterface */ = {
-			isa = PBXGroup;
-			children = (
-				6BFACBA414679916007C7318 /* expanz_ui_DocumentViewController.h */,
-				6BFACBA414679916007C7313 /* expanz_ui_DocumentViewController.m */,
-				6BFACBA414679916007C730E /* expanz_ui_AbstractDataRenderer.h */,
-				6BFACBA414679916007C7309 /* expanz_ui_AbstractDataRenderer.m */,
-				6BFACBA414679916007C72F7 /* expanz_ui_TreeDataRenderer.h */,
-				6BFACBA414679916007C72F2 /* expanz_ui_TreeDataRenderer.m */,
-				6BFACBA414679916007C72E5 /* expanz_ui_GridDataRenderer.h */,
-				6BFACBA414679916007C72E0 /* expanz_ui_GridDataRenderer.m */,
-				6BFACBA414679916007C72D3 /* expanz_ui_AlertBoxSystemEventReporter.h */,
-				6BFACBA414679916007C72CE /* expanz_ui_AlertBoxSystemEventReporter.m */,
-				6BFACBA414679916007C72CB /* expanz_ui_SystemEventReporter.h */,
-				6BD47C8D1484703F000ECE52 /* Categories */,
-				6BD47C901484703F000ECE52 /* Components */,
-				6BD47C951484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h */,
-				6BD47C961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m */,
-				6BD47C971484703F000ECE52 /* expanz_ui_NavigationManager.h */,
-				6BD47C981484703F000ECE52 /* expanz_ui_NavigationManager.m */,
-				6BD47C991484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h */,
-				6BD47C9A1484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m */,
-				6BD47C9B1484703F000ECE52 /* expanz_ui_LoginViewController.h */,
-				6BD47C9C1484703F000ECE52 /* expanz_ui_LoginViewController.m */,
-				6BD47C9D1484703F000ECE52 /* expanz_ui_ModelAdapter.h */,
-				6BD47C9E1484703F000ECE52 /* expanz_ui_ModelAdapter.m */,
-			);
-			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		6BD47C8D1484703F000ECE52 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47C8E1484703F000ECE52 /* UITableView+DataPublication.h */,
-				6BD47C8F1484703F000ECE52 /* UITableView+DataPublication.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		6BD47C901484703F000ECE52 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47C911484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h */,
-				6BD47C921484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m */,
-				6BD47C931484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h */,
-				6BD47C941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		6BD47C9F1484703F000ECE52 /* Utils */ = {
@@ -2109,14 +2120,6 @@
 				6BD47D621484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h in Headers */,
 				6BD47D681484703F000ECE52 /* expanz_service_SessionDataRequest.h in Headers */,
 				6BD47D6E1484703F000ECE52 /* RXMLElement+SessionData.h in Headers */,
-				6BD47D841484703F000ECE52 /* UITableView+DataPublication.h in Headers */,
-				6BD47D8A1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
-				6BD47D901484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
-				6BD47D961484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
-				6BD47D9C1484703F000ECE52 /* expanz_ui_NavigationManager.h in Headers */,
-				6BD47DA21484703F000ECE52 /* expanz_ui_ActivityMenuViewController.h in Headers */,
-				6BD47DA81484703F000ECE52 /* expanz_ui_LoginViewController.h in Headers */,
-				6BD47DAE1484703F000ECE52 /* expanz_ui_ModelAdapter.h in Headers */,
 				6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */,
 				6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */,
 				6BFACBA414679916007C728C /* expanz_model_ActivityStyle.h in Headers */,
@@ -2128,12 +2131,6 @@
 				6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */,
 				6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */,
-				6BFACBA414679916007C72CC /* expanz_ui_SystemEventReporter.h in Headers */,
-				6BFACBA414679916007C72D4 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
-				6BFACBA414679916007C72E6 /* expanz_ui_GridDataRenderer.h in Headers */,
-				6BFACBA414679916007C72F8 /* expanz_ui_TreeDataRenderer.h in Headers */,
-				6BFACBA414679916007C730F /* expanz_ui_AbstractDataRenderer.h in Headers */,
-				6BFACBA414679916007C7319 /* expanz_ui_DocumentViewController.h in Headers */,
 				6BFACBA414679916007C7321 /* expanz_service_FileRequest.h in Headers */,
 				6BFACBA414679916007C7326 /* expanz_service_FileDownloadClient.h in Headers */,
 				6BFACBA414679916007C732E /* expanz_service_FileDownloadRequest.h in Headers */,
@@ -2153,6 +2150,21 @@
 				6BFDE7691495FA01005D332F /* JSObjectionUtils.h in Headers */,
 				6BFDE76F1495FA01005D332F /* NSObject+Objection.h in Headers */,
 				6BFDE7751495FA01005D332F /* Objection.h in Headers */,
+				6B1107CA14CD3DDC00D0A4FE /* MBProgressHUD.h in Headers */,
+				6B1107FA14CD3F1F00D0A4FE /* UITableView+DataPublication.h in Headers */,
+				6B1107FE14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h in Headers */,
+				6B11080214CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
+				6B11080614CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h in Headers */,
+				6B11080A14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h in Headers */,
+				6B11080E14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h in Headers */,
+				6B11081214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
+				6B11081614CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h in Headers */,
+				6B11081A14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h in Headers */,
+				6B11081E14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h in Headers */,
+				6B11082214CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h in Headers */,
+				6B11082614CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h in Headers */,
+				6B11082A14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h in Headers */,
+				6B11082B14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2246,6 +2258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD47CA21484703F000ECE52 /* InfoPlist.strings in Resources */,
+				6B1107F114CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
+				6B1107F414CD3F1F00D0A4FE /* Icon.png in Resources */,
+				6B1107F714CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2267,6 +2282,9 @@
 				6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */,
 				6BDAB0341499828800541056 /* production_environment.xml in Resources */,
 				6BDAB0351499828800541056 /* test_environment.xml in Resources */,
+				6B1107F314CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
+				6B1107F614CD3F1F00D0A4FE /* Icon.png in Resources */,
+				6B1107F914CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2304,6 +2322,9 @@
 				6BFDE7761495FA01005D3349 /* insurance.png in Resources */,
 				6BFDE7761495FA01005D334B /* my details.png in Resources */,
 				6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
+				6B1107F214CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
+				6B1107F514CD3F1F00D0A4FE /* Icon.png in Resources */,
+				6B1107F814CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2409,14 +2430,6 @@
 				6BD47D641484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6A1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D701484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BD47D861484703F000ECE52 /* UITableView+DataPublication.m in Sources */,
-				6BD47D8C1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BD47D921484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6BD47D981484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47D9E1484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
-				6BD47DA41484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6BD47DAA1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
-				6BD47DB01484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */,
@@ -2424,11 +2437,6 @@
 				6BFACBA414679916007C72A1 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72A9 /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
-				6BFACBA414679916007C72CF /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
-				6BFACBA414679916007C72E1 /* expanz_ui_GridDataRenderer.m in Sources */,
-				6BFACBA414679916007C72F3 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C730A /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6BFACBA414679916007C7314 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C7329 /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
@@ -2445,6 +2453,20 @@
 				6BFDE7651495FA01005D332F /* JSObjectionProviderEntry.m in Sources */,
 				6BFDE76B1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7711495FA01005D332F /* NSObject+Objection.m in Sources */,
+				6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
+				6B1107FB14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
+				6B1107FF14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B11080314CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B11080714CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B11080B14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B11080F14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B11081314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B11081714CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
+				6B11081B14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B11081F14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
+				6B11082314CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
+				6B11082714CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
+				6B11082C14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2516,14 +2538,6 @@
 				6BD47D671484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6D1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BD47D891484703F000ECE52 /* UITableView+DataPublication.m in Sources */,
-				6BD47D8F1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BD47D951484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6BD47D9B1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47DA11484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
-				6BD47DA71484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6BD47DAD1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
-				6BD47DB31484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C728A /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7294 /* expanz_model_AbstractData.m in Sources */,
@@ -2531,11 +2545,6 @@
 				6BFACBA414679916007C72A4 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AC /* expanz_model_File.m in Sources */,
 				6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */,
-				6BFACBA414679916007C72D2 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
-				6BFACBA414679916007C72E4 /* expanz_ui_GridDataRenderer.m in Sources */,
-				6BFACBA414679916007C72F6 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C730D /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6BFACBA414679916007C7317 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731F /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
@@ -2557,6 +2566,20 @@
 				6BDAB0381499828800541056 /* main.m in Sources */,
 				6BDAB0391499828800541056 /* Sales_Customer_Browse_ViewController.m in Sources */,
 				6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */,
+				6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
+				6B1107FD14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
+				6B11080114CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B11080514CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B11080914CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B11080D14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B11081114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B11081514CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B11081914CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
+				6B11081D14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B11082114CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
+				6B11082514CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
+				6B11082914CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
+				6B11082E14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2628,14 +2651,6 @@
 				6BD47D661484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6C1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D721484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BD47D881484703F000ECE52 /* UITableView+DataPublication.m in Sources */,
-				6BD47D8E1484703F000ECE52 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6BD47D941484703F000ECE52 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6BD47D9A1484703F000ECE52 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6BD47DA01484703F000ECE52 /* expanz_ui_NavigationManager.m in Sources */,
-				6BD47DA61484703F000ECE52 /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6BD47DAC1484703F000ECE52 /* expanz_ui_LoginViewController.m in Sources */,
-				6BD47DB21484703F000ECE52 /* expanz_ui_ModelAdapter.m in Sources */,
 				6BD47DFC1484705A000ECE52 /* XmlPostActivityClientIntegration.m in Sources */,
 				6BD47DFD1484705A000ECE52 /* XmlPostLoginClientIntegration.m in Sources */,
 				6BD47DFE1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m in Sources */,
@@ -2685,15 +2700,10 @@
 				6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */,
 				6BFACBA414679916007C72B5 /* FileSpec.m in Sources */,
 				6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */,
-				6BFACBA414679916007C72D1 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */,
 				6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */,
 				6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */,
 				6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */,
-				6BFACBA414679916007C72E3 /* expanz_ui_GridDataRenderer.m in Sources */,
-				6BFACBA414679916007C72F5 /* expanz_ui_TreeDataRenderer.m in Sources */,
-				6BFACBA414679916007C730C /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6BFACBA414679916007C7316 /* expanz_ui_DocumentViewController.m in Sources */,
 				6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732B /* expanz_service_FileDownloadRequest.m in Sources */,
 				6BFACBA414679916007C7334 /* FileDownloadRequestSpec.m in Sources */,
@@ -2719,6 +2729,20 @@
 				6BFDE7761495FA01005D3339 /* ActivityHarnessApplicationDelegate.m in Sources */,
 				6BFDE7761495FA01005D333F /* main.m in Sources */,
 				6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
+				6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
+				6B1107FC14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
+				6B11080014CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B11080414CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B11080814CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B11080C14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B11081014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B11081414CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B11081814CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
+				6B11081C14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B11082014CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
+				6B11082414CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
+				6B11082814CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
+				6B11082D14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

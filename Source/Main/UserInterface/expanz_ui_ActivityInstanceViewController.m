@@ -26,9 +26,11 @@
 #import "expanz_service_ActivityClientDelegate.h"
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_service_DataPublicationRequest.h"
+#import "MBProgressHUD.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
+#import "MBProgressHUD.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
@@ -256,6 +258,13 @@
             setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];
         [view setHidden:YES];
     }
+    _loadingHud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:_loadingHud];
+
+    _loadingHud.delegate = self;
+    _loadingHud.labelText = @"Loading";
+    [_loadingHud show:YES];
+
 
 }
 
@@ -267,6 +276,7 @@
         [view setHidden:hidden];
     }
     _subViewStateCache = nil;
+    [_loadingHud hide:YES];
 }
 
 
