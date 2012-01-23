@@ -12,17 +12,18 @@
 #import "expanz_service_FileDownloadClientDelegate.h"
 
 @protocol expanz_service_FileDownloadClient;
+@class MBProgressHUD;
 
 
 @interface expanz_ui_DocumentViewController : UIViewController<expanz_service_FileDownloadClientDelegate,
     UIPrintInteractionControllerDelegate> {
 
 @private
+    MBProgressHUD* _loadingHud;
     id<expanz_service_FileDownloadClient> _fileDownloadClient;
 }
 
 
-@property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
 @property(nonatomic, retain) IBOutlet UIWebView* documentView;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem* printButton;
 @property(nonatomic, retain) NSString* documentId;

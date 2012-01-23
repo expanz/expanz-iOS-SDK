@@ -8,6 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import "Objection.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
@@ -15,11 +16,11 @@
 #import "expanz_service_FileDownloadClient.h"
 #import "expanz_service_FileDownloadRequest.h"
 #import "expanz_ui_DocumentViewController.h"
+#import "MBProgressHUD.h"
 
 
 @implementation expanz_ui_DocumentViewController
 
-@synthesize spinner = _spinner;
 @synthesize documentView = _documentView;
 @synthesize printButton = _printButton;
 @synthesize documentId = _documentId;
@@ -39,17 +40,24 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [_spinner startAnimating];
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];
+    _loadingHud.labelText = @"Loading";
+    [_loadingHud show:YES];
+    [self.view addSubview:_loadingHud];
+
     FileRequest* fileRequest = [FileRequest forFileId:_documentId activityHandle:_activityHandle];
     [_fileDownloadClient sendFileRequestWith:fileRequest delegate:self];
     [_documentView setHidden:YES];
 }
 
+
+
+
 - (IBAction) print {
     UIPrintInteractionController* pic = [UIPrintInteractionController sharedPrintController];
-    //pic.delegate = self;
+    pic.delegate = self;
 
     UIPrintInfo* printInfo = [UIPrintInfo printInfo];
     printInfo.outputType = UIPrintInfoOutputGeneral;
@@ -81,14 +89,13 @@
     self.title = collection.title;
     self.ext = fileResource.ext;
 
-    FileDownloadRequest* request =
-        [FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle];
+    FileDownloadRequest
+        * request = [FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle];
     [_fileDownloadClient downloadFileWith:request delegate:self];
 
 }
 
 - (void) requestDidFinishWithData:(NSData*)data {
-    [_spinner stopAnimating];
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* documentsDirectory = [paths objectAtIndex:0];
     NSString* fileName = [@"current-document" stringByAppendingString:self.ext];
@@ -99,6 +106,7 @@
     LogDebug("URL: %@", url);
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [_documentView loadRequest:request];
+    [_loadingHud hide:YES];
     [_documentView setHidden:NO];
 }
 

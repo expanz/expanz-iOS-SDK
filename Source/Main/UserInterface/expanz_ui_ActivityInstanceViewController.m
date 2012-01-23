@@ -64,8 +64,6 @@
         _activityRequest = [[CreateActivityRequest alloc]
             initWithActivityName:activityDefinition.name style:activityDefinition.style initialKey:initialKey
                     sessionToken:[SessionContext globalContext].sessionToken];
-
-        [_spinner startAnimating];
     }
     return self;
 }
@@ -242,6 +240,11 @@
 
 /* ================================================== Private Methods =============================================== */
 - (void) showLoadingHud {
+    if (_loadingHud == nil) {
+        _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];
+    }
+    _loadingHud.delegate = self;
+    _loadingHud.labelText = @"Loading";
     _subViewStateCache = [[NSMutableDictionary alloc] init];
     unsigned int generatedTag;
     for (UIView* view in [self.view subviews]) {
@@ -258,17 +261,15 @@
             setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];
         [view setHidden:YES];
     }
-    _loadingHud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-    [self.navigationController.view addSubview:_loadingHud];
 
-    _loadingHud.delegate = self;
-    _loadingHud.labelText = @"Loading";
+    [self.view addSubview:_loadingHud];
     [_loadingHud show:YES];
 
 
 }
 
 - (void) hideLoadingHud {
+    [_loadingHud hide:YES];
     for (NSNumber* tag in [_subViewStateCache allKeys]) {
         UIView* view = [self.view viewWithTag:[tag intValue]];
         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];
@@ -276,7 +277,6 @@
         [view setHidden:hidden];
     }
     _subViewStateCache = nil;
-    [_loadingHud hide:YES];
 }
 
 

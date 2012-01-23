@@ -31,171 +31,203 @@
 		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
 		6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
 		6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
-		6B1107F114CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
-		6B1107F214CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
-		6B1107F314CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */; };
-		6B1107F414CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
-		6B1107F514CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
-		6B1107F614CD3F1F00D0A4FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D214CD3F1F00D0A4FE /* Icon.png */; };
-		6B1107F714CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
-		6B1107F814CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
-		6B1107F914CD3F1F00D0A4FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */; };
-		6B1107FA14CD3F1F00D0A4FE /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */; };
-		6B1107FB14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
-		6B1107FC14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
-		6B1107FD14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */; };
-		6B1107FE14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */; };
-		6B1107FF14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
-		6B11080014CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
-		6B11080114CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */; };
-		6B11080214CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */; };
-		6B11080314CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B11080414CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B11080514CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B11080614CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */; };
-		6B11080714CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
-		6B11080814CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
-		6B11080914CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */; };
-		6B11080A14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */; };
-		6B11080B14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
-		6B11080C14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
-		6B11080D14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */; };
-		6B11080E14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */; };
-		6B11080F14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
-		6B11081014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
-		6B11081114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */; };
-		6B11081214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */; };
-		6B11081314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6B11081414CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6B11081514CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */; };
-		6B11081614CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */; };
-		6B11081714CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
-		6B11081814CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
-		6B11081914CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */; };
-		6B11081A14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */; };
-		6B11081B14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
-		6B11081C14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
-		6B11081D14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */; };
-		6B11081E14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */; };
-		6B11081F14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
-		6B11082014CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
-		6B11082114CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */; };
-		6B11082214CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */; };
-		6B11082314CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
-		6B11082414CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
-		6B11082514CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */; };
-		6B11082614CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */; };
-		6B11082714CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
-		6B11082814CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
-		6B11082914CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */; };
-		6B11082A14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */; };
-		6B11082B14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */; };
-		6B11082C14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
-		6B11082D14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
-		6B11082E14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */; };
 		6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
 		6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
+		6B31F2D214CD4AF200A4CA49 /* Logging.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F61458EBB5001AF204 /* Logging.h */; };
+		6B4EA5CF14CD4C2300E5B2D8 /* MBProgressHUD.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */; };
+		6B4EA5D114CD4C2300E5B2D8 /* JSObjectFactory.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7241495FA01005D332F /* JSObjectFactory.h */; };
+		6B4EA5D314CD4C2300E5B2D8 /* JSObjection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7261495FA01005D332F /* JSObjection.h */; };
+		6B4EA5D514CD4C2300E5B2D8 /* JSObjectionBindingEntry.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7281495FA01005D332F /* JSObjectionBindingEntry.h */; };
+		6B4EA5D714CD4C2300E5B2D8 /* JSObjectionEntry.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72A1495FA01005D332F /* JSObjectionEntry.h */; };
+		6B4EA5D914CD4C2300E5B2D8 /* JSObjectionInjector.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72C1495FA01005D332F /* JSObjectionInjector.h */; };
+		6B4EA5DB14CD4C2300E5B2D8 /* JSObjectionInjectorEntry.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE72E1495FA01005D332F /* JSObjectionInjectorEntry.h */; };
+		6B4EA5DD14CD4C2300E5B2D8 /* JSObjectionModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7301495FA01005D332F /* JSObjectionModule.h */; };
+		6B4EA5DF14CD4C2300E5B2D8 /* JSObjectionProviderEntry.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7321495FA01005D332F /* JSObjectionProviderEntry.h */; };
+		6B4EA5E114CD4C2300E5B2D8 /* JSObjectionUtils.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7341495FA01005D332F /* JSObjectionUtils.h */; };
+		6B4EA5E314CD4C2300E5B2D8 /* NSObject+Objection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7361495FA01005D332F /* NSObject+Objection.h */; };
+		6B4EA5E514CD4C2300E5B2D8 /* Objection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
+		6B4EA5E614CD4C2300E5B2D8 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
+		6B4EA5E814CD4C2300E5B2D8 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
+		6B4EA5E914CD4C2300E5B2D8 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
+		6B4EA5EB14CD4C2300E5B2D8 /* ASIDataDecompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C51458EBB5001AF204 /* ASIDataDecompressor.h */; };
+		6B4EA5ED14CD4C2300E5B2D8 /* ASIDownloadCache.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C71458EBB5001AF204 /* ASIDownloadCache.h */; };
+		6B4EA5EF14CD4C2300E5B2D8 /* ASIFormDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C91458EBB5001AF204 /* ASIFormDataRequest.h */; };
+		6B4EA5F114CD4C2300E5B2D8 /* ASIHTTPRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CB1458EBB5001AF204 /* ASIHTTPRequest.h */; };
+		6B4EA5F314CD4C2300E5B2D8 /* ASIHTTPRequestConfig.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CD1458EBB5001AF204 /* ASIHTTPRequestConfig.h */; };
+		6B4EA5F414CD4C2300E5B2D8 /* ASIHTTPRequestDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CE1458EBB5001AF204 /* ASIHTTPRequestDelegate.h */; };
+		6B4EA5F514CD4C2300E5B2D8 /* ASIInputStream.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CF1458EBB5001AF204 /* ASIInputStream.h */; };
+		6B4EA5F714CD4C2300E5B2D8 /* ASINetworkQueue.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D11458EBB5001AF204 /* ASINetworkQueue.h */; };
+		6B4EA5F914CD4C2300E5B2D8 /* ASIProgressDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D31458EBB5001AF204 /* ASIProgressDelegate.h */; };
+		6B4EA5FA14CD4C2300E5B2D8 /* ASIWebPageRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D51458EBB5001AF204 /* ASIWebPageRequest.h */; };
+		6B4EA5FC14CD4C2300E5B2D8 /* ASICloudFilesCDNRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D81458EBB5001AF204 /* ASICloudFilesCDNRequest.h */; };
+		6B4EA5FE14CD4C2300E5B2D8 /* ASICloudFilesContainer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DA1458EBB5001AF204 /* ASICloudFilesContainer.h */; };
+		6B4EA60014CD4C2300E5B2D8 /* ASICloudFilesContainerRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DC1458EBB5001AF204 /* ASICloudFilesContainerRequest.h */; };
+		6B4EA60214CD4C2300E5B2D8 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DE1458EBB5001AF204 /* ASICloudFilesContainerXMLParserDelegate.h */; };
+		6B4EA60414CD4C2300E5B2D8 /* ASICloudFilesObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E01458EBB5001AF204 /* ASICloudFilesObject.h */; };
+		6B4EA60614CD4C2300E5B2D8 /* ASICloudFilesObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E21458EBB5001AF204 /* ASICloudFilesObjectRequest.h */; };
+		6B4EA60814CD4C2300E5B2D8 /* ASICloudFilesRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E41458EBB5001AF204 /* ASICloudFilesRequest.h */; };
+		6B4EA60A14CD4C2300E5B2D8 /* ASINSXMLParserCompat.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E71458EBB5001AF204 /* ASINSXMLParserCompat.h */; };
+		6B4EA60B14CD4C2300E5B2D8 /* ASIS3Bucket.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E81458EBB5001AF204 /* ASIS3Bucket.h */; };
+		6B4EA60C14CD4C2300E5B2D8 /* ASIS3Bucket.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E91458EBB5001AF204 /* ASIS3Bucket.m */; };
+		6B4EA60D14CD4C2300E5B2D8 /* ASIS3BucketObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EA1458EBB5001AF204 /* ASIS3BucketObject.h */; };
+		6B4EA60F14CD4C2300E5B2D8 /* ASIS3BucketRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EC1458EBB5001AF204 /* ASIS3BucketRequest.h */; };
+		6B4EA61114CD4C2300E5B2D8 /* ASIS3ObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EE1458EBB5001AF204 /* ASIS3ObjectRequest.h */; };
+		6B4EA61314CD4C2300E5B2D8 /* ASIS3Request.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F01458EBB5001AF204 /* ASIS3Request.h */; };
+		6B4EA61514CD4C2300E5B2D8 /* ASIS3ServiceRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F21458EBB5001AF204 /* ASIS3ServiceRequest.h */; };
+		6B4EA61714CD4C2300E5B2D8 /* LICENSE in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
+		6B4EA61814CD4C2300E5B2D8 /* MARTNSObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */; };
+		6B4EA61B14CD4C2300E5B2D8 /* RTIvar.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FC1458EBB5001AF204 /* RTIvar.h */; };
+		6B4EA61D14CD4C2300E5B2D8 /* RTMethod.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FE1458EBB5001AF204 /* RTMethod.h */; };
+		6B4EA61F14CD4C2300E5B2D8 /* RTProperty.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7001458EBB5001AF204 /* RTProperty.h */; };
+		6B4EA62114CD4C2300E5B2D8 /* RTProtocol.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7021458EBB5001AF204 /* RTProtocol.h */; };
+		6B4EA62214CD4C2300E5B2D8 /* RTProtocol.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7031458EBB5001AF204 /* RTProtocol.m */; };
+		6B4EA62314CD4C2300E5B2D8 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
+		6B4EA62514CD4C2300E5B2D8 /* NSDataAdditions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71C1458EBB6001AF204 /* NSDataAdditions.h */; };
+		6B4EA62714CD4C2300E5B2D8 /* RXMLElement.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71E1458EBB6001AF204 /* RXMLElement.h */; };
+		6B4EA62914CD4C2300E5B2D8 /* TBXML.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
+		6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
+		6B4EA62E14CD4C2300E5B2D8 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
 		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
-		6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */; };
-		6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C21458EBB5001AF204 /* ASICacheDelegate.h */; };
-		6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C31458EBB5001AF204 /* ASIDataCompressor.h */; };
-		6B68E2931473D4EE005F9021 /* ASIDataDecompressor.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C51458EBB5001AF204 /* ASIDataDecompressor.h */; };
-		6B68E2941473D4EE005F9021 /* ASIDownloadCache.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C71458EBB5001AF204 /* ASIDownloadCache.h */; };
-		6B68E2951473D4EE005F9021 /* ASIFormDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6C91458EBB5001AF204 /* ASIFormDataRequest.h */; };
-		6B68E2961473D4EE005F9021 /* ASIHTTPRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CB1458EBB5001AF204 /* ASIHTTPRequest.h */; };
-		6B68E2971473D4EE005F9021 /* ASIHTTPRequestConfig.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CD1458EBB5001AF204 /* ASIHTTPRequestConfig.h */; };
-		6B68E2981473D4EE005F9021 /* ASIHTTPRequestDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CE1458EBB5001AF204 /* ASIHTTPRequestDelegate.h */; };
-		6B68E2991473D4EE005F9021 /* ASIInputStream.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6CF1458EBB5001AF204 /* ASIInputStream.h */; };
-		6B68E29A1473D4EE005F9021 /* ASINetworkQueue.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D11458EBB5001AF204 /* ASINetworkQueue.h */; };
-		6B68E29B1473D4EE005F9021 /* ASIProgressDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D31458EBB5001AF204 /* ASIProgressDelegate.h */; };
-		6B68E29C1473D4EE005F9021 /* ASIWebPageRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D51458EBB5001AF204 /* ASIWebPageRequest.h */; };
-		6B68E29D1473D4EE005F9021 /* ASICloudFilesCDNRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6D81458EBB5001AF204 /* ASICloudFilesCDNRequest.h */; };
-		6B68E29E1473D4EE005F9021 /* ASICloudFilesContainer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DA1458EBB5001AF204 /* ASICloudFilesContainer.h */; };
-		6B68E29F1473D4EE005F9021 /* ASICloudFilesContainerRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DC1458EBB5001AF204 /* ASICloudFilesContainerRequest.h */; };
-		6B68E2A01473D4EE005F9021 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6DE1458EBB5001AF204 /* ASICloudFilesContainerXMLParserDelegate.h */; };
-		6B68E2A11473D4EE005F9021 /* ASICloudFilesObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E01458EBB5001AF204 /* ASICloudFilesObject.h */; };
-		6B68E2A21473D4EE005F9021 /* ASICloudFilesObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E21458EBB5001AF204 /* ASICloudFilesObjectRequest.h */; };
-		6B68E2A31473D4EE005F9021 /* ASICloudFilesRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E41458EBB5001AF204 /* ASICloudFilesRequest.h */; };
-		6B68E2A41473D4EE005F9021 /* ASINSXMLParserCompat.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E71458EBB5001AF204 /* ASINSXMLParserCompat.h */; };
-		6B68E2A51473D4EE005F9021 /* ASIS3Bucket.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6E81458EBB5001AF204 /* ASIS3Bucket.h */; };
-		6B68E2A61473D4EE005F9021 /* ASIS3BucketObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EA1458EBB5001AF204 /* ASIS3BucketObject.h */; };
-		6B68E2A71473D4EE005F9021 /* ASIS3BucketRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EC1458EBB5001AF204 /* ASIS3BucketRequest.h */; };
-		6B68E2A81473D4EE005F9021 /* ASIS3ObjectRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6EE1458EBB5001AF204 /* ASIS3ObjectRequest.h */; };
-		6B68E2A91473D4EE005F9021 /* ASIS3Request.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F01458EBB5001AF204 /* ASIS3Request.h */; };
-		6B68E2AA1473D4EE005F9021 /* ASIS3ServiceRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F21458EBB5001AF204 /* ASIS3ServiceRequest.h */; };
-		6B68E2AB1473D4EE005F9021 /* Logging.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F61458EBB5001AF204 /* Logging.h */; };
-		6B68E2AC1473D4EE005F9021 /* MARTNSObject.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */; };
-		6B68E2AD1473D4EE005F9021 /* RTIvar.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FC1458EBB5001AF204 /* RTIvar.h */; };
-		6B68E2AE1473D4EE005F9021 /* RTMethod.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6FE1458EBB5001AF204 /* RTMethod.h */; };
-		6B68E2AF1473D4EE005F9021 /* RTProperty.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7001458EBB5001AF204 /* RTProperty.h */; };
-		6B68E2B01473D4EE005F9021 /* RTProtocol.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7021458EBB5001AF204 /* RTProtocol.h */; };
-		6B68E2B11473D4EE005F9021 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
-		6B68E2B21473D4EE005F9021 /* NSDataAdditions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71C1458EBB6001AF204 /* NSDataAdditions.h */; };
-		6B68E2B31473D4EE005F9021 /* RXMLElement.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F71E1458EBB6001AF204 /* RXMLElement.h */; };
-		6B68E2B41473D4EE005F9021 /* TBXML.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
-		6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
-		6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
+		6B748A0F14CD493600970C98 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
+		6B748A1014CD493600970C98 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
+		6B748A1114CD493600970C98 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
+		6B748A1214CD493600970C98 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F014CD493600970C98 /* Icon.png */; };
+		6B748A1314CD493600970C98 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F014CD493600970C98 /* Icon.png */; };
+		6B748A1414CD493600970C98 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F014CD493600970C98 /* Icon.png */; };
+		6B748A1514CD493600970C98 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F114CD493600970C98 /* Icon@2x.png */; };
+		6B748A1614CD493600970C98 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F114CD493600970C98 /* Icon@2x.png */; };
+		6B748A1714CD493600970C98 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F114CD493600970C98 /* Icon@2x.png */; };
+		6B748A1814CD493600970C98 /* UITableView+DataPublication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F314CD493600970C98 /* UITableView+DataPublication.h */; };
+		6B748A1914CD493600970C98 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F414CD493600970C98 /* UITableView+DataPublication.m */; };
+		6B748A1A14CD493600970C98 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F414CD493600970C98 /* UITableView+DataPublication.m */; };
+		6B748A1B14CD493600970C98 /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F414CD493600970C98 /* UITableView+DataPublication.m */; };
+		6B748A1C14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F614CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h */; };
+		6B748A1D14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F714CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B748A1E14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F714CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B748A1F14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F714CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m */; };
+		6B748A2014CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F814CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h */; };
+		6B748A2114CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F914CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B748A2214CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F914CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B748A2314CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489F914CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m */; };
+		6B748A2414CD493600970C98 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FA14CD493600970C98 /* expanz_ui_AbstractDataRenderer.h */; };
+		6B748A2514CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FB14CD493600970C98 /* expanz_ui_AbstractDataRenderer.m */; };
+		6B748A2614CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FB14CD493600970C98 /* expanz_ui_AbstractDataRenderer.m */; };
+		6B748A2714CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FB14CD493600970C98 /* expanz_ui_AbstractDataRenderer.m */; };
+		6B748A2814CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FC14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6B748A2914CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FD14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B748A2A14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FD14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B748A2B14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FD14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m */; };
+		6B748A2C14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FE14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h */; };
+		6B748A2D14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FF14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B748A2E14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FF14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B748A2F14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7489FF14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m */; };
+		6B748A3014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
+		6B748A3114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B748A3214CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B748A3314CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m */; };
+		6B748A3414CD493600970C98 /* expanz_ui_DocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0214CD493600970C98 /* expanz_ui_DocumentViewController.h */; };
+		6B748A3514CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0314CD493600970C98 /* expanz_ui_DocumentViewController.m */; };
+		6B748A3614CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0314CD493600970C98 /* expanz_ui_DocumentViewController.m */; };
+		6B748A3714CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0314CD493600970C98 /* expanz_ui_DocumentViewController.m */; };
+		6B748A3814CD493600970C98 /* expanz_ui_GridDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0414CD493600970C98 /* expanz_ui_GridDataRenderer.h */; };
+		6B748A3914CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0514CD493600970C98 /* expanz_ui_GridDataRenderer.m */; };
+		6B748A3A14CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0514CD493600970C98 /* expanz_ui_GridDataRenderer.m */; };
+		6B748A3B14CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0514CD493600970C98 /* expanz_ui_GridDataRenderer.m */; };
+		6B748A3C14CD493600970C98 /* expanz_ui_LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0614CD493600970C98 /* expanz_ui_LoginViewController.h */; };
+		6B748A3D14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0714CD493600970C98 /* expanz_ui_LoginViewController.m */; };
+		6B748A3E14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0714CD493600970C98 /* expanz_ui_LoginViewController.m */; };
+		6B748A3F14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0714CD493600970C98 /* expanz_ui_LoginViewController.m */; };
+		6B748A4014CD493600970C98 /* expanz_ui_ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0814CD493600970C98 /* expanz_ui_ModelAdapter.h */; };
+		6B748A4114CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0914CD493600970C98 /* expanz_ui_ModelAdapter.m */; };
+		6B748A4214CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0914CD493600970C98 /* expanz_ui_ModelAdapter.m */; };
+		6B748A4314CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0914CD493600970C98 /* expanz_ui_ModelAdapter.m */; };
+		6B748A4414CD493600970C98 /* expanz_ui_NavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0A14CD493600970C98 /* expanz_ui_NavigationManager.h */; };
+		6B748A4514CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0B14CD493600970C98 /* expanz_ui_NavigationManager.m */; };
+		6B748A4614CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0B14CD493600970C98 /* expanz_ui_NavigationManager.m */; };
+		6B748A4714CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0B14CD493600970C98 /* expanz_ui_NavigationManager.m */; };
+		6B748A4814CD493600970C98 /* expanz_ui_SystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0C14CD493600970C98 /* expanz_ui_SystemEventReporter.h */; };
+		6B748A4914CD493600970C98 /* expanz_ui_TreeDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0D14CD493600970C98 /* expanz_ui_TreeDataRenderer.h */; };
+		6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
+		6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
+		6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
+		6B748A4F14CD4A2100970C98 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
+		6B748A5014CD4A2100970C98 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
+		6B748A5114CD4A2100970C98 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */; };
+		6B748A5214CD4A2100970C98 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
+		6B748A5314CD4A2100970C98 /* expanz_model_ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
+		6B748A5414CD4A2100970C98 /* expanz_model_FileResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
+		6B748A5514CD4A2100970C98 /* expanz_model_File.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
+		6B748A5614CD4A2100970C98 /* expanz_model_DataBuilder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
+		6B748A5714CD4A2100970C98 /* expanz_model_Folder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72A5 /* expanz_model_Folder.h */; };
+		6B748A5814CD4A2100970C98 /* expanz_model_TreeData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C729D /* expanz_model_TreeData.h */; };
+		6B748A5914CD4A2100970C98 /* expanz_model_AbstractData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */; };
+		6B748A5A14CD4A2100970C98 /* expanz_model_ActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
+		6B748A5B14CD4A2100970C98 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */; };
+		6B748A5C14CD4A2100970C98 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */; };
+		6B748A5D14CD4A2100970C98 /* expanz_model_AbstractCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */; };
+		6B748A5E14CD4A2100970C98 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
+		6B748A5F14CD4A2100970C98 /* expanz_model_GridData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4D1484703F000ECE52 /* expanz_model_GridData.h */; };
+		6B748A6014CD4A2100970C98 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4F1484703F000ECE52 /* expanz_model_Field.h */; };
+		6B748A6114CD4A2100970C98 /* expanz_model_ImageCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C511484703F000ECE52 /* expanz_model_ImageCell.h */; };
+		6B748A6214CD4A2100970C98 /* expanz_model_Menu.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C531484703F000ECE52 /* expanz_model_Menu.h */; };
+		6B748A6314CD4A2100970C98 /* expanz_model_Message.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C551484703F000ECE52 /* expanz_model_Message.h */; };
+		6B748A6414CD4A2100970C98 /* expanz_model_ProcessArea.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C571484703F000ECE52 /* expanz_model_ProcessArea.h */; };
+		6B748A6514CD4A2100970C98 /* expanz_model_Row.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C591484703F000ECE52 /* expanz_model_Row.h */; };
+		6B748A6614CD4A2100970C98 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5B1484703F000ECE52 /* expanz_model_SessionContext.h */; };
+		6B748A6714CD4A2100970C98 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5D1484703F000ECE52 /* expanz_model_TextCell.h */; };
+		6B748A6814CD4A2100970C98 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */; };
+		6B748A6914CD4A2100970C98 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
+		6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
+		6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
+		6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
+		6B748A6D14CD4A2100970C98 /* expanz_service_FileRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */; };
+		6B748A6E14CD4A2100970C98 /* expanz_service_CreateActivityRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */; };
+		6B748A6F14CD4A2100970C98 /* expanz_service_DataPublicationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6B1484703F000ECE52 /* expanz_service_DataPublicationRequest.h */; };
+		6B748A7014CD4A2100970C98 /* expanz_service_DeltaRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6D1484703F000ECE52 /* expanz_service_DeltaRequest.h */; };
+		6B748A7114CD4A2100970C98 /* expanz_service_MethodInvocationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6F1484703F000ECE52 /* expanz_service_MethodInvocationRequest.h */; };
+		6B748A7214CD4A2100970C98 /* RXMLElement+ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C711484703F000ECE52 /* RXMLElement+ActivityInstance.h */; };
+		6B748A7314CD4A2100970C98 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */; };
+		6B748A7414CD4A2100970C98 /* expanz_service_LoginClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
+		6B748A7514CD4A2100970C98 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */; };
+		6B748A7614CD4A2100970C98 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */; };
+		6B748A7714CD4A2100970C98 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */; };
+		6B748A7814CD4A2100970C98 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7C1484703F000ECE52 /* RXMLElement+SessionContext.h */; };
+		6B748A7914CD4A2100970C98 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
+		6B748A7A14CD4A2100970C98 /* expanz_service_SessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */; };
+		6B748A7B14CD4A2100970C98 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
+		6B748A7C14CD4A2100970C98 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
+		6B748A7D14CD4A2100970C98 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */; };
+		6B748A7E14CD4A2100970C98 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6B748A7F14CD4A2100970C98 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
+		6B748A8014CD4A2100970C98 /* expanz_service_FileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */; };
+		6B748A8114CD4A2100970C98 /* RXMLElement+ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
+		6B748A8214CD4A2100970C98 /* expanz_service_FileDownloadRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
+		6B748A8314CD4A2100970C98 /* UITableView+DataPublication.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F314CD493600970C98 /* UITableView+DataPublication.h */; };
+		6B748A8414CD4A2100970C98 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F614CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h */; };
+		6B748A8514CD4A2100970C98 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489F814CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h */; };
+		6B748A8614CD4A2100970C98 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FA14CD493600970C98 /* expanz_ui_AbstractDataRenderer.h */; };
+		6B748A8714CD4A2100970C98 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FC14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6B748A8814CD4A2100970C98 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B7489FE14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h */; };
+		6B748A8914CD4A2100970C98 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h */; };
+		6B748A8A14CD4A2100970C98 /* expanz_ui_DocumentViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0214CD493600970C98 /* expanz_ui_DocumentViewController.h */; };
+		6B748A8B14CD4A2100970C98 /* expanz_ui_GridDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0414CD493600970C98 /* expanz_ui_GridDataRenderer.h */; };
+		6B748A8C14CD4A2100970C98 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0614CD493600970C98 /* expanz_ui_LoginViewController.h */; };
+		6B748A8D14CD4A2100970C98 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0814CD493600970C98 /* expanz_ui_ModelAdapter.h */; };
+		6B748A8E14CD4A2100970C98 /* expanz_ui_NavigationManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0A14CD493600970C98 /* expanz_ui_NavigationManager.h */; };
+		6B748A8F14CD4A2100970C98 /* expanz_ui_SystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0C14CD493600970C98 /* expanz_ui_SystemEventReporter.h */; };
+		6B748A9014CD4A2100970C98 /* expanz_ui_TreeDataRenderer.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B748A0D14CD493600970C98 /* expanz_ui_TreeDataRenderer.h */; };
+		6B748A9114CD4A2100970C98 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
+		6B748A9214CD4A2100970C98 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
+		6B748A9314CD4A6C00970C98 /* 37x-Checkmark.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
+		6B748A9414CD4A6C00970C98 /* Icon.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F014CD493600970C98 /* Icon.png */; };
+		6B748A9514CD4A6C00970C98 /* Icon@2x.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = 6B7489F114CD493600970C98 /* Icon@2x.png */; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
-		6B9A9AED1490CFED00830937 /* expanz_service_ActivityClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
-		6B9A9AEF1490D04D00830937 /* expanz_model_ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
-		6B9A9AF01490D04D00830937 /* expanz_model_FileResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
-		6B9A9AF11490D04D00830937 /* expanz_model_File.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
-		6B9A9AF21490D04D00830937 /* expanz_model_DataBuilder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */; };
-		6B9A9AF31490D04D00830937 /* expanz_model_Folder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72A5 /* expanz_model_Folder.h */; };
-		6B9A9AF41490D04D00830937 /* expanz_model_TreeData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C729D /* expanz_model_TreeData.h */; };
-		6B9A9AF51490D04D00830937 /* expanz_model_AbstractData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */; };
-		6B9A9AF61490D04D00830937 /* expanz_model_ActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
-		6B9A9AF71490D04D00830937 /* RXMLElement+ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
-		6B9A9AF81490D04D00830937 /* expanz_service_FileRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */; };
-		6B9A9AF91490D04D00830937 /* expanz_service_LoginClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
-		6B9A9AFA1490D04D00830937 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
-		6B9A9AFB1490D04D00830937 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
-		6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
-		6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */; };
-		6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
 		6BA75BA1144C0381007148B3 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */; };
-		6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
-		6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
-		6BB7F58514852807007F2E99 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */; };
-		6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
-		6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */; };
-		6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */; };
-		6BB7F58914852807007F2E99 /* expanz_model_AbstractCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C491484703F000ECE52 /* expanz_model_AbstractCell.h */; };
-		6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4B1484703F000ECE52 /* expanz_model_Column.h */; };
-		6BB7F58B14852807007F2E99 /* expanz_model_GridData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4D1484703F000ECE52 /* expanz_model_GridData.h */; };
-		6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C4F1484703F000ECE52 /* expanz_model_Field.h */; };
-		6BB7F58D14852807007F2E99 /* expanz_model_ImageCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C511484703F000ECE52 /* expanz_model_ImageCell.h */; };
-		6BB7F58E14852807007F2E99 /* expanz_model_Menu.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C531484703F000ECE52 /* expanz_model_Menu.h */; };
-		6BB7F58F14852807007F2E99 /* expanz_model_Message.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C551484703F000ECE52 /* expanz_model_Message.h */; };
-		6BB7F59014852807007F2E99 /* expanz_model_ProcessArea.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C571484703F000ECE52 /* expanz_model_ProcessArea.h */; };
-		6BB7F59114852807007F2E99 /* expanz_model_Row.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C591484703F000ECE52 /* expanz_model_Row.h */; };
-		6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5B1484703F000ECE52 /* expanz_model_SessionContext.h */; };
-		6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5D1484703F000ECE52 /* expanz_model_TextCell.h */; };
-		6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */; };
-		6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
-		6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
-		6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
-		6BB7F59914852807007F2E99 /* expanz_service_CreateActivityRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */; };
-		6BB7F59A14852807007F2E99 /* expanz_service_DataPublicationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6B1484703F000ECE52 /* expanz_service_DataPublicationRequest.h */; };
-		6BB7F59B14852807007F2E99 /* expanz_service_DeltaRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6D1484703F000ECE52 /* expanz_service_DeltaRequest.h */; };
-		6BB7F59C14852807007F2E99 /* expanz_service_MethodInvocationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6F1484703F000ECE52 /* expanz_service_MethodInvocationRequest.h */; };
-		6BB7F59D14852807007F2E99 /* RXMLElement+ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C711484703F000ECE52 /* RXMLElement+ActivityInstance.h */; };
-		6BB7F59E14852807007F2E99 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */; };
-		6BB7F59F14852807007F2E99 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */; };
-		6BB7F5A014852807007F2E99 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */; };
-		6BB7F5A114852807007F2E99 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */; };
-		6BB7F5A214852807007F2E99 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7C1484703F000ECE52 /* RXMLElement+SessionContext.h */; };
-		6BB7F5A314852807007F2E99 /* expanz_service_SessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */; };
-		6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
-		6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
-		6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */; };
-		6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
-		6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
 		6BBD515414C910800024DEEA /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
 		6BBD515614C910830024DEEA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0151499828800541056 /* background.png */; };
 		6BBD515714C910870024DEEA /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */; };
@@ -689,6 +721,9 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6B748A9314CD4A6C00970C98 /* 37x-Checkmark.png in Copy Resources */,
+				6B748A9414CD4A6C00970C98 /* Icon.png in Copy Resources */,
+				6B748A9514CD4A6C00970C98 /* Icon@2x.png in Copy Resources */,
 			);
 			name = "Copy Resources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,99 +734,128 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
-				6B9A9AEF1490D04D00830937 /* expanz_model_ResourceCollection.h in Copy Headers */,
-				6B9A9AF01490D04D00830937 /* expanz_model_FileResource.h in Copy Headers */,
-				6B9A9AF11490D04D00830937 /* expanz_model_File.h in Copy Headers */,
-				6B9A9AF21490D04D00830937 /* expanz_model_DataBuilder.h in Copy Headers */,
-				6B9A9AF31490D04D00830937 /* expanz_model_Folder.h in Copy Headers */,
-				6B9A9AF41490D04D00830937 /* expanz_model_TreeData.h in Copy Headers */,
-				6B9A9AF51490D04D00830937 /* expanz_model_AbstractData.h in Copy Headers */,
-				6B9A9AF61490D04D00830937 /* expanz_model_ActivityStyle.h in Copy Headers */,
-				6B9A9AF71490D04D00830937 /* RXMLElement+ResourceCollection.h in Copy Headers */,
-				6B9A9AF81490D04D00830937 /* expanz_service_FileRequest.h in Copy Headers */,
-				6B9A9AF91490D04D00830937 /* expanz_service_LoginClientDelegate.h in Copy Headers */,
-				6B9A9AFA1490D04D00830937 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */,
-				6B9A9AFB1490D04D00830937 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */,
-				6B9A9AFC1490D04D00830937 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */,
-				6B9A9AFD1490D04D00830937 /* expanz_service_FileDownloadClient.h in Copy Headers */,
-				6B9A9AFE1490D04D00830937 /* expanz_service_FileDownloadRequest.h in Copy Headers */,
-				6B9A9AED1490CFED00830937 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
-				6BB7F58314852807007F2E99 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
-				6BB7F58414852807007F2E99 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
-				6BB7F58514852807007F2E99 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
-				6BB7F58614852807007F2E99 /* expanz_iOS_SDKModule.h in Copy Headers */,
-				6BB7F58714852807007F2E99 /* expanz_model_ActivityDefinition.h in Copy Headers */,
-				6BB7F58814852807007F2E99 /* expanz_model_ActivityInstance.h in Copy Headers */,
-				6BB7F58914852807007F2E99 /* expanz_model_AbstractCell.h in Copy Headers */,
-				6BB7F58A14852807007F2E99 /* expanz_model_Column.h in Copy Headers */,
-				6BB7F58B14852807007F2E99 /* expanz_model_GridData.h in Copy Headers */,
-				6BB7F58C14852807007F2E99 /* expanz_model_Field.h in Copy Headers */,
-				6BB7F58D14852807007F2E99 /* expanz_model_ImageCell.h in Copy Headers */,
-				6BB7F58E14852807007F2E99 /* expanz_model_Menu.h in Copy Headers */,
-				6BB7F58F14852807007F2E99 /* expanz_model_Message.h in Copy Headers */,
-				6BB7F59014852807007F2E99 /* expanz_model_ProcessArea.h in Copy Headers */,
-				6BB7F59114852807007F2E99 /* expanz_model_Row.h in Copy Headers */,
-				6BB7F59214852807007F2E99 /* expanz_model_SessionContext.h in Copy Headers */,
-				6BB7F59314852807007F2E99 /* expanz_model_TextCell.h in Copy Headers */,
-				6BB7F59414852807007F2E99 /* expanz_model_UserRole.h in Copy Headers */,
-				6BB7F59614852807007F2E99 /* ExpanzDataType.h in Copy Headers */,
-				6BB7F59714852807007F2E99 /* expanz_service_ActivityClient.h in Copy Headers */,
-				6BB7F59814852807007F2E99 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
-				6BB7F59914852807007F2E99 /* expanz_service_CreateActivityRequest.h in Copy Headers */,
-				6BB7F59A14852807007F2E99 /* expanz_service_DataPublicationRequest.h in Copy Headers */,
-				6BB7F59B14852807007F2E99 /* expanz_service_DeltaRequest.h in Copy Headers */,
-				6BB7F59C14852807007F2E99 /* expanz_service_MethodInvocationRequest.h in Copy Headers */,
-				6BB7F59D14852807007F2E99 /* RXMLElement+ActivityInstance.h in Copy Headers */,
-				6BB7F59E14852807007F2E99 /* expanz_service_XmlPostWebService.h in Copy Headers */,
-				6BB7F59F14852807007F2E99 /* expanz_service_LoginClient.h in Copy Headers */,
-				6BB7F5A014852807007F2E99 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
-				6BB7F5A114852807007F2E99 /* expanz_service_SessionRequest.h in Copy Headers */,
-				6BB7F5A214852807007F2E99 /* RXMLElement+SessionContext.h in Copy Headers */,
-				6BB7F5A314852807007F2E99 /* expanz_service_SessionDataClient.h in Copy Headers */,
-				6BB7F5A414852807007F2E99 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
-				6BB7F5A514852807007F2E99 /* expanz_service_SessionDataRequest.h in Copy Headers */,
-				6BB7F5A614852807007F2E99 /* RXMLElement+SessionData.h in Copy Headers */,
-				6BB7F5AF14852807007F2E99 /* CAFilter+Unlock.h in Copy Headers */,
-				6BB7F5B014852807007F2E99 /* xml_Serializable.h in Copy Headers */,
-				6B68E2901473D4EE005F9021 /* ASIAuthenticationDialog.h in Copy Headers */,
-				6B68E2911473D4EE005F9021 /* ASICacheDelegate.h in Copy Headers */,
-				6B68E2921473D4EE005F9021 /* ASIDataCompressor.h in Copy Headers */,
-				6B68E2931473D4EE005F9021 /* ASIDataDecompressor.h in Copy Headers */,
-				6B68E2941473D4EE005F9021 /* ASIDownloadCache.h in Copy Headers */,
-				6B68E2951473D4EE005F9021 /* ASIFormDataRequest.h in Copy Headers */,
-				6B68E2961473D4EE005F9021 /* ASIHTTPRequest.h in Copy Headers */,
-				6B68E2971473D4EE005F9021 /* ASIHTTPRequestConfig.h in Copy Headers */,
-				6B68E2981473D4EE005F9021 /* ASIHTTPRequestDelegate.h in Copy Headers */,
-				6B68E2991473D4EE005F9021 /* ASIInputStream.h in Copy Headers */,
-				6B68E29A1473D4EE005F9021 /* ASINetworkQueue.h in Copy Headers */,
-				6B68E29B1473D4EE005F9021 /* ASIProgressDelegate.h in Copy Headers */,
-				6B68E29C1473D4EE005F9021 /* ASIWebPageRequest.h in Copy Headers */,
-				6B68E29D1473D4EE005F9021 /* ASICloudFilesCDNRequest.h in Copy Headers */,
-				6B68E29E1473D4EE005F9021 /* ASICloudFilesContainer.h in Copy Headers */,
-				6B68E29F1473D4EE005F9021 /* ASICloudFilesContainerRequest.h in Copy Headers */,
-				6B68E2A01473D4EE005F9021 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */,
-				6B68E2A11473D4EE005F9021 /* ASICloudFilesObject.h in Copy Headers */,
-				6B68E2A21473D4EE005F9021 /* ASICloudFilesObjectRequest.h in Copy Headers */,
-				6B68E2A31473D4EE005F9021 /* ASICloudFilesRequest.h in Copy Headers */,
-				6B68E2A41473D4EE005F9021 /* ASINSXMLParserCompat.h in Copy Headers */,
-				6B68E2A51473D4EE005F9021 /* ASIS3Bucket.h in Copy Headers */,
-				6B68E2A61473D4EE005F9021 /* ASIS3BucketObject.h in Copy Headers */,
-				6B68E2A71473D4EE005F9021 /* ASIS3BucketRequest.h in Copy Headers */,
-				6B68E2A81473D4EE005F9021 /* ASIS3ObjectRequest.h in Copy Headers */,
-				6B68E2A91473D4EE005F9021 /* ASIS3Request.h in Copy Headers */,
-				6B68E2AA1473D4EE005F9021 /* ASIS3ServiceRequest.h in Copy Headers */,
-				6B68E2AB1473D4EE005F9021 /* Logging.h in Copy Headers */,
-				6B68E2AC1473D4EE005F9021 /* MARTNSObject.h in Copy Headers */,
-				6B68E2AD1473D4EE005F9021 /* RTIvar.h in Copy Headers */,
-				6B68E2AE1473D4EE005F9021 /* RTMethod.h in Copy Headers */,
-				6B68E2AF1473D4EE005F9021 /* RTProperty.h in Copy Headers */,
-				6B68E2B01473D4EE005F9021 /* RTProtocol.h in Copy Headers */,
-				6B68E2B11473D4EE005F9021 /* RTUnregisteredClass.h in Copy Headers */,
-				6B68E2B21473D4EE005F9021 /* NSDataAdditions.h in Copy Headers */,
-				6B68E2B31473D4EE005F9021 /* RXMLElement.h in Copy Headers */,
-				6B68E2B41473D4EE005F9021 /* TBXML.h in Copy Headers */,
-				6B68E2B51473D4EE005F9021 /* Reachability.h in Copy Headers */,
-				6B68E2B61473D4EE005F9021 /* NSData+Base64.h in Copy Headers */,
+				6B4EA5CF14CD4C2300E5B2D8 /* MBProgressHUD.h in Copy Headers */,
+				6B4EA5D114CD4C2300E5B2D8 /* JSObjectFactory.h in Copy Headers */,
+				6B4EA5D314CD4C2300E5B2D8 /* JSObjection.h in Copy Headers */,
+				6B4EA5D514CD4C2300E5B2D8 /* JSObjectionBindingEntry.h in Copy Headers */,
+				6B4EA5D714CD4C2300E5B2D8 /* JSObjectionEntry.h in Copy Headers */,
+				6B4EA5D914CD4C2300E5B2D8 /* JSObjectionInjector.h in Copy Headers */,
+				6B4EA5DB14CD4C2300E5B2D8 /* JSObjectionInjectorEntry.h in Copy Headers */,
+				6B4EA5DD14CD4C2300E5B2D8 /* JSObjectionModule.h in Copy Headers */,
+				6B4EA5DF14CD4C2300E5B2D8 /* JSObjectionProviderEntry.h in Copy Headers */,
+				6B4EA5E114CD4C2300E5B2D8 /* JSObjectionUtils.h in Copy Headers */,
+				6B4EA5E314CD4C2300E5B2D8 /* NSObject+Objection.h in Copy Headers */,
+				6B4EA5E514CD4C2300E5B2D8 /* Objection.h in Copy Headers */,
+				6B4EA5E614CD4C2300E5B2D8 /* ASIAuthenticationDialog.h in Copy Headers */,
+				6B4EA5E814CD4C2300E5B2D8 /* ASICacheDelegate.h in Copy Headers */,
+				6B4EA5E914CD4C2300E5B2D8 /* ASIDataCompressor.h in Copy Headers */,
+				6B4EA5EB14CD4C2300E5B2D8 /* ASIDataDecompressor.h in Copy Headers */,
+				6B4EA5ED14CD4C2300E5B2D8 /* ASIDownloadCache.h in Copy Headers */,
+				6B4EA5EF14CD4C2300E5B2D8 /* ASIFormDataRequest.h in Copy Headers */,
+				6B4EA5F114CD4C2300E5B2D8 /* ASIHTTPRequest.h in Copy Headers */,
+				6B4EA5F314CD4C2300E5B2D8 /* ASIHTTPRequestConfig.h in Copy Headers */,
+				6B4EA5F414CD4C2300E5B2D8 /* ASIHTTPRequestDelegate.h in Copy Headers */,
+				6B4EA5F514CD4C2300E5B2D8 /* ASIInputStream.h in Copy Headers */,
+				6B4EA5F714CD4C2300E5B2D8 /* ASINetworkQueue.h in Copy Headers */,
+				6B4EA5F914CD4C2300E5B2D8 /* ASIProgressDelegate.h in Copy Headers */,
+				6B4EA5FA14CD4C2300E5B2D8 /* ASIWebPageRequest.h in Copy Headers */,
+				6B4EA5FC14CD4C2300E5B2D8 /* ASICloudFilesCDNRequest.h in Copy Headers */,
+				6B4EA5FE14CD4C2300E5B2D8 /* ASICloudFilesContainer.h in Copy Headers */,
+				6B4EA60014CD4C2300E5B2D8 /* ASICloudFilesContainerRequest.h in Copy Headers */,
+				6B4EA60214CD4C2300E5B2D8 /* ASICloudFilesContainerXMLParserDelegate.h in Copy Headers */,
+				6B4EA60414CD4C2300E5B2D8 /* ASICloudFilesObject.h in Copy Headers */,
+				6B4EA60614CD4C2300E5B2D8 /* ASICloudFilesObjectRequest.h in Copy Headers */,
+				6B4EA60814CD4C2300E5B2D8 /* ASICloudFilesRequest.h in Copy Headers */,
+				6B4EA60A14CD4C2300E5B2D8 /* ASINSXMLParserCompat.h in Copy Headers */,
+				6B4EA60B14CD4C2300E5B2D8 /* ASIS3Bucket.h in Copy Headers */,
+				6B4EA60C14CD4C2300E5B2D8 /* ASIS3Bucket.m in Copy Headers */,
+				6B4EA60D14CD4C2300E5B2D8 /* ASIS3BucketObject.h in Copy Headers */,
+				6B4EA60F14CD4C2300E5B2D8 /* ASIS3BucketRequest.h in Copy Headers */,
+				6B4EA61114CD4C2300E5B2D8 /* ASIS3ObjectRequest.h in Copy Headers */,
+				6B4EA61314CD4C2300E5B2D8 /* ASIS3Request.h in Copy Headers */,
+				6B4EA61514CD4C2300E5B2D8 /* ASIS3ServiceRequest.h in Copy Headers */,
+				6B4EA61714CD4C2300E5B2D8 /* LICENSE in Copy Headers */,
+				6B4EA61814CD4C2300E5B2D8 /* MARTNSObject.h in Copy Headers */,
+				6B4EA61B14CD4C2300E5B2D8 /* RTIvar.h in Copy Headers */,
+				6B4EA61D14CD4C2300E5B2D8 /* RTMethod.h in Copy Headers */,
+				6B4EA61F14CD4C2300E5B2D8 /* RTProperty.h in Copy Headers */,
+				6B4EA62114CD4C2300E5B2D8 /* RTProtocol.h in Copy Headers */,
+				6B4EA62214CD4C2300E5B2D8 /* RTProtocol.m in Copy Headers */,
+				6B4EA62314CD4C2300E5B2D8 /* RTUnregisteredClass.h in Copy Headers */,
+				6B4EA62514CD4C2300E5B2D8 /* NSDataAdditions.h in Copy Headers */,
+				6B4EA62714CD4C2300E5B2D8 /* RXMLElement.h in Copy Headers */,
+				6B4EA62914CD4C2300E5B2D8 /* TBXML.h in Copy Headers */,
+				6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */,
+				6B4EA62E14CD4C2300E5B2D8 /* NSData+Base64.h in Copy Headers */,
+				6B31F2D214CD4AF200A4CA49 /* Logging.h in Copy Headers */,
+				6B748A4F14CD4A2100970C98 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
+				6B748A5014CD4A2100970C98 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
+				6B748A5114CD4A2100970C98 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
+				6B748A5214CD4A2100970C98 /* expanz_iOS_SDKModule.h in Copy Headers */,
+				6B748A5314CD4A2100970C98 /* expanz_model_ResourceCollection.h in Copy Headers */,
+				6B748A5414CD4A2100970C98 /* expanz_model_FileResource.h in Copy Headers */,
+				6B748A5514CD4A2100970C98 /* expanz_model_File.h in Copy Headers */,
+				6B748A5614CD4A2100970C98 /* expanz_model_DataBuilder.h in Copy Headers */,
+				6B748A5714CD4A2100970C98 /* expanz_model_Folder.h in Copy Headers */,
+				6B748A5814CD4A2100970C98 /* expanz_model_TreeData.h in Copy Headers */,
+				6B748A5914CD4A2100970C98 /* expanz_model_AbstractData.h in Copy Headers */,
+				6B748A5A14CD4A2100970C98 /* expanz_model_ActivityStyle.h in Copy Headers */,
+				6B748A5B14CD4A2100970C98 /* expanz_model_ActivityDefinition.h in Copy Headers */,
+				6B748A5C14CD4A2100970C98 /* expanz_model_ActivityInstance.h in Copy Headers */,
+				6B748A5D14CD4A2100970C98 /* expanz_model_AbstractCell.h in Copy Headers */,
+				6B748A5E14CD4A2100970C98 /* expanz_model_Column.h in Copy Headers */,
+				6B748A5F14CD4A2100970C98 /* expanz_model_GridData.h in Copy Headers */,
+				6B748A6014CD4A2100970C98 /* expanz_model_Field.h in Copy Headers */,
+				6B748A6114CD4A2100970C98 /* expanz_model_ImageCell.h in Copy Headers */,
+				6B748A6214CD4A2100970C98 /* expanz_model_Menu.h in Copy Headers */,
+				6B748A6314CD4A2100970C98 /* expanz_model_Message.h in Copy Headers */,
+				6B748A6414CD4A2100970C98 /* expanz_model_ProcessArea.h in Copy Headers */,
+				6B748A6514CD4A2100970C98 /* expanz_model_Row.h in Copy Headers */,
+				6B748A6614CD4A2100970C98 /* expanz_model_SessionContext.h in Copy Headers */,
+				6B748A6714CD4A2100970C98 /* expanz_model_TextCell.h in Copy Headers */,
+				6B748A6814CD4A2100970C98 /* expanz_model_UserRole.h in Copy Headers */,
+				6B748A6914CD4A2100970C98 /* ExpanzDataType.h in Copy Headers */,
+				6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
+				6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */,
+				6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
+				6B748A6D14CD4A2100970C98 /* expanz_service_FileRequest.h in Copy Headers */,
+				6B748A6E14CD4A2100970C98 /* expanz_service_CreateActivityRequest.h in Copy Headers */,
+				6B748A6F14CD4A2100970C98 /* expanz_service_DataPublicationRequest.h in Copy Headers */,
+				6B748A7014CD4A2100970C98 /* expanz_service_DeltaRequest.h in Copy Headers */,
+				6B748A7114CD4A2100970C98 /* expanz_service_MethodInvocationRequest.h in Copy Headers */,
+				6B748A7214CD4A2100970C98 /* RXMLElement+ActivityInstance.h in Copy Headers */,
+				6B748A7314CD4A2100970C98 /* expanz_service_XmlPostWebService.h in Copy Headers */,
+				6B748A7414CD4A2100970C98 /* expanz_service_LoginClientDelegate.h in Copy Headers */,
+				6B748A7514CD4A2100970C98 /* expanz_service_LoginClient.h in Copy Headers */,
+				6B748A7614CD4A2100970C98 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
+				6B748A7714CD4A2100970C98 /* expanz_service_SessionRequest.h in Copy Headers */,
+				6B748A7814CD4A2100970C98 /* RXMLElement+SessionContext.h in Copy Headers */,
+				6B748A7914CD4A2100970C98 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */,
+				6B748A7A14CD4A2100970C98 /* expanz_service_SessionDataClient.h in Copy Headers */,
+				6B748A7B14CD4A2100970C98 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
+				6B748A7C14CD4A2100970C98 /* expanz_service_SessionDataRequest.h in Copy Headers */,
+				6B748A7D14CD4A2100970C98 /* RXMLElement+SessionData.h in Copy Headers */,
+				6B748A7E14CD4A2100970C98 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */,
+				6B748A7F14CD4A2100970C98 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */,
+				6B748A8014CD4A2100970C98 /* expanz_service_FileDownloadClient.h in Copy Headers */,
+				6B748A8114CD4A2100970C98 /* RXMLElement+ResourceCollection.h in Copy Headers */,
+				6B748A8214CD4A2100970C98 /* expanz_service_FileDownloadRequest.h in Copy Headers */,
+				6B748A8314CD4A2100970C98 /* UITableView+DataPublication.h in Copy Headers */,
+				6B748A8414CD4A2100970C98 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
+				6B748A8514CD4A2100970C98 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
+				6B748A8614CD4A2100970C98 /* expanz_ui_AbstractDataRenderer.h in Copy Headers */,
+				6B748A8714CD4A2100970C98 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
+				6B748A8814CD4A2100970C98 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
+				6B748A8914CD4A2100970C98 /* expanz_ui_AlertBoxSystemEventReporter.h in Copy Headers */,
+				6B748A8A14CD4A2100970C98 /* expanz_ui_DocumentViewController.h in Copy Headers */,
+				6B748A8B14CD4A2100970C98 /* expanz_ui_GridDataRenderer.h in Copy Headers */,
+				6B748A8C14CD4A2100970C98 /* expanz_ui_LoginViewController.h in Copy Headers */,
+				6B748A8D14CD4A2100970C98 /* expanz_ui_ModelAdapter.h in Copy Headers */,
+				6B748A8E14CD4A2100970C98 /* expanz_ui_NavigationManager.h in Copy Headers */,
+				6B748A8F14CD4A2100970C98 /* expanz_ui_SystemEventReporter.h in Copy Headers */,
+				6B748A9014CD4A2100970C98 /* expanz_ui_TreeDataRenderer.h in Copy Headers */,
+				6B748A9114CD4A2100970C98 /* CAFilter+Unlock.h in Copy Headers */,
+				6B748A9214CD4A2100970C98 /* xml_Serializable.h in Copy Headers */,
 			);
 			name = "Copy Headers";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,41 +867,41 @@
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
-		6B1107D214CD3F1F00D0A4FE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
-		6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
-		6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
-		6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
-		6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
-		6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
-		6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
-		6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
-		6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
-		6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
-		6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
-		6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
-		6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventReporter.h; sourceTree = "<group>"; };
-		6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AlertBoxSystemEventReporter.m; sourceTree = "<group>"; };
-		6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_DocumentViewController.h; sourceTree = "<group>"; };
-		6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_DocumentViewController.m; sourceTree = "<group>"; };
-		6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
-		6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
-		6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
-		6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
-		6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ModelAdapter.h; sourceTree = "<group>"; };
-		6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ModelAdapter.m; sourceTree = "<group>"; };
-		6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
-		6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
-		6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventReporter.h; sourceTree = "<group>"; };
-		6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
-		6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B7489EF14CD493600970C98 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		6B7489F014CD493600970C98 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6B7489F114CD493600970C98 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		6B7489F314CD493600970C98 /* UITableView+DataPublication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataPublication.h"; sourceTree = "<group>"; };
+		6B7489F414CD493600970C98 /* UITableView+DataPublication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublication.m"; sourceTree = "<group>"; };
+		6B7489F614CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_TextFieldTableCell.h; sourceTree = "<group>"; };
+		6B7489F714CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
+		6B7489F814CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
+		6B7489F914CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
+		6B7489FA14CD493600970C98 /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
+		6B7489FB14CD493600970C98 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
+		6B7489FC14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
+		6B7489FD14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
+		6B7489FE14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
+		6B7489FF14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
+		6B748A0014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AlertBoxSystemEventReporter.h; sourceTree = "<group>"; };
+		6B748A0114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AlertBoxSystemEventReporter.m; sourceTree = "<group>"; };
+		6B748A0214CD493600970C98 /* expanz_ui_DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_DocumentViewController.h; sourceTree = "<group>"; };
+		6B748A0314CD493600970C98 /* expanz_ui_DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_DocumentViewController.m; sourceTree = "<group>"; };
+		6B748A0414CD493600970C98 /* expanz_ui_GridDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_GridDataRenderer.h; sourceTree = "<group>"; };
+		6B748A0514CD493600970C98 /* expanz_ui_GridDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_GridDataRenderer.m; sourceTree = "<group>"; };
+		6B748A0614CD493600970C98 /* expanz_ui_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_LoginViewController.h; sourceTree = "<group>"; };
+		6B748A0714CD493600970C98 /* expanz_ui_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_LoginViewController.m; sourceTree = "<group>"; };
+		6B748A0814CD493600970C98 /* expanz_ui_ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ModelAdapter.h; sourceTree = "<group>"; };
+		6B748A0914CD493600970C98 /* expanz_ui_ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ModelAdapter.m; sourceTree = "<group>"; };
+		6B748A0A14CD493600970C98 /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
+		6B748A0B14CD493600970C98 /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
+		6B748A0C14CD493600970C98 /* expanz_ui_SystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventReporter.h; sourceTree = "<group>"; };
+		6B748A0D14CD493600970C98 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
+		6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6B932F271433F7CE00834A1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1221,67 +1285,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		6B1107CF14CD3F1F00D0A4FE /* UserInterface */ = {
-			isa = PBXGroup;
-			children = (
-				6B1107D014CD3F1F00D0A4FE /* Assets */,
-				6B1107D414CD3F1F00D0A4FE /* Categories */,
-				6B1107D714CD3F1F00D0A4FE /* Components */,
-				6B1107DC14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h */,
-				6B1107DD14CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m */,
-				6B1107DE14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h */,
-				6B1107DF14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m */,
-				6B1107E014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h */,
-				6B1107E114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m */,
-				6B1107E214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h */,
-				6B1107E314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m */,
-				6B1107E414CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h */,
-				6B1107E514CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m */,
-				6B1107E614CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h */,
-				6B1107E714CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m */,
-				6B1107E814CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h */,
-				6B1107E914CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m */,
-				6B1107EA14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h */,
-				6B1107EB14CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m */,
-				6B1107EC14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h */,
-				6B1107ED14CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m */,
-				6B1107EE14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h */,
-				6B1107EF14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h */,
-				6B1107F014CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m */,
-			);
-			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		6B1107D014CD3F1F00D0A4FE /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6B1107D114CD3F1F00D0A4FE /* 37x-Checkmark.png */,
-				6B1107D214CD3F1F00D0A4FE /* Icon.png */,
-				6B1107D314CD3F1F00D0A4FE /* Icon@2x.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		6B1107D414CD3F1F00D0A4FE /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6B1107D514CD3F1F00D0A4FE /* UITableView+DataPublication.h */,
-				6B1107D614CD3F1F00D0A4FE /* UITableView+DataPublication.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		6B1107D714CD3F1F00D0A4FE /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				6B1107D814CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h */,
-				6B1107D914CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m */,
-				6B1107DA14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h */,
-				6B1107DB14CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		6B1E5E8614734404004145D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1289,6 +1292,67 @@
 				6B1E5E8714734404004145D0 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B7489ED14CD493600970C98 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6B7489EE14CD493600970C98 /* Assets */,
+				6B7489F214CD493600970C98 /* Categories */,
+				6B7489F514CD493600970C98 /* Components */,
+				6B7489FA14CD493600970C98 /* expanz_ui_AbstractDataRenderer.h */,
+				6B7489FB14CD493600970C98 /* expanz_ui_AbstractDataRenderer.m */,
+				6B7489FC14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h */,
+				6B7489FD14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m */,
+				6B7489FE14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h */,
+				6B7489FF14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m */,
+				6B748A0014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h */,
+				6B748A0114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m */,
+				6B748A0214CD493600970C98 /* expanz_ui_DocumentViewController.h */,
+				6B748A0314CD493600970C98 /* expanz_ui_DocumentViewController.m */,
+				6B748A0414CD493600970C98 /* expanz_ui_GridDataRenderer.h */,
+				6B748A0514CD493600970C98 /* expanz_ui_GridDataRenderer.m */,
+				6B748A0614CD493600970C98 /* expanz_ui_LoginViewController.h */,
+				6B748A0714CD493600970C98 /* expanz_ui_LoginViewController.m */,
+				6B748A0814CD493600970C98 /* expanz_ui_ModelAdapter.h */,
+				6B748A0914CD493600970C98 /* expanz_ui_ModelAdapter.m */,
+				6B748A0A14CD493600970C98 /* expanz_ui_NavigationManager.h */,
+				6B748A0B14CD493600970C98 /* expanz_ui_NavigationManager.m */,
+				6B748A0C14CD493600970C98 /* expanz_ui_SystemEventReporter.h */,
+				6B748A0D14CD493600970C98 /* expanz_ui_TreeDataRenderer.h */,
+				6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		6B7489EE14CD493600970C98 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6B7489EF14CD493600970C98 /* 37x-Checkmark.png */,
+				6B7489F014CD493600970C98 /* Icon.png */,
+				6B7489F114CD493600970C98 /* Icon@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6B7489F214CD493600970C98 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6B7489F314CD493600970C98 /* UITableView+DataPublication.h */,
+				6B7489F414CD493600970C98 /* UITableView+DataPublication.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6B7489F514CD493600970C98 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B7489F614CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h */,
+				6B7489F714CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m */,
+				6B7489F814CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h */,
+				6B7489F914CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6BC9F54F1458EB63001AF204 /* Source */ = {
@@ -1561,7 +1625,7 @@
 				6BD47C351484703F000ECE52 /* expanz-iOS-SDK */,
 				6BD47C441484703F000ECE52 /* Model */,
 				6BD47C631484703F000ECE52 /* Services */,
-				6B1107CF14CD3F1F00D0A4FE /* UserInterface */,
+				6B7489ED14CD493600970C98 /* UserInterface */,
 				6BD47C9F1484703F000ECE52 /* Utils */,
 			);
 			name = Main;
@@ -2151,20 +2215,20 @@
 				6BFDE76F1495FA01005D332F /* NSObject+Objection.h in Headers */,
 				6BFDE7751495FA01005D332F /* Objection.h in Headers */,
 				6B1107CA14CD3DDC00D0A4FE /* MBProgressHUD.h in Headers */,
-				6B1107FA14CD3F1F00D0A4FE /* UITableView+DataPublication.h in Headers */,
-				6B1107FE14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.h in Headers */,
-				6B11080214CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
-				6B11080614CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.h in Headers */,
-				6B11080A14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.h in Headers */,
-				6B11080E14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.h in Headers */,
-				6B11081214CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
-				6B11081614CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.h in Headers */,
-				6B11081A14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.h in Headers */,
-				6B11081E14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.h in Headers */,
-				6B11082214CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.h in Headers */,
-				6B11082614CD3F1F00D0A4FE /* expanz_ui_NavigationManager.h in Headers */,
-				6B11082A14CD3F1F00D0A4FE /* expanz_ui_SystemEventReporter.h in Headers */,
-				6B11082B14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.h in Headers */,
+				6B748A1814CD493600970C98 /* UITableView+DataPublication.h in Headers */,
+				6B748A1C14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
+				6B748A2014CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
+				6B748A2414CD493600970C98 /* expanz_ui_AbstractDataRenderer.h in Headers */,
+				6B748A2814CD493600970C98 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
+				6B748A2C14CD493600970C98 /* expanz_ui_ActivityMenuViewController.h in Headers */,
+				6B748A3014CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.h in Headers */,
+				6B748A3414CD493600970C98 /* expanz_ui_DocumentViewController.h in Headers */,
+				6B748A3814CD493600970C98 /* expanz_ui_GridDataRenderer.h in Headers */,
+				6B748A3C14CD493600970C98 /* expanz_ui_LoginViewController.h in Headers */,
+				6B748A4014CD493600970C98 /* expanz_ui_ModelAdapter.h in Headers */,
+				6B748A4414CD493600970C98 /* expanz_ui_NavigationManager.h in Headers */,
+				6B748A4814CD493600970C98 /* expanz_ui_SystemEventReporter.h in Headers */,
+				6B748A4914CD493600970C98 /* expanz_ui_TreeDataRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2258,9 +2322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD47CA21484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6B1107F114CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
-				6B1107F414CD3F1F00D0A4FE /* Icon.png in Resources */,
-				6B1107F714CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
+				6B748A0F14CD493600970C98 /* 37x-Checkmark.png in Resources */,
+				6B748A1214CD493600970C98 /* Icon.png in Resources */,
+				6B748A1514CD493600970C98 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2282,9 +2346,9 @@
 				6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */,
 				6BDAB0341499828800541056 /* production_environment.xml in Resources */,
 				6BDAB0351499828800541056 /* test_environment.xml in Resources */,
-				6B1107F314CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
-				6B1107F614CD3F1F00D0A4FE /* Icon.png in Resources */,
-				6B1107F914CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
+				6B748A1114CD493600970C98 /* 37x-Checkmark.png in Resources */,
+				6B748A1414CD493600970C98 /* Icon.png in Resources */,
+				6B748A1714CD493600970C98 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2322,9 +2386,9 @@
 				6BFDE7761495FA01005D3349 /* insurance.png in Resources */,
 				6BFDE7761495FA01005D334B /* my details.png in Resources */,
 				6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
-				6B1107F214CD3F1F00D0A4FE /* 37x-Checkmark.png in Resources */,
-				6B1107F514CD3F1F00D0A4FE /* Icon.png in Resources */,
-				6B1107F814CD3F1F00D0A4FE /* Icon@2x.png in Resources */,
+				6B748A1014CD493600970C98 /* 37x-Checkmark.png in Resources */,
+				6B748A1314CD493600970C98 /* Icon.png in Resources */,
+				6B748A1614CD493600970C98 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2454,19 +2518,19 @@
 				6BFDE76B1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7711495FA01005D332F /* NSObject+Objection.m in Sources */,
 				6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
-				6B1107FB14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
-				6B1107FF14CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6B11080314CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B11080714CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6B11080B14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B11080F14CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6B11081314CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
-				6B11081714CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
-				6B11081B14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
-				6B11081F14CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
-				6B11082314CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
-				6B11082714CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
-				6B11082C14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6B748A1914CD493600970C98 /* UITableView+DataPublication.m in Sources */,
+				6B748A1D14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B748A2114CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B748A2514CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B748A2914CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B748A2D14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B748A3114CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B748A3514CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */,
+				6B748A3914CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B748A3D14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */,
+				6B748A4114CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
+				6B748A4514CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
+				6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2567,19 +2631,19 @@
 				6BDAB0391499828800541056 /* Sales_Customer_Browse_ViewController.m in Sources */,
 				6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */,
 				6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
-				6B1107FD14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
-				6B11080114CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6B11080514CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B11080914CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6B11080D14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B11081114CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6B11081514CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
-				6B11081914CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
-				6B11081D14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
-				6B11082114CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
-				6B11082514CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
-				6B11082914CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
-				6B11082E14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6B748A1B14CD493600970C98 /* UITableView+DataPublication.m in Sources */,
+				6B748A1F14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B748A2314CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B748A2714CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B748A2B14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B748A2F14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B748A3314CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B748A3714CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */,
+				6B748A3B14CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B748A3F14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */,
+				6B748A4314CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
+				6B748A4714CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
+				6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2730,19 +2794,19 @@
 				6BFDE7761495FA01005D333F /* main.m in Sources */,
 				6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 				6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
-				6B1107FC14CD3F1F00D0A4FE /* UITableView+DataPublication.m in Sources */,
-				6B11080014CD3F1F00D0A4FE /* expanz_ui_components_TextFieldTableCell.m in Sources */,
-				6B11080414CD3F1F00D0A4FE /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B11080814CD3F1F00D0A4FE /* expanz_ui_AbstractDataRenderer.m in Sources */,
-				6B11080C14CD3F1F00D0A4FE /* expanz_ui_ActivityInstanceViewController.m in Sources */,
-				6B11081014CD3F1F00D0A4FE /* expanz_ui_ActivityMenuViewController.m in Sources */,
-				6B11081414CD3F1F00D0A4FE /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
-				6B11081814CD3F1F00D0A4FE /* expanz_ui_DocumentViewController.m in Sources */,
-				6B11081C14CD3F1F00D0A4FE /* expanz_ui_GridDataRenderer.m in Sources */,
-				6B11082014CD3F1F00D0A4FE /* expanz_ui_LoginViewController.m in Sources */,
-				6B11082414CD3F1F00D0A4FE /* expanz_ui_ModelAdapter.m in Sources */,
-				6B11082814CD3F1F00D0A4FE /* expanz_ui_NavigationManager.m in Sources */,
-				6B11082D14CD3F1F00D0A4FE /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6B748A1A14CD493600970C98 /* UITableView+DataPublication.m in Sources */,
+				6B748A1E14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
+				6B748A2214CD493600970C98 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
+				6B748A2614CD493600970C98 /* expanz_ui_AbstractDataRenderer.m in Sources */,
+				6B748A2A14CD493600970C98 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
+				6B748A2E14CD493600970C98 /* expanz_ui_ActivityMenuViewController.m in Sources */,
+				6B748A3214CD493600970C98 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
+				6B748A3614CD493600970C98 /* expanz_ui_DocumentViewController.m in Sources */,
+				6B748A3A14CD493600970C98 /* expanz_ui_GridDataRenderer.m in Sources */,
+				6B748A3E14CD493600970C98 /* expanz_ui_LoginViewController.m in Sources */,
+				6B748A4214CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
+				6B748A4614CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
+				6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
