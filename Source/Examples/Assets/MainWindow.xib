@@ -203,7 +203,7 @@
 							<object class="IBUserDefinedRuntimeAttribute">
 								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
 								<string key="keyPath">configurationFile</string>
-								<string key="value">test_environment</string>
+								<string key="value">production_environment</string>
 							</object>
 						</array>
 					</object>

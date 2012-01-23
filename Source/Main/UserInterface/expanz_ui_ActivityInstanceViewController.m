@@ -10,8 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <objc/message.h>
-#import "MARTNSObject.h"
-#import "RTProperty.h"
 #import "Objection.h"
 #import "NSData+Base64.h"
 #import "expanz_model_SessionContext.h"
@@ -32,8 +30,17 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
 
+/* ================================================================================================================== */
+@interface expanz_ui_ActivityInstanceViewController (private)
+
+- (void) showLoadingHud;
+
+- (void) hideLoadingHud;
+
+@end
 
 
+/* ================================================================================================================== */
 @implementation expanz_ui_ActivityInstanceViewController
 
 @synthesize activityDefinition = _activityDefinition;
@@ -43,8 +50,8 @@
 
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
-                      initialKey:(NSString*)initialKey {
+- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
+                       initialKey:(NSString*)initialKey {
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
@@ -55,13 +62,14 @@
         _activityRequest = [[CreateActivityRequest alloc]
             initWithActivityName:activityDefinition.name style:activityDefinition.style initialKey:initialKey
                     sessionToken:[SessionContext globalContext].sessionToken];
+
         [_spinner startAnimating];
     }
     return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void)sendDeltaForField:(Field*)field {
+- (void) sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
         DeltaRequest* deltaRequest = [DeltaRequest forField:field];
@@ -69,7 +77,7 @@
     }
 }
 
-- (void)sendMethodInvocation:(NSString*)methodName {
+- (void) sendMethodInvocation:(NSString*)methodName {
     [_currentlyEditingField resignFirstResponder];
 
     while ([_activityInstance allowsMethodInvocations] == NO) {
@@ -84,32 +92,32 @@
 }
 
 /* ================================================================================================================== */
-- (void)hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
+- (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
     LogDebug(@"Requesting dataPublicationId: %@", dataPublicationId);
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setDataPublicationId:dataPublicationId];
 }
 
-- (void)hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
+- (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
     LogDebug(@"Requesting populateMethod: %@", populateMethod);
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setPopulateMethod:populateMethod];
 }
 
-- (void)hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {
+- (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {
     LogDebug(@"Requesting query: %@", query);
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setQuery:query];
 }
 
-- (void)hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
+- (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
     DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
 /* ================================================================================================================== */
-- (void)willCommenceEditForImageView:(UIButton*)sender {
+- (void) willCommenceEditForImageView:(UIButton*)sender {
     _currentlyEditingImageView = [_modelAdapter imageViewFor:sender];
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
@@ -126,30 +134,25 @@
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad {
+
+- (void) viewDidLoad {
     [super viewDidLoad];
-    for (RTProperty* property in [[self class] rt_properties]) {
-        NSObject* object = objc_msgSend(self, NSSelectorFromString([property name]));
-        if ([object isKindOfClass:[UITextField class] ]) {
-            UITextField* textField = (UITextField*) textField;
-            [textField setHidden:YES];
-        }
-    }
     [_activityClient createActivityWith:_activityRequest delegate:self];
+    [self showLoadingHud];
 }
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     for (GridData* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
@@ -165,11 +168,11 @@
 /* ================================================ Delegate Methods ================================================ */
 #pragma mark UITextFieldDelegate
 
-- (void)textFieldDidBeginEditing:(UITextField*)textField {
+- (void) textFieldDidBeginEditing:(UITextField*)textField {
     _currentlyEditingField = textField;
 }
 
-- (BOOL)textFieldShouldEndEditing:(UITextField*)textField {
+- (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
     [textField resignFirstResponder];
     Field* field = [_modelAdapter fieldFor:textField];
     [field didFinishEditWithValue:textField.text];
@@ -177,15 +180,15 @@
     return YES;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField*)textField {
+- (BOOL) textFieldShouldReturn:(UITextField*)textField {
     return [self textFieldShouldEndEditing:textField];
 }
 
 /* ================================================================================================================== */
 #pragma mark Image Picker Delegate 
 
-- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
-                  editingInfo:(NSDictionary*)editingInfo {
+- (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
+                   editingInfo:(NSDictionary*)editingInfo {
 
     Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
     //[field didFinishEditWithValue:image];
@@ -209,9 +212,10 @@
 /* ================================================================================================================== */
 #pragma mark CreateActivityClientDelegate
 
-- (void)requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
+- (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
     [_spinner stopAnimating];
     if (_activityInstance == nil) {
+        [self hideLoadingHud];
         _activityInstance = activityInstance;
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
         [_modelAdapter updateUIControlsWithModelValues];
@@ -230,10 +234,40 @@
     }
 }
 
-- (void)requestDidFailWithError:(NSError*)error {
+- (void) requestDidFailWithError:(NSError*)error {
 
 }
 
+/* ================================================== Private Methods =============================================== */
+- (void) showLoadingHud {
+    _subViewStateCache = [[NSMutableDictionary alloc] init];
+    unsigned int generatedTag;
+    for (UIView* view in [self.view subviews]) {
+        //TODO: Fix this stupid way to get the pointer value as in integer;
+        if (view.tag == 0) {
+            NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@"%p", view]];
+            [scanner scanHexInt:&generatedTag];
+            [view setTag:generatedTag];
+        }
+        else {
+            generatedTag = view.tag;
+        }
+        [_subViewStateCache
+            setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];
+        [view setHidden:YES];
+    }
+
+}
+
+- (void) hideLoadingHud {
+    for (NSNumber* tag in [_subViewStateCache allKeys]) {
+        UIView* view = [self.view viewWithTag:[tag intValue]];
+        BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];
+        LogDebug(@"Setting view with tag '%@' to hidden: %@", tag, hidden == YES ? @"YES" : @"NO");
+        [view setHidden:hidden];
+    }
+    _subViewStateCache = nil;
+}
 
 
 @end

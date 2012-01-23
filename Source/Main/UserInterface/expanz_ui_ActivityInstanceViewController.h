@@ -25,6 +25,7 @@
     UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
 @private
+    NSMutableDictionary* _subViewStateCache;
     id<expanz_service_ActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;

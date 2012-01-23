@@ -44,16 +44,15 @@
     [_window makeKeyAndVisible];
 
     NSString* data = [TestResource withName:DATA_FILE];
-    LogDebug(@"Activity data: %@", data);
+    //LogDebug(@"Activity data: %@", data);
     RXMLElement* element = [RXMLElement elementFromXMLString:data];
     ActivityInstanceViewController* controller =
         (ActivityInstanceViewController*) [_navigationController topViewController];
     ActivityInstance* activityInstance = [[element child:@"ExecXResult.ESA.Activity"] asActivityInstance];
     LogDebug(@"Activity instance: %@", activityInstance);
-    
+
     //Force controller to be ready
     [controller view];
-
     [controller requestDidFinishWithActivityInstance:activityInstance];
     return YES;
 }
