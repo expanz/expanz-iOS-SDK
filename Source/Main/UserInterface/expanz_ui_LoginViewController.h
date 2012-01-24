@@ -20,8 +20,6 @@
         <expanz_service_LoginClientDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource> {
 
 @private
-    CGFloat _animatedDistance;
-    BOOL _scrolled;
     expanz_ui_NavigationManager* _navigationManager;
     id<expanz_ui_SystemEventReporter> _reporter;
 }

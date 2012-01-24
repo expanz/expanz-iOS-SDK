@@ -30,7 +30,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
-#import "MBProgressHUD.h"
+#import "expanz_ui_TextFieldDelegateUtils.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
@@ -78,7 +78,7 @@
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {
-    [_currentlyEditingField resignFirstResponder];
+    [[TextFieldDelegateUtils currentlyEditingTextField] resignFirstResponder];
 
     while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
@@ -169,7 +169,12 @@
 #pragma mark UITextFieldDelegate
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    _currentlyEditingField = textField;
+    [TextFieldDelegateUtils setCurrentlyEditingField:textField];
+    [TextFieldDelegateUtils revealFromBeneathKeyboard:textField];
+}
+
+- (void) textFieldDidEndEditing:(UITextField*)textField {
+    [TextFieldDelegateUtils restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {

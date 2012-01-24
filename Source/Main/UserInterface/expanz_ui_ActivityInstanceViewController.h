@@ -32,7 +32,6 @@
     id<expanz_service_ActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;
-    UITextField* _currentlyEditingField;
     UIImageView* _currentlyEditingImageView;
 }
 

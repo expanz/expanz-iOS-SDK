@@ -73,10 +73,7 @@
                 NSLog(@"Printing could not complete because of error: %@", error);
             }
         };
-
     [pic presentAnimated:YES completionHandler:completionHandler];
-
-
 }
 
 /* ================================================= Protocol Methods =============================================== */

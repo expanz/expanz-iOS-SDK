@@ -712,6 +712,10 @@
 		6BFDE7761495FA01005D334B /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334A /* my details.png */; };
 		6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
+		6BFDE7761495FA01005D3352 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
+		6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
+		6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
+		6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1223,6 +1227,8 @@
 		6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D334E /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextFieldDelegateUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1297,6 +1303,8 @@
 		6B7489ED14CD493600970C98 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */,
+				6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */,
 				6B7489EE14CD493600970C98 /* Assets */,
 				6B7489F214CD493600970C98 /* Categories */,
 				6B7489F514CD493600970C98 /* Components */,
@@ -2229,6 +2237,7 @@
 				6B748A4414CD493600970C98 /* expanz_ui_NavigationManager.h in Headers */,
 				6B748A4814CD493600970C98 /* expanz_ui_SystemEventReporter.h in Headers */,
 				6B748A4914CD493600970C98 /* expanz_ui_TreeDataRenderer.h in Headers */,
+				6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2531,6 +2540,7 @@
 				6B748A4114CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B748A4514CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3352 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2644,6 +2654,7 @@
 				6B748A4314CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B748A4714CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2807,6 +2818,7 @@
 				6B748A4214CD493600970C98 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B748A4614CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

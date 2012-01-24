@@ -15,18 +15,12 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_ui_LoginViewController.h"
-#import "expanz_ui_components_TextFieldTableCell.h"
 #import "expanz_iOS_SDKConfiguration.h"
 #import "expanz_ui_NavigationManager.h"
+#import "expanz_ui_TextFieldDelegateUtils.h"
 
 
 @implementation expanz_ui_LoginViewController
-
-static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
-static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 @synthesize loginClient = _loginClient;
 @synthesize loginButton = _loginButton;
@@ -109,54 +103,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 #pragma mark UITextFieldDelegate    
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    if (!_scrolled) {
-
-        CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
-        if (textFieldRect.origin.y >= 285) {
-            _scrolled = YES;
-            CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
-            CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-            CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-            CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
-            CGFloat heightFraction = numerator / denominator;
-            if (heightFraction < 0.0) {
-                heightFraction = 0.0;
-            }
-            else if (heightFraction > 1.0) {
-                heightFraction = 1.0;
-            }
-            UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-            if (orientation == UIInterfaceOrientationPortrait || orientation ==
-                UIInterfaceOrientationPortraitUpsideDown) {
-                _animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
-            }
-            else {
-                _animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
-            }
-            CGRect viewFrame = self.view.frame;
-            viewFrame.origin.y -= _animatedDistance;
-
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationBeginsFromCurrentState:YES];
-            [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-            [self.view setFrame:viewFrame];
-            [UIView commitAnimations];
-        }
-    }
+    [TextFieldDelegateUtils revealFromBeneathKeyboard:textField];
 }
 
 - (void) textFieldDidEndEditing:(UITextField*)textField {
-    if (_scrolled) {
-        _scrolled = NO;
-        CGRect viewFrame = self.view.frame;
-        viewFrame.origin.y += _animatedDistance;
-
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationBeginsFromCurrentState:YES];
-        [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-        [self.view setFrame:viewFrame];
-        [UIView commitAnimations];
-    }
+    [TextFieldDelegateUtils restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField*)textField {
