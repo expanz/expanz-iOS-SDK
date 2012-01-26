@@ -18,8 +18,6 @@
 
 @implementation expanz_model_DataBuilder
 
-@synthesize dataId = _dataId;
-@synthesize source = _source;
 
 /* ================================================== Initializers ================================================== */
 - (id)initWithDataId:(NSString*)dataId source:(NSString*)source {

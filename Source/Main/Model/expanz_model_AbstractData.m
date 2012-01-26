@@ -28,9 +28,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
-    @throw ([NSException
-        exceptionWithName:NSInternalInconsistencyException reason:@"This class should not be instantiated directly."
-                 userInfo:nil]);
+    return nil;
 }
 
 

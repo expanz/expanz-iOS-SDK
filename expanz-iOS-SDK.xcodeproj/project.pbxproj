@@ -716,6 +716,7 @@
 		6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */; };
+		6BFDE7761495FA01005D3358 /* AbstractDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1229,6 +1230,7 @@
 		6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextFieldDelegateUtils.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDataSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1873,6 +1875,7 @@
 		6BD47DD01484705A000ECE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */,
 				6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */,
 				6BFACBA414679916007C7345 /* FileResourceSpec.m */,
 				6BFACBA414679916007C72B4 /* FileSpec.m */,
@@ -2819,6 +2822,7 @@
 				6B748A4614CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6BFDE7761495FA01005D3358 /* AbstractDataSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
