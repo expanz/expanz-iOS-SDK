@@ -15,19 +15,30 @@
 
 SPEC_BEGIN(FileResourceSpec)
 
+    __block FileResource* fileResource;
+
+    beforeEach(^{
+        fileResource = [[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"doc" field:@"foobar"];
+    });
+
+
     describe(@"object creation", ^{
-        
+
         it(@"should allow initialization with path, ext and field attributes.", ^{
-            
-            FileResource* fileResource = [[FileResource alloc]
-                initWithPath:@"/blobs/Foobar" ext:@"doc" field:@"foobar"];
 
             assertThat(fileResource, notNilValue());
             assertThat(fileResource.path, equalTo(@"/blobs/Foobar"));
             assertThat(fileResource.ext, equalTo(@"doc"));
             assertThat(fileResource.field, equalTo(@"foobar"));
         });
-    
+
+        it(@"should describe itself", ^{
+
+            assertThat([fileResource description], equalTo(
+                @"FileResource: path='/blobs/Foobar', ext='doc', field='foobar'"));
+
+        });
+
     });
 
-SPEC_END
+    SPEC_END
