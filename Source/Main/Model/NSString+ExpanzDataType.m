@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "ExpanzDataType.h"
+#import "NSString+ExpanzDataType.h"
 
 
 @implementation NSString (ExpanzDataType)

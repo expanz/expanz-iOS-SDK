@@ -177,7 +177,7 @@
 		6B748A6614CD4A2100970C98 /* expanz_model_SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5B1484703F000ECE52 /* expanz_model_SessionContext.h */; };
 		6B748A6714CD4A2100970C98 /* expanz_model_TextCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5D1484703F000ECE52 /* expanz_model_TextCell.h */; };
 		6B748A6814CD4A2100970C98 /* expanz_model_UserRole.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */; };
-		6B748A6914CD4A2100970C98 /* ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
+		6B748A6914CD4A2100970C98 /* NSString+ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */; };
 		6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
 		6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
@@ -386,7 +386,7 @@
 		6BD47D181484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
 		6BD47D1A1484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
 		6BD47D1B1484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
-		6BD47D1E1484703F000ECE52 /* ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* ExpanzDataType.h */; };
+		6BD47D1E1484703F000ECE52 /* NSString+ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */; };
 		6BD47D201484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
 		6BD47D221484703F000ECE52 /* expanz_service_XmlPostActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
 		6BD47D241484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */; };
@@ -459,7 +459,7 @@
 		6BD47E0C1484705A000ECE52 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD21484705A000ECE52 /* ActivitySpec.m */; };
 		6BD47E0D1484705A000ECE52 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD31484705A000ECE52 /* ColumnSpec.m */; };
 		6BD47E0E1484705A000ECE52 /* DataSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD41484705A000ECE52 /* DataSetSpec.m */; };
-		6BD47E0F1484705A000ECE52 /* ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD51484705A000ECE52 /* ExpanzDataTypeSpec.m */; };
+		6BD47E0F1484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */; };
 		6BD47E101484705A000ECE52 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD61484705A000ECE52 /* FieldSpec.m */; };
 		6BD47E111484705A000ECE52 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD71484705A000ECE52 /* ImageCellSpec.m */; };
 		6BD47E121484705A000ECE52 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD81484705A000ECE52 /* MenuSpec.m */; };
@@ -590,9 +590,9 @@
 		6BF58DC81444245C0063E805 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6BFACBA414679916007C7268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFACBA414679916007C726A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7267 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
-		6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
-		6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* ExpanzDataType.m */; };
+		6BFACBA414679916007C726C /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
+		6BFACBA414679916007C726E /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
+		6BFACBA414679916007C726F /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
 		6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixture_ViewController.m */; };
 		6BFACBA414679916007C727D /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727C /* TestResource.m */; };
 		6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
@@ -818,7 +818,7 @@
 				6B748A6614CD4A2100970C98 /* expanz_model_SessionContext.h in Copy Headers */,
 				6B748A6714CD4A2100970C98 /* expanz_model_TextCell.h in Copy Headers */,
 				6B748A6814CD4A2100970C98 /* expanz_model_UserRole.h in Copy Headers */,
-				6B748A6914CD4A2100970C98 /* ExpanzDataType.h in Copy Headers */,
+				6B748A6914CD4A2100970C98 /* NSString+ExpanzDataType.h in Copy Headers */,
 				6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
 				6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */,
 				6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
@@ -1037,7 +1037,7 @@
 		6BD47C5E1484703F000ECE52 /* expanz_model_TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TextCell.m; sourceTree = "<group>"; };
 		6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_UserRole.h; sourceTree = "<group>"; };
 		6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
-		6BD47C621484703F000ECE52 /* ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzDataType.h; sourceTree = "<group>"; };
+		6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzDataType.h"; sourceTree = "<group>"; };
 		6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
 		6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostActivityClient.h; sourceTree = "<group>"; };
 		6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostActivityClient.m; sourceTree = "<group>"; };
@@ -1084,7 +1084,7 @@
 		6BD47DD21484705A000ECE52 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
 		6BD47DD31484705A000ECE52 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
 		6BD47DD41484705A000ECE52 /* DataSetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSetSpec.m; sourceTree = "<group>"; };
-		6BD47DD51484705A000ECE52 /* ExpanzDataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataTypeSpec.m; sourceTree = "<group>"; };
+		6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataTypeSpec.m"; sourceTree = "<group>"; };
 		6BD47DD61484705A000ECE52 /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldSpec.m; sourceTree = "<group>"; };
 		6BD47DD71484705A000ECE52 /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
 		6BD47DD81484705A000ECE52 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSpec.m; sourceTree = "<group>"; };
@@ -1142,7 +1142,7 @@
 		6BF58BC814441E320063E805 /* AllTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		6BFACBA414679916007C726B /* ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpanzDataType.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataType.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7279 /* TestFixture_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixture_ViewController.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C727B /* TestFixture_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixture_ViewController.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C727C /* TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestResource.m; sourceTree = "<group>"; };
@@ -1677,7 +1677,7 @@
 				6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */,
 				6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */,
 				6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */,
-				6BFACBA414679916007C726B /* ExpanzDataType.m */,
+				6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */,
 				6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */,
 				6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */,
 				6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */,
@@ -1706,7 +1706,7 @@
 				6BD47C5E1484703F000ECE52 /* expanz_model_TextCell.m */,
 				6BD47C5F1484703F000ECE52 /* expanz_model_UserRole.h */,
 				6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */,
-				6BD47C621484703F000ECE52 /* ExpanzDataType.h */,
+				6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1882,7 +1882,7 @@
 				6BD47DD21484705A000ECE52 /* ActivitySpec.m */,
 				6BD47DD31484705A000ECE52 /* ColumnSpec.m */,
 				6BD47DD41484705A000ECE52 /* DataSetSpec.m */,
-				6BD47DD51484705A000ECE52 /* ExpanzDataTypeSpec.m */,
+				6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */,
 				6BD47DD61484705A000ECE52 /* FieldSpec.m */,
 				6BD47DD71484705A000ECE52 /* ImageCellSpec.m */,
 				6BD47DD81484705A000ECE52 /* MenuSpec.m */,
@@ -2175,7 +2175,7 @@
 				6BD47D0A1484703F000ECE52 /* expanz_model_SessionContext.h in Headers */,
 				6BD47D101484703F000ECE52 /* expanz_model_TextCell.h in Headers */,
 				6BD47D161484703F000ECE52 /* expanz_model_UserRole.h in Headers */,
-				6BD47D1E1484703F000ECE52 /* ExpanzDataType.h in Headers */,
+				6BD47D1E1484703F000ECE52 /* NSString+ExpanzDataType.h in Headers */,
 				6BD47D201484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */,
 				6BD47D221484703F000ECE52 /* expanz_service_XmlPostActivityClient.h in Headers */,
 				6BD47D281484703F000ECE52 /* expanz_service_CreateActivityRequest.h in Headers */,
@@ -2503,7 +2503,7 @@
 				6BD47D641484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6A1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D701484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BFACBA414679916007C726C /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C726C /* NSString+ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C7299 /* expanz_model_TreeData.m in Sources */,
@@ -2612,7 +2612,7 @@
 				6BD47D671484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6D1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BFACBA414679916007C726F /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C726F /* NSString+ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C728A /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7294 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729C /* expanz_model_TreeData.m in Sources */,
@@ -2735,7 +2735,7 @@
 				6BD47E0C1484705A000ECE52 /* ActivitySpec.m in Sources */,
 				6BD47E0D1484705A000ECE52 /* ColumnSpec.m in Sources */,
 				6BD47E0E1484705A000ECE52 /* DataSetSpec.m in Sources */,
-				6BD47E0F1484705A000ECE52 /* ExpanzDataTypeSpec.m in Sources */,
+				6BD47E0F1484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m in Sources */,
 				6BD47E101484705A000ECE52 /* FieldSpec.m in Sources */,
 				6BD47E111484705A000ECE52 /* ImageCellSpec.m in Sources */,
 				6BD47E121484705A000ECE52 /* MenuSpec.m in Sources */,
@@ -2763,7 +2763,7 @@
 				6BD47E291484705A000ECE52 /* IntegrationUtils.m in Sources */,
 				6BD47E2A1484705A000ECE52 /* StubActivityClientDelegate.m in Sources */,
 				6BD47E2B1484705A000ECE52 /* StubLoginClientDelegate.m in Sources */,
-				6BFACBA414679916007C726E /* ExpanzDataType.m in Sources */,
+				6BFACBA414679916007C726E /* NSString+ExpanzDataType.m in Sources */,
 				6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */,
 				6BFACBA414679916007C727D /* TestResource.m in Sources */,
 				6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */,

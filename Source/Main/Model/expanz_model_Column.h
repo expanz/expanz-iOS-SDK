@@ -11,7 +11,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "ExpanzDataType.h"
+#import "NSString+ExpanzDataType.h"
 
 @class expanz_model_GridData;
 

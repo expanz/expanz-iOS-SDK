@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "ExpanzDataType.h"
+#import "../../../Main/Model/NSString+ExpanzDataType.h"
 
 
-SPEC_BEGIN(ExpanzDataTypeSpec)
+SPEC_BEGIN(NSString_ExpanzDataType)
 
     describe(@"DataType from NSString", ^{
         
@@ -49,6 +49,21 @@ SPEC_BEGIN(ExpanzDataTypeSpec)
             assertThatInt([@"BOOL" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
             assertThatInt([@"BoOl" asExpanzDataType], equalToInt(ExpanzDataTypeBool));
         });
+
+        it(@"should return DataTypeDate", ^{
+            assertThatInt([@"date" asExpanzDataType], equalToInt(ExpanzDataTypeDate));
+            assertThatInt([@"Date" asExpanzDataType], equalToInt(ExpanzDataTypeDate));
+            assertThatInt([@"DATE" asExpanzDataType], equalToInt(ExpanzDataTypeDate));
+            assertThatInt([@"dAtE" asExpanzDataType], equalToInt(ExpanzDataTypeDate));
+        });
+
+        it(@"should return DataTypeDateTime", ^{
+            assertThatInt([@"datetime" asExpanzDataType], equalToInt(ExpanzDataTypeDateTime));
+            assertThatInt([@"DateTime" asExpanzDataType], equalToInt(ExpanzDataTypeDateTime));
+            assertThatInt([@"DATETIME" asExpanzDataType], equalToInt(ExpanzDataTypeDateTime));
+            assertThatInt([@"dAtEtImE" asExpanzDataType], equalToInt(ExpanzDataTypeDateTime));
+        });
+
 
     });
 
