@@ -66,7 +66,7 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         it(@"should map the other way - return a UITextField for an expanz_model_field. ", ^{
             Field* field = [modelAdapter.activityInstance fieldWithId:@"Op2"];
-            id textControl = [modelAdapter textInputControlFor:field];
+            id textControl = [modelAdapter textFieldFor:field];
             assertThat(textControl, notNilValue());
             LogDebug(@"Text Control: %@", textControl);
         });
@@ -107,7 +107,7 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         it(@"should return a UITableView corresponding to a DataSet", ^{
             GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"customersList"];
-            UITableView* tableView = [modelAdapter dataViewControlFor:dataSet];
+            UITableView* tableView = [modelAdapter tableViewFor:dataSet];
             assertThat(tableView, notNilValue());
         });
 

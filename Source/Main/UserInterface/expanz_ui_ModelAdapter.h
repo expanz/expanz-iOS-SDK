@@ -27,7 +27,7 @@
     NSMutableDictionary* _readOnlyTextFields;
     NSMutableDictionary* _imageFieldMappings;
     NSMutableDictionary* _labelMappings;
-    NSMutableDictionary* _dataSetMappings;
+    NSMutableDictionary* _tableViewMappings;
     NSMutableDictionary* _imageButtonMappings;
     NSMutableArray* _dataRenderers; 
 
@@ -36,6 +36,7 @@
 @property(nonatomic, strong, readonly) NSString* activityName;
 @property(nonatomic, weak, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, weak, readonly) expanz_ui_ActivityInstanceViewController* controller;
+
 
 /**
 * Initializes a model adapter for the given view controller.
@@ -47,22 +48,22 @@
 /**
  * Returns the UITextField corresponding to the model's field object.
  */
-- (UITextField*) textInputControlFor:(expanz_model_Field*)field;
-
-/** 
- * Returns the `expanz_model_Field` object corresponding to the UITextField object.
- */
-- (expanz_model_Field*) fieldFor:(UIView*)uiControl;
+- (UITextField*) textFieldFor:(expanz_model_Field*)field;
 
 /**
 * Returns the UITableView corresponding to the supplied `expanz_model_DataSet`.
 */
-- (UITableView*) dataViewControlFor:(expanz_model_GridData*)dataSet;
+- (UITableView*) tableViewFor:(expanz_model_GridData*)dataSet;
 
 /**
 * Returns the UIImageView underneath the touch area that allows editing the image.
 */
 - (UIImageView*) imageViewFor:(UIButton*)editButton;
+
+/**
+ * Returns the `expanz_model_Field` object corresponding to the UILabel, UITextField, UIImageView or UITableView object.
+ */
+- (expanz_model_Field*) fieldFor:(UIView*)uiView;
 
 /* ================================================================================================================== */
 #pragma mark Synchronizing control values with model values.

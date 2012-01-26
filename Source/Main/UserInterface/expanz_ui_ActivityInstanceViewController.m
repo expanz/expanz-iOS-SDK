@@ -228,7 +228,7 @@
 
     for (Field* field in activityInstance.fields) {
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
-        [[_modelAdapter textInputControlFor:field] setText:field.value];
+        [[_modelAdapter textFieldFor:field] setText:field.value];
     }
     //TODO: This should use id<expanz_ui_SystemEventReporter>
     for (Message* message in activityInstance.messages) {
@@ -278,7 +278,6 @@
     for (NSNumber* tag in [_subViewStateCache allKeys]) {
         UIView* view = [self.view viewWithTag:[tag intValue]];
         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];
-        LogDebug(@"Setting view with tag '%@' to hidden: %@", tag, hidden == YES ? @"YES" : @"NO");
         [view setHidden:hidden];
     }
     _subViewStateCache = nil;

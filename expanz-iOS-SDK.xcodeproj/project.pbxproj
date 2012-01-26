@@ -25,7 +25,6 @@
 
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
-		6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */; };
 		6B0E25B71445716800D34A22 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */; };
 		6B1107CA14CD3DDC00D0A4FE /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */; };
 		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
@@ -87,7 +86,6 @@
 		6B4EA62914CD4C2300E5B2D8 /* TBXML.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7201458EBB6001AF204 /* TBXML.h */; };
 		6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6B4EA62E14CD4C2300E5B2D8 /* NSData+Base64.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7266 /* NSData+Base64.h */; };
-		6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B748A0F14CD493600970C98 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
 		6B748A1014CD493600970C98 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7489EF14CD493600970C98 /* 37x-Checkmark.png */; };
@@ -444,50 +442,6 @@
 		6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */; };
 		6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */; };
 		6BD47DB61484703F000ECE52 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47CA11484703F000ECE52 /* xml_Serializable.h */; };
-		6BD47DFC1484705A000ECE52 /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DBA1484705A000ECE52 /* XmlPostActivityClientIntegration.m */; };
-		6BD47DFD1484705A000ECE52 /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DBB1484705A000ECE52 /* XmlPostLoginClientIntegration.m */; };
-		6BD47DFE1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DBC1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m */; };
-		6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DBE1484705A000ECE52 /* ActivityWithMessage.xml */; };
-		6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DBF1484705A000ECE52 /* Dodgy.xml */; };
-		6BD47E011484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC01484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml */; };
-		6BD47E021484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC11484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml */; };
-		6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC21484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml */; };
-		6BD47E041484705A000ECE52 /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47DC31484705A000ECE52 /* SessionData.xml */; };
-		6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */; };
-		6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */; };
-		6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */; };
-		6BD47E0C1484705A000ECE52 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD21484705A000ECE52 /* ActivitySpec.m */; };
-		6BD47E0D1484705A000ECE52 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD31484705A000ECE52 /* ColumnSpec.m */; };
-		6BD47E0E1484705A000ECE52 /* DataSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD41484705A000ECE52 /* DataSetSpec.m */; };
-		6BD47E0F1484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */; };
-		6BD47E101484705A000ECE52 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD61484705A000ECE52 /* FieldSpec.m */; };
-		6BD47E111484705A000ECE52 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD71484705A000ECE52 /* ImageCellSpec.m */; };
-		6BD47E121484705A000ECE52 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD81484705A000ECE52 /* MenuSpec.m */; };
-		6BD47E131484705A000ECE52 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DD91484705A000ECE52 /* MessageSpec.m */; };
-		6BD47E141484705A000ECE52 /* ProcessAreaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DDA1484705A000ECE52 /* ProcessAreaSpec.m */; };
-		6BD47E151484705A000ECE52 /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DDB1484705A000ECE52 /* RowSpec.m */; };
-		6BD47E161484705A000ECE52 /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DDC1484705A000ECE52 /* SessionContextSpec.m */; };
-		6BD47E171484705A000ECE52 /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DDD1484705A000ECE52 /* TextCellSpec.m */; };
-		6BD47E181484705A000ECE52 /* UserRoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DDE1484705A000ECE52 /* UserRoleSpec.m */; };
-		6BD47E191484705A000ECE52 /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE01484705A000ECE52 /* CreateActivityRequestSpec.m */; };
-		6BD47E1A1484705A000ECE52 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE11484705A000ECE52 /* DataPublicationRequestSpec.m */; };
-		6BD47E1B1484705A000ECE52 /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE21484705A000ECE52 /* DeltaRequestSpec.m */; };
-		6BD47E1C1484705A000ECE52 /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE31484705A000ECE52 /* MethodInvocationRequestSpec.m */; };
-		6BD47E1D1484705A000ECE52 /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE41484705A000ECE52 /* RXMLElement+ActivityInstanceSpec.m */; };
-		6BD47E1E1484705A000ECE52 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE51484705A000ECE52 /* RXMLElement+SessionContextSpec.m */; };
-		6BD47E1F1484705A000ECE52 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE61484705A000ECE52 /* RXMLElement+SessionDataSpec.m */; };
-		6BD47E201484705A000ECE52 /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE71484705A000ECE52 /* SessionDataRequestSpec.m */; };
-		6BD47E211484705A000ECE52 /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DE81484705A000ECE52 /* SessionRequestSpec.m */; };
-		6BD47E221484705A000ECE52 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DEA1484705A000ECE52 /* ActivityInstanceViewControllerSpec.m */; };
-		6BD47E231484705A000ECE52 /* UITableView+DataPublicationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DEC1484705A000ECE52 /* UITableView+DataPublicationSpec.m */; };
-		6BD47E241484705A000ECE52 /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DEE1484705A000ECE52 /* TextFieldTableCellSpec.m */; };
-		6BD47E251484705A000ECE52 /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DEF1484705A000ECE52 /* ThumbnailTableCellSpec.m */; };
-		6BD47E261484705A000ECE52 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF01484705A000ECE52 /* LoginViewControllerSpec.m */; };
-		6BD47E271484705A000ECE52 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF11484705A000ECE52 /* ModelAdapterSpec.m */; };
-		6BD47E291484705A000ECE52 /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF61484705A000ECE52 /* IntegrationUtils.m */; };
-		6BD47E2A1484705A000ECE52 /* StubActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DF91484705A000ECE52 /* StubActivityClientDelegate.m */; };
-		6BD47E2B1484705A000ECE52 /* StubLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47DFB1484705A000ECE52 /* StubLoginClientDelegate.m */; };
-		6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47E5D14848839000ECE52 /* TestFixtureView.xib */; };
 		6BD5430F14734FBD0014F148 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5431014734FBD0014F148 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C41458EBB5001AF204 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5431114734FBD0014F148 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6C61458EBB5001AF204 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -593,13 +547,10 @@
 		6BFACBA414679916007C726C /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
 		6BFACBA414679916007C726E /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
 		6BFACBA414679916007C726F /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */; };
-		6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7279 /* TestFixture_ViewController.m */; };
-		6BFACBA414679916007C727D /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C727C /* TestResource.m */; };
 		6BFACBA414679916007C7287 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
 		6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
 		6BFACBA414679916007C728A /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */; };
 		6BFACBA414679916007C728C /* expanz_model_ActivityStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */; };
-		6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */; };
 		6BFACBA414679916007C7291 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
 		6BFACBA414679916007C7293 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
 		6BFACBA414679916007C7294 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */; };
@@ -616,9 +567,6 @@
 		6BFACBA414679916007C72AB /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72A8 /* expanz_model_File.m */; };
 		6BFACBA414679916007C72AC /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72A8 /* expanz_model_File.m */; };
 		6BFACBA414679916007C72AE /* expanz_model_File.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
-		6BFACBA414679916007C72B1 /* TreeDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B0 /* TreeDataSpec.m */; };
-		6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B2 /* FolderSpec.m */; };
-		6BFACBA414679916007C72B5 /* FileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B4 /* FileSpec.m */; };
 		6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */; };
 		6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */; };
 		6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */; };
@@ -626,10 +574,6 @@
 		6BFACBA414679916007C72C3 /* expanz_service_ActivityClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6BFACBA414679916007C72C6 /* expanz_service_SessionDataClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
 		6BFACBA414679916007C72C9 /* expanz_service_LoginClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
-		6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */; };
-		6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */; };
-		6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */; };
-		6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */; };
 		6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
 		6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
 		6BFACBA414679916007C731F /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C731B /* expanz_service_FileRequest.m */; };
@@ -640,7 +584,6 @@
 		6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7328 /* expanz_service_FileDownloadRequest.m */; };
 		6BFACBA414679916007C732E /* expanz_service_FileDownloadRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
 		6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
-		6BFACBA414679916007C7334 /* FileDownloadRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */; };
 		6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
 		6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
 		6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
@@ -649,13 +592,10 @@
 		6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
 		6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
 		6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
-		6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7345 /* FileResourceSpec.m */; };
-		6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */; };
 		6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
 		6BFACBA414679916007C734D /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
 		6BFACBA414679916007C734E /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */; };
 		6BFACBA414679916007C7350 /* expanz_model_ResourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
-		6BFACBA414679916007C7353 /* ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */; };
 		6BFACBA414679916007C7355 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
 		6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
 		6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */; };
@@ -701,23 +641,92 @@
 		6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7741495FA01005D332F /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7751495FA01005D332F /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7381495FA01005D332F /* Objection.h */; };
-		6BFDE7761495FA01005D3333 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3332 /* Login.xib */; };
-		6BFDE7761495FA01005D3335 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */; };
-		6BFDE7761495FA01005D3339 /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */; };
-		6BFDE7761495FA01005D333D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D333C /* InfoPlist.strings */; };
-		6BFDE7761495FA01005D333F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D333E /* main.m */; };
-		6BFDE7761495FA01005D3345 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3344 /* DocumentView.xib */; };
-		6BFDE7761495FA01005D3347 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3346 /* Icon.png */; };
-		6BFDE7761495FA01005D3349 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3348 /* insurance.png */; };
-		6BFDE7761495FA01005D334B /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334A /* my details.png */; };
-		6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */; };
-		6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
 		6BFDE7761495FA01005D3352 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */; };
-		6BFDE7761495FA01005D3358 /* AbstractDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */; };
-		6BFDE7761495FA01005D335A /* configFile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3359 /* configFile.xml */; };
+		6BFDE7761495FA01005D335A /* XmlPostActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3359 /* XmlPostActivityClientIntegration.m */; };
+		6BFDE7761495FA01005D335C /* XmlPostLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D335B /* XmlPostLoginClientIntegration.m */; };
+		6BFDE7761495FA01005D335E /* XmlPostSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D335D /* XmlPostSessionDataClientIntegration.m */; };
+		6BFDE7761495FA01005D3361 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3360 /* ActivityWithFileResources.xml */; };
+		6BFDE7761495FA01005D3363 /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3362 /* ActivityWithMessage.xml */; };
+		6BFDE7761495FA01005D3365 /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3364 /* Dodgy.xml */; };
+		6BFDE7761495FA01005D3367 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3366 /* ESA_Sales_ActivityInstanceDetail.xml */; };
+		6BFDE7761495FA01005D3369 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3368 /* ESA_Sales_Calc_ActivityInstance.xml */; };
+		6BFDE7761495FA01005D336B /* ESA_Sales_Customer_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D336A /* ESA_Sales_Customer_ActivityInstance.xml */; };
+		6BFDE7761495FA01005D336D /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D336C /* Login.xib */; };
+		6BFDE7761495FA01005D336F /* SessionData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D336E /* SessionData.xml */; };
+		6BFDE7761495FA01005D3371 /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3370 /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */; };
+		6BFDE7761495FA01005D3373 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3372 /* Thermomix_TMXConsultant_MyDetails.xml */; };
+		6BFDE7761495FA01005D3375 /* configFile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3374 /* configFile.xml */; };
+		6BFDE7761495FA01005D3379 /* SDKAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3378 /* SDKAppDelegateSpec.m */; };
+		6BFDE7761495FA01005D337B /* SDKConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D337A /* SDKConfigurationSpec.m */; };
+		6BFDE7761495FA01005D337E /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D337D /* ActivityInstanceSpec.m */; };
+		6BFDE7761495FA01005D3380 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D337F /* ActivitySpec.m */; };
+		6BFDE7761495FA01005D3382 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3381 /* ColumnSpec.m */; };
+		6BFDE7761495FA01005D3384 /* DataSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3383 /* DataSetSpec.m */; };
+		6BFDE7761495FA01005D3386 /* NSString+ExpanzDataTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3385 /* NSString+ExpanzDataTypeSpec.m */; };
+		6BFDE7761495FA01005D3388 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3387 /* FieldSpec.m */; };
+		6BFDE7761495FA01005D338A /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3389 /* FileResourceSpec.m */; };
+		6BFDE7761495FA01005D338C /* FileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D338B /* FileSpec.m */; };
+		6BFDE7761495FA01005D338E /* FolderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D338D /* FolderSpec.m */; };
+		6BFDE7761495FA01005D3390 /* ImageCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D338F /* ImageCellSpec.m */; };
+		6BFDE7761495FA01005D3392 /* MenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3391 /* MenuSpec.m */; };
+		6BFDE7761495FA01005D3394 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3393 /* MessageSpec.m */; };
+		6BFDE7761495FA01005D3396 /* ProcessAreaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3395 /* ProcessAreaSpec.m */; };
+		6BFDE7761495FA01005D3398 /* ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3397 /* ResourceCollectionSpec.m */; };
+		6BFDE7761495FA01005D339A /* RowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3399 /* RowSpec.m */; };
+		6BFDE7761495FA01005D339C /* SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D339B /* SessionContextSpec.m */; };
+		6BFDE7761495FA01005D339E /* TextCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D339D /* TextCellSpec.m */; };
+		6BFDE7761495FA01005D33A0 /* TreeDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D339F /* TreeDataSpec.m */; };
+		6BFDE7761495FA01005D33A2 /* UserRoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33A1 /* UserRoleSpec.m */; };
+		6BFDE7761495FA01005D33A4 /* AbstractDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33A3 /* AbstractDataSpec.m */; };
+		6BFDE7761495FA01005D33A7 /* CreateActivityRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33A6 /* CreateActivityRequestSpec.m */; };
+		6BFDE7761495FA01005D33A9 /* DataPublicationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33A8 /* DataPublicationRequestSpec.m */; };
+		6BFDE7761495FA01005D33AB /* DeltaRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33AA /* DeltaRequestSpec.m */; };
+		6BFDE7761495FA01005D33AD /* FileDownloadRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33AC /* FileDownloadRequestSpec.m */; };
+		6BFDE7761495FA01005D33AF /* FileRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33AE /* FileRequestSpec.m */; };
+		6BFDE7761495FA01005D33B1 /* MethodInvocationRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33B0 /* MethodInvocationRequestSpec.m */; };
+		6BFDE7761495FA01005D33B3 /* RXMLElement+ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33B2 /* RXMLElement+ActivityInstanceSpec.m */; };
+		6BFDE7761495FA01005D33B5 /* RXMLElement+SessionContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33B4 /* RXMLElement+SessionContextSpec.m */; };
+		6BFDE7761495FA01005D33B7 /* RXMLElement+SessionDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33B6 /* RXMLElement+SessionDataSpec.m */; };
+		6BFDE7761495FA01005D33B9 /* RXMLElement_ResourceCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33B8 /* RXMLElement_ResourceCollectionSpec.m */; };
+		6BFDE7761495FA01005D33BB /* SessionDataRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33BA /* SessionDataRequestSpec.m */; };
+		6BFDE7761495FA01005D33BD /* SessionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33BC /* SessionRequestSpec.m */; };
+		6BFDE7761495FA01005D33C0 /* ActivityInstanceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33BF /* ActivityInstanceViewControllerSpec.m */; };
+		6BFDE7761495FA01005D33C2 /* ActivityManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33C1 /* ActivityManagerSpec.m */; };
+		6BFDE7761495FA01005D33C4 /* AlertBoxSystemEventReporterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33C3 /* AlertBoxSystemEventReporterSpec.m */; };
+		6BFDE7761495FA01005D33C7 /* UITableView+DataPublicationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33C6 /* UITableView+DataPublicationSpec.m */; };
+		6BFDE7761495FA01005D33CA /* TextFieldTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33C9 /* TextFieldTableCellSpec.m */; };
+		6BFDE7761495FA01005D33CC /* ThumbnailTableCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33CB /* ThumbnailTableCellSpec.m */; };
+		6BFDE7761495FA01005D33CE /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33CD /* LoginViewControllerSpec.m */; };
+		6BFDE7761495FA01005D33D0 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33CF /* ModelAdapterSpec.m */; };
+		6BFDE7761495FA01005D33D3 /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33D2 /* TestFixture_ViewController.m */; };
+		6BFDE7761495FA01005D33D5 /* TestFixtureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33D4 /* TestFixtureView.xib */; };
+		6BFDE7761495FA01005D33D9 /* CedarApplicationDelegate+Expanz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33D8 /* CedarApplicationDelegate+Expanz.m */; };
+		6BFDE7761495FA01005D33DC /* IntegrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33DB /* IntegrationUtils.m */; };
+		6BFDE7761495FA01005D33E0 /* StubActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33DF /* StubActivityClientDelegate.m */; };
+		6BFDE7761495FA01005D33E3 /* StubLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33E2 /* StubLoginClientDelegate.m */; };
+		6BFDE7761495FA01005D33E6 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33E5 /* StubSystemEventReporter.m */; };
+		6BFDE7761495FA01005D33E9 /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33E8 /* TestResource.m */; };
+		6BFDE7761495FA01005D33ED /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33EC /* ActivityHarnessApplicationDelegate.m */; };
+		6BFDE7761495FA01005D33F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33F0 /* InfoPlist.strings */; };
+		6BFDE7761495FA01005D33F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33F2 /* main.m */; };
+		6BFDE7761495FA01005D33F5 /* TestRunner-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33F4 /* TestRunner-Info.plist */; };
+		6BFDE7761495FA01005D33F9 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33F8 /* DocumentView.xib */; };
+		6BFDE7761495FA01005D33FB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33FA /* Icon.png */; };
+		6BFDE7761495FA01005D33FD /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33FC /* insurance.png */; };
+		6BFDE7761495FA01005D33FF /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33FE /* my details.png */; };
+		6BFDE7761495FA01005D3401 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3400 /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6BFDE7761495FA01005D3404 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3403 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
+		6BFDE7761495FA01005D3406 /* UILabel+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3407 /* UILabel+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D340C /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
+		6BFDE7761495FA01005D340D /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
+		6BFDE7761495FA01005D340E /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
+		6BFDE7761495FA01005D3410 /* UIView+ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */; };
+		6BFDE7761495FA01005D3412 /* UITextField+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3413 /* UITextField+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -913,7 +922,6 @@
 		6B932F2F1433F97900834A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B932F311433F98400834A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileRequestSpec.m; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../Developer/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6BC9F6C01458EBB5001AF204 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		6BC9F6C11458EBB5001AF204 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -1071,54 +1079,6 @@
 		6BD47C861484703F000ECE52 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
 		6BD47CA01484703F000ECE52 /* CAFilter+Unlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAFilter+Unlock.h"; sourceTree = "<group>"; };
 		6BD47CA11484703F000ECE52 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
-		6BD47DBA1484705A000ECE52 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
-		6BD47DBB1484705A000ECE52 /* XmlPostLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostLoginClientIntegration.m; sourceTree = "<group>"; };
-		6BD47DBC1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlPostSessionDataClientIntegration.m; sourceTree = "<group>"; };
-		6BD47DBE1484705A000ECE52 /* ActivityWithMessage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithMessage.xml; sourceTree = "<group>"; };
-		6BD47DBF1484705A000ECE52 /* Dodgy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dodgy.xml; sourceTree = "<group>"; };
-		6BD47DC01484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_ActivityInstanceDetail.xml; sourceTree = "<group>"; };
-		6BD47DC11484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Calc_ActivityInstance.xml; sourceTree = "<group>"; };
-		6BD47DC21484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
-		6BD47DC31484705A000ECE52 /* SessionData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SessionData.xml; sourceTree = "<group>"; };
-		6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegateSpec.m; sourceTree = "<group>"; };
-		6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKConfigurationSpec.m; sourceTree = "<group>"; };
-		6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
-		6BD47DD21484705A000ECE52 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
-		6BD47DD31484705A000ECE52 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
-		6BD47DD41484705A000ECE52 /* DataSetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSetSpec.m; sourceTree = "<group>"; };
-		6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataTypeSpec.m"; sourceTree = "<group>"; };
-		6BD47DD61484705A000ECE52 /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldSpec.m; sourceTree = "<group>"; };
-		6BD47DD71484705A000ECE52 /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCellSpec.m; sourceTree = "<group>"; };
-		6BD47DD81484705A000ECE52 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSpec.m; sourceTree = "<group>"; };
-		6BD47DD91484705A000ECE52 /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSpec.m; sourceTree = "<group>"; };
-		6BD47DDA1484705A000ECE52 /* ProcessAreaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessAreaSpec.m; sourceTree = "<group>"; };
-		6BD47DDB1484705A000ECE52 /* RowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpec.m; sourceTree = "<group>"; };
-		6BD47DDC1484705A000ECE52 /* SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContextSpec.m; sourceTree = "<group>"; };
-		6BD47DDD1484705A000ECE52 /* TextCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCellSpec.m; sourceTree = "<group>"; };
-		6BD47DDE1484705A000ECE52 /* UserRoleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRoleSpec.m; sourceTree = "<group>"; };
-		6BD47DE01484705A000ECE52 /* CreateActivityRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateActivityRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DE11484705A000ECE52 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPublicationRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DE21484705A000ECE52 /* DeltaRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeltaRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DE31484705A000ECE52 /* MethodInvocationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodInvocationRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DE41484705A000ECE52 /* RXMLElement+ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstanceSpec.m"; sourceTree = "<group>"; };
-		6BD47DE51484705A000ECE52 /* RXMLElement+SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContextSpec.m"; sourceTree = "<group>"; };
-		6BD47DE61484705A000ECE52 /* RXMLElement+SessionDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionDataSpec.m"; sourceTree = "<group>"; };
-		6BD47DE71484705A000ECE52 /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDataRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DE81484705A000ECE52 /* SessionRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRequestSpec.m; sourceTree = "<group>"; };
-		6BD47DEA1484705A000ECE52 /* ActivityInstanceViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceViewControllerSpec.m; sourceTree = "<group>"; };
-		6BD47DEC1484705A000ECE52 /* UITableView+DataPublicationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataPublicationSpec.m"; sourceTree = "<group>"; };
-		6BD47DEE1484705A000ECE52 /* TextFieldTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableCellSpec.m; sourceTree = "<group>"; };
-		6BD47DEF1484705A000ECE52 /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
-		6BD47DF01484705A000ECE52 /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
-		6BD47DF11484705A000ECE52 /* ModelAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAdapterSpec.m; sourceTree = "<group>"; };
-		6BD47DF51484705A000ECE52 /* IntegrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationUtils.h; sourceTree = "<group>"; };
-		6BD47DF61484705A000ECE52 /* IntegrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationUtils.m; sourceTree = "<group>"; };
-		6BD47DF71484705A000ECE52 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
-		6BD47DF81484705A000ECE52 /* StubActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubActivityClientDelegate.h; sourceTree = "<group>"; };
-		6BD47DF91484705A000ECE52 /* StubActivityClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubActivityClientDelegate.m; sourceTree = "<group>"; };
-		6BD47DFA1484705A000ECE52 /* StubLoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubLoginClientDelegate.h; sourceTree = "<group>"; };
-		6BD47DFB1484705A000ECE52 /* StubLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubLoginClientDelegate.m; sourceTree = "<group>"; };
-		6BD47E5D14848839000ECE52 /* TestFixtureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixtureView.xib; sourceTree = "<group>"; };
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
@@ -1145,13 +1105,8 @@
 		6BFACBA414679916007C7266 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7267 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C726B /* NSString+ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataType.m"; sourceTree = "<group>"; };
-		6BFACBA414679916007C7279 /* TestFixture_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixture_ViewController.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C727B /* TestFixture_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixture_ViewController.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C727C /* TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestResource.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C727E /* TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResource.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7286 /* expanz_model_ActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityStyle.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C728B /* expanz_model_ActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityStyle.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml; sourceTree = "<group>"; };
 		6BFACBA414679916007C7290 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7295 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7298 /* expanz_model_TreeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TreeData.m; sourceTree = "<group>"; };
@@ -1160,39 +1115,25 @@
 		6BFACBA414679916007C72A5 /* expanz_model_Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Folder.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72A8 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_File.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72AD /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_File.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72B0 /* TreeDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDataSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72B2 /* FolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72B4 /* FileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72B6 /* expanz_model_DataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataBuilder.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C72BB /* expanz_model_DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataBuilder.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClientDelegate.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClientDelegate.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubSystemEventReporter.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72D8 /* StubSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubSystemEventReporter.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityManagerSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CedarApplicationDelegate+Expanz.m"; sourceTree = "<group>"; };
-		6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CedarApplicationDelegate+Expanz.h"; sourceTree = "<group>"; };
-		6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBoxSystemEventReporterSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C731B /* expanz_service_FileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileRequest.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileRequest.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadClient.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7328 /* expanz_service_FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileDownloadRequest.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadRequest.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadClientDelegate.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequestSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostFileDownloadClient.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostFileDownloadClient.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C733D /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7342 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7345 /* FileResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileResourceSpec.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithFileResources.xml; sourceTree = "<group>"; };
 		6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ResourceCollection.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceCollectionSpec.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7354 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RXMLElement+ResourceCollection.m"; path = "../../Activity/Payload/RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
 		6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RXMLElement+ResourceCollection.h"; path = "../../Activity/Payload/RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
-		6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ResourceCollectionSpec.m; sourceTree = "<group>"; };
 		6BFDE7241495FA01005D332F /* JSObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectFactory.h; sourceTree = "<group>"; };
 		6BFDE7251495FA01005D332F /* JSObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectFactory.m; sourceTree = "<group>"; };
 		6BFDE7261495FA01005D332F /* JSObjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjection.h; sourceTree = "<group>"; };
@@ -1214,25 +1155,95 @@
 		6BFDE7361495FA01005D332F /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
 		6BFDE7371495FA01005D332F /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BFDE7381495FA01005D332F /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3332 /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Thermomix_TMXConsultant_MyDetails.xml; path = ../Resources/Thermomix_TMXConsultant_MyDetails.xml; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3337 /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D333B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D333E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3340 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "TestRunner-Info.plist"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3342 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestRunner-Prefix.pch"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3344 /* DocumentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3346 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3348 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D334A /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D334E /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextFieldDelegateUtils.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDataSpec.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3359 /* configFile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = configFile.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3359 /* XmlPostActivityClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XmlPostActivityClientIntegration.m; path = Source/Tests/Integration/XmlPostActivityClientIntegration.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D335B /* XmlPostLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XmlPostLoginClientIntegration.m; path = Source/Tests/Integration/XmlPostLoginClientIntegration.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D335D /* XmlPostSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XmlPostSessionDataClientIntegration.m; path = Source/Tests/Integration/XmlPostSessionDataClientIntegration.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3360 /* ActivityWithFileResources.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ActivityWithFileResources.xml; path = Source/Tests/Resources/ActivityWithFileResources.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3362 /* ActivityWithMessage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ActivityWithMessage.xml; path = Source/Tests/Resources/ActivityWithMessage.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3364 /* Dodgy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Dodgy.xml; path = Source/Tests/Resources/Dodgy.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3366 /* ESA_Sales_ActivityInstanceDetail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ESA_Sales_ActivityInstanceDetail.xml; path = Source/Tests/Resources/ESA_Sales_ActivityInstanceDetail.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3368 /* ESA_Sales_Calc_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ESA_Sales_Calc_ActivityInstance.xml; path = Source/Tests/Resources/ESA_Sales_Calc_ActivityInstance.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D336A /* ESA_Sales_Customer_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ESA_Sales_Customer_ActivityInstance.xml; path = Source/Tests/Resources/ESA_Sales_Customer_ActivityInstance.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D336C /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Login.xib; path = Source/Tests/Resources/Login.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D336E /* SessionData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SessionData.xml; path = Source/Tests/Resources/SessionData.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3370 /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml; path = Source/Tests/Resources/Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3372 /* Thermomix_TMXConsultant_MyDetails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Thermomix_TMXConsultant_MyDetails.xml; path = Source/Tests/Resources/Thermomix_TMXConsultant_MyDetails.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3374 /* configFile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = configFile.xml; path = Source/Tests/Resources/configFile.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3378 /* SDKAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKAppDelegateSpec.m; path = "Source/Tests/Unit/expanz-iOS-SDK/SDKAppDelegateSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D337A /* SDKConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKConfigurationSpec.m; path = "Source/Tests/Unit/expanz-iOS-SDK/SDKConfigurationSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D337D /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityInstanceSpec.m; path = Source/Tests/Unit/Model/ActivityInstanceSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D337F /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivitySpec.m; path = Source/Tests/Unit/Model/ActivitySpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3381 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnSpec.m; path = Source/Tests/Unit/Model/ColumnSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3383 /* DataSetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSetSpec.m; path = Source/Tests/Unit/Model/DataSetSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3385 /* NSString+ExpanzDataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ExpanzDataTypeSpec.m"; path = "Source/Tests/Unit/Model/NSString+ExpanzDataTypeSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3387 /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FieldSpec.m; path = Source/Tests/Unit/Model/FieldSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3389 /* FileResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileResourceSpec.m; path = Source/Tests/Unit/Model/FileResourceSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D338B /* FileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileSpec.m; path = Source/Tests/Unit/Model/FileSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D338D /* FolderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderSpec.m; path = Source/Tests/Unit/Model/FolderSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D338F /* ImageCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCellSpec.m; path = Source/Tests/Unit/Model/ImageCellSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3391 /* MenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuSpec.m; path = Source/Tests/Unit/Model/MenuSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3393 /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageSpec.m; path = Source/Tests/Unit/Model/MessageSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3395 /* ProcessAreaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProcessAreaSpec.m; path = Source/Tests/Unit/Model/ProcessAreaSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3397 /* ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResourceCollectionSpec.m; path = Source/Tests/Unit/Model/ResourceCollectionSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3399 /* RowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RowSpec.m; path = Source/Tests/Unit/Model/RowSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D339B /* SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionContextSpec.m; path = Source/Tests/Unit/Model/SessionContextSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D339D /* TextCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCellSpec.m; path = Source/Tests/Unit/Model/TextCellSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D339F /* TreeDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeDataSpec.m; path = Source/Tests/Unit/Model/TreeDataSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33A1 /* UserRoleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRoleSpec.m; path = Source/Tests/Unit/Model/UserRoleSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33A3 /* AbstractDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractDataSpec.m; path = Source/Tests/Unit/Model/AbstractDataSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33A6 /* CreateActivityRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateActivityRequestSpec.m; path = Source/Tests/Unit/Services/CreateActivityRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33A8 /* DataPublicationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataPublicationRequestSpec.m; path = Source/Tests/Unit/Services/DataPublicationRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33AA /* DeltaRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeltaRequestSpec.m; path = Source/Tests/Unit/Services/DeltaRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33AC /* FileDownloadRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileDownloadRequestSpec.m; path = Source/Tests/Unit/Services/FileDownloadRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33AE /* FileRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileRequestSpec.m; path = Source/Tests/Unit/Services/FileRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33B0 /* MethodInvocationRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MethodInvocationRequestSpec.m; path = Source/Tests/Unit/Services/MethodInvocationRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33B2 /* RXMLElement+ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RXMLElement+ActivityInstanceSpec.m"; path = "Source/Tests/Unit/Services/RXMLElement+ActivityInstanceSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33B4 /* RXMLElement+SessionContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RXMLElement+SessionContextSpec.m"; path = "Source/Tests/Unit/Services/RXMLElement+SessionContextSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33B6 /* RXMLElement+SessionDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RXMLElement+SessionDataSpec.m"; path = "Source/Tests/Unit/Services/RXMLElement+SessionDataSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33B8 /* RXMLElement_ResourceCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXMLElement_ResourceCollectionSpec.m; path = Source/Tests/Unit/Services/RXMLElement_ResourceCollectionSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33BA /* SessionDataRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionDataRequestSpec.m; path = Source/Tests/Unit/Services/SessionDataRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33BC /* SessionRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionRequestSpec.m; path = Source/Tests/Unit/Services/SessionRequestSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33BF /* ActivityInstanceViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityInstanceViewControllerSpec.m; path = Source/Tests/Unit/UserInterface/ActivityInstanceViewControllerSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33C1 /* ActivityManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityManagerSpec.m; path = Source/Tests/Unit/UserInterface/ActivityManagerSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33C3 /* AlertBoxSystemEventReporterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertBoxSystemEventReporterSpec.m; path = Source/Tests/Unit/UserInterface/AlertBoxSystemEventReporterSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33C6 /* UITableView+DataPublicationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+DataPublicationSpec.m"; path = "Source/Tests/Unit/UserInterface/Categories/UITableView+DataPublicationSpec.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33C9 /* TextFieldTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldTableCellSpec.m; path = Source/Tests/Unit/UserInterface/Components/TextFieldTableCellSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33CB /* ThumbnailTableCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbnailTableCellSpec.m; path = Source/Tests/Unit/UserInterface/Components/ThumbnailTableCellSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33CD /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewControllerSpec.m; path = Source/Tests/Unit/UserInterface/LoginViewControllerSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33CF /* ModelAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelAdapterSpec.m; path = Source/Tests/Unit/UserInterface/ModelAdapterSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33D1 /* TestFixture_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFixture_ViewController.h; path = Source/Tests/Unit/UserInterface/TestFixture_ViewController.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33D2 /* TestFixture_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestFixture_ViewController.m; path = Source/Tests/Unit/UserInterface/TestFixture_ViewController.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33D4 /* TestFixtureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TestFixtureView.xib; path = Source/Tests/Unit/UserInterface/TestFixtureView.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33D7 /* CedarApplicationDelegate+Expanz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CedarApplicationDelegate+Expanz.h"; path = "Source/Tests/Utils/CedarApplicationDelegate+Expanz.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33D8 /* CedarApplicationDelegate+Expanz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CedarApplicationDelegate+Expanz.m"; path = "Source/Tests/Utils/CedarApplicationDelegate+Expanz.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33DA /* IntegrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntegrationUtils.h; path = Source/Tests/Utils/IntegrationUtils.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33DB /* IntegrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntegrationUtils.m; path = Source/Tests/Utils/IntegrationUtils.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33DD /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecHelper.h; path = Source/Tests/Utils/SpecHelper.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33DE /* StubActivityClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StubActivityClientDelegate.h; path = Source/Tests/Utils/StubActivityClientDelegate.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33DF /* StubActivityClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StubActivityClientDelegate.m; path = Source/Tests/Utils/StubActivityClientDelegate.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E1 /* StubLoginClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StubLoginClientDelegate.h; path = Source/Tests/Utils/StubLoginClientDelegate.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E2 /* StubLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StubLoginClientDelegate.m; path = Source/Tests/Utils/StubLoginClientDelegate.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E4 /* StubSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StubSystemEventReporter.h; path = Source/Tests/Utils/StubSystemEventReporter.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E5 /* StubSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StubSystemEventReporter.m; path = Source/Tests/Utils/StubSystemEventReporter.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E7 /* TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestResource.h; path = Source/Tests/Utils/TestResource.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33E8 /* TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestResource.m; path = Source/Tests/Utils/TestResource.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33EB /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityHarnessApplicationDelegate.h; path = Source/Tests/TestRunner/ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33EC /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityHarnessApplicationDelegate.m; path = Source/Tests/TestRunner/ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33EF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Source/Tests/TestRunner/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33F2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Tests/TestRunner/main.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33F4 /* TestRunner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = "TestRunner-Info.plist"; path = "Source/Tests/TestRunner/TestRunner-Info.plist"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33F6 /* TestRunner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestRunner-Prefix.pch"; path = "Source/Tests/TestRunner/TestRunner-Prefix.pch"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33F8 /* DocumentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentView.xib; path = Source/Tests/HarnessActivities/DocumentView.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33FA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Source/Tests/HarnessActivities/Icon.png; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33FC /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insurance.png; path = Source/Tests/HarnessActivities/insurance.png; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D33FE /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "my details.png"; path = "Source/Tests/HarnessActivities/my details.png"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3400 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Thermomix.TMXConsultant.MyDetails.xib; path = Source/Tests/HarnessActivities/Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3402 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thermomix_TMXConsultant_MyDetails_ViewController.h; path = Source/Tests/HarnessActivities/Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3403 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thermomix_TMXConsultant_MyDetails_ViewController.m; path = Source/Tests/HarnessActivities/Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModelAdapter.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModelAdapter.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1307,6 +1318,8 @@
 		6B7489ED14CD493600970C98 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */,
+				6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */,
 				6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */,
 				6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */,
 				6B7489EE14CD493600970C98 /* Assets */,
@@ -1371,8 +1384,8 @@
 			isa = PBXGroup;
 			children = (
 				6BDAB0121499828800541056 /* Examples */,
-				6BD47DB81484705A000ECE52 /* Tests */,
 				6BD47C341484703F000ECE52 /* Main */,
+				6BFDE7761495FA01005D3357 /* Tests */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1814,167 +1827,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		6BD47DB81484705A000ECE52 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DB91484705A000ECE52 /* Integration */,
-				6BD47DBD1484705A000ECE52 /* Resources */,
-				6BD47DCC1484705A000ECE52 /* Unit */,
-				6BD47DF41484705A000ECE52 /* Utils */,
-				6BFDE7761495FA01005D3336 /* TestRunner */,
-				6BFDE7761495FA01005D3343 /* HarnessActivities */,
-			);
-			name = Tests;
-			path = Source/Tests;
-			sourceTree = "<group>";
-		};
-		6BD47DB91484705A000ECE52 /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DBA1484705A000ECE52 /* XmlPostActivityClientIntegration.m */,
-				6BD47DBB1484705A000ECE52 /* XmlPostLoginClientIntegration.m */,
-				6BD47DBC1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m */,
-			);
-			path = Integration;
-			sourceTree = "<group>";
-		};
-		6BD47DBD1484705A000ECE52 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6BFDE7761495FA01005D3359 /* configFile.xml */,
-				6BFDE7761495FA01005D3332 /* Login.xib */,
-				6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */,
-				6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */,
-				6BD47DBE1484705A000ECE52 /* ActivityWithMessage.xml */,
-				6BD47DBF1484705A000ECE52 /* Dodgy.xml */,
-				6BD47DC01484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml */,
-				6BD47DC11484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml */,
-				6BD47DC21484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml */,
-				6BD47DC31484705A000ECE52 /* SessionData.xml */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		6BD47DCC1484705A000ECE52 /* Unit */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DCD1484705A000ECE52 /* expanz-iOS-SDK */,
-				6BD47DD01484705A000ECE52 /* Model */,
-				6BD47DDF1484705A000ECE52 /* Services */,
-				6BD47DE91484705A000ECE52 /* UserInterface */,
-			);
-			path = Unit;
-			sourceTree = "<group>";
-		};
-		6BD47DCD1484705A000ECE52 /* expanz-iOS-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DCE1484705A000ECE52 /* SDKAppDelegateSpec.m */,
-				6BD47DCF1484705A000ECE52 /* SDKConfigurationSpec.m */,
-			);
-			path = "expanz-iOS-SDK";
-			sourceTree = "<group>";
-		};
-		6BD47DD01484705A000ECE52 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */,
-				6BFACBA414679916007C7352 /* ResourceCollectionSpec.m */,
-				6BFACBA414679916007C7345 /* FileResourceSpec.m */,
-				6BFACBA414679916007C72B4 /* FileSpec.m */,
-				6BFACBA414679916007C72B2 /* FolderSpec.m */,
-				6BFACBA414679916007C72B0 /* TreeDataSpec.m */,
-				6BD47DD11484705A000ECE52 /* ActivityInstanceSpec.m */,
-				6BD47DD21484705A000ECE52 /* ActivitySpec.m */,
-				6BD47DD31484705A000ECE52 /* ColumnSpec.m */,
-				6BD47DD41484705A000ECE52 /* DataSetSpec.m */,
-				6BD47DD51484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m */,
-				6BD47DD61484705A000ECE52 /* FieldSpec.m */,
-				6BD47DD71484705A000ECE52 /* ImageCellSpec.m */,
-				6BD47DD81484705A000ECE52 /* MenuSpec.m */,
-				6BD47DD91484705A000ECE52 /* MessageSpec.m */,
-				6BD47DDA1484705A000ECE52 /* ProcessAreaSpec.m */,
-				6BD47DDB1484705A000ECE52 /* RowSpec.m */,
-				6BD47DDC1484705A000ECE52 /* SessionContextSpec.m */,
-				6BD47DDD1484705A000ECE52 /* TextCellSpec.m */,
-				6BD47DDE1484705A000ECE52 /* UserRoleSpec.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6BD47DDF1484705A000ECE52 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				6BFACBA414679916007C735C /* RXMLElement_ResourceCollectionSpec.m */,
-				6BFACBA414679916007C7333 /* FileDownloadRequestSpec.m */,
-				6B9F5EA8148E52E6008FBAAF /* FileRequestSpec.m */,
-				6BD47DE01484705A000ECE52 /* CreateActivityRequestSpec.m */,
-				6BD47DE11484705A000ECE52 /* DataPublicationRequestSpec.m */,
-				6BD47DE21484705A000ECE52 /* DeltaRequestSpec.m */,
-				6BD47DE31484705A000ECE52 /* MethodInvocationRequestSpec.m */,
-				6BD47DE41484705A000ECE52 /* RXMLElement+ActivityInstanceSpec.m */,
-				6BD47DE51484705A000ECE52 /* RXMLElement+SessionContextSpec.m */,
-				6BD47DE61484705A000ECE52 /* RXMLElement+SessionDataSpec.m */,
-				6BD47DE71484705A000ECE52 /* SessionDataRequestSpec.m */,
-				6BD47DE81484705A000ECE52 /* SessionRequestSpec.m */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		6BD47DE91484705A000ECE52 /* UserInterface */ = {
-			isa = PBXGroup;
-			children = (
-				6BFACBA414679916007C72DE /* AlertBoxSystemEventReporterSpec.m */,
-				6BFACBA414679916007C72D9 /* ActivityManagerSpec.m */,
-				6BFACBA414679916007C727B /* TestFixture_ViewController.h */,
-				6BFACBA414679916007C7279 /* TestFixture_ViewController.m */,
-				6BD47DEA1484705A000ECE52 /* ActivityInstanceViewControllerSpec.m */,
-				6BD47DEB1484705A000ECE52 /* Categories */,
-				6BD47DED1484705A000ECE52 /* Components */,
-				6BD47DF01484705A000ECE52 /* LoginViewControllerSpec.m */,
-				6BD47DF11484705A000ECE52 /* ModelAdapterSpec.m */,
-				6BD47E5D14848839000ECE52 /* TestFixtureView.xib */,
-			);
-			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		6BD47DEB1484705A000ECE52 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DEC1484705A000ECE52 /* UITableView+DataPublicationSpec.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		6BD47DED1484705A000ECE52 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				6BD47DEE1484705A000ECE52 /* TextFieldTableCellSpec.m */,
-				6BD47DEF1484705A000ECE52 /* ThumbnailTableCellSpec.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		6BD47DF41484705A000ECE52 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				6BFACBA414679916007C72DD /* CedarApplicationDelegate+Expanz.h */,
-				6BFACBA414679916007C72DB /* CedarApplicationDelegate+Expanz.m */,
-				6BFACBA414679916007C72D8 /* StubSystemEventReporter.h */,
-				6BFACBA414679916007C72D6 /* StubSystemEventReporter.m */,
-				6BFACBA414679916007C727E /* TestResource.h */,
-				6BFACBA414679916007C727C /* TestResource.m */,
-				6BD47DF51484705A000ECE52 /* IntegrationUtils.h */,
-				6BD47DF61484705A000ECE52 /* IntegrationUtils.m */,
-				6BD47DF71484705A000ECE52 /* SpecHelper.h */,
-				6BD47DF81484705A000ECE52 /* StubActivityClientDelegate.h */,
-				6BD47DF91484705A000ECE52 /* StubActivityClientDelegate.m */,
-				6BD47DFA1484705A000ECE52 /* StubLoginClientDelegate.h */,
-				6BD47DFB1484705A000ECE52 /* StubLoginClientDelegate.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		6BDAB0121499828800541056 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
@@ -2080,40 +1932,200 @@
 			path = objection;
 			sourceTree = "<group>";
 		};
-		6BFDE7761495FA01005D3336 /* TestRunner */ = {
+		6BFDE7761495FA01005D3357 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D3342 /* TestRunner-Prefix.pch */,
-				6BFDE7761495FA01005D3340 /* TestRunner-Info.plist */,
-				6BFDE7761495FA01005D333E /* main.m */,
-				6BFDE7761495FA01005D3338 /* ActivityHarnessApplicationDelegate.m */,
-				6BFDE7761495FA01005D3337 /* ActivityHarnessApplicationDelegate.h */,
-				6BFDE7761495FA01005D333A /* en.lproj */,
+				6BFDE7761495FA01005D3358 /* Integration */,
+				6BFDE7761495FA01005D335F /* Resources */,
+				6BFDE7761495FA01005D3376 /* Unit */,
+				6BFDE7761495FA01005D33D6 /* Utils */,
+				6BFDE7761495FA01005D33EA /* TestRunner */,
+				6BFDE7761495FA01005D33F7 /* HarnessActivities */,
 			);
-			path = TestRunner;
+			name = Tests;
 			sourceTree = "<group>";
 		};
-		6BFDE7761495FA01005D333A /* en.lproj */ = {
+		6BFDE7761495FA01005D3358 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D333C /* InfoPlist.strings */,
+				6BFDE7761495FA01005D335D /* XmlPostSessionDataClientIntegration.m */,
+				6BFDE7761495FA01005D335B /* XmlPostLoginClientIntegration.m */,
+				6BFDE7761495FA01005D3359 /* XmlPostActivityClientIntegration.m */,
 			);
-			path = en.lproj;
+			name = Integration;
 			sourceTree = "<group>";
 		};
-		6BFDE7761495FA01005D3343 /* HarnessActivities */ = {
+		6BFDE7761495FA01005D335F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D3334 /* Thermomix_TMXConsultant_MyDetails.xml */,
-				6BFDE7761495FA01005D334F /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
-				6BFDE7761495FA01005D334E /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
-				6BFDE7761495FA01005D334C /* Thermomix.TMXConsultant.MyDetails.xib */,
-				6BFDE7761495FA01005D334A /* my details.png */,
-				6BFDE7761495FA01005D3348 /* insurance.png */,
-				6BFDE7761495FA01005D3346 /* Icon.png */,
-				6BFDE7761495FA01005D3344 /* DocumentView.xib */,
+				6BFDE7761495FA01005D3374 /* configFile.xml */,
+				6BFDE7761495FA01005D3372 /* Thermomix_TMXConsultant_MyDetails.xml */,
+				6BFDE7761495FA01005D3370 /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */,
+				6BFDE7761495FA01005D336E /* SessionData.xml */,
+				6BFDE7761495FA01005D336C /* Login.xib */,
+				6BFDE7761495FA01005D336A /* ESA_Sales_Customer_ActivityInstance.xml */,
+				6BFDE7761495FA01005D3368 /* ESA_Sales_Calc_ActivityInstance.xml */,
+				6BFDE7761495FA01005D3366 /* ESA_Sales_ActivityInstanceDetail.xml */,
+				6BFDE7761495FA01005D3364 /* Dodgy.xml */,
+				6BFDE7761495FA01005D3362 /* ActivityWithMessage.xml */,
+				6BFDE7761495FA01005D3360 /* ActivityWithFileResources.xml */,
 			);
-			path = HarnessActivities;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D3376 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D3377 /* expanz-iOS-SDK */,
+				6BFDE7761495FA01005D337C /* Model */,
+				6BFDE7761495FA01005D33A5 /* Services */,
+				6BFDE7761495FA01005D33BE /* UserInterface */,
+			);
+			name = Unit;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D3377 /* expanz-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D337A /* SDKConfigurationSpec.m */,
+				6BFDE7761495FA01005D3378 /* SDKAppDelegateSpec.m */,
+			);
+			name = "expanz-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D337C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33A3 /* AbstractDataSpec.m */,
+				6BFDE7761495FA01005D33A1 /* UserRoleSpec.m */,
+				6BFDE7761495FA01005D339F /* TreeDataSpec.m */,
+				6BFDE7761495FA01005D339D /* TextCellSpec.m */,
+				6BFDE7761495FA01005D339B /* SessionContextSpec.m */,
+				6BFDE7761495FA01005D3399 /* RowSpec.m */,
+				6BFDE7761495FA01005D3397 /* ResourceCollectionSpec.m */,
+				6BFDE7761495FA01005D3395 /* ProcessAreaSpec.m */,
+				6BFDE7761495FA01005D3393 /* MessageSpec.m */,
+				6BFDE7761495FA01005D3391 /* MenuSpec.m */,
+				6BFDE7761495FA01005D338F /* ImageCellSpec.m */,
+				6BFDE7761495FA01005D338D /* FolderSpec.m */,
+				6BFDE7761495FA01005D338B /* FileSpec.m */,
+				6BFDE7761495FA01005D3389 /* FileResourceSpec.m */,
+				6BFDE7761495FA01005D3387 /* FieldSpec.m */,
+				6BFDE7761495FA01005D3385 /* NSString+ExpanzDataTypeSpec.m */,
+				6BFDE7761495FA01005D3383 /* DataSetSpec.m */,
+				6BFDE7761495FA01005D3381 /* ColumnSpec.m */,
+				6BFDE7761495FA01005D337F /* ActivitySpec.m */,
+				6BFDE7761495FA01005D337D /* ActivityInstanceSpec.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33BC /* SessionRequestSpec.m */,
+				6BFDE7761495FA01005D33BA /* SessionDataRequestSpec.m */,
+				6BFDE7761495FA01005D33B8 /* RXMLElement_ResourceCollectionSpec.m */,
+				6BFDE7761495FA01005D33B6 /* RXMLElement+SessionDataSpec.m */,
+				6BFDE7761495FA01005D33B4 /* RXMLElement+SessionContextSpec.m */,
+				6BFDE7761495FA01005D33B2 /* RXMLElement+ActivityInstanceSpec.m */,
+				6BFDE7761495FA01005D33B0 /* MethodInvocationRequestSpec.m */,
+				6BFDE7761495FA01005D33AE /* FileRequestSpec.m */,
+				6BFDE7761495FA01005D33AC /* FileDownloadRequestSpec.m */,
+				6BFDE7761495FA01005D33AA /* DeltaRequestSpec.m */,
+				6BFDE7761495FA01005D33A8 /* DataPublicationRequestSpec.m */,
+				6BFDE7761495FA01005D33A6 /* CreateActivityRequestSpec.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33BE /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33D4 /* TestFixtureView.xib */,
+				6BFDE7761495FA01005D33D2 /* TestFixture_ViewController.m */,
+				6BFDE7761495FA01005D33D1 /* TestFixture_ViewController.h */,
+				6BFDE7761495FA01005D33CF /* ModelAdapterSpec.m */,
+				6BFDE7761495FA01005D33CD /* LoginViewControllerSpec.m */,
+				6BFDE7761495FA01005D33C3 /* AlertBoxSystemEventReporterSpec.m */,
+				6BFDE7761495FA01005D33C1 /* ActivityManagerSpec.m */,
+				6BFDE7761495FA01005D33BF /* ActivityInstanceViewControllerSpec.m */,
+				6BFDE7761495FA01005D33C5 /* Categories */,
+				6BFDE7761495FA01005D33C8 /* Components */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33C5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33C6 /* UITableView+DataPublicationSpec.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33C8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33CB /* ThumbnailTableCellSpec.m */,
+				6BFDE7761495FA01005D33C9 /* TextFieldTableCellSpec.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33E8 /* TestResource.m */,
+				6BFDE7761495FA01005D33E7 /* TestResource.h */,
+				6BFDE7761495FA01005D33E5 /* StubSystemEventReporter.m */,
+				6BFDE7761495FA01005D33E4 /* StubSystemEventReporter.h */,
+				6BFDE7761495FA01005D33E2 /* StubLoginClientDelegate.m */,
+				6BFDE7761495FA01005D33E1 /* StubLoginClientDelegate.h */,
+				6BFDE7761495FA01005D33DF /* StubActivityClientDelegate.m */,
+				6BFDE7761495FA01005D33DE /* StubActivityClientDelegate.h */,
+				6BFDE7761495FA01005D33DD /* SpecHelper.h */,
+				6BFDE7761495FA01005D33DB /* IntegrationUtils.m */,
+				6BFDE7761495FA01005D33DA /* IntegrationUtils.h */,
+				6BFDE7761495FA01005D33D8 /* CedarApplicationDelegate+Expanz.m */,
+				6BFDE7761495FA01005D33D7 /* CedarApplicationDelegate+Expanz.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33EA /* TestRunner */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33F6 /* TestRunner-Prefix.pch */,
+				6BFDE7761495FA01005D33F4 /* TestRunner-Info.plist */,
+				6BFDE7761495FA01005D33F2 /* main.m */,
+				6BFDE7761495FA01005D33EC /* ActivityHarnessApplicationDelegate.m */,
+				6BFDE7761495FA01005D33EB /* ActivityHarnessApplicationDelegate.h */,
+				6BFDE7761495FA01005D33EE /* en.lproj */,
+			);
+			name = TestRunner;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33EE /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D33F0 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D33F7 /* HarnessActivities */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D3403 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
+				6BFDE7761495FA01005D3402 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
+				6BFDE7761495FA01005D3400 /* Thermomix.TMXConsultant.MyDetails.xib */,
+				6BFDE7761495FA01005D33FE /* my details.png */,
+				6BFDE7761495FA01005D33FC /* insurance.png */,
+				6BFDE7761495FA01005D33FA /* Icon.png */,
+				6BFDE7761495FA01005D33F8 /* DocumentView.xib */,
+			);
+			name = HarnessActivities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2244,6 +2256,7 @@
 				6B748A4814CD493600970C98 /* expanz_ui_SystemEventReporter.h in Headers */,
 				6B748A4914CD493600970C98 /* expanz_ui_TreeDataRenderer.h in Headers */,
 				6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */,
+				6BFDE7761495FA01005D3410 /* UIView+ModelAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2374,16 +2387,6 @@
 				6BC9F78D1458EBB6001AF204 /* LICENSE in Resources */,
 				6BC9F7951458EBB6001AF204 /* README.markdown in Resources */,
 				6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */,
-				6BD47DFF1484705A000ECE52 /* ActivityWithMessage.xml in Resources */,
-				6BD47E001484705A000ECE52 /* Dodgy.xml in Resources */,
-				6BD47E011484705A000ECE52 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
-				6BD47E021484705A000ECE52 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */,
-				6BD47E031484705A000ECE52 /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
-				6BD47E041484705A000ECE52 /* SessionData.xml in Resources */,
-				6BD47E5E14848839000ECE52 /* TestFixtureView.xib in Resources */,
-				6BFACBA414679916007C728F /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
-				6BFACBA414679916007C7349 /* ActivityWithFileResources.xml in Resources */,
-				6BFDE7761495FA01005D3333 /* Login.xib in Resources */,
 				6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */,
 				6BBD515414C910800024DEEA /* ActivityMenu.xib in Resources */,
 				6BBD515614C910830024DEEA /* background.png in Resources */,
@@ -2394,17 +2397,28 @@
 				6BBD515B14C910970024DEEA /* Sales.Customer.Browse.xib in Resources */,
 				6BBD515C14C9109D0024DEEA /* TableCellForGridData.xib in Resources */,
 				6BBD515D14C910A00024DEEA /* TableCellForTreeData.xib in Resources */,
-				6BFDE7761495FA01005D3335 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */,
-				6BFDE7761495FA01005D333D /* InfoPlist.strings in Resources */,
-				6BFDE7761495FA01005D3345 /* DocumentView.xib in Resources */,
-				6BFDE7761495FA01005D3347 /* Icon.png in Resources */,
-				6BFDE7761495FA01005D3349 /* insurance.png in Resources */,
-				6BFDE7761495FA01005D334B /* my details.png in Resources */,
-				6BFDE7761495FA01005D334D /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
 				6B748A1014CD493600970C98 /* 37x-Checkmark.png in Resources */,
 				6B748A1314CD493600970C98 /* Icon.png in Resources */,
 				6B748A1614CD493600970C98 /* Icon@2x.png in Resources */,
-				6BFDE7761495FA01005D335A /* configFile.xml in Resources */,
+				6BFDE7761495FA01005D3361 /* ActivityWithFileResources.xml in Resources */,
+				6BFDE7761495FA01005D3363 /* ActivityWithMessage.xml in Resources */,
+				6BFDE7761495FA01005D3365 /* Dodgy.xml in Resources */,
+				6BFDE7761495FA01005D3367 /* ESA_Sales_ActivityInstanceDetail.xml in Resources */,
+				6BFDE7761495FA01005D3369 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */,
+				6BFDE7761495FA01005D336B /* ESA_Sales_Customer_ActivityInstance.xml in Resources */,
+				6BFDE7761495FA01005D336D /* Login.xib in Resources */,
+				6BFDE7761495FA01005D336F /* SessionData.xml in Resources */,
+				6BFDE7761495FA01005D3371 /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml in Resources */,
+				6BFDE7761495FA01005D3373 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */,
+				6BFDE7761495FA01005D3375 /* configFile.xml in Resources */,
+				6BFDE7761495FA01005D33D5 /* TestFixtureView.xib in Resources */,
+				6BFDE7761495FA01005D33F1 /* InfoPlist.strings in Resources */,
+				6BFDE7761495FA01005D33F5 /* TestRunner-Info.plist in Resources */,
+				6BFDE7761495FA01005D33F9 /* DocumentView.xib in Resources */,
+				6BFDE7761495FA01005D33FB /* Icon.png in Resources */,
+				6BFDE7761495FA01005D33FD /* insurance.png in Resources */,
+				6BFDE7761495FA01005D33FF /* my details.png in Resources */,
+				6BFDE7761495FA01005D3401 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2548,6 +2562,9 @@
 				6B748A4514CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3352 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6BFDE7761495FA01005D3406 /* UILabel+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D340C /* UIView+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3412 /* UITextField+ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2662,6 +2679,7 @@
 				6B748A4714CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6BFDE7761495FA01005D340E /* UIView+ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2733,70 +2751,19 @@
 				6BD47D661484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
 				6BD47D6C1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D721484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
-				6BD47DFC1484705A000ECE52 /* XmlPostActivityClientIntegration.m in Sources */,
-				6BD47DFD1484705A000ECE52 /* XmlPostLoginClientIntegration.m in Sources */,
-				6BD47DFE1484705A000ECE52 /* XmlPostSessionDataClientIntegration.m in Sources */,
-				6BD47E091484705A000ECE52 /* SDKAppDelegateSpec.m in Sources */,
-				6BD47E0A1484705A000ECE52 /* SDKConfigurationSpec.m in Sources */,
-				6BD47E0B1484705A000ECE52 /* ActivityInstanceSpec.m in Sources */,
-				6BD47E0C1484705A000ECE52 /* ActivitySpec.m in Sources */,
-				6BD47E0D1484705A000ECE52 /* ColumnSpec.m in Sources */,
-				6BD47E0E1484705A000ECE52 /* DataSetSpec.m in Sources */,
-				6BD47E0F1484705A000ECE52 /* NSString+ExpanzDataTypeSpec.m in Sources */,
-				6BD47E101484705A000ECE52 /* FieldSpec.m in Sources */,
-				6BD47E111484705A000ECE52 /* ImageCellSpec.m in Sources */,
-				6BD47E121484705A000ECE52 /* MenuSpec.m in Sources */,
-				6BD47E131484705A000ECE52 /* MessageSpec.m in Sources */,
-				6BD47E141484705A000ECE52 /* ProcessAreaSpec.m in Sources */,
-				6BD47E151484705A000ECE52 /* RowSpec.m in Sources */,
-				6BD47E161484705A000ECE52 /* SessionContextSpec.m in Sources */,
-				6BD47E171484705A000ECE52 /* TextCellSpec.m in Sources */,
-				6BD47E181484705A000ECE52 /* UserRoleSpec.m in Sources */,
-				6BD47E191484705A000ECE52 /* CreateActivityRequestSpec.m in Sources */,
-				6BD47E1A1484705A000ECE52 /* DataPublicationRequestSpec.m in Sources */,
-				6BD47E1B1484705A000ECE52 /* DeltaRequestSpec.m in Sources */,
-				6BD47E1C1484705A000ECE52 /* MethodInvocationRequestSpec.m in Sources */,
-				6BD47E1D1484705A000ECE52 /* RXMLElement+ActivityInstanceSpec.m in Sources */,
-				6BD47E1E1484705A000ECE52 /* RXMLElement+SessionContextSpec.m in Sources */,
-				6BD47E1F1484705A000ECE52 /* RXMLElement+SessionDataSpec.m in Sources */,
-				6BD47E201484705A000ECE52 /* SessionDataRequestSpec.m in Sources */,
-				6BD47E211484705A000ECE52 /* SessionRequestSpec.m in Sources */,
-				6BD47E221484705A000ECE52 /* ActivityInstanceViewControllerSpec.m in Sources */,
-				6BD47E231484705A000ECE52 /* UITableView+DataPublicationSpec.m in Sources */,
-				6BD47E241484705A000ECE52 /* TextFieldTableCellSpec.m in Sources */,
-				6BD47E251484705A000ECE52 /* ThumbnailTableCellSpec.m in Sources */,
-				6BD47E261484705A000ECE52 /* LoginViewControllerSpec.m in Sources */,
-				6BD47E271484705A000ECE52 /* ModelAdapterSpec.m in Sources */,
-				6BD47E291484705A000ECE52 /* IntegrationUtils.m in Sources */,
-				6BD47E2A1484705A000ECE52 /* StubActivityClientDelegate.m in Sources */,
-				6BD47E2B1484705A000ECE52 /* StubLoginClientDelegate.m in Sources */,
 				6BFACBA414679916007C726E /* NSString+ExpanzDataType.m in Sources */,
-				6BFACBA414679916007C727A /* TestFixture_ViewController.m in Sources */,
-				6BFACBA414679916007C727D /* TestResource.m in Sources */,
 				6BFACBA414679916007C7289 /* expanz_model_ActivityStyle.m in Sources */,
 				6BFACBA414679916007C7293 /* expanz_model_AbstractData.m in Sources */,
 				6BFACBA414679916007C729B /* expanz_model_TreeData.m in Sources */,
 				6BFACBA414679916007C72A3 /* expanz_model_Folder.m in Sources */,
 				6BFACBA414679916007C72AB /* expanz_model_File.m in Sources */,
-				6BFACBA414679916007C72B1 /* TreeDataSpec.m in Sources */,
-				6BFACBA414679916007C72B3 /* FolderSpec.m in Sources */,
-				6BFACBA414679916007C72B5 /* FileSpec.m in Sources */,
 				6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */,
-				6BFACBA414679916007C72D7 /* StubSystemEventReporter.m in Sources */,
-				6BFACBA414679916007C72DA /* ActivityManagerSpec.m in Sources */,
-				6BFACBA414679916007C72DC /* CedarApplicationDelegate+Expanz.m in Sources */,
-				6BFACBA414679916007C72DF /* AlertBoxSystemEventReporterSpec.m in Sources */,
 				6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732B /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BFACBA414679916007C7334 /* FileDownloadRequestSpec.m in Sources */,
 				6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
 				6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */,
-				6BFACBA414679916007C7347 /* FileResourceSpec.m in Sources */,
-				6B532D7D148EF7700024ED6D /* FileRequestSpec.m in Sources */,
 				6BFACBA414679916007C734D /* expanz_model_ResourceCollection.m in Sources */,
-				6BFACBA414679916007C7353 /* ResourceCollectionSpec.m in Sources */,
 				6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */,
-				6B078EFC148F0DFC005F5BAF /* RXMLElement_ResourceCollectionSpec.m in Sources */,
 				6BFDE73D1495FA01005D332F /* JSObjectFactory.m in Sources */,
 				6BFDE7431495FA01005D332F /* JSObjection.m in Sources */,
 				6BFDE7491495FA01005D332F /* JSObjectionBindingEntry.m in Sources */,
@@ -2808,9 +2775,6 @@
 				6BFDE76D1495FA01005D332F /* JSObjectionUtils.m in Sources */,
 				6BFDE7731495FA01005D332F /* NSObject+Objection.m in Sources */,
 				6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */,
-				6BFDE7761495FA01005D3339 /* ActivityHarnessApplicationDelegate.m in Sources */,
-				6BFDE7761495FA01005D333F /* main.m in Sources */,
-				6BFDE7761495FA01005D3350 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 				6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
 				6B748A1A14CD493600970C98 /* UITableView+DataPublication.m in Sources */,
 				6B748A1E14CD493600970C98 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
@@ -2826,7 +2790,64 @@
 				6B748A4614CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3353 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
-				6BFDE7761495FA01005D3358 /* AbstractDataSpec.m in Sources */,
+				6BFDE7761495FA01005D335A /* XmlPostActivityClientIntegration.m in Sources */,
+				6BFDE7761495FA01005D335C /* XmlPostLoginClientIntegration.m in Sources */,
+				6BFDE7761495FA01005D335E /* XmlPostSessionDataClientIntegration.m in Sources */,
+				6BFDE7761495FA01005D3379 /* SDKAppDelegateSpec.m in Sources */,
+				6BFDE7761495FA01005D337B /* SDKConfigurationSpec.m in Sources */,
+				6BFDE7761495FA01005D337E /* ActivityInstanceSpec.m in Sources */,
+				6BFDE7761495FA01005D3380 /* ActivitySpec.m in Sources */,
+				6BFDE7761495FA01005D3382 /* ColumnSpec.m in Sources */,
+				6BFDE7761495FA01005D3384 /* DataSetSpec.m in Sources */,
+				6BFDE7761495FA01005D3386 /* NSString+ExpanzDataTypeSpec.m in Sources */,
+				6BFDE7761495FA01005D3388 /* FieldSpec.m in Sources */,
+				6BFDE7761495FA01005D338A /* FileResourceSpec.m in Sources */,
+				6BFDE7761495FA01005D338C /* FileSpec.m in Sources */,
+				6BFDE7761495FA01005D338E /* FolderSpec.m in Sources */,
+				6BFDE7761495FA01005D3390 /* ImageCellSpec.m in Sources */,
+				6BFDE7761495FA01005D3392 /* MenuSpec.m in Sources */,
+				6BFDE7761495FA01005D3394 /* MessageSpec.m in Sources */,
+				6BFDE7761495FA01005D3396 /* ProcessAreaSpec.m in Sources */,
+				6BFDE7761495FA01005D3398 /* ResourceCollectionSpec.m in Sources */,
+				6BFDE7761495FA01005D339A /* RowSpec.m in Sources */,
+				6BFDE7761495FA01005D339C /* SessionContextSpec.m in Sources */,
+				6BFDE7761495FA01005D339E /* TextCellSpec.m in Sources */,
+				6BFDE7761495FA01005D33A0 /* TreeDataSpec.m in Sources */,
+				6BFDE7761495FA01005D33A2 /* UserRoleSpec.m in Sources */,
+				6BFDE7761495FA01005D33A4 /* AbstractDataSpec.m in Sources */,
+				6BFDE7761495FA01005D33A7 /* CreateActivityRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33A9 /* DataPublicationRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33AB /* DeltaRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33AD /* FileDownloadRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33AF /* FileRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33B1 /* MethodInvocationRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33B3 /* RXMLElement+ActivityInstanceSpec.m in Sources */,
+				6BFDE7761495FA01005D33B5 /* RXMLElement+SessionContextSpec.m in Sources */,
+				6BFDE7761495FA01005D33B7 /* RXMLElement+SessionDataSpec.m in Sources */,
+				6BFDE7761495FA01005D33B9 /* RXMLElement_ResourceCollectionSpec.m in Sources */,
+				6BFDE7761495FA01005D33BB /* SessionDataRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33BD /* SessionRequestSpec.m in Sources */,
+				6BFDE7761495FA01005D33C0 /* ActivityInstanceViewControllerSpec.m in Sources */,
+				6BFDE7761495FA01005D33C2 /* ActivityManagerSpec.m in Sources */,
+				6BFDE7761495FA01005D33C4 /* AlertBoxSystemEventReporterSpec.m in Sources */,
+				6BFDE7761495FA01005D33C7 /* UITableView+DataPublicationSpec.m in Sources */,
+				6BFDE7761495FA01005D33CA /* TextFieldTableCellSpec.m in Sources */,
+				6BFDE7761495FA01005D33CC /* ThumbnailTableCellSpec.m in Sources */,
+				6BFDE7761495FA01005D33CE /* LoginViewControllerSpec.m in Sources */,
+				6BFDE7761495FA01005D33D0 /* ModelAdapterSpec.m in Sources */,
+				6BFDE7761495FA01005D33D3 /* TestFixture_ViewController.m in Sources */,
+				6BFDE7761495FA01005D33D9 /* CedarApplicationDelegate+Expanz.m in Sources */,
+				6BFDE7761495FA01005D33DC /* IntegrationUtils.m in Sources */,
+				6BFDE7761495FA01005D33E0 /* StubActivityClientDelegate.m in Sources */,
+				6BFDE7761495FA01005D33E3 /* StubLoginClientDelegate.m in Sources */,
+				6BFDE7761495FA01005D33E6 /* StubSystemEventReporter.m in Sources */,
+				6BFDE7761495FA01005D33E9 /* TestResource.m in Sources */,
+				6BFDE7761495FA01005D33ED /* ActivityHarnessApplicationDelegate.m in Sources */,
+				6BFDE7761495FA01005D33F3 /* main.m in Sources */,
+				6BFDE7761495FA01005D3404 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
+				6BFDE7761495FA01005D3407 /* UILabel+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D340D /* UIView+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3413 /* UITextField+ModelAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2841,10 +2862,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		6BFDE7761495FA01005D333C /* InfoPlist.strings */ = {
+		6BFDE7761495FA01005D33F0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6BFDE7761495FA01005D333B /* InfoPlist.strings */,
+				6BFDE7761495FA01005D33EF /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -20,6 +20,7 @@
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
+#import "UIView+ModelAdapter.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
@@ -62,7 +63,7 @@
         _readOnlyTextFields = [[NSMutableDictionary alloc] init];
         _imageFieldMappings = [[NSMutableDictionary alloc] init];
         _labelMappings = [[NSMutableDictionary alloc] init];
-        _dataSetMappings = [[NSMutableDictionary alloc] init];
+        _tableViewMappings = [[NSMutableDictionary alloc] init];
         _imageButtonMappings = [[NSMutableDictionary alloc] init];
         _dataRenderers = [[NSMutableArray alloc] init];
 
@@ -79,27 +80,17 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Mapping UI controls to model
 
-- (UITextField*) textInputControlFor:(expanz_model_Field*)field {
+- (UITextField*) textFieldFor:(expanz_model_Field*)field {
     return [_textFieldMappings objectForKey:field.fieldId];
 }
 
-- (Field*) fieldFor:(UIView*)uiControl {
-
-    NSArray* keys;
-    if ([uiControl isKindOfClass:[UITextField class]]) {
-        LogDebug(@"Getting keys for text field.");
-        keys = [_textFieldMappings allKeysForObject:uiControl];
-    }
-    else if ([uiControl isKindOfClass:[UIImageView class]]) {
-        LogDebug(@"Getting keys for image view.");
-        keys = [_imageFieldMappings allKeysForObject:uiControl];
-    }
-    return [_activityInstance fieldWithId:[keys objectAtIndex:0]];
-
+- (Field*) fieldFor:(UIView*)uiView {
+    NSString* fieldId = [uiView fieldIdInModelAdapter:self];
+    return [_activityInstance fieldWithId:fieldId];
 }
 
-- (UITableView*) dataViewControlFor:(expanz_model_GridData*)dataSet {
-    return [_dataSetMappings objectForKey:dataSet.dataId];
+- (UITableView*) tableViewFor:(expanz_model_GridData*)dataSet {
+    return [_tableViewMappings objectForKey:dataSet.dataId];
 }
 
 - (UIImageView*) imageViewFor:(UIButton*)editButton {
@@ -159,7 +150,7 @@
 }
 
 - (void) updateDataGridsWithModelValues {
-    for (UITableView* tableView in [_dataSetMappings allValues]) {
+    for (UITableView* tableView in [_tableViewMappings allValues]) {
         [tableView reloadData];
         [tableView setNeedsLayout];
     }
@@ -241,7 +232,7 @@
                 LogInfo(kNoMappingWarning, @"UITableView", selectorName);
             }
             else {
-                [_dataSetMappings setObject:tableView forKey:selectorName];
+                [_tableViewMappings setObject:tableView forKey:selectorName];
                 AbstractData* data = [_activityInstance dataWithId:selectorName];
                 AbstractDataRenderer* renderer = [data withDataRendererFor:tableView activityName:_activityName];
                 [_dataRenderers addObject:renderer];
