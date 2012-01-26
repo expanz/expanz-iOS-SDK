@@ -38,6 +38,8 @@
 
 - (expanz_model_AbstractCell*) cellWithId:(NSString*)cellId;
 
+- (expanz_model_AbstractCell*) cellForFieldId:(NSString*)fieldId;
+
 - (NSArray*) cells;
 
 - (NSArray*) textCells;

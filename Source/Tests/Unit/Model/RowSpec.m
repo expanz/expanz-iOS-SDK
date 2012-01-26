@@ -40,9 +40,9 @@ SPEC_BEGIN(RowSpec)
 
         beforeEach(^{
             Column* column1 = [[Column alloc]
-                initWithColumnId:@"firstName" field:@"firstName" label:nil dataType:ExpanzDataTypeString width:70];
+                initWithColumnId:@"1" field:@"firstName" label:nil dataType:ExpanzDataTypeString width:70];
             Column* column2 = [[Column alloc]
-                initWithColumnId:@"address" field:@"address" label:nil dataType:ExpanzDataTypeString width:70];
+                initWithColumnId:@"2" field:@"address" label:nil dataType:ExpanzDataTypeString width:70];
             dataSet = [[GridData alloc] initWithDataId:@"foobar" source:@"zzz"];
             [dataSet addColumn:column1];
             [dataSet addColumn:column2];
@@ -50,28 +50,37 @@ SPEC_BEGIN(RowSpec)
         });
 
         it(@"Should hold a collection of cells", ^{
-            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"1" data:@"Jasper"];
             assertThatInt([[row cells] count], equalToInt(1));
         });
         
         it(@"should allow returning a cell by cellId", ^{
-            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
-            [row addCellDefinitionWithId:@"address" data:@"Metro Manila"];
+            [row addCellDefinitionWithId:@"1" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"2" data:@"Metro Manila"];
 
-            AbstractCell* retrieved = [row cellWithId:@"firstName"];
-            assertThat(retrieved.cellId, equalTo(@"firstName"));
+            AbstractCell* retrieved = [row cellWithId:@"1"];
+            assertThat(retrieved.cellId, equalTo(@"1"));
+        });
+
+        it(@"should allow returning a cell by field name", ^{
+            [row addCellDefinitionWithId:@"1" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"2" data:@"Metro Manila"];
+
+            AbstractCell* retrieved = [row cellForFieldId:@"firstName"];
+            assertThat(retrieved.cellId, equalTo(@"1"));
+
         });
 
         it(@"Should allow returning a sorted list of all cells.", ^{
-            [row addCellDefinitionWithId:@"firstName" data:@"Jasper"];
-            [row addCellDefinitionWithId:@"address" data:@"Metro Manila"];
+            [row addCellDefinitionWithId:@"2" data:@"Jasper"];
+            [row addCellDefinitionWithId:@"1" data:@"Metro Manila"];
 
             NSArray* cells = [row cells];
             assertThatInt([cells count], equalToInt(2));
 
             //Cells are sorted. 
-            assertThat([[cells objectAtIndex:0] cellId], equalTo(@"address"));
-            assertThat([[cells objectAtIndex:1] cellId], equalTo(@"firstName"));
+            assertThat([[cells objectAtIndex:0] cellId], equalTo(@"1"));
+            assertThat([[cells objectAtIndex:1] cellId], equalTo(@"2"));
         });
 
     });

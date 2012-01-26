@@ -17,7 +17,7 @@
 
 @synthesize dataSet = _dataSet;
 @synthesize columnId = _columnId;
-@synthesize field = _field;
+@synthesize fieldId = _fieldId;
 @synthesize label = _label;
 @synthesize dataType = _dataType;
 @synthesize width = _width;
@@ -30,7 +30,7 @@
     self = [super init];
     if (self) {
         _columnId = [columnId copy];
-        _field = [field copy];
+        _fieldId = [field copy];
         _label = [label copy];
         _dataType = dataType;
         _width = width;

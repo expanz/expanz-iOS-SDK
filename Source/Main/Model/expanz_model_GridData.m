@@ -22,7 +22,7 @@
 @synthesize source = _source;
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithDataId:(NSString*)dataId source:(NSString*)source {
+- (id) initWithDataId:(NSString*)dataId source:(NSString*)source {
     self = [super initWithDataId:dataId];
     if (self) {
         _source = [source copy];
@@ -33,17 +33,17 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void)addColumn:(Column*)column {
+- (void) addColumn:(Column*)column {
     column.dataSet = self;
     [_columns addObject:column];
 }
 
-- (NSArray*)columns {
+- (NSArray*) columns {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"columnId" ascending:YES];
     return [_columns sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (Column*)columnWithId:(NSString*)columnId {
+- (Column*) columnWithId:(NSString*)columnId {
     for (Column* column in _columns) {
         if ([column.columnId isEqualToString:columnId]) {
             return column;
@@ -52,17 +52,26 @@
     return nil;
 }
 
-- (void)addRow:(Row*)row {
+- (Column*) columnWithFieldId:(NSString*)fieldId {
+    for (Column* column in _columns) {
+        if ([column.fieldId isEqualToString:fieldId]) {
+            return column;
+        }
+    }
+    return nil;
+}
+
+- (void) addRow:(Row*)row {
     [row setGridData:self];
     [_rows addObject:row];
 }
 
-- (NSArray*)rows {
+- (NSArray*) rows {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"rowId" ascending:YES];
     return [_rows sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (expanz_model_Row*)rowWithId:(NSString*)rowId {
+- (expanz_model_Row*) rowWithId:(NSString*)rowId {
     for (Row* row in _rows) {
         if ([row.rowId isEqualToString:rowId]) {
             return row;
@@ -72,7 +81,7 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
-- (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
+- (expanz_ui_AbstractDataRenderer*) withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
     return [[GridDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName];
 }
 

@@ -77,7 +77,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             assertThatInt([data.columns count], equalToInt(10));
             for (Column* column in [data columns]) {
                 assertThat(column.columnId, notNilValue());
-                assertThat(column.field, notNilValue());
+                assertThat(column.fieldId, notNilValue());
                 assertThat(column.label, notNilValue());
                 assertThatBool(column.width > 0, equalToBool(YES));
             }

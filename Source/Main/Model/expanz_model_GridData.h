@@ -53,6 +53,11 @@
 - (expanz_model_Column*) columnWithId:(NSString*)columnId;
 
 /**
+* Returns the column with the supplied field id parameter or nil.
+*/
+- (expanz_model_Column*) columnWithFieldId:(NSString*)fieldId;
+
+/**
 * Adds a row to the data set.
 */
 - (void) addRow:(expanz_model_Row*)row;

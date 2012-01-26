@@ -57,7 +57,16 @@
     return nil;
 }
 
-- (NSArray*) cells {
+ - (expanz_model_AbstractCell*) cellForFieldId:(NSString*)fieldId {
+     Column* column = [_gridData columnWithFieldId:fieldId];
+     if (column != nil) {
+         return [self cellWithId:column.columnId];
+     }
+     return nil;
+ }
+
+
+ - (NSArray*) cells {
     NSArray* allCells = [[self textCells] arrayByAddingObjectsFromArray:[self imageCells]];
     return [allCells sortedArrayUsingDescriptors:_sortDescriptors];
 }

@@ -25,7 +25,7 @@ SPEC_BEGIN(ColumnSpec)
 
         it(@"should allow creation with firstName, label, dataType & width attributes", ^{
             assertThat(column, notNilValue());
-            assertThat(column.field, equalTo(@"firstName"));
+            assertThat(column.fieldId, equalTo(@"firstName"));
             assertThat(column.label, equalTo(@"Customer First Name"));
             assertThatInt(column.dataType, equalToInt(ExpanzDataTypeString));
             assertThatInt(column.width, equalToInt(70));

@@ -28,7 +28,7 @@
 
 @property(nonatomic, weak) expanz_model_GridData* dataSet;
 @property(nonatomic, strong, readonly) NSString* columnId;
-@property(nonatomic, strong, readonly) NSString* field;
+@property(nonatomic, strong, readonly) NSString* fieldId;
 @property(nonatomic, strong, readonly) NSString* label;
 @property(nonatomic, readonly) ExpanzDataType dataType;
 @property(nonatomic, readonly) NSInteger width;
