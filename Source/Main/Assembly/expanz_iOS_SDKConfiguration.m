@@ -25,9 +25,15 @@ static SDKConfiguration* _globalConfiguration;
 /* ================================================= Class Methods ================================================== */
 + (void) setGlobalConfiguration:(SDKConfiguration*)configuration {
     if (_globalConfiguration != nil) {
-        [NSException raise:NSInternalInconsistencyException format:@"The global configuration has already been set"];
+        [NSException raise:NSInternalInconsistencyException format:
+            @"The global configuration has already been set. If you really want to reset it call "
+                "[SDKConfiguration clearGlobalConfiguration] first."];
     }
     _globalConfiguration = configuration;
+}
+
++ (void) clearGlobalConfiguration {
+    _globalConfiguration = nil;
 }
 
 + (SDKConfiguration*) globalConfiguration {
@@ -35,11 +41,10 @@ static SDKConfiguration* _globalConfiguration;
 }
 
 + (void) setConfigurationFile:(NSString*)fileName {
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
     NSString* xmlString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     if (xmlString == nil) {
-        [NSException raise:NSInternalInconsistencyException format:@"Configuration file named '%@.xml' not found.",
-                                                                   fileName];
+        [NSException raise:NSInternalInconsistencyException format:@"Config file named '%@' not found.", fileName];
     }
     RXMLElement* element = [RXMLElement elementFromXMLString:xmlString];
 

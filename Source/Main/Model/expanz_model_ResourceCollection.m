@@ -26,10 +26,6 @@
     return self;
 }
 
-- (id) init {
-    return [self initWithTitle:nil];
-}
-
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*) fileResources {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];

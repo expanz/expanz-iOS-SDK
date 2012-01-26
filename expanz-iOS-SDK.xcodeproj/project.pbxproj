@@ -717,6 +717,7 @@
 		6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6BFDE7761495FA01005D3356 /* expanz_ui_TextFieldDelegateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */; };
 		6BFDE7761495FA01005D3358 /* AbstractDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */; };
+		6BFDE7761495FA01005D335A /* configFile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3359 /* configFile.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1231,6 +1232,7 @@
 		6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextFieldDelegateUtils.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3357 /* AbstractDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDataSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3359 /* configFile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = configFile.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1632,7 +1634,7 @@
 		6BD47C341484703F000ECE52 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6BD47C351484703F000ECE52 /* expanz-iOS-SDK */,
+				6BD47C351484703F000ECE52 /* Assembly */,
 				6BD47C441484703F000ECE52 /* Model */,
 				6BD47C631484703F000ECE52 /* Services */,
 				6B7489ED14CD493600970C98 /* UserInterface */,
@@ -1642,7 +1644,7 @@
 			path = Source/Main;
 			sourceTree = "<group>";
 		};
-		6BD47C351484703F000ECE52 /* expanz-iOS-SDK */ = {
+		6BD47C351484703F000ECE52 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 				6BD47C361484703F000ECE52 /* InfoPlist.strings */,
@@ -1657,7 +1659,7 @@
 				6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */,
 				6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */,
 			);
-			path = "expanz-iOS-SDK";
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		6BD47C441484703F000ECE52 /* Model */ = {
@@ -1839,6 +1841,7 @@
 		6BD47DBD1484705A000ECE52 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D3359 /* configFile.xml */,
 				6BFDE7761495FA01005D3332 /* Login.xib */,
 				6BFACBA414679916007C7348 /* ActivityWithFileResources.xml */,
 				6BFACBA414679916007C728E /* Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml */,
@@ -2401,6 +2404,7 @@
 				6B748A1014CD493600970C98 /* 37x-Checkmark.png in Resources */,
 				6B748A1314CD493600970C98 /* Icon.png in Resources */,
 				6B748A1614CD493600970C98 /* Icon@2x.png in Resources */,
+				6BFDE7761495FA01005D335A /* configFile.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2957,9 +2961,9 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Main/Assembly/expanz-iOS-SDK-Prefix.pch";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				INFOPLIST_FILE = "Source/Main/Assembly/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2984,9 +2988,9 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Main/Assembly/expanz-iOS-SDK-Prefix.pch";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				INFOPLIST_FILE = "Source/Main/Assembly/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

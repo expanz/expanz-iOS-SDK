@@ -17,24 +17,31 @@
 SPEC_BEGIN(ResourceCollectionSpec)
 
     __block ResourceCollection* resourceCollection;
-    
+
     beforeEach(^{
-        resourceCollection = [[ResourceCollection alloc] init];
+        resourceCollection = [[ResourceCollection alloc] initWithTitle:@"Documents"];
     });
-    
+
 
     describe(@"File resources", ^{
 
-           it(@"should allow adding file resources", ^{
+        it(@"should allow adding file resources", ^{
 
-               FileResource* fileResource =
-                   [[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"];
-               [resourceCollection addFileResource:fileResource];
+            FileResource* fileResource =
+                [[FileResource alloc] initWithPath:@"/blobs/Foobar" ext:@"pdf" field:@"field.foobar"];
+            [resourceCollection addFileResource:fileResource];
 
-               assertThatInt([[resourceCollection fileResources] count], equalToInt(1));
+            assertThatInt([[resourceCollection fileResources] count], equalToInt(1));
 
-           });
+        });
 
-       });
+        it(@"should describe itself", ^{
 
-SPEC_END
+            assertThat([resourceCollection description], equalTo(
+                @"ResourceCollection: title=Documents, fileResources: {(\n)}"));
+
+        });
+
+    });
+
+    SPEC_END

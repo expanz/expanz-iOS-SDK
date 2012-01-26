@@ -24,6 +24,8 @@
 
 + (void) setGlobalConfiguration:(expanz_iOS_SDKConfiguration*)configuration;
 
++ (void) clearGlobalConfiguration;
+
 + (void) setConfigurationFile:(NSString*)fileName;
 
 - (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType;
