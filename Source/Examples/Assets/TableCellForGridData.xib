@@ -69,7 +69,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">Icon.png</string>
+									<string key="NSResourceName">ExpanzIcon.png</string>
 								</object>
 							</object>
 							<object class="IBUILabel" id="585679145">
@@ -110,6 +110,7 @@
 								<string key="NSFrame">{{88, 37}, {195, 21}}</string>
 								<reference key="NSSuperview" ref="556282850"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -334,7 +335,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">Icon.png</string>
+			<string key="NS.key.0">ExpanzIcon.png</string>
 			<string key="NS.object.0">{57, 57}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>

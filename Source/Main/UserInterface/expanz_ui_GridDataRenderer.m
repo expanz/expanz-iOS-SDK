@@ -64,6 +64,7 @@
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
     NSArray* fieldNames = [tableView fieldNames];
     if (fieldNames != nil) {
+        LogDebug(@"Populating cell with fieldNames: %@", fieldNames);
         for (NSString* fieldName in fieldNames) {
             AbstractCell* abstractCell = [row cellForFieldId:fieldName];
             [self populateCel:cell withDataFrom:abstractCell];
