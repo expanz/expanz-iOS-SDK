@@ -1244,8 +1244,8 @@
 		6BFDE7761495FA01005D3400 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Thermomix.TMXConsultant.MyDetails.xib; path = Source/Tests/HarnessActivities/Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3402 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thermomix_TMXConsultant_MyDetails_ViewController.h; path = Source/Tests/HarnessActivities/Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3403 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thermomix_TMXConsultant_MyDetails_ViewController.m; path = Source/Tests/HarnessActivities/Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModelAdapter.m"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModelAdapter.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ModelAdapter.m"; path = "../UIView+ModelAdapter.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ModelAdapter.h"; path = "../UIView+ModelAdapter.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1320,8 +1320,6 @@
 		6B7489ED14CD493600970C98 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */,
-				6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */,
 				6BFDE7761495FA01005D3355 /* expanz_ui_TextFieldDelegateUtils.h */,
 				6BFDE7761495FA01005D3351 /* expanz_ui_TextFieldDelegateUtils.m */,
 				6B7489EE14CD493600970C98 /* Assets */,
@@ -1365,6 +1363,8 @@
 		6B7489F214CD493600970C98 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */,
+				6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */,
 				6B7489F314CD493600970C98 /* UITableView+DataPublication.h */,
 				6B7489F414CD493600970C98 /* UITableView+DataPublication.m */,
 			);

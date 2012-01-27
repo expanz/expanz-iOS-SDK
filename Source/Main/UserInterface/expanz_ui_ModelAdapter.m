@@ -10,9 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <objc/message.h>
-#import "MARTNSObject.h"
 #import "ASIHTTPRequest.h"
-#import "RTProperty.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_ActivityDefinition.h"
@@ -25,8 +23,6 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)
 
-- (void) cachePropertyNames;
-
 - (void) mapModelFieldsToUITextFields;
 
 - (void) mapModelFieldsToUILabels;
@@ -34,8 +30,6 @@
 - (void) mapModelFieldsToUIImages;
 
 - (void) mapModelFieldsToUITableViews;
-
-- (void) addTouchResponderToEditableImages;
 
 - (void) makeReadOnlyControlFor:(UITextField*)textField andSetText:(NSString*)text;
 
@@ -58,21 +52,13 @@
         _activityName = [viewController.activityDefinition.name copy];
         _activityInstance = viewController.activityInstance;
         _controller = viewController;
-        _propertyNames = [[NSMutableArray alloc] init];
-        _textFieldMappings = [[NSMutableDictionary alloc] init];
-        _readOnlyTextFields = [[NSMutableDictionary alloc] init];
-        _imageFieldMappings = [[NSMutableDictionary alloc] init];
-        _labelMappings = [[NSMutableDictionary alloc] init];
-        _tableViewMappings = [[NSMutableDictionary alloc] init];
-        _imageButtonMappings = [[NSMutableDictionary alloc] init];
-        _dataRenderers = [[NSMutableArray alloc] init];
+        _propertyNames = viewController.propertyNames;
 
-        [self cachePropertyNames];
         [self mapModelFieldsToUITextFields];
         [self mapModelFieldsToUILabels];
-        [self mapModelFieldsToUIImages];
         [self mapModelFieldsToUITableViews];
-        [self addTouchResponderToEditableImages];
+        [self mapModelFieldsToUIImages];
+
     }
     return self;
 }
@@ -162,13 +148,11 @@
 
 #define kNoMappingWarning @"*** Warning *** %@ for %@ is nil. Has the connection been made in Interface Builder?"
 
-- (void) cachePropertyNames {
-    for (RTProperty* property in [[_controller class] rt_properties]) {
-        [_propertyNames addObject:[property name]];
-    }
-}
 
 - (void) mapModelFieldsToUITextFields {
+
+    _textFieldMappings = [[NSMutableDictionary alloc] init];
+    _readOnlyTextFields = [[NSMutableDictionary alloc] init];
 
     for (NSString* propertyName in _propertyNames) {
         Field* field = [_activityInstance fieldWithId:propertyName];
@@ -191,6 +175,8 @@
 }
 
 - (void) mapModelFieldsToUIImages {
+    _imageFieldMappings = [[NSMutableDictionary alloc] init];
+    _imageButtonMappings = [[NSMutableDictionary alloc] init];
     for (NSString* propertyName in _propertyNames) {
         Field* field = [_activityInstance fieldWithId:propertyName];
 
@@ -203,6 +189,13 @@
                 }
                 else {
                     [_imageFieldMappings setObject:imageView forKey:propertyName];
+                    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+                    button.frame = imageView.frame;
+                    [button addTarget:_controller action:@selector(willCommenceEditForImageView:)
+                     forControlEvents:UIControlEventTouchUpInside];
+                    [_controller.view addSubview:button];
+                    [_imageButtonMappings
+                        setObject:imageView forKey:[NSValue valueWithPointer:(__bridge void*) button]];
                 }
             }
         }
@@ -210,6 +203,7 @@
 }
 
 - (void) mapModelFieldsToUILabels {
+    _labelMappings = [[NSMutableDictionary alloc] init];
     for (NSString* selectorName in _propertyNames) {
         if ([selectorName hasSuffix:@"Label"]) {
             NSString* fieldId = [selectorName substringToIndex:[selectorName rangeOfString:@"Label"].location];
@@ -225,6 +219,9 @@
 }
 
 - (void) mapModelFieldsToUITableViews {
+    _tableViewMappings = [[NSMutableDictionary alloc] init];
+    _dataRenderers = [[NSMutableArray alloc] init];
+
     for (NSString* selectorName in _propertyNames) {
         if ([_activityInstance dataWithId:selectorName] != nil) {
             UITableView* tableView = objc_msgSend(_controller, NSSelectorFromString(selectorName));
@@ -240,17 +237,6 @@
                 [tableView setDelegate:renderer];
             }
         }
-    }
-}
-
-- (void) addTouchResponderToEditableImages {
-    for (UIImageView* imageView in [_imageFieldMappings allValues]) {
-        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = imageView.frame;
-        [button addTarget:_controller action:@selector(willCommenceEditForImageView:)
-         forControlEvents:UIControlEventTouchUpInside];
-        [_controller.view addSubview:button];
-        [_imageButtonMappings setObject:imageView forKey:[NSValue valueWithPointer:(__bridge void*) button]];
     }
 }
 

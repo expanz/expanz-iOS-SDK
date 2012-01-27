@@ -37,6 +37,10 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
 
+- (void) cachePropertyNames; 
+
+- (void) createActivityRequestWith:(NSString*)initialKey; 
+
 - (void) showLoadingHud;
 
 - (void) hideLoadingHud;
@@ -47,6 +51,7 @@
 /* ================================================================================================================== */
 @implementation expanz_ui_ActivityInstanceViewController
 
+@synthesize propertyNames = _propertyNames; 
 @synthesize activityDefinition = _activityDefinition;
 @synthesize activityInstance = _activityInstance;
 @synthesize modelAdapter = _modelAdapter;
@@ -62,10 +67,9 @@
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _activityDefinition = activityDefinition;
-        self.title = _activityDefinition.title;
-        _activityRequest = [[CreateActivityRequest alloc]
-            initWithActivityName:activityDefinition.name style:activityDefinition.style initialKey:initialKey
-                    sessionToken:[SessionContext globalContext].sessionToken];
+        [self setTitle:_activityDefinition.title];
+        [self createActivityRequestWith:initialKey];
+        [self cachePropertyNames];
     }
     return self;
 }
@@ -140,8 +144,7 @@
 
     for (DataPublicationRequest* publicationRequest in [_activityRequest dataPublicationRequests]) {
         if (publicationRequest.dataPublicationId == nil) {
-            for (RTProperty* property in [[self class] rt_properties]) {
-                NSString* propertyName = [property name];
+            for (NSString* propertyName in [self propertyNames]) {
                 NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));
                 UITableView* tableView = [_activityRequest tableViewForDataPublicationRequest:publicationRequest];
                 if (object == tableView) {
@@ -260,6 +263,20 @@
 }
 
 /* ================================================== Private Methods =============================================== */
+- (void) cachePropertyNames {
+    NSMutableArray* propertyNames = [[NSMutableArray alloc] init];
+    for (RTProperty* property in [[self class] rt_properties]) {
+        [propertyNames addObject:[property name]];
+    }
+    _propertyNames = [NSArray arrayWithArray:propertyNames];
+}
+
+- (void) createActivityRequestWith:(NSString*)initialKey {
+    _activityRequest = [[CreateActivityRequest alloc]
+        initWithActivityName:_activityDefinition.name style:_activityDefinition.style initialKey:initialKey
+                sessionToken:[SessionContext globalContext].sessionToken];
+}
+
 - (void) showLoadingHud {
     if (_loadingHud == nil) {
         _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];

@@ -22,7 +22,7 @@
 @interface expanz_ui_ModelAdapter : NSObject {
 
 @private
-    NSMutableArray* _propertyNames;
+    NSArray* _propertyNames;
     NSMutableDictionary* _textFieldMappings;
     NSMutableDictionary* _readOnlyTextFields;
     NSMutableDictionary* _imageFieldMappings;

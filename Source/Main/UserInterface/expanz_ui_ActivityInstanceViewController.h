@@ -35,6 +35,7 @@
     UIImageView* _currentlyEditingImageView;
 }
 
+@property(nonatomic, strong, readonly) NSArray* propertyNames;
 @property(nonatomic, strong, readonly) expanz_model_ActivityDefinition* activityDefinition;
 @property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, strong, readonly) expanz_ui_ModelAdapter* modelAdapter;

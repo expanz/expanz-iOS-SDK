@@ -56,7 +56,7 @@
 
 - (UITableView*) tableViewForDataPublicationRequest:(expanz_service_DataPublicationRequest*)publicationRequest {
     NSValue* value = [[_dataPublicationRequests allKeysForObject:publicationRequest] objectAtIndex:0];
-    UITableView* tableView = (UITableView*) [value pointerValue];
+    UITableView* tableView = (__bridge id) [value pointerValue];
     return tableView;
 }
 
