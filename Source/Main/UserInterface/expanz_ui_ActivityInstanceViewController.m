@@ -12,6 +12,7 @@
 #import <objc/message.h>
 #import "Objection.h"
 #import "NSData+Base64.h"
+#import "MARTNSObject.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_ActivityInstance.h"
@@ -31,6 +32,7 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextFieldDelegateUtils.h"
+#import "RTProperty.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
@@ -92,10 +94,8 @@
 }
 
 /* ================================================================================================================== */
-- (void) hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId {
-    LogDebug(@"Requesting dataPublicationId: %@", dataPublicationId);
-    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
-    [publicationRequest setDataPublicationId:dataPublicationId];
+- (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding {
+    [_activityRequest dataPublicationRequestFor:tableView];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
@@ -137,8 +137,29 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+
+    for (DataPublicationRequest* publicationRequest in [_activityRequest dataPublicationRequests]) {
+        if (publicationRequest.dataPublicationId == nil) {
+            for (RTProperty* property in [[self class] rt_properties]) {
+                NSString* propertyName = [property name];
+                LogDebug(@"Trying property: %@", propertyName);
+                [self view];
+                NSObject* object = [self performSelector:NSSelectorFromString(propertyName)];
+                UITableView* tableView = [_activityRequest tableViewForDataPublicationRequest:publicationRequest];
+                LogDebug(@"Here's the table view: %@", tableView);
+                LogDebug(@"Got object: %@", object);
+                if (object == tableView) {
+                    LogDebug(@"Setting data publication id to: %@", propertyName);
+                    [publicationRequest setDataPublicationId:propertyName];
+                }
+            }
+        }
+    }
+
     [_activityClient createActivityWith:_activityRequest delegate:self];
-    [self showLoadingHud];
+    if (_activityInstance == nil) {
+        [self showLoadingHud];
+    }
 }
 
 - (void) viewDidUnload {

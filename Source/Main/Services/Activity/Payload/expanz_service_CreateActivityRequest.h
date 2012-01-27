@@ -40,6 +40,8 @@
 */
 - (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView;
 
+- (UITableView*) tableViewForDataPublicationRequest:(expanz_service_DataPublicationRequest*)publicationRequest;
+
 
 @end
 

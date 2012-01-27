@@ -30,6 +30,7 @@
 		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
 		6B1107CC14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
 		6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
+		6B1F2A7C14D24204000E45FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F2A7B14D24204000E45FD /* Icon.png */; };
 		6B22FB4C14C6F2F700177535 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
 		6B22FB4E14C90C4A00177535 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
 		6B31F2D214CD4AF200A4CA49 /* Logging.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F6F61458EBB5001AF204 /* Logging.h */; };
@@ -719,14 +720,14 @@
 		6BFDE7761495FA01005D33FF /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D33FE /* my details.png */; };
 		6BFDE7761495FA01005D3401 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3400 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BFDE7761495FA01005D3404 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3403 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
-		6BFDE7761495FA01005D3406 /* UILabel+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
-		6BFDE7761495FA01005D3407 /* UILabel+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3406 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3407 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D340C /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
 		6BFDE7761495FA01005D340D /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
 		6BFDE7761495FA01005D340E /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340B /* UIView+ModelAdapter.m */; };
 		6BFDE7761495FA01005D3410 /* UIView+ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */; };
-		6BFDE7761495FA01005D3412 /* UITextField+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
-		6BFDE7761495FA01005D3413 /* UITextField+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3412 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3413 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -884,6 +885,7 @@
 		6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B1F2A7B14D24204000E45FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -1849,6 +1851,7 @@
 		6BDAB0131499828800541056 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6B1F2A7B14D24204000E45FD /* Icon.png */,
 				6BDAB0141499828800541056 /* ActivityMenu.xib */,
 				6BDAB0151499828800541056 /* background.png */,
 				6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */,
@@ -2377,6 +2380,7 @@
 				6B748A1114CD493600970C98 /* 37x-Checkmark.png in Resources */,
 				6B748A1414CD493600970C98 /* Icon.png in Resources */,
 				6B748A1714CD493600970C98 /* Icon@2x.png in Resources */,
+				6B1F2A7C14D24204000E45FD /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2562,9 +2566,9 @@
 				6B748A4514CD493600970C98 /* expanz_ui_NavigationManager.m in Sources */,
 				6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3352 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
-				6BFDE7761495FA01005D3406 /* UILabel+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3406 /* (null) in Sources */,
 				6BFDE7761495FA01005D340C /* UIView+ModelAdapter.m in Sources */,
-				6BFDE7761495FA01005D3412 /* UITextField+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3412 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2845,9 +2849,9 @@
 				6BFDE7761495FA01005D33ED /* ActivityHarnessApplicationDelegate.m in Sources */,
 				6BFDE7761495FA01005D33F3 /* main.m in Sources */,
 				6BFDE7761495FA01005D3404 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
-				6BFDE7761495FA01005D3407 /* UILabel+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3407 /* (null) in Sources */,
 				6BFDE7761495FA01005D340D /* UIView+ModelAdapter.m in Sources */,
-				6BFDE7761495FA01005D3413 /* UITextField+ModelAdapter.m in Sources */,
+				6BFDE7761495FA01005D3413 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2884,8 +2888,8 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Main/Assembly/expanz-iOS-SDK-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/Assembly/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -2905,8 +2909,8 @@
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Prefix.pch";
-				INFOPLIST_FILE = "Source/Main/expanz-iOS-SDK/expanz-iOS-SDK-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Main/Assembly/expanz-iOS-SDK-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/Assembly/expanz-iOS-SDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -3028,7 +3032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ExpanzIOS;
-				SRCROOT = "Source/Main/expanz-iOS-SDK";
+				SRCROOT = Source/Main/Assembly;
 			};
 			name = Debug;
 		};
@@ -3036,7 +3040,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ExpanzIOS;
-				SRCROOT = "Source/Main/expanz-iOS-SDK";
+				SRCROOT = Source/Main/Assembly;
 			};
 			name = Release;
 		};

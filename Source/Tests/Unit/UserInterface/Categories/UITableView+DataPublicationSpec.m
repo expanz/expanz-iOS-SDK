@@ -20,7 +20,7 @@ SPEC_BEGIN(UITableView_DataPublicationSpec)
     });
 
     it(@"should add a dataPublicationId property to UITableView", ^{
-        [tableView setDataPublicationId:@"customersList"];
+        [tableView setExpanzDataBinding:YES];
     });
     
     it(@"should add a populateMethod property to UITableView", ^{

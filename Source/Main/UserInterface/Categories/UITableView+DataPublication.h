@@ -17,11 +17,8 @@
 */
 @interface UITableView (DataPublication)
 
-/**
-* Sets the dataPublicationId - should match the name of the component.
-* TODO: Try to infer this - possible, but performance is a concern.
-*/
-- (void) setDataPublicationId:(NSString*)dataPublicationId;
+
+- (void) setExpanzDataBinding:(BOOL)dataBinding;
 
 /**
 * Sets the populate method for data binding. Defaults to 'ListMe'

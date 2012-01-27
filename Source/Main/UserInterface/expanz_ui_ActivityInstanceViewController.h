@@ -58,7 +58,7 @@
  */
 - (void)sendMethodInvocation:(NSString*)methodName;
 
-- (void)hasUITableView:(UITableView*)tableView requestingDataPublicationId:(NSString*)dataPublicationId;
+- (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding;
 
 - (void)hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
 

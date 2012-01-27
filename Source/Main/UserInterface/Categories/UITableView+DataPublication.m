@@ -24,24 +24,27 @@
 /* ================================================================================================================== */
 @implementation UITableView (DataPublication)
 
-- (void)setDataPublicationId:(NSString*)dataPublicationId {
+- (void) setExpanzDataBinding:(BOOL)dataBinding {
     ActivityInstanceViewController* activityController = [self activityController];
-    [activityController hasUITableView:self requestingDataPublicationId:dataPublicationId];
+    [activityController hasUITableView:self requestingDataBinding:dataBinding];
 }
 
 - (void)setPopulateMethod:(NSString*)populateMethod {
     ActivityInstanceViewController* activityController = [self activityController];
+    [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingPopulateMethod:populateMethod];
 }
 
 - (void)setQuery:(NSString*)query {
     ActivityInstanceViewController* activityController = [self activityController];
+    [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingQuery:query];
 }
 
 
 - (void)setAutoPopulate:(BOOL)autoPopulate {
     ActivityInstanceViewController* activityController = [self activityController];
+    [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingAutoPopulate:autoPopulate];
 }
 
