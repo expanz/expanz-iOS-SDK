@@ -64,10 +64,9 @@
 
     cell.mainLabel.text = file.title;
 
-    cell.backgroundView.backgroundColor =
-        (indexPath.row % 2) ? [UIColor colorWithRed:0.89 green:0.957 blue:0.918 alpha:1] /*#e3f4ea*/ :
-            [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
-
+    if (indexPath.row % 2) {
+        cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
+    }
     return cell;
 }
 

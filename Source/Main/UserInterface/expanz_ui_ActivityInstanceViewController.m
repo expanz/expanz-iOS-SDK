@@ -142,14 +142,9 @@
         if (publicationRequest.dataPublicationId == nil) {
             for (RTProperty* property in [[self class] rt_properties]) {
                 NSString* propertyName = [property name];
-                LogDebug(@"Trying property: %@", propertyName);
-                [self view];
-                NSObject* object = [self performSelector:NSSelectorFromString(propertyName)];
+                NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));
                 UITableView* tableView = [_activityRequest tableViewForDataPublicationRequest:publicationRequest];
-                LogDebug(@"Here's the table view: %@", tableView);
-                LogDebug(@"Got object: %@", object);
                 if (object == tableView) {
-                    LogDebug(@"Setting data publication id to: %@", propertyName);
                     [publicationRequest setDataPublicationId:propertyName];
                 }
             }

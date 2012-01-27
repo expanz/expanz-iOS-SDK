@@ -63,10 +63,9 @@
     cell.mainLabel.text = nameCell.text;
     cell.subLabel.text = phoneCell.text;
     cell.thumbnail.image = imageCell.image;
-    cell.backgroundView.backgroundColor =
-        (indexPath.row % 2) ? [UIColor colorWithRed:0.942 green:0.942 blue:0.942 alpha:1] :
-            [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
-
+    if (indexPath.row % 2) {
+        cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
+    }
     return cell;
 }
 
