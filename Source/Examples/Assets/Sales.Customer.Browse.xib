@@ -139,6 +139,11 @@
 								<string key="keyPath">query</string>
 								<string key="value">CustomersListMobile</string>
 							</object>
+							<object class="IBUserDefinedRuntimeAttribute">
+								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.string</string>
+								<string key="keyPath">fieldNames</string>
+								<string key="value">CustomerPhoto,CustomerFullName,Email</string>
+							</object>
 						</array>
 					</object>
 				</object>

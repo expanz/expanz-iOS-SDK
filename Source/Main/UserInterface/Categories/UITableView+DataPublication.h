@@ -35,4 +35,17 @@
 */
 - (void) setAutoPopulate:(BOOL)autoPopulate;
 
+
+/**
+* Comma-separated list of fields to display. 
+*/
+- (void) setFieldNames:(NSString*)fieldNames;
+
+
+/**
+* List of field names to display, or nil for `expanz_ui_GridDataRenderer` to infer.
+*/
+- (NSArray*) fieldNames;
+
+
 @end

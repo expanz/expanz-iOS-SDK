@@ -17,15 +17,23 @@
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_model_GridData.h"
+#import "UITableView+DataPublication.h"
 
+
+@interface expanz_ui_GridDataRenderer (private)
+
+- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractCell*)abstractCell;
+
+@end
+/* ================================================================================================================== */
 
 @implementation expanz_ui_GridDataRenderer
 
 @synthesize tableCell = _tableCell;
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
-      activityName:(NSString*)activityName {
+- (id) initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
+       activityName:(NSString*)activityName {
 
     self = [super initWithData:data tableView:tableView activityName:activityName];
     if (self) {
@@ -35,12 +43,12 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return [_gridData.rows count];
 }
 
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     NSString* reuseId = [_gridData dataId];
 
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
@@ -49,27 +57,32 @@
         cell = self.tableCell;
         self.tableCell = nil;
     }
+    cell.thumbnail.image = nil;
+    cell.mainLabel.text = nil;
+    cell.subLabel.text = nil;
 
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
-    TextCell* nameCell = (TextCell*) [row cellWithId:@"8"];
-    TextCell* phoneCell = (TextCell*) [row cellWithId:@"6"];
-
-    ImageCell* imageCell = (ImageCell*) [row cellWithId:@"9"];
-    if (imageCell.hasAskedImageToLoad == NO) {
-        [imageCell loadImage];
+    NSArray* fieldNames = [tableView fieldNames];
+    if (fieldNames != nil) {
+        for (NSString* fieldName in fieldNames) {
+            AbstractCell* abstractCell = [row cellForFieldId:fieldName];
+            [self populateCel:cell withDataFrom:abstractCell];
+        }
     }
-    [imageCell addObserver:self forKeyPath:@"image" options:0 context:nil];
+    else {
+        NSArray* abstractCells = [row cells];
+        for (AbstractCell* abstractCell in abstractCells) {
+            [self populateCel:cell withDataFrom:abstractCell];
+        }
+    }
 
-    cell.mainLabel.text = nameCell.text;
-    cell.subLabel.text = phoneCell.text;
-    cell.thumbnail.image = imageCell.image;
     if (indexPath.row % 2) {
         cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
     }
     return cell;
 }
 
-- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
 
     ActivityDefinition* edit =
@@ -79,15 +92,38 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
     return 75;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
-                       context:(void*)context {
+- (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
+                        context:(void*)context {
     [self.tableView reloadData];
     [self.tableView setNeedsLayout];
+}
+
+
+/* ================================================== Private Methods =============================================== */
+- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractCell*)abstractCell {
+
+    if ([abstractCell isKindOfClass:[ImageCell class]] && cell.thumbnail.image == nil) {
+        ImageCell* imageCell = (ImageCell*) abstractCell;
+        cell.thumbnail.image = imageCell.image;
+        if (imageCell.hasAskedImageToLoad == NO) {
+            [imageCell loadImage];
+        }
+        [imageCell addObserver:self forKeyPath:@"image" options:0 context:nil];        
+    }
+    else if ([abstractCell isKindOfClass:[TextCell class]]) {
+        TextCell* textCell = (TextCell*) abstractCell;
+        if (cell.mainLabel.text == nil) {
+            cell.mainLabel.text = textCell.text;           
+        }
+        else if (cell.subLabel.text == nil) {
+            cell.subLabel.text = textCell.text;
+        }
+    }
 }
 
 
