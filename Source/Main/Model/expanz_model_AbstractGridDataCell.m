@@ -10,19 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_TextCell.h"
+#import "expanz_model_AbstractGridDataCell.h"
 
 
-@implementation expanz_model_TextCell
+@implementation expanz_model_AbstractGridDataCell
 
-@synthesize text = _text;
+@synthesize cellId = _cellId;
 
-- (id) initWithCellId:(NSString*)cellId text:(NSString*)text {
-    self = [super initWithCellId:cellId];
+/* ================================================== Initializers ================================================== */
+- (id) initWithCellId:(NSString*)cellId {
+    self = [super init];
     if (self) {
-        _text = [text copy];
+        _cellId = [cellId copy];
     }
-
     return self;
 
 }

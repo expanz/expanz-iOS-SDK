@@ -11,7 +11,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_AbstractCell.h"
+#import "expanz_model_AbstractGridDataCell.h"
 
 @class expanz_ui_ModelAdapter;
 
@@ -19,7 +19,7 @@
 * Represents an image in an `expanz_model_Row` of a data grid. The image is fetched asynchronously, so that the table
 * rows can be presented as quickly as possible.
 */
-@interface expanz_model_ImageCell : expanz_model_AbstractCell
+@interface expanz_model_ImageGridDataCell : expanz_model_AbstractGridDataCell
 
 @property(nonatomic, strong, readonly) NSString* imageUrl;
 @property(nonatomic, retain) UIImage* image;
@@ -32,4 +32,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ImageCell expanz_model_ImageCell;
+@compatibility_alias ImageGridDataCell expanz_model_ImageGridDataCell;

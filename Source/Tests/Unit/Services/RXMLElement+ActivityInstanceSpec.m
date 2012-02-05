@@ -16,7 +16,7 @@
 #import "expanz_model_TreeData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
-#import "expanz_model_TextCell.h"
+#import "../../../Main/Model/expanz_model_TextGridDataCell.h"
 #import "expanz_model_File.h"
 #import "expanz_model_Folder.h"
 
@@ -87,7 +87,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             for (Row* row in [data rows]) {
                 assertThat(row.rowId, notNilValue());
                 assertThat(row.type, equalTo(@"Sales.Customer"));
-                for (AbstractCell* cell in [row cells]) {
+                for (AbstractGridDataCell* cell in [row cells]) {
                     assertThat(cell.cellId, notNilValue());
                 }
             }

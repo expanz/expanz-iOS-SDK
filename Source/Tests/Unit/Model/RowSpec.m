@@ -14,7 +14,7 @@
 #import "../../../Main/Model/expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
-#import "expanz_model_TextCell.h"
+#import "../../../Main/Model/expanz_model_TextGridDataCell.h"
 
 
 SPEC_BEGIN(RowSpec)
@@ -58,7 +58,7 @@ SPEC_BEGIN(RowSpec)
             [row addCellDefinitionWithId:@"1" data:@"Jasper"];
             [row addCellDefinitionWithId:@"2" data:@"Metro Manila"];
 
-            AbstractCell* retrieved = [row cellWithId:@"1"];
+            AbstractGridDataCell* retrieved = [row cellWithId:@"1"];
             assertThat(retrieved.cellId, equalTo(@"1"));
         });
 
@@ -66,7 +66,7 @@ SPEC_BEGIN(RowSpec)
             [row addCellDefinitionWithId:@"1" data:@"Jasper"];
             [row addCellDefinitionWithId:@"2" data:@"Metro Manila"];
 
-            AbstractCell* retrieved = [row cellForFieldId:@"firstName"];
+            AbstractGridDataCell* retrieved = [row cellForFieldId:@"firstName"];
             assertThat(retrieved.cellId, equalTo(@"1"));
 
         });

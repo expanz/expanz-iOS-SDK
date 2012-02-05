@@ -16,7 +16,7 @@
 @class expanz_model_GridData;
 @class expanz_model_Column;
 @class expanz_model_Row;
-@class expanz_model_TextCell;
+@class expanz_model_TextGridDataCell;
 @class expanz_model_Folder;
 @class expanz_model_File;
 @class expanz_model_FileResource;

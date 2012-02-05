@@ -12,8 +12,8 @@
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_components_ThumbnailTableCell.h"
 #import "expanz_model_Row.h"
-#import "expanz_model_TextCell.h"
-#import "expanz_model_ImageCell.h"
+#import "../Model/expanz_model_TextGridDataCell.h"
+#import "../Model/expanz_model_ImageGridDataCell.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_model_GridData.h"
@@ -22,7 +22,7 @@
 
 @interface expanz_ui_GridDataRenderer (private)
 
-- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractCell*)abstractCell;
+- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractGridDataCell*)abstractCell;
 
 @end
 /* ================================================================================================================== */
@@ -66,13 +66,13 @@
     if (fieldNames != nil) {
         LogDebug(@"Populating cell with fieldNames: %@", fieldNames);
         for (NSString* fieldName in fieldNames) {
-            AbstractCell* abstractCell = [row cellForFieldId:fieldName];
+            AbstractGridDataCell* abstractCell = [row cellForFieldId:fieldName];
             [self populateCel:cell withDataFrom:abstractCell];
         }
     }
     else {
         NSArray* abstractCells = [row cells];
-        for (AbstractCell* abstractCell in abstractCells) {
+        for (AbstractGridDataCell* abstractCell in abstractCells) {
             [self populateCel:cell withDataFrom:abstractCell];
         }
     }
@@ -106,20 +106,20 @@
 
 
 /* ================================================== Private Methods =============================================== */
-- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractCell*)abstractCell {
+- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractGridDataCell*)gridDataCell {
 
-    if ([abstractCell isKindOfClass:[ImageCell class]] && cell.thumbnail.image == nil) {
-        ImageCell* imageCell = (ImageCell*) abstractCell;
+    if ([gridDataCell isKindOfClass:[ImageGridDataCell class]] && cell.thumbnail.image == nil) {
+        ImageGridDataCell* imageCell = (ImageGridDataCell*) gridDataCell;
         cell.thumbnail.image = imageCell.image;
         if (imageCell.hasAskedImageToLoad == NO) {
             [imageCell loadImage];
         }
-        [imageCell addObserver:self forKeyPath:@"image" options:0 context:nil];        
+        [imageCell addObserver:self forKeyPath:@"image" options:0 context:nil];
     }
-    else if ([abstractCell isKindOfClass:[TextCell class]]) {
-        TextCell* textCell = (TextCell*) abstractCell;
+    else if ([gridDataCell isKindOfClass:[TextGridDataCell class]]) {
+        TextGridDataCell* textCell = (TextGridDataCell*) gridDataCell;
         if (cell.mainLabel.text == nil) {
-            cell.mainLabel.text = textCell.text;           
+            cell.mainLabel.text = textCell.text;
         }
         else if (cell.subLabel.text == nil) {
             cell.subLabel.text = textCell.text;

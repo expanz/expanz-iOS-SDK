@@ -10,11 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_model_ImageCell.h"
+#import "expanz_model_ImageGridDataCell.h"
 #import "ASIHTTPRequest.h"
 
 
-@implementation expanz_model_ImageCell
+@implementation expanz_model_ImageGridDataCell
 
 @synthesize imageUrl = _imageUrl;
 @synthesize image = _image;

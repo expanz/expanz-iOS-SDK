@@ -10,16 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "expanz_model_TextCell.h"
-#import "expanz_model_ImageCell.h"
+#import "../../../Main/Model/expanz_model_TextGridDataCell.h"
+#import "../../../Main/Model/expanz_model_ImageGridDataCell.h"
 
 SPEC_BEGIN(TextCellSpec)
 
-    __block TextCell* cell;
+    __block TextGridDataCell* cell;
 
     beforeEach(^{
 
-        cell = [[TextCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
+        cell = [[TextGridDataCell alloc] initWithCellId:@"firstName" text:@"Jasper"];
     });
 
     describe(@"Object creation", ^{

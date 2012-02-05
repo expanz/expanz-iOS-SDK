@@ -19,8 +19,8 @@
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_Row.h"
-#import "expanz_model_TextCell.h"
-#import "expanz_model_ImageCell.h"
+#import "../Model/expanz_model_TextGridDataCell.h"
+#import "../Model/expanz_model_ImageGridDataCell.h"
 #import "expanz_model_Field.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
@@ -175,7 +175,7 @@
     [super didReceiveMemoryWarning];
     for (GridData* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
-            for (ImageCell* imageCell in [row imageCells]) {
+            for (ImageGridDataCell* imageCell in [row imageCells]) {
                 imageCell.image = nil;
                 imageCell.hasAskedImageToLoad = NO;
             }

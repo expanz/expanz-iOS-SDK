@@ -11,15 +11,15 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_model_ImageCell.h"
+#import "../../../Main/Model/expanz_model_ImageGridDataCell.h"
 
 SPEC_BEGIN(ImageCellSpec)
 
-    __block ImageCell* imageCell;
+    __block ImageGridDataCell* imageCell;
 
     describe(@"Object creation", ^{
         it(@"should allow creation with cellId and imageUrl attributes", ^{
-            imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:@"http://www.zzpics.net/jblues"];
+            imageCell = [[ImageGridDataCell alloc] initWithCellId:@"mugShot" imageUrl:@"http://www.zzpics.net/jblues"];
             assertThat(imageCell, notNilValue());
             assertThat(imageCell.cellId, equalTo(@"mugShot"));
             assertThat(imageCell.imageUrl, equalTo(@"http://www.zzpics.net/jblues"));
@@ -30,7 +30,7 @@ SPEC_BEGIN(ImageCellSpec)
 
         it(@"should load the image in an asynchronous thead", ^{
             NSString* url = @"http://www.google.com.ph/images/srpr/logo3w.png";
-            imageCell = [[ImageCell alloc] initWithCellId:@"mugShot" imageUrl:url];
+            imageCell = [[ImageGridDataCell alloc] initWithCellId:@"mugShot" imageUrl:url];
             assertWillHappen(imageCell.image != nil);
         });
     });

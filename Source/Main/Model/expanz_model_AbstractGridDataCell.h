@@ -11,18 +11,19 @@
 
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_AbstractCell.h"
 
 /**
-* Represents a cell belonging to an `expanz_model_Row`.
+* Base class representing a cell in an `expanz_model_Row`.
 */
-@interface expanz_model_TextCell : expanz_model_AbstractCell
+@interface expanz_model_AbstractGridDataCell : NSObject
 
-@property (nonatomic, strong, readonly) NSString* text;
+@property(nonatomic, strong, readonly) NSString*(cellId);
 
-- (id) initWithCellId:(NSString*)cellId text:(NSString*)text;
+- (id) initWithCellId:(NSString*)aCellId;
+
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias TextCell expanz_model_TextCell;
+@compatibility_alias AbstractGridDataCell expanz_model_AbstractGridDataCell;
+

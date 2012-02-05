@@ -13,8 +13,8 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_GridData.h"
-#import "expanz_model_TextCell.h"
-#import "expanz_model_ImageCell.h"
+#import "expanz_model_TextGridDataCell.h"
+#import "expanz_model_ImageGridDataCell.h"
 
 /* ================================================================================================================== */
 @interface expanz_model_Row (private)
@@ -48,8 +48,8 @@
     [_cellDefinitions setValue:data forKey:cellId];
 }
 
-- (AbstractCell*) cellWithId:(NSString*)cellId {
-    for (AbstractCell* cell in [self cells]) {
+- (AbstractGridDataCell*) cellWithId:(NSString*)cellId {
+    for (AbstractGridDataCell* cell in [self cells]) {
         if ([cell.cellId isEqualToString:cellId]) {
             return cell;
         }
@@ -57,7 +57,7 @@
     return nil;
 }
 
- - (expanz_model_AbstractCell*) cellForFieldId:(NSString*)fieldId {
+ - (expanz_model_AbstractGridDataCell*) cellForFieldId:(NSString*)fieldId {
      Column* column = [_gridData columnWithFieldId:fieldId];
      if (column != nil) {
          return [self cellWithId:column.columnId];
@@ -102,10 +102,10 @@
                 case ExpanzDataTypeNumber:
                 case ExpanzDataTypeDate:
                 case ExpanzDataTypeDateTime:
-                    [_textCells addObject:[[TextCell alloc] initWithCellId:cellId text:data]];
+                    [_textCells addObject:[[TextGridDataCell alloc] initWithCellId:cellId text:data]];
                     break;
                 case ExpanzDataTypeImage:
-                    [_imageCells addObject:[[ImageCell alloc] initWithCellId:cellId imageUrl:data]];
+                    [_imageCells addObject:[[ImageGridDataCell alloc] initWithCellId:cellId imageUrl:data]];
                     break;
                 case ExpanzDataTypeBool:
                     //TODO: Handle this!

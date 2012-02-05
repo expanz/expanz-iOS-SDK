@@ -15,8 +15,8 @@
 @class expanz_model_Field;
 @class expanz_ui_ActivityInstanceViewController;
 @class expanz_model_GridData;
-@class expanz_model_AbstractCell;
-@class expanz_model_ImageCell;
+@class expanz_model_AbstractGridDataCell;
+@class expanz_model_ImageGridDataCell;
 @class expanz_model_AbstractData;
 
 @interface expanz_ui_ModelAdapter : NSObject {

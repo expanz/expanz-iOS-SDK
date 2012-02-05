@@ -12,9 +12,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class expanz_model_TextCell;
+@class expanz_model_TextGridDataCell;
 @class expanz_model_GridData;
-@class expanz_model_AbstractCell;
+@class expanz_model_AbstractGridDataCell;
 
 /**
 * Represents a row in an `expanz_model_DataSet`.
@@ -36,9 +36,9 @@
 
 - (void) addCellDefinitionWithId:(NSString*)cellId data:(NSString*)data;
 
-- (expanz_model_AbstractCell*) cellWithId:(NSString*)cellId;
+- (expanz_model_AbstractGridDataCell*) cellWithId:(NSString*)cellId;
 
-- (expanz_model_AbstractCell*) cellForFieldId:(NSString*)fieldId;
+- (expanz_model_AbstractGridDataCell*) cellForFieldId:(NSString*)fieldId;
 
 - (NSArray*) cells;
 
