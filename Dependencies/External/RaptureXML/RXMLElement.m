@@ -32,177 +32,184 @@
 
 @implementation RXMLElement
 
-- (id)initFromXMLString:(NSString *)xmlString {
+- (id) initFromXMLString:(NSString*)xmlString {
+    NSString* trimmed =
+        [xmlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (trimmed == nil || trimmed.length == 0) {
+        LogDebug(@"Can't initialize from empty string. Returning nil.");
+        return nil;
+    }
+
     if ((self = [super init])) {
         xml_ = [[TBXML alloc] initWithXMLString:xmlString];
         tbxmlElement_ = xml_.rootXMLElement;
     }
-    
-    return self;    
+    return self;
 }
 
-- (id)initFromXMLFile:(NSString *)filename {
+- (id) initFromXMLFile:(NSString*)filename {
     if ((self = [super init])) {
         xml_ = [[TBXML alloc] initWithXMLFile:filename];
         tbxmlElement_ = xml_.rootXMLElement;
     }
-    
-    return self;    
+
+    return self;
 }
 
-- (id)initFromXMLFile:(NSString *)filename fileExtension:(NSString*)extension {
+- (id) initFromXMLFile:(NSString*)filename fileExtension:(NSString*)extension {
     if ((self = [super init])) {
         xml_ = [[TBXML alloc] initWithXMLFile:filename fileExtension:extension];
         tbxmlElement_ = xml_.rootXMLElement;
     }
-    
-    return self;    
+
+    return self;
 }
 
-- (id)initFromURL:(NSURL *)url {
+- (id) initFromURL:(NSURL*)url {
     if ((self = [super init])) {
         xml_ = [[TBXML alloc] initWithURL:url];
         tbxmlElement_ = xml_.rootXMLElement;
     }
-    
-    return self;    
+
+    return self;
 }
 
-- (id)initFromXMLData:(NSData *)data {
+- (id) initFromXMLData:(NSData*)data {
     if ((self = [super init])) {
         xml_ = [[TBXML alloc] initWithXMLData:data];
         tbxmlElement_ = xml_.rootXMLElement;
     }
-    
-    return self;    
-}
 
-- (id)initFromTBXMLElement:(TBXMLElement *)tbxmlElement {
-    if ((self = [super init])) {
-        tbxmlElement_ = tbxmlElement;
-    }
-    
     return self;
 }
 
-+ (id)elementFromXMLString:(NSString *)filename {
-    return [[[RXMLElement alloc] initFromXMLString:filename] autorelease];    
+- (id) initFromTBXMLElement:(TBXMLElement*)tbxmlElement {
+    if ((self = [super init])) {
+        tbxmlElement_ = tbxmlElement;
+    }
+
+    return self;
 }
 
-+ (id)elementFromXMLFile:(NSString *)filename {
-    return [[[RXMLElement alloc] initFromXMLFile:filename] autorelease];    
++ (id) elementFromXMLString:(NSString*)filename {
+    return [[[RXMLElement alloc] initFromXMLString:filename] autorelease];
 }
 
-+ (id)elementFromXMLFilename:(NSString *)filename fileExtension:(NSString *)extension {
++ (id) elementFromXMLFile:(NSString*)filename {
+    return [[[RXMLElement alloc] initFromXMLFile:filename] autorelease];
+}
+
++ (id) elementFromXMLFilename:(NSString*)filename fileExtension:(NSString*)extension {
     return [[[RXMLElement alloc] initFromXMLFile:filename fileExtension:extension] autorelease];
 }
 
-+ (id)elementFromURL:(NSURL *)url {
++ (id) elementFromURL:(NSURL*)url {
     return [[[RXMLElement alloc] initFromURL:url] autorelease];
 }
 
-+ (id)elementFromXMLData:(NSData *)data {
++ (id) elementFromXMLData:(NSData*)data {
     return [[[RXMLElement alloc] initFromXMLData:data] autorelease];
 }
 
-+ (id)elementFromTBXMLElement:(TBXMLElement *)tbxmlElement {
++ (id) elementFromTBXMLElement:(TBXMLElement*)tbxmlElement {
     return [[[RXMLElement alloc] initFromTBXMLElement:tbxmlElement] autorelease];
 }
 
-- (NSString *)description {
+- (NSString*) description {
     return [self text];
 }
 
-- (void)dealloc {
+- (void) dealloc {
     [xml_ release];
     [super dealloc];
 }
 
 #pragma mark -
 
-- (NSString *)tag {
+- (NSString*) tag {
     return [TBXML elementName:tbxmlElement_];
 }
 
-- (NSString *)text {
+- (NSString*) text {
     return [TBXML textForElement:tbxmlElement_];
 }
 
-- (NSInteger)textAsInt {
+- (NSInteger) textAsInt {
     return [self.text intValue];
 }
 
-- (double)textAsDouble {
+- (double) textAsDouble {
     return [self.text doubleValue];
 }
 
-- (NSString *)attribute:(NSString *)attName {
+- (NSString*) attribute:(NSString*)attName {
     return [TBXML valueOfAttributeNamed:attName forElement:tbxmlElement_];
 }
 
-- (NSInteger)attributeAsInt:(NSString *)attName {
+- (NSInteger) attributeAsInt:(NSString*)attName {
     return [[self attribute:attName] intValue];
 }
 
-- (double)attributeAsDouble:(NSString *)attName {
+- (double) attributeAsDouble:(NSString*)attName {
     return [[self attribute:attName] doubleValue];
 }
 
-- (BOOL)isValid {
+- (BOOL) isValid {
     return (tbxmlElement_ != nil);
 }
 
 #pragma mark -
 
-- (RXMLElement *)child:(NSString *)tagName {
-    NSArray *components = [tagName componentsSeparatedByString:@"."];
-    TBXMLElement *currTBXMLElement = tbxmlElement_;
-    
+- (RXMLElement*) child:(NSString*)tagName {
+    NSArray* components = [tagName componentsSeparatedByString:@"."];
+    TBXMLElement* currTBXMLElement = tbxmlElement_;
+
     // navigate down
-    for (NSInteger i=0; i < components.count; ++i) {
-        NSString *iTagName = [components objectAtIndex:i];
-        
+    for (NSInteger i = 0; i < components.count; ++i) {
+        NSString* iTagName = [components objectAtIndex:i];
+
         if ([iTagName isEqualToString:@"*"]) {
             currTBXMLElement = [TBXML childElementNamed:nil parentElement:currTBXMLElement];
-        } else {
-            currTBXMLElement = [TBXML childElementNamed:iTagName parentElement:currTBXMLElement];            
         }
-        
+        else {
+            currTBXMLElement = [TBXML childElementNamed:iTagName parentElement:currTBXMLElement];
+        }
+
         if (!currTBXMLElement) {
             break;
         }
     }
-    
+
     if (currTBXMLElement) {
         return [RXMLElement elementFromTBXMLElement:currTBXMLElement];
     }
-    
+
     return nil;
 }
 
-- (NSArray *)children:(NSString *)tagName {
-    NSMutableArray *children = [NSMutableArray array];
-    TBXMLElement *currTBXMLElement = [TBXML childElementNamed:tagName parentElement:tbxmlElement_];
-    
+- (NSArray*) children:(NSString*)tagName {
+    NSMutableArray* children = [NSMutableArray array];
+    TBXMLElement* currTBXMLElement = [TBXML childElementNamed:tagName parentElement:tbxmlElement_];
+
     if (currTBXMLElement) {
         do {
             [children addObject:[RXMLElement elementFromTBXMLElement:currTBXMLElement]];
-        } while ((currTBXMLElement = [TBXML nextSiblingNamed:tagName searchFromElement:currTBXMLElement]));        
+        } while ((currTBXMLElement = [TBXML nextSiblingNamed:tagName searchFromElement:currTBXMLElement]));
     }
-    
+
     return [[children copy] autorelease];
 }
 
 #pragma mark -
 
-- (void)iterate:(NSString *)query with:(void (^)(RXMLElement *))blk {
-    NSArray *components = [query componentsSeparatedByString:@"."];
-    TBXMLElement *currTBXMLElement = tbxmlElement_;
+- (void) iterate:(NSString*)query with:(void (^)(RXMLElement*))blk {
+    NSArray* components = [query componentsSeparatedByString:@"."];
+    TBXMLElement* currTBXMLElement = tbxmlElement_;
 
     // navigate down
-    for (NSInteger i=0; i < components.count; ++i) {
-        NSString *iTagName = [components objectAtIndex:i];
-        
+    for (NSInteger i = 0; i < components.count; ++i) {
+        NSString* iTagName = [components objectAtIndex:i];
+
         if ([iTagName isEqualToString:@"*"]) {
             currTBXMLElement = [TBXML childElementNamed:nil parentElement:currTBXMLElement];
 
@@ -210,38 +217,40 @@
             if (i < (components.count - 1)) {
                 // midstream
                 do {
-                    RXMLElement *element = [RXMLElement elementFromTBXMLElement:currTBXMLElement];
-                    NSString *restOfQuery = [[components subarrayWithRange:NSMakeRange(i + 1, components.count - i - 1)] componentsJoinedByString:@"."];
+                    RXMLElement* element = [RXMLElement elementFromTBXMLElement:currTBXMLElement];
+                    NSString* restOfQuery = [[components subarrayWithRange:NSMakeRange(i + 1, components.count - i - 1)]
+                        componentsJoinedByString:@"."];
                     [element iterate:restOfQuery with:blk];
                 } while ((currTBXMLElement = [TBXML nextSiblingNamed:nil searchFromElement:currTBXMLElement]));
-                    
+
             }
-        } else {
-            currTBXMLElement = [TBXML childElementNamed:iTagName parentElement:currTBXMLElement];            
+        }
+        else {
+            currTBXMLElement = [TBXML childElementNamed:iTagName parentElement:currTBXMLElement];
         }
 
         if (!currTBXMLElement) {
             break;
         }
     }
-    
+
     if (currTBXMLElement) {
         // enumerate
-        NSString *childTagName = [components lastObject];
-        
+        NSString* childTagName = [components lastObject];
+
         if ([childTagName isEqualToString:@"*"]) {
             childTagName = nil;
         }
 
         do {
-            RXMLElement *element = [RXMLElement elementFromTBXMLElement:currTBXMLElement];
+            RXMLElement* element = [RXMLElement elementFromTBXMLElement:currTBXMLElement];
             blk(element);
         } while ((currTBXMLElement = [TBXML nextSiblingNamed:childTagName searchFromElement:currTBXMLElement]));
     }
 }
 
-- (void)iterateElements:(NSArray *)elements with:(void (^)(RXMLElement *))blk {
-    for (RXMLElement *iElement in elements) {
+- (void) iterateElements:(NSArray*)elements with:(void (^)(RXMLElement*))blk {
+    for (RXMLElement* iElement in elements) {
         blk(iElement);
     }
 }
