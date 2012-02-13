@@ -60,23 +60,24 @@
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
-    [self.httpClient post:[self.serviceUrl absoluteString] payload:[downloadRequest toXml] headers:[self requestHeaders]
-                withBlock:^(LRRestyResponse* response) {
+    [self.httpClient
+        post:[[[SDKConfiguration globalConfiguration] getBlobServiceUrl] absoluteString] payload:[downloadRequest toXml]
+     headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {
 
-                    if (response.status == 200) {
-                        LogDebug(@"Response: %@, ", [response asString]);
-                        NSData* data = [response responseData];
-                        [delegate requestDidFinishWithData:data];
+        if (response.status == 200) {
+            LogDebug(@"Response: %@, ", [response asString]);
+            NSData* data = [response responseData];
+            [delegate requestDidFinishWithData:data];
 
-                    }
-                    else {
-                        NSString* domain = NSStringFromClass([self class]);
-                        NSDictionary
-                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-                        [delegate requestDidFailWithError:error];
-                    }
-                }];
+        }
+        else {
+            NSString* domain = NSStringFromClass([self class]);
+            NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+            NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+            LogDebug(@"Error: %@", error);
+            [delegate requestDidFailWithError:error];
+        }
+    }];
 }
 
 
