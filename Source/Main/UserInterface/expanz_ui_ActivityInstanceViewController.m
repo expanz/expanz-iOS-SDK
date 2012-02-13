@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "NSData+ExpanzAdditions.h"
 #import <objc/message.h>
 #import "Objection.h"
-#import "NSData+Base64.h"
 #import "MARTNSObject.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityDefinition.h"
@@ -19,8 +19,8 @@
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_Row.h"
-#import "../Model/expanz_model_TextGridDataCell.h"
-#import "../Model/expanz_model_ImageGridDataCell.h"
+#import "expanz_model_TextGridDataCell.h"
+#import "expanz_model_ImageGridDataCell.h"
 #import "expanz_model_Field.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"

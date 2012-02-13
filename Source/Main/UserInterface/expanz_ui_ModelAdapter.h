@@ -29,7 +29,7 @@
     NSMutableDictionary* _labelMappings;
     NSMutableDictionary* _tableViewMappings;
     NSMutableDictionary* _imageButtonMappings;
-    NSMutableArray* _dataRenderers; 
+    NSMutableArray* _dataRenderers;
 
 }
 

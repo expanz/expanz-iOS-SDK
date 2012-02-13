@@ -41,7 +41,7 @@
     }
 
     if ((self = [super init])) {
-        xml_ = [[TBXML alloc] initWithXMLString:xmlString];
+        xml_ = [[TBXML alloc] initWithXMLString:trimmed];
         tbxmlElement_ = xml_.rootXMLElement;
     }
     return self;

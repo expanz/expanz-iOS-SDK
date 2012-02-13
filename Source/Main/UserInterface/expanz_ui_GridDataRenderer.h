@@ -20,6 +20,7 @@
 @interface expanz_ui_GridDataRenderer : expanz_ui_AbstractDataRenderer {
 
 @private
+    NSMutableArray* _observedCells;
     expanz_model_GridData* _gridData;
 }
 

@@ -9,30 +9,27 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "ASIHTTPRequest.h"
 #import "expanz_service_XmlPostWebService.h"
 
 @implementation expanz_service_XmlPostWebService
 
 @synthesize serviceUrl = _serviceUrl;
-@synthesize request = _request;
+@synthesize httpClient = _httpClient;
+
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithServiceUrl:(NSURL*)serviceUrl {
     self = [super init];
     if (self) {
         _serviceUrl = serviceUrl;
+        _httpClient = [LRResty client];
     }
     return self;
 }
 
 
-- (void) newRequestWithPayload:(id<xml_Serializable>)xmlable {
-    _request = nil;
-    _request = [[ASIFormDataRequest alloc] initWithURL:_serviceUrl];
-    [_request addRequestHeader:@"Content-Type" value:@"text/xml"];
-    [_request appendPostData:[[xmlable toXml] dataUsingEncoding:NSUTF8StringEncoding]];
-    LogDebug(@"Sending request: %@", [xmlable toXml]);
+- (NSDictionary*) requestHeaders {
+    return [NSDictionary dictionaryWithObject:@"text/xml" forKey:@"Content-Type"];
 }
 
 

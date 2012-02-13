@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "ASIFormDataRequest.h"
 #import "expanz_service_XmlPostWebService.h"
 #import "expanz_service_XmlPostLoginClient.h"
 #import "expanz_service_LoginClient.h"

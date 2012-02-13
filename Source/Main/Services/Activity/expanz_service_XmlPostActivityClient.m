@@ -55,22 +55,23 @@
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
            forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
-    [self newRequestWithPayload:xmlPayload];
-    
-    __weak XmlPostActivityClient* client = self;
-    
-    [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [client.request responseString]);
-        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[client.request responseString]];
-        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
-        [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
-    }];
+    [self.httpClient post:[self.serviceUrl absoluteString] payload:[xmlPayload toXml] headers:[self requestHeaders]
+                withBlock:^(LRRestyResponse* response) {
 
-    [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[client.request error]];
-    }];
-
-    [self.request startAsynchronous];
+                    if (response.status == 200) {
+                        LogDebug(@"Response: %@, ", [response asString]);
+                        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+                        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
+                        [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
+                    }
+                    else {
+                        NSString* domain = NSStringFromClass([self class]);
+                        NSDictionary
+                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+                        [delegate requestDidFailWithError:error];
+                    }
+                }];
 }
 
 @end

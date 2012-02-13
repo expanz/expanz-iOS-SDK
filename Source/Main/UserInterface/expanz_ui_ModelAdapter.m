@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <objc/message.h>
-#import "ASIHTTPRequest.h"
+#import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_ActivityDefinition.h"
@@ -124,15 +124,19 @@
         Field* field = [_activityInstance fieldWithId:fieldId];
         LogDebug(@"Field: %@", field);
         LogDebug(@"Image url: %@", field.value);
-        __weak ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:field.value]];
-        [request setCompletionBlock:^{
-            LogDebug(@"Running completion block");
-            UIImageView* imageView = [_imageFieldMappings valueForKey:fieldId];
-            imageView.image = [UIImage imageWithData:[request responseData]];
-        }];
-        [request startAsynchronous];
-    }
 
+        [[LRResty client] get:field.value withBlock:^(LRRestyResponse* response) {
+            LogDebug(@"In completion block");
+            if (response.status == 200) {
+                UIImageView* imageView = [_imageFieldMappings valueForKey:fieldId];
+                imageView.image = [UIImage imageWithData:[response responseData]];
+            }
+            else {
+                //TODO: Handle this?
+                LogError(@"Can't download the image: %@", field.value);
+            }
+        }];
+    }
 }
 
 - (void) updateDataGridsWithModelValues {

@@ -9,11 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <Cedar-iPhone/CDRSpec.h>
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_components_ThumbnailTableCell.h"
 #import "expanz_model_Row.h"
-#import "../Model/expanz_model_TextGridDataCell.h"
-#import "../Model/expanz_model_ImageGridDataCell.h"
+#import "expanz_model_TextGridDataCell.h"
+#import "expanz_model_ImageGridDataCell.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_model_GridData.h"
@@ -38,6 +39,7 @@
     self = [super initWithData:data tableView:tableView activityName:activityName];
     if (self) {
         _gridData = (GridData*) self.data;
+        _observedCells = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -100,8 +102,12 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
                         context:(void*)context {
-    [self.tableView reloadData];
-    [self.tableView setNeedsLayout];
+
+    LogDebug(@"Observed.");
+    ThumbnailTableCell* tableCell = (__bridge ThumbnailTableCell*) context;
+    ImageGridDataCell* gridDataCell = (ImageGridDataCell*) object;
+    tableCell.thumbnail.image = gridDataCell.image;
+    [gridDataCell removeObserver:self forKeyPath:@"image"];
 }
 
 
@@ -110,11 +116,13 @@
 
     if ([gridDataCell isKindOfClass:[ImageGridDataCell class]] && cell.thumbnail.image == nil) {
         ImageGridDataCell* imageCell = (ImageGridDataCell*) gridDataCell;
-        cell.thumbnail.image = imageCell.image;
+        if (cell.thumbnail.image == nil) {
+            [imageCell addObserver:self forKeyPath:@"image" options:0 context:(__bridge void*) cell];
+        }
         if (imageCell.hasAskedImageToLoad == NO) {
             [imageCell loadImage];
+            [_observedCells addObject:imageCell];
         }
-        [imageCell addObserver:self forKeyPath:@"image" options:0 context:nil];
     }
     else if ([gridDataCell isKindOfClass:[TextGridDataCell class]]) {
         TextGridDataCell* textCell = (TextGridDataCell*) gridDataCell;
@@ -126,6 +134,7 @@
         }
     }
 }
+
 
 
 @end

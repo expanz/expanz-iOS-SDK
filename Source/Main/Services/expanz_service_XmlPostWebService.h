@@ -10,8 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
+#import <LRResty/LRResty.h>
 #import "xml_Serializable.h"
 
 @class expanz_iOS_SDKConfiguration;
@@ -24,14 +23,11 @@
 @interface expanz_service_XmlPostWebService : NSObject
 
 @property(nonatomic, strong) NSURL* serviceUrl;
-@property(nonatomic, strong) ASIFormDataRequest* request;
+@property(nonatomic, strong) LRRestyClient* httpClient;
 
 - (id) initWithServiceUrl:(NSURL*)serviceUrl;
 
-/**
- * Utility method for appending post data to the underlying request. 
- */
-- (void) newRequestWithPayload:(id<xml_Serializable>)xmlable;
+- (NSDictionary*) requestHeaders;
 
 @end
 

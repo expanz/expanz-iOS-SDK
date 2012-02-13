@@ -10,13 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "ASIFormDataRequest.h"
 @class expanz_model_ActivityInstance;
 
 @interface IntegrationUtils : NSObject
 
 + (void) loginWithDefaultUserIfRequired; 
 + (expanz_model_ActivityInstance*) aValidActivity;
-+ (NSURL*)urlThatWillFail;
 
 @end

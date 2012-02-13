@@ -24,70 +24,59 @@
 @implementation expanz_service_XmlPostFileDownloadClient
 
 
-/* ================================================ Interface Methods =============================================== */
-- (void) newRequestWithPayload:(id<xml_Serializable>)payload {
-    self.request = nil;
-
-    SDKConfiguration* configuration = [SDKConfiguration globalConfiguration];
-    if ([payload isKindOfClass:[FileRequest class]]) {
-        self.request = [[ASIFormDataRequest alloc] initWithURL:configuration.execXServiceUrl];
-    }
-    else if ([payload isKindOfClass:[FileDownloadRequest class]]) {
-        self.request = [[ASIFormDataRequest alloc] initWithURL:configuration.getBlobServiceUrl];
-    }
-
-    [self.request addRequestHeader:@"Content-Type" value:@"text/xml"];
-    [self.request appendPostData:[[payload toXml] dataUsingEncoding:NSUTF8StringEncoding]];
-    LogDebug(@"Sending request: %@", [payload toXml]);
-}
-
-
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
                     delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
-    [self newRequestWithPayload:fileRequest];
+    [self.httpClient post:[self.serviceUrl absoluteString] payload:[fileRequest toXml] headers:[self requestHeaders]
+                withBlock:^(LRRestyResponse* response) {
 
-    __weak XmlPostFileDownloadClient* client = self;
-    [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [client.request responseString]);
-        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[client.request responseString]];
-        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
-        RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
+                    if (response.status == 200) {
+                        LogDebug(@"Response: %@, ", [response asString]);
+                        RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+                        RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
+                        RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
 
-        Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
-        LogDebug("Creating resource collection with title: %@", titleField.value);
-        ResourceCollection* resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
-        LogDebug(@"Created resource collection: %@", resourceCollection);
-        [delegate requestDidFinishWithResourceCollection:resourceCollection];
-    }];
+                        Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
+                        LogDebug("Creating resource collection with title: %@", titleField.value);
+                        ResourceCollection
+                            * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
+                        LogDebug(@"Created resource collection: %@", resourceCollection);
+                        [delegate requestDidFinishWithResourceCollection:resourceCollection];
 
-    [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[client.request error]];
-    }];
-
-    [self.request startAsynchronous];
+                    }
+                    else {
+                        NSString* domain = NSStringFromClass([self class]);
+                        NSDictionary
+                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+                        [delegate requestDidFailWithError:error];
+                    }
+                }];
 }
 
 
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
-    [self newRequestWithPayload:downloadRequest];
-    __weak XmlPostFileDownloadClient* client = self;
+    [self.httpClient post:[self.serviceUrl absoluteString] payload:[downloadRequest toXml] headers:[self requestHeaders]
+                withBlock:^(LRRestyResponse* response) {
 
-    [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@, ", [client.request responseString]);
-        NSData* data = [client.request responseData];
-        [delegate requestDidFinishWithData:data];
-    }];
+                    if (response.status == 200) {
+                        LogDebug(@"Response: %@, ", [response asString]);
+                        NSData* data = [response responseData];
+                        [delegate requestDidFinishWithData:data];
 
-    [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[client.request error]];
-    }];
-    [self.request startAsynchronous];
-
+                    }
+                    else {
+                        NSString* domain = NSStringFromClass([self class]);
+                        NSDictionary
+                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+                        [delegate requestDidFailWithError:error];
+                    }
+                }];
 }
 
 

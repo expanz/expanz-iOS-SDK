@@ -15,28 +15,30 @@
 #import "expanz_service_XmlPostSessionDataClient.h"
 
 
-
 @implementation expanz_service_XmlPostSessionDataClient
 
 
 /* ================================================ Interface Methods =============================================== */
 
-- (void) retrieveSessionDataWith:(SessionDataRequest*)sessionDataRequest 
+- (void) retrieveSessionDataWith:(SessionDataRequest*)request
                         delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
-    
-    [self newRequestWithPayload:sessionDataRequest];
-    __weak XmlPostSessionDataClient* client = self; 
-    
-    [self.request setCompletionBlock:^{
-        LogDebug(@"Response: %@", [client.request responseString]);
-        RXMLElement* response = [RXMLElement elementFromXMLString:[client.request responseString]];
-        [delegate requestDidFinishWithMenu:[[response child:@"ExecXResult.ESA.Menu"] asMenu]];
-    }];
-    
-    [self.request setFailedBlock:^{
-        [delegate requestDidFailWithError:[client.request error]]; 
-    }];
-    [self.request startAsynchronous];
+
+    [self.httpClient post:[self.serviceUrl absoluteString] payload:[request toXml] headers:[self requestHeaders]
+                withBlock:^(LRRestyResponse* response) {
+
+                    if (response.status == 200) {
+                        LogDebug(@"Response: %@, ", [response asString]);
+                        RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+                        [delegate requestDidFinishWithMenu:[[element child:@"ExecXResult.ESA.Menu"] asMenu]];
+                    }
+                    else {
+                        NSString* domain = NSStringFromClass([self class]);
+                        NSDictionary
+                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+                        [delegate requestDidFailWithError:error];
+                    }
+                }];
 }
 
 

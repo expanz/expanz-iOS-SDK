@@ -10,8 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+#import <LRResty/LRResty.h>
 #import "expanz_model_ImageGridDataCell.h"
-#import "ASIHTTPRequest.h"
 
 
 @implementation expanz_model_ImageGridDataCell
@@ -32,18 +32,16 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) loadImage {
-    [self setHasAskedImageToLoad:YES];
-    __weak ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:_imageUrl]];
-    [request setCompletionBlock:^{
-        self.image = [UIImage imageWithData:[request responseData]];
+    self.hasAskedImageToLoad = YES;
+    [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
+        LogDebug(@"Got image response: %@", [response responseData]);
+        if (response.status == 200) {
+            self.image = [UIImage imageWithData:[response responseData]];
+        }
+        else {
+            self.image = nil;
+        }
     }];
-
-    [request setFailedBlock:^{
-        //TODO: Handle this?
-        LogError(@"Can't download the image: %@", _imageUrl);
-    }];
-    [request startAsynchronous];
 }
-
 
 @end

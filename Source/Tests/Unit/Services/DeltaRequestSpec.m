@@ -12,7 +12,7 @@
 #import "SpecHelper.h" 
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_model_Field.h"
-#import "NSData+Base64.h"
+#import "NSData+ExpanzAdditions.h"
 
 SPEC_BEGIN(DeltaRequestSpec)
 

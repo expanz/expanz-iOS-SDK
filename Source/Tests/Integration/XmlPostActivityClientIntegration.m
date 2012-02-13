@@ -45,17 +45,6 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
             assertWillHappen(delegate.activityInstance != nil);
         });
 
-        it(@"should invoke the delegate's error handler, if the underlying ASIFormDataRequest fails.", ^{
-            CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Sales.Customer" style:[ActivityStyle defaultStyle] initialKey:nil
-                        sessionToken:[SessionContext globalContext].sessionToken];
-
-            id<expanz_service_ActivityClient>
-                anotherClient = [[XmlPostActivityClient alloc] initWithServiceUrl:[IntegrationUtils urlThatWillFail]];
-            [anotherClient createActivityWith:activityRequest delegate:delegate];
-            assertWillHappen(delegate.error != nil);
-            LogDebug(@"Error %@", delegate.error);
-        });
 
     });
 

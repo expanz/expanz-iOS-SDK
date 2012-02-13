@@ -56,9 +56,6 @@
     return delegate.activityInstance;
 }
 
-+ (NSURL*) urlThatWillFail {
-    return [NSURL URLWithString:@"hhhhhtp:/bad.url"];
-}
 
 
 @end
