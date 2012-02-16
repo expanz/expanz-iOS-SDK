@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_iOS_SDKConfiguration.h"
+#import "../../Main/Assembly/expanz_ios_SdkConfiguration.h"
 #import <UIKit/UIKit.h>
 
 /**
@@ -23,10 +23,10 @@ int main(int argc, char* argv[]) {
             return UIApplicationMain(argc, argv, nil, @"ActivityHarnessApplicationDelegate");
         }
         else {
-            SDKConfiguration* configuration = [[SDKConfiguration alloc]
+            SdkConfiguration* configuration = [[SdkConfiguration alloc]
                 initWithBaseUrl:@"http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish" preferredSite:@"SALES"
                        userType:@"Alternate"];
-            [SDKConfiguration setGlobalConfiguration:configuration];
+            [SdkConfiguration setGlobalConfiguration:configuration];
 
             //This lets the simulator get itself in order.
             [NSThread sleepForTimeInterval:0.5];

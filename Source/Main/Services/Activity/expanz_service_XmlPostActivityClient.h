@@ -15,6 +15,11 @@
 
 @interface expanz_service_XmlPostActivityClient : XmlPostWebService<expanz_service_ActivityClient>
 
+@property(nonatomic, strong, readonly) NSURL* serviceUrl;
+
+- (id) initWithServiceUrl:(NSURL*)serviceUrl;
+
+
 @end
 
 /* ================================================================================================================== */

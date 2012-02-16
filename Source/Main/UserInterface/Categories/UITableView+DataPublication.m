@@ -13,7 +13,7 @@
 #import <objc/runtime.h>
 #import "UITableView+DataPublication.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
-#import "expanz_iOS_SDKAppDelegate.h"
+#import "../../Assembly/expanz_ios_SdkAppDelegate.h"
 
 static char const* const fieldNameskey = "fieldNames";
 
@@ -65,7 +65,7 @@ static char const* const fieldNameskey = "fieldNames";
 /* ================================================== Private Methods =============================================== */
 
 - (ActivityInstanceViewController*) activityController {
-    id appDelegate = (SDKAppDelegate*) [UIApplication sharedApplication].delegate;
+    id appDelegate = (SdkAppDelegate*) [UIApplication sharedApplication].delegate;
     return (ActivityInstanceViewController*) [appDelegate navigationController].topViewController;
 }
 

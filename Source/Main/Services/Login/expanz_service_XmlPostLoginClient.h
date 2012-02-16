@@ -16,6 +16,12 @@
 
 
 @interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>
+
+@property (nonatomic, strong, readonly) NSURL* serviceUrl;
+
+- (id) initWithServiceUrl:(NSURL*)serviceUrl;
+
+
 @end
 
 /* ================================================================================================================== */

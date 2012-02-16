@@ -123,10 +123,10 @@
 		6B748A4A14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
 		6B748A4B14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
 		6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B748A0E14CD493600970C98 /* expanz_ui_TreeDataRenderer.m */; };
-		6B748A4F14CD4A2100970C98 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
-		6B748A5014CD4A2100970C98 /* expanz_iOS_SDKConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
-		6B748A5114CD4A2100970C98 /* expanz_iOS_SDKExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */; };
-		6B748A5214CD4A2100970C98 /* expanz_iOS_SDKModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
+		6B748A4F14CD4A2100970C98 /* expanz_ios_SdkAppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_ios_SdkAppDelegate.h */; };
+		6B748A5014CD4A2100970C98 /* expanz_ios_SdkConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_ios_SdkConfiguration.h */; };
+		6B748A5114CD4A2100970C98 /* expanz_ios_SdkExceptions.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_ios_SdkExceptions.h */; };
+		6B748A5214CD4A2100970C98 /* expanz_ios_SdkModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_ios_SdkModule.h */; };
 		6B748A5314CD4A2100970C98 /* expanz_model_ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C734F /* expanz_model_ResourceCollection.h */; };
 		6B748A5414CD4A2100970C98 /* expanz_model_FileResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7342 /* expanz_model_FileResource.h */; };
 		6B748A5514CD4A2100970C98 /* expanz_model_File.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72AD /* expanz_model_File.h */; };
@@ -249,22 +249,22 @@
 		6BD47CA41484703F000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C361484703F000ECE52 /* InfoPlist.strings */; };
 		6BD47CA51484703F000ECE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD47C361484703F000ECE52 /* InfoPlist.strings */; };
 		6BD47CAE1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */; };
-		6BD47CB01484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */; };
-		6BD47CB21484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m */; };
-		6BD47CB41484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m */; };
-		6BD47CB51484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m */; };
-		6BD47CB61484703F000ECE52 /* expanz_iOS_SDKConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */; };
-		6BD47CB81484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m */; };
-		6BD47CBA1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m */; };
-		6BD47CBB1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m */; };
-		6BD47CBC1484703F000ECE52 /* expanz_iOS_SDKExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */; };
-		6BD47CBE1484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_iOS_SDKExceptions.m */; };
-		6BD47CC01484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_iOS_SDKExceptions.m */; };
-		6BD47CC11484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_iOS_SDKExceptions.m */; };
-		6BD47CC21484703F000ECE52 /* expanz_iOS_SDKModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */; };
-		6BD47CC41484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */; };
-		6BD47CC61484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */; };
-		6BD47CC71484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */; };
+		6BD47CB01484703F000ECE52 /* expanz_ios_SdkAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3C1484703F000ECE52 /* expanz_ios_SdkAppDelegate.h */; };
+		6BD47CB21484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_ios_SdkAppDelegate.m */; };
+		6BD47CB41484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_ios_SdkAppDelegate.m */; };
+		6BD47CB51484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3D1484703F000ECE52 /* expanz_ios_SdkAppDelegate.m */; };
+		6BD47CB61484703F000ECE52 /* expanz_ios_SdkConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C3E1484703F000ECE52 /* expanz_ios_SdkConfiguration.h */; };
+		6BD47CB81484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_ios_SdkConfiguration.m */; };
+		6BD47CBA1484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_ios_SdkConfiguration.m */; };
+		6BD47CBB1484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C3F1484703F000ECE52 /* expanz_ios_SdkConfiguration.m */; };
+		6BD47CBC1484703F000ECE52 /* expanz_ios_SdkExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C401484703F000ECE52 /* expanz_ios_SdkExceptions.h */; };
+		6BD47CBE1484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_ios_SdkExceptions.m */; };
+		6BD47CC01484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_ios_SdkExceptions.m */; };
+		6BD47CC11484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C411484703F000ECE52 /* expanz_ios_SdkExceptions.m */; };
+		6BD47CC21484703F000ECE52 /* expanz_ios_SdkModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C421484703F000ECE52 /* expanz_ios_SdkModule.h */; };
+		6BD47CC41484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_ios_SdkModule.m */; };
+		6BD47CC61484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_ios_SdkModule.m */; };
+		6BD47CC71484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C431484703F000ECE52 /* expanz_ios_SdkModule.m */; };
 		6BD47CC81484703F000ECE52 /* expanz_model_ActivityDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */; };
 		6BD47CCA1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */; };
 		6BD47CCC1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */; };
@@ -610,8 +610,7 @@
 		6BFDE7761495FA01005D3410 /* UIView+ModelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D340F /* UIView+ModelAdapter.h */; };
 		6BFDE7761495FA01005D3412 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D3413 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BFDE7761495FA01005D3416 /* LRRestySpec.m in Sources */ = {isa = PBXBuildFile; };
-		6BFDE7761495FA01005D3417 /* LRRestySpec.m in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3416 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -659,10 +658,10 @@
 				6B4EA62914CD4C2300E5B2D8 /* TBXML.h in Copy Headers */,
 				6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */,
 				6B31F2D214CD4AF200A4CA49 /* Logging.h in Copy Headers */,
-				6B748A4F14CD4A2100970C98 /* expanz_iOS_SDKAppDelegate.h in Copy Headers */,
-				6B748A5014CD4A2100970C98 /* expanz_iOS_SDKConfiguration.h in Copy Headers */,
-				6B748A5114CD4A2100970C98 /* expanz_iOS_SDKExceptions.h in Copy Headers */,
-				6B748A5214CD4A2100970C98 /* expanz_iOS_SDKModule.h in Copy Headers */,
+				6B748A4F14CD4A2100970C98 /* expanz_ios_SdkAppDelegate.h in Copy Headers */,
+				6B748A5014CD4A2100970C98 /* expanz_ios_SdkConfiguration.h in Copy Headers */,
+				6B748A5114CD4A2100970C98 /* expanz_ios_SdkExceptions.h in Copy Headers */,
+				6B748A5214CD4A2100970C98 /* expanz_ios_SdkModule.h in Copy Headers */,
 				6B748A5314CD4A2100970C98 /* expanz_model_ResourceCollection.h in Copy Headers */,
 				6B748A5414CD4A2100970C98 /* expanz_model_FileResource.h in Copy Headers */,
 				6B748A5514CD4A2100970C98 /* expanz_model_File.h in Copy Headers */,
@@ -822,14 +821,14 @@
 		6BD47C371484703F000ECE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "expanz-iOS-SDK-Info.plist"; sourceTree = "<group>"; };
 		6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz-iOS-SDK-Prefix.pch"; sourceTree = "<group>"; };
-		6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKAppDelegate.h; sourceTree = "<group>"; };
-		6BD47C3D1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKAppDelegate.m; sourceTree = "<group>"; };
-		6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKConfiguration.h; sourceTree = "<group>"; };
-		6BD47C3F1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKConfiguration.m; sourceTree = "<group>"; };
-		6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKExceptions.h; sourceTree = "<group>"; };
-		6BD47C411484703F000ECE52 /* expanz_iOS_SDKExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKExceptions.m; sourceTree = "<group>"; };
-		6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_iOS_SDKModule.h; sourceTree = "<group>"; };
-		6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_iOS_SDKModule.m; sourceTree = "<group>"; };
+		6BD47C3C1484703F000ECE52 /* expanz_ios_SdkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkAppDelegate.h; sourceTree = "<group>"; };
+		6BD47C3D1484703F000ECE52 /* expanz_ios_SdkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkAppDelegate.m; sourceTree = "<group>"; };
+		6BD47C3E1484703F000ECE52 /* expanz_ios_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkConfiguration.h; sourceTree = "<group>"; };
+		6BD47C3F1484703F000ECE52 /* expanz_ios_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkConfiguration.m; sourceTree = "<group>"; };
+		6BD47C401484703F000ECE52 /* expanz_ios_SdkExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkExceptions.h; sourceTree = "<group>"; };
+		6BD47C411484703F000ECE52 /* expanz_ios_SdkExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkExceptions.m; sourceTree = "<group>"; };
+		6BD47C421484703F000ECE52 /* expanz_ios_SdkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkModule.h; sourceTree = "<group>"; };
+		6BD47C431484703F000ECE52 /* expanz_ios_SdkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkModule.m; sourceTree = "<group>"; };
 		6BD47C451484703F000ECE52 /* expanz_model_ActivityDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityDefinition.h; sourceTree = "<group>"; };
 		6BD47C461484703F000ECE52 /* expanz_model_ActivityDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityDefinition.m; sourceTree = "<group>"; };
 		6BD47C471484703F000ECE52 /* expanz_model_ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityInstance.h; sourceTree = "<group>"; };
@@ -1389,14 +1388,14 @@
 				6BD47C361484703F000ECE52 /* InfoPlist.strings */,
 				6BD47C3A1484703F000ECE52 /* expanz-iOS-SDK-Info.plist */,
 				6BD47C3B1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch */,
-				6BD47C3C1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h */,
-				6BD47C3D1484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m */,
-				6BD47C3E1484703F000ECE52 /* expanz_iOS_SDKConfiguration.h */,
-				6BD47C3F1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m */,
-				6BD47C401484703F000ECE52 /* expanz_iOS_SDKExceptions.h */,
-				6BD47C411484703F000ECE52 /* expanz_iOS_SDKExceptions.m */,
-				6BD47C421484703F000ECE52 /* expanz_iOS_SDKModule.h */,
-				6BD47C431484703F000ECE52 /* expanz_iOS_SDKModule.m */,
+				6BD47C3C1484703F000ECE52 /* expanz_ios_SdkAppDelegate.h */,
+				6BD47C3D1484703F000ECE52 /* expanz_ios_SdkAppDelegate.m */,
+				6BD47C3E1484703F000ECE52 /* expanz_ios_SdkConfiguration.h */,
+				6BD47C3F1484703F000ECE52 /* expanz_ios_SdkConfiguration.m */,
+				6BD47C401484703F000ECE52 /* expanz_ios_SdkExceptions.h */,
+				6BD47C411484703F000ECE52 /* expanz_ios_SdkExceptions.m */,
+				6BD47C421484703F000ECE52 /* expanz_ios_SdkModule.h */,
+				6BD47C431484703F000ECE52 /* expanz_ios_SdkModule.m */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -1874,10 +1873,10 @@
 				6BD5435514734FE80014F148 /* TBXML.h in Headers */,
 				6BD5435614734FE80014F148 /* Reachability.h in Headers */,
 				6BD47CAE1484703F000ECE52 /* expanz-iOS-SDK-Prefix.pch in Headers */,
-				6BD47CB01484703F000ECE52 /* expanz_iOS_SDKAppDelegate.h in Headers */,
-				6BD47CB61484703F000ECE52 /* expanz_iOS_SDKConfiguration.h in Headers */,
-				6BD47CBC1484703F000ECE52 /* expanz_iOS_SDKExceptions.h in Headers */,
-				6BD47CC21484703F000ECE52 /* expanz_iOS_SDKModule.h in Headers */,
+				6BD47CB01484703F000ECE52 /* expanz_ios_SdkAppDelegate.h in Headers */,
+				6BD47CB61484703F000ECE52 /* expanz_ios_SdkConfiguration.h in Headers */,
+				6BD47CBC1484703F000ECE52 /* expanz_ios_SdkExceptions.h in Headers */,
+				6BD47CC21484703F000ECE52 /* expanz_ios_SdkModule.h in Headers */,
 				6BD47CC81484703F000ECE52 /* expanz_model_ActivityDefinition.h in Headers */,
 				6BD47CCE1484703F000ECE52 /* expanz_model_ActivityInstance.h in Headers */,
 				6BD47CD41484703F000ECE52 /* expanz_model_AbstractGridDataCell.h in Headers */,
@@ -2170,10 +2169,10 @@
 				6BD5432C14734FBD0014F148 /* RXMLElement.m in Sources */,
 				6BD5432D14734FBD0014F148 /* TBXML.m in Sources */,
 				6BD5432E14734FBD0014F148 /* Reachability.m in Sources */,
-				6BD47CB21484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */,
-				6BD47CB81484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6BD47CBE1484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */,
-				6BD47CC41484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
+				6BD47CB21484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6BD47CB81484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */,
+				6BD47CBE1484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */,
+				6BD47CC41484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */,
 				6BD47CCA1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD01484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
 				6BD47CD61484703F000ECE52 /* expanz_model_AbstractGridDataCell.m in Sources */,
@@ -2260,10 +2259,10 @@
 				6BC9F7D31458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D71458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DB1458EBB6001AF204 /* Reachability.m in Sources */,
-				6BD47CB51484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */,
-				6BD47CBB1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6BD47CC11484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */,
-				6BD47CC71484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
+				6BD47CB51484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6BD47CBB1484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */,
+				6BD47CC11484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */,
+				6BD47CC71484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */,
 				6BD47CCD1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD31484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
 				6BD47CD91484703F000ECE52 /* expanz_model_AbstractGridDataCell.m in Sources */,
@@ -2335,7 +2334,6 @@
 				6B748A4C14CD493600970C98 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6BFDE7761495FA01005D3354 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 				6BFDE7761495FA01005D340E /* UIView+ModelAdapter.m in Sources */,
-				6BFDE7761495FA01005D3417 /* LRRestySpec.m in Sources */,
 				6BA4DD6114E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2354,10 +2352,10 @@
 				6BC9F7D51458EBB6001AF204 /* RXMLElement.m in Sources */,
 				6BC9F7D91458EBB6001AF204 /* TBXML.m in Sources */,
 				6BC9F7DD1458EBB6001AF204 /* Reachability.m in Sources */,
-				6BD47CB41484703F000ECE52 /* expanz_iOS_SDKAppDelegate.m in Sources */,
-				6BD47CBA1484703F000ECE52 /* expanz_iOS_SDKConfiguration.m in Sources */,
-				6BD47CC01484703F000ECE52 /* expanz_iOS_SDKExceptions.m in Sources */,
-				6BD47CC61484703F000ECE52 /* expanz_iOS_SDKModule.m in Sources */,
+				6BD47CB41484703F000ECE52 /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6BD47CBA1484703F000ECE52 /* expanz_ios_SdkConfiguration.m in Sources */,
+				6BD47CC01484703F000ECE52 /* expanz_ios_SdkExceptions.m in Sources */,
+				6BD47CC61484703F000ECE52 /* expanz_ios_SdkModule.m in Sources */,
 				6BD47CCC1484703F000ECE52 /* expanz_model_ActivityDefinition.m in Sources */,
 				6BD47CD21484703F000ECE52 /* expanz_model_ActivityInstance.m in Sources */,
 				6BD47CD81484703F000ECE52 /* expanz_model_AbstractGridDataCell.m in Sources */,
@@ -2482,7 +2480,7 @@
 				6BFDE7761495FA01005D3407 /* (null) in Sources */,
 				6BFDE7761495FA01005D340D /* UIView+ModelAdapter.m in Sources */,
 				6BFDE7761495FA01005D3413 /* (null) in Sources */,
-				6BFDE7761495FA01005D3416 /* LRRestySpec.m in Sources */,
+				6BFDE7761495FA01005D3416 /* (null) in Sources */,
 				6BA4DD6014E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

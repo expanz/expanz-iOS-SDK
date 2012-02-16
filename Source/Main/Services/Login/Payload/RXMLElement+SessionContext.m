@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionContext.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Assembly/expanz_ios_SdkExceptions.h"
 #import "expanz_model_SessionContext.h"
 
 @implementation RXMLElement (SessionContext)

@@ -11,13 +11,13 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_iOS_SDKConfiguration.h"
+#import "../../../Main/Assembly/expanz_ios_SdkConfiguration.h"
 
 SPEC_BEGIN(SDKConfigurationSpec)
 
-    __block SDKConfiguration* configuration;
+    __block SdkConfiguration* configuration;
     beforeEach(^{
-        configuration = [[SDKConfiguration alloc] init];
+        configuration = [[SdkConfiguration alloc] init];
     });
 
     describe(@"Object creation and destruction.", ^{
@@ -36,7 +36,7 @@ SPEC_BEGIN(SDKConfigurationSpec)
 
         it(@"should throw exception for invalid configuration file name", ^{
             @try {
-                [SDKConfiguration setConfigurationFile:@"foobar.xml"];
+                [SdkConfiguration setConfigurationFile:@"foobar.xml"];
                 [NSException raise:NSInternalInconsistencyException format:@"Should have thrown exception"];
             }
             @catch (NSException* e) {
@@ -48,32 +48,32 @@ SPEC_BEGIN(SDKConfigurationSpec)
 
     describe(@"Setting the global configuration", ^{
 
-        __block SDKConfiguration* existingConfigurationForIntegrationTests;
+        __block SdkConfiguration* existingConfigurationForIntegrationTests;
 
         beforeEach(^{
-            existingConfigurationForIntegrationTests = [SDKConfiguration globalConfiguration];
+            existingConfigurationForIntegrationTests = [SdkConfiguration globalConfiguration];
         });
 
 
         it(@"should allow setting the global configuration a class method", ^{
 
-            [SDKConfiguration clearGlobalConfiguration];
-            [SDKConfiguration setConfigurationFile:@"configFile.xml"];
+            [SdkConfiguration clearGlobalConfiguration];
+            [SdkConfiguration setConfigurationFile:@"configFile.xml"];
 
-            assertThat([SDKConfiguration globalConfiguration], notNilValue());
-            assertThat([SDKConfiguration globalConfiguration].baseUrl, notNilValue());
-            assertThat([SDKConfiguration globalConfiguration].preferredSite, notNilValue());
-            assertThat([SDKConfiguration globalConfiguration].userType, notNilValue());
+            assertThat([SdkConfiguration globalConfiguration], notNilValue());
+            assertThat([SdkConfiguration globalConfiguration].baseUrl, notNilValue());
+            assertThat([SdkConfiguration globalConfiguration].preferredSite, notNilValue());
+            assertThat([SdkConfiguration globalConfiguration].userType, notNilValue());
 
-            assertThat([[SDKConfiguration globalConfiguration] createSessionServiceUrl], notNilValue());
-            assertThat([[SDKConfiguration globalConfiguration] execXServiceUrl], notNilValue());
-            assertThat([[SDKConfiguration globalConfiguration] getBlobServiceUrl], notNilValue());
+            assertThat([[SdkConfiguration globalConfiguration] createSessionServiceUrl], notNilValue());
+            assertThat([[SdkConfiguration globalConfiguration] execXServiceUrl], notNilValue());
+            assertThat([[SdkConfiguration globalConfiguration] getBlobServiceUrl], notNilValue());
 
         });
 
         afterEach(^{
-            [SDKConfiguration clearGlobalConfiguration];
-            [SDKConfiguration setGlobalConfiguration:existingConfigurationForIntegrationTests];
+            [SdkConfiguration clearGlobalConfiguration];
+            [SdkConfiguration setGlobalConfiguration:existingConfigurationForIntegrationTests];
         });
 
     });

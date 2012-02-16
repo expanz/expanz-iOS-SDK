@@ -14,7 +14,7 @@
 #import "Objection.h"
 #import "CAFilter+Unlock.h"
 #import "expanz_model_ActivityDefinition.h"
-#import "expanz_iOS_SDKAppDelegate.h"
+#import "../Assembly/expanz_ios_SdkAppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -45,7 +45,7 @@ objection_requires(@"reporter")
 - (id) init {
     self = [super init];
     if (self) {
-        SDKAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        SdkAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
         _navigationController = appDelegate.navigationController;
     }
     return self;
@@ -58,7 +58,7 @@ objection_requires(@"reporter")
     [_navigationController setNavigationBarHidden:NO];
     [menuViewController.navigationItem setHidesBackButton:YES];
 
-    SDKAppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    SdkAppDelegate* delegate = [UIApplication sharedApplication].delegate;
     [delegate.window.layer addAnimation:[self cubeViewTransition] forKey:nil];
     [delegate.window addSubview:delegate.navigationController.view];
     return YES;

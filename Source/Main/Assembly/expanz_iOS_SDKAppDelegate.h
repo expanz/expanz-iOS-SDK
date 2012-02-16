@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface expanz_iOS_SDKAppDelegate : NSObject <UIApplicationDelegate>
+@interface expanz_ios_SdkAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 @property (nonatomic, strong) IBOutlet UINavigationController* navigationController;
@@ -19,4 +19,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SDKAppDelegate expanz_iOS_SDKAppDelegate;
+@compatibility_alias SdkAppDelegate expanz_ios_SdkAppDelegate;

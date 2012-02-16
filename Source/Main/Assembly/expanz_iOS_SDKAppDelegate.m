@@ -10,13 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////`
 
 #import "Objection.h"
-#import "expanz_iOS_SDKAppDelegate.h"
-#import "expanz_iOS_SDKModule.h"
+#import "expanz_ios_SdkAppDelegate.h"
+#import "expanz_ios_SdkModule.h"
 #import "expanz_ui_LoginViewController.h"
 
 
 
-@implementation expanz_iOS_SDKAppDelegate
+@implementation expanz_ios_SdkAppDelegate
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
@@ -26,7 +26,7 @@
 
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
-    JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
+    JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
     [JSObjection setGlobalInjector:injector];
     LoginViewController* loginViewController = [[LoginViewController alloc] init];
     [_navigationController pushViewController:loginViewController animated:NO];

@@ -15,7 +15,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_ui_LoginViewController.h"
-#import "expanz_iOS_SDKConfiguration.h"
+#import "../Assembly/expanz_ios_SdkConfiguration.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextFieldDelegateUtils.h"
 
@@ -132,7 +132,7 @@
     _passwordCell.textField.enabled = NO;
     [_spinner startAnimating];
 
-    SDKConfiguration* configuration = [SDKConfiguration globalConfiguration];
+    SdkConfiguration* configuration = [SdkConfiguration globalConfiguration];
     NSString* user = _userNameCell.textField.text;
     NSString* password = _passwordCell.textField.text;
     NSString* appSite = configuration.preferredSite;

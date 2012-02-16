@@ -29,7 +29,16 @@
 
 @implementation expanz_service_XmlPostActivityClient
 
+@synthesize serviceUrl = _serviceUrl;
 
+/* ================================================== Initializers ================================================== */
+- (id) initWithServiceUrl:(NSURL*)serviceUrl {
+    self = [super init];
+    if (self) {
+        _serviceUrl = serviceUrl;
+    }
+    return self;
+}
 
 /* ================================================ Interface Methods =============================================== */
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest

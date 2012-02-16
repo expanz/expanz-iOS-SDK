@@ -17,7 +17,8 @@
  * Uses Objection dependency injection framework to bind protocols to concrete implementations. This allows class
  * implementations to be swapped out, with minimal code changes. 
  */
-@interface expanz_iOS_SDKModule : JSObjectionModule @end
+@interface expanz_ios_SdkModule : JSObjectionModule
+@end
 
-
-@compatibility_alias SDKModule expanz_iOS_SDKModule;
+/* ================================================================================================================== */
+@compatibility_alias SdkModule expanz_ios_SdkModule;

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_iOS_SDKModule.h"
-#import "expanz_iOS_SDKConfiguration.h"
+#import "expanz_ios_SdkConfiguration.h"
 #import "expanz_service_XmlPostActivityClient.h"
 #import "expanz_service_XmlPostFileDownloadClient.h"
 #import "expanz_service_XmlPostLoginClient.h"
@@ -19,11 +19,11 @@
 #import "expanz_ui_AlertBoxSystemEventReporter.h"
 #import "expanz_service_FileDownloadClient.h"
 
-@implementation expanz_iOS_SDKModule
+@implementation expanz_ios_SdkModule
 
 - (void) configure {
     [self bindClass:[AlertBoxSystemEventReporter class] toProtocol:@protocol(expanz_ui_SystemEventReporter)];
-    SDKConfiguration* config = [SDKConfiguration globalConfiguration];
+    SdkConfiguration* config = [SdkConfiguration globalConfiguration];
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
@@ -32,8 +32,8 @@
     }    toProtocol:@protocol(expanz_service_ActivityClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostFileDownloadClient* client =
-            [[XmlPostFileDownloadClient alloc] initWithServiceUrl:config.execXServiceUrl];
+        XmlPostFileDownloadClient* client = [[XmlPostFileDownloadClient alloc]
+            initWithFileRequestUrl:config.execXServiceUrl getBlobUrl:config.getBlobServiceUrl];
         return (id) client;
     }    toProtocol:@protocol(expanz_service_FileDownloadClient)];
     /* ============================================================================================================== */

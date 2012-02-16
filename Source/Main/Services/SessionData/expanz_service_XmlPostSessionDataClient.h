@@ -14,6 +14,12 @@
 #import "expanz_service_SessionDataClient.h"
 
 @interface expanz_service_XmlPostSessionDataClient : XmlPostWebService<expanz_service_SessionDataClient>
+- (id) initWithServiceUrl:(NSURL*)serviceUrl;
+
+
+@property (nonatomic, strong, readonly) NSURL* serviceUrl;
+
+
 
 @end
 

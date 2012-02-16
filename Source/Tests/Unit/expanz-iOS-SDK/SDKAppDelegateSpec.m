@@ -11,17 +11,17 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_iOS_SDKAppDelegate.h"
+#import "../../../Main/Assembly/expanz_ios_SdkAppDelegate.h"
 #import "OCMockObject.h"
 #import "OCMArg.h"
 
 
 SPEC_BEGIN(SDKAppDelegateSpec)
 
-    __block SDKAppDelegate* delegate;
+    __block SdkAppDelegate* delegate;
 
     beforeEach(^{
-        delegate = [[SDKAppDelegate alloc] init];
+        delegate = [[SdkAppDelegate alloc] init];
     });
 
     describe(@"Object creation & configuration", ^{

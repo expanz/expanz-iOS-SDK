@@ -13,22 +13,24 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_iOS_SDKConfiguration : NSObject
+@interface expanz_iOS_SdkConfiguration : NSObject
 
 @property(nonatomic, strong, readonly) NSString* baseUrl;
 @property(nonatomic, strong, readonly) NSString* preferredSite;
 @property(nonatomic, strong, readonly) NSString* userType;
 
 
-+ (expanz_iOS_SDKConfiguration*) globalConfiguration;
++ (expanz_iOS_SdkConfiguration*) globalConfiguration;
 
-+ (void) setGlobalConfiguration:(expanz_iOS_SDKConfiguration*)configuration;
++ (void) setGlobalConfiguration:(expanz_iOS_SdkConfiguration*)configuration;
 
 + (void) clearGlobalConfiguration;
 
 + (void) setConfigurationFile:(NSString*)fileName;
 
 - (id) initWithBaseUrl:(NSString*)url preferredSite:(NSString*)site userType:(NSString*)userType;
+
+- (id) initWithXmlString:(NSString*)configXml;
 
 - (NSURL*) createSessionServiceUrl;
 
@@ -39,4 +41,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SDKConfiguration expanz_iOS_SDKConfiguration;
+@compatibility_alias SdkConfiguration expanz_iOS_SdkConfiguration;

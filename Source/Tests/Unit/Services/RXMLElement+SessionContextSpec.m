@@ -11,7 +11,7 @@
 
 #import "SpecHelper.h"
 #import "RXMLElement+SessionContext.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Main/Assembly/expanz_ios_SdkExceptions.h"
 
 
 SPEC_BEGIN(RXMLElement_SessionContextSpec)

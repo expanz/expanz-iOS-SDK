@@ -18,7 +18,7 @@ describe(@"Object creation", ^{
     
     
     beforeEach(^{
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
         [JSObjection setGlobalInjector:injector];
     });
     

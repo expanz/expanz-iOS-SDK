@@ -13,7 +13,7 @@
 #import <LRResty/LRResty.h>
 #import "xml_Serializable.h"
 
-@class expanz_iOS_SDKConfiguration;
+@class expanz_ios_SdkConfiguration;
 @protocol expanz_ui_SystemEventReporter;
 
 
@@ -22,10 +22,7 @@
  */
 @interface expanz_service_XmlPostWebService : NSObject
 
-@property(nonatomic, strong) NSURL* serviceUrl;
 @property(nonatomic, strong) LRRestyClient* httpClient;
-
-- (id) initWithServiceUrl:(NSURL*)serviceUrl;
 
 - (NSDictionary*) requestHeaders;
 

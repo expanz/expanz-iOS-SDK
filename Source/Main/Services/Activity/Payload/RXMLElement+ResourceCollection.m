@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "RXMLElement+ResourceCollection.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Assembly/expanz_ios_SdkExceptions.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
 

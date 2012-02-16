@@ -13,15 +13,13 @@
 
 @implementation expanz_service_XmlPostWebService
 
-@synthesize serviceUrl = _serviceUrl;
 @synthesize httpClient = _httpClient;
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithServiceUrl:(NSURL*)serviceUrl {
+- (id) init {
     self = [super init];
     if (self) {
-        _serviceUrl = serviceUrl;
         _httpClient = [LRResty client];
     }
     return self;

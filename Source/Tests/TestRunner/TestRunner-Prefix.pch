@@ -14,5 +14,5 @@
 #endif
 
 #import "Logging.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../Main/Assembly/expanz_ios_SdkExceptions.h"
 

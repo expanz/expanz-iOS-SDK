@@ -10,24 +10,24 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_iOS_SDKConfiguration.h"
+#import "expanz_iOS_SdkConfiguration.h"
 #import "RXMLElement.h"
 
 
-@implementation expanz_iOS_SDKConfiguration
+@implementation expanz_iOS_SdkConfiguration
 
-static SDKConfiguration* _globalConfiguration;
+static SdkConfiguration* _globalConfiguration;
 
 @synthesize baseUrl = _baseUrl;
 @synthesize preferredSite = _preferredSite;
 @synthesize userType = _userType;
 
 /* ================================================= Class Methods ================================================== */
-+ (void) setGlobalConfiguration:(SDKConfiguration*)configuration {
++ (void) setGlobalConfiguration:(SdkConfiguration*)configuration {
     if (_globalConfiguration != nil) {
-        [NSException raise:NSInternalInconsistencyException format:
-            @"The global configuration has already been set. If you really want to reset it call "
-                "[SDKConfiguration clearGlobalConfiguration] first."];
+        [NSException raise:NSInternalInconsistencyException
+                    format:@"The global configuration has already been set. If you really want to reset it call "
+                               "[SDKConfiguration clearGlobalConfiguration] first."];
     }
     _globalConfiguration = configuration;
 }
@@ -36,7 +36,7 @@ static SDKConfiguration* _globalConfiguration;
     _globalConfiguration = nil;
 }
 
-+ (SDKConfiguration*) globalConfiguration {
++ (SdkConfiguration*) globalConfiguration {
     return _globalConfiguration;
 }
 
@@ -46,16 +46,8 @@ static SDKConfiguration* _globalConfiguration;
     if (xmlString == nil) {
         [NSException raise:NSInternalInconsistencyException format:@"Config file named '%@' not found.", fileName];
     }
-    RXMLElement* element = [RXMLElement elementFromXMLString:xmlString];
-
-    NSString* baseUrl = [element attribute:@"URL"];
-    NSString* preferredSite = [element attribute:@"preferredSite"];
-    NSString* userType = [element attribute:@"userType"] == nil ? @"Primary" : [element attribute:@"userType"];
-
-    SDKConfiguration* configuration =
-        [[SDKConfiguration alloc] initWithBaseUrl:baseUrl preferredSite:preferredSite userType:userType];
-
-    [SDKConfiguration setGlobalConfiguration:configuration];
+    SdkConfiguration* configuration = [[SdkConfiguration alloc] initWithXmlString:xmlString];
+    [SdkConfiguration setGlobalConfiguration:configuration];
 }
 
 
@@ -68,6 +60,16 @@ static SDKConfiguration* _globalConfiguration;
         _userType = [userType copy];
     }
     return self;
+}
+
+- (id) initWithXmlString:(NSString*)configXml {
+    RXMLElement* element = [RXMLElement elementFromXMLString:configXml];
+
+    NSString* baseUrl = [element attribute:@"URL"];
+    NSString* preferredSite = [element attribute:@"preferredSite"];
+    NSString* userType = [element attribute:@"userType"] == nil ? @"Primary" : [element attribute:@"userType"];
+
+    return [self initWithBaseUrl:baseUrl preferredSite:preferredSite userType:userType];
 }
 
 /* ================================================ Interface Methods =============================================== */
@@ -94,7 +96,7 @@ static SDKConfiguration* _globalConfiguration;
 * Allows setting through user defined runtime attributes, in Interface Builder.
 */
 - (void) setConfigurationFile:(NSString*)fileName {
-    [SDKConfiguration setConfigurationFile:fileName];
+    [SdkConfiguration setConfigurationFile:fileName];
 }
 
 @end

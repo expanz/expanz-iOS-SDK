@@ -12,7 +12,7 @@
 #import "SpecHelper.h"
 #import "StubActivityClientDelegate.h"
 #import "IntegrationUtils.h"
-#import "expanz_iOS_SDKModule.h"
+#import "../../Main/Assembly/expanz_ios_SdkModule.h"
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_model_ActivityInstance.h"
@@ -28,7 +28,7 @@ SPEC_BEGIN(XmlPostActivityClientIntegration)
 
     beforeEach(^{
         [IntegrationUtils loginWithDefaultUserIfRequired];
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
         activityClient = [injector getObject:@protocol(expanz_service_ActivityClient)];
         delegate = [[StubActivityClientDelegate alloc] init];
     });

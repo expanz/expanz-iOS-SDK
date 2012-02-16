@@ -1,6 +1,6 @@
 #import "SpecHelper.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Main/Assembly/expanz_ios_SdkExceptions.h"
 
 
 SPEC_BEGIN(SessionRequestSpec)

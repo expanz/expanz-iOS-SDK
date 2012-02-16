@@ -15,6 +15,14 @@
 @interface expanz_service_XmlPostFileDownloadClient :
     expanz_service_XmlPostWebService<expanz_service_FileDownloadClient>
 
+
+@property (nonatomic, strong, readonly) NSURL* fileRequestUrl;
+@property (nonatomic, strong, readonly) NSURL* getBlobUrl;
+
+
+- (id) initWithFileRequestUrl:(NSURL*)fileRequestUrl getBlobUrl:(NSURL*)getBlobUrl;
+
+
 @end
 
 /* ================================================================================================================== */

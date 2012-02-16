@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_iOS_SDKExceptions.h"
+#import "expanz_ios_SdkExceptions.h"
 
 NSString * const ExXmlValidationException = @"ExXmlValidationException";
 NSString * const ExModelBindingException = @"ExModelBindingException";

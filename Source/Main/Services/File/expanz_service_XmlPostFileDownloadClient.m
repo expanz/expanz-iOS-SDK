@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_iOS_SDKConfiguration.h"
+#import "../../Assembly/expanz_ios_SdkConfiguration.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_ResourceCollection.h"
@@ -23,13 +23,26 @@
 
 @implementation expanz_service_XmlPostFileDownloadClient
 
+@synthesize fileRequestUrl = _fileRequestUrl;
+@synthesize getBlobUrl = _getBlobUrl;
+
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithFileRequestUrl:(NSURL*)fileRequestUrl getBlobUrl:(NSURL*)getBlobUrl {
+    self = [super init];
+    if (self) {
+        _fileRequestUrl = fileRequestUrl;
+        _getBlobUrl = getBlobUrl;
+    }
+    return self;
+}
 
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
                     delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
-    [self.httpClient post:[self.serviceUrl absoluteString] payload:[fileRequest toXml] headers:[self requestHeaders]
+    [self.httpClient post:[self.fileRequestUrl absoluteString] payload:[fileRequest toXml] headers:[self requestHeaders]
                 withBlock:^(LRRestyResponse* response) {
 
                     if (response.status == 200) {
@@ -60,24 +73,24 @@
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
                  delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
 
-    [self.httpClient
-        post:[[[SDKConfiguration globalConfiguration] getBlobServiceUrl] absoluteString] payload:[downloadRequest toXml]
-     headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {
+    [self.httpClient post:[_getBlobUrl absoluteString] payload:[downloadRequest toXml] headers:[self requestHeaders]
+                withBlock:^(LRRestyResponse* response) {
 
-        if (response.status == 200) {
-            LogDebug(@"Response: %@, ", [response asString]);
-            NSData* data = [response responseData];
-            [delegate requestDidFinishWithData:data];
+                    if (response.status == 200) {
+                        LogDebug(@"Response: %@, ", [response asString]);
+                        NSData* data = [response responseData];
+                        [delegate requestDidFinishWithData:data];
 
-        }
-        else {
-            NSString* domain = NSStringFromClass([self class]);
-            NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-            NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-            LogDebug(@"Error: %@", error);
-            [delegate requestDidFailWithError:error];
-        }
-    }];
+                    }
+                    else {
+                        NSString* domain = NSStringFromClass([self class]);
+                        NSDictionary
+                            * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
+                        NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
+                        LogDebug(@"Error: %@", error);
+                        [delegate requestDidFailWithError:error];
+                    }
+                }];
 }
 
 

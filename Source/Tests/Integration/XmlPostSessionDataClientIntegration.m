@@ -55,7 +55,7 @@ describe(@"Retrieve session data using an access token", ^{
     
     beforeEach(^{
         [IntegrationUtils loginWithDefaultUserIfRequired];        
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
         sessionDataClient = [injector getObject:@protocol(expanz_service_SessionDataClient)];
         delegate = [[TestSessionDataClientDelegate alloc] init];
     });

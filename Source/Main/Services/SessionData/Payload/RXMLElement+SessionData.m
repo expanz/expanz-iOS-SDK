@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionData.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Assembly/expanz_ios_SdkExceptions.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"

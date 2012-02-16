@@ -14,7 +14,7 @@
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_service_XmlPostLoginClient.h"
-#import "expanz_iOS_SDKModule.h"
+#import "../../Main/Assembly/expanz_ios_SdkModule.h"
 #import "StubLoginClientDelegate.h"
 #import "IntegrationUtils.h"
 
@@ -28,7 +28,7 @@ describe(@"Authenticating with the site manager.", ^{
     __block StubLoginClientDelegate* loginDelegate;
     
     beforeEach(^{
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SDKModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
         loginDelegate = [[StubLoginClientDelegate alloc] init];
     });

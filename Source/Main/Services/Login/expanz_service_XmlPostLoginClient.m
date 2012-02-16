@@ -17,6 +17,16 @@
 
 @implementation expanz_service_XmlPostLoginClient
 
+@synthesize serviceUrl = _serviceUrl;
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithServiceUrl:(NSURL*)serviceUrl {
+    self = [super init];
+    if (self) {
+        _serviceUrl = serviceUrl;
+    }
+    return self;
+}
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {

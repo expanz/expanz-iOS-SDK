@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_SessionDataRequest.h"
-#import "expanz_iOS_SDKExceptions.h"
+#import "../../../Assembly/expanz_ios_SdkExceptions.h"
 
 
 
