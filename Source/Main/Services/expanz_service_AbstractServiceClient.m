@@ -9,18 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_XmlPostWebService.h"
+#import "expanz_service_AbstractServiceClient.h"
 
-@implementation expanz_service_XmlPostWebService
+@implementation expanz_service_AbstractServiceClient
 
-@synthesize httpClient = _httpClient;
+@synthesize httpTransport = _httpTransport;
 
 
 /* ================================================== Initializers ================================================== */
 - (id) init {
     self = [super init];
     if (self) {
-        _httpClient = [LRResty client];
+        _httpTransport = [LRResty client];
     }
     return self;
 }

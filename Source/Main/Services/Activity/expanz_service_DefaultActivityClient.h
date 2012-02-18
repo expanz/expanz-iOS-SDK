@@ -10,18 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_XmlPostWebService.h"
-#import "expanz_service_SessionDataClient.h"
+#import "expanz_service_ActivityClient.h"
+#import "expanz_service_AbstractServiceClient.h"
 
-@interface expanz_service_XmlPostSessionDataClient : XmlPostWebService<expanz_service_SessionDataClient>
-- (id) initWithServiceUrl:(NSURL*)serviceUrl;
+@interface expanz_service_DefaultActivityClient : AbstractServiceClient<expanz_service_ActivityClient>
 
+@property(nonatomic, strong, readonly) NSString* serviceUrl;
 
-@property (nonatomic, strong, readonly) NSURL* serviceUrl;
-
-
+- (id) initWithServiceUrl:(NSString*)serviceUrl;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias XmlPostSessionDataClient expanz_service_XmlPostSessionDataClient;
+@compatibility_alias DefaultActivityClient expanz_service_DefaultActivityClient;

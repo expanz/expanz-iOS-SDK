@@ -8,23 +8,21 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import "expanz_service_XmlPostWebService.h"
-#import "expanz_service_XmlPostLoginClient.h"
-#import "expanz_service_LoginClient.h"
+#import "../expanz_service_AbstractServiceClient.h"
+#import "expanz_service_FileDownloadClient.h"
+
+@interface expanz_service_DefaultDownloadClient : expanz_service_AbstractServiceClient<expanz_service_FileDownloadClient>
 
 
-@interface expanz_service_XmlPostLoginClient : XmlPostWebService<expanz_service_LoginClient>
+@property (nonatomic, strong, readonly) NSString* fileRequestUrl;
+@property (nonatomic, strong, readonly) NSString* getBlobUrl;
 
-@property (nonatomic, strong, readonly) NSURL* serviceUrl;
 
-- (id) initWithServiceUrl:(NSURL*)serviceUrl;
+- (id) initWithFileRequestUrl:(NSString*)fileRequestUrl getBlobUrl:(NSString*)getBlobUrl;
 
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias XmlPostLoginClient expanz_service_XmlPostLoginClient;
-
-
+@compatibility_alias DefaultDownloadClient expanz_service_DefaultDownloadClient;

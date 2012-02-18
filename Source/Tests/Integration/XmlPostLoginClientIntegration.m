@@ -13,7 +13,7 @@
 #import "SpecHelper.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_service_XmlPostLoginClient.h"
+#import "../../Main/Services/Login/expanz_service_DefaultLoginClient.h"
 #import "../../Main/Assembly/expanz_ios_SdkModule.h"
 #import "StubLoginClientDelegate.h"
 #import "IntegrationUtils.h"
@@ -24,7 +24,7 @@ SPEC_BEGIN(XmlPostLoginClientIntegration)
 
 describe(@"Authenticating with the site manager.", ^{
     
-    __block XmlPostLoginClient* loginClient; 
+    __block DefaultLoginClient* loginClient;
     __block StubLoginClientDelegate* loginDelegate;
     
     beforeEach(^{

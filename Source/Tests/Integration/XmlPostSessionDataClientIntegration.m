@@ -16,7 +16,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionDataClientDelegate.h"
 #import "expanz_model_Menu.h"
-#import "expanz_service_XmlPostSessionDataClient.h"
+#import "../../Main/Services/SessionData/expanz_service_DefaultDataClient.h"
 
 /* ================================================================================================================== */
 #pragma mark Call back methods for XmlPostSessionDataClient

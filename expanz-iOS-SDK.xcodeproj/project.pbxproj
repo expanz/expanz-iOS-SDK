@@ -152,25 +152,25 @@
 		6B748A6914CD4A2100970C98 /* NSString+ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */; };
 		6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */; };
 		6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
-		6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
+		6B748A6C14CD4A2100970C98 /* expanz_service_DefaultActivityClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_DefaultActivityClient.h */; };
 		6B748A6D14CD4A2100970C98 /* expanz_service_FileRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7320 /* expanz_service_FileRequest.h */; };
 		6B748A6E14CD4A2100970C98 /* expanz_service_CreateActivityRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */; };
 		6B748A6F14CD4A2100970C98 /* expanz_service_DataPublicationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6B1484703F000ECE52 /* expanz_service_DataPublicationRequest.h */; };
 		6B748A7014CD4A2100970C98 /* expanz_service_DeltaRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6D1484703F000ECE52 /* expanz_service_DeltaRequest.h */; };
 		6B748A7114CD4A2100970C98 /* expanz_service_MethodInvocationRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C6F1484703F000ECE52 /* expanz_service_MethodInvocationRequest.h */; };
 		6B748A7214CD4A2100970C98 /* RXMLElement+ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C711484703F000ECE52 /* RXMLElement+ActivityInstance.h */; };
-		6B748A7314CD4A2100970C98 /* expanz_service_XmlPostWebService.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */; };
+		6B748A7314CD4A2100970C98 /* expanz_service_AbstractServiceClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_AbstractServiceClient.h */; };
 		6B748A7414CD4A2100970C98 /* expanz_service_LoginClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */; };
 		6B748A7514CD4A2100970C98 /* expanz_service_LoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */; };
-		6B748A7614CD4A2100970C98 /* expanz_service_XmlPostLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */; };
+		6B748A7614CD4A2100970C98 /* expanz_service_DefaultLoginClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_DefaultLoginClient.h */; };
 		6B748A7714CD4A2100970C98 /* expanz_service_SessionRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */; };
 		6B748A7814CD4A2100970C98 /* RXMLElement+SessionContext.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7C1484703F000ECE52 /* RXMLElement+SessionContext.h */; };
 		6B748A7914CD4A2100970C98 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */; };
 		6B748A7A14CD4A2100970C98 /* expanz_service_SessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */; };
-		6B748A7B14CD4A2100970C98 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
+		6B748A7B14CD4A2100970C98 /* expanz_service_DefaultDataClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_DefaultDataClient.h */; };
 		6B748A7C14CD4A2100970C98 /* expanz_service_SessionDataRequest.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
 		6B748A7D14CD4A2100970C98 /* RXMLElement+SessionData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */; };
-		6B748A7E14CD4A2100970C98 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6B748A7E14CD4A2100970C98 /* expanz_service_DefaultDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_DefaultDownloadClient.h */; };
 		6B748A7F14CD4A2100970C98 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
 		6B748A8014CD4A2100970C98 /* expanz_service_FileDownloadClient.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */; };
 		6B748A8114CD4A2100970C98 /* RXMLElement+ResourceCollection.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7359 /* RXMLElement+ResourceCollection.h */; };
@@ -323,10 +323,10 @@
 		6BD47D1B1484703F000ECE52 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */; };
 		6BD47D1E1484703F000ECE52 /* NSString+ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */; };
 		6BD47D201484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */; };
-		6BD47D221484703F000ECE52 /* expanz_service_XmlPostActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */; };
-		6BD47D241484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */; };
-		6BD47D261484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */; };
-		6BD47D271484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */; };
+		6BD47D221484703F000ECE52 /* expanz_service_DefaultActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C661484703F000ECE52 /* expanz_service_DefaultActivityClient.h */; };
+		6BD47D241484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_DefaultActivityClient.m */; };
+		6BD47D261484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_DefaultActivityClient.m */; };
+		6BD47D271484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C671484703F000ECE52 /* expanz_service_DefaultActivityClient.m */; };
 		6BD47D281484703F000ECE52 /* expanz_service_CreateActivityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */; };
 		6BD47D2A1484703F000ECE52 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C6A1484703F000ECE52 /* expanz_service_CreateActivityRequest.m */; };
 		6BD47D2C1484703F000ECE52 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C6A1484703F000ECE52 /* expanz_service_CreateActivityRequest.m */; };
@@ -347,15 +347,15 @@
 		6BD47D421484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C721484703F000ECE52 /* RXMLElement+ActivityInstance.m */; };
 		6BD47D441484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C721484703F000ECE52 /* RXMLElement+ActivityInstance.m */; };
 		6BD47D451484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C721484703F000ECE52 /* RXMLElement+ActivityInstance.m */; };
-		6BD47D461484703F000ECE52 /* expanz_service_XmlPostWebService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */; };
-		6BD47D481484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_XmlPostWebService.m */; };
-		6BD47D4A1484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_XmlPostWebService.m */; };
-		6BD47D4B1484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_XmlPostWebService.m */; };
+		6BD47D461484703F000ECE52 /* expanz_service_AbstractServiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C731484703F000ECE52 /* expanz_service_AbstractServiceClient.h */; };
+		6BD47D481484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_AbstractServiceClient.m */; };
+		6BD47D4A1484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_AbstractServiceClient.m */; };
+		6BD47D4B1484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C741484703F000ECE52 /* expanz_service_AbstractServiceClient.m */; };
 		6BD47D4C1484703F000ECE52 /* expanz_service_LoginClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */; };
-		6BD47D4E1484703F000ECE52 /* expanz_service_XmlPostLoginClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */; };
-		6BD47D501484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_XmlPostLoginClient.m */; };
-		6BD47D521484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_XmlPostLoginClient.m */; };
-		6BD47D531484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_XmlPostLoginClient.m */; };
+		6BD47D4E1484703F000ECE52 /* expanz_service_DefaultLoginClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C771484703F000ECE52 /* expanz_service_DefaultLoginClient.h */; };
+		6BD47D501484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_DefaultLoginClient.m */; };
+		6BD47D521484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_DefaultLoginClient.m */; };
+		6BD47D531484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C781484703F000ECE52 /* expanz_service_DefaultLoginClient.m */; };
 		6BD47D541484703F000ECE52 /* expanz_service_SessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */; };
 		6BD47D561484703F000ECE52 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C7B1484703F000ECE52 /* expanz_service_SessionRequest.m */; };
 		6BD47D581484703F000ECE52 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C7B1484703F000ECE52 /* expanz_service_SessionRequest.m */; };
@@ -365,10 +365,10 @@
 		6BD47D5E1484703F000ECE52 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C7D1484703F000ECE52 /* RXMLElement+SessionContext.m */; };
 		6BD47D5F1484703F000ECE52 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C7D1484703F000ECE52 /* RXMLElement+SessionContext.m */; };
 		6BD47D601484703F000ECE52 /* expanz_service_SessionDataClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */; };
-		6BD47D621484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */; };
-		6BD47D641484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m */; };
-		6BD47D661484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m */; };
-		6BD47D671484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m */; };
+		6BD47D621484703F000ECE52 /* expanz_service_DefaultDataClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C801484703F000ECE52 /* expanz_service_DefaultDataClient.h */; };
+		6BD47D641484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_DefaultDataClient.m */; };
+		6BD47D661484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_DefaultDataClient.m */; };
+		6BD47D671484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C811484703F000ECE52 /* expanz_service_DefaultDataClient.m */; };
 		6BD47D681484703F000ECE52 /* expanz_service_SessionDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */; };
 		6BD47D6A1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C841484703F000ECE52 /* expanz_service_SessionDataRequest.m */; };
 		6BD47D6C1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47C841484703F000ECE52 /* expanz_service_SessionDataRequest.m */; };
@@ -468,10 +468,10 @@
 		6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7328 /* expanz_service_FileDownloadRequest.m */; };
 		6BFACBA414679916007C732E /* expanz_service_FileDownloadRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */; };
 		6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */; };
-		6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
-		6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
-		6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */; };
-		6BFACBA414679916007C733B /* expanz_service_XmlPostFileDownloadClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */; };
+		6BFACBA414679916007C7336 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_DefaultDownloadClient.m */; };
+		6BFACBA414679916007C7338 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_DefaultDownloadClient.m */; };
+		6BFACBA414679916007C7339 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C7335 /* expanz_service_DefaultDownloadClient.m */; };
+		6BFACBA414679916007C733B /* expanz_service_DefaultDownloadClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733A /* expanz_service_DefaultDownloadClient.h */; };
 		6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
 		6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
 		6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFACBA414679916007C733D /* expanz_model_FileResource.m */; };
@@ -687,25 +687,25 @@
 				6B748A6914CD4A2100970C98 /* NSString+ExpanzDataType.h in Copy Headers */,
 				6B748A6A14CD4A2100970C98 /* expanz_service_ActivityClientDelegate.h in Copy Headers */,
 				6B748A6B14CD4A2100970C98 /* expanz_service_ActivityClient.h in Copy Headers */,
-				6B748A6C14CD4A2100970C98 /* expanz_service_XmlPostActivityClient.h in Copy Headers */,
+				6B748A6C14CD4A2100970C98 /* expanz_service_DefaultActivityClient.h in Copy Headers */,
 				6B748A6D14CD4A2100970C98 /* expanz_service_FileRequest.h in Copy Headers */,
 				6B748A6E14CD4A2100970C98 /* expanz_service_CreateActivityRequest.h in Copy Headers */,
 				6B748A6F14CD4A2100970C98 /* expanz_service_DataPublicationRequest.h in Copy Headers */,
 				6B748A7014CD4A2100970C98 /* expanz_service_DeltaRequest.h in Copy Headers */,
 				6B748A7114CD4A2100970C98 /* expanz_service_MethodInvocationRequest.h in Copy Headers */,
 				6B748A7214CD4A2100970C98 /* RXMLElement+ActivityInstance.h in Copy Headers */,
-				6B748A7314CD4A2100970C98 /* expanz_service_XmlPostWebService.h in Copy Headers */,
+				6B748A7314CD4A2100970C98 /* expanz_service_AbstractServiceClient.h in Copy Headers */,
 				6B748A7414CD4A2100970C98 /* expanz_service_LoginClientDelegate.h in Copy Headers */,
 				6B748A7514CD4A2100970C98 /* expanz_service_LoginClient.h in Copy Headers */,
-				6B748A7614CD4A2100970C98 /* expanz_service_XmlPostLoginClient.h in Copy Headers */,
+				6B748A7614CD4A2100970C98 /* expanz_service_DefaultLoginClient.h in Copy Headers */,
 				6B748A7714CD4A2100970C98 /* expanz_service_SessionRequest.h in Copy Headers */,
 				6B748A7814CD4A2100970C98 /* RXMLElement+SessionContext.h in Copy Headers */,
 				6B748A7914CD4A2100970C98 /* expanz_service_SessionDataClientDelegate.h in Copy Headers */,
 				6B748A7A14CD4A2100970C98 /* expanz_service_SessionDataClient.h in Copy Headers */,
-				6B748A7B14CD4A2100970C98 /* expanz_service_XmlPostSessionDataClient.h in Copy Headers */,
+				6B748A7B14CD4A2100970C98 /* expanz_service_DefaultDataClient.h in Copy Headers */,
 				6B748A7C14CD4A2100970C98 /* expanz_service_SessionDataRequest.h in Copy Headers */,
 				6B748A7D14CD4A2100970C98 /* RXMLElement+SessionData.h in Copy Headers */,
-				6B748A7E14CD4A2100970C98 /* expanz_service_XmlPostFileDownloadClient.h in Copy Headers */,
+				6B748A7E14CD4A2100970C98 /* expanz_service_DefaultDownloadClient.h in Copy Headers */,
 				6B748A7F14CD4A2100970C98 /* expanz_service_FileDownloadClientDelegate.h in Copy Headers */,
 				6B748A8014CD4A2100970C98 /* expanz_service_FileDownloadClient.h in Copy Headers */,
 				6B748A8114CD4A2100970C98 /* RXMLElement+ResourceCollection.h in Copy Headers */,
@@ -859,8 +859,8 @@
 		6BD47C601484703F000ECE52 /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
 		6BD47C621484703F000ECE52 /* NSString+ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzDataType.h"; sourceTree = "<group>"; };
 		6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_ActivityClient.h; sourceTree = "<group>"; };
-		6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostActivityClient.h; sourceTree = "<group>"; };
-		6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostActivityClient.m; sourceTree = "<group>"; };
+		6BD47C661484703F000ECE52 /* expanz_service_DefaultActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultActivityClient.h; sourceTree = "<group>"; };
+		6BD47C671484703F000ECE52 /* expanz_service_DefaultActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultActivityClient.m; sourceTree = "<group>"; };
 		6BD47C691484703F000ECE52 /* expanz_service_CreateActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_CreateActivityRequest.h; sourceTree = "<group>"; };
 		6BD47C6A1484703F000ECE52 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
 		6BD47C6B1484703F000ECE52 /* expanz_service_DataPublicationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DataPublicationRequest.h; sourceTree = "<group>"; };
@@ -871,18 +871,18 @@
 		6BD47C701484703F000ECE52 /* expanz_service_MethodInvocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_MethodInvocationRequest.m; sourceTree = "<group>"; };
 		6BD47C711484703F000ECE52 /* RXMLElement+ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ActivityInstance.h"; sourceTree = "<group>"; };
 		6BD47C721484703F000ECE52 /* RXMLElement+ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstance.m"; sourceTree = "<group>"; };
-		6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostWebService.h; sourceTree = "<group>"; };
-		6BD47C741484703F000ECE52 /* expanz_service_XmlPostWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostWebService.m; sourceTree = "<group>"; };
+		6BD47C731484703F000ECE52 /* expanz_service_AbstractServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_AbstractServiceClient.h; sourceTree = "<group>"; };
+		6BD47C741484703F000ECE52 /* expanz_service_AbstractServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_AbstractServiceClient.m; sourceTree = "<group>"; };
 		6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_LoginClient.h; sourceTree = "<group>"; };
-		6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostLoginClient.h; sourceTree = "<group>"; };
-		6BD47C781484703F000ECE52 /* expanz_service_XmlPostLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostLoginClient.m; sourceTree = "<group>"; };
+		6BD47C771484703F000ECE52 /* expanz_service_DefaultLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultLoginClient.h; sourceTree = "<group>"; };
+		6BD47C781484703F000ECE52 /* expanz_service_DefaultLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultLoginClient.m; sourceTree = "<group>"; };
 		6BD47C7A1484703F000ECE52 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
 		6BD47C7B1484703F000ECE52 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
 		6BD47C7C1484703F000ECE52 /* RXMLElement+SessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionContext.h"; sourceTree = "<group>"; };
 		6BD47C7D1484703F000ECE52 /* RXMLElement+SessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContext.m"; sourceTree = "<group>"; };
 		6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataClient.h; sourceTree = "<group>"; };
-		6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostSessionDataClient.h; sourceTree = "<group>"; };
-		6BD47C811484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostSessionDataClient.m; sourceTree = "<group>"; };
+		6BD47C801484703F000ECE52 /* expanz_service_DefaultDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultDataClient.h; sourceTree = "<group>"; };
+		6BD47C811484703F000ECE52 /* expanz_service_DefaultDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultDataClient.m; sourceTree = "<group>"; };
 		6BD47C831484703F000ECE52 /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
 		6BD47C841484703F000ECE52 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6BD47C851484703F000ECE52 /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
@@ -934,8 +934,8 @@
 		6BFACBA414679916007C7328 /* expanz_service_FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileDownloadRequest.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C732D /* expanz_service_FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadRequest.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadClientDelegate.h; sourceTree = "<group>"; };
-		6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostFileDownloadClient.m; sourceTree = "<group>"; };
-		6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostFileDownloadClient.h; sourceTree = "<group>"; };
+		6BFACBA414679916007C7335 /* expanz_service_DefaultDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultDownloadClient.m; sourceTree = "<group>"; };
+		6BFACBA414679916007C733A /* expanz_service_DefaultDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultDownloadClient.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C733D /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
 		6BFACBA414679916007C7342 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
 		6BFACBA414679916007C734A /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
@@ -1457,8 +1457,8 @@
 			isa = PBXGroup;
 			children = (
 				6BD47C641484703F000ECE52 /* Activity */,
-				6BD47C731484703F000ECE52 /* expanz_service_XmlPostWebService.h */,
-				6BD47C741484703F000ECE52 /* expanz_service_XmlPostWebService.m */,
+				6BD47C731484703F000ECE52 /* expanz_service_AbstractServiceClient.h */,
+				6BD47C741484703F000ECE52 /* expanz_service_AbstractServiceClient.m */,
 				6BD47C751484703F000ECE52 /* Login */,
 				6BD47C7E1484703F000ECE52 /* SessionData */,
 				6BFACBA414679916007C7323 /* File */,
@@ -1471,8 +1471,8 @@
 			children = (
 				6BFACBA414679916007C72C2 /* expanz_service_ActivityClientDelegate.h */,
 				6BD47C651484703F000ECE52 /* expanz_service_ActivityClient.h */,
-				6BD47C661484703F000ECE52 /* expanz_service_XmlPostActivityClient.h */,
-				6BD47C671484703F000ECE52 /* expanz_service_XmlPostActivityClient.m */,
+				6BD47C661484703F000ECE52 /* expanz_service_DefaultActivityClient.h */,
+				6BD47C671484703F000ECE52 /* expanz_service_DefaultActivityClient.m */,
 				6BD47C681484703F000ECE52 /* Payload */,
 			);
 			path = Activity;
@@ -1502,8 +1502,8 @@
 			children = (
 				6BFACBA414679916007C72C8 /* expanz_service_LoginClientDelegate.h */,
 				6BD47C761484703F000ECE52 /* expanz_service_LoginClient.h */,
-				6BD47C771484703F000ECE52 /* expanz_service_XmlPostLoginClient.h */,
-				6BD47C781484703F000ECE52 /* expanz_service_XmlPostLoginClient.m */,
+				6BD47C771484703F000ECE52 /* expanz_service_DefaultLoginClient.h */,
+				6BD47C781484703F000ECE52 /* expanz_service_DefaultLoginClient.m */,
 				6BD47C791484703F000ECE52 /* Payload */,
 			);
 			path = Login;
@@ -1525,8 +1525,8 @@
 			children = (
 				6BFACBA414679916007C72C5 /* expanz_service_SessionDataClientDelegate.h */,
 				6BD47C7F1484703F000ECE52 /* expanz_service_SessionDataClient.h */,
-				6BD47C801484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h */,
-				6BD47C811484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m */,
+				6BD47C801484703F000ECE52 /* expanz_service_DefaultDataClient.h */,
+				6BD47C811484703F000ECE52 /* expanz_service_DefaultDataClient.m */,
 				6BD47C821484703F000ECE52 /* Payload */,
 			);
 			path = SessionData;
@@ -1610,8 +1610,8 @@
 		6BFACBA414679916007C7323 /* File */ = {
 			isa = PBXGroup;
 			children = (
-				6BFACBA414679916007C733A /* expanz_service_XmlPostFileDownloadClient.h */,
-				6BFACBA414679916007C7335 /* expanz_service_XmlPostFileDownloadClient.m */,
+				6BFACBA414679916007C733A /* expanz_service_DefaultDownloadClient.h */,
+				6BFACBA414679916007C7335 /* expanz_service_DefaultDownloadClient.m */,
 				6BFACBA414679916007C7330 /* expanz_service_FileDownloadClientDelegate.h */,
 				6BFACBA414679916007C7325 /* expanz_service_FileDownloadClient.h */,
 				6BFACBA414679916007C7324 /* Payload */,
@@ -1893,19 +1893,19 @@
 				6BD47D161484703F000ECE52 /* expanz_model_UserRole.h in Headers */,
 				6BD47D1E1484703F000ECE52 /* NSString+ExpanzDataType.h in Headers */,
 				6BD47D201484703F000ECE52 /* expanz_service_ActivityClient.h in Headers */,
-				6BD47D221484703F000ECE52 /* expanz_service_XmlPostActivityClient.h in Headers */,
+				6BD47D221484703F000ECE52 /* expanz_service_DefaultActivityClient.h in Headers */,
 				6BD47D281484703F000ECE52 /* expanz_service_CreateActivityRequest.h in Headers */,
 				6BD47D2E1484703F000ECE52 /* expanz_service_DataPublicationRequest.h in Headers */,
 				6BD47D341484703F000ECE52 /* expanz_service_DeltaRequest.h in Headers */,
 				6BD47D3A1484703F000ECE52 /* expanz_service_MethodInvocationRequest.h in Headers */,
 				6BD47D401484703F000ECE52 /* RXMLElement+ActivityInstance.h in Headers */,
-				6BD47D461484703F000ECE52 /* expanz_service_XmlPostWebService.h in Headers */,
+				6BD47D461484703F000ECE52 /* expanz_service_AbstractServiceClient.h in Headers */,
 				6BD47D4C1484703F000ECE52 /* expanz_service_LoginClient.h in Headers */,
-				6BD47D4E1484703F000ECE52 /* expanz_service_XmlPostLoginClient.h in Headers */,
+				6BD47D4E1484703F000ECE52 /* expanz_service_DefaultLoginClient.h in Headers */,
 				6BD47D541484703F000ECE52 /* expanz_service_SessionRequest.h in Headers */,
 				6BD47D5A1484703F000ECE52 /* RXMLElement+SessionContext.h in Headers */,
 				6BD47D601484703F000ECE52 /* expanz_service_SessionDataClient.h in Headers */,
-				6BD47D621484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.h in Headers */,
+				6BD47D621484703F000ECE52 /* expanz_service_DefaultDataClient.h in Headers */,
 				6BD47D681484703F000ECE52 /* expanz_service_SessionDataRequest.h in Headers */,
 				6BD47D6E1484703F000ECE52 /* RXMLElement+SessionData.h in Headers */,
 				6BD47DB41484703F000ECE52 /* CAFilter+Unlock.h in Headers */,
@@ -1923,7 +1923,7 @@
 				6BFACBA414679916007C7326 /* expanz_service_FileDownloadClient.h in Headers */,
 				6BFACBA414679916007C732E /* expanz_service_FileDownloadRequest.h in Headers */,
 				6BFACBA414679916007C7331 /* expanz_service_FileDownloadClientDelegate.h in Headers */,
-				6BFACBA414679916007C733B /* expanz_service_XmlPostFileDownloadClient.h in Headers */,
+				6BFACBA414679916007C733B /* expanz_service_DefaultDownloadClient.h in Headers */,
 				6BFACBA414679916007C7343 /* expanz_model_FileResource.h in Headers */,
 				6BFACBA414679916007C7350 /* expanz_model_ResourceCollection.h in Headers */,
 				6BFACBA414679916007C735A /* RXMLElement+ResourceCollection.h in Headers */,
@@ -2187,17 +2187,17 @@
 				6BD47D0C1484703F000ECE52 /* expanz_model_SessionContext.m in Sources */,
 				6BD47D121484703F000ECE52 /* expanz_model_TextGridDataCell.m in Sources */,
 				6BD47D181484703F000ECE52 /* expanz_model_UserRole.m in Sources */,
-				6BD47D241484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */,
+				6BD47D241484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */,
 				6BD47D2A1484703F000ECE52 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BD47D301484703F000ECE52 /* expanz_service_DataPublicationRequest.m in Sources */,
 				6BD47D361484703F000ECE52 /* expanz_service_DeltaRequest.m in Sources */,
 				6BD47D3C1484703F000ECE52 /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BD47D421484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */,
-				6BD47D481484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */,
-				6BD47D501484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6BD47D481484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */,
+				6BD47D501484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */,
 				6BD47D561484703F000ECE52 /* expanz_service_SessionRequest.m in Sources */,
 				6BD47D5C1484703F000ECE52 /* RXMLElement+SessionContext.m in Sources */,
-				6BD47D641484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6BD47D641484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */,
 				6BD47D6A1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D701484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
 				6BFACBA414679916007C726C /* NSString+ExpanzDataType.m in Sources */,
@@ -2209,7 +2209,7 @@
 				6BFACBA414679916007C72B7 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C731C /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C7329 /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BFACBA414679916007C7336 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C7336 /* expanz_service_DefaultDownloadClient.m in Sources */,
 				6BFACBA414679916007C733E /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C734B /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7355 /* RXMLElement+ResourceCollection.m in Sources */,
@@ -2277,17 +2277,17 @@
 				6BD47D0F1484703F000ECE52 /* expanz_model_SessionContext.m in Sources */,
 				6BD47D151484703F000ECE52 /* expanz_model_TextGridDataCell.m in Sources */,
 				6BD47D1B1484703F000ECE52 /* expanz_model_UserRole.m in Sources */,
-				6BD47D271484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */,
+				6BD47D271484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */,
 				6BD47D2D1484703F000ECE52 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BD47D331484703F000ECE52 /* expanz_service_DataPublicationRequest.m in Sources */,
 				6BD47D391484703F000ECE52 /* expanz_service_DeltaRequest.m in Sources */,
 				6BD47D3F1484703F000ECE52 /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BD47D451484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */,
-				6BD47D4B1484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */,
-				6BD47D531484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6BD47D4B1484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */,
+				6BD47D531484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */,
 				6BD47D591484703F000ECE52 /* expanz_service_SessionRequest.m in Sources */,
 				6BD47D5F1484703F000ECE52 /* RXMLElement+SessionContext.m in Sources */,
-				6BD47D671484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6BD47D671484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */,
 				6BD47D6D1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D731484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
 				6BFACBA414679916007C726F /* NSString+ExpanzDataType.m in Sources */,
@@ -2299,7 +2299,7 @@
 				6BFACBA414679916007C72BA /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C731F /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732C /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BFACBA414679916007C7339 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C7339 /* expanz_service_DefaultDownloadClient.m in Sources */,
 				6BFACBA414679916007C7341 /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C734E /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7358 /* RXMLElement+ResourceCollection.m in Sources */,
@@ -2370,17 +2370,17 @@
 				6BD47D0E1484703F000ECE52 /* expanz_model_SessionContext.m in Sources */,
 				6BD47D141484703F000ECE52 /* expanz_model_TextGridDataCell.m in Sources */,
 				6BD47D1A1484703F000ECE52 /* expanz_model_UserRole.m in Sources */,
-				6BD47D261484703F000ECE52 /* expanz_service_XmlPostActivityClient.m in Sources */,
+				6BD47D261484703F000ECE52 /* expanz_service_DefaultActivityClient.m in Sources */,
 				6BD47D2C1484703F000ECE52 /* expanz_service_CreateActivityRequest.m in Sources */,
 				6BD47D321484703F000ECE52 /* expanz_service_DataPublicationRequest.m in Sources */,
 				6BD47D381484703F000ECE52 /* expanz_service_DeltaRequest.m in Sources */,
 				6BD47D3E1484703F000ECE52 /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BD47D441484703F000ECE52 /* RXMLElement+ActivityInstance.m in Sources */,
-				6BD47D4A1484703F000ECE52 /* expanz_service_XmlPostWebService.m in Sources */,
-				6BD47D521484703F000ECE52 /* expanz_service_XmlPostLoginClient.m in Sources */,
+				6BD47D4A1484703F000ECE52 /* expanz_service_AbstractServiceClient.m in Sources */,
+				6BD47D521484703F000ECE52 /* expanz_service_DefaultLoginClient.m in Sources */,
 				6BD47D581484703F000ECE52 /* expanz_service_SessionRequest.m in Sources */,
 				6BD47D5E1484703F000ECE52 /* RXMLElement+SessionContext.m in Sources */,
-				6BD47D661484703F000ECE52 /* expanz_service_XmlPostSessionDataClient.m in Sources */,
+				6BD47D661484703F000ECE52 /* expanz_service_DefaultDataClient.m in Sources */,
 				6BD47D6C1484703F000ECE52 /* expanz_service_SessionDataRequest.m in Sources */,
 				6BD47D721484703F000ECE52 /* RXMLElement+SessionData.m in Sources */,
 				6BFACBA414679916007C726E /* NSString+ExpanzDataType.m in Sources */,
@@ -2392,7 +2392,7 @@
 				6BFACBA414679916007C72B9 /* expanz_model_DataBuilder.m in Sources */,
 				6BFACBA414679916007C731E /* expanz_service_FileRequest.m in Sources */,
 				6BFACBA414679916007C732B /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BFACBA414679916007C7338 /* expanz_service_XmlPostFileDownloadClient.m in Sources */,
+				6BFACBA414679916007C7338 /* expanz_service_DefaultDownloadClient.m in Sources */,
 				6BFACBA414679916007C7340 /* expanz_model_FileResource.m in Sources */,
 				6BFACBA414679916007C734D /* expanz_model_ResourceCollection.m in Sources */,
 				6BFACBA414679916007C7357 /* RXMLElement+ResourceCollection.m in Sources */,

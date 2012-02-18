@@ -16,7 +16,7 @@
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_service_XmlPostActivityClient.h"
+#import "../../Main/Services/Activity/expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_service_FileRequest.h"

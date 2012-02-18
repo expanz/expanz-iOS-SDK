@@ -11,10 +11,10 @@
 
 #import "expanz_iOS_SDKModule.h"
 #import "expanz_ios_SdkConfiguration.h"
-#import "expanz_service_XmlPostActivityClient.h"
-#import "expanz_service_XmlPostFileDownloadClient.h"
-#import "expanz_service_XmlPostLoginClient.h"
-#import "expanz_service_XmlPostSessionDataClient.h"
+#import "../Services/Activity/expanz_service_DefaultActivityClient.h"
+#import "../Services/File/expanz_service_DefaultDownloadClient.h"
+#import "../Services/Login/expanz_service_DefaultLoginClient.h"
+#import "../Services/SessionData/expanz_service_DefaultDataClient.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_AlertBoxSystemEventReporter.h"
 #import "expanz_service_FileDownloadClient.h"
@@ -27,24 +27,20 @@
 
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostActivityClient* client = [[XmlPostActivityClient alloc] initWithServiceUrl:config.execXServiceUrl];
-        return (id) client;
+        return [[DefaultActivityClient alloc] initWithServiceUrl:[config.execXServiceUrl absoluteString]];
     }    toProtocol:@protocol(expanz_service_ActivityClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostFileDownloadClient* client = [[XmlPostFileDownloadClient alloc]
-            initWithFileRequestUrl:config.execXServiceUrl getBlobUrl:config.getBlobServiceUrl];
-        return (id) client;
+        return [[DefaultDownloadClient alloc] initWithFileRequestUrl:[config.execXServiceUrl absoluteString]
+                                                              getBlobUrl:[config.getBlobServiceUrl absoluteString]];
     }    toProtocol:@protocol(expanz_service_FileDownloadClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostLoginClient* client = [[XmlPostLoginClient alloc] initWithServiceUrl:config.createSessionServiceUrl];
-        return (id) client;
+        return [[DefaultLoginClient alloc] initWithServiceUrl:[config.createSessionServiceUrl absoluteString]];
     }    toProtocol:@protocol(expanz_service_LoginClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        XmlPostSessionDataClient* client = [[XmlPostSessionDataClient alloc] initWithServiceUrl:config.execXServiceUrl];
-        return (id) client;
+        return [[DefaultDataClient alloc] initWithServiceUrl:[config.execXServiceUrl absoluteString]];
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
     /* ============================================================================================================== */
 
