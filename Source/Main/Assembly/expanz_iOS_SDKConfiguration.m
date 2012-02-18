@@ -14,7 +14,7 @@
 #import "RXMLElement.h"
 
 
-@implementation expanz_iOS_SdkConfiguration
+@implementation expanz_ios_SdkConfiguration
 
 static SdkConfiguration* _globalConfiguration;
 

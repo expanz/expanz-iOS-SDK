@@ -103,7 +103,6 @@
 - (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
                         context:(void*)context {
 
-    LogDebug(@"Observed.");
     ThumbnailTableCell* tableCell = (__bridge ThumbnailTableCell*) context;
     ImageGridDataCell* gridDataCell = (ImageGridDataCell*) object;
     tableCell.thumbnail.image = gridDataCell.image;

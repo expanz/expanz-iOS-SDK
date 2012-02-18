@@ -13,16 +13,16 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_iOS_SdkConfiguration : NSObject
+@interface expanz_ios_SdkConfiguration : NSObject
 
 @property(nonatomic, strong, readonly) NSString* baseUrl;
 @property(nonatomic, strong, readonly) NSString* preferredSite;
 @property(nonatomic, strong, readonly) NSString* userType;
 
 
-+ (expanz_iOS_SdkConfiguration*) globalConfiguration;
++ (expanz_ios_SdkConfiguration*) globalConfiguration;
 
-+ (void) setGlobalConfiguration:(expanz_iOS_SdkConfiguration*)configuration;
++ (void) setGlobalConfiguration:(expanz_ios_SdkConfiguration*)configuration;
 
 + (void) clearGlobalConfiguration;
 
@@ -38,7 +38,9 @@
 
 - (NSURL*) getBlobServiceUrl;
 
+- (void) setConfigurationFile:(NSString*)fileName;
+
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SdkConfiguration expanz_iOS_SdkConfiguration;
+@compatibility_alias SdkConfiguration expanz_ios_SdkConfiguration;

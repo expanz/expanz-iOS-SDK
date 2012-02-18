@@ -34,7 +34,6 @@
 - (void) loadImage {
     self.hasAskedImageToLoad = YES;
     [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
-        LogDebug(@"Got image response: %@", [response responseData]);
         if (response.status == 200) {
             self.image = [UIImage imageWithData:[response responseData]];
         }
