@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "../../Main/Assembly/expanz_ios_SdkConfiguration.h"
+#import "expanz_ios_SdkConfiguration.h"
 #import <UIKit/UIKit.h>
 
 /**

@@ -15,7 +15,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_ui_LoginViewController.h"
-#import "../Assembly/expanz_ios_SdkConfiguration.h"
+#import "expanz_ios_SdkConfiguration.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextFieldDelegateUtils.h"
 
@@ -32,7 +32,7 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) init {
-    self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
+    self = [super initWithNibName:@"Login" bundle:[NSBundle bundleForClass:[LoginViewController class]]];
     if (self) {
         _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
         _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];

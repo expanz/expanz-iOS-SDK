@@ -9,11 +9,6 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>AllTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>Examples.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -24,10 +19,10 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Specs.xcscheme</key>
+		<key>Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>expanz-iOS-SDK-StaticLib copy.xcscheme</key>
 		<dict>
@@ -44,6 +39,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>libExpanz.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>library.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -53,6 +53,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6B1E5E8414734404004145D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B1F20E014EFDDE9009651FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>6B70147F143A9A900023756C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B718D9014EF8B6300909A38</key>
 		<dict>
 			<key>primary</key>
 			<true/>

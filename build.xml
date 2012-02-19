@@ -14,7 +14,7 @@
             <include name="**/*.m"/>
             <exclude name="**/main.m"/>
             <exclude name="**/Examples/**/*"/>
-        </fileset>
+        </filesetm>
     </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
@@ -78,7 +78,6 @@
         <exec executable="${packager.path}">
             <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
         </exec>
-
     </target>
 
     <target name="--prepare.artifacts">

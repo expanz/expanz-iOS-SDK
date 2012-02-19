@@ -14,7 +14,7 @@
 #import "Objection.h"
 #import "CAFilter+Unlock.h"
 #import "expanz_model_ActivityDefinition.h"
-#import "../Assembly/expanz_ios_SdkAppDelegate.h"
+#import "expanz_ios_SdkAppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_ActivityInstanceViewController.h"

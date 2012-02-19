@@ -9,7 +9,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <Cedar-iPhone/CDRSpec.h>
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_components_ThumbnailTableCell.h"
 #import "expanz_model_Row.h"

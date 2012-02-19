@@ -13,7 +13,7 @@
 #import <objc/runtime.h>
 #import "UITableView+DataPublication.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
-#import "../../Assembly/expanz_ios_SdkAppDelegate.h"
+#import "expanz_ios_SdkAppDelegate.h"
 
 static char const* const fieldNameskey = "fieldNames";
 
