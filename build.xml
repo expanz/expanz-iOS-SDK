@@ -14,15 +14,13 @@
             <include name="**/*.m"/>
             <exclude name="**/main.m"/>
             <exclude name="**/Examples/**/*"/>
-        </filesetm>
+        </fileset>
     </path>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
         --clean,
         --make.dirs,
-        --simulator.launch,
-        --unit.tests.build,
-        --tests.run,
+        --run.tests,
         --assemble.coverage.data,
         --coverage.report,
         --api.report"/>
@@ -97,50 +95,10 @@
         </exec>
     </target>
 
-    <target name="--unit.tests.build">
+    <target name="--run.tests">
         <exec executable="xcodebuild" failonerror="true">
             <arg line="-sdk iphonesimulator${module.sdk.version} -target ${tests.target.name}"/>
         </exec>
-    </target>
-
-    <target name="--tests.run">
-        <mkdir dir="${reports.dir}/tests"/>
-        <property name="tests.report" value="${reports.dir}/tests/test-results.txt"/>
-        <exec executable="${basedir}/ios-sim" outputproperty="tests.output" failonerror="true"
-              failifexecutionfails="true">
-            <arg line="launch ${target.dir}/Release-iphonesimulator/${tests.target.name}.app"/>
-            <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
-        </exec>
-
-        <!-- Write report to disk -->
-        <echo file="${tests.report}" message="${tests.output}"/>
-        <!-- Print report to console -->
-        <echo message="${tests.output}"/>
-
-        <loadfile srcfile="${tests.report}" property="tests.failed">
-            <filterchain>
-                <filterreader classname="org.apache.tools.ant.filters.LineContains">
-                    <param type="contains" value="FAILURE"/>
-                </filterreader>
-            </filterchain>
-        </loadfile>
-
-        <loadfile srcfile="${tests.report}" property="tests.exception">
-            <filterchain>
-                <filterreader classname="org.apache.tools.ant.filters.LineContains">
-                    <param type="contains" value="EXCEPTION"/>
-                </filterreader>
-            </filterchain>
-        </loadfile>
-
-        <echo file="${temp.dir}/quit-simulator.script">
-            tell application "${simulator.path}" to quit
-        </echo>
-        <exec executable="osascript" failonerror="true" failifexecutionfails="true">
-            <arg line="${temp.dir}/quit-simulator.script"/>
-        </exec>
-        <fail if="tests.failed" message="Tests failed. Report is at ${tests.report}"/>
-        <fail if="tests.exception" message="Tests failed. Report is at ${tests.report}"/>
     </target>
 
     <target name="--assemble.coverage.data">
