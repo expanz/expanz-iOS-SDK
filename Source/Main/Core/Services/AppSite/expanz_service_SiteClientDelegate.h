@@ -8,16 +8,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Foundation/Foundation.h>
-#import "RXMLElement.h"
+@class expanz_model_ActivityInstance;
+@class expanz_model_SiteList;
 
-@class expanz_model_FileResource;
-@class expanz_model_ResourceCollection;
+@protocol expanz_service_SiteClientDelegate<NSObject>
 
-@interface RXMLElement (ResourceCollection)
-
-- (expanz_model_ResourceCollection*) asResourceCollectionWithTitle:(NSString*)title;
-
-- (expanz_model_FileResource*) asFileResource;
+- (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList;
+- (void) requestDidFailWithError:(NSError*)error;
 
 @end

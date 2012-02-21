@@ -10,23 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import <LRResty/LRResty.h>
-#import "xml_Serializable.h"
+#import "expanz_service_SiteClient.h"
+#import "expanz_service_AbstractServiceClient.h"
 
-@class expanz_SdkConfiguration;
-@protocol expanz_ui_SystemEventReporter;
+@interface expanz_service_DefaultSiteClient : AbstractServiceClient<expanz_service_SiteClient>
 
+@property(nonatomic, strong, readonly) NSString* serviceUrl;
 
-/**
- * Abstract for Expanz XML post style web services. 
- */
-@interface expanz_service_AbstractServiceClient : NSObject
+- (id) initWithServiceUrl:(NSString*)serviceUrl;
 
-@property(nonatomic, strong) LRRestyClient* httpTransport;
-
-- (NSDictionary*) requestHeaders;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias AbstractServiceClient expanz_service_AbstractServiceClient;
+@compatibility_alias DefaultSiteClient expanz_service_DefaultSiteClient;

@@ -1,5 +1,5 @@
 // ================================================================================================
-//  RXMLElement.h
+//  RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h
 //  Fast processing of XML files
 //
 // ================================================================================================
@@ -54,11 +54,11 @@
 - (NSInteger)attributeAsInt:(NSString *)attName;
 - (double)attributeAsDouble:(NSString *)attName;
 
-- (RXMLElement *)child:(NSString *)tagName;
+- (RXMLElement*)child:(NSString *)tagName;
 - (NSArray *)children:(NSString *)tagName;
 
-- (void)iterate:(NSString *)query with:(void (^)(RXMLElement *))blk;
-- (void)iterateElements:(NSArray *)elements with:(void (^)(RXMLElement *))blk;
+- (void)iterate:(NSString *)query with:(void (^)(RXMLElement*))blk;
+- (void)iterateElements:(NSArray *)elements with:(void (^)(RXMLElement*))blk;
 
 @property (nonatomic, readonly) NSString *tag;
 @property (nonatomic, readonly) NSString *text;
@@ -68,5 +68,5 @@
 
 @end
 
-typedef void (^RXMLBlock)(RXMLElement *);
+typedef void (^RXMLBlock)(RXMLElement*);
 

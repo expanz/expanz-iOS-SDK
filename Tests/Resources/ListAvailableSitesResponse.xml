@@ -1,0 +1,12 @@
+<ListAvailableSitesXResponse xmlns="http://www.expanz.com/ESAService">
+    <ListAvailableSitesXResult>
+        <ESA xmlns="">
+            <AppSites>
+                <AppSite id="SALESAPP" name="Expanz Sales Order App Beta1" authenticationMode="None"/>
+                <AppSite id="SALES" name="Expanz Sales Order App" authenticationMode="None"/>
+                <AppSite id="MARKETDEMO" name="MarketPlace Demo" authenticationMode="None"/>
+            </AppSites>
+        </ESA>
+    </ListAvailableSitesXResult>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ListAvailableSitesXResponse>

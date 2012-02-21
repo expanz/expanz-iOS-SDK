@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "RXMLElement+ResourceCollection.h"
+#import "../../../Source/Main/Core/Services/Activity/Payload/RXMLElement+ListAvailableSites+ResourceCollection.h"
 #import "expanz_model_ResourceCollection.h"
 #import "TestResource.h"
 

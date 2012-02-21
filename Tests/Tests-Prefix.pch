@@ -16,5 +16,6 @@
 if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
 if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
 if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:10000]];\
 if (!expression) [NSException raise:NSInternalInconsistencyException \
 format:@"Expression did not occur before timeout."];

@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
+#import "../../../../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
 @class expanz_model_Menu;
 @class expanz_model_ProcessArea;
 @class expanz_model_ActivityDefinition;
@@ -18,7 +18,7 @@
 /**
  * Category for parsing GetSessionData response. 
  */
-@interface RXMLElement(SessionData)
+@interface RXMLElement (SessionData)
 
 - (expanz_model_Menu*) asMenu; 
 - (expanz_model_ProcessArea*) asProcessArea;

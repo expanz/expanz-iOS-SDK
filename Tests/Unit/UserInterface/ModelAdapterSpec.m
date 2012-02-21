@@ -14,8 +14,8 @@
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_GridData.h"
-#import "RXMLElement.h"
-#import "RXMLElement+ActivityInstance.h"
+#import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
+#import "../../../Source/Main/Core/Services/Activity/Payload/RXMLElement+ListAvailableSites+ActivityInstance.h"
 #import "TestFixture_ViewController.h"
 #import "TestResource.h"
 

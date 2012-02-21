@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement+SessionContext.h"
+#import "RXMLElement+ListAvailableSites+SessionContext.h"
 #import "expanz_model_SessionContext.h"
 
 @implementation RXMLElement (SessionContext)

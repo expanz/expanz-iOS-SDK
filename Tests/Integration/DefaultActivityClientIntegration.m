@@ -20,7 +20,7 @@
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_model_SessionContext.h"
-#import "../../Source/Main/Core/expanz_utils_SdkConfiguration.h"
+#import "../../Source/Main/Core/expanz_SdkConfiguration.h"
 
 SPEC_BEGIN(DefaultActivityClientIntegration)
 

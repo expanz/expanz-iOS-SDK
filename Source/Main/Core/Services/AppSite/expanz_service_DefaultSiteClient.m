@@ -9,18 +9,28 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_SessionDataClientDelegate.h"
-#import "expanz_service_SessionDataRequest.h"
-#import "Payload/RXMLElement+ListAvailableSites+SessionData.h"
-#import "expanz_service_DefaultDataClient.h"
+
+#import "expanz_service_AbstractServiceClient.h"
+#import "RXMLElement+ListAvailableSites.h"
+#import "expanz_service_SiteClientDelegate.h"
+#import "expanz_service_DefaultSiteClient.h"
+#import "expanz_model_SiteList.h"
 
 
-@implementation expanz_service_DefaultDataClient
+@interface expanz_service_DefaultSiteClient (private)
+
+- (void) doRequestWith:(id<xml_Serializable>)xmlPayload
+           forDelegate:(id<expanz_service_SiteClientDelegate>)delegate;
+
+@end
+
+
+@implementation expanz_service_DefaultSiteClient
 
 @synthesize serviceUrl = _serviceUrl;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithServiceUrl:(NSString*)serviceUrl {
+- (id) initWithServiceUrl:(NSURL*)serviceUrl {
     self = [super init];
     if (self) {
         _serviceUrl = serviceUrl;
@@ -29,18 +39,19 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) retrieveSessionDataWith:(SessionDataRequest*)request
-                        delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
+- (void) listAvailableSitesWith:(id<expanz_service_SiteClientDelegate>)delegate {
 
-    [self.httpTransport
-        post:_serviceUrl payload:[request toXml] headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {
+    [self.httpTransport get:self.serviceUrl withBlock:^(LRRestyResponse* response) {
 
         if (response.status == 200) {
             LogDebug(@"Response: %@, ", [response asString]);
-            RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
-            [delegate requestDidFinishWithMenu:[[element child:@"ExecXResult.ESA.Menu"] asMenu]];
+            RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+
+            SiteList* siteList = [[responseElement child:@"ListAvailableSitesXResult.ESA.AppSites"] asSiteList];
+            [delegate requestDidFinishWithSiteList:siteList];
         }
         else {
+            LogDebug(@"Oh fuck!!!!!!!!!");
             NSString* domain = NSStringFromClass([self class]);
             NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
             NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];

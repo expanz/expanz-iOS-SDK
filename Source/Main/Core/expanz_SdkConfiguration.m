@@ -10,11 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_utils_SdkConfiguration.h"
-#import "RXMLElement.h"
+#import "expanz_SdkConfiguration.h"
+#import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
 
 
-@implementation expanz_utils_SdkConfiguration
+@implementation expanz_SdkConfiguration
 
 static SdkConfiguration* _globalConfiguration;
 
@@ -73,24 +73,21 @@ static SdkConfiguration* _globalConfiguration;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSURL*) createSessionServiceUrl {
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl]];
+- (NSString*) createSessionServiceUrl {
+    return [NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl];
 }
 
-- (NSURL*) execXServiceUrl {
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/ExecX", _baseUrl]];
+- (NSString*) execXServiceUrl {
+    return [NSString stringWithFormat:@"%@/ExecX", _baseUrl];
 }
 
-- (NSURL*) getBlobServiceUrl {
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/GetBlob", _baseUrl]];
+- (NSString*) getBlobServiceUrl {
+    return [NSString stringWithFormat:@"%@/GetBlob", _baseUrl];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (NSString*) description {
-    return [NSString stringWithFormat:@"SDKConfiguration: url=%@, preferredSite=%@", _baseUrl, _preferredSite];
+- (NSString*) listAvailableSitesUrl {
+    return [NSString stringWithFormat:@"%@/ListAvailableSitesX", _baseUrl];
 }
-
-/* ================================================== Private Methods =============================================== */
 
 /**
 * Allows setting through user defined runtime attributes, in Interface Builder.
@@ -98,5 +95,13 @@ static SdkConfiguration* _globalConfiguration;
 - (void) setConfigurationFile:(NSString*)fileName {
     [SdkConfiguration setConfigurationFile:fileName];
 }
+
+
+
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"SDKConfiguration: url=%@, preferredSite=%@", _baseUrl, _preferredSite];
+}
+
 
 @end

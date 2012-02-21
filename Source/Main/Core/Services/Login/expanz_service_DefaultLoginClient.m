@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement+SessionContext.h"
+#import "Payload/RXMLElement+ListAvailableSites+SessionContext.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_DefaultLoginClient.h"

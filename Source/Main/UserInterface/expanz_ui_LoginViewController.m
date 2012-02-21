@@ -15,7 +15,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_ui_LoginViewController.h"
-#import "../Core/expanz_utils_SdkConfiguration.h"
+#import "../Core/expanz_SdkConfiguration.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextFieldDelegateUtils.h"
 

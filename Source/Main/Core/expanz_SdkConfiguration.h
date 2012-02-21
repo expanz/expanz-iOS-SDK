@@ -13,16 +13,16 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_utils_SdkConfiguration : NSObject
+@interface expanz_SdkConfiguration : NSObject
 
 @property(nonatomic, strong, readonly) NSString* baseUrl;
 @property(nonatomic, strong, readonly) NSString* preferredSite;
 @property(nonatomic, strong, readonly) NSString* userType;
 
 
-+ (expanz_utils_SdkConfiguration*) globalConfiguration;
++ (expanz_SdkConfiguration*) globalConfiguration;
 
-+ (void) setGlobalConfiguration:(expanz_utils_SdkConfiguration*)configuration;
++ (void) setGlobalConfiguration:(expanz_SdkConfiguration*)configuration;
 
 + (void) clearGlobalConfiguration;
 
@@ -32,15 +32,16 @@
 
 - (id) initWithXmlString:(NSString*)configXml;
 
-- (NSURL*) createSessionServiceUrl;
+- (NSString*) createSessionServiceUrl;
 
-- (NSURL*) execXServiceUrl;
+- (NSString*) execXServiceUrl;
 
-- (NSURL*) getBlobServiceUrl;
+- (NSString*) getBlobServiceUrl;
 
-- (void) setConfigurationFile:(NSString*)fileName;
+- (NSString*) listAvailableSitesUrl;
+
+- (void) setConfigurationFile;
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias SdkConfiguration expanz_utils_SdkConfiguration;
+@compatibility_alias SdkConfiguration expanz_SdkConfiguration;

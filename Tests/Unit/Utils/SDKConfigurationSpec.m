@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "../../../Source/Main/Core/expanz_utils_SdkConfiguration.h"
+#import "../../../Source/Main/Core/expanz_SdkConfiguration.h"
 
 SPEC_BEGIN(SdkConfigurationSpec)
 

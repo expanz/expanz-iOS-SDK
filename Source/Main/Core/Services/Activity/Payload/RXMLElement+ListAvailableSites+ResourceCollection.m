@@ -8,7 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "RXMLElement+ResourceCollection.h"
+#import "RXMLElement+ListAvailableSites+ResourceCollection.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
 

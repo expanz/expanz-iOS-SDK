@@ -20,7 +20,7 @@
 #import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_SessionContext.h"
-#import "../../Source/Main/Core/expanz_utils_SdkConfiguration.h"
+#import "../../Source/Main/Core/expanz_SdkConfiguration.h"
 
 
 @implementation IntegrationUtils

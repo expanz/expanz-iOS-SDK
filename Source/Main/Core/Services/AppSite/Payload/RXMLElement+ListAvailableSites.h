@@ -8,12 +8,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import <Foundation/Foundation.h>
+#import "../../../../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
 
-#import "RXMLElement.h"
-@class expanz_model_SessionContext;
+@class expanz_model_AppSite;
+@class expanz_model_SiteList;
 
-@interface RXMLElement (SessionContext)
+@interface RXMLElement (ListAvailableSites)
 
-- (expanz_model_SessionContext*) asSessionContext; 
+- (expanz_model_SiteList*) asSiteList;
+
+- (expanz_model_AppSite*) asAppSite;
 
 @end

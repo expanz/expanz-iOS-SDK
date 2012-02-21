@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement+ActivityInstance.h"
+#import "../../../Source/Main/Core/Services/Activity/Payload/RXMLElement+ListAvailableSites+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_TreeData.h"

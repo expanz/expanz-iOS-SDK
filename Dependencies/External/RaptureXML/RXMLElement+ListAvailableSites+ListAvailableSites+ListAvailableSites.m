@@ -1,5 +1,5 @@
 // ================================================================================================
-//  RXMLElement.m
+//  RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.m
 //  Fast processing of XML files
 //
 // ================================================================================================
@@ -28,7 +28,7 @@
 // ================================================================================================
 //
 
-#import "RXMLElement.h"
+#import "RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
 
 @implementation RXMLElement
 
