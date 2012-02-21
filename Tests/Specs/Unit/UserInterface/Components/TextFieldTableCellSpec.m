@@ -9,11 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <UIKit/UIKit.h>
+#import "expanz_ui_components_TextFieldTableCell.h"
 
-@interface ActivityHarnessApplicationDelegate : NSObject<UIApplicationDelegate>
+SPEC_BEGIN(TextFieldTableCellSpec)
 
-@property(nonatomic, strong) UIWindow* window;
-@property(nonatomic, strong) UINavigationController* navigationController;
+describe(@"Object creation", ^{
+    
+    it(@"should allow initialization with reusde identifier", ^{
+        TextFieldTableCell* tableCell = [[TextFieldTableCell alloc] init];
+        [tableCell shouldNotBeNil];
+    });
 
-@end
+});
+
+
+SPEC_END
