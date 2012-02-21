@@ -26,7 +26,6 @@
 @synthesize siteList = _siteList;
 
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
-    LogDebug(@"Hello? %@", siteList);
     _siteList = siteList;
 }
 
