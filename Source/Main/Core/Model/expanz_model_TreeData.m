@@ -10,8 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_model_TreeData.h"
 #import "expanz_model_Folder.h"
-#import "expanz_ui_TreeDataRenderer.h"
-
 
 @implementation expanz_model_TreeData
 
@@ -34,11 +32,6 @@
 
 - (void)addFolder:(expanz_model_Folder*)folder {
     [_folders addObject:folder];
-}
-
-/* ================================================= Protocol Methods =============================================== */
-- (expanz_ui_AbstractDataRenderer*)withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
-    return [[TreeDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName];
 }
 
 @end

@@ -9,7 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_ios_SdkExceptions.h"
+#import "expanz_ui_AlertBoxSystemEventReporter.h"
+#import "expanz_UserInterfaceModule.h"
 
-NSString * const ExXmlValidationException = @"ExXmlValidationException";
-NSString * const ExModelBindingException = @"ExModelBindingException";
+@implementation expanz_UserInterfaceModule
+
+- (void) configure {
+    [super configure];
+    [self bindClass:[AlertBoxSystemEventReporter class] toProtocol:@protocol(expanz_ui_SystemEventReporter)];
+}
+
+@end 

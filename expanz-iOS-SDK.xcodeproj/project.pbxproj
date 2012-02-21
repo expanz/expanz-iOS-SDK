@@ -50,7 +50,7 @@
 		6B070D9C14F27C4F0044A4CF /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3214EF921100909A38 /* UITableView+DataPublication.m */; };
 		6B070D9D14F27C4F0044A4CF /* expanz_ui_components_TextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3514EF921100909A38 /* expanz_ui_components_TextFieldTableCell.m */; };
 		6B070D9E14F27C4F0044A4CF /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B070D9F14F27C4F0044A4CF /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_ios_SdkAppDelegate.m */; };
+		6B070D9F14F27C4F0044A4CF /* expanz_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_AppDelegate.m */; };
 		6B070DA014F27C4F0044A4CF /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3B14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m */; };
 		6B070DA114F27C4F0044A4CF /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3D14EF921100909A38 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B070DA214F27C4F0044A4CF /* expanz_ui_ActivityMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3F14EF921100909A38 /* expanz_ui_ActivityMenuViewController.m */; };
@@ -63,9 +63,9 @@
 		6B070DA914F27C4F0044A4CF /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F4E14EF921100909A38 /* expanz_ui_TextFieldDelegateUtils.m */; };
 		6B070DAA14F27C4F0044A4CF /* expanz_ui_TreeDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F5014EF921100909A38 /* expanz_ui_TreeDataRenderer.m */; };
 		6B070DAB14F27C4F0044A4CF /* UIView+ModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F5214EF921100909A38 /* UIView+ModelAdapter.m */; };
-		6B070DAC14F27C4F0044A4CF /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */; };
-		6B070DAD14F27C4F0044A4CF /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */; };
-		6B070DAE14F27C4F0044A4CF /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */; };
+		6B070DAC14F27C4F0044A4CF /* expanz_utils_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */; };
+		6B070DAD14F27C4F0044A4CF /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B070DAE14F27C4F0044A4CF /* expanz_UserInterfaceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_UserInterfaceModule.m */; };
 		6B070DAF14F27C4F0044A4CF /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */; };
 		6B070DB014F27C4F0044A4CF /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */; };
 		6B070DB114F27C4F0044A4CF /* expanz_model_ActivityDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_ActivityDefinition.m */; };
@@ -153,22 +153,18 @@
 		6B6E85C414F115B000FA4B5D /* DefaultActivityClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E85C114F115B000FA4B5D /* DefaultActivityClientIntegration.m */; };
 		6B6E85C514F115B000FA4B5D /* DefaultLoginClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E85C214F115B000FA4B5D /* DefaultLoginClientIntegration.m */; };
 		6B6E85C614F115B000FA4B5D /* DefaultSessionDataClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E85C314F115B000FA4B5D /* DefaultSessionDataClientIntegration.m */; };
-		6B718D9314EF8B6400909A38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B718D9214EF8B6400909A38 /* Cocoa.framework */; };
-		6B718E1514EF920300909A38 /* expanz_ios_SdkConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_ios_SdkConfiguration.h */; };
-		6B718E1614EF920300909A38 /* expanz_ios_SdkConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_ios_SdkConfiguration.h */; };
-		6B718E1714EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */; };
-		6B718E1914EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */; };
-		6B718E1A14EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */; };
-		6B718E1B14EF920300909A38 /* expanz_ios_SdkExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA714EF920300909A38 /* expanz_ios_SdkExceptions.h */; };
-		6B718E1C14EF920300909A38 /* expanz_ios_SdkExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA714EF920300909A38 /* expanz_ios_SdkExceptions.h */; };
-		6B718E1D14EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */; };
-		6B718E1F14EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */; };
-		6B718E2014EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */; };
-		6B718E2114EF920300909A38 /* expanz_ios_SdkModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA914EF920300909A38 /* expanz_ios_SdkModule.h */; };
-		6B718E2214EF920300909A38 /* expanz_ios_SdkModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA914EF920300909A38 /* expanz_ios_SdkModule.h */; };
-		6B718E2314EF920300909A38 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */; };
-		6B718E2514EF920300909A38 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */; };
-		6B718E2614EF920300909A38 /* expanz_ios_SdkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */; };
+		6B718E1514EF920300909A38 /* expanz_utils_SdkConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_utils_SdkConfiguration.h */; };
+		6B718E1614EF920300909A38 /* expanz_utils_SdkConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_utils_SdkConfiguration.h */; };
+		6B718E1714EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */; };
+		6B718E1914EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */; };
+		6B718E1A14EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */; };
+		6B718E1C14EF920300909A38 /* (null) in Headers */ = {isa = PBXBuildFile; };
+		6B718E1D14EF920300909A38 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B718E1F14EF920300909A38 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B718E2114EF920300909A38 /* expanz_UserInterfaceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA914EF920300909A38 /* expanz_UserInterfaceModule.h */; };
+		6B718E2214EF920300909A38 /* expanz_UserInterfaceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA914EF920300909A38 /* expanz_UserInterfaceModule.h */; };
+		6B718E2314EF920300909A38 /* expanz_UserInterfaceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_UserInterfaceModule.m */; };
+		6B718E2514EF920300909A38 /* expanz_UserInterfaceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAA14EF920300909A38 /* expanz_UserInterfaceModule.m */; };
 		6B718E2714EF920300909A38 /* expanz_model_AbstractData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */; };
 		6B718E2814EF920300909A38 /* expanz_model_AbstractData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */; };
 		6B718E2914EF920300909A38 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */; };
@@ -404,9 +400,9 @@
 		6B718F6414EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718F3614EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.h */; };
 		6B718F6514EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m */; };
 		6B718F6714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B718F6814EF921100909A38 /* expanz_ios_SdkAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718F3814EF921100909A38 /* expanz_ios_SdkAppDelegate.h */; };
-		6B718F6914EF921100909A38 /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_ios_SdkAppDelegate.m */; };
-		6B718F6B14EF921100909A38 /* expanz_ios_SdkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_ios_SdkAppDelegate.m */; };
+		6B718F6814EF921100909A38 /* expanz_AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718F3814EF921100909A38 /* expanz_AppDelegate.h */; };
+		6B718F6914EF921100909A38 /* expanz_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_AppDelegate.m */; };
+		6B718F6B14EF921100909A38 /* expanz_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3914EF921100909A38 /* expanz_AppDelegate.m */; };
 		6B718F6C14EF921100909A38 /* expanz_ui_AbstractDataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718F3A14EF921100909A38 /* expanz_ui_AbstractDataRenderer.h */; };
 		6B718F6D14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3B14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m */; };
 		6B718F6F14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3B14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m */; };
@@ -458,6 +454,12 @@
 		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BB701ED14F34FF70029A94B /* CoverageFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB701EC14F34FF70029A94B /* CoverageFix.m */; };
+		6BB701EE14F352150029A94B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E85A014EFF58400FA4B5D /* libxml2.dylib */; };
+		6BB701EF14F352180029A94B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */; };
+		6BB701F014F3521A0029A94B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */; };
+		6BB701F114F3521C0029A94B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
+		6BB701F314F352350029A94B /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
+		6BB701F414F3523A0029A94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BC9F78F1458EBB6001AF204 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FA1458EBB5001AF204 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC9F7971458EBB6001AF204 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FD1458EBB5001AF204 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -561,7 +563,6 @@
 		6BFDE7761495FA01005D3445 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3444 /* StubSystemEventReporter.m */; };
 		6BFDE7761495FA01005D3448 /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3447 /* TestResource.m */; };
 		6BFDE7761495FA01005D34AA /* SdkConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34A9 /* SdkConfigurationSpec.m */; };
-		6BFDE7761495FA01005D34AD /* AbstractDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34AC /* AbstractDataSpec.m */; };
 		6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */; };
 		6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B0 /* ActivitySpec.m */; };
 		6BFDE7761495FA01005D34B3 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B2 /* ColumnSpec.m */; };
@@ -606,6 +607,20 @@
 		6BFDE7761495FA01005D3509 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3505 /* NSString+Contains.m */; };
 		6BFDE7761495FA01005D350B /* NSString+Contains.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350A /* NSString+Contains.h */; };
 		6BFDE7761495FA01005D350C /* NSString+Contains.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350A /* NSString+Contains.h */; };
+		6BFDE7761495FA01005D350E /* expanz_model_AbstractData+DataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */; };
+		6BFDE7761495FA01005D350F /* expanz_model_AbstractData+DataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */; };
+		6BFDE7761495FA01005D3510 /* expanz_model_AbstractData+DataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */; };
+		6BFDE7761495FA01005D3512 /* expanz_model_AbstractData+DataRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3511 /* expanz_model_AbstractData+DataRenderer.h */; };
+		6BFDE7761495FA01005D3515 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3516 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D351B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D351C /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3520 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
+		6BFDE7761495FA01005D3521 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
+		6BFDE7761495FA01005D3522 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
+		6BFDE7761495FA01005D3523 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
+		6BFDE7761495FA01005D3525 /* expanz_CoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; };
+		6BFDE7761495FA01005D3526 /* expanz_CoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -689,12 +704,10 @@
 		6B718D9614EF8B6400909A38 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B718D9714EF8B6400909A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B718D9A14EF8B6400909A38 /* libExpanz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libExpanz-Prefix.pch"; sourceTree = "<group>"; };
-		6B718DA514EF920300909A38 /* expanz_ios_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkConfiguration.h; sourceTree = "<group>"; };
-		6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkConfiguration.m; sourceTree = "<group>"; };
-		6B718DA714EF920300909A38 /* expanz_ios_SdkExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkExceptions.h; sourceTree = "<group>"; };
-		6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkExceptions.m; sourceTree = "<group>"; };
-		6B718DA914EF920300909A38 /* expanz_ios_SdkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkModule.h; sourceTree = "<group>"; };
-		6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkModule.m; sourceTree = "<group>"; };
+		6B718DA514EF920300909A38 /* expanz_utils_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_utils_SdkConfiguration.h; path = ../expanz_utils_SdkConfiguration.h; sourceTree = "<group>"; };
+		6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = expanz_utils_SdkConfiguration.m; path = ../expanz_utils_SdkConfiguration.m; sourceTree = "<group>"; };
+		6B718DA914EF920300909A38 /* expanz_UserInterfaceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expanz_UserInterfaceModule.h; path = ../Core/expanz_UserInterfaceModule.h; sourceTree = "<group>"; };
+		6B718DAA14EF920300909A38 /* expanz_UserInterfaceModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = expanz_UserInterfaceModule.m; path = ../Core/expanz_UserInterfaceModule.m; sourceTree = "<group>"; };
 		6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
 		6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
 		6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractGridDataCell.h; sourceTree = "<group>"; };
@@ -794,8 +807,8 @@
 		6B718F3514EF921100909A38 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
 		6B718F3614EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
 		6B718F3714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
-		6B718F3814EF921100909A38 /* expanz_ios_SdkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ios_SdkAppDelegate.h; sourceTree = "<group>"; };
-		6B718F3914EF921100909A38 /* expanz_ios_SdkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ios_SdkAppDelegate.m; sourceTree = "<group>"; };
+		6B718F3814EF921100909A38 /* expanz_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_AppDelegate.h; sourceTree = "<group>"; };
+		6B718F3914EF921100909A38 /* expanz_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_AppDelegate.m; sourceTree = "<group>"; };
 		6B718F3A14EF921100909A38 /* expanz_ui_AbstractDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_AbstractDataRenderer.h; sourceTree = "<group>"; };
 		6B718F3B14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_AbstractDataRenderer.m; sourceTree = "<group>"; };
 		6B718F3C14EF921100909A38 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
@@ -819,8 +832,8 @@
 		6B718F4E14EF921100909A38 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
 		6B718F4F14EF921100909A38 /* expanz_ui_TreeDataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TreeDataRenderer.h; sourceTree = "<group>"; };
 		6B718F5014EF921100909A38 /* expanz_ui_TreeDataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TreeDataRenderer.m; sourceTree = "<group>"; };
-		6B718F5114EF921100909A38 /* UIView+ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModelAdapter.h"; sourceTree = "<group>"; };
-		6B718F5214EF921100909A38 /* UIView+ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModelAdapter.m"; sourceTree = "<group>"; };
+		6B718F5114EF921100909A38 /* UIView+ModelAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ModelAdapter.h"; path = "../UIView+ModelAdapter.h"; sourceTree = "<group>"; };
+		6B718F5214EF921100909A38 /* UIView+ModelAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ModelAdapter.m"; path = "../UIView+ModelAdapter.m"; sourceTree = "<group>"; };
 		6B718FA314EF962B00909A38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B718FA414EF962B00909A38 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		6B912278143299CA0031F7A8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -979,6 +992,10 @@
 		6BFDE7761495FA01005D3503 /* TestFixtureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestFixtureView.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3505 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D350A /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "expanz_model_AbstractData+DataRenderer.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3511 /* expanz_model_AbstractData+DataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz_model_AbstractData+DataRenderer.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D351F /* expanz_CoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_CoreModule.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_CoreModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1013,7 +1030,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B718D9314EF8B6400909A38 /* Cocoa.framework in Frameworks */,
+				6BB701EE14F352150029A94B /* libxml2.dylib in Frameworks */,
+				6BB701F314F352350029A94B /* LRResty.framework in Frameworks */,
+				6BB701F414F3523A0029A94B /* Foundation.framework in Frameworks */,
+				6BB701F114F3521C0029A94B /* libz.dylib in Frameworks */,
+				6BB701F014F3521A0029A94B /* MobileCoreServices.framework in Frameworks */,
+				6BB701EF14F352180029A94B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,8 +1077,8 @@
 				6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */,
 				6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */,
 				6B6E859A14EFF54B00FA4B5D /* libz.dylib */,
-				6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */,
 				6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */,
+				6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */,
 				6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */,
 				6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */,
 				6B1E5E8714734404004145D0 /* Foundation.framework */,
@@ -1130,15 +1152,10 @@
 		6B718DA214EF920300909A38 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6B718DA514EF920300909A38 /* expanz_ios_SdkConfiguration.h */,
-				6B718DA614EF920300909A38 /* expanz_ios_SdkConfiguration.m */,
-				6B718DA714EF920300909A38 /* expanz_ios_SdkExceptions.h */,
-				6B718DA814EF920300909A38 /* expanz_ios_SdkExceptions.m */,
-				6B718DA914EF920300909A38 /* expanz_ios_SdkModule.h */,
-				6B718DAA14EF920300909A38 /* expanz_ios_SdkModule.m */,
 				6B718DAB14EF920300909A38 /* Model */,
 				6B718DDA14EF920300909A38 /* Services */,
 				6B718E0D14EF920300909A38 /* Utils */,
+				6BFDE7761495FA01005D351E /* Assembly */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1312,6 +1329,8 @@
 		6B718E0D14EF920300909A38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6B718DA514EF920300909A38 /* expanz_utils_SdkConfiguration.h */,
+				6B718DA614EF920300909A38 /* expanz_utils_SdkConfiguration.m */,
 				6BFDE7761495FA01005D350A /* NSString+Contains.h */,
 				6BFDE7761495FA01005D3505 /* NSString+Contains.m */,
 				6B718E0E14EF920300909A38 /* CAFilter+Unlock.h */,
@@ -1326,8 +1345,6 @@
 				6B718F2C14EF921100909A38 /* Assets */,
 				6B718F3014EF921100909A38 /* Categories */,
 				6B718F3314EF921100909A38 /* Components */,
-				6B718F3814EF921100909A38 /* expanz_ios_SdkAppDelegate.h */,
-				6B718F3914EF921100909A38 /* expanz_ios_SdkAppDelegate.m */,
 				6B718F3A14EF921100909A38 /* expanz_ui_AbstractDataRenderer.h */,
 				6B718F3B14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m */,
 				6B718F3C14EF921100909A38 /* expanz_ui_ActivityInstanceViewController.h */,
@@ -1351,8 +1368,7 @@
 				6B718F4E14EF921100909A38 /* expanz_ui_TextFieldDelegateUtils.m */,
 				6B718F4F14EF921100909A38 /* expanz_ui_TreeDataRenderer.h */,
 				6B718F5014EF921100909A38 /* expanz_ui_TreeDataRenderer.m */,
-				6B718F5114EF921100909A38 /* UIView+ModelAdapter.h */,
-				6B718F5214EF921100909A38 /* UIView+ModelAdapter.m */,
+				6BFDE7761495FA01005D351D /* Assembly */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -1370,6 +1386,10 @@
 		6B718F3014EF921100909A38 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6B718F5114EF921100909A38 /* UIView+ModelAdapter.h */,
+				6B718F5214EF921100909A38 /* UIView+ModelAdapter.m */,
+				6BFDE7761495FA01005D3511 /* expanz_model_AbstractData+DataRenderer.h */,
+				6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */,
 				6B718F3114EF921100909A38 /* UITableView+DataPublication.h */,
 				6B718F3214EF921100909A38 /* UITableView+DataPublication.m */,
 			);
@@ -1802,6 +1822,26 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		6BFDE7761495FA01005D351D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				6B718DAA14EF920300909A38 /* expanz_UserInterfaceModule.m */,
+				6B718DA914EF920300909A38 /* expanz_UserInterfaceModule.h */,
+				6B718F3914EF921100909A38 /* expanz_AppDelegate.m */,
+				6B718F3814EF921100909A38 /* expanz_AppDelegate.h */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		6BFDE7761495FA01005D351E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */,
+				6BFDE7761495FA01005D351F /* expanz_CoreModule.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1833,9 +1873,8 @@
 				6BFDE7751495FA01005D332F /* Objection.h in Headers */,
 				6B1107CA14CD3DDC00D0A4FE /* MBProgressHUD.h in Headers */,
 				6BA4DD5E14E926970061FAC9 /* NSData+ExpanzAdditions.h in Headers */,
-				6B718E1514EF920300909A38 /* expanz_ios_SdkConfiguration.h in Headers */,
-				6B718E1B14EF920300909A38 /* expanz_ios_SdkExceptions.h in Headers */,
-				6B718E2114EF920300909A38 /* expanz_ios_SdkModule.h in Headers */,
+				6B718E1514EF920300909A38 /* expanz_utils_SdkConfiguration.h in Headers */,
+				6B718E2114EF920300909A38 /* expanz_UserInterfaceModule.h in Headers */,
 				6B718E2714EF920300909A38 /* expanz_model_AbstractData.h in Headers */,
 				6B718E2D14EF920300909A38 /* expanz_model_AbstractGridDataCell.h in Headers */,
 				6B718E3314EF920300909A38 /* expanz_model_ActivityDefinition.h in Headers */,
@@ -1889,7 +1928,7 @@
 				6B718F5C14EF921100909A38 /* UITableView+DataPublication.h in Headers */,
 				6B718F6014EF921100909A38 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
 				6B718F6414EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
-				6B718F6814EF921100909A38 /* expanz_ios_SdkAppDelegate.h in Headers */,
+				6B718F6814EF921100909A38 /* expanz_AppDelegate.h in Headers */,
 				6B718F6C14EF921100909A38 /* expanz_ui_AbstractDataRenderer.h in Headers */,
 				6B718F7014EF921100909A38 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
 				6B718F7414EF921100909A38 /* expanz_ui_ActivityMenuViewController.h in Headers */,
@@ -1905,6 +1944,8 @@
 				6B718F9914EF921100909A38 /* UIView+ModelAdapter.h in Headers */,
 				6B718FA814EF962B00909A38 /* Prefix.pch in Headers */,
 				6BFDE7761495FA01005D350B /* NSString+Contains.h in Headers */,
+				6BFDE7761495FA01005D3512 /* expanz_model_AbstractData+DataRenderer.h in Headers */,
+				6BFDE7761495FA01005D3525 /* expanz_CoreModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1912,9 +1953,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B718E1614EF920300909A38 /* expanz_ios_SdkConfiguration.h in Headers */,
-				6B718E1C14EF920300909A38 /* expanz_ios_SdkExceptions.h in Headers */,
-				6B718E2214EF920300909A38 /* expanz_ios_SdkModule.h in Headers */,
+				6B718E1614EF920300909A38 /* expanz_utils_SdkConfiguration.h in Headers */,
+				6B718E1C14EF920300909A38 /* (null) in Headers */,
+				6B718E2214EF920300909A38 /* expanz_UserInterfaceModule.h in Headers */,
 				6B718E2814EF920300909A38 /* expanz_model_AbstractData.h in Headers */,
 				6B718E2E14EF920300909A38 /* expanz_model_AbstractGridDataCell.h in Headers */,
 				6B718E3414EF920300909A38 /* expanz_model_ActivityDefinition.h in Headers */,
@@ -1967,6 +2008,7 @@
 				6B718F2A14EF920300909A38 /* xml_Serializable.h in Headers */,
 				6B718FA914EF962B00909A38 /* Prefix.pch in Headers */,
 				6BFDE7761495FA01005D350C /* NSString+Contains.h in Headers */,
+				6BFDE7761495FA01005D3526 /* expanz_CoreModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2204,9 +2246,9 @@
 				6BFDE7761495FA01005D3406 /* (null) in Sources */,
 				6BFDE7761495FA01005D3412 /* (null) in Sources */,
 				6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */,
-				6B718E1714EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */,
-				6B718E1D14EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */,
-				6B718E2314EF920300909A38 /* expanz_ios_SdkModule.m in Sources */,
+				6B718E1714EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */,
+				6B718E1D14EF920300909A38 /* (null) in Sources */,
+				6B718E2314EF920300909A38 /* expanz_UserInterfaceModule.m in Sources */,
 				6B718E2914EF920300909A38 /* expanz_model_AbstractData.m in Sources */,
 				6B718E2F14EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */,
 				6B718E3514EF920300909A38 /* expanz_model_ActivityDefinition.m in Sources */,
@@ -2250,7 +2292,7 @@
 				6B718F5D14EF921100909A38 /* UITableView+DataPublication.m in Sources */,
 				6B718F6114EF921100909A38 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B718F6514EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B718F6914EF921100909A38 /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6B718F6914EF921100909A38 /* expanz_AppDelegate.m in Sources */,
 				6B718F6D14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6B718F7114EF921100909A38 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6B718F7514EF921100909A38 /* expanz_ui_ActivityMenuViewController.m in Sources */,
@@ -2264,6 +2306,8 @@
 				6B718F9614EF921100909A38 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6B718F9A14EF921100909A38 /* UIView+ModelAdapter.m in Sources */,
 				6BFDE7761495FA01005D3506 /* NSString+Contains.m in Sources */,
+				6BFDE7761495FA01005D350E /* expanz_model_AbstractData+DataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3520 /* expanz_CoreModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2296,7 +2340,7 @@
 				6B070D9C14F27C4F0044A4CF /* UITableView+DataPublication.m in Sources */,
 				6B070D9D14F27C4F0044A4CF /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B070D9E14F27C4F0044A4CF /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B070D9F14F27C4F0044A4CF /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6B070D9F14F27C4F0044A4CF /* expanz_AppDelegate.m in Sources */,
 				6B070DA014F27C4F0044A4CF /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6B070DA114F27C4F0044A4CF /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6B070DA214F27C4F0044A4CF /* expanz_ui_ActivityMenuViewController.m in Sources */,
@@ -2309,9 +2353,9 @@
 				6B070DA914F27C4F0044A4CF /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 				6B070DAA14F27C4F0044A4CF /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6B070DAB14F27C4F0044A4CF /* UIView+ModelAdapter.m in Sources */,
-				6B070DAC14F27C4F0044A4CF /* expanz_ios_SdkConfiguration.m in Sources */,
-				6B070DAD14F27C4F0044A4CF /* expanz_ios_SdkExceptions.m in Sources */,
-				6B070DAE14F27C4F0044A4CF /* expanz_ios_SdkModule.m in Sources */,
+				6B070DAC14F27C4F0044A4CF /* expanz_utils_SdkConfiguration.m in Sources */,
+				6B070DAD14F27C4F0044A4CF /* (null) in Sources */,
+				6B070DAE14F27C4F0044A4CF /* expanz_UserInterfaceModule.m in Sources */,
 				6B070DAF14F27C4F0044A4CF /* expanz_model_AbstractData.m in Sources */,
 				6B070DB014F27C4F0044A4CF /* expanz_model_AbstractGridDataCell.m in Sources */,
 				6B070DB114F27C4F0044A4CF /* expanz_model_ActivityDefinition.m in Sources */,
@@ -2359,7 +2403,6 @@
 				6BFDE7761495FA01005D3445 /* StubSystemEventReporter.m in Sources */,
 				6BFDE7761495FA01005D3448 /* TestResource.m in Sources */,
 				6BFDE7761495FA01005D34AA /* SdkConfigurationSpec.m in Sources */,
-				6BFDE7761495FA01005D34AD /* AbstractDataSpec.m in Sources */,
 				6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */,
 				6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */,
 				6BFDE7761495FA01005D34B3 /* ColumnSpec.m in Sources */,
@@ -2402,6 +2445,10 @@
 				6B6E85C514F115B000FA4B5D /* DefaultLoginClientIntegration.m in Sources */,
 				6B6E85C614F115B000FA4B5D /* DefaultSessionDataClientIntegration.m in Sources */,
 				6BB701ED14F34FF70029A94B /* CoverageFix.m in Sources */,
+				6BFDE7761495FA01005D3510 /* expanz_model_AbstractData+DataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3516 /* (null) in Sources */,
+				6BFDE7761495FA01005D351C /* (null) in Sources */,
+				6BFDE7761495FA01005D3523 /* expanz_CoreModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2409,9 +2456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B718E1A14EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */,
-				6B718E2014EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */,
-				6B718E2614EF920300909A38 /* expanz_ios_SdkModule.m in Sources */,
+				6B718E1A14EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */,
 				6B718E2C14EF920300909A38 /* expanz_model_AbstractData.m in Sources */,
 				6B718E3214EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */,
 				6B718E3814EF920300909A38 /* expanz_model_ActivityDefinition.m in Sources */,
@@ -2453,6 +2498,7 @@
 				6B718F2014EF920300909A38 /* expanz_service_SessionDataRequest.m in Sources */,
 				6B718F2614EF920300909A38 /* RXMLElement+SessionData.m in Sources */,
 				6BFDE7761495FA01005D3508 /* NSString+Contains.m in Sources */,
+				6BFDE7761495FA01005D3522 /* expanz_CoreModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2487,9 +2533,9 @@
 				6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */,
 				6B1107CD14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */,
 				6BA4DD6114E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */,
-				6B718E1914EF920300909A38 /* expanz_ios_SdkConfiguration.m in Sources */,
-				6B718E1F14EF920300909A38 /* expanz_ios_SdkExceptions.m in Sources */,
-				6B718E2514EF920300909A38 /* expanz_ios_SdkModule.m in Sources */,
+				6B718E1914EF920300909A38 /* expanz_utils_SdkConfiguration.m in Sources */,
+				6B718E1F14EF920300909A38 /* (null) in Sources */,
+				6B718E2514EF920300909A38 /* expanz_UserInterfaceModule.m in Sources */,
 				6B718E2B14EF920300909A38 /* expanz_model_AbstractData.m in Sources */,
 				6B718E3114EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */,
 				6B718E3714EF920300909A38 /* expanz_model_ActivityDefinition.m in Sources */,
@@ -2533,7 +2579,7 @@
 				6B718F5F14EF921100909A38 /* UITableView+DataPublication.m in Sources */,
 				6B718F6314EF921100909A38 /* expanz_ui_components_TextFieldTableCell.m in Sources */,
 				6B718F6714EF921100909A38 /* expanz_ui_components_ThumbnailTableCell.m in Sources */,
-				6B718F6B14EF921100909A38 /* expanz_ios_SdkAppDelegate.m in Sources */,
+				6B718F6B14EF921100909A38 /* expanz_AppDelegate.m in Sources */,
 				6B718F6F14EF921100909A38 /* expanz_ui_AbstractDataRenderer.m in Sources */,
 				6B718F7314EF921100909A38 /* expanz_ui_ActivityInstanceViewController.m in Sources */,
 				6B718F7714EF921100909A38 /* expanz_ui_ActivityMenuViewController.m in Sources */,
@@ -2547,6 +2593,10 @@
 				6B718F9814EF921100909A38 /* expanz_ui_TreeDataRenderer.m in Sources */,
 				6B718F9C14EF921100909A38 /* UIView+ModelAdapter.m in Sources */,
 				6BFDE7761495FA01005D3507 /* NSString+Contains.m in Sources */,
+				6BFDE7761495FA01005D350F /* expanz_model_AbstractData+DataRenderer.m in Sources */,
+				6BFDE7761495FA01005D3515 /* (null) in Sources */,
+				6BFDE7761495FA01005D351B /* (null) in Sources */,
+				6BFDE7761495FA01005D3521 /* expanz_CoreModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2688,6 +2738,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2708,6 +2759,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

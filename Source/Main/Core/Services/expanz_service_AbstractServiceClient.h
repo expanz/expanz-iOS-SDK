@@ -13,7 +13,7 @@
 #import <LRResty/LRResty.h>
 #import "xml_Serializable.h"
 
-@class expanz_ios_SdkConfiguration;
+@class expanz_utils_SdkConfiguration;
 @protocol expanz_ui_SystemEventReporter;
 
 

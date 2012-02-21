@@ -76,7 +76,7 @@ describe(@"Attempting to instantiate a SessionContext from invalid XML", ^{
             [NSException raise:@"Should have thrown exception" format:@"Assertion failed."];
         }
         @catch(NSException* exception) {
-            [[[exception name] should] equal:ExXmlValidationException];
+            [[[exception name] should] equal:NSInvalidArgumentException];
         }
     });
     
@@ -89,7 +89,7 @@ describe(@"Attempting to instantiate a SessionContext from invalid XML", ^{
             [NSException raise:@"Should have thrown exception" format:@"Assertion failed."];
         }
         @catch(NSException* exception) {
-            [[[exception name] should] equal:ExXmlValidationException];
+            [[[exception name] should] equal:NSInvalidArgumentException];
         }
         
     });

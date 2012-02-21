@@ -44,8 +44,7 @@
     return [_dataPublicationRequests allValues];
 }
 
-- (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView {
-    NSValue* key = [NSValue valueWithPointer:(__bridge void*) tableView];
+- (DataPublicationRequest*) dataPublicationRequestFor:(NSValue*)key {
     DataPublicationRequest* publicationRequest = [_dataPublicationRequests objectForKey:key];
     if (publicationRequest == nil) {
         publicationRequest = [[DataPublicationRequest alloc] init];
@@ -54,10 +53,8 @@
     return publicationRequest;
 }
 
-- (UITableView*) tableViewForDataPublicationRequest:(expanz_service_DataPublicationRequest*)publicationRequest {
-    NSValue* value = [[_dataPublicationRequests allKeysForObject:publicationRequest] objectAtIndex:0];
-    UITableView* tableView = (__bridge id) [value pointerValue];
-    return tableView;
+- (NSValue*) keyForDataPublicationRequest:(DataPublicationRequest*)publicationRequest {
+    return [[_dataPublicationRequests allKeysForObject:publicationRequest] objectAtIndex:0];
 }
 
 

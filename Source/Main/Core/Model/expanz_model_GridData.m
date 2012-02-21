@@ -13,9 +13,6 @@
 #import "expanz_model_GridData.h"
 #import "expanz_model_Column.h"
 #import "expanz_model_Row.h"
-#import "expanz_ui_AbstractDataRenderer.h"
-#import "expanz_ui_GridDataRenderer.h"
-
 
 @implementation expanz_model_GridData
 
@@ -78,11 +75,6 @@
         }
     }
     return nil;
-}
-
-/* ================================================= Protocol Methods =============================================== */
-- (expanz_ui_AbstractDataRenderer*) withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName {
-    return [[GridDataRenderer alloc] initWithData:self tableView:tableView activityName:activityName];
 }
 
 

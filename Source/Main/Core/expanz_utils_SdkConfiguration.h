@@ -13,16 +13,16 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_ios_SdkConfiguration : NSObject
+@interface expanz_utils_SdkConfiguration : NSObject
 
 @property(nonatomic, strong, readonly) NSString* baseUrl;
 @property(nonatomic, strong, readonly) NSString* preferredSite;
 @property(nonatomic, strong, readonly) NSString* userType;
 
 
-+ (expanz_ios_SdkConfiguration*) globalConfiguration;
++ (expanz_utils_SdkConfiguration*) globalConfiguration;
 
-+ (void) setGlobalConfiguration:(expanz_ios_SdkConfiguration*)configuration;
++ (void) setGlobalConfiguration:(expanz_utils_SdkConfiguration*)configuration;
 
 + (void) clearGlobalConfiguration;
 
@@ -43,4 +43,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SdkConfiguration expanz_ios_SdkConfiguration;
+@compatibility_alias SdkConfiguration expanz_utils_SdkConfiguration;

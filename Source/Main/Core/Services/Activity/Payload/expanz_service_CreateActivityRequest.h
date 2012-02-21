@@ -36,11 +36,11 @@
                sessionToken:(NSString*)sessionToken;
 
 /**
-* Creates or retrieves a DataPublicationRequest for associated with the supplied UITableView.
+* Creates or retrieves a DataPublicationRequest for associated with the supplied key.
 */
-- (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(UITableView*)tableView;
+- (expanz_service_DataPublicationRequest*) dataPublicationRequestFor:(NSValue*)key;
 
-- (UITableView*) tableViewForDataPublicationRequest:(expanz_service_DataPublicationRequest*)publicationRequest;
+- (NSValue*) keyForDataPublicationRequest:(expanz_service_DataPublicationRequest*)publicationRequest;
 
 
 @end

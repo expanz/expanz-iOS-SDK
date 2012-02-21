@@ -9,7 +9,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "RXMLElement+ResourceCollection.h"
-#import "expanz_ios_SdkExceptions.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
 
@@ -19,7 +18,7 @@
 
 - (ResourceCollection*) asResourceCollectionWithTitle:(NSString*)title {
     if (![self.tag isEqualToString:@"Files"]) {
-        [NSException raise:ExXmlValidationException format:@"Element name is not Files."];
+        [NSException raise:NSInvalidArgumentException format:@"Element name is not Files."];
     }
     ResourceCollection* collection = [[ResourceCollection alloc] initWithTitle:title];
 
@@ -32,7 +31,7 @@
 
 - (FileResource*) asFileResource {
     if (![self.tag isEqualToString:@"File"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a File."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a File."];
     }
     return [[FileResource alloc]
         initWithPath:[self attribute:@"path"] ext:[self attribute:@"ext"] field:[self attribute:@"field"]];

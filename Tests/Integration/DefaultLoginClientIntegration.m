@@ -13,7 +13,7 @@
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_ios_SdkModule.h"
+#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
 #import "StubLoginClientDelegate.h"
 #import "IntegrationUtils.h"
 
@@ -28,7 +28,7 @@ describe(@"Authenticating with the site manager.", ^{
     
     beforeEach(^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
         loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
         loginDelegate = [[StubLoginClientDelegate alloc] init];
     });

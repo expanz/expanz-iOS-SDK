@@ -12,7 +12,7 @@
 #import "expanz_ui_LoginViewController.h"
 #import "JSObjectionInjector.h"
 #import "JSObjection.h"
-#import "expanz_ios_SdkModule.h"
+#import "../../../Source/Main/Core/expanz_UserInterfaceModule.h"
 
 SPEC_BEGIN(LoginViewControllerSpec)
 
@@ -20,7 +20,7 @@ describe(@"Object creation", ^{
     
     
     beforeEach(^{
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
         [JSObjection setGlobalInjector:injector];
     });
     

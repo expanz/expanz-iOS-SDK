@@ -15,7 +15,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_model_Menu.h"
 #import "expanz_service_DefaultDataClient.h"
-#import "expanz_ios_SdkModule.h"
+#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
 #import "expanz_model_SessionContext.h"
 
 /* ================================================================================================================== */
@@ -56,7 +56,7 @@ describe(@"Retrieve session data using an access token", ^{
     beforeEach(^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
         [IntegrationUtils loginWithDefaultUserIfRequired];        
-        JSObjectionInjector* injector = [JSObjection createInjector:[[SdkModule alloc] init]];
+        JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
         sessionDataClient = [injector getObject:@protocol(expanz_service_SessionDataClient)];
         delegate = [[TestSessionDataClientDelegate alloc] init];
     });

@@ -10,11 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_iOS_SdkConfiguration.h"
+#import "expanz_utils_SdkConfiguration.h"
 #import "RXMLElement.h"
 
 
-@implementation expanz_ios_SdkConfiguration
+@implementation expanz_utils_SdkConfiguration
 
 static SdkConfiguration* _globalConfiguration;
 

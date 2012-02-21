@@ -9,22 +9,20 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_ios_SdkModule.h"
-#import "expanz_ios_SdkConfiguration.h"
+#import "expanz_utils_SdkConfiguration.h"
+#import "expanz_CoreModule.h"
+#import "expanz_service_DefaultDataClient.h"
 #import "expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_service_DefaultDataClient.h"
-#import "expanz_ui_NavigationManager.h"
-#import "expanz_ui_AlertBoxSystemEventReporter.h"
-#import "expanz_service_FileDownloadClient.h"
+#import "expanz_service_SessionDataClient.h"
 
-@implementation expanz_ios_SdkModule
+
+@implementation expanz_CoreModule
 
 - (void) configure {
-    [self bindClass:[AlertBoxSystemEventReporter class] toProtocol:@protocol(expanz_ui_SystemEventReporter)];
-    SdkConfiguration* config = [SdkConfiguration globalConfiguration];
 
+    SdkConfiguration* config = [SdkConfiguration globalConfiguration];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
         return [[DefaultActivityClient alloc] initWithServiceUrl:[config.execXServiceUrl absoluteString]];
@@ -46,5 +44,4 @@
 
 
 }
-
-@end 
+@end

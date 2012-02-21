@@ -140,7 +140,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                 [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
             }
             @catch (NSException* exception) {
-                [[[exception name]  should] equal:ExXmlValidationException];
+                [[[exception name]  should] equal:NSInvalidArgumentException];
             }
 
         });
@@ -151,7 +151,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                 [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
             }
             @catch (NSException* exception) {
-                [[[exception name] should] equal:ExXmlValidationException];
+                [[[exception name] should] equal:NSInvalidArgumentException];
             }
         });
 
@@ -161,7 +161,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
                 [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
             }
             @catch (NSException* exception) {
-                [[[exception name] should] equal:ExXmlValidationException];
+                [[[exception name] should] equal:NSInvalidArgumentException];
             }
 
         });

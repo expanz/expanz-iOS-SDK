@@ -10,14 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionContext.h"
-#import "expanz_ios_SdkExceptions.h"
 #import "expanz_model_SessionContext.h"
 
 @implementation RXMLElement (SessionContext)
 
 - (SessionContext*) asSessionContext {
     if (![self.tag isEqualToString:@"CreateSessionXResponse"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a CreateSessionXResponse."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a CreateSessionXResponse."];
     }
 
     SessionContext* sessionContext; 
@@ -39,7 +38,7 @@
                                                                 hasWarning:NO message:message];
             }
             else {
-                [NSException raise:ExXmlValidationException 
+                [NSException raise:NSInvalidArgumentException
                             format:@"Contains neither a session token or an error message."];
             }
         }        

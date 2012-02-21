@@ -8,20 +8,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "expanz_model_AbstractData.h"
+#import <Foundation/Foundation.h>
+#import "JSObjectionModule.h"
 
-@implementation expanz_model_AbstractData
 
-@synthesize dataId = _dataId;
-
-/* ================================================== Initializers ================================================== */
-
-- (id)initWithDataId:(NSString*)dataId {
-    self = [super init];
-    if (self) {
-        _dataId = [dataId copy];
-    }
-    return self;
-}
-
+@interface expanz_CoreModule : JSObjectionModule
 @end
+@compatibility_alias CoreModule expanz_CoreModule;

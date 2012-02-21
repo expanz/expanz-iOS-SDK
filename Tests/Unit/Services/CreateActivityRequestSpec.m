@@ -22,7 +22,8 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 
         it(@"should allow initialization with activityName and sessionToken parameters.", ^{
             CreateActivityRequest* request = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Calculator" style:[ActivityStyle browseStyle] initialKey:nil sessionToken:@"EggResponderxx238b"];
+                initWithActivityName:@"Calculator" style:[ActivityStyle browseStyle] initialKey:nil
+                        sessionToken:@"EggResponderxx238b"];
             [[[request activityName] should] equal:@"Calculator"];
             [[theValue([[request style] isBrowse]) should] beYes];
             [[[request sessionToken] should] equal:@"EggResponderxx238b"];
@@ -33,25 +34,29 @@ SPEC_BEGIN(CreateActivityRequestSpec)
     describe(@"Web service integration.", ^{
 
         it(@"should be able to marshal itself to XML to send over the wire as a web service request.", ^{
-            id <xml_Serializable> request =
-                [[CreateActivityRequest alloc] initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil sessionToken:@"xx2348b"];
+            id<xml_Serializable> request = [[CreateActivityRequest alloc]
+                initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil
+                        sessionToken:@"xx2348b"];
             RXMLElement* e = [RXMLElement elementFromXMLString:[request toXml]];
             [e shouldNotBeNil];
         });
 
         it(@"Should allow inclusion of DataPublicationRequests in the request body", ^{
             CreateActivityRequest* request = [[CreateActivityRequest alloc]
-                initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil sessionToken:@"xx2348b"];
+                initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil
+                        sessionToken:@"xx2348b"];
 
             UITableView* tableView = [[UITableView alloc] init];
 
-            DataPublicationRequest* dataPublicationRequest = [request dataPublicationRequestFor:tableView];
+            DataPublicationRequest* dataPublicationRequest =
+                [request dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
             [dataPublicationRequest setPopulateMethod:@"ListMe"];
             [dataPublicationRequest setDataPublicationId:@"customersList"];
             [dataPublicationRequest setAutoPopulate:YES];
 
             UITableView* anotherTableView = [[UITableView alloc] init];
-            DataPublicationRequest* another = [request dataPublicationRequestFor:anotherTableView];
+            DataPublicationRequest* another =
+                [request dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) anotherTableView]];
             [another setPopulateMethod:@"ListMeCustomized"];
             [another setDataPublicationId:@"ordersList"];
             [another setAutoPopulate:NO];
@@ -59,8 +64,6 @@ SPEC_BEGIN(CreateActivityRequestSpec)
             LogDebug(@"%@", [request toXml]);
             [[[request dataPublicationRequests] should] haveCountOf:2];
 
-//            [[[[request toXml] contains:@"DataPublication useThumbNailImages=\"1\" id=\"customersList\""] should] beYes];
-//            [[[[request toXml] contains:@"DataPublication useThumbNailImages=\"1\" id=\"ordersList\""] should] beYes];
 
         });
     });

@@ -10,7 +10,6 @@
 
 #import <Kiwi-iOS/Kiwi.h>
 #import "Logging.h"
-#import "expanz_ios_SdkExceptions.h"
 
 #define assertWillHappen(expression) \
 [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\

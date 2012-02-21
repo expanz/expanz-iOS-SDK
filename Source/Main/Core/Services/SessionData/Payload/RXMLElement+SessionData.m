@@ -10,12 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionData.h"
-#import "expanz_ios_SdkExceptions.h"
 #import "expanz_model_ActivityDefinition.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
-#import "expanz_model_ActivityStyle.h"
 
 @implementation RXMLElement (SessionData)
 
@@ -25,7 +23,7 @@
 
 - (Menu*) asMenu {
     if (![self.tag isEqualToString:@"Menu"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Menu."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Menu."];
     }
 
     BOOL hasWorkFlowTrays = [[self attribute:@"hasWorkflowTrays"] boolValue];
@@ -52,7 +50,7 @@
 
 - (ProcessArea*) asProcessArea {
     if (![self.tag isEqualToString:@"ProcessArea"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a ProcessArea."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a ProcessArea."];
     }
     ProcessArea* processArea =
         [[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]];
@@ -70,7 +68,7 @@
 
 - (UserRole*) asUserRole {
     if (![self.tag isEqualToString:@"UserRole"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a UserRole."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a UserRole."];
     }
     return [[UserRole alloc] initWithRoleId:[self attribute:@"id"] andDescription:[self text]];
 }

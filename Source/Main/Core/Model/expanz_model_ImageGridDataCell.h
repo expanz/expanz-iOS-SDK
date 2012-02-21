@@ -22,7 +22,7 @@
 @interface expanz_model_ImageGridDataCell : expanz_model_AbstractGridDataCell
 
 @property(nonatomic, strong, readonly) NSString* imageUrl;
-@property(nonatomic, retain) UIImage* image;
+@property(nonatomic, retain) NSData* imageData;
 @property(nonatomic) BOOL hasAskedImageToLoad;
 
 

@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+ActivityInstance.h"
-#import "expanz_ios_SdkExceptions.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
@@ -27,7 +26,7 @@
 
 - (ActivityInstance*) asActivityInstance {
     if (![self.tag isEqualToString:@"Activity"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not an Activity."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
     }
     ActivityInstance* activityInstance = [[ActivityInstance alloc]
         initWithTitle:[self attribute:@"title"] handle:[self attribute:@"activityHandle"]
@@ -56,7 +55,7 @@
 /* ================================================================================================================== */
 - (Field*) asField {
     if (![self.tag isEqualToString:@"Field"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Field."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
     NSString* fieldId = [self attribute:@"id"];
     BOOL nullable = [[self attribute:@"nullable"] boolValue];
@@ -90,7 +89,7 @@
 /* ================================================================================================================== */
 - (Message*) asMessage {
     if (![self.tag isEqualToString:@"Message"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Message."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Message."];
     }
     MessageType
         messageType = [[self attribute:@"type"] isEqualToString:@"Warning"] ? MessageTypeWarning : MessageTypeError;
@@ -101,7 +100,7 @@
 #pragma mark DataSet and DataSet child elements.
 - (AbstractData*) asData {
     if (![self.tag isEqualToString:@"Data"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not Data."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not Data."];
     }
     DataBuilder* dataBuilder =
         [[DataBuilder alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]];
@@ -130,7 +129,7 @@
 
 - (Column*) asColumn {
     if (![self.tag isEqualToString:@"Column"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Column."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Column."];
     }
     NSString* columnId = [self attribute:@"id"];
     NSString* field = [self attribute:@"field"];
@@ -146,7 +145,7 @@
 
 - (Row*) asRow {
     if (![self.tag isEqualToString:@"Row"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Row."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Row."];
     }
     Row* row = [[Row alloc] initWithRowId:[self attribute:@"id"] type:[self attribute:@"Type"]];
 
@@ -161,7 +160,7 @@
 
 - (expanz_model_Folder*) asFolder {
     if (![self.tag isEqualToString:@"Folder"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a Folder."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Folder."];
     }
 
     NSString* id = [self attribute:@"id"];
@@ -184,7 +183,7 @@
 
 - (expanz_model_File*) asFile {
     if (![self.tag isEqualToString:@"File"]) {
-        [NSException raise:ExXmlValidationException format:@"Element is not a File."];
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a File."];
     }
 
     NSString* id = [self attribute:@"id"];

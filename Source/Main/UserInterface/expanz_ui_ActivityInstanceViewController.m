@@ -37,9 +37,9 @@
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
 
-- (void) cachePropertyNames; 
+- (void) cachePropertyNames;
 
-- (void) createActivityRequestWith:(NSString*)initialKey; 
+- (void) createActivityRequestWith:(NSString*)initialKey;
 
 - (void) showLoadingHud;
 
@@ -51,7 +51,7 @@
 /* ================================================================================================================== */
 @implementation expanz_ui_ActivityInstanceViewController
 
-@synthesize propertyNames = _propertyNames; 
+@synthesize propertyNames = _propertyNames;
 @synthesize activityDefinition = _activityDefinition;
 @synthesize activityInstance = _activityInstance;
 @synthesize modelAdapter = _modelAdapter;
@@ -99,24 +99,27 @@
 
 /* ================================================================================================================== */
 - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding {
-    [_activityRequest dataPublicationRequestFor:tableView];
+    [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
     LogDebug(@"Requesting populateMethod: %@", populateMethod);
-    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    DataPublicationRequest* publicationRequest =
+        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setPopulateMethod:populateMethod];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {
     LogDebug(@"Requesting query: %@", query);
-    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    DataPublicationRequest* publicationRequest =
+        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setQuery:query];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
-    DataPublicationRequest* publicationRequest = [_activityRequest dataPublicationRequestFor:tableView];
+    DataPublicationRequest* publicationRequest =
+        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
@@ -146,8 +149,11 @@
         if (publicationRequest.dataPublicationId == nil) {
             for (NSString* propertyName in [self propertyNames]) {
                 NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));
-                UITableView* tableView = [_activityRequest tableViewForDataPublicationRequest:publicationRequest];
+
+                UITableView* tableView =
+                    (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];
                 if (object == tableView) {
+                    LogDebug(@"Fuck me dead, it still works!");
                     [publicationRequest setDataPublicationId:propertyName];
                 }
             }
@@ -176,7 +182,7 @@
     for (GridData* dataSet in [_activityInstance dataSets]) {
         for (Row* row in [dataSet rows]) {
             for (ImageGridDataCell* imageCell in [row imageCells]) {
-                imageCell.image = nil;
+                imageCell.imageData = nil;
                 imageCell.hasAskedImageToLoad = NO;
             }
         }

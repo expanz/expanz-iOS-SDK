@@ -14,13 +14,13 @@
 #import "expanz_service_LoginClient.h" 
 #import "StubLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
-#import "expanz_ios_SdkModule.h"
+#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_ActivityClient.h"
 #import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_SessionContext.h"
-#import "expanz_ios_SdkConfiguration.h"
+#import "../../Source/Main/Core/expanz_utils_SdkConfiguration.h"
 
 
 @implementation IntegrationUtils
@@ -37,7 +37,7 @@
 + (void) loginWithDefaultUserIfRequired {
 
     if ([SessionContext globalContext] == nil) {
-        JSObjectionInjector* testInjector = [JSObjection createInjector:[[SdkModule alloc] init]];
+        JSObjectionInjector* testInjector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
 
         id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)];
         SessionRequest* sessionRequest =
@@ -50,7 +50,7 @@
 }
 
 + (ActivityInstance*) aValidActivity {
-    JSObjectionInjector* testInjector = [JSObjection createInjector:[[SdkModule alloc] init]];
+    JSObjectionInjector* testInjector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
     CreateActivityRequest* activityRequest = [[CreateActivityRequest alloc]
         initWithActivityName:@"Sales.Customer" style:[ActivityStyle browseStyle] initialKey:nil
                 sessionToken:[SessionContext globalContext].sessionToken];

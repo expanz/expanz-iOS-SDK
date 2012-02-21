@@ -19,6 +19,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "UIView+ModelAdapter.h"
+#import "expanz_model_AbstractData+DataRenderer.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ModelAdapter (private)

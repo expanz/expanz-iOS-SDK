@@ -17,7 +17,7 @@
 @implementation expanz_model_ImageGridDataCell
 
 @synthesize imageUrl = _imageUrl;
-@synthesize image = _image;
+@synthesize imageData = _imageData;
 @synthesize hasAskedImageToLoad = _hasAskedImageToLoad;
 
 /* ================================================== Initializers ================================================== */
@@ -35,10 +35,10 @@
     self.hasAskedImageToLoad = YES;
     [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
         if (response.status == 200) {
-            self.image = [UIImage imageWithData:[response responseData]];
+            self.imageData = [response responseData];
         }
         else {
-            self.image = nil;
+            self.imageData = nil;
         }
     }];
 }

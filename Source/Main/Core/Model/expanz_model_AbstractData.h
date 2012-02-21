@@ -10,8 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-@class expanz_ui_AbstractDataRenderer;
-
 
 /**
 * Top level container for holding repeating records of information in an `expanz_model_ActivityInstance`. This class
@@ -22,8 +20,6 @@
 @property(nonatomic, strong) NSString* dataId;
 
 - (id) initWithDataId:(NSString*)dataId;
-
-- (expanz_ui_AbstractDataRenderer*) withDataRendererFor:(UITableView*)tableView activityName:(NSString*)activityName;
 
 
 @end

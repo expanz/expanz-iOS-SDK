@@ -104,8 +104,9 @@
 
     ThumbnailTableCell* tableCell = (__bridge ThumbnailTableCell*) context;
     ImageGridDataCell* gridDataCell = (ImageGridDataCell*) object;
-    tableCell.thumbnail.image = gridDataCell.image;
-    [gridDataCell removeObserver:self forKeyPath:@"image"];
+
+    tableCell.thumbnail.image = [UIImage imageWithData:gridDataCell.imageData];
+    [gridDataCell removeObserver:self forKeyPath:@"imageData"];
 }
 
 
@@ -115,7 +116,7 @@
     if ([gridDataCell isKindOfClass:[ImageGridDataCell class]] && cell.thumbnail.image == nil) {
         ImageGridDataCell* imageCell = (ImageGridDataCell*) gridDataCell;
         if (cell.thumbnail.image == nil) {
-            [imageCell addObserver:self forKeyPath:@"image" options:0 context:(__bridge void*) cell];
+            [imageCell addObserver:self forKeyPath:@"imageData" options:0 context:(__bridge void*) cell];
         }
         if (imageCell.hasAskedImageToLoad == NO) {
             [imageCell loadImage];

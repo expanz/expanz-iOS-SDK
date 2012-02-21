@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "expanz_ios_SdkAppDelegate.h"
+#import "../../../Source/Main/UserInterface/expanz_AppDelegate.h"
 
 
 SPEC_BEGIN(SDKAppDelegateSpec)
