@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "../../../Source/Main/Core/Services/SessionData/Payload/RXMLElement+ListAvailableSites+SessionData.h"
+#import "RXMLElement+SessionData.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_ActivityDefinition.h"
 

@@ -11,7 +11,7 @@
 
 
 #import "expanz_SdkConfiguration.h"
-#import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
+#import "RXMLElement.h"
 
 
 @implementation expanz_SdkConfiguration

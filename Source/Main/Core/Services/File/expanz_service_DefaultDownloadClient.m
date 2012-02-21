@@ -14,10 +14,11 @@
 #import "expanz_model_Field.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_service_DefaultDownloadClient.h"
-#import "../Activity/Payload/RXMLElement+ListAvailableSites+ResourceCollection.h"
-#import "../Activity/Payload/RXMLElement+ListAvailableSites+ActivityInstance.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_service_FileDownloadRequest.h"
+#import "RXMLElement.h"
+#import "RXMLElement+ActivityInstance.h"
+#import "RXMLElement+ResourceCollection.h"
 
 
 @implementation expanz_service_DefaultDownloadClient

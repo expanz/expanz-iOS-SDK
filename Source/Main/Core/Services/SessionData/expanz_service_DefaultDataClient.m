@@ -11,8 +11,9 @@
 
 #import "expanz_service_SessionDataClientDelegate.h"
 #import "expanz_service_SessionDataRequest.h"
-#import "Payload/RXMLElement+ListAvailableSites+SessionData.h"
 #import "expanz_service_DefaultDataClient.h"
+#import "RXMLElement.h"
+#import "RXMLElement+SessionData.h"
 
 
 @implementation expanz_service_DefaultDataClient

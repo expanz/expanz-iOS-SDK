@@ -10,9 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "../../../Source/Main/Core/Services/Activity/Payload/RXMLElement+ListAvailableSites+ResourceCollection.h"
+#import "RXMLElement+ResourceCollection.h"
 #import "expanz_model_ResourceCollection.h"
 #import "TestResource.h"
+#import "RXMLElement.h"
 
 
 SPEC_BEGIN(RXMLElement_ResourceCollection)

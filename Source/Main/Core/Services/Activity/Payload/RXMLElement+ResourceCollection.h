@@ -9,17 +9,15 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "RXMLElement+ListAvailableSites.h"
 #import "RXMLElement.h"
 
+@class expanz_model_FileResource;
+@class expanz_model_ResourceCollection;
 
-@class expanz_model_AppSite;
-@class expanz_model_SiteList;
+@interface RXMLElement (ResourceCollection)
 
-@interface RXMLElement (ListAvailableSites)
+- (expanz_model_ResourceCollection*) asResourceCollectionWithTitle:(NSString*)title;
 
-- (expanz_model_SiteList*) asSiteList;
-
-- (expanz_model_AppSite*) asAppSite;
+- (expanz_model_FileResource*) asFileResource;
 
 @end

@@ -9,10 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "../../../Source/Main/Core/Services/AppSite/Payload/RXMLElement+ListAvailableSites.h"
+#import "RXMLElement+ListAvailableSites.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_SiteList.h"
 #import "TestResource.h"
+#import "RXMLElement.h"
 
 SPEC_BEGIN(RXMLElement_ListAvailableSitesSpec)
 

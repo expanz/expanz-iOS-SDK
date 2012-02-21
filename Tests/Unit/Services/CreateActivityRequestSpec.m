@@ -11,7 +11,7 @@
 
 #import "xml_Serializable.h"
 #import "expanz_service_CreateActivityRequest.h"
-#import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
+#import "RXMLElement.h"
 #import "expanz_service_DataPublicationRequest.h"
 #import "NSString+Contains.h"
 

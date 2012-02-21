@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "../../../Source/Main/Core/Services/Login/Payload/RXMLElement+ListAvailableSites+SessionContext.h"
+#import "../../../Source/Main/Core/Services/Login/Payload/RXMLElement+SessionContext.h"
 #import "expanz_model_SessionContext.h"
 
 
