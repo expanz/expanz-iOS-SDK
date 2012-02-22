@@ -19,6 +19,7 @@
 #import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "RXMLElement+ResourceCollection.h"
+#import "expanz_service_SiteClientDelegate.h"
 
 
 @implementation expanz_service_DefaultDownloadClient
