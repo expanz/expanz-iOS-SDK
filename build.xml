@@ -27,8 +27,11 @@
     
     <target name="jenkins" depends="
         build, 
-        fast, install, 
-        fast, release"/>
+        --compile.core-lib,
+        --compile.framework,
+        --install
+        --compile.installer,
+        --prepare.artifacts"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
