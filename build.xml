@@ -37,6 +37,7 @@
 
     <target name="install" depends="
         --clean,
+        --compile.core-lib,
         --compile.framework,
         --install"/>
 
@@ -64,6 +65,12 @@
         </exec>
 
         <delete dir="${target.dir}"/>
+    </target>
+
+    <target name="--compile.core-lib">
+        <exec executable="xcodebuild" failonerror="true">
+            <arg line="-target expanzCore"/>
+        </exec>
     </target>
 
     <target name="--compile.framework">

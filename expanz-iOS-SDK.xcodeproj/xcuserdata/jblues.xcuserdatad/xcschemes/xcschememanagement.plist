@@ -34,15 +34,15 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>expanzCore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>framework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
-		</dict>
-		<key>libExpanz.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>library.xcscheme</key>
 		<dict>
