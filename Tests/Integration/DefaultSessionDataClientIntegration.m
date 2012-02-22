@@ -15,7 +15,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_model_Menu.h"
 #import "expanz_service_DefaultDataClient.h"
-#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
+#import "expanz_UserInterfaceModule.h"
 #import "expanz_model_SessionContext.h"
 
 /* ================================================================================================================== */

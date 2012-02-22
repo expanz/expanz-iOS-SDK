@@ -11,7 +11,7 @@
 
 #import "StubActivityClientDelegate.h"
 #import "IntegrationUtils.h"
-#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
+#import "expanz_UserInterfaceModule.h"
 #import "expanz_service_ActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_model_ActivityInstance.h"
@@ -20,7 +20,7 @@
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_model_SessionContext.h"
-#import "../../Source/Main/Core/expanz_SdkConfiguration.h"
+#import "expanz_SdkConfiguration.h"
 
 SPEC_BEGIN(DefaultActivityClientIntegration)
 

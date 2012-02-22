@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_AppDelegate.h"
-#import "../Core/expanz_UserInterfaceModule.h"
+#import "expanz_UserInterfaceModule.h"
 #import "expanz_ui_LoginViewController.h"
 
 

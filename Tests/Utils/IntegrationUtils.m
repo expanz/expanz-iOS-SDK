@@ -14,7 +14,7 @@
 #import "expanz_service_LoginClient.h" 
 #import "StubLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
-#import "../../Source/Main/Core/expanz_UserInterfaceModule.h"
+#import "expanz_UserInterfaceModule.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_ActivityClient.h"
 #import "StubActivityClientDelegate.h"
