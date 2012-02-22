@@ -40,7 +40,7 @@
 
 - (NSString*) listAvailableSitesUrl;
 
-- (void) setConfigurationFile;
+- (void) setConfigurationFile:(NSString*)fileName;
 
 @end
 /* ================================================================================================================== */

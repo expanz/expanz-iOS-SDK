@@ -68,13 +68,13 @@
     </target>
 
     <target name="--compile.core-lib">
-        <exec executable="xcodebuild" failonerror="true">
+        <exec executable="${xcodebuild}" failonerror="true">
             <arg line="-target expanzCore"/>
         </exec>
     </target>
 
     <target name="--compile.framework">
-        <exec executable="xcodebuild" failonerror="true">
+        <exec executable="${xcodebuild}" failonerror="true">
             <arg line="-target expanz-iOS-SDK"/>
         </exec>
     </target>
@@ -103,7 +103,7 @@
     </target>
 
     <target name="--run.tests">
-        <exec executable="xcodebuild" failonerror="true">
+        <exec executable="${xcodebuild}" failonerror="true">
             <arg line="-sdk iphonesimulator${module.sdk.version} -target ${tests.target.name}"/>
         </exec>
     </target>
