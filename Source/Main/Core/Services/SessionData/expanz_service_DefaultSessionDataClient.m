@@ -11,12 +11,12 @@
 
 #import "expanz_service_SessionDataClientDelegate.h"
 #import "expanz_service_SessionDataRequest.h"
-#import "expanz_service_DefaultDataClient.h"
+#import "expanz_service_DefaultSessionDataClient.h"
 #import "RXMLElement.h"
 #import "RXMLElement+SessionData.h"
 
 
-@implementation expanz_service_DefaultDataClient
+@implementation expanz_service_DefaultSessionDataClient
 
 @synthesize serviceUrl = _serviceUrl;
 

@@ -11,7 +11,7 @@
 
 #import "expanz_SdkConfiguration.h"
 #import "expanz_CoreModule.h"
-#import "expanz_service_DefaultDataClient.h"
+#import "Services/SessionData/expanz_service_DefaultSessionDataClient.h"
 #import "expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_DefaultLoginClient.h"
@@ -40,7 +40,7 @@
     }    toProtocol:@protocol(expanz_service_LoginClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        return [[DefaultDataClient alloc] initWithServiceUrl:config.execXServiceUrl];
+        return [[DefaultSessionDataClient alloc] initWithServiceUrl:config.execXServiceUrl];
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
