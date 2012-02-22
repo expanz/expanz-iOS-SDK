@@ -29,7 +29,7 @@
         build, 
         --compile.core-lib,
         --compile.framework,
-        --install
+        --install,
         --compile.installer,
         --prepare.artifacts"/>
 
