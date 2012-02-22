@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "../expanz_service_AbstractServiceClient.h"
+#import "expanz_service_AbstractServiceClient.h"
 #import "expanz_service_DefaultLoginClient.h"
 #import "expanz_service_LoginClient.h"
 
