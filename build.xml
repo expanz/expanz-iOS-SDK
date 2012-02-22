@@ -24,6 +24,11 @@
         --assemble.coverage.data,
         --coverage.report,
         --api.report"/>
+    
+    <target name="jenkins" depends="
+        build, 
+        fast, install, 
+        fast, release"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
