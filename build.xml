@@ -160,7 +160,7 @@
 
         <pathconvert pathsep=" " property="doc.files.list" refid="headers"/>
 
-        <exec executable="appledoc">
+        <exec executable="/usr/local/bin/appledoc">
             <arg line="--project-name=${module.name}"/>
             <arg line="--project-company=${module.company}"/>
             <arg line="--company-id=${module.company}"/>
