@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "../expanz_service_AbstractServiceClient.h"
+#import "expanz_service_AbstractServiceClient.h"
 #import "expanz_service_FileDownloadClient.h"
 
 @interface expanz_service_DefaultDownloadClient : expanz_service_AbstractServiceClient<expanz_service_FileDownloadClient>
