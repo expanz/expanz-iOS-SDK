@@ -12,8 +12,6 @@
 #import "RXMLElement+ResourceCollection.h"
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
-#import "RXMLElement.h"
-
 
 @implementation RXMLElement (ResourceCollection)
 

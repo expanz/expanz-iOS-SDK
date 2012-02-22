@@ -20,8 +20,7 @@
 #import "expanz_model_DataBuilder.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
-#import "expanz_model_FileResource.h"
-#import "RXMLElement.h"
+
 
 @implementation RXMLElement (ActivityInstance)
 

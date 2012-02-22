@@ -11,11 +11,10 @@
 
 #import "expanz_SdkConfiguration.h"
 #import "expanz_CoreModule.h"
-#import "Services/SessionData/expanz_service_DefaultSessionDataClient.h"
+#import "expanz_service_DefaultSessionDataClient.h"
 #import "expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_service_SessionDataClient.h"
 #import "expanz_service_SiteClient.h"
 #import "expanz_service_DefaultSiteClient.h"
 

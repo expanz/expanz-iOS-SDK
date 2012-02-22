@@ -12,7 +12,6 @@
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_model_GridData.h"
-#import "expanz_model_FileResource.h"
 
 
 @implementation expanz_model_ActivityInstance

@@ -11,10 +11,8 @@
 
 
 #import "expanz_service_DefaultActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_DeltaRequest.h"
-#import "expanz_service_FileRequest.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_service_MethodInvocationRequest.h"
 
