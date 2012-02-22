@@ -88,6 +88,7 @@
     </target>
 
     <target name="--compile.installer">
+        <mkdir dir="${release.dir}"/>
         <exec executable="${packager.path}">
             <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
         </exec>
