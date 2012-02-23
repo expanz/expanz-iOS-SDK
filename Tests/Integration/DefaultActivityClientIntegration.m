@@ -45,7 +45,7 @@ SPEC_BEGIN(DefaultActivityClientIntegration)
                         sessionToken:[SessionContext globalContext].sessionToken];
 
             [activityClient createActivityWith:activityRequest delegate:delegate];
-            assertWillHappen(delegate.activityInstance != nil);
+            [[expectFutureValue(delegate.activityInstance) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
         });
 
 
@@ -63,7 +63,7 @@ SPEC_BEGIN(DefaultActivityClientIntegration)
             LogDebug(@"%@", [deltaRequest toXml]);
             [activityClient sendDeltaWith:deltaRequest delegate:delegate];
 
-            assertWillHappen(delegate.activityInstance != nil);
+            [[expectFutureValue(delegate.activityInstance) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
             LogDebug(@"%@", delegate.activityInstance);
         });
     });
@@ -76,7 +76,7 @@ SPEC_BEGIN(DefaultActivityClientIntegration)
                 [[MethodInvocationRequest alloc] initWithActivityInstance:activityInstance methodName:@"Add"];
             [activityClient sendMethodInvocationWith:methodRequest delegate:delegate];
 
-            assertWillHappen(delegate.activityInstance != nil);
+            [[expectFutureValue(delegate.activityInstance) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
             LogDebug("%@", delegate.activityInstance);
         });
     });

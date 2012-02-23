@@ -20,6 +20,7 @@
     <target name="build" depends="
         --clean,
         --make.dirs,
+        --compile.core-lib,
         --run.tests,
         --assemble.coverage.data,
         --coverage.report,
@@ -45,7 +46,6 @@
 
     <target name="install" depends="
         --clean,
-        --compile.core-lib,
         --compile.framework,
         --install"/>
 
@@ -76,6 +76,8 @@
     </target>
 
     <target name="--compile.core-lib">
+        <echo message="This target ensures a correct layered architecture, with Core having no dependencies on UIKit"/>
+        <echo message="or user interface"/>
         <exec executable="${xcodebuild}" failonerror="true">
             <arg line="-target expanzCore"/>
         </exec>
@@ -167,6 +169,8 @@
     </target>
 
     <target name="--api.report">
+        <property name="docs.dir" value="${user.home}/Library/Developer/Shared/Documentation/Docsets"/>
+        <mkdir dir="${docs.dir}"/>
         <mkdir dir="${reports.dir}/api"/>
         <mkdir dir="${user.home}/Library/Developer/Shared"/>
         <mkdir dir="${user.home}/Library/Developer/Shared/Documentation"/>
@@ -196,11 +200,11 @@
     </target>
 
     <target name="--install">
-        <delete dir="/Developer/expanz/Frameworks/expanziOS.framework"/>
-        <mkdir dir="/Developer/expanz/Frameworks/expanziOS.framework"/>
-        <copy todir="/Developer/expanz/Frameworks/expanziOS.framework">
+        <echo message="TODO: Install in an Xcode 4.3 compatible location"/>
+
+        <!-- copy todir="/Developer/expanz/Frameworks/expanziOS.framework">
             <fileset dir="${target.dir}/Release-iphoneuniversal/expanziOS.framework"/>
-        </copy>
+        </copy -->
     </target>
 
 

@@ -47,8 +47,7 @@ SPEC_BEGIN(DefaultSiteClientIntegration)
     it(@"should return a list of available sites", ^{
         TestSiteClientIntegrationDelegate* delegate = [[TestSiteClientIntegrationDelegate alloc] init];
         [siteClient listAvailableSitesWith:delegate];
-        assertWillHappen(delegate.siteList != nil);
-
+        [[expectFutureValue(delegate.siteList) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
         LogDebug(@"Site List: %@", delegate.siteList);
 
     });

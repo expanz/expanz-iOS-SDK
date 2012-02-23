@@ -26,11 +26,10 @@
 
 
 @implementation expanz_service_DefaultSiteClient
-
 @synthesize serviceUrl = _serviceUrl;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithServiceUrl:(NSURL*)serviceUrl {
+- (id) initWithServiceUrl:(NSString*)serviceUrl {
     self = [super init];
     if (self) {
         _serviceUrl = serviceUrl;

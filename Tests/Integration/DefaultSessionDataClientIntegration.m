@@ -14,7 +14,7 @@
 #import "IntegrationUtils.h"
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_model_Menu.h"
-#import "../../Source/Main/Core/Services/SessionData/expanz_service_DefaultSessionDataClient.h"
+#import "expanz_service_DefaultSessionDataClient.h"
 #import "expanz_UserInterfaceModule.h"
 #import "expanz_model_SessionContext.h"
 
@@ -66,7 +66,7 @@ describe(@"Retrieve session data using an access token", ^{
         LogDebug(@"Here's the sessionToken: %@", sessionToken);
         SessionDataRequest* request = [[SessionDataRequest alloc] initWithSessionToken:sessionToken]; 
         [sessionDataClient retrieveSessionDataWith:request delegate:delegate];
-        assertWillHappen(delegate.menu != nil); 
+        [[expectFutureValue(delegate.menu) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
         LogDebug("Request finished with: %@", delegate.menu);        
     });
 

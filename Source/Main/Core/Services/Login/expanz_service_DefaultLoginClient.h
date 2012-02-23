@@ -13,6 +13,7 @@
 #import "expanz_service_AbstractServiceClient.h"
 #import "expanz_service_DefaultLoginClient.h"
 #import "expanz_service_LoginClient.h"
+#import "expanz_service_SessionRequest.h"
 
 
 @interface expanz_service_DefaultLoginClient : AbstractServiceClient<expanz_service_LoginClient>
@@ -20,6 +21,8 @@
 @property (nonatomic, strong, readonly) NSString* serviceUrl;
 
 - (id) initWithServiceUrl:(NSString*)serviceUrl;
+
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate;
 
 
 @end

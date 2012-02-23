@@ -39,7 +39,7 @@ describe(@"Authenticating with the site manager.", ^{
                                                                           appSite:@"SALES" userType:@"Primpary"];
             
         [loginClient createSessionWith:sessionRequest delegate:loginDelegate];
-        assertWillHappen(loginDelegate.sessionContext.sessionToken != nil);
+        [[expectFutureValue(loginDelegate.sessionContext) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
     });
     
 
