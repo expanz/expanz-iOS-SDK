@@ -145,6 +145,7 @@
 		6B4EA62314CD4C2300E5B2D8 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
 		6B4EA62714CD4C2300E5B2D8 /* (null) in Copy Headers */ = {isa = PBXBuildFile; };
 		6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
+		6B56F56314F5F1C90045DB1A /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B56F56214F5F1C90045DB1A /* libprofile_rt.dylib */; };
 		6B62F2D914E8F07F00B9EEA0 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B6D276414F5D0DB00CC6E61 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D276314F5D0DB00CC6E61 /* libprofile_rt.dylib */; };
@@ -748,6 +749,7 @@
 		6B1F2A7B14D24204000E45FD /* ExpanzIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExpanzIcon.png; sourceTree = "<group>"; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		6B56F56214F5F1C90045DB1A /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6B6B65251432A07B00B584C1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6B6D276314F5D0DB00CC6E61 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Kiwi-iOS.framework"; path = "Dependencies/Frameworks/Kiwi-iOS.framework"; sourceTree = "<group>"; };
@@ -1100,6 +1102,7 @@
 				6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */,
 				6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */,
 				6B6D276414F5D0DB00CC6E61 /* libprofile_rt.dylib in Frameworks */,
+				6B56F56314F5F1C90045DB1A /* libprofile_rt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,6 +1153,7 @@
 		6B1E5E8614734404004145D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B56F56214F5F1C90045DB1A /* libprofile_rt.dylib */,
 				6B6E85A014EFF58400FA4B5D /* libxml2.dylib */,
 				6B6D276314F5D0DB00CC6E61 /* libprofile_rt.dylib */,
 				6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */,
@@ -2857,9 +2861,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-					"\"$(SRCROOT)/../../MacProjects/llvm/Release+Asserts/lib\"",
-					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/usr/lib\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
 				);
 				OTHER_LDFLAGS = (
@@ -2890,9 +2891,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-					"\"$(SRCROOT)/../../MacProjects/llvm/Release+Asserts/lib\"",
-					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/usr/lib\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
 				);
 				OTHER_LDFLAGS = (
