@@ -21,6 +21,8 @@
 
 - (NSArray*) sites;
 
+- (expanz_model_AppSite*) preferredSite;
+
 - (void) addSite:(expanz_model_AppSite*)site; 
 
 
