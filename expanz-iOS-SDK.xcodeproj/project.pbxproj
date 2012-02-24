@@ -145,7 +145,6 @@
 		6B4EA62314CD4C2300E5B2D8 /* RTUnregisteredClass.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
 		6B4EA62714CD4C2300E5B2D8 /* (null) in Copy Headers */ = {isa = PBXBuildFile; };
 		6B4EA62B14CD4C2300E5B2D8 /* Reachability.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
-		6B56F56514F6026B0045DB1A /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B56F56414F6026B0045DB1A /* libprofile_rt.dylib */; };
 		6B62F2D914E8F07F00B9EEA0 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */; };
@@ -1099,7 +1098,6 @@
 				6B1F20E514EFDDE9009651FB /* UIKit.framework in Frameworks */,
 				6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */,
 				6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */,
-				6B56F56514F6026B0045DB1A /* libprofile_rt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
