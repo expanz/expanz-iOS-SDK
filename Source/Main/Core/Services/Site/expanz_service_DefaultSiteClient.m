@@ -15,6 +15,7 @@
 #import "expanz_service_SiteClientDelegate.h"
 #import "expanz_service_DefaultSiteClient.h"
 #import "expanz_model_SiteList.h"
+#import "expanz_model_ActivityList.h"
 
 
 @interface expanz_service_DefaultSiteClient (private)
@@ -26,13 +27,18 @@
 
 
 @implementation expanz_service_DefaultSiteClient
-@synthesize serviceUrl = _serviceUrl;
+
+@synthesize listAvailableSitesUrl = _listAvailableSitesUrl;
+@synthesize listActivitiesForSiteUrl = _listActivitiesForSiteUrl;
+
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithServiceUrl:(NSString*)serviceUrl {
+- (id) initWithListAvailableSitesUrl:(NSString*)listAvailableSitesUrl
+            listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl {
     self = [super init];
     if (self) {
-        _serviceUrl = serviceUrl;
+        _listAvailableSitesUrl = listAvailableSitesUrl;
+        _listActivitiesForSiteUrl = listActivitiesForSiteUrl;
     }
     return self;
 }
@@ -40,7 +46,7 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) listAvailableSitesWith:(id<expanz_service_SiteClientDelegate>)delegate {
 
-    [self.httpTransport get:self.serviceUrl withBlock:^(LRRestyResponse* response) {
+    [self.httpTransport get:self.listAvailableSitesUrl withBlock:^(LRRestyResponse* response) {
 
         if (response.status == 200) {
             LogDebug(@"Response: %@, ", [response asString]);
@@ -50,13 +56,27 @@
             [delegate requestDidFinishWithSiteList:siteList];
         }
         else {
-            LogDebug(@"Oh fuck!!!!!!!!!");
-            NSString* domain = NSStringFromClass([self class]);
-            NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-            NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-            [delegate requestDidFailWithError:error];
+            [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
         }
     }];
+}
+
+- (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteClientDelegate>)delegate {
+    NSDictionary* parameters = [NSDictionary dictionaryWithObject:site forKey:@"site"];
+    [self.httpTransport get:self.listActivitiesForSiteUrl parameters:parameters withBlock:^(LRRestyResponse* response) {
+
+        if (response.status == 200) {
+            LogDebug(@"Response: %@", [response asString]);
+            ActivityList* activityList = [[ActivityList alloc]  init];
+            activityList.response = [response asString];
+            [delegate requestDidFinishWithActivityList:activityList];
+        }
+        else {
+            [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+        }
+
+    }];
+
 }
 
 

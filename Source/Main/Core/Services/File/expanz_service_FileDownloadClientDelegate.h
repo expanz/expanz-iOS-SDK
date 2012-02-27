@@ -9,12 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "expanz_service_AbstractServiceClientDelegate.h"
+
 @class expanz_model_ResourceCollection;
 
-@protocol expanz_service_FileDownloadClientDelegate
+@protocol expanz_service_FileDownloadClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
 - (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection;
 - (void) requestDidFinishWithData:(NSData*)data;
-- (void) requestDidFailWithError:(NSError*)error;
 
 @end

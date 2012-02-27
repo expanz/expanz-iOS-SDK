@@ -89,6 +89,10 @@ static SdkConfiguration* _globalConfiguration;
     return [NSString stringWithFormat:@"%@/ListAvailableSitesX", _baseUrl];
 }
 
+- (NSString*) listActivitiesForSiteUrl {
+    return [NSString stringWithFormat:@"%@/ListActivitiesForSiteX", _baseUrl];
+}
+
 /**
 * Allows setting through user defined runtime attributes, in Interface Builder.
 */

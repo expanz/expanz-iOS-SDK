@@ -10,18 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_SiteClientDelegate.h"
-
-@class expanz_model_ActivityInstance;
-@class expanz_service_CreateActivityRequest;
-@class expanz_service_DeltaRequest;
-@class expanz_service_MethodInvocationRequest;
-@class expanz_service_FileRequest;
-
-@protocol expanz_service_SiteClient<NSObject>
-
-- (void) listAvailableSitesWith:(id<expanz_service_SiteClientDelegate>)delegate;
 
 
+@interface expanz_model_ActivityList : NSObject
+
+@property(nonatomic, strong) NSString* response;
 
 @end
+/* ================================================================================================================== */
+@compatibility_alias ActivityList expanz_model_ActivityList;

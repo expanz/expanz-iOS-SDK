@@ -8,11 +8,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "expanz_service_AbstractServiceClientDelegate.h"
+
 @class expanz_model_ActivityInstance;
 
-@protocol expanz_service_ActivityClientDelegate<NSObject>
+@protocol expanz_service_ActivityClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
 - (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance;
-- (void) requestDidFailWithError:(NSError*)error;
 
 @end

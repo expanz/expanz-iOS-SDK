@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_AbstractServiceClient.h"
+#import "expanz_service_AbstractServiceClientDelegate.h"
 
 @implementation expanz_service_AbstractServiceClient
 
@@ -25,9 +26,15 @@
     return self;
 }
 
-
 - (NSDictionary*) requestHeaders {
     return [NSDictionary dictionaryWithObject:@"text/xml" forKey:@"Content-Type"];
+}
+
+- (void) dispatchErrorWith:(id<expanz_service_AbstractServiceClientDelegate>)delegate statusCode:(NSInteger)statusCode
+                  userInfo:(NSString*)userInfo {
+
+    [delegate requestDidFailWithError:[NSError errorWithDomain:NSStringFromClass([self class]) code:statusCode
+                                         userInfo:[NSDictionary dictionaryWithObject:userInfo forKey:@"response"]]];
 }
 
 

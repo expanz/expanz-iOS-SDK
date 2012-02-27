@@ -19,7 +19,6 @@
 #import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "RXMLElement+ResourceCollection.h"
-#import "expanz_service_SiteClientDelegate.h"
 
 
 @implementation expanz_service_DefaultDownloadClient
@@ -61,11 +60,7 @@
 
                        }
                        else {
-                           NSString* domain = NSStringFromClass([self class]);
-                           NSDictionary
-                               * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-                           NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-                           [delegate requestDidFailWithError:error];
+                           [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
                        }
                    }];
 }
@@ -84,12 +79,7 @@
 
                        }
                        else {
-                           NSString* domain = NSStringFromClass([self class]);
-                           NSDictionary
-                               * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-                           NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-                           LogDebug(@"Error: %@", error);
-                           [delegate requestDidFailWithError:error];
+                           [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
                        }
                    }];
 }

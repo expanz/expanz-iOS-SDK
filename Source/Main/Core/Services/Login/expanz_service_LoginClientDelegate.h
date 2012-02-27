@@ -9,11 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import "expanz_service_AbstractServiceClientDelegate.h"
+
 @class expanz_model_SessionContext;
 
-@protocol expanz_service_LoginClientDelegate<NSObject>
+@protocol expanz_service_LoginClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
 - (void) requestDidFinishWithSessionContext:(expanz_model_SessionContext*)sessionContext;
-- (void) requestDidFailWithError:(NSError*)error;
 
 @end

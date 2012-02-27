@@ -40,6 +40,8 @@
 
 - (NSString*) listAvailableSitesUrl;
 
+- (NSString*) listActivitiesForSiteUrl;
+
 - (void) setConfigurationFile:(NSString*)fileName;
 
 @end

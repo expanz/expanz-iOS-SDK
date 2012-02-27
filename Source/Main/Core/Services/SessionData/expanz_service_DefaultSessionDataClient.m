@@ -42,10 +42,7 @@
             [delegate requestDidFinishWithMenu:[[element child:@"ExecXResult.ESA.Menu"] asMenu]];
         }
         else {
-            NSString* domain = NSStringFromClass([self class]);
-            NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-            NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-            [delegate requestDidFailWithError:error];
+            [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
         }
     }];
 }

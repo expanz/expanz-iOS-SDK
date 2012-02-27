@@ -15,9 +15,11 @@
 
 @interface expanz_service_DefaultSiteClient : AbstractServiceClient<expanz_service_SiteClient>
 
-@property(nonatomic, strong, readonly) NSString* serviceUrl;
+@property(nonatomic, strong, readonly) NSString* listAvailableSitesUrl;
+@property(nonatomic, strong, readonly) NSString* listActivitiesForSiteUrl;
 
-- (id) initWithServiceUrl:(NSString*)serviceUrl;
+- (id) initWithListAvailableSitesUrl:(NSString*)listAvailableSitesUrl
+            listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl;
 
 
 @end

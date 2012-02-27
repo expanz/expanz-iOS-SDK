@@ -43,7 +43,8 @@
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        return [[DefaultSiteClient alloc] initWithServiceUrl:config.listAvailableSitesUrl];
+        return [[DefaultSiteClient alloc] initWithListAvailableSitesUrl:config.listAvailableSitesUrl
+                                               listActivitiesForSiteUrl:config.listActivitiesForSiteUrl];
     }    toProtocol:@protocol(expanz_service_SiteClient)];
 
 }

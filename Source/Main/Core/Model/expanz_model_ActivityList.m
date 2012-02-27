@@ -8,13 +8,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "expanz_model_ActivityList.h"
 
-#import "expanz_service_AbstractServiceClientDelegate.h"
 
-@class expanz_model_Menu;
+@implementation expanz_model_ActivityList
 
-@protocol expanz_service_SessionDataClientDelegate<expanz_service_AbstractServiceClientDelegate>
+@synthesize response = _response;
 
-- (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu;
 
 @end

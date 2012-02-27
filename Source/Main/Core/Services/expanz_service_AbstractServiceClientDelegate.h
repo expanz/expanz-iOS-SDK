@@ -8,12 +8,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-@class expanz_model_ActivityInstance;
-@class expanz_model_SiteList;
 
-@protocol expanz_service_SiteClientDelegate<NSObject>
+@protocol expanz_service_AbstractServiceClientDelegate<NSObject>
 
-- (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList;
 - (void) requestDidFailWithError:(NSError*)error;
 
 @end

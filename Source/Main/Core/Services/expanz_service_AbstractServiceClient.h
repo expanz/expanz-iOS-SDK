@@ -15,6 +15,7 @@
 
 @class expanz_SdkConfiguration;
 @protocol expanz_ui_SystemEventReporter;
+@protocol expanz_service_AbstractServiceClientDelegate;
 
 
 /**
@@ -25,6 +26,9 @@
 @property(nonatomic, strong) LRRestyClient* httpTransport;
 
 - (NSDictionary*) requestHeaders;
+
+- (void) dispatchErrorWith:(id<expanz_service_AbstractServiceClientDelegate>)delegate statusCode:(NSInteger)statusCode
+                  userInfo:(NSString*)userInfo;
 
 @end
 

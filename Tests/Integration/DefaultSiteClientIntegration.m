@@ -16,41 +16,57 @@
 #import "JSObjection.h"
 #import "expanz_CoreModule.h"
 #import "IntegrationUtils.h"
+#import "expanz_model_ActivityList.h"
 
 /* ================================================================================================================== */
 @interface TestSiteClientIntegrationDelegate : NSObject<expanz_service_SiteClientDelegate>
 @property(nonatomic, strong) SiteList* siteList;
+@property(nonatomic, strong) ActivityList* activityList;
 @end
 
 @implementation TestSiteClientIntegrationDelegate
 @synthesize siteList = _siteList;
+@synthesize activityList = _activityList;
+
 
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
     _siteList = siteList;
 }
+
+- (void) requestDidFinishWithActivityList:(expanz_model_ActivityList*)activityList {
+    _activityList = activityList;
+}
+
 
 @end
 /* ================================================================================================================== */
 
 SPEC_BEGIN(DefaultSiteClientIntegration)
 
-    
+
     __block id<expanz_service_SiteClient> siteClient;
-    
-    beforeAll(^{
+    __block TestSiteClientIntegrationDelegate* delegate;
+
+    beforeEach(^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
-        JSObjectionInjector* injector = [JSObjection createInjector:[[CoreModule alloc] init]]; 
+        JSObjectionInjector* injector = [JSObjection createInjector:[[CoreModule alloc] init]];
         siteClient = [injector getObject:@protocol(expanz_service_SiteClient)];
+        delegate = [[TestSiteClientIntegrationDelegate alloc] init];
     });
-    
-    
+
+
     it(@"should return a list of available sites", ^{
-        TestSiteClientIntegrationDelegate* delegate = [[TestSiteClientIntegrationDelegate alloc] init];
         [siteClient listAvailableSitesWith:delegate];
         [[expectFutureValue(delegate.siteList) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
         LogDebug(@"Site List: %@", delegate.siteList);
+    });
+
+    it(@"should return a list of available activities for a site. ", ^{
+        [siteClient listActivitiesForSite:@"SALES" with:delegate];
+        [[expectFutureValue(delegate.activityList) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
+        LogDebug(@"Activity List: %@", delegate.activityList.response);
 
     });
 
 
-SPEC_END
+    SPEC_END
