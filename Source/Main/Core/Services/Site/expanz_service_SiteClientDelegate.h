@@ -12,12 +12,12 @@
 
 @class expanz_model_ActivityInstance;
 @class expanz_model_SiteList;
-@class expanz_model_ActivityList;
+@class expanz_model_ActivityDefinitionList;
 
 @protocol expanz_service_SiteClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList;
 
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityList*)activityList;
+- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList;
 
 @end

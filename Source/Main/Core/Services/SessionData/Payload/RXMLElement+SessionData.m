@@ -63,7 +63,7 @@
 - (ActivityDefinition*) asActivityDefinition {
     ActivityStyle* style = [ActivityStyle fromString: [self attribute:@"style"] ];
     return [[ActivityDefinition alloc]
-        initWithName:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
+        initWithActivityId:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
 }
 
 - (UserRole*) asUserRole {

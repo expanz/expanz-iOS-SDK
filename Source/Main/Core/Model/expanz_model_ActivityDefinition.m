@@ -13,16 +13,16 @@
 
 @implementation expanz_model_ActivityDefinition
 
-@synthesize name = _name;
+@synthesize activityId = _activityId;
 @synthesize title = _title;
 @synthesize style = _style;
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithName:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style {
+- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style {
     self = [self init];
     if (self) {
-        _name = [name copy];
+        _activityId = [name copy];
         _title = [title copy];
         _style = style;
     }
@@ -31,7 +31,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Activity name=%@, title=%@", _name, _title];
+    return [NSString stringWithFormat:@"Activity id=%@, title=%@", _activityId, _title];
 }
 
 @end

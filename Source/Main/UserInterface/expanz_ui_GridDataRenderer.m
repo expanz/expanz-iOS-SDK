@@ -88,7 +88,7 @@
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
 
     ActivityDefinition* edit =
-        [[ActivityDefinition alloc] initWithName:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
+        [[ActivityDefinition alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
     if ([self.activityManager showActivityWithDefinition:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }

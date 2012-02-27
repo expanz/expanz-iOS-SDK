@@ -31,7 +31,7 @@ SPEC_BEGIN(ActivityManagerSpec)
         it(@"should transition to the activity according to activity definition", ^{
 
             ActivityDefinition* definition = [[ActivityDefinition alloc]
-                initWithName:@"TestFixture" title:@"TestFixture" style:[ActivityStyle defaultStyle]];
+                initWithActivityId:@"TestFixture" title:@"TestFixture" style:[ActivityStyle defaultStyle]];
 
             [activityManager showActivityWithDefinition:definition];
         });
@@ -39,7 +39,7 @@ SPEC_BEGIN(ActivityManagerSpec)
         it(@"should report an error if the activity requires a controller that doesn't exist", ^{
 
             ActivityDefinition* definition = [[ActivityDefinition alloc]
-                initWithName:@"My.Fun.Documents" title:@"My Fun Documents" style:[ActivityStyle browseStyle]];
+                initWithActivityId:@"My.Fun.Documents" title:@"My Fun Documents" style:[ActivityStyle browseStyle]];
 
             [activityManager showActivityWithDefinition:definition];
             [[reporter.message should] equal:@"No controller exists named My_Fun_Documents_Browse_ViewController"];

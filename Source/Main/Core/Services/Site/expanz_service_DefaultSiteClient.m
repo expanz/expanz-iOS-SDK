@@ -15,7 +15,8 @@
 #import "expanz_service_SiteClientDelegate.h"
 #import "expanz_service_DefaultSiteClient.h"
 #import "expanz_model_SiteList.h"
-#import "expanz_model_ActivityList.h"
+#import "expanz_model_ActivityDefinitionList.h"
+#import "RXMLElement+ListActivitiesForSite.h"
 
 
 @interface expanz_service_DefaultSiteClient (private)
@@ -67,8 +68,8 @@
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
-            ActivityList* activityList = [[ActivityList alloc]  init];
-            activityList.response = [response asString];
+            ActivityDefinitionList* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
+                child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
             [delegate requestDidFinishWithActivityList:activityList];
         }
         else {

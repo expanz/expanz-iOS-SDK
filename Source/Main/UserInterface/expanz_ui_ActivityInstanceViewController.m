@@ -279,7 +279,7 @@
 
 - (void) createActivityRequestWith:(NSString*)initialKey {
     _activityRequest = [[CreateActivityRequest alloc]
-        initWithActivityName:_activityDefinition.name style:_activityDefinition.style initialKey:initialKey
+        initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey
                 sessionToken:[SessionContext globalContext].sessionToken];
 }
 

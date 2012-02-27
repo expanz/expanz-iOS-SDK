@@ -10,12 +10,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import "expanz_model_ActivityDefinition.h"
 
+@interface expanz_model_ActivityDefinitionList : NSObject {
 
-@interface expanz_model_ActivityList : NSObject
+@private
+    NSMutableArray* _activities;
+}
 
-@property(nonatomic, strong) NSString* response;
+@property(nonatomic, strong, readonly) NSArray* activities;
+
+- (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias ActivityList expanz_model_ActivityList;
+@compatibility_alias ActivityDefinitionList expanz_model_ActivityDefinitionList;

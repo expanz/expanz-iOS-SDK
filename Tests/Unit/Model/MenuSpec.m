@@ -61,9 +61,9 @@ SPEC_BEGIN(MenuSpec)
             ProcessArea* processArea1 = [[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"];
 
             ActivityDefinition* activity1 = [[ActivityDefinition alloc]
-                initWithName:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
+                initWithActivityId:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
             ActivityDefinition* activity2 = [[ActivityDefinition alloc]
-                initWithName:@"Invoices" title:@"Invoices" style:[ActivityStyle defaultStyle]];
+                initWithActivityId:@"Invoices" title:@"Invoices" style:[ActivityStyle defaultStyle]];
 
             [processArea1 addActivityDefinition:activity1];
             [processArea1 addActivityDefinition:activity2];
@@ -72,9 +72,9 @@ SPEC_BEGIN(MenuSpec)
             ProcessArea* processArea2 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
 
             ActivityDefinition* activity3 = [[ActivityDefinition alloc]
-                initWithName:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
+                initWithActivityId:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
             ActivityDefinition* activity4 = [[ActivityDefinition alloc]
-                initWithName:@"Engagements" title:@"Engagements" style:[ActivityStyle defaultStyle]];
+                initWithActivityId:@"Engagements" title:@"Engagements" style:[ActivityStyle defaultStyle]];
 
             [processArea2 addActivityDefinition:activity3];
             [processArea2 addActivityDefinition:activity4];

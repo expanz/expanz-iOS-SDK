@@ -40,7 +40,7 @@
 
 - (ActivityDefinition*) activityWithName:(NSString*)activityName {
     for (ActivityDefinition* activity in _activities) {
-        if ([activity.name isEqualToString:activityName]) {
+        if ([activity.activityId isEqualToString:activityName]) {
             return activity;
         }
     }

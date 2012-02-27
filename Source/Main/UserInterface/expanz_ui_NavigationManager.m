@@ -104,10 +104,10 @@ objection_requires(@"reporter")
 - (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition {
     NSString* nibName;
     if ([activityDefinition.style isDefault]) {
-        nibName = activityDefinition.name;
+        nibName = activityDefinition.activityId;
     }
     else {
-        nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.name, activityDefinition.style.name];
+        nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.activityId, activityDefinition.style.name];
     }
     LogDebug(@"Nib name: %@", nibName);
     return nibName;
@@ -115,7 +115,7 @@ objection_requires(@"reporter")
 
 - (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition {
     NSMutableString* controllerClassName = [NSMutableString
-        stringWithString:[activityDefinition.name stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
+        stringWithString:[activityDefinition.activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
     if (![activityDefinition.style isDefault]) {
         [controllerClassName appendString:[NSString stringWithFormat:@"_%@", activityDefinition.style.name]];
     }

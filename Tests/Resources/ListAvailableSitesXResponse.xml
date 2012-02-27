@@ -1,0 +1,14 @@
+<ListActivitiesForSiteXResponse xmlns="http://www.expanz.com/ESAService">
+    <ListActivitiesForSiteXResult>
+        <ESA xmlns="">
+            <Activities>
+                <Activity id="Sales.SalesOrder" name="Sales Order"/>
+                <Activity id="Sales.Customer" name="Customers"/>
+                <Activity id="Sales.ItemForSale" name="Items"/>
+                <Activity id="MySample.MyCalculator" name="Calculator"/>
+                <Activity id="MySample.MyAdvancedCalculator" name="Advanced Calculator"/>
+            </Activities>
+        </ESA>
+    </ListActivitiesForSiteXResult>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ListActivitiesForSiteXResponse>

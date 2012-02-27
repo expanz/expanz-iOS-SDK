@@ -132,7 +132,7 @@
 - (BOOL)isEqual: (id)other
 {
     return [other isKindOfClass: [RTProperty class]] &&
-           [[self name] isEqual: [other name]] &&
+           [[self name] isEqual: [other activityId]] &&
            ([self attributeEncodings] ? [[self attributeEncodings] isEqual: [other attributeEncodings]] : ![other attributeEncodings]) &&
            [[self typeEncoding] isEqual: [other typeEncoding]] &&
            ([self ivarName] ? [[self ivarName] isEqual: [other ivarName]] : ![other ivarName]);

@@ -8,12 +8,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "expanz_model_ActivityList.h"
+#import <Foundation/Foundation.h>
+#import "RXMLElement.h"
 
+@class expanz_model_ActivityDefinitionList;
 
-@implementation expanz_model_ActivityList
+@interface RXMLElement (ListActivitiesForSite)
 
-@synthesize response = _response;
-
+- (expanz_model_ActivityDefinitionList*) asActivityDefinitionList;
 
 @end

@@ -16,12 +16,12 @@
 #import "JSObjection.h"
 #import "expanz_CoreModule.h"
 #import "IntegrationUtils.h"
-#import "expanz_model_ActivityList.h"
+#import "expanz_model_ActivityDefinitionList.h"
 
 /* ================================================================================================================== */
 @interface TestSiteClientIntegrationDelegate : NSObject<expanz_service_SiteClientDelegate>
 @property(nonatomic, strong) SiteList* siteList;
-@property(nonatomic, strong) ActivityList* activityList;
+@property(nonatomic, strong) ActivityDefinitionList* activityList;
 @end
 
 @implementation TestSiteClientIntegrationDelegate
@@ -33,7 +33,7 @@
     _siteList = siteList;
 }
 
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityList*)activityList {
+- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
     _activityList = activityList;
 }
 
@@ -64,7 +64,7 @@ SPEC_BEGIN(DefaultSiteClientIntegration)
     it(@"should return a list of available activities for a site. ", ^{
         [siteClient listActivitiesForSite:@"SALES" with:delegate];
         [[expectFutureValue(delegate.activityList) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
-        LogDebug(@"Activity List: %@", delegate.activityList.response);
+        LogDebug(@"Activity List: %@", delegate.activityList);
 
     });
 

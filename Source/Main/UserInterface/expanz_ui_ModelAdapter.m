@@ -50,7 +50,7 @@
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
-        _activityName = [viewController.activityDefinition.name copy];
+        _activityName = [viewController.activityDefinition.activityId copy];
         _activityInstance = viewController.activityInstance;
         _controller = viewController;
         _propertyNames = viewController.propertyNames;

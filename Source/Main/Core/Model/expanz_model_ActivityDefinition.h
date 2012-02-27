@@ -14,11 +14,11 @@
 
 @interface expanz_model_ActivityDefinition : NSObject
 
-@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* activityId;
 @property(nonatomic, strong, readonly) NSString* title;
 @property(nonatomic, strong, readonly) ActivityStyle* style;
 
-- (id) initWithName:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
+- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
 
 @end
 

@@ -17,9 +17,9 @@ SPEC_BEGIN(ActivitySpec)
 describe(@"Object instanciation", ^{
         
     it(@"should allow initialization with name and title.", ^{
-        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithName:@"Calculator" 
+        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithActivityId:@"CALC"
                                     title:@"Calculator Application" style:[ActivityStyle defaultStyle]];
-        [[[activity name] should] equal:@"Calculator"];
+        [[[activity activityId] should] equal:@"CALC"];
         [[[activity title] should] equal:@"Calculator Application"];
         [[activity description] shouldNotBeNil];
     });    
