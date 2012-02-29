@@ -12,7 +12,7 @@
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 
 
 SPEC_BEGIN(MenuSpec)
@@ -60,9 +60,9 @@ SPEC_BEGIN(MenuSpec)
         it(@"should allow returning the activities for all process areas as a single sorted collection", ^{
             ProcessArea* processArea1 = [[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"];
 
-            ActivityDefinition* activity1 = [[ActivityDefinition alloc]
+            ActivityMenuItem* activity1 = [[ActivityMenuItem alloc]
                 initWithActivityId:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
-            ActivityDefinition* activity2 = [[ActivityDefinition alloc]
+            ActivityMenuItem* activity2 = [[ActivityMenuItem alloc]
                 initWithActivityId:@"Invoices" title:@"Invoices" style:[ActivityStyle defaultStyle]];
 
             [processArea1 addActivityDefinition:activity1];
@@ -71,9 +71,9 @@ SPEC_BEGIN(MenuSpec)
 
             ProcessArea* processArea2 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
 
-            ActivityDefinition* activity3 = [[ActivityDefinition alloc]
+            ActivityMenuItem* activity3 = [[ActivityMenuItem alloc]
                 initWithActivityId:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
-            ActivityDefinition* activity4 = [[ActivityDefinition alloc]
+            ActivityMenuItem* activity4 = [[ActivityMenuItem alloc]
                 initWithActivityId:@"Engagements" title:@"Engagements" style:[ActivityStyle defaultStyle]];
 
             [processArea2 addActivityDefinition:activity3];

@@ -14,7 +14,7 @@
 #import "Objection.h"
 #import "expanz_ui_SystemEventReporter.h"
 
-@class expanz_model_ActivityDefinition;
+@class expanz_model_ActivityMenuItem;
 
 /**
 * Responsible for navigating between activity views.
@@ -29,9 +29,9 @@
 
 - (BOOL) showMainMenu;
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition;
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
                                  initialKey:(NSString*)initialKey;
 
 - (BOOL)showDocument:(NSString*)documentId;

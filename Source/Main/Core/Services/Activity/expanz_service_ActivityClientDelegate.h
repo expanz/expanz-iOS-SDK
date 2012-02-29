@@ -14,6 +14,8 @@
 
 @protocol expanz_service_ActivityClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
+@optional
+
 - (void) requestDidFinishWithActivityInstance:(expanz_model_ActivityInstance*)activityInstance;
 
 @end

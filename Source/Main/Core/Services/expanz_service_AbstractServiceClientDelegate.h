@@ -11,6 +11,8 @@
 
 @protocol expanz_service_AbstractServiceClientDelegate<NSObject>
 
+@optional
+
 - (void) requestDidFailWithError:(NSError*)error;
 
 @end

@@ -10,19 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_SiteClient.h"
-#import "expanz_service_AbstractServiceClient.h"
+#import "expanz_model_ActivityStyle.h"
 
-@interface expanz_service_DefaultSiteClient : AbstractServiceClient<expanz_service_SiteClient>
+@interface expanz_model_ActivityMenuItem : NSObject
 
-@property(nonatomic, strong, readonly) NSString* listAvailableSitesUrl;
-@property(nonatomic, strong, readonly) NSString* listActivitiesForSiteUrl;
+@property(nonatomic, strong, readonly) NSString* activityId;
+@property(nonatomic, strong, readonly) NSString* title;
+@property(nonatomic, strong, readonly) ActivityStyle* style;
 
-- (id) initWithListAvailableSitesUrl:(NSString*)listAvailableSitesUrl
-            listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl;
-
+- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias DefaultSiteClient expanz_service_DefaultSiteClient;
+@compatibility_alias ActivityMenuItem expanz_model_ActivityMenuItem ;

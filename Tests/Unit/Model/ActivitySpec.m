@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 
 
 SPEC_BEGIN(ActivitySpec)
@@ -17,7 +17,7 @@ SPEC_BEGIN(ActivitySpec)
 describe(@"Object instanciation", ^{
         
     it(@"should allow initialization with name and title.", ^{
-        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithActivityId:@"CALC"
+        ActivityMenuItem* activity = [[ActivityMenuItem alloc] initWithActivityId:@"CALC"
                                     title:@"Calculator Application" style:[ActivityStyle defaultStyle]];
         [[[activity activityId] should] equal:@"CALC"];
         [[[activity title] should] equal:@"Calculator Application"];

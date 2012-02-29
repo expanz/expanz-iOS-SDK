@@ -15,6 +15,8 @@
 
 @protocol expanz_service_FileDownloadClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
+@optional
+
 - (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection;
 - (void) requestDidFinishWithData:(NSData*)data;
 

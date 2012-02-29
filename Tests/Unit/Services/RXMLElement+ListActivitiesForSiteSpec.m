@@ -11,7 +11,7 @@
 
 #import "TestResource.h"
 #import "RXMLElement+ListActivitiesForSite.h"
-#import "expanz_model_ActivityDefinitionList.h"
+#import "expanz_model_ActivityMenu.h"
 
 SPEC_BEGIN(RXMLElement_ListActivitiesForSite)
 
@@ -19,13 +19,13 @@ SPEC_BEGIN(RXMLElement_ListActivitiesForSite)
 
         NSString* xml = [TestResource withName:@"ListAvailableSitesXResponse.xml"];
         RXMLElement* element = [RXMLElement elementFromXMLString:xml];
-        ActivityDefinitionList* activityDefinitionList =
+        ActivityMenu* activityDefinitionList =
             [[element child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
 
         LogDebug(@"List: %@", activityDefinitionList.activities);
 
         [[activityDefinitionList.activities should] haveCountOf:5];
-        ActivityDefinition* activityDefinition = [[activityDefinitionList activities] objectAtIndex:0];
+        ActivityMenuItem* activityDefinition = [[activityDefinitionList activities] objectAtIndex:0];
         [[[activityDefinition activityId] should] equal:@"MySample.MyAdvancedCalculator"];
         [[[activityDefinition title] should] equal:@"Advanced Calculator"];
 

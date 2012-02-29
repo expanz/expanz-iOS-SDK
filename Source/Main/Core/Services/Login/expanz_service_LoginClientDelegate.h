@@ -15,6 +15,8 @@
 
 @protocol expanz_service_LoginClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
+@optional
+
 - (void) requestDidFinishWithSessionContext:(expanz_model_SessionContext*)sessionContext;
 
 @end

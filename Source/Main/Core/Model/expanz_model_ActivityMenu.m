@@ -8,10 +8,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "expanz_model_ActivityDefinitionList.h"
+#import "expanz_model_ActivityMenu.h"
 
 
-@implementation expanz_model_ActivityDefinitionList
+@implementation expanz_model_ActivityMenu
 
 
 /* ================================================== Initializers ================================================== */
@@ -29,7 +29,7 @@
     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition {
+- (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {
     [_activities addObject:activityDefinition];
 }
 

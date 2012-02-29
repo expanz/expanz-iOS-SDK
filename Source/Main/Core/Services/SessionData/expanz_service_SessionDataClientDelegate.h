@@ -15,6 +15,8 @@
 
 @protocol expanz_service_SessionDataClientDelegate<expanz_service_AbstractServiceClientDelegate>
 
+@optional
+
 - (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu;
 
 @end

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionData.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
@@ -60,9 +60,9 @@
     return processArea;
 }
 
-- (ActivityDefinition*) asActivityDefinition {
+- (ActivityMenuItem*) asActivityDefinition {
     ActivityStyle* style = [ActivityStyle fromString: [self attribute:@"style"] ];
-    return [[ActivityDefinition alloc]
+    return [[ActivityMenuItem alloc]
         initWithActivityId:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
 }
 

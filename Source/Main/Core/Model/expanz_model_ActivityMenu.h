@@ -10,9 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 
-@interface expanz_model_ActivityDefinitionList : NSObject {
+@interface expanz_model_ActivityMenu : NSObject {
 
 @private
     NSMutableArray* _activities;
@@ -20,8 +20,8 @@
 
 @property(nonatomic, strong, readonly) NSArray* activities;
 
-- (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition;
+- (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias ActivityDefinitionList expanz_model_ActivityDefinitionList;
+@compatibility_alias ActivityMenu expanz_model_ActivityMenu;

@@ -13,7 +13,7 @@
 #import "RXMLElement+SessionData.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h" 
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "TestResource.h"
 
 SPEC_BEGIN(RXMLELement_SessionDataSpec)
@@ -40,7 +40,7 @@ describe(@"Parsing children", ^{
     it(@"should include the style attribute on ProcessArea.Activity children, where necessary.", ^{
         Menu* menu = [[element child:@"ExecXResult.ESA.Menu"] asMenu]; 
         ProcessArea* processArea = [menu processAreaWithId:@"Sales"]; 
-        ActivityDefinition* activity = [processArea activityWithName:@"ESA.Sales.Customer"]; 
+        ActivityMenuItem* activity = [processArea activityWithName:@"ESA.Sales.Customer"];
         [activity shouldNotBeNil];
         [[theValue([activity.style isBrowse]) should] beYes];
     });

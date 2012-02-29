@@ -11,10 +11,10 @@
 #import <Foundation/Foundation.h>
 #import "RXMLElement.h"
 
-@class expanz_model_ActivityDefinitionList;
+@class expanz_model_ActivityMenu;
 
 @interface RXMLElement (ListActivitiesForSite)
 
-- (expanz_model_ActivityDefinitionList*) asActivityDefinitionList;
+- (expanz_model_ActivityMenu*) asActivityDefinitionList;
 
 @end

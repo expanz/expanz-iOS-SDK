@@ -14,7 +14,7 @@
 #import "Objection.h"
 #import "MARTNSObject.h"
 #import "expanz_model_SessionContext.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
@@ -59,7 +59,7 @@
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
+- (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
                        initialKey:(NSString*)initialKey {
 
     self = [super initWithNibName:nibName bundle:[NSBundle bundleForClass:[ActivityInstanceViewController class]]];

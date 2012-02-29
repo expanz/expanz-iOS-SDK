@@ -14,7 +14,7 @@
 #import "expanz_service_ActivityClientDelegate.h"
 #import "MBProgressHUD.h"
 
-@class expanz_model_ActivityDefinition;
+@class expanz_model_ActivityMenuItem;
 @class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
@@ -36,7 +36,7 @@
 }
 
 @property(nonatomic, strong, readonly) NSArray* propertyNames;
-@property(nonatomic, strong, readonly) expanz_model_ActivityDefinition* activityDefinition;
+@property(nonatomic, strong, readonly) expanz_model_ActivityMenuItem* activityDefinition;
 @property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, strong, readonly) expanz_ui_ModelAdapter* modelAdapter;
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
@@ -46,7 +46,7 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id)initWithActivityDefinition:(expanz_model_ActivityDefinition*)activityDefinition nibName:(NSString*)nibName
+- (id)initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
                       initialKey:(NSString*)initialKey;
 
 /**

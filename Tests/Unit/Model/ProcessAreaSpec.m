@@ -11,7 +11,7 @@
 
 #import "RXMLElement+SessionData.h"
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 
 
 SPEC_BEGIN(ProcessAreaSpec)
@@ -40,14 +40,14 @@ describe(@"Activities", ^{
     });
     
     it(@"should store references to associated activites via an addActivity method", ^{
-        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithActivityId:@"Order a widget"
+        ActivityMenuItem* activity = [[ActivityMenuItem alloc] initWithActivityId:@"Order a widget"
                                                 title:@"Get your widgets here" style:[ActivityStyle browseStyle]];
         [processArea addActivityDefinition:activity];
         [[processArea.activities should] haveCountOf:1];
     });
     
     it(@"should allow retrieving an activity by name.", ^{
-        ActivityDefinition* activity = [[ActivityDefinition alloc] initWithActivityId:@"Order a widget"
+        ActivityMenuItem* activity = [[ActivityMenuItem alloc] initWithActivityId:@"Order a widget"
                                                 title:@"Get your widgets here" style:[ActivityStyle browseStyle]];
         [processArea addActivityDefinition:activity];
 

@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class expanz_model_ActivityDefinition;
+@class expanz_model_ActivityMenuItem;
 
 @interface expanz_model_ProcessArea : NSObject
 {
@@ -32,12 +32,12 @@
 /** 
 * Adds an activity to the process area.
 */
-- (void) addActivityDefinition:(expanz_model_ActivityDefinition*)activity;
+- (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activity;
 
 /**
  * Returns the activity with the supplied id, or nil if none matching. 
  */
-- (expanz_model_ActivityDefinition*) activityWithName:(NSString*)activityName;
+- (expanz_model_ActivityMenuItem*) activityWithName:(NSString*)activityName;
 
 
 @end

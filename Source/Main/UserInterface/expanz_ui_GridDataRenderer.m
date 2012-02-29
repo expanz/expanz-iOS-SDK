@@ -14,7 +14,7 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextGridDataCell.h"
 #import "expanz_model_ImageGridDataCell.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_model_GridData.h"
 #import "UITableView+DataPublication.h"
@@ -87,8 +87,8 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     Row* row = [_gridData.rows objectAtIndex:indexPath.row];
 
-    ActivityDefinition* edit =
-        [[ActivityDefinition alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
+    ActivityMenuItem* edit =
+        [[ActivityMenuItem alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
     if ([self.activityManager showActivityWithDefinition:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }

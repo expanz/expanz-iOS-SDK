@@ -12,7 +12,7 @@
 
 #import "expanz_ui_NavigationManager.h"
 #import "StubSystemEventReporter.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 
 
 SPEC_BEGIN(ActivityManagerSpec)
@@ -30,7 +30,7 @@ SPEC_BEGIN(ActivityManagerSpec)
 
         it(@"should transition to the activity according to activity definition", ^{
 
-            ActivityDefinition* definition = [[ActivityDefinition alloc]
+            ActivityMenuItem* definition = [[ActivityMenuItem alloc]
                 initWithActivityId:@"TestFixture" title:@"TestFixture" style:[ActivityStyle defaultStyle]];
 
             [activityManager showActivityWithDefinition:definition];
@@ -38,7 +38,7 @@ SPEC_BEGIN(ActivityManagerSpec)
 
         it(@"should report an error if the activity requires a controller that doesn't exist", ^{
 
-            ActivityDefinition* definition = [[ActivityDefinition alloc]
+            ActivityMenuItem* definition = [[ActivityMenuItem alloc]
                 initWithActivityId:@"My.Fun.Documents" title:@"My Fun Documents" style:[ActivityStyle browseStyle]];
 
             [activityManager showActivityWithDefinition:definition];

@@ -13,7 +13,7 @@
 #import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_GridData.h"
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"

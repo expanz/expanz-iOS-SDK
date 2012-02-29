@@ -13,7 +13,7 @@
 #import <objc/runtime.h>
 #import "Objection.h"
 #import "CAFilter+Unlock.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_AppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_ActivityMenuViewController.h"
@@ -24,9 +24,9 @@
 /* ================================================================================================================== */
 @interface expanz_ui_NavigationManager (private)
 
-- (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*) nibNameFor:(ActivityMenuItem*)activityDefinition;
 
-- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition;
+- (NSString*) controllerClassNameFor:(ActivityMenuItem*)activityDefinition;
 
 - (CATransition*) cubeViewTransition;
 
@@ -65,11 +65,11 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition {
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {
     return [self showActivityWithDefinition:activityDefinition initialKey:nil];
 }
 
-- (BOOL)   showActivityWithDefinition:(expanz_model_ActivityDefinition*)activityDefinition
+- (BOOL)   showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
                          initialKey:(NSString*)initialKey {
 
     NSString* controllerClassName = [self controllerClassNameFor:activityDefinition];
@@ -101,7 +101,7 @@ objection_requires(@"reporter")
 
 
 /* ================================================== Private Methods =============================================== */
-- (NSString*) nibNameFor:(ActivityDefinition*)activityDefinition {
+- (NSString*) nibNameFor:(ActivityMenuItem*)activityDefinition {
     NSString* nibName;
     if ([activityDefinition.style isDefault]) {
         nibName = activityDefinition.activityId;
@@ -113,7 +113,7 @@ objection_requires(@"reporter")
     return nibName;
 }
 
-- (NSString*) controllerClassNameFor:(ActivityDefinition*)activityDefinition {
+- (NSString*) controllerClassNameFor:(ActivityMenuItem*)activityDefinition {
     NSMutableString* controllerClassName = [NSMutableString
         stringWithString:[activityDefinition.activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
     if (![activityDefinition.style isDefault]) {

@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionDataRequest.h"
@@ -114,18 +114,18 @@
 
     if (tableView.style == UITableViewStyleGrouped) {
         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-        ActivityDefinition* activity = [processArea.activities objectAtIndex:indexPath.row];
+        ActivityMenuItem* activity = [processArea.activities objectAtIndex:indexPath.row];
         cell.textLabel.text = [activity title];
     }
     else {
-        ActivityDefinition* activity = [[_menu allActivities] objectAtIndex:indexPath.row];
+        ActivityMenuItem* activity = [[_menu allActivities] objectAtIndex:indexPath.row];
         cell.textLabel.text = [activity title];
     }
     return cell;
 }
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ActivityDefinition* activityDefinition;
+    ActivityMenuItem* activityDefinition;
     if (tableView.style == UITableViewStyleGrouped) {
         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
         activityDefinition = [processArea.activities objectAtIndex:indexPath.row];

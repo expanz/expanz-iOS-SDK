@@ -12,22 +12,22 @@
 
 #import "expanz_service_AbstractServiceClient.h"
 #import "RXMLElement+ListAvailableSites.h"
-#import "expanz_service_SiteClientDelegate.h"
-#import "expanz_service_DefaultSiteClient.h"
+#import "expanz_service_SiteDetailsClientDelegate.h"
+#import "expanz_service_DefaultSiteDetailsClient.h"
 #import "expanz_model_SiteList.h"
-#import "expanz_model_ActivityDefinitionList.h"
+#import "expanz_model_ActivityMenu.h"
 #import "RXMLElement+ListActivitiesForSite.h"
 
 
-@interface expanz_service_DefaultSiteClient (private)
+@interface expanz_service_DefaultSiteDetailsClient (private)
 
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-           forDelegate:(id<expanz_service_SiteClientDelegate>)delegate;
+           forDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
 @end
 
 
-@implementation expanz_service_DefaultSiteClient
+@implementation expanz_service_DefaultSiteDetailsClient
 
 @synthesize listAvailableSitesUrl = _listAvailableSitesUrl;
 @synthesize listActivitiesForSiteUrl = _listActivitiesForSiteUrl;
@@ -45,7 +45,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) listAvailableSitesWith:(id<expanz_service_SiteClientDelegate>)delegate {
+- (void) listAvailableSitesWith:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
 
     [self.httpTransport get:self.listAvailableSitesUrl withBlock:^(LRRestyResponse* response) {
 
@@ -62,13 +62,13 @@
     }];
 }
 
-- (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteClientDelegate>)delegate {
+- (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
     NSDictionary* parameters = [NSDictionary dictionaryWithObject:site forKey:@"site"];
     [self.httpTransport get:self.listActivitiesForSiteUrl parameters:parameters withBlock:^(LRRestyResponse* response) {
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
-            ActivityDefinitionList* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
+            ActivityMenu* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
                 child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
             [delegate requestDidFinishWithActivityList:activityList];
         }

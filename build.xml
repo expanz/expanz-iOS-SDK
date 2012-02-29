@@ -149,8 +149,7 @@
 
         <echo file="${temp.dir}/geninfo.sh">
             #!/bin/sh
-            geninfo ${temp.dir}/coverage-data/*.gcno --no-recursion --output-filename
-            ${temp.dir}/${module.name}-temp.info
+            geninfo ${temp.dir}/coverage-data/*.gcno --no-recursion --output-filename ${temp.dir}/${module.name}-temp.info
             #Remove symbols we're not interested in.
             lcov -r ${temp.dir}/${module.name}-temp.info UIGeometry.h CGGeometry.h > ${temp.dir}/${module.name}.info
         </echo>
@@ -159,8 +158,7 @@
 
         <echo file="${temp.dir}/genhtml.sh">
             #!/bin/sh
-            genhtml --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir}
-            ${temp.dir}/${module.name}.info
+            genhtml --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir} ${temp.dir}/${module.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>

@@ -9,18 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "RXMLElement+ListActivitiesForSite.h"
-#import "expanz_model_ActivityDefinitionList.h"
+#import "expanz_model_ActivityMenu.h"
 
 @implementation RXMLElement (ListActivitiesForSite)
 
-- (expanz_model_ActivityDefinitionList*) asActivityDefinitionList {
+- (expanz_model_ActivityMenu*) asActivityDefinitionList {
     if (![self.tag isEqualToString:@"Activities"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
 
-    ActivityDefinitionList* activityList = [[ActivityDefinitionList alloc] init];
+    ActivityMenu* activityList = [[ActivityMenu alloc] init];
     [self iterate:@"*" with:^(RXMLElement* element) {
-        ActivityDefinition* definition = [[ActivityDefinition alloc]
+        ActivityMenuItem* definition = [[ActivityMenuItem alloc]
             initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
         [activityList addActivityDefinition:definition];
     }];

@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_ActivityDefinition.h"
+#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
@@ -26,8 +26,8 @@ SPEC_BEGIN(ModelAdapterSpec)
     __block ModelAdapter* modelAdapter;
 
     beforeEach(^{
-        ActivityDefinition* activity =
-            [[ActivityDefinition alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
+        ActivityMenuItem* activity =
+            [[ActivityMenuItem alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
         viewController = [[TestFixture_ViewController alloc]
             initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil];
         [viewController shouldNotBeNil];

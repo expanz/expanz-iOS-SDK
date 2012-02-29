@@ -15,8 +15,8 @@
 #import "expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_service_SiteClient.h"
-#import "expanz_service_DefaultSiteClient.h"
+#import "expanz_service_SiteDetailsClient.h"
+#import "expanz_service_DefaultSiteDetailsClient.h"
 
 
 @implementation expanz_CoreModule
@@ -45,10 +45,10 @@
     }    toProtocol:@protocol(expanz_service_SessionDataClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
-        return [[DefaultSiteClient alloc]
+        return [[DefaultSiteDetailsClient alloc]
             initWithListAvailableSitesUrl:[[SdkConfiguration globalConfiguration] listAvailableSitesUrl]
                  listActivitiesForSiteUrl:[[SdkConfiguration globalConfiguration] listActivitiesForSiteUrl]];
-    }    toProtocol:@protocol(expanz_service_SiteClient)];
+    }    toProtocol:@protocol(expanz_service_SiteDetailsClient)];
 
 }
 @end
