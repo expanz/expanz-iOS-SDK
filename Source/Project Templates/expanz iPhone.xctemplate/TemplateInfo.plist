@@ -168,7 +168,7 @@
 			<dict>
 				<key>Group</key>
 				<array>
-					<string>Frameworks</string>
+					<string>Supporting Files</string>
 				</array>
 				<key>Path</key>
 				<string>ExpanzFrameworks/expanziOS.framework</string>
@@ -177,7 +177,7 @@
 			<dict>
 				<key>Group</key>
 				<array>
-					<string>Frameworks</string>
+					<string>Supporting Files</string>
 				</array>
 				<key>Path</key>
 				<string>ExpanzFrameworks/LRResty.framework</string>

@@ -29,7 +29,7 @@
                 <key>CLANG_ENABLE_OBJC_ARC</key>
                 <string>YES</string>
                 <key>FRAMEWORK_SEARCH_PATHS</key>
-				<string>$(inherited) $(SRCDIR)/ExpanzFrameworks</string>
+				<string>$(inherited)</string>
 			</dict>
 			<key>Configurations</key>
 			<dict>
@@ -55,8 +55,6 @@
 					<string>UIKit</string>
 					<string>Foundation</string>
 					<string>CoreGraphics</string>
-					<string>expanziOS</string>
-					<string>LRResty</string>
 				</array>
 				<key>SharedSettings</key>
 				<dict>
