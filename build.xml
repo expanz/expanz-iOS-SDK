@@ -200,11 +200,24 @@
     </target>
 
     <target name="--install">
-        <echo message="TODO: Install in an Xcode 4.3 compatible location"/>
-
-        <!-- copy todir="/Developer/expanz/Frameworks/expanziOS.framework">
+        <mkdir dir="${template.dir}/expanz_dependencies.xctemplate/ExpanzFrameworks"/>
+        <copy todir="${template.dir}/expanz_dependencies.xctemplate/ExpanzFrameworks">
             <fileset dir="${target.dir}/Release-iphoneuniversal/expanziOS.framework"/>
-        </copy -->
+            <fileset dir="${basedir}/Dependencies/Frameworks/LRResty.framework"/>
+        </copy>
+
+        <copy todir="${template.dir}/expanz iPhone.xctemplate/Assets">
+            <fileset dir="${basedir}/Source/Examples/Assets">
+                <include name="ActivityMenu.xib"/>
+                <include name="background.png"/>
+                <include name="DocumentView.xib"/>
+                <include name="Icon.png"/>
+                <include name="Login.xib"/>
+                <include name="MainWindow.xib"/>
+                <include name="TableCellForGridData.xib"/>
+                <include name="TableCellForTreeData.xib"/>
+            </fileset>
+        </copy>
     </target>
 
 

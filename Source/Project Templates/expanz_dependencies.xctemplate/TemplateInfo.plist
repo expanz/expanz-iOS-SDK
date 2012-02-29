@@ -27,7 +27,7 @@
 				<key>HEADER_SEARCH_PATHS</key>
 				<string>$SDKROOT/usr/include/libxml2 $SDKROOT/usr/include/libz</string>
 				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<string>$(inherited) "/Developer/expanz/Frameworks"</string>
+				<string>$(inherited) "$(SRCDIR)/ExpanzFrameworks"</string>
                 <key>CLANG_ENABLE_OBJC_ARC</key>
                 <string>YES</string>
 			</dict>
