@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import <ExpanzIOS/expanz_iOS_SDKConfiguration.h>
+#import <expanziOS/expanz_SdkConfiguration.h>
 
 int main(int argc, char *argv[]) {
 
