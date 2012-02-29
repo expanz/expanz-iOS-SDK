@@ -33,15 +33,15 @@
     _siteList = siteList;
 }
 
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityMenu*)activityList {
-    _activityList = activityList;
+- (void) requestDidFinishWithActivityMenu:(expanz_model_ActivityMenu*)activityMenu {
+    _activityList = activityMenu;
 }
 
 
 @end
 /* ================================================================================================================== */
 
-SPEC_BEGIN(DefaultSiteClientIntegration)
+SPEC_BEGIN(DefaultSiteDetailsClientIntegration)
 
 
     __block id<expanz_service_SiteDetailsClient> siteClient;

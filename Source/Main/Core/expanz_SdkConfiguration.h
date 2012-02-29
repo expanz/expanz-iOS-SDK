@@ -42,6 +42,8 @@
 
 - (NSString*) listActivitiesForSiteUrl;
 
+- (NSString*) schemaForActivityUrl;
+
 - (void) setConfigurationFile:(NSString*)fileName;
 
 @end

@@ -21,6 +21,6 @@
 
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList;
 
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityMenu*)activityList;
+- (void) requestDidFinishWithActivityMenu:(expanz_model_ActivityMenu*)activityList;
 
 @end

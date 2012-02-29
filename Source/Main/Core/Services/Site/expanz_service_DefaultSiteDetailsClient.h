@@ -17,9 +17,11 @@
 
 @property(nonatomic, strong, readonly) NSString* listAvailableSitesUrl;
 @property(nonatomic, strong, readonly) NSString* listActivitiesForSiteUrl;
+@property(nonatomic, strong, readonly) NSString* schemaForActivityUrl;
 
 - (id) initWithListAvailableSitesUrl:(NSString*)listAvailableSitesUrl
-            listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl;
+        listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl
+        schemaForActivityUrl:(NSString*)schemaForActivityUrl;
 
 
 @end

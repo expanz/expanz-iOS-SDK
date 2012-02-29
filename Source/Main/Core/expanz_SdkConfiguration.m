@@ -93,6 +93,10 @@ static SdkConfiguration* _globalConfiguration;
     return [NSString stringWithFormat:@"%@/ListActivitiesForSiteX", _baseUrl];
 }
 
+- (NSString*) schemaForActivityUrl {
+    return [NSString stringWithFormat:@"%@/GetSchemaForActivityX", _baseUrl];
+}
+
 /**
 * Allows setting through user defined runtime attributes, in Interface Builder.
 */

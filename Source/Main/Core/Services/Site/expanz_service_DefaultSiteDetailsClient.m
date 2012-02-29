@@ -22,7 +22,7 @@
 @interface expanz_service_DefaultSiteDetailsClient (private)
 
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-           forDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
+        forDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
 @end
 
@@ -31,15 +31,19 @@
 
 @synthesize listAvailableSitesUrl = _listAvailableSitesUrl;
 @synthesize listActivitiesForSiteUrl = _listActivitiesForSiteUrl;
+@synthesize schemaForActivityUrl = _schemaForActivityUrl;
 
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithListAvailableSitesUrl:(NSString*)listAvailableSitesUrl
-            listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl {
+        listActivitiesForSiteUrl:(NSString*)listActivitiesForSiteUrl
+        schemaForActivityUrl:(NSString*)schemaForActivityUrl {
+
     self = [super init];
     if (self) {
         _listAvailableSitesUrl = listAvailableSitesUrl;
         _listActivitiesForSiteUrl = listActivitiesForSiteUrl;
+        _schemaForActivityUrl = schemaForActivityUrl;
     }
     return self;
 }
@@ -63,16 +67,18 @@
 }
 
 - (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+    LogDebug(@"in list activities for site");
     NSDictionary* parameters = [NSDictionary dictionaryWithObject:site forKey:@"site"];
     [self.httpTransport get:self.listActivitiesForSiteUrl parameters:parameters withBlock:^(LRRestyResponse* response) {
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
             ActivityMenu* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
-                child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
-            [delegate requestDidFinishWithActivityList:activityList];
+                    child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
+            [delegate requestDidFinishWithActivityMenu:activityList];
         }
         else {
+            LogDebug(@"In dispatch error");
             [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
         }
 
