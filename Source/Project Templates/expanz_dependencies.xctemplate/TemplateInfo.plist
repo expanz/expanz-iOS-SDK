@@ -25,11 +25,11 @@
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
 				<string>iPhone Developer</string>
 				<key>HEADER_SEARCH_PATHS</key>
-				<string>$SDKROOT/usr/include/libxml2 $SDKROOT/usr/include/libz</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<string>$(inherited) "$(SRCDIR)/ExpanzFrameworks"</string>
+				<string>$SDKROOT/usr/include/libxml2 $SDKROOT/usr/include/libz</string>				
                 <key>CLANG_ENABLE_OBJC_ARC</key>
                 <string>YES</string>
+                <key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>$(inherited) $(SRCDIR)/ExpanzFrameworks</string>
 			</dict>
 			<key>Configurations</key>
 			<dict>

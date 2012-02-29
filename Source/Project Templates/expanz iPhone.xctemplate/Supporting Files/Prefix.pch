@@ -9,4 +9,4 @@
     #import <Foundation/Foundation.h>
 #endif
  
-#import <ExpanzIOS/Logging.h>
+#import <expanziOS/Logging.h>
