@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_model_ActivityInstance;
-@class expanz_model_Field;
+@class expanz_model_FieldInstance;
 @class expanz_ui_ActivityInstanceViewController;
 @class expanz_model_GridData;
 @class expanz_model_AbstractGridDataCell;
@@ -48,7 +48,7 @@
 /**
  * Returns the UITextField corresponding to the model's field object.
  */
-- (UITextField*) textFieldFor:(expanz_model_Field*)field;
+- (UITextField*) textFieldFor:(expanz_model_FieldInstance*)field;
 
 /**
 * Returns the UITableView corresponding to the supplied `expanz_model_DataSet`.
@@ -63,7 +63,7 @@
 /**
  * Returns the `expanz_model_Field` object corresponding to the UILabel, UITextField, UIImageView or UITableView object.
  */
-- (expanz_model_Field*) fieldFor:(UIView*)uiView;
+- (expanz_model_FieldInstance*) fieldFor:(UIView*)uiView;
 
 /* ================================================================================================================== */
 #pragma mark Synchronizing control values with model values.

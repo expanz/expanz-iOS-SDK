@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_model_GridData.h"
 
 
@@ -44,7 +44,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
         });
 
         it(@"should allow field references to be added.", ^{
-            Field* field = [[Field alloc]
+            FieldInstance* field = [[FieldInstance alloc]
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
@@ -52,15 +52,15 @@ SPEC_BEGIN(ActivityInstanceSpec)
         });
 
         it(@"should allow a stored field to be retrieved by fieldId", ^{
-            Field* field = [[Field alloc]
+            FieldInstance* field = [[FieldInstance alloc]
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             [instance addField:field];
 
-            Field* retrieved = [instance fieldWithId:@"op1"];
+            FieldInstance* retrieved = [instance fieldWithId:@"op1"];
             [[retrieved should] equal:field];
 
-            Field* another = [instance fieldWithId:@"notInMyCollection"];
+            FieldInstance* another = [instance fieldWithId:@"notInMyCollection"];
             [another shouldBeNil];
         });
     });
@@ -92,7 +92,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
             [[theValue([instance allowsMethodInvocations]) should] beYes];
 
             //Yes, if it has one field, that is synched with the server.
-            Field* field = [[Field alloc]
+            FieldInstance* field = [[FieldInstance alloc]
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             //Field is clean.
@@ -103,7 +103,7 @@ SPEC_BEGIN(ActivityInstanceSpec)
 
 
             //No, if one ore more fieds are dirty.
-            Field* another = [[Field alloc]
+            FieldInstance* another = [[FieldInstance alloc]
                 initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"Operand 1"
                            hint:@"Enter a value for operand 1"];
             //Make the field dirty.

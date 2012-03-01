@@ -11,7 +11,7 @@
 
 
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_FileRequest.h"
@@ -51,7 +51,7 @@
                            RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
                            RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
 
-                           Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
+                           FieldInstance* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
                            LogDebug("Creating resource collection with title: %@", titleField.value);
                            ResourceCollection
                                * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];

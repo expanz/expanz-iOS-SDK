@@ -13,6 +13,9 @@
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_ActivitySchema.h"
+#import "RXMLElement+ActivityInstance.h"
+#import "expanz_model_MethodSchema.h"
+#import "expanz_model_FieldSchema.h"
 
 @implementation RXMLElement (SiteDetails)
 
@@ -48,14 +51,43 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
     return [[AppSite alloc] initWithAppSiteId:[self attribute:@"id"] name:[self attribute:@"name"]
-                           authenticationMode:[self attribute:@"authenticationMode"]];
+            authenticationMode:[self attribute:@"authenticationMode"]];
 }
 
 - (expanz_model_ActivitySchema*) asActivitySchema {
     if (![self.tag isEqualToString:@"Activity"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
     }
-    return [[ActivitySchema alloc] init];
+
+    ActivitySchema* activitySchema = [[ActivitySchema alloc] init];
+    [self iterate:@"*" with:^(RXMLElement* e) {
+
+        if ([e.tag isEqualToString:@"Field"]) {
+            [activitySchema addField:[e asFieldSchema]];
+        }
+
+        else if ([e.tag isEqualToString:@"Method"]) {
+            [activitySchema addMethod:[e asMethodSchema]];
+        }
+
+    }];
+    return activitySchema;
+}
+
+- (expanz_model_FieldSchema*) asFieldSchema {
+    if (![self.tag isEqualToString:@"Field"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
+    }
+    return [[FieldSchema alloc]
+            initWithName:[self attribute:@"name"] class:[self attribute:@"class"] label:[self attribute:@"label"]];
+
+}
+
+- (expanz_model_MethodSchema*) asMethodSchema {
+    if (![self.tag isEqualToString:@"Method"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Method."];
+    }
+    return [[MethodSchema alloc] initWithName:[self attribute:@"name"] description:[self attribute:@"description"]];
 }
 
 @end

@@ -15,7 +15,7 @@
 #import "MBProgressHUD.h"
 
 @class expanz_model_ActivityMenuItem;
-@class expanz_model_Field;
+@class expanz_model_FieldInstance;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailTableCell;
@@ -52,7 +52,7 @@
 /**
  * Request model to update with new field value. 
  */
-- (void)sendDeltaForField:(expanz_model_Field*)textField;
+- (void)sendDeltaForField:(expanz_model_FieldInstance*)textField;
 
 /**
  * Invoke a method on the model. 

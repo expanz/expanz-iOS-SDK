@@ -12,7 +12,7 @@
 
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_Column.h"
@@ -35,7 +35,7 @@
     [self iterate:@"*" with:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Field"]) {
-            [activityInstance addField:[e asField]];
+            [activityInstance addField:[e asFieldInstance]];
         }
 
         else if ([e.tag isEqualToString:@"Messages"]) {
@@ -53,7 +53,7 @@
 }
 
 /* ================================================================================================================== */
-- (Field*) asField {
+- (FieldInstance*) asFieldInstance {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
@@ -64,7 +64,7 @@
     NSString* label = [self attribute:@"label"];
     NSString* hint = [self attribute:@"hint"];
 
-    Field* field = [[Field alloc]
+    FieldInstance* field = [[FieldInstance alloc]
         initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint];
 
     switch (field.datatype) {

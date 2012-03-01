@@ -11,7 +11,7 @@
 
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_GridData.h"
 #import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
@@ -59,13 +59,13 @@ SPEC_BEGIN(ModelAdapterSpec)
         });
 
         it(@"should return the Field corresponding to a UITextField", ^{
-            Field* field = [modelAdapter fieldFor:viewController.Op1];
+            FieldInstance* field = [modelAdapter fieldFor:viewController.Op1];
             [field shouldNotBeNil];
             [[field.fieldId should] equal:@"Op1"];
         });
 
         it(@"should map the other way - return a UITextField for an expanz_model_field. ", ^{
-            Field* field = [modelAdapter.activityInstance fieldWithId:@"Op2"];
+            FieldInstance* field = [modelAdapter.activityInstance fieldWithId:@"Op2"];
             id textControl = [modelAdapter textFieldFor:field];
             [textControl shouldNotBeNil];
             LogDebug(@"Text Control: %@", textControl);
@@ -85,7 +85,7 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         it(@"should update each user interface control with the corresponding model value. ", ^{
 
-            Field* op1 = [modelAdapter.activityInstance fieldWithId:@"Op1"];
+            FieldInstance* op1 = [modelAdapter.activityInstance fieldWithId:@"Op1"];
             op1.value = @"9999";
 
             [modelAdapter updateUIControlsWithModelValues];

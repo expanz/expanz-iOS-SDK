@@ -10,26 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-@class expanz_model_FileResource;
-@class expanz_model_FieldInstance;
 
+@interface expanz_model_FieldSchema : NSObject
 
-@interface expanz_model_ResourceCollection : NSObject {
+@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* class;
+@property(nonatomic, strong, readonly) NSString* label;
 
-@private
-    NSMutableSet* _fileResources;
-
-}
-
-@property(nonatomic, strong, readonly) NSString* title;
-@property(nonatomic, strong, readonly) NSArray* fileResources;
-
-- (id) initWithTitle:(NSString*)title;
-
-- (void) addFileResource:(expanz_model_FileResource*)fileResource;
+- (id) initWithName:(NSString*)name class:(NSString*)class label:(NSString*)label;
 
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias ResourceCollection expanz_model_ResourceCollection;
+@compatibility_alias FieldSchema expanz_model_FieldSchema;

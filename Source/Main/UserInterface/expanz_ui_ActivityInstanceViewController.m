@@ -21,7 +21,7 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextGridDataCell.h"
 #import "expanz_model_ImageGridDataCell.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
 #import "expanz_service_ActivityClientDelegate.h"
@@ -75,7 +75,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) sendDeltaForField:(Field*)field {
+- (void) sendDeltaForField:(FieldInstance*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
         DeltaRequest* deltaRequest = [DeltaRequest forField:field];
@@ -204,7 +204,7 @@
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
     [textField resignFirstResponder];
-    Field* field = [_modelAdapter fieldFor:textField];
+    FieldInstance* field = [_modelAdapter fieldFor:textField];
     [field didFinishEditWithValue:textField.text];
     [self sendDeltaForField:field];
     return YES;
@@ -220,7 +220,7 @@
 - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
                    editingInfo:(NSDictionary*)editingInfo {
 
-    Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
+    FieldInstance* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
     //[field didFinishEditWithValue:image];
 
     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
@@ -251,7 +251,7 @@
         [_modelAdapter updateUIControlsWithModelValues];
     }
 
-    for (Field* field in activityInstance.fields) {
+    for (FieldInstance* field in activityInstance.fields) {
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
         [[_modelAdapter textFieldFor:field] setText:field.value];
     }

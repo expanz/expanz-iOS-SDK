@@ -12,7 +12,7 @@
 #import <objc/message.h>
 #import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_GridData.h"
 #import "expanz_ui_GridDataRenderer.h"
@@ -67,11 +67,11 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Mapping UI controls to model
 
-- (UITextField*) textFieldFor:(expanz_model_Field*)field {
+- (UITextField*) textFieldFor:(expanz_model_FieldInstance*)field {
     return [_textFieldMappings objectForKey:field.fieldId];
 }
 
-- (Field*) fieldFor:(UIView*)uiView {
+- (FieldInstance*) fieldFor:(UIView*)uiView {
     NSString* fieldId = [uiView fieldIdInModelAdapter:self];
     return [_activityInstance fieldWithId:fieldId];
 }
@@ -98,14 +98,14 @@
 - (void) updateLabelsWithModelValues {
     for (NSString* fieldId in [_labelMappings allKeys]) {
         UILabel* label = [_labelMappings valueForKey:fieldId];
-        Field* field = [_activityInstance fieldWithId:fieldId];
+        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
         [label setText:field.label];
     }
 }
 
 - (void) updateUITextFieldsWithModelValues {
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
-        Field* field = [_activityInstance fieldWithId:fieldId];
+        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
 
         if ([field isDisabled]) {
@@ -122,7 +122,7 @@
 - (void) updateUIImagesWithModelValues {
     LogDebug(@"Updating images . . . . ");
     for (NSString* fieldId in [_imageFieldMappings allKeys]) {
-        Field* field = [_activityInstance fieldWithId:fieldId];
+        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
         LogDebug(@"Field: %@", field);
         LogDebug(@"Image url: %@", field.value);
 
@@ -160,7 +160,7 @@
     _readOnlyTextFields = [[NSMutableDictionary alloc] init];
 
     for (NSString* propertyName in _propertyNames) {
-        Field* field = [_activityInstance fieldWithId:propertyName];
+        FieldInstance* field = [_activityInstance fieldWithId:propertyName];
 
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
@@ -183,7 +183,7 @@
     _imageFieldMappings = [[NSMutableDictionary alloc] init];
     _imageButtonMappings = [[NSMutableDictionary alloc] init];
     for (NSString* propertyName in _propertyNames) {
-        Field* field = [_activityInstance fieldWithId:propertyName];
+        FieldInstance* field = [_activityInstance fieldWithId:propertyName];
 
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));

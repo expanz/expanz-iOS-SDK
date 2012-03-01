@@ -10,8 +10,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class expanz_model_FieldInstance;
+@class expanz_model_MethodSchema;
 
-@interface expanz_model_ActivitySchema : NSObject
+
+@interface expanz_model_ActivitySchema : NSObject {
+
+@private
+    NSMutableArray* _fields;
+    NSMutableArray* _methods;
+    NSMutableArray* _styles;
+    NSMutableArray* _queries;
+}
+
+@property(nonatomic, strong, readonly) NSArray* fields;
+@property(nonatomic, strong, readonly) NSArray* methods;
+@property(nonatomic, strong, readonly) NSArray* styles;
+@property(nonatomic, strong, readonly) NSArray* queries;
+
+- (void) addField:(expanz_model_FieldInstance*)field;
+
+- (void) addMethod:(expanz_model_MethodSchema*)method;
+
+
 
 @end
 /* ================================================================================================================== */

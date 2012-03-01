@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_DeltaRequest.h"
-#import "expanz_model_Field.h"
+#import "expanz_model_FieldInstance.h"
 #import "NSData+ExpanzAdditions.h"
 
 SPEC_BEGIN(DeltaRequestSpec)
@@ -29,7 +29,7 @@ SPEC_BEGIN(DeltaRequestSpec)
         });
 
         it(@"Should provide a factory method to convert a field model instance into a delta request. ", ^{
-            Field* field = [[Field alloc]
+            FieldInstance* field = [[FieldInstance alloc]
                 initWithFieldId:@"customerName" nullable:YES defaultValue:nil dataType:ExpanzDataTypeString
                           label:@"Enter a customer name" hint:@"Figure it out, dude!"];
             DeltaRequest* deltaRequest = [DeltaRequest forField:field];

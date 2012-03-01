@@ -8,13 +8,22 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Foundation/Foundation.h>
+#import "expanz_model_MethodSchema.h"
 
-@class expanz_ui_ModelAdapter;
-@class expanz_model_FieldInstance;
 
-@interface UIView (ModelAdapter)
+@implementation expanz_model_MethodSchema
 
-- (NSString*) fieldIdInModelAdapter:(expanz_ui_ModelAdapter*)modelAdapter;
+@synthesize name = _name;
+@synthesize description = _description;
+
+- (id) initWithName:(NSString*)name description:(NSString*)description {
+    self = [super init];
+    if (self) {
+        _name = [name copy];
+        _description = [description copy];
+    }
+    return self;
+}
+
 
 @end

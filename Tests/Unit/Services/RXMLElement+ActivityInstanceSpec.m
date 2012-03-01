@@ -147,7 +147,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
         it(@"should throw NSException if you feed it the wrong kind of field.", ^{
             @try {
-                [e asField];
+                [e asFieldInstance];
                 [NSException raise:@"Should have thrown exception" format:@"Fed the wrong kind of element"];
             }
             @catch (NSException* exception) {

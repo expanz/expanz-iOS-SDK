@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-@class expanz_model_Field;
+@class expanz_model_FieldInstance;
 @class expanz_model_Message;
 @class expanz_model_AbstractData;
 @class expanz_model_GridData;
@@ -42,12 +42,12 @@
 /** 
  * Adds a field to the instance. 
  */
-- (void) addField:(expanz_model_Field*)field;
+- (void) addField:(expanz_model_FieldInstance*)field;
 
 /**
 * Returns the `expanz_model_Field` matching the supplied fieldId, or nil.
 */
-- (expanz_model_Field*) fieldWithId:(NSString*)fieldId;
+- (expanz_model_FieldInstance*) fieldWithId:(NSString*)fieldId;
 
 /** 
 * Adds a message to the instance.

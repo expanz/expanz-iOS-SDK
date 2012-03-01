@@ -67,7 +67,7 @@
 		6B070DB314F27C4F0044A4CF /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB514EF920300909A38 /* expanz_model_ActivityStyle.m */; };
 		6B070DB414F27C4F0044A4CF /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB714EF920300909A38 /* expanz_model_Column.m */; };
 		6B070DB514F27C4F0044A4CF /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */; };
-		6B070DB614F27C4F0044A4CF /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_Field.m */; };
+		6B070DB614F27C4F0044A4CF /* expanz_model_FieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */; };
 		6B070DB714F27C4F0044A4CF /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBD14EF920300909A38 /* expanz_model_File.m */; };
 		6B070DB814F27C4F0044A4CF /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBF14EF920300909A38 /* expanz_model_FileResource.m */; };
 		6B070DB914F27C4F0044A4CF /* expanz_model_Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DC114EF920300909A38 /* expanz_model_Folder.m */; };
@@ -169,10 +169,10 @@
 		6B718E4D14EF920300909A38 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */; };
 		6B718E4F14EF920300909A38 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */; };
 		6B718E5014EF920300909A38 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */; };
-		6B718E5214EF920300909A38 /* expanz_model_Field.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_Field.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B718E5314EF920300909A38 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_Field.m */; };
-		6B718E5514EF920300909A38 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_Field.m */; };
-		6B718E5614EF920300909A38 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_Field.m */; };
+		6B718E5214EF920300909A38 /* expanz_model_FieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_FieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B718E5314EF920300909A38 /* expanz_model_FieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */; };
+		6B718E5514EF920300909A38 /* expanz_model_FieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */; };
+		6B718E5614EF920300909A38 /* expanz_model_FieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */; };
 		6B718E5814EF920300909A38 /* expanz_model_File.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBC14EF920300909A38 /* expanz_model_File.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718E5914EF920300909A38 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBD14EF920300909A38 /* expanz_model_File.m */; };
 		6B718E5B14EF920300909A38 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DBD14EF920300909A38 /* expanz_model_File.m */; };
@@ -342,7 +342,7 @@
 		6B9FC7C914FDAB8200E4CB2C /* expanz_model_ActivityStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */; };
 		6B9FC7CA14FDAB8200E4CB2C /* expanz_model_Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB614EF920300909A38 /* expanz_model_Column.h */; };
 		6B9FC7CB14FDAB8200E4CB2C /* expanz_model_DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB814EF920300909A38 /* expanz_model_DataBuilder.h */; };
-		6B9FC7CC14FDAB8200E4CB2C /* expanz_model_Field.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_Field.h */; };
+		6B9FC7CC14FDAB8200E4CB2C /* expanz_model_FieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_FieldInstance.h */; };
 		6B9FC7CD14FDAB8200E4CB2C /* expanz_model_File.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBC14EF920300909A38 /* expanz_model_File.h */; };
 		6B9FC7CE14FDAB8200E4CB2C /* expanz_model_FileResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBE14EF920300909A38 /* expanz_model_FileResource.h */; };
 		6B9FC7CF14FDAB8200E4CB2C /* expanz_model_Folder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DC014EF920300909A38 /* expanz_model_Folder.h */; };
@@ -432,7 +432,7 @@
 		6B9FC82414FDABA500E4CB2C /* expanz_model_ActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */; };
 		6B9FC82514FDABA500E4CB2C /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB614EF920300909A38 /* expanz_model_Column.h */; };
 		6B9FC82614FDABA500E4CB2C /* expanz_model_DataBuilder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB814EF920300909A38 /* expanz_model_DataBuilder.h */; };
-		6B9FC82714FDABA500E4CB2C /* expanz_model_Field.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_Field.h */; };
+		6B9FC82714FDABA500E4CB2C /* expanz_model_FieldInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBA14EF920300909A38 /* expanz_model_FieldInstance.h */; };
 		6B9FC82814FDABA500E4CB2C /* expanz_model_File.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBC14EF920300909A38 /* expanz_model_File.h */; };
 		6B9FC82914FDABA500E4CB2C /* expanz_model_FileResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DBE14EF920300909A38 /* expanz_model_FileResource.h */; };
 		6B9FC82A14FDABA500E4CB2C /* expanz_model_Folder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DC014EF920300909A38 /* expanz_model_Folder.h */; };
@@ -701,7 +701,7 @@
 		6BFDE7761495FA01005D3522 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
 		6BFDE7761495FA01005D3523 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D351F /* expanz_CoreModule.m */; };
 		6BFDE7761495FA01005D3526 /* expanz_CoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFDE7761495FA01005D3528 /* RXMLElement_ListAvailableSitesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3527 /* RXMLElement_ListAvailableSitesSpec.m */; };
+		6BFDE7761495FA01005D3528 /* RXMLElement+SiteDetailsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3527 /* RXMLElement+SiteDetailsSpec.m */; };
 		6BFDE7761495FA01005D352B /* expanz_model_AppSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3529 /* expanz_model_AppSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BFDE7761495FA01005D3532 /* ListAvailableSitesResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3531 /* ListAvailableSitesResponse.xml */; };
 		6BFDE7761495FA01005D3534 /* DefaultSiteDetailsClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */; };
@@ -738,7 +738,6 @@
 		6BFDE7761495FA01005D357B /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3578 /* RXMLElement+SiteDetails.m */; };
 		6BFDE7761495FA01005D357C /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3578 /* RXMLElement+SiteDetails.m */; };
 		6BFDE7761495FA01005D357F /* RXMLElement+SiteDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D357D /* RXMLElement+SiteDetails.h */; };
-		6BFDE7761495FA01005D3581 /* RXMLElement+ListActivitiesForSiteSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3580 /* RXMLElement+ListActivitiesForSiteSpec.m */; };
 		6BFDE7761495FA01005D3583 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3582 /* DocumentView.xib */; };
 		6BFDE7761495FA01005D3585 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3584 /* expanz_model_ActivitySchema.m */; };
 		6BFDE7761495FA01005D3586 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3584 /* expanz_model_ActivitySchema.m */; };
@@ -747,6 +746,18 @@
 		6BFDE7761495FA01005D358A /* expanz_model_ActivitySchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3589 /* expanz_model_ActivitySchema.h */; };
 		6BFDE7761495FA01005D358B /* expanz_model_ActivitySchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3589 /* expanz_model_ActivitySchema.h */; };
 		6BFDE7761495FA01005D358D /* GetSchemaForActivityXResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D358C /* GetSchemaForActivityXResponse.xml */; };
+		6BFDE7761495FA01005D358F /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */; };
+		6BFDE7761495FA01005D3590 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */; };
+		6BFDE7761495FA01005D3591 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */; };
+		6BFDE7761495FA01005D3592 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */; };
+		6BFDE7761495FA01005D3594 /* expanz_model_MethodSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */; };
+		6BFDE7761495FA01005D3595 /* expanz_model_MethodSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */; };
+		6BFDE7761495FA01005D3597 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */; };
+		6BFDE7761495FA01005D3598 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */; };
+		6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */; };
+		6BFDE7761495FA01005D359A /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */; };
+		6BFDE7761495FA01005D359C /* expanz_model_FieldSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */; };
+		6BFDE7761495FA01005D359D /* expanz_model_FieldSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -838,7 +849,7 @@
 				6B9FC82414FDABA500E4CB2C /* expanz_model_ActivityStyle.h in Copy Headers */,
 				6B9FC82514FDABA500E4CB2C /* expanz_model_Column.h in Copy Headers */,
 				6B9FC82614FDABA500E4CB2C /* expanz_model_DataBuilder.h in Copy Headers */,
-				6B9FC82714FDABA500E4CB2C /* expanz_model_Field.h in Copy Headers */,
+				6B9FC82714FDABA500E4CB2C /* expanz_model_FieldInstance.h in Copy Headers */,
 				6B9FC82814FDABA500E4CB2C /* expanz_model_File.h in Copy Headers */,
 				6B9FC82914FDABA500E4CB2C /* expanz_model_FileResource.h in Copy Headers */,
 				6B9FC82A14FDABA500E4CB2C /* expanz_model_Folder.h in Copy Headers */,
@@ -913,8 +924,8 @@
 		6B718DB714EF920300909A38 /* expanz_model_Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Column.m; sourceTree = "<group>"; };
 		6B718DB814EF920300909A38 /* expanz_model_DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataBuilder.h; sourceTree = "<group>"; };
 		6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataBuilder.m; sourceTree = "<group>"; };
-		6B718DBA14EF920300909A38 /* expanz_model_Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Field.h; sourceTree = "<group>"; };
-		6B718DBB14EF920300909A38 /* expanz_model_Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Field.m; sourceTree = "<group>"; };
+		6B718DBA14EF920300909A38 /* expanz_model_FieldInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldInstance.h; sourceTree = "<group>"; };
+		6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FieldInstance.m; sourceTree = "<group>"; };
 		6B718DBC14EF920300909A38 /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_File.h; sourceTree = "<group>"; };
 		6B718DBD14EF920300909A38 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_File.m; sourceTree = "<group>"; };
 		6B718DBE14EF920300909A38 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
@@ -1185,7 +1196,7 @@
 		6BFDE7761495FA01005D3511 /* expanz_model_AbstractData+DataRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "expanz_model_AbstractData+DataRenderer.h"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D351F /* expanz_CoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_CoreModule.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_CoreModule.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3527 /* RXMLElement_ListAvailableSitesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ListAvailableSitesSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3527 /* RXMLElement+SiteDetailsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SiteDetailsSpec.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3529 /* expanz_model_AppSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AppSite.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3531 /* ListAvailableSitesResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ListAvailableSitesResponse.xml; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSiteDetailsClientIntegration.m; sourceTree = "<group>"; };
@@ -1204,11 +1215,14 @@
 		6BFDE7761495FA01005D3573 /* expanz_model_ActivityMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityMenu.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3578 /* RXMLElement+SiteDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SiteDetails.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D357D /* RXMLElement+SiteDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SiteDetails.h"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3580 /* RXMLElement+ListActivitiesForSiteSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ListActivitiesForSiteSpec.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3582 /* DocumentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3584 /* expanz_model_ActivitySchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivitySchema.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3589 /* expanz_model_ActivitySchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivitySchema.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D358C /* GetSchemaForActivityXResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GetSchemaForActivityXResponse.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MethodSchema.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MethodSchema.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FieldSchema.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldSchema.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1378,6 +1392,10 @@
 		6B718DAB14EF920300909A38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */,
+				6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */,
+				6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */,
+				6BFDE7761495FA01005D358E /* expanz_model_MethodSchema.m */,
 				6BFDE7761495FA01005D3589 /* expanz_model_ActivitySchema.h */,
 				6BFDE7761495FA01005D3584 /* expanz_model_ActivitySchema.m */,
 				6BFDE7761495FA01005D3573 /* expanz_model_ActivityMenu.h */,
@@ -1400,8 +1418,8 @@
 				6B718DB714EF920300909A38 /* expanz_model_Column.m */,
 				6B718DB814EF920300909A38 /* expanz_model_DataBuilder.h */,
 				6B718DB914EF920300909A38 /* expanz_model_DataBuilder.m */,
-				6B718DBA14EF920300909A38 /* expanz_model_Field.h */,
-				6B718DBB14EF920300909A38 /* expanz_model_Field.m */,
+				6B718DBA14EF920300909A38 /* expanz_model_FieldInstance.h */,
+				6B718DBB14EF920300909A38 /* expanz_model_FieldInstance.m */,
 				6B718DBC14EF920300909A38 /* expanz_model_File.h */,
 				6B718DBD14EF920300909A38 /* expanz_model_File.m */,
 				6B718DBE14EF920300909A38 /* expanz_model_FileResource.h */,
@@ -1996,8 +2014,7 @@
 		6BFDE7761495FA01005D34D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D3580 /* RXMLElement+ListActivitiesForSiteSpec.m */,
-				6BFDE7761495FA01005D3527 /* RXMLElement_ListAvailableSitesSpec.m */,
+				6BFDE7761495FA01005D3527 /* RXMLElement+SiteDetailsSpec.m */,
 				6BFDE7761495FA01005D34EB /* SessionRequestSpec.m */,
 				6BFDE7761495FA01005D34E9 /* SessionDataRequestSpec.m */,
 				6BFDE7761495FA01005D34E7 /* RXMLElement_ResourceCollectionSpec.m */,
@@ -2166,7 +2183,7 @@
 				6B9FC7C914FDAB8200E4CB2C /* expanz_model_ActivityStyle.h in Headers */,
 				6B9FC7CA14FDAB8200E4CB2C /* expanz_model_Column.h in Headers */,
 				6B9FC7CB14FDAB8200E4CB2C /* expanz_model_DataBuilder.h in Headers */,
-				6B9FC7CC14FDAB8200E4CB2C /* expanz_model_Field.h in Headers */,
+				6B9FC7CC14FDAB8200E4CB2C /* expanz_model_FieldInstance.h in Headers */,
 				6B9FC7CD14FDAB8200E4CB2C /* expanz_model_File.h in Headers */,
 				6B9FC7CE14FDAB8200E4CB2C /* expanz_model_FileResource.h in Headers */,
 				6B9FC7CF14FDAB8200E4CB2C /* expanz_model_Folder.h in Headers */,
@@ -2185,6 +2202,8 @@
 				6B9FC7DC14FDAB8200E4CB2C /* expanz_SdkConfiguration.h in Headers */,
 				6B9FC7DD14FDAB8200E4CB2C /* expanz_CoreModule.h in Headers */,
 				6BFDE7761495FA01005D358A /* expanz_model_ActivitySchema.h in Headers */,
+				6BFDE7761495FA01005D3594 /* expanz_model_MethodSchema.h in Headers */,
+				6BFDE7761495FA01005D359C /* expanz_model_FieldSchema.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2200,7 +2219,7 @@
 				6B718E4014EF920300909A38 /* expanz_model_ActivityStyle.h in Headers */,
 				6B718E4614EF920300909A38 /* expanz_model_Column.h in Headers */,
 				6B718E4C14EF920300909A38 /* expanz_model_DataBuilder.h in Headers */,
-				6B718E5214EF920300909A38 /* expanz_model_Field.h in Headers */,
+				6B718E5214EF920300909A38 /* expanz_model_FieldInstance.h in Headers */,
 				6B718E5814EF920300909A38 /* expanz_model_File.h in Headers */,
 				6B718E5E14EF920300909A38 /* expanz_model_FileResource.h in Headers */,
 				6B718E6414EF920300909A38 /* expanz_model_Folder.h in Headers */,
@@ -2282,6 +2301,8 @@
 				6BFDE7761495FA01005D3575 /* expanz_model_ActivityMenu.h in Headers */,
 				6BFDE7761495FA01005D357F /* RXMLElement+SiteDetails.h in Headers */,
 				6BFDE7761495FA01005D358B /* expanz_model_ActivitySchema.h in Headers */,
+				6BFDE7761495FA01005D3595 /* expanz_model_MethodSchema.h in Headers */,
+				6BFDE7761495FA01005D359D /* expanz_model_FieldSchema.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2525,7 +2546,7 @@
 				6B718E4114EF920300909A38 /* expanz_model_ActivityStyle.m in Sources */,
 				6B718E4714EF920300909A38 /* expanz_model_Column.m in Sources */,
 				6B718E4D14EF920300909A38 /* expanz_model_DataBuilder.m in Sources */,
-				6B718E5314EF920300909A38 /* expanz_model_Field.m in Sources */,
+				6B718E5314EF920300909A38 /* expanz_model_FieldInstance.m in Sources */,
 				6B718E5914EF920300909A38 /* expanz_model_File.m in Sources */,
 				6B718E5F14EF920300909A38 /* expanz_model_FileResource.m in Sources */,
 				6B718E6514EF920300909A38 /* expanz_model_Folder.m in Sources */,
@@ -2589,6 +2610,8 @@
 				6BFDE7761495FA01005D356F /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D3579 /* RXMLElement+SiteDetails.m in Sources */,
 				6BFDE7761495FA01005D3585 /* expanz_model_ActivitySchema.m in Sources */,
+				6BFDE7761495FA01005D358F /* expanz_model_MethodSchema.m in Sources */,
+				6BFDE7761495FA01005D3597 /* expanz_model_FieldSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2638,7 +2661,7 @@
 				6B070DB314F27C4F0044A4CF /* expanz_model_ActivityStyle.m in Sources */,
 				6B070DB414F27C4F0044A4CF /* expanz_model_Column.m in Sources */,
 				6B070DB514F27C4F0044A4CF /* expanz_model_DataBuilder.m in Sources */,
-				6B070DB614F27C4F0044A4CF /* expanz_model_Field.m in Sources */,
+				6B070DB614F27C4F0044A4CF /* expanz_model_FieldInstance.m in Sources */,
 				6B070DB714F27C4F0044A4CF /* expanz_model_File.m in Sources */,
 				6B070DB814F27C4F0044A4CF /* expanz_model_FileResource.m in Sources */,
 				6B070DB914F27C4F0044A4CF /* expanz_model_Folder.m in Sources */,
@@ -2707,7 +2730,7 @@
 				6BFDE7761495FA01005D3523 /* expanz_CoreModule.m in Sources */,
 				6BB7021D14F39DB70029A94B /* expanz_model_AppSite.m in Sources */,
 				6BB7022314F39DB70029A94B /* expanz_model_SiteList.m in Sources */,
-				6BFDE7761495FA01005D3528 /* RXMLElement_ListAvailableSitesSpec.m in Sources */,
+				6BFDE7761495FA01005D3528 /* RXMLElement+SiteDetailsSpec.m in Sources */,
 				6BFDE7761495FA01005D3534 /* DefaultSiteDetailsClientIntegration.m in Sources */,
 				6BB702B214F3C78B0029A94B /* expanz_service_DefaultActivityClient.m in Sources */,
 				6BB702B814F3C78B0029A94B /* expanz_service_CreateActivityRequest.m in Sources */,
@@ -2734,8 +2757,9 @@
 				6BFDE7761495FA01005D3567 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
 				6BFDE7761495FA01005D3572 /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D357C /* RXMLElement+SiteDetails.m in Sources */,
-				6BFDE7761495FA01005D3581 /* RXMLElement+ListActivitiesForSiteSpec.m in Sources */,
 				6BFDE7761495FA01005D3588 /* expanz_model_ActivitySchema.m in Sources */,
+				6BFDE7761495FA01005D3592 /* expanz_model_MethodSchema.m in Sources */,
+				6BFDE7761495FA01005D359A /* expanz_model_FieldSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2761,7 +2785,7 @@
 				6B718E4414EF920300909A38 /* expanz_model_ActivityStyle.m in Sources */,
 				6B718E4A14EF920300909A38 /* expanz_model_Column.m in Sources */,
 				6B718E5014EF920300909A38 /* expanz_model_DataBuilder.m in Sources */,
-				6B718E5614EF920300909A38 /* expanz_model_Field.m in Sources */,
+				6B718E5614EF920300909A38 /* expanz_model_FieldInstance.m in Sources */,
 				6B718E5C14EF920300909A38 /* expanz_model_File.m in Sources */,
 				6B718E6214EF920300909A38 /* expanz_model_FileResource.m in Sources */,
 				6B718E6814EF920300909A38 /* expanz_model_Folder.m in Sources */,
@@ -2806,6 +2830,8 @@
 				6BFDE7761495FA01005D3571 /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D357B /* RXMLElement+SiteDetails.m in Sources */,
 				6BFDE7761495FA01005D3587 /* expanz_model_ActivitySchema.m in Sources */,
+				6BFDE7761495FA01005D3591 /* expanz_model_MethodSchema.m in Sources */,
+				6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2845,7 +2871,7 @@
 				6B718E4314EF920300909A38 /* expanz_model_ActivityStyle.m in Sources */,
 				6B718E4914EF920300909A38 /* expanz_model_Column.m in Sources */,
 				6B718E4F14EF920300909A38 /* expanz_model_DataBuilder.m in Sources */,
-				6B718E5514EF920300909A38 /* expanz_model_Field.m in Sources */,
+				6B718E5514EF920300909A38 /* expanz_model_FieldInstance.m in Sources */,
 				6B718E5B14EF920300909A38 /* expanz_model_File.m in Sources */,
 				6B718E6114EF920300909A38 /* expanz_model_FileResource.m in Sources */,
 				6B718E6714EF920300909A38 /* expanz_model_Folder.m in Sources */,
@@ -2909,6 +2935,8 @@
 				6BFDE7761495FA01005D3570 /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D357A /* RXMLElement+SiteDetails.m in Sources */,
 				6BFDE7761495FA01005D3586 /* expanz_model_ActivitySchema.m in Sources */,
+				6BFDE7761495FA01005D3590 /* expanz_model_MethodSchema.m in Sources */,
+				6BFDE7761495FA01005D3598 /* expanz_model_FieldSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
