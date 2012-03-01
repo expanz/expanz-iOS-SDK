@@ -11,12 +11,12 @@
 
 
 #import "expanz_service_AbstractServiceClient.h"
-#import "RXMLElement+ListAvailableSites.h"
 #import "expanz_service_SiteDetailsClientDelegate.h"
 #import "expanz_service_DefaultSiteDetailsClient.h"
 #import "expanz_model_SiteList.h"
 #import "expanz_model_ActivityMenu.h"
-#import "RXMLElement+ListActivitiesForSite.h"
+#import "RXMLElement+SiteDetails.h"
+#import "expanz_model_ActivitySchema.h"
 
 
 @interface expanz_service_DefaultSiteDetailsClient (private)
@@ -49,7 +49,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) listAvailableSitesWith:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+- (void) listAvailableSitesWithDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
 
     [self.httpTransport get:self.listAvailableSitesUrl withBlock:^(LRRestyResponse* response) {
 
@@ -66,15 +66,15 @@
     }];
 }
 
-- (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
-    LogDebug(@"in list activities for site");
+- (void) listActivitiesForSite:(NSString*)site withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+
     NSDictionary* parameters = [NSDictionary dictionaryWithObject:site forKey:@"site"];
     [self.httpTransport get:self.listActivitiesForSiteUrl parameters:parameters withBlock:^(LRRestyResponse* response) {
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
             ActivityMenu* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
-                    child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityDefinitionList];
+                    child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityMenu];
             [delegate requestDidFinishWithActivityMenu:activityList];
         }
         else {
@@ -83,8 +83,29 @@
         }
 
     }];
-
 }
 
+
+- (void) site:(NSString*)siteId retriveSchemaForActivity:(NSString*)activityId
+        withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:siteId, @"site", activityId, @"activity", nil];
+    [self.httpTransport get:self.schemaForActivityUrl parameters:params withBlock:^(LRRestyResponse* response) {
+
+        if (response.status == 200) {
+            LogDebug(@"Response: %@", [response asString]);
+            ActivitySchema* activitySchema = [[[RXMLElement elementFromXMLString:[response asString]]
+                    child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
+            [delegate requestDidFinishWithActivitySchema:activitySchema];
+        }
+        else {
+            LogDebug(@"In dispatch error");
+            [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+        }
+
+    }];
+
+
+}
 
 @end

@@ -1,0 +1,54 @@
+<GetSchemaForActivityXResponse xmlns="http://www.expanz.com/ESAService">
+    <GetSchemaForActivityXResult>
+        <ESA xmlns="">
+            <Activity id="Sales.Customer" title="Customers" modelObject="Customer" ui-xvalue="200" ui-yvalue="200"
+                      ui-zvalue="0" ui-height="NaN" ui-width="NaN" ui-class_expanded="1" ui-fields_expanded="1"
+                      ui-show_inherited_fields="0" ui-methods_expanded="1" ui-show_inherited_methods="0"
+                      tableName="Customers">
+                <Method name="DefaultActionMenu" description="Publish a context menu" baseMethod="1"/>
+                <Method name="Save" description="Attempt to persistently save data" publish="1" specialAttribute="dirty"
+                        baseMethod="1"/>
+                <Method name="PrintMe" description="Publish to XML and render to default PDF" publish="1"
+                        baseMethod="1"/>
+                <Method name="Refresh" description="Refresh the current record" publish="1" baseMethod="1"/>
+                <Method name="Restart" description="Restart the model object clear any context" publish="1"
+                        baseMethod="1"/>
+                <Method name="Delete" description="Delete the current record" publish="1" specialAttribute="dirty"
+                        baseMethod="1"/>
+                <Method name="DeleteConfirm" description="Delete the current record after confirmation" publish="1"
+                        specialAttribute="dirty" baseMethod="1"/>
+                <Field name="PersistentId" colName="customer_id" class="IDKeyEx" value="0"/>
+                <Field name="RowVersion" class="DBRowVersion" colName="row_version" nullable="0" value="1"/>
+                <Field name="SearchCode" class="AutoSearchCode" wantAutoGen="true" colName="SearchCode"
+                       label="Search Code" multiline="0" nullable="0" registerAlternateKey="true" trimmed="1"
+                       maxLength="20" textCase="upper"/>
+                <Field name="FirstName" class="StringEx" colName="FirstName" label="First Name" multiline="0"
+                       nullable="0" trimmed="1"/>
+                <Field name="LastName" class="StringEx" colName="LastName" label="Last Name" multiline="0" nullable="0"
+                       trimmed="1"/>
+                <Field name="Phone" class="PhoneNumberEx" colName="Phone" label="Phone" multiline="0" nullable="1"
+                       trimmed="1" validCharacters="()- .+x"/>
+                <Field name="Email" class="EmailAddress" colName="Email" label="Email" multiline="0" nullable="1"
+                       trimmed="1"/>
+                <Field name="Discount" class="PercentageEx" colName="Discount" label="Discount" nullable="1" scale="4"
+                       precision="5"/>
+                <Field name="CustomerFullName" class="ConcatenatedStringEx" concatFields="FirstName,LastName"
+                       label="Customer Full Name" multiline="0" nullable="1" trimmed="1" disabled="1"/>
+                <Field name="CustomerPhoto" class="BLOBEx" colName="customerphoto" label="CustomerPhoto"/>
+                <Field name="CreditCard" class="SecureString" colName="CreditCard" label="Credit Card" multiline="0"
+                       nullable="1" trimmed="1"/>
+                <Method name="ListCustomers" description="Lists all customers" isDataPublication="True"/>
+                <Style name="" defaultcontainer="Window" defaultformlayout="Details"/>
+                <Style name="Browse" defaultcontainer="Page" defaultformlayout="SummaryList"/>
+            </Activity>
+            <Queries>
+                <Query id="ListCustomersMobile" activityname="Sales.Customer" description="">
+                    <Field width="100" name="CustomerFullName" title="Full Name"/>
+                    <Field width="100" name="Email" title="Email"/>
+                    <Field width="100" name="Discount"/>
+                </Query>
+            </Queries>
+        </ESA>
+    </GetSchemaForActivityXResult>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</GetSchemaForActivityXResponse>

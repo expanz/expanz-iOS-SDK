@@ -12,4 +12,7 @@
 
 
 @interface expanz_model_ActivitySchema : NSObject
+
 @end
+/* ================================================================================================================== */
+@compatibility_alias ActivitySchema expanz_model_ActivitySchema;

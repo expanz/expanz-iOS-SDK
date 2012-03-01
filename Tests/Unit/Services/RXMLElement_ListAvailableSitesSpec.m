@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement+ListAvailableSites.h"
+#import "RXMLElement+SiteDetails.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_SiteList.h"
 #import "TestResource.h"

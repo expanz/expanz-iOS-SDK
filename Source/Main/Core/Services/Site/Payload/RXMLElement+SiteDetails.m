@@ -8,15 +8,27 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-#import "RXMLElement+ListAvailableSites.h"
-#import "expanz_model_AppSite.h"
+#import "RXMLElement+SiteDetails.h"
+#import "expanz_model_ActivityMenu.h"
 #import "expanz_model_SiteList.h"
+#import "expanz_model_AppSite.h"
+#import "expanz_model_ActivitySchema.h"
 
+@implementation RXMLElement (SiteDetails)
 
+- (expanz_model_ActivityMenu*) asActivityMenu {
+    if (![self.tag isEqualToString:@"Activities"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
+    }
 
-@implementation RXMLElement (ListAvailableSites)
-
+    ActivityMenu* activityList = [[ActivityMenu alloc] init];
+    [self iterate:@"*" with:^(RXMLElement* element) {
+        ActivityMenuItem* definition = [[ActivityMenuItem alloc]
+                initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
+        [activityList addActivityDefinition:definition];
+    }];
+    return activityList;
+}
 
 - (expanz_model_SiteList*) asSiteList {
     if (![self.tag isEqualToString:@"AppSites"]) {
@@ -39,5 +51,11 @@
                            authenticationMode:[self attribute:@"authenticationMode"]];
 }
 
+- (expanz_model_ActivitySchema*) asActivitySchema {
+    if (![self.tag isEqualToString:@"Activity"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
+    }
+    return [[ActivitySchema alloc] init];
+}
 
 @end

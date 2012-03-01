@@ -20,8 +20,11 @@
 
 @protocol expanz_service_SiteDetailsClient<NSObject>
 
-- (void) listAvailableSitesWith:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
+- (void) listAvailableSitesWithDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
-- (void) listActivitiesForSite:(NSString*)site with:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
+- (void) listActivitiesForSite:(NSString*)site withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
+
+- (void) site:(NSString*)siteId retriveSchemaForActivity:(NSString*)activityId
+        withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
 @end
