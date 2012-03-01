@@ -18,7 +18,6 @@
     }
     return self;
 }
-
 - (NSString *)name
 {
     return [NSString stringWithUTF8String: ivar_getName(_ivar)];

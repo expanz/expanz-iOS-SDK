@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_model_MethodSchema.h"
+#import "expanz_model_FieldSchema.h"
 
 
 @implementation expanz_model_ActivitySchema

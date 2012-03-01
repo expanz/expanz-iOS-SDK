@@ -12,6 +12,7 @@
 
 @class expanz_model_FieldInstance;
 @class expanz_model_MethodSchema;
+@class expanz_model_FieldSchema;
 
 
 @interface expanz_model_ActivitySchema : NSObject {
@@ -28,7 +29,7 @@
 @property(nonatomic, strong, readonly) NSArray* styles;
 @property(nonatomic, strong, readonly) NSArray* queries;
 
-- (void) addField:(expanz_model_FieldInstance*)field;
+- (void) addField:(expanz_model_FieldSchema*)field;
 
 - (void) addMethod:(expanz_model_MethodSchema*)method;
 
