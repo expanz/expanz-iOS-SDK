@@ -79,7 +79,7 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
     return [[FieldSchema alloc]
-            initWithName:[self attribute:@"name"] class:[self attribute:@"class"] label:[self attribute:@"label"]];
+            initWithName:[self attribute:@"name"] expanzType:[self attribute:@"class"] label:[self attribute:@"label"]];
 
 }
 

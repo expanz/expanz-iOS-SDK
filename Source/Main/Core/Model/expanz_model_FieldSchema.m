@@ -14,15 +14,15 @@
 @implementation expanz_model_FieldSchema
 
 @synthesize name = _name;
-@synthesize class = _class;
+@synthesize expanzType = _expanzType;
 @synthesize label = _label;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithName:(NSString*)name class:(NSString*)class label:(NSString*)label {
+- (id) initWithName:(NSString*)name expanzType:(NSString*)expanzType label:(NSString*)label {
     self = [super init];
     if (self) {
         _name = name;
-        _class = class;
+        _expanzType = expanzType;
         _label = label;
     }
 
@@ -31,7 +31,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"FieldSchema: name=%@, class=%@, label=%@", _name, _class, _label];
+    return [NSString stringWithFormat:@"FieldSchema: name=%@, expanzType=%@, label=%@", _name, _expanzType, _label];
 }
 
 

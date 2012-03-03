@@ -14,10 +14,10 @@
 @interface expanz_model_FieldSchema : NSObject
 
 @property(nonatomic, strong, readonly) NSString* name;
-@property(nonatomic, strong, readonly) NSString* class;
+@property(nonatomic, strong, readonly) NSString* expanzType;
 @property(nonatomic, strong, readonly) NSString* label;
 
-- (id) initWithName:(NSString*)name class:(NSString*)class label:(NSString*)label;
+- (id) initWithName:(NSString*)name expanzType:(NSString*)expanzType label:(NSString*)label;
 
 
 @end
