@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "../../../Source/Main/Core/expanz_SdkConfiguration.h"
+#import "expanz_SdkConfiguration.h"
 
 SPEC_BEGIN(SdkConfigurationSpec)
 
@@ -57,7 +57,7 @@ SPEC_BEGIN(SdkConfigurationSpec)
         it(@"should allow setting the global configuration a class method", ^{
 
             [SdkConfiguration clearGlobalConfiguration];
-            [SdkConfiguration setConfigurationFile:@"configFile.xml"];
+            [SdkConfiguration setConfigurationFile:@"test_environment.xml"];
 
 
             [[SdkConfiguration globalConfiguration] shouldNotBeNil];

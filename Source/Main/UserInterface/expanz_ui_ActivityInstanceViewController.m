@@ -62,7 +62,7 @@
 - (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
                        initialKey:(NSString*)initialKey {
 
-    self = [super initWithNibName:nibName bundle:[NSBundle bundleForClass:[ActivityInstanceViewController class]]];
+    self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];

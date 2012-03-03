@@ -12,7 +12,7 @@
 #import "expanz_ui_LoginViewController.h"
 #import "JSObjectionInjector.h"
 #import "JSObjection.h"
-#import "../../../Source/Main/Core/expanz_UserInterfaceModule.h"
+#import "expanz_UserInterfaceModule.h"
 
 SPEC_BEGIN(LoginViewControllerSpec)
 
@@ -24,17 +24,17 @@ describe(@"Object creation", ^{
         [JSObjection setGlobalInjector:injector];
     });
     
-//    it(@"should provide a default initializer that loads the default nib from the main bundle.", ^{
-//        LoginViewController* loginController = [[LoginViewController alloc] init];
-//        [loginController shouldBeNil];
-//        [loginController.view shouldNotBeNil];
-//
-//        [theValue([loginController loginClient]) shouldNotBeNil];
-//
-//        [loginController.loginButton shouldNotBeNil];
-//        [loginController.spinner shouldNotBeNil];
-//        [loginController.userNameAndPasswordForm shouldNotBeNil];
-//    });
+    it(@"should provide a default initializer that loads the default nib from the main bundle.", ^{
+        LoginViewController* loginController = [[LoginViewController alloc] init];
+        [loginController shouldNotBeNil];
+        [loginController.view shouldNotBeNil];
+
+        [theValue([loginController loginClient]) shouldNotBeNil];
+
+        [loginController.loginButton shouldNotBeNil];
+        [loginController.spinner shouldNotBeNil];
+        [loginController.userNameAndPasswordForm shouldNotBeNil];
+    });
     
 });
 

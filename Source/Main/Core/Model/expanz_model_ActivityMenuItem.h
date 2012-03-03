@@ -18,7 +18,7 @@
 @property(nonatomic, strong, readonly) NSString* title;
 @property(nonatomic, strong, readonly) ActivityStyle* style;
 
-- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
+- (id) initWithActivityId:(NSString*)activityId title:(NSString*)title style:(ActivityStyle*)style;
 
 @end
 

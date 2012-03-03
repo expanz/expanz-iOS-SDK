@@ -15,7 +15,7 @@
 #import "expanz_model_ActivityMenuItem.h"
 
 
-SPEC_BEGIN(ActivityManagerSpec)
+SPEC_BEGIN(NavigationManagerSpec)
 
     describe(@"Transitioning from a menu or activity to another activity view", ^{
 

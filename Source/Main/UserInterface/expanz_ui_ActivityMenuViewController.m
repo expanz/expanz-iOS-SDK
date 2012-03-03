@@ -17,6 +17,7 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_NavigationManager.h"
+#import "expanz_service_SessionDataClient.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController

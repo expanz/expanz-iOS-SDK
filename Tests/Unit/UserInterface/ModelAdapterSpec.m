@@ -14,10 +14,9 @@
 #import "expanz_model_FieldInstance.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_GridData.h"
-#import "../../../Dependencies/External/RaptureXML/RXMLElement+ListAvailableSites+ListAvailableSites+ListAvailableSites.h"
-#import "../../../Source/Main/Core/Services/Activity/Payload/RXMLElement+ListAvailableSites+ActivityInstance.h"
 #import "TestFixture_ViewController.h"
 #import "TestResource.h"
+#import "RXMLElement+ActivityInstance.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
@@ -27,9 +26,9 @@ SPEC_BEGIN(ModelAdapterSpec)
 
     beforeEach(^{
         ActivityMenuItem* activity =
-            [[ActivityMenuItem alloc] initWithName:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
+            [[ActivityMenuItem alloc] initWithActivityId:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle]];
         viewController = [[TestFixture_ViewController alloc]
-            initWithActivityDefinition:activity nibName:@"TestFixtureView" initialKey:nil];
+            initWithActivityDefinition:activity nibName:@"TestFixture" initialKey:nil];
         [viewController shouldNotBeNil];
         [viewController.view shouldNotBeNil];
     });
