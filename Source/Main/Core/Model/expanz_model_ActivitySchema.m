@@ -14,11 +14,15 @@
 
 
 @implementation expanz_model_ActivitySchema
+@synthesize activityId = _activityId;
+@synthesize title = _title;
 
 /* ================================================== Initializers ================================================== */
-- (id) init {
+- (id) initWithActivityId:(NSString*)activityId title:(NSString*)title {
     self = [super init];
     if (self) {
+        _activityId = [activityId copy];
+        _title = [title copy];
         _fields = [[NSMutableArray alloc] init];
         _methods = [[NSMutableArray alloc] init];
         _styles = [[NSMutableArray alloc] init];
@@ -28,6 +32,11 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
+- (NSString*) viewControllerName {
+    return [[_activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]
+            stringByAppendingString:@"_ViewController"];
+}
+
 - (NSArray*) fields {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];

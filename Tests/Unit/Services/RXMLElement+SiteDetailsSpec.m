@@ -63,6 +63,10 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
                 RXMLElement* element = [RXMLElement elementFromXMLString:xml];
                 ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
 
+                [[[schema activityId] should] equal:@"Sales.Customer"];
+                [[[schema viewControllerName] should] equal:@"Sales_Customer_ViewController"];
+                [[[schema title] should] equal:@"Customers"];
+
                 LogDebug(@"Schema: %@", schema);
                 [[[schema fields] should] haveCountOf:11];
                 [[[schema methods] should] haveCountOf:8];

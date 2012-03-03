@@ -24,10 +24,16 @@
     NSMutableArray* _queries;
 }
 
+@property(nonatomic, strong, readonly) NSString* activityId;
+@property(nonatomic, strong, readonly) NSString* title;
 @property(nonatomic, strong, readonly) NSArray* fields;
 @property(nonatomic, strong, readonly) NSArray* methods;
 @property(nonatomic, strong, readonly) NSArray* styles;
 @property(nonatomic, strong, readonly) NSArray* queries;
+
+- (id) initWithActivityId:(NSString*)activity title:(NSString*)title;
+
+- (NSString*) viewControllerName;
 
 - (void) addField:(expanz_model_FieldSchema*)field;
 

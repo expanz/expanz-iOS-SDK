@@ -222,6 +222,7 @@
 		6B932F301433F97900834A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F2F1433F97900834A1B /* SystemConfiguration.framework */; };
 		6B932F321433F98400834A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F311433F98400834A1B /* CFNetwork.framework */; };
 		6B932F361433FA4100834A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F351433FA4000834A1B /* MobileCoreServices.framework */; };
+		6B9C3D8E1501F0EA006A7F97 /* RXMLElement+SiteDetailsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3527 /* RXMLElement+SiteDetailsSpec.m */; };
 		6B9FC78A14FDAB8200E4CB2C /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */; };
 		6B9FC78B14FDAB8200E4CB2C /* JSObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7241495FA01005D332F /* JSObjectFactory.h */; };
 		6B9FC78C14FDAB8200E4CB2C /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7261495FA01005D332F /* JSObjection.h */; };
@@ -2581,6 +2582,7 @@
 				6B6E85C614F115B000FA4B5D /* DefaultSessionDataClientIntegration.m in Sources */,
 				6B22F5311501B6FA00427F39 /* ModelAdapterSpec.m in Sources */,
 				6B152C651501CB58004D471A /* LoginViewControllerSpec.m in Sources */,
+				6B9C3D8E1501F0EA006A7F97 /* RXMLElement+SiteDetailsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

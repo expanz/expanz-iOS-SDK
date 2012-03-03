@@ -59,7 +59,8 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
     }
 
-    ActivitySchema* activitySchema = [[ActivitySchema alloc] init];
+    ActivitySchema* activitySchema =
+            [[ActivitySchema alloc] initWithActivityId:[self attribute:@"id"] title:[self attribute:@"title"]];
     [self iterate:@"*" with:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Field"]) {
