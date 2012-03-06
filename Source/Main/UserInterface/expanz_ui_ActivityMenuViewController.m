@@ -27,17 +27,16 @@
 
 /* ================================================== Initializers ================================================== */
 
-- (id)init {
+- (id) init {
     self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"activities";
-        _sessionDataClient =
-            [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
+        _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
         _activityManger = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
 
         SessionDataRequest* sessionDataRequest =
-            [[SessionDataRequest alloc] initWithSessionToken:[SessionContext globalContext].sessionToken];
+                [[SessionDataRequest alloc] initWithSessionToken:[SessionContext globalContext].sessionToken];
         [_sessionDataClient retrieveSessionDataWith:sessionDataRequest delegate:self];
     }
     return self;
@@ -46,7 +45,7 @@
 
 /* ================================================ Delegate Methods ================================================ */
 
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 
@@ -55,17 +54,17 @@
 
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
 }
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -73,7 +72,7 @@
 /* ================================================================================================================== */
 #pragma mark table view
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
+- (NSInteger) numberOfSectionsInTableView:(UITableView*)tableView {
     if (tableView.style == UITableViewStyleGrouped) {
         return [_menu.processAreas count];
     }
@@ -83,7 +82,7 @@
 }
 
 
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView.style == UITableViewStyleGrouped) {
         return [[[_menu.processAreas objectAtIndex:section] activities] count];
     }
@@ -92,7 +91,7 @@
     }
 }
 
-- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString*) tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
     if (tableView.style == UITableViewStyleGrouped) {
         return [[_menu.processAreas objectAtIndex:section] title];
     }
@@ -102,7 +101,7 @@
 }
 
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     static NSString* reuseId = @"ActivityMenu";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
@@ -125,7 +124,7 @@
     return cell;
 }
 
-- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ActivityMenuItem* activityDefinition;
     if (tableView.style == UITableViewStyleGrouped) {
         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
@@ -142,15 +141,14 @@
 /* ================================================================================================================== */
 #pragma mark SessionDataClientDelegate 
 
-- (void)requestDidFinishWithMenu:(Menu*)menu {
+- (void) requestDidFinishWithMenu:(Menu*)menu {
     _menu = menu;
     [self.menuTable reloadData];
 }
 
-- (void)requestDidFailWithError:(NSError*)error {
+- (void) requestDidFailWithError:(NSError*)error {
     [_reporter reportErrorWithReason:@"There was an unrecoverable error accessing data for the main menu."];
 }
-
 
 
 @end
