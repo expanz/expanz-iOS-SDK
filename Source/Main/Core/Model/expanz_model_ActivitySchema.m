@@ -11,6 +11,7 @@
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_model_MethodSchema.h"
 #import "expanz_model_FieldSchema.h"
+#import "expanz_model_ActivityStyle.h"
 
 
 @implementation expanz_model_ActivitySchema
@@ -34,7 +35,7 @@
 /* ================================================ Interface Methods =============================================== */
 - (NSString*) viewControllerName {
     return [[_activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]
-            stringByAppendingString:@"_ViewController"];
+        stringByAppendingString:@"_ViewController"];
 }
 
 - (NSArray*) fields {
@@ -48,7 +49,8 @@
 }
 
 - (NSArray*) styles {
-    return nil;
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    return [_styles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (NSArray*) queries {
@@ -63,6 +65,11 @@
 - (void) addMethod:(expanz_model_MethodSchema*)method {
     [_methods addObject:method];
 }
+
+- (void) addStyle:(expanz_model_ActivityStyle*)style {
+    [_styles addObject:style];
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {

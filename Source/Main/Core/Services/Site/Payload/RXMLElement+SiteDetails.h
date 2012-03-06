@@ -17,6 +17,7 @@
 @class expanz_model_ActivitySchema;
 @class expanz_model_MethodSchema;
 @class expanz_model_FieldSchema;
+@class expanz_model_ActivityStyle;
 
 @interface RXMLElement (ListActivitiesForSite)
 
@@ -31,6 +32,8 @@
 - (expanz_model_FieldSchema*) asFieldSchema;
 
 - (expanz_model_MethodSchema*) asMethodSchema;
+
+- (expanz_model_ActivityStyle*) asActivityStyle;
 
 
 @end

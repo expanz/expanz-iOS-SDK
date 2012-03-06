@@ -71,6 +71,10 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
                 [[[schema fields] should] haveCountOf:11];
                 [[[schema methods] should] haveCountOf:8];
 
+                [[[schema styles] should] haveCountOf:2];
+                [[[[[schema styles] objectAtIndex:0] name] should] equal:@""];
+                [[[[[schema styles] objectAtIndex:1] name] should] equal:@"Browse"];
+
                 [[[[[schema fields] objectAtIndex:0] name] should] equal:@"CreditCard"];
                 [[[[[schema methods] objectAtIndex:0] name] should] equal:@"DefaultActionMenu"];
 

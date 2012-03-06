@@ -13,11 +13,13 @@
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_ActivitySchema.h"
-#import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_MethodSchema.h"
 #import "expanz_model_FieldSchema.h"
 
 @implementation RXMLElement (SiteDetails)
+
+/* ================================================================================================================== */
+#pragma mark ActivityMenu
 
 - (expanz_model_ActivityMenu*) asActivityMenu {
     if (![self.tag isEqualToString:@"Activities"]) {
@@ -27,11 +29,14 @@
     ActivityMenu* activityList = [[ActivityMenu alloc] init];
     [self iterate:@"*" with:^(RXMLElement* element) {
         ActivityMenuItem* definition = [[ActivityMenuItem alloc]
-                initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
+            initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
         [activityList addActivityDefinition:definition];
     }];
     return activityList;
 }
+
+/* ================================================================================================================== */
+#pragma mark SiteList and children
 
 - (expanz_model_SiteList*) asSiteList {
     if (![self.tag isEqualToString:@"AppSites"]) {
@@ -51,8 +56,11 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
     return [[AppSite alloc] initWithAppSiteId:[self attribute:@"id"] name:[self attribute:@"name"]
-            authenticationMode:[self attribute:@"authenticationMode"]];
+                           authenticationMode:[self attribute:@"authenticationMode"]];
 }
+
+/* ================================================================================================================== */
+#pragma mark ActivitySchema and children
 
 - (expanz_model_ActivitySchema*) asActivitySchema {
     if (![self.tag isEqualToString:@"Activity"]) {
@@ -60,7 +68,7 @@
     }
 
     ActivitySchema* activitySchema =
-            [[ActivitySchema alloc] initWithActivityId:[self attribute:@"id"] title:[self attribute:@"title"]];
+        [[ActivitySchema alloc] initWithActivityId:[self attribute:@"id"] title:[self attribute:@"title"]];
     [self iterate:@"*" with:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Field"]) {
@@ -69,6 +77,10 @@
 
         else if ([e.tag isEqualToString:@"Method"]) {
             [activitySchema addMethod:[e asMethodSchema]];
+        }
+
+        else if ([e.tag isEqualToString:@"Style"]) {
+            [activitySchema addStyle:[e asActivityStyle]];
         }
 
     }];
@@ -80,7 +92,7 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
     return [[FieldSchema alloc]
-            initWithName:[self attribute:@"name"] expanzType:[self attribute:@"class"] label:[self attribute:@"label"]];
+        initWithName:[self attribute:@"name"] expanzType:[self attribute:@"class"] label:[self attribute:@"label"]];
 
 }
 
@@ -89,6 +101,13 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Method."];
     }
     return [[MethodSchema alloc] initWithName:[self attribute:@"name"] description:[self attribute:@"description"]];
+}
+
+- (expanz_model_ActivityStyle*) asActivityStyle {
+    if (![self.tag isEqualToString:@"Style"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Style."];
+    }
+    return [[ActivityStyle alloc] initWithName:[self attribute:@"name"]];
 }
 
 @end
