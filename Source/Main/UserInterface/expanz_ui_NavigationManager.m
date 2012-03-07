@@ -25,10 +25,6 @@
 /* ================================================================================================================== */
 @interface expanz_ui_NavigationManager (private)
 
-- (NSString*) nibNameFor:(ActivityMenuItem*)activityDefinition;
-
-- (NSString*) controllerClassNameFor:(ActivityMenuItem*)activityDefinition;
-
 - (CATransition*) cubeViewTransition;
 
 @end
@@ -70,10 +66,11 @@ objection_requires(@"reporter")
     return [self showActivityWithDefinition:activityDefinition initialKey:nil];
 }
 
-- (BOOL)   showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
-                         initialKey:(NSString*)initialKey {
+- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
+        initialKey:(NSString*)initialKey {
 
-    NSString* controllerClassName = [self controllerClassNameFor:activityDefinition];
+    NSString* controllerClassName =
+            [activityDefinition.style controllerClassNameForActivityId:activityDefinition.activityId];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
     if (clazz == nil) {
         NSString* errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
@@ -82,7 +79,7 @@ objection_requires(@"reporter")
     }
     else {
         ActivityInstanceViewController* nextView = [clazz alloc];
-        NSString* nibName = [self nibNameFor:activityDefinition];
+        NSString* nibName = [activityDefinition.style nibNameForActivityId:activityDefinition.activityId];
         nextView = [nextView initWithActivityDefinition:activityDefinition nibName:nibName initialKey:initialKey];
         [_navigationController pushViewController:nextView animated:YES];
         return YES;
@@ -91,40 +88,17 @@ objection_requires(@"reporter")
 
 - (BOOL) showDocument:(NSString*)documentId {
     ActivityInstanceViewController
-        * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];
+            * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];
     NSString* activityHandle = [currentActivity activityInstance].handle;
 
     DocumentViewController* documentViewController =
-        [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
+            [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
     [_navigationController pushViewController:documentViewController animated:YES];
     return YES;
 }
 
 
 /* ================================================== Private Methods =============================================== */
-- (NSString*) nibNameFor:(ActivityMenuItem*)activityDefinition {
-    NSString* nibName;
-    if ([activityDefinition.style isDefault]) {
-        nibName = activityDefinition.activityId;
-    }
-    else {
-        nibName = [NSString stringWithFormat:@"%@.%@", activityDefinition.activityId, activityDefinition.style.name];
-    }
-    LogDebug(@"Nib name: %@", nibName);
-    return nibName;
-}
-
-- (NSString*) controllerClassNameFor:(ActivityMenuItem*)activityDefinition {
-    NSMutableString* controllerClassName = [NSMutableString
-        stringWithString:[activityDefinition.activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
-    if (![activityDefinition.style isDefault]) {
-        [controllerClassName appendString:[NSString stringWithFormat:@"_%@", activityDefinition.style.name]];
-    }
-    [controllerClassName appendString:@"_ViewController"];
-    LogDebug(@"Controller class name: %@", controllerClassName);
-    return controllerClassName;
-}
-
 //TODO: Private API - replace this with library call.
 - (CATransition*) cubeViewTransition {
     static const NSTimeInterval kAnimationDuration = 0.75f;

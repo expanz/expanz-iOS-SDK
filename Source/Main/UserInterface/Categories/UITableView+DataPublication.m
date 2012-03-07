@@ -66,7 +66,11 @@ static char const* const fieldNameskey = "fieldNames";
 
 - (ActivityInstanceViewController*) activityController {
     id appDelegate = (SdkAppDelegate*) [UIApplication sharedApplication].delegate;
-    return (ActivityInstanceViewController*) [appDelegate navigationController].topViewController;
+    UIViewController* topController = [appDelegate navigationController].topViewController;
+    if ([topController isKindOfClass:([ActivityInstanceViewController class])]) {
+        return topController;
+    }
+    return nil;
 }
 
 @end

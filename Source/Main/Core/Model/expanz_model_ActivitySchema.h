@@ -35,8 +35,6 @@
 
 - (id) initWithActivityId:(NSString*)activity title:(NSString*)title;
 
-- (NSString*) viewControllerName;
-
 - (void) addField:(expanz_model_FieldSchema*)field;
 
 - (void) addMethod:(expanz_model_MethodSchema*)method;

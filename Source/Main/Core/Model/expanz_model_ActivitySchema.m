@@ -34,10 +34,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) viewControllerName {
-    return [[_activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]
-            stringByAppendingString:@"_ViewController"];
-}
 
 - (NSArray*) fields {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];

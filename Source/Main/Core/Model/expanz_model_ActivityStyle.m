@@ -17,20 +17,20 @@
 @synthesize name = _name;
 
 /* ================================================= Class Methods ================================================== */
-+ (expanz_model_ActivityStyle*)defaultStyle {
++ (expanz_model_ActivityStyle*) defaultStyle {
     return [[ActivityStyle alloc] initWithName:nil];
 }
 
-+ (expanz_model_ActivityStyle*)browseStyle {
++ (expanz_model_ActivityStyle*) browseStyle {
     return [[ActivityStyle alloc] initWithName:@"browse"];
 }
 
-+ (expanz_model_ActivityStyle*)fromString:(NSString*)string {
++ (expanz_model_ActivityStyle*) fromString:(NSString*)string {
     return [[ActivityStyle alloc] initWithName:string];
 }
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithName:(NSString*)name {
+- (id) initWithName:(NSString*)name {
     self = [super init];
     if (self) {
         if (name == nil) {
@@ -48,12 +48,38 @@
 
 /* ================================================ Interface Methods =============================================== */
 
-- (BOOL)isDefault {
+- (BOOL) isDefault {
     return [_name isEqualToString:@""];
 }
 
-- (BOOL)isBrowse {
+- (BOOL) isBrowse {
     return [[_name lowercaseString] isEqualToString:@"browse"];
 }
+
+- (NSString*) controllerClassNameForActivityId:(NSString*)activityId {
+    NSMutableString* controllerClassName = [NSMutableString
+            stringWithString:[activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
+    if (![self isDefault]) {
+        [controllerClassName appendString:[NSString stringWithFormat:@"_%@", self.name]];
+    }
+    [controllerClassName appendString:@"_ViewController"];
+    LogDebug(@"Controller class name: %@", controllerClassName);
+    return controllerClassName;
+
+}
+
+- (NSString*) nibNameForActivityId:(NSString*)activityId {
+    NSString* nibName;
+    if ([self isDefault]) {
+        nibName = activityId;
+    }
+    else {
+        nibName = [NSString stringWithFormat:@"%@.%@", activityId, self.name];
+    }
+    LogDebug(@"Nib name: %@", nibName);
+    return nibName;
+
+}
+
 
 @end

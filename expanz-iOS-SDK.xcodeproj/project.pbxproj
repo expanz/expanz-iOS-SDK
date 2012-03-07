@@ -537,6 +537,8 @@
 		6BDAB0381499828800541056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0251499828800541056 /* main.m */; };
 		6BDAB0391499828800541056 /* Sales_Customer_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0271499828800541056 /* Sales_Customer_Browse_ViewController.m */; };
 		6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
+		6BEDCC591506FE4E00D9A25B /* UITableView+DataPublication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718F3214EF921100909A38 /* UITableView+DataPublication.m */; };
+		6BEDCC5B1506FE5B00D9A25B /* expanz_model_AbstractData+DataRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350D /* expanz_model_AbstractData+DataRenderer.m */; };
 		6BFDE73B1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE73E1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7411495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -2593,6 +2595,8 @@
 				6B22F5311501B6FA00427F39 /* ModelAdapterSpec.m in Sources */,
 				6B152C651501CB58004D471A /* LoginViewControllerSpec.m in Sources */,
 				6B9C3D8E1501F0EA006A7F97 /* RXMLElement+SiteDetailsSpec.m in Sources */,
+				6BEDCC591506FE4E00D9A25B /* UITableView+DataPublication.m in Sources */,
+				6BEDCC5B1506FE5B00D9A25B /* expanz_model_AbstractData+DataRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,12 +16,20 @@
 @property(nonatomic, strong) NSString* name;
 
 + (expanz_model_ActivityStyle*) defaultStyle;
+
 + (expanz_model_ActivityStyle*) browseStyle;
+
 + (expanz_model_ActivityStyle*) fromString:(NSString*)string;
 
 - (id) initWithName:(NSString*)name;
+
 - (BOOL) isDefault;
+
 - (BOOL) isBrowse;
+
+- (NSString*) controllerClassNameForActivityId:(NSString*)activityId;
+
+- (NSString*) nibNameForActivityId:(NSString*)activityId;
 
 @end
 /* ================================================================================================================== */

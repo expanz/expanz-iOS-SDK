@@ -69,7 +69,6 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
 
                 [[[schema activityId] should] equal:@"Sales.Customer"];
-                [[[schema viewControllerName] should] equal:@"Sales_Customer_ViewController"];
                 [[[schema title] should] equal:@"Customers"];
 
                 LogDebug(@"Schema: %@", schema);

@@ -17,9 +17,6 @@
 */
 @interface UITableView (DataPublication)
 
-@property IBOutlet UILabel* setMe;
-
-
 - (void) setExpanzDataBinding:(BOOL)dataBinding;
 
 /**
