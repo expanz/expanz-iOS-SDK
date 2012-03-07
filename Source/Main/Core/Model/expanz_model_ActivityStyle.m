@@ -37,16 +37,17 @@
 - (id) initWithName:(NSString*)name formLayout:(ActivityStyleFormLayout)formLayout {
     self = [super init];
     if (self) {
+        _formLayout = formLayout;
         if (name == nil) {
             _name = @"";
         }
         else if ([[name lowercaseString] isEqualToString:@"browse"]) {
             _name = @"Browse";
+            _formLayout = SummaryListLayoutStyle;
         }
         else {
             _name = [name copy];
         }
-        _formLayout = formLayout;
     }
     return self;
 }

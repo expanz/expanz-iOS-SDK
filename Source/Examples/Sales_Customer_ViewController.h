@@ -20,11 +20,11 @@
 @property(nonatomic, retain) IBOutlet UILabel* LastNameLabel;
 @property(nonatomic, retain) IBOutlet UILabel* EmailLabel;
 @property(nonatomic, retain) IBOutlet UILabel* PhoneLabel;
-@property(nonatomic, retain) IBOutlet UITextField* FirstName;
-@property(nonatomic, retain) IBOutlet UITextField* LastName;
-@property(nonatomic, retain) IBOutlet UITextField* Email;
-@property(nonatomic, retain) IBOutlet UITextField* Phone;
-@property(nonatomic, retain) IBOutlet UIImageView* CustomerPhoto;
+@property(nonatomic, retain) IBOutlet UIView* FirstName;
+@property(nonatomic, retain) IBOutlet UIView* LastName;
+@property(nonatomic, retain) IBOutlet UIView* Email;
+@property(nonatomic, retain) IBOutlet UIView* Phone;
+@property(nonatomic, retain) IBOutlet UIView* CustomerPhoto;
 
 - (IBAction) Save;
 
