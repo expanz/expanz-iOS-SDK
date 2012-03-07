@@ -24,7 +24,7 @@
 
 - (void) listActivitiesForSite:(NSString*)site withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
-- (void) site:(NSString*)siteId retriveSchemaForActivity:(NSString*)activityId
+- (void) site:(NSString*)siteId requestSchemaForActivity:(NSString*)activityId
         withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
 
 @end

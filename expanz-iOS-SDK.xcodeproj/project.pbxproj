@@ -666,6 +666,11 @@
 		6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */; };
 		6BFDE7761495FA01005D359C /* expanz_model_FieldSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */; };
 		6BFDE7761495FA01005D359D /* expanz_model_FieldSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */; };
+		6BFDE7761495FA01005D359F /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359E /* expanz_model_Query.m */; };
+		6BFDE7761495FA01005D35A0 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359E /* expanz_model_Query.m */; };
+		6BFDE7761495FA01005D35A1 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359E /* expanz_model_Query.m */; };
+		6BFDE7761495FA01005D35A3 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
+		6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1139,6 +1144,8 @@
 		6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MethodSchema.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FieldSchema.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldSchema.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D359E /* expanz_model_Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Query.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1305,6 +1312,8 @@
 		6B718DAB14EF920300909A38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */,
+				6BFDE7761495FA01005D359E /* expanz_model_Query.m */,
 				6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */,
 				6BFDE7761495FA01005D3596 /* expanz_model_FieldSchema.m */,
 				6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */,
@@ -2116,6 +2125,7 @@
 				6BFDE7761495FA01005D358A /* expanz_model_ActivitySchema.h in Headers */,
 				6BFDE7761495FA01005D3594 /* expanz_model_MethodSchema.h in Headers */,
 				6BFDE7761495FA01005D359C /* expanz_model_FieldSchema.h in Headers */,
+				6BFDE7761495FA01005D35A3 /* expanz_model_Query.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2215,6 +2225,7 @@
 				6BFDE7761495FA01005D358B /* expanz_model_ActivitySchema.h in Headers */,
 				6BFDE7761495FA01005D3595 /* expanz_model_MethodSchema.h in Headers */,
 				6BFDE7761495FA01005D359D /* expanz_model_FieldSchema.h in Headers */,
+				6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2524,6 +2535,7 @@
 				6BFDE7761495FA01005D3585 /* expanz_model_ActivitySchema.m in Sources */,
 				6BFDE7761495FA01005D358F /* expanz_model_MethodSchema.m in Sources */,
 				6BFDE7761495FA01005D3597 /* expanz_model_FieldSchema.m in Sources */,
+				6BFDE7761495FA01005D359F /* expanz_model_Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2653,6 +2665,7 @@
 				6BFDE7761495FA01005D3587 /* expanz_model_ActivitySchema.m in Sources */,
 				6BFDE7761495FA01005D3591 /* expanz_model_MethodSchema.m in Sources */,
 				6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */,
+				6BFDE7761495FA01005D35A1 /* expanz_model_Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2760,6 +2773,7 @@
 				6BFDE7761495FA01005D3598 /* expanz_model_FieldSchema.m in Sources */,
 				6B22F5421501BD2B00427F39 /* TestFixture_ViewController.m in Sources */,
 				6B152C641501CB1C004D471A /* CoverageFix.m in Sources */,
+				6BFDE7761495FA01005D35A0 /* expanz_model_Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

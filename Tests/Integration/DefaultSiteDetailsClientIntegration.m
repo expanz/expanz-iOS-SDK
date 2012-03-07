@@ -75,7 +75,7 @@ SPEC_BEGIN(DefaultSiteDetailsClientIntegration)
         });
 
         it(@"should return the schema for an activity. ", ^{
-            [siteClient site:@"SALES" retriveSchemaForActivity:@"Sales.Customer" withDelegate:delegate];
+            [siteClient site:@"SALES" requestSchemaForActivity:@"Sales.Customer" withDelegate:delegate];
             [[expectFutureValue(delegate.activitySchema) shouldEventuallyBeforeTimingOutAfter(5.0)] beNonNil];
             LogDebug(@"Activity List: %@", delegate.activitySchema);
 

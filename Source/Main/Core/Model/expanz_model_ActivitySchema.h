@@ -14,6 +14,7 @@
 @class expanz_model_MethodSchema;
 @class expanz_model_FieldSchema;
 @class expanz_model_ActivityStyle;
+@class expanz_model_Query;
 
 
 @interface expanz_model_ActivitySchema : NSObject {
@@ -41,6 +42,8 @@
 - (void) addMethod:(expanz_model_MethodSchema*)method;
 
 - (void) addStyle:(expanz_model_ActivityStyle*)style;
+
+- (void) addQuery:(expanz_model_Query*)query;
 
 
 

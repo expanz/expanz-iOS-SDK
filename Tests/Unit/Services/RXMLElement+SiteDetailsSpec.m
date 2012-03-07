@@ -16,6 +16,7 @@
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityMenu.h"
 #import "expanz_model_ActivitySchema.h"
+#import "expanz_model_Query.h"
 
 SPEC_BEGIN(RXMLElement_SiteDetails)
 
@@ -62,6 +63,10 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
                 RXMLElement* element = [RXMLElement elementFromXMLString:xml];
                 ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
+                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+                    [schema addQuery:[e asQuery]];
+                }];
+
 
                 [[[schema activityId] should] equal:@"Sales.Customer"];
                 [[[schema viewControllerName] should] equal:@"Sales_Customer_ViewController"];
@@ -77,6 +82,11 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
                 [[[[[schema fields] objectAtIndex:0] name] should] equal:@"CreditCard"];
                 [[[[[schema methods] objectAtIndex:0] name] should] equal:@"DefaultActionMenu"];
+
+                [[[schema queries] should] haveCountOf:1];
+                Query* query = [[schema queries] objectAtIndex:0];
+                [[[query fields] should] haveCountOf:3];
+                LogDebug(@"Query fields: %@", [query fields]);
 
             });
 

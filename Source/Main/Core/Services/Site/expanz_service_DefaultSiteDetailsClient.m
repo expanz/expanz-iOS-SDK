@@ -86,7 +86,7 @@
 }
 
 
-- (void) site:(NSString*)siteId retriveSchemaForActivity:(NSString*)activityId
+- (void) site:(NSString*)siteId requestSchemaForActivity:(NSString*)activityId
         withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
 
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:siteId, @"site", activityId, @"activity", nil];
@@ -94,9 +94,12 @@
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
-            ActivitySchema* activitySchema = [[[RXMLElement elementFromXMLString:[response asString]]
-                    child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-            [delegate requestDidFinishWithActivitySchema:activitySchema];
+            RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+            ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
+            [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+                [schema addQuery:[e asQuery]];
+            }];
+            [delegate requestDidFinishWithActivitySchema:schema];
         }
         else {
             LogDebug(@"In dispatch error");
@@ -104,8 +107,6 @@
         }
 
     }];
-
-
 }
 
 @end
