@@ -133,7 +133,7 @@
     else {
         activityDefinition = [[_menu allActivities] objectAtIndex:indexPath.row];
     }
-    if ([_activityManger showActivityWithDefinition:activityDefinition]) {
+    if ([_activityManger showActivity:activityDefinition]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

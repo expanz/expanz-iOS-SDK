@@ -29,12 +29,11 @@
 
 - (BOOL) showMainMenu;
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition;
+- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem;
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
-                                 initialKey:(NSString*)initialKey;
+- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem initialKey:(NSString*)initialKey;
 
-- (BOOL)showDocument:(NSString*)documentId;
+- (BOOL) showDocument:(NSString*)documentId;
 
 @end
 

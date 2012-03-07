@@ -62,15 +62,13 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {
-    return [self showActivityWithDefinition:activityDefinition initialKey:nil];
+- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem {
+    return [self showActivity:menuItem initialKey:nil];
 }
 
-- (BOOL) showActivityWithDefinition:(expanz_model_ActivityMenuItem*)activityDefinition
-        initialKey:(NSString*)initialKey {
+- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem initialKey:(NSString*)initialKey {
 
-    NSString* controllerClassName =
-            [activityDefinition.style controllerClassNameForActivityId:activityDefinition.activityId];
+    NSString* controllerClassName = [menuItem.style controllerClassNameForActivityId:menuItem.activityId];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
     if (clazz == nil) {
         NSString* errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
@@ -79,8 +77,8 @@ objection_requires(@"reporter")
     }
     else {
         ActivityInstanceViewController* nextView = [clazz alloc];
-        NSString* nibName = [activityDefinition.style nibNameForActivityId:activityDefinition.activityId];
-        nextView = [nextView initWithActivityDefinition:activityDefinition nibName:nibName initialKey:initialKey];
+        NSString* nibName = [menuItem.style nibNameForActivityId:menuItem.activityId];
+        nextView = [nextView initWithActivityDefinition:menuItem nibName:nibName initialKey:initialKey];
         [_navigationController pushViewController:nextView animated:YES];
         return YES;
     }

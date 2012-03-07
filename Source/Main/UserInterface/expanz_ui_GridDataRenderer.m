@@ -89,7 +89,7 @@
 
     ActivityMenuItem* edit =
         [[ActivityMenuItem alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([self.activityManager showActivityWithDefinition:edit initialKey:row.rowId]) {
+    if ([self.activityManager showActivity:edit initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
