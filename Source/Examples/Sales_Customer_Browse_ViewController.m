@@ -13,7 +13,7 @@
 
 @implementation Sales_Customer_Browse_ViewController
 
-@synthesize customersList = _customersList;
+@synthesize ListCustomersMobile = _ListCustomersMobile;
 
 
 @end

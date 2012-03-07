@@ -11,10 +11,13 @@
 #import "expanz_model_ActivityStyle.h"
 
 
+
+
 @implementation expanz_model_ActivityStyle
 
 
 @synthesize name = _name;
+@synthesize formLayout = _formLayout;
 
 /* ================================================= Class Methods ================================================== */
 + (expanz_model_ActivityStyle*) defaultStyle {
@@ -31,6 +34,10 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithName:(NSString*)name {
+    return [self initWithName:name formLayout:DetailLayoutStyle];
+}
+
+- (id) initWithName:(NSString*)name formLayout:(ActivityStyleFormLayout)formLayout {
     self = [super init];
     if (self) {
         if (name == nil) {
@@ -42,9 +49,11 @@
         else {
             _name = [name copy];
         }
+        _formLayout = formLayout;
     }
     return self;
 }
+
 
 /* ================================================ Interface Methods =============================================== */
 

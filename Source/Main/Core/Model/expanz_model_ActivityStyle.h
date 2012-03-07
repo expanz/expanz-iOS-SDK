@@ -10,10 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    DetailLayoutStyle, SummaryListLayoutStyle
+} ActivityStyleFormLayout;
+
 
 @interface expanz_model_ActivityStyle : NSObject
 
 @property(nonatomic, strong) NSString* name;
+@property(nonatomic, readonly) ActivityStyleFormLayout formLayout;
 
 + (expanz_model_ActivityStyle*) defaultStyle;
 
@@ -22,6 +27,8 @@
 + (expanz_model_ActivityStyle*) fromString:(NSString*)string;
 
 - (id) initWithName:(NSString*)name;
+
+- (id) initWithName:(NSString*)name formLayout:(ActivityStyleFormLayout)formLayout;
 
 - (BOOL) isDefault;
 

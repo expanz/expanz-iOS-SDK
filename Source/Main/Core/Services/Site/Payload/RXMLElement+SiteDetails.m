@@ -108,7 +108,14 @@
     if (![self.tag isEqualToString:@"Style"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Style."];
     }
-    return [[ActivityStyle alloc] initWithName:[self attribute:@"name"]];
+    ActivityStyleFormLayout formLayout;
+    if ([[self attribute:@"defaultformlayout"] isEqualToString:@"SummaryList"]) {
+        formLayout = SummaryListLayoutStyle;
+    }
+    else {
+        formLayout = DetailLayoutStyle;
+    }
+    return [[ActivityStyle alloc] initWithName:[self attribute:@"name"] formLayout:formLayout];
 }
 
 - (Query*) asQuery {
