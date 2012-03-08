@@ -60,8 +60,8 @@
 		6B1B887014F4D4FB000A3D95 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7331495FA01005D332F /* JSObjectionProviderEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B1B887114F4D4FB000A3D95 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7351495FA01005D332F /* JSObjectionUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B1B887214F4D4FB000A3D95 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7371495FA01005D332F /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B1C613B15086BDD002037D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1C613A15086BDD002037D7 /* UIKit.framework */; };
 		6B1F20E314EFDDE9009651FB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */; };
-		6B1F20E514EFDDE9009651FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F20E414EFDDE9009651FB /* UIKit.framework */; };
 		6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6B1F20EC14EFDDE9009651FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F20EA14EFDDE9009651FB /* InfoPlist.strings */; };
 		6B1F2A7C14D24204000E45FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F2A7B14D24204000E45FD /* Icon.png */; };
@@ -803,6 +803,7 @@
 		6B0E25B61445716800D34A22 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../Dependencies/Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6B1107C814CD3DDC00D0A4FE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6B1C613A15086BDD002037D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B1F20E114EFDDE9009651FB /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1164,6 +1165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1C613B15086BDD002037D7 /* UIKit.framework in Frameworks */,
 				6B6E85A114EFF58400FA4B5D /* libxml2.dylib in Frameworks */,
 				6B6E859F14EFF57B00FA4B5D /* SystemConfiguration.framework in Frameworks */,
 				6B6E859D14EFF57300FA4B5D /* MobileCoreServices.framework in Frameworks */,
@@ -1171,7 +1173,6 @@
 				6B6E859914EFF52900FA4B5D /* CoreGraphics.framework in Frameworks */,
 				6B6E859714EFF4FF00FA4B5D /* QuartzCore.framework in Frameworks */,
 				6B1F20E314EFDDE9009651FB /* SenTestingKit.framework in Frameworks */,
-				6B1F20E514EFDDE9009651FB /* UIKit.framework in Frameworks */,
 				6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */,
 				6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */,
 			);
@@ -1224,6 +1225,7 @@
 		6B1E5E8614734404004145D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B1C613A15086BDD002037D7 /* UIKit.framework */,
 				6B6E85A014EFF58400FA4B5D /* libxml2.dylib */,
 				6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */,
 				6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */,
@@ -2873,11 +2875,7 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -2906,11 +2904,7 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -3039,12 +3033,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -3074,12 +3063,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Dependencies/Libraries/OCMock\"",
-					"\"$(DEVELOPER_DIR)/usr/lib\"",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
