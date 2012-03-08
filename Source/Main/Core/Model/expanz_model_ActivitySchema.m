@@ -14,6 +14,11 @@
 #import "expanz_model_ActivityStyle.h"
 #import "expanz_model_Query.h"
 
+@interface expanz_model_ActivitySchema (private)
+
+- (BOOL) isDisplayable:(FieldSchema*)field;
+
+@end
 
 @implementation expanz_model_ActivitySchema
 @synthesize activityId = _activityId;
@@ -39,6 +44,17 @@
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
+
+- (NSArray*) displayableFields {
+    NSMutableArray* displayableFields = [[NSMutableArray alloc] init];
+    for (FieldSchema* fieldSchema in [self fields]) {
+        if ([self isDisplayable:fieldSchema]) {
+            [displayableFields addObject:fieldSchema];
+        }
+    }
+    return displayableFields;
+}
+
 
 - (NSArray*) methods {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
@@ -78,5 +94,11 @@
                                       _methods, _styles, _queries];
 }
 
+
+/* ================================================== Private Methods =============================================== */
+- (BOOL) isDisplayable:(FieldSchema*)field {
+    return !([[field name] isEqualToString:@"PersistentId"] || [[field name] isEqualToString:@"RowVersion"] ||
+            [[field name] isEqualToString:@"RowClassType"]);
+}
 
 @end

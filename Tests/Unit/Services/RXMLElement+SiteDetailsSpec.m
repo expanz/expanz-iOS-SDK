@@ -73,6 +73,8 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
                 LogDebug(@"Schema: %@", schema);
                 [[[schema fields] should] haveCountOf:11];
+                [[[schema displayableFields] should] haveCountOf:9];
+
                 [[[schema methods] should] haveCountOf:8];
 
                 [[[schema styles] should] haveCountOf:2];
