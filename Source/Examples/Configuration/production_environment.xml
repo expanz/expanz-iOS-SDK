@@ -2,5 +2,5 @@
 <expanz:iOSConfig xmlns:expanz="com.expanz.*"
         URL="http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish"
         preferredSite="SALES"
-        userType="Alternate">
+        userType="Primary">
 </expanz:iOSConfig>
