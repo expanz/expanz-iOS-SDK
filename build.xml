@@ -32,7 +32,8 @@
         --compile.framework,
         --set.up.project.templates,
         --compile.installer,
-        --prepare.artifacts"/>
+        --prepare.artifacts,
+        --publish.site"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
@@ -220,7 +221,26 @@
                 <include name="TableCellForTreeData.xib"/>
             </fileset>
         </copy>
+    </target>
 
+    <target name="--publish.site">
+        <echo file="${temp.dir}/publish-site.sh">
+            #!/bin/sh
+            cd ${basedir}
+            git checkout gh-pages
+            git pull
+            rm -fr ./coverage
+            cp -fr ${reports.dir}/coverage/ ./coverage
+            git add ./coverage
+            rm -fr ./api
+            cp -fr ${reports.dir}/api ./api
+            git add api
+            git commit -a -m "publish reports to gh-pages"
+            git push -u origin gh-pages
+            git checkout master
+        </echo>
+        <chmod perm="+x" file="${temp.dir}/publish-site.sh"/>
+        <exec executable="${temp.dir}/publish-site.sh" failonerror="true" failifexecutionfails="true"/>
     </target>
 
 
