@@ -69,24 +69,24 @@
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;expanz_model_ActivityMenuItem.h&quot;
 <span class="lineNum">      13 </span>            : 
-<span class="lineNum">      14 </span><span class="lineCov">         17 : @implementation expanz_model_ActivityMenuItem</span>
+<span class="lineNum">      14 </span><span class="lineCov">         22 : @implementation expanz_model_ActivityMenuItem</span>
 <span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">         19 : @synthesize activityId = _activityId;</span>
+<span class="lineNum">      16 </span><span class="lineCov">         21 : @synthesize activityId = _activityId;</span>
 <span class="lineNum">      17 </span><span class="lineCov">         31 : @synthesize title = _title;</span>
 <span class="lineNum">      18 </span><span class="lineCov">         10 : @synthesize style = _style;</span>
 <span class="lineNum">      19 </span>            : 
 <span class="lineNum">      20 </span>            : 
 <span class="lineNum">      21 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      22 </span>            : - (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style {
-<span class="lineNum">      23 </span><span class="lineCov">         57 :     self = [self init];</span>
-<span class="lineNum">      24 </span><span class="lineCov">         57 :     if (self) {</span>
-<span class="lineNum">      25 </span><span class="lineCov">         57 :         _activityId = [name copy];</span>
-<span class="lineNum">      26 </span><span class="lineCov">         57 :         _title = [title copy];</span>
-<span class="lineNum">      27 </span><span class="lineCov">         57 :         _style = style;</span>
-<span class="lineNum">      28 </span><span class="lineCov">         57 :     }</span>
-<span class="lineNum">      29 </span><span class="lineCov">         57 :     return self;</span>
-<span class="lineNum">      30 </span><span class="lineCov">         57 : }</span>
-<span class="lineNum">      31 </span><span class="lineCov">         57 : </span>
+<span class="lineNum">      23 </span><span class="lineCov">         62 :     self = [self init];</span>
+<span class="lineNum">      24 </span><span class="lineCov">         62 :     if (self) {</span>
+<span class="lineNum">      25 </span><span class="lineCov">         62 :         _activityId = [name copy];</span>
+<span class="lineNum">      26 </span><span class="lineCov">         62 :         _title = [title copy];</span>
+<span class="lineNum">      27 </span><span class="lineCov">         62 :         _style = style;</span>
+<span class="lineNum">      28 </span><span class="lineCov">         62 :     }</span>
+<span class="lineNum">      29 </span><span class="lineCov">         62 :     return self;</span>
+<span class="lineNum">      30 </span><span class="lineCov">         62 : }</span>
+<span class="lineNum">      31 </span><span class="lineCov">         62 : </span>
 <span class="lineNum">      32 </span>            : /* ================================================== Utility Methods =============================================== */
 <span class="lineNum">      33 </span>            : - (NSString*) description {
 <span class="lineNum">      34 </span><span class="lineCov">         28 :     return [NSString stringWithFormat:@&quot;Activity id=%@, title=%@&quot;, _activityId, _title];</span>

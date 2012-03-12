@@ -69,17 +69,17 @@
 <span class="lineNum">      11 </span>            : #import &quot;expanz_model_ActivityMenu.h&quot;
 <span class="lineNum">      12 </span>            : 
 <span class="lineNum">      13 </span>            : 
-<span class="lineNum">      14 </span><span class="lineCov">          1 : @implementation expanz_model_ActivityMenu</span>
+<span class="lineNum">      14 </span><span class="lineCov">          2 : @implementation expanz_model_ActivityMenu</span>
 <span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span>            : 
 <span class="lineNum">      17 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      18 </span><span class="lineCov">          1 : - (id) init {</span>
-<span class="lineNum">      19 </span><span class="lineCov">          1 :     self = [super init];</span>
-<span class="lineNum">      20 </span><span class="lineCov">          1 :     if (self) {</span>
-<span class="lineNum">      21 </span><span class="lineCov">          1 :         _activities = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">      22 </span><span class="lineCov">          1 :     }</span>
-<span class="lineNum">      23 </span><span class="lineCov">          1 :     return self;</span>
-<span class="lineNum">      24 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">      18 </span><span class="lineCov">          2 : - (id) init {</span>
+<span class="lineNum">      19 </span><span class="lineCov">          2 :     self = [super init];</span>
+<span class="lineNum">      20 </span><span class="lineCov">          2 :     if (self) {</span>
+<span class="lineNum">      21 </span><span class="lineCov">          2 :         _activities = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">      22 </span><span class="lineCov">          2 :     }</span>
+<span class="lineNum">      23 </span><span class="lineCov">          2 :     return self;</span>
+<span class="lineNum">      24 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      25 </span>            : 
 <span class="lineNum">      26 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      27 </span><span class="lineCov">          3 : - (NSArray*) activities {</span>
@@ -87,9 +87,9 @@
 <span class="lineNum">      29 </span><span class="lineCov">          3 :     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];</span>
 <span class="lineNum">      30 </span><span class="lineCov">          3 : }</span>
 <span class="lineNum">      31 </span>            : 
-<span class="lineNum">      32 </span><span class="lineCov">          5 : - (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {</span>
-<span class="lineNum">      33 </span><span class="lineCov">          5 :     [_activities addObject:activityDefinition];</span>
-<span class="lineNum">      34 </span><span class="lineCov">          5 : }</span>
+<span class="lineNum">      32 </span><span class="lineCov">         10 : - (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {</span>
+<span class="lineNum">      33 </span><span class="lineCov">         10 :     [_activities addObject:activityDefinition];</span>
+<span class="lineNum">      34 </span><span class="lineCov">         10 : }</span>
 <span class="lineNum">      35 </span>            : 
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : @end

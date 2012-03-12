@@ -70,19 +70,19 @@
 <span class="lineNum">      12 </span>            : #import &quot;expanz_service_AbstractServiceClient.h&quot;
 <span class="lineNum">      13 </span>            : #import &quot;expanz_service_AbstractServiceClientDelegate.h&quot;
 <span class="lineNum">      14 </span>            : 
-<span class="lineNum">      15 </span><span class="lineCov">          5 : @implementation expanz_service_AbstractServiceClient</span>
+<span class="lineNum">      15 </span><span class="lineCov">          7 : @implementation expanz_service_AbstractServiceClient</span>
 <span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span><span class="lineCov">         14 : @synthesize httpTransport = _httpTransport;</span>
+<span class="lineNum">      17 </span><span class="lineCov">         17 : @synthesize httpTransport = _httpTransport;</span>
 <span class="lineNum">      18 </span>            : 
 <span class="lineNum">      19 </span>            : 
 <span class="lineNum">      20 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      21 </span><span class="lineCov">         16 : - (id) init {</span>
-<span class="lineNum">      22 </span><span class="lineCov">         16 :     self = [super init];</span>
-<span class="lineNum">      23 </span><span class="lineCov">         16 :     if (self) {</span>
-<span class="lineNum">      24 </span><span class="lineCov">         16 :         _httpTransport = [LRResty client];</span>
-<span class="lineNum">      25 </span><span class="lineCov">         16 :     }</span>
-<span class="lineNum">      26 </span><span class="lineCov">         16 :     return self;</span>
-<span class="lineNum">      27 </span><span class="lineCov">         16 : }</span>
+<span class="lineNum">      21 </span><span class="lineCov">         19 : - (id) init {</span>
+<span class="lineNum">      22 </span><span class="lineCov">         19 :     self = [super init];</span>
+<span class="lineNum">      23 </span><span class="lineCov">         19 :     if (self) {</span>
+<span class="lineNum">      24 </span><span class="lineCov">         19 :         _httpTransport = [LRResty client];</span>
+<span class="lineNum">      25 </span><span class="lineCov">         19 :     }</span>
+<span class="lineNum">      26 </span><span class="lineCov">         19 :     return self;</span>
+<span class="lineNum">      27 </span><span class="lineCov">         19 : }</span>
 <span class="lineNum">      28 </span>            : 
 <span class="lineNum">      29 </span><span class="lineCov">         14 : - (NSDictionary*) requestHeaders {</span>
 <span class="lineNum">      30 </span><span class="lineCov">         14 :     return [NSDictionary dictionaryWithObject:@&quot;text/xml&quot; forKey:@&quot;Content-Type&quot;];</span>

@@ -76,14 +76,14 @@
 <span class="lineNum">      18 </span>            : 
 <span class="lineNum">      19 </span>            : 
 <span class="lineNum">      20 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      21 </span><span class="lineCov">          1 : - (id) initWithQueryId:(NSString*)queryId {</span>
-<span class="lineNum">      22 </span><span class="lineCov">          1 :     self = [super init];</span>
-<span class="lineNum">      23 </span><span class="lineCov">          1 :     if (self) {</span>
-<span class="lineNum">      24 </span><span class="lineCov">          1 :         _queryId = queryId;</span>
-<span class="lineNum">      25 </span><span class="lineCov">          1 :         _fields = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">      26 </span><span class="lineCov">          1 :     }</span>
-<span class="lineNum">      27 </span><span class="lineCov">          1 :     return self;</span>
-<span class="lineNum">      28 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">      21 </span><span class="lineCov">          2 : - (id) initWithQueryId:(NSString*)queryId {</span>
+<span class="lineNum">      22 </span><span class="lineCov">          2 :     self = [super init];</span>
+<span class="lineNum">      23 </span><span class="lineCov">          2 :     if (self) {</span>
+<span class="lineNum">      24 </span><span class="lineCov">          2 :         _queryId = queryId;</span>
+<span class="lineNum">      25 </span><span class="lineCov">          2 :         _fields = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">      26 </span><span class="lineCov">          2 :     }</span>
+<span class="lineNum">      27 </span><span class="lineCov">          2 :     return self;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      29 </span>            : 
 <span class="lineNum">      30 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      31 </span><span class="lineCov">          2 : - (NSArray*) fields {</span>
@@ -91,9 +91,9 @@
 <span class="lineNum">      33 </span><span class="lineCov">          2 :     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];</span>
 <span class="lineNum">      34 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      35 </span>            : 
-<span class="lineNum">      36 </span><span class="lineCov">          3 : - (void) addField:(expanz_model_FieldSchema*)fieldSchema {</span>
-<span class="lineNum">      37 </span><span class="lineCov">          3 :     [_fields addObject:fieldSchema];</span>
-<span class="lineNum">      38 </span><span class="lineCov">          3 : }</span>
+<span class="lineNum">      36 </span><span class="lineCov">          6 : - (void) addField:(expanz_model_FieldSchema*)fieldSchema {</span>
+<span class="lineNum">      37 </span><span class="lineCov">          6 :     [_fields addObject:fieldSchema];</span>
+<span class="lineNum">      38 </span><span class="lineCov">          6 : }</span>
 <span class="lineNum">      39 </span>            : 
 <span class="lineNum">      40 </span>            : 
 <span class="lineNum">      41 </span>            : @end

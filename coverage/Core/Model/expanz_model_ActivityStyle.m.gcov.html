@@ -93,23 +93,23 @@
 <span class="lineNum">      35 </span><span class="lineCov">         58 : }</span>
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : - (id) initWithName:(NSString*)name formLayout:(ActivityStyleFormLayout)formLayout {
-<span class="lineNum">      38 </span><span class="lineCov">         60 :     self = [super init];</span>
-<span class="lineNum">      39 </span><span class="lineCov">         60 :     if (self) {</span>
-<span class="lineNum">      40 </span><span class="lineCov">         60 :         _formLayout = formLayout;</span>
-<span class="lineNum">      41 </span><span class="lineCov">         60 :         if (name == nil) {</span>
-<span class="lineNum">      42 </span><span class="lineCov">         60 :             _name = @&quot;&quot;;</span>
+<span class="lineNum">      38 </span><span class="lineCov">         62 :     self = [super init];</span>
+<span class="lineNum">      39 </span><span class="lineCov">         62 :     if (self) {</span>
+<span class="lineNum">      40 </span><span class="lineCov">         62 :         _formLayout = formLayout;</span>
+<span class="lineNum">      41 </span><span class="lineCov">         62 :         if (name == nil) {</span>
+<span class="lineNum">      42 </span><span class="lineCov">         62 :             _name = @&quot;&quot;;</span>
 <span class="lineNum">      43 </span><span class="lineCov">         34 :         }</span>
 <span class="lineNum">      44 </span><span class="lineCov">         34 :         else if ([[name lowercaseString] isEqualToString:@&quot;browse&quot;]) {</span>
-<span class="lineNum">      45 </span><span class="lineCov">         26 :             _name = @&quot;Browse&quot;;</span>
-<span class="lineNum">      46 </span><span class="lineCov">         14 :             _formLayout = SummaryListLayoutStyle;</span>
-<span class="lineNum">      47 </span><span class="lineCov">         14 :         }</span>
-<span class="lineNum">      48 </span><span class="lineCov">         14 :         else {</span>
+<span class="lineNum">      45 </span><span class="lineCov">         28 :             _name = @&quot;Browse&quot;;</span>
+<span class="lineNum">      46 </span><span class="lineCov">         15 :             _formLayout = SummaryListLayoutStyle;</span>
+<span class="lineNum">      47 </span><span class="lineCov">         15 :         }</span>
+<span class="lineNum">      48 </span><span class="lineCov">         15 :         else {</span>
 <span class="lineNum">      49 </span>            :             _name = [name copy];
-<span class="lineNum">      50 </span><span class="lineCov">         12 :         }</span>
+<span class="lineNum">      50 </span><span class="lineCov">         13 :         }</span>
 <span class="lineNum">      51 </span>            :     }
 <span class="lineNum">      52 </span>            :     return self;
-<span class="lineNum">      53 </span><span class="lineCov">         60 : }</span>
-<span class="lineNum">      54 </span><span class="lineCov">         60 : </span>
+<span class="lineNum">      53 </span><span class="lineCov">         62 : }</span>
+<span class="lineNum">      54 </span><span class="lineCov">         62 : </span>
 <span class="lineNum">      55 </span>            : 
 <span class="lineNum">      56 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      57 </span>            : 
