@@ -6,7 +6,7 @@ This is the iOS SDK for the expanz platform.
 
 ## Getting Started
 
-* Download the installer from _______.
+* Download the <a href="http://www.expanz.com/expanz-Client-SDK-for-Apple-iOS/">installer.</a>
 * Open xcode and choose 'New Expanz Project'.
 * Choose Product/Run.
 
@@ -25,7 +25,6 @@ training course for 8 - 16 pax.
 * <a href="https://github.com/expanz/expanz-iOS-SDK/wiki">Wiki</a>
 * <a href="http://expanz.github.com/expanz-iOS-SDK/api/index.html">API</a>
 * <a href="http://expanz.github.com/expanz-iOS-SDK/coverage/Users/jblues/ExpanzProjects/expanz-iOS-SDK/Source/Main/index.html">Reports</a>
-
 
 # Building
 
