@@ -68,6 +68,7 @@
 		6B22F5311501B6FA00427F39 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34FE /* ModelAdapterSpec.m */; };
 		6B22F53F1501BD1C00427F39 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22F53E1501BD1C00427F39 /* TestFixture.xib */; };
 		6B22F5421501BD2B00427F39 /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B22F5411501BD2B00427F39 /* TestFixture_ViewController.m */; };
+		6B4573A3150DA4290059093A /* DefaultSiteDetailsClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */; };
 		6B59CFF414FF19FF002F25CA /* ListActivitiesForSiteXResult.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */; };
 		6B62F2D914E8F07F00B9EEA0 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
@@ -2599,6 +2600,7 @@
 				6B9C3D8E1501F0EA006A7F97 /* RXMLElement+SiteDetailsSpec.m in Sources */,
 				6BEDCC591506FE4E00D9A25B /* UITableView+DataPublication.m in Sources */,
 				6BEDCC5B1506FE5B00D9A25B /* expanz_model_AbstractData+DataRenderer.m in Sources */,
+				6B4573A3150DA4290059093A /* DefaultSiteDetailsClientIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

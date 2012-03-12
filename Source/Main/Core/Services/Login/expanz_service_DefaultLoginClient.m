@@ -33,21 +33,17 @@
 - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
 
     [self.httpTransport post:_serviceUrl payload:[sessionRequest toXml] headers:[self requestHeaders]
-                   withBlock:^(LRRestyResponse* response) {
+            withBlock:^(LRRestyResponse* response) {
 
-                       if (response.status == 200) {
-                           LogDebug(@"Response: %@, ", [response asString]);
-                           RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
-                           [delegate requestDidFinishWithSessionContext:[element asSessionContext]];
-                       }
-                       else {
-                           NSString* domain = NSStringFromClass([self class]);
-                           NSDictionary
-                               * userInfo = [NSDictionary dictionaryWithObject:[response asString] forKey:@"response"];
-                           NSError* error = [NSError errorWithDomain:domain code:response.status userInfo:userInfo];
-                           [delegate requestDidFailWithError:error];
-                       }
-                   }];
+                if (response.status == 200) {
+                    LogDebug(@"Response: %@, ", [response asString]);
+                    RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+                    [delegate requestDidFinishWithSessionContext:[element asSessionContext]];
+                }
+                else {
+                    [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+                }
+            }];
 }
 
 
