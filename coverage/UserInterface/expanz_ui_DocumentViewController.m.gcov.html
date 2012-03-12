@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - expanz-iOS-SDK.info - UserInterface/expanz_ui_DocumentViewController.m</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">UserInterface</a> - expanz_ui_DocumentViewController.m</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">expanz-iOS-SDK.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2012-03-12</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">       2 </span>            : //
+<span class="lineNum">       3 </span>            : //  EXPANZ
+<span class="lineNum">       4 </span>            : //  Copyright 2008-2011 EXPANZ
+<span class="lineNum">       5 </span>            : //  All Rights Reserved.
+<span class="lineNum">       6 </span>            : //
+<span class="lineNum">       7 </span>            : //  NOTICE: Expanz permits you to use, modify, and distribute this file
+<span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
+<span class="lineNum">       9 </span>            : //
+<span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : #import &quot;Objection.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_model_FileResource.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_model_ResourceCollection.h&quot;
+<span class="lineNum">      15 </span>            : #import &quot;expanz_service_FileRequest.h&quot;
+<span class="lineNum">      16 </span>            : #import &quot;expanz_service_FileDownloadClient.h&quot;
+<span class="lineNum">      17 </span>            : #import &quot;expanz_service_FileDownloadRequest.h&quot;
+<span class="lineNum">      18 </span>            : #import &quot;expanz_ui_DocumentViewController.h&quot;
+<span class="lineNum">      19 </span>            : #import &quot;MBProgressHUD.h&quot;
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span><span class="lineNoCov">          0 : @implementation expanz_ui_DocumentViewController</span>
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span><span class="lineNoCov">          0 : @synthesize documentView = _documentView;</span>
+<span class="lineNum">      25 </span><span class="lineNoCov">          0 : @synthesize printButton = _printButton;</span>
+<span class="lineNum">      26 </span><span class="lineNoCov">          0 : @synthesize documentId = _documentId;</span>
+<span class="lineNum">      27 </span><span class="lineNoCov">          0 : @synthesize activityHandle = _activityHandle;</span>
+<span class="lineNum">      28 </span><span class="lineNoCov">          0 : @synthesize ext = _ext;</span>
+<span class="lineNum">      29 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 : /* ================================================== Initializers ================================================== */</span>
+<span class="lineNum">      31 </span>            : - (id) initWithDocumentId:(NSString*)documentId activityHandle:(NSString*)activityHandle {
+<span class="lineNum">      32 </span><span class="lineNoCov">          0 :     self = [super initWithNibName:@&quot;DocumentView&quot; bundle:[NSBundle mainBundle]];</span>
+<span class="lineNum">      33 </span><span class="lineNoCov">          0 :     if (self) {</span>
+<span class="lineNum">      34 </span><span class="lineNoCov">          0 :         _documentId = [documentId copy];</span>
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 :         _activityHandle = [activityHandle copy];</span>
+<span class="lineNum">      36 </span><span class="lineNoCov">          0 :         _fileDownloadClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_FileDownloadClient)];</span>
+<span class="lineNum">      37 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      38 </span><span class="lineNoCov">          0 :     return self;</span>
+<span class="lineNum">      39 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      40 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span>            : /* ================================================ Interface Methods =============================================== */
+<span class="lineNum">      43 </span>            : - (void) viewDidLoad {
+<span class="lineNum">      44 </span><span class="lineNoCov">          0 :     [super viewDidLoad];</span>
+<span class="lineNum">      45 </span><span class="lineNoCov">          0 :     _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];</span>
+<span class="lineNum">      46 </span><span class="lineNoCov">          0 :     _loadingHud.labelText = @&quot;Loading&quot;;</span>
+<span class="lineNum">      47 </span><span class="lineNoCov">          0 :     [_loadingHud show:YES];</span>
+<span class="lineNum">      48 </span><span class="lineNoCov">          0 :     [self.view addSubview:_loadingHud];</span>
+<span class="lineNum">      49 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      50 </span>            :     FileRequest* fileRequest = [FileRequest forFileId:_documentId activityHandle:_activityHandle];
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 :     [_fileDownloadClient sendFileRequestWith:fileRequest delegate:self];</span>
+<span class="lineNum">      52 </span><span class="lineNoCov">          0 :     [_documentView setHidden:YES];</span>
+<span class="lineNum">      53 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span>            : - (IBAction) print {
+<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     UIPrintInteractionController* pic = [UIPrintInteractionController sharedPrintController];</span>
+<span class="lineNum">      60 </span><span class="lineNoCov">          0 :     pic.delegate = self;</span>
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      62 </span>            :     UIPrintInfo* printInfo = [UIPrintInfo printInfo];
+<span class="lineNum">      63 </span><span class="lineNoCov">          0 :     printInfo.outputType = UIPrintInfoOutputGeneral;</span>
+<span class="lineNum">      64 </span><span class="lineNoCov">          0 :     printInfo.jobName = self.title;</span>
+<span class="lineNum">      65 </span><span class="lineNoCov">          0 :     pic.printInfo = printInfo;</span>
+<span class="lineNum">      66 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      67 </span>            :     pic.printFormatter = [_documentView viewPrintFormatter];
+<span class="lineNum">      68 </span><span class="lineNoCov">          0 :     pic.showsPageRange = YES;</span>
+<span class="lineNum">      69 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      70 </span>            :     void(^completionHandler)(UIPrintInteractionController*, BOOL, NSError*) =
+<span class="lineNum">      71 </span>            :         ^(UIPrintInteractionController* printController, BOOL completed, NSError* error) {
+<span class="lineNum">      72 </span><span class="lineNoCov">          0 :             if (!completed &amp;&amp; error) {</span>
+<span class="lineNum">      73 </span><span class="lineNoCov">          0 :                 NSLog(@&quot;Printing could not complete because of error: %@&quot;, error);</span>
+<span class="lineNum">      74 </span><span class="lineNoCov">          0 :             }</span>
+<span class="lineNum">      75 </span><span class="lineNoCov">          0 :         };</span>
+<span class="lineNum">      76 </span><span class="lineNoCov">          0 :     [pic presentAnimated:YES completionHandler:completionHandler];</span>
+<span class="lineNum">      77 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      78 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      79 </span>            : /* ================================================= Protocol Methods =============================================== */
+<span class="lineNum">      80 </span>            : - (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection {
+<span class="lineNum">      81 </span><span class="lineNoCov">          0 :     //TODO: Support pages with multiple documents in a collection.</span>
+<span class="lineNum">      82 </span>            :     FileResource* fileResource = [[collection fileResources] objectAtIndex:0];
+<span class="lineNum">      83 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      84 </span>            :     LogDebug(@&quot;Document Title: %@&quot;, collection.title);
+<span class="lineNum">      85 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;File resource: %@&quot;, fileResource);</span>
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 :     self.title = collection.title;</span>
+<span class="lineNum">      87 </span><span class="lineNoCov">          0 :     self.ext = fileResource.ext;</span>
+<span class="lineNum">      88 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      89 </span>            :     FileDownloadRequest
+<span class="lineNum">      90 </span>            :         * request = [FileDownloadRequest withBlobId:fileResource.field isByteArray:NO activityHandle:_activityHandle];
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :     [_fileDownloadClient downloadFileWith:request delegate:self];</span>
+<span class="lineNum">      92 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      93 </span>            : }
+<span class="lineNum">      94 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      95 </span>            : - (void) requestDidFinishWithData:(NSData*)data {
+<span class="lineNum">      96 </span><span class="lineNoCov">          0 :     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);</span>
+<span class="lineNum">      97 </span><span class="lineNoCov">          0 :     NSString* documentsDirectory = [paths objectAtIndex:0];</span>
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 :     NSString* fileName = [@&quot;current-document&quot; stringByAppendingString:self.ext];</span>
+<span class="lineNum">      99 </span><span class="lineNoCov">          0 :     NSString* filePath = [documentsDirectory stringByAppendingPathComponent:fileName];</span>
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     [data writeToFile:filePath atomically:YES];</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Loading document. . . . &quot;);</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :     NSURL* url = [NSURL fileURLWithPath:filePath];</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :     LogDebug(&quot;URL: %@&quot;, url);</span>
+<span class="lineNum">     104 </span><span class="lineNoCov">          0 :     NSURLRequest* request = [NSURLRequest requestWithURL:url];</span>
+<span class="lineNum">     105 </span><span class="lineNoCov">          0 :     [_documentView loadRequest:request];</span>
+<span class="lineNum">     106 </span><span class="lineNoCov">          0 :     [_loadingHud hide:YES];</span>
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :     [_documentView setHidden:NO];</span>
+<span class="lineNum">     108 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     110 </span>            : - (void) requestDidFailWithError:(NSError*)error {
+<span class="lineNum">     111 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     112 </span>            : 
+<span class="lineNum">     113 </span>            : }
+<span class="lineNum">     114 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     115 </span>            : 
+<span class="lineNum">     116 </span>            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
