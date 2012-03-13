@@ -6,7 +6,7 @@ This is the iOS SDK for the expanz platform.
 
 ## Getting Started
 
-* Download the <a href="http://www.expanz.com/expanz-Client-SDK-for-Apple-iOS/">installer.</a>
+* Download the <a href="http://www.expanz.com/expanz-Client-SDK-for-Apple-iOS/">latest stable release installer.</a>
 * Open xcode and choose 'New Expanz Project'.
 * Choose Product/Run.
 
@@ -54,6 +54,12 @@ NB: Xcode 4.3+ requires command-line tools to be installed separately.
 ```sh
 ant
 ```
+
+### Continuous Integration Builds
+
+If you wish, you can also dowbload the 
+<a href="https://github.com/expanz/expanz-iOS-SDK/blob/gh-pages/installer/expanz-iOS-SDK-Installer.mpkg?raw=true">
+latest successful build from our continuous integration server.</a>
 
 # Feature Requests and Contributions
 
