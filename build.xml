@@ -16,10 +16,11 @@
             <exclude name="**/Examples/**/*"/>
         </fileset>
     </path>
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PUBLIC TARGETS (can depend on other targets) ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <target name="build" depends="
+        --init,
         --clean,
-        --make.dirs,
         --compile.core-lib,
         --run.tests,
         --assemble.coverage.data,
@@ -44,6 +45,7 @@
     </target>
 
     <target name="release" depends="
+        --init,
         --clean,
         --compile.framework,
         --set.up.project.templates,
@@ -54,7 +56,11 @@
 
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PRIVATE TARGETS (MUST NOT depend on other targets!) ~~~~~~~~~~~~~~~~~~~ -->
-    <target name="--make.dirs">
+    <target name="--init">
+        <exec executable="xcode-select" outputproperty="xcode.path">
+            <arg line="-print-path"/>
+        </exec>
+
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
         <mkdir dir="${temp.dir}/coverage-data"/>
@@ -65,9 +71,12 @@
     <target name="--clean" unless="fast">
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
+        <fail unless="xcode.path" message="Xcode path is not set"/>
+
+        <echo message="Based on xcode-select, simulator path is: ${xcode.path}/${simulator.path}"/>
 
         <echo file="${temp.dir}/quit-simulator.script">
-            tell application "${simulator.path}" to quit
+            tell application "${xcode.path}/${simulator.path}" to quit
         </echo>
         <exec executable="osascript" failonerror="true" failifexecutionfails="true">
             <arg line="${temp.dir}/quit-simulator.script"/>
@@ -104,8 +113,8 @@
 
     <target name="--simulator.launch">
         <echo file="${temp.dir}/fg-simulator.script">
-            tell application "${simulator.path}" to launch
-            tell application "${simulator.path}" to activate
+            tell application "${xcode.path}/${simulator.path}" to launch
+            tell application "${xcode.path}/${simulator.path}" to activate
         </echo>
         <echo message="Launching the iPhone simulator for unit tests. . "/>
         <echo message="Leave it running in the foreground, or things won't work."/>
