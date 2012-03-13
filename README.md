@@ -55,6 +55,12 @@ NB: Xcode 4.3+ requires command-line tools to be installed separately.
 ant
 ```
 
+### Continuous Integration Builds
+
+If you wish, you can also dowbload the 
+<a href="http://expanz.github.com/expanz-iOS-SDK/installer/expanz-iOS-SDK-Installer.mkpg">
+latest successful build from our continuous integration server.</a>
+
 # Feature Requests and Contributions
 
 . . . are very welcome.
