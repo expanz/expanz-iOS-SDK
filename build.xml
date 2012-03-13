@@ -35,7 +35,9 @@
         --prepare.artifacts,
         --publish.site"/>
 
-    <target name="publish-installer" depends="--publish.installer"/>
+    <target name="publish-installer" depends="
+    release,
+    --publish.installer"/>
 
     <target name="fast">
         <property name="fast" value="yes"/>
