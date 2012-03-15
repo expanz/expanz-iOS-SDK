@@ -174,7 +174,7 @@
         <echo file="${temp.dir}/genhtml.sh">
             #!/bin/sh
             genhtml --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir} \
-            ${temp.dir}/${module.name}.info
+            --prefix ${basedir} ${temp.dir}/${module.name}.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>
