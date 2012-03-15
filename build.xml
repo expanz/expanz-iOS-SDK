@@ -60,6 +60,12 @@
         <exec executable="xcode-select" outputproperty="xcode.path">
             <arg line="-print-path"/>
         </exec>
+        <property name="xcode.path.message">
+            Xcode path is not set. Please use run xcode-select from the cmd-line, to specify location of Xcode tools.
+            ${line.separator}Example: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+        </property>
+        <fail unless="xcode.path"
+              message="${xcode.path.message}"/>
 
         <mkdir dir="${target.dir}"/>
         <mkdir dir="${temp.dir}"/>
