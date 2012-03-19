@@ -15,7 +15,7 @@ current source, please proceed to the build instructions below.
 
 ## Training
 
-We conduct training courses is North America, Europse, APAC & Oceania regions. Consult the expanz website for
+We conduct training courses is North America, Europe, APAC & Oceania regions. Consult the expanz website for
 information on when the next course in your area will be held. Alternatively it is possible to book a custom on-site
 training course for 8 - 16 pax.
 
