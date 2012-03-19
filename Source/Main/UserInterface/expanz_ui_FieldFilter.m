@@ -8,10 +8,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import "expanz_ui_FieldFilter.h"
 #import <objc/runtime.h>
 
-@implementation expanz_ui_FieldFilter /* ================================================= Class Methods ================================================== */
+@implementation expanz_ui_FieldFilter
+
+ /* ================================================= Class Methods ================================================== */
 + (BOOL) resolveInstanceMethod:(SEL)sel {
     NSString* name = NSStringFromSelector(sel);
     if ([name hasPrefix:@"set"]) {
@@ -25,7 +28,6 @@
         return YES;
     }
     return NO;
-
 }
 
 /* ================================================== Initializers ================================================== */

@@ -13,13 +13,14 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_ui_UITableViewQuery;
+@class expanz_ui_FieldFilter;
 
 /**
 * Adds Expanz data binding capability to a standard UITableView control.
 */
 @interface UITableView (DataPublication)
 
-@property (nonatomic, strong) IBOutlet expanz_ui_UITableViewQuery* queryObject;
+@property (nonatomic, strong) IBOutlet expanz_ui_FieldFilter* fieldFilter;
 
 - (void) setExpanzDataBinding:(BOOL)dataBinding;
 
