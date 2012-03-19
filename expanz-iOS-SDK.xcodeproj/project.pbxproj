@@ -674,6 +674,13 @@
 		6BFDE7761495FA01005D35A1 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359E /* expanz_model_Query.m */; };
 		6BFDE7761495FA01005D35A3 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 		6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
+		6BFDE7761495FA01005D35A6 /* expanz_ui_UITableViewQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A5 /* expanz_ui_UITableViewQuery.m */; };
+		6BFDE7761495FA01005D35A7 /* expanz_ui_UITableViewQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A5 /* expanz_ui_UITableViewQuery.m */; };
+		6BFDE7761495FA01005D35A9 /* expanz_ui_UITableViewQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A8 /* expanz_ui_UITableViewQuery.h */; };
+		6BFDE7761495FA01005D35AE /* FieldFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35AD /* FieldFilterSpec.m */; };
+		6BFDE7761495FA01005D35B0 /* expanz_ui_FieldFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35AF /* expanz_ui_FieldFilter.m */; };
+		6BFDE7761495FA01005D35B1 /* expanz_ui_FieldFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35AF /* expanz_ui_FieldFilter.m */; };
+		6BFDE7761495FA01005D35B3 /* expanz_ui_FieldFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B2 /* expanz_ui_FieldFilter.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1150,6 +1157,11 @@
 		6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldSchema.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D359E /* expanz_model_Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Query.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35A5 /* expanz_ui_UITableViewQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_UITableViewQuery.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35A8 /* expanz_ui_UITableViewQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_UITableViewQuery.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35AD /* FieldFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldFilterSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35AF /* expanz_ui_FieldFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_FieldFilter.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35B2 /* expanz_ui_FieldFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_FieldFilter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1395,6 +1407,10 @@
 		6B718F2B14EF921100909A38 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35B2 /* expanz_ui_FieldFilter.h */,
+				6BFDE7761495FA01005D35AF /* expanz_ui_FieldFilter.m */,
+				6BFDE7761495FA01005D35A8 /* expanz_ui_UITableViewQuery.h */,
+				6BFDE7761495FA01005D35A5 /* expanz_ui_UITableViewQuery.m */,
 				6BB5EE6714F49C1C00B5B193 /* Assembly */,
 				6B718F2C14EF921100909A38 /* Assets */,
 				6B718F3014EF921100909A38 /* Categories */,
@@ -1963,6 +1979,7 @@
 		6BFDE7761495FA01005D34ED /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35AD /* FieldFilterSpec.m */,
 				6BFDE7761495FA01005D3378 /* SDKAppDelegateSpec.m */,
 				6BFDE7761495FA01005D34FE /* ModelAdapterSpec.m */,
 				6BFDE7761495FA01005D34FC /* LoginViewControllerSpec.m */,
@@ -2131,6 +2148,8 @@
 				6BFDE7761495FA01005D3594 /* expanz_model_MethodSchema.h in Headers */,
 				6BFDE7761495FA01005D359C /* expanz_model_FieldSchema.h in Headers */,
 				6BFDE7761495FA01005D35A3 /* expanz_model_Query.h in Headers */,
+				6BFDE7761495FA01005D35A9 /* expanz_ui_UITableViewQuery.h in Headers */,
+				6BFDE7761495FA01005D35B3 /* expanz_ui_FieldFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2541,6 +2560,8 @@
 				6BFDE7761495FA01005D358F /* expanz_model_MethodSchema.m in Sources */,
 				6BFDE7761495FA01005D3597 /* expanz_model_FieldSchema.m in Sources */,
 				6BFDE7761495FA01005D359F /* expanz_model_Query.m in Sources */,
+				6BFDE7761495FA01005D35A6 /* expanz_ui_UITableViewQuery.m in Sources */,
+				6BFDE7761495FA01005D35B0 /* expanz_ui_FieldFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2601,6 +2622,7 @@
 				6BEDCC591506FE4E00D9A25B /* UITableView+DataPublication.m in Sources */,
 				6BEDCC5B1506FE5B00D9A25B /* expanz_model_AbstractData+DataRenderer.m in Sources */,
 				6B4573A3150DA4290059093A /* DefaultSiteDetailsClientIntegration.m in Sources */,
+				6BFDE7761495FA01005D35AE /* FieldFilterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2782,6 +2804,8 @@
 				6B22F5421501BD2B00427F39 /* TestFixture_ViewController.m in Sources */,
 				6B152C641501CB1C004D471A /* CoverageFix.m in Sources */,
 				6BFDE7761495FA01005D35A0 /* expanz_model_Query.m in Sources */,
+				6BFDE7761495FA01005D35A7 /* expanz_ui_UITableViewQuery.m in Sources */,
+				6BFDE7761495FA01005D35B1 /* expanz_ui_FieldFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3025,7 +3049,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../expanz-iOS-Project-Generator/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
@@ -3055,7 +3078,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
-					"\"$(SRCROOT)/../expanz-iOS-Project-Generator/Dependencies/Frameworks\"",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;

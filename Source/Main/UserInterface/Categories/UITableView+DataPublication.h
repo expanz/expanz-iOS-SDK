@@ -12,10 +12,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class expanz_ui_UITableViewQuery;
+
 /**
 * Adds Expanz data binding capability to a standard UITableView control.
 */
 @interface UITableView (DataPublication)
+
+@property (nonatomic, strong) IBOutlet expanz_ui_UITableViewQuery* queryObject;
 
 - (void) setExpanzDataBinding:(BOOL)dataBinding;
 
@@ -40,6 +44,7 @@
 */
 - (void) setFieldNames:(NSString*)fieldNames;
 
+- (void) setQueryObject:(expanz_ui_UITableViewQuery*)query;
 
 /**
 * List of field names to display, or nil for `expanz_ui_GridDataRenderer` to infer.

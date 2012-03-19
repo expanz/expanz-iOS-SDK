@@ -14,6 +14,7 @@
 #import "UITableView+DataPublication.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_AppDelegate.h"
+#import "expanz_ui_UITableViewQuery.h"
 
 static char const* const fieldNameskey = "fieldNames";
 
@@ -60,7 +61,13 @@ static char const* const fieldNameskey = "fieldNames";
     return objc_getAssociatedObject(self, fieldNameskey);
 }
 
+- (UITableViewQuery*) queryObject {
+    return nil; 
+}
 
+- (void) setQueryObject:(expanz_ui_UITableViewQuery*)query {
+    LogDebug(@"Oh fuck!");
+}
 
 /* ================================================== Private Methods =============================================== */
 
@@ -68,7 +75,7 @@ static char const* const fieldNameskey = "fieldNames";
     id appDelegate = (SdkAppDelegate*) [UIApplication sharedApplication].delegate;
     UIViewController* topController = [appDelegate navigationController].topViewController;
     if ([topController isKindOfClass:([ActivityInstanceViewController class])]) {
-        return topController;
+        return (ActivityInstanceViewController*) topController;
     }
     return nil;
 }
