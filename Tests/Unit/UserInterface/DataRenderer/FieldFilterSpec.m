@@ -14,10 +14,9 @@
 SPEC_BEGIN(MyFilterObjectSpec)
 
 
-        it(@"should forward invocations", ^{
+        it(@"should collect the names of fields to include", ^{
 
             FieldFilter* filterObject = [[FieldFilter alloc] init];
-            LogDebug(@"Here we go!");
             [filterObject setValue:[NSNumber numberWithBool:YES] forKey:@"foo"];
             [filterObject setValue:[NSNumber numberWithBool:YES] forKey:@"bar"];
             [filterObject setValue:[NSNumber numberWithBool:NO] forKey:@"aHooGah"];

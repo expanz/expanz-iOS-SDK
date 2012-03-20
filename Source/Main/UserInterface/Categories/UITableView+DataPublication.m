@@ -15,6 +15,8 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_AppDelegate.h"
 #import "expanz_ui_FieldFilter.h"
+#import "expanz_ui_QueryDataSource.h"
+#import "JRSwizzle.h"
 
 static char const* const fieldNameskey = "fieldNames";
 
@@ -27,6 +29,12 @@ static char const* const fieldNameskey = "fieldNames";
 
 /* ================================================================================================================== */
 @implementation UITableView (DataPublication)
+
++ (void) load {
+    [[self class] jr_swizzleMethod:@selector(setDataSource:) withMethod:@selector(setMyDataSource:) error:nil];
+    [super load];
+}
+
 
 - (void) setExpanzDataBinding:(BOOL)dataBinding {
     ActivityInstanceViewController* activityController = [self activityController];
@@ -59,8 +67,22 @@ static char const* const fieldNameskey = "fieldNames";
     objc_setAssociatedObject(self, fieldNameskey, [fieldFilter fields], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+
+- (void) setMyDataSource:(id<UITableViewDataSource>)dataSource {
+    if ([dataSource isKindOfClass:[QueryDataSource class]]) {
+        QueryDataSource* queryDataSource = (QueryDataSource*) dataSource;
+        LogDebug(@"Setting my query: %@", [queryDataSource query]);
+        [self setQuery:[queryDataSource query]];
+    }
+    else {
+        [[self class] jr_swizzleMethod:@selector(setMyDataSource:) withMethod:@selector(setDataSource:) error:nil];
+        [self setDataSource:dataSource];
+        [[self class] jr_swizzleMethod:@selector(setDataSource:) withMethod:@selector(setMyDataSource:) error:nil];
+    }
+}
+
 - (FieldFilter*) fieldFilter {
-    return nil; 
+    return nil;
 }
 
 /* ================================================== Private Methods =============================================== */

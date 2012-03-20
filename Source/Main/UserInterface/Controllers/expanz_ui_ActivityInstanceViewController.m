@@ -153,7 +153,6 @@
                 UITableView* tableView =
                     (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];
                 if (object == tableView) {
-                    LogDebug(@"Fuck me dead, it still works!");
                     [publicationRequest setDataPublicationId:propertyName];
                 }
             }

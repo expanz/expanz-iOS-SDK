@@ -13,7 +13,7 @@
 #import "expanz_AppDelegate.h"
 
 
-SPEC_BEGIN(SDKAppDelegateSpec)
+SPEC_BEGIN(SdkAppDelegateSpec)
 
     __block SdkAppDelegate* delegate;
 
