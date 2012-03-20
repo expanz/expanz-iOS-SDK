@@ -14,7 +14,6 @@
 #import "UITableView+DataPublication.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_AppDelegate.h"
-#import "expanz_ui_UITableViewQuery.h"
 #import "expanz_ui_FieldFilter.h"
 
 static char const* const fieldNameskey = "fieldNames";
@@ -52,11 +51,6 @@ static char const* const fieldNameskey = "fieldNames";
     [activityController hasUITableView:self requestingAutoPopulate:autoPopulate];
 }
 
-- (void) setFieldNames:(NSString*)fieldNames {
-    objc_setAssociatedObject(self, fieldNameskey, [fieldNames componentsSeparatedByString:@","],
-            OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (NSArray*) fieldNames {
     return objc_getAssociatedObject(self, fieldNameskey);
 }
@@ -65,13 +59,8 @@ static char const* const fieldNameskey = "fieldNames";
     objc_setAssociatedObject(self, fieldNameskey, [fieldFilter fields], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-
-- (UITableViewQuery*) queryObject {
-    return nil;
-}
-
-- (void) setQueryObject:(expanz_ui_UITableViewQuery*)query {
-    LogDebug(@"Oh fuck!");
+- (FieldFilter*) fieldFilter {
+    return nil; 
 }
 
 /* ================================================== Private Methods =============================================== */

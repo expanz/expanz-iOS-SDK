@@ -39,14 +39,6 @@
 */
 - (void) setAutoPopulate:(BOOL)autoPopulate;
 
-
-/**
-* Comma-separated list of fields to display. 
-*/
-- (void) setFieldNames:(NSString*)fieldNames;
-
-- (void) setQueryObject:(expanz_ui_UITableViewQuery*)query;
-
 /**
 * List of field names to display, or nil for `expanz_ui_GridDataRenderer` to infer.
 */
