@@ -106,9 +106,9 @@
 <span class="lineNum">      48 </span><span class="lineCov">          9 :     DataPublicationRequest* publicationRequest = [_dataPublicationRequests objectForKey:key];</span>
 <span class="lineNum">      49 </span><span class="lineCov">          9 :     if (publicationRequest == nil) {</span>
 <span class="lineNum">      50 </span><span class="lineCov">          9 :         publicationRequest = [[DataPublicationRequest alloc] init];</span>
-<span class="lineNum">      51 </span><span class="lineCov">          4 :         [_dataPublicationRequests setObject:publicationRequest forKey:key];</span>
-<span class="lineNum">      52 </span><span class="lineCov">          4 :     }</span>
-<span class="lineNum">      53 </span><span class="lineCov">          4 :     return publicationRequest;</span>
+<span class="lineNum">      51 </span><span class="lineCov">          5 :         [_dataPublicationRequests setObject:publicationRequest forKey:key];</span>
+<span class="lineNum">      52 </span><span class="lineCov">          5 :     }</span>
+<span class="lineNum">      53 </span><span class="lineCov">          5 :     return publicationRequest;</span>
 <span class="lineNum">      54 </span><span class="lineCov">          9 : }</span>
 <span class="lineNum">      55 </span><span class="lineCov">          9 : </span>
 <span class="lineNum">      56 </span>            : - (NSValue*) keyForDataPublicationRequest:(DataPublicationRequest*)publicationRequest {
