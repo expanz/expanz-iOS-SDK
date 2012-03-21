@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - expanz-iOS-SDK.info - UserInterface/Assembly/expanz_AppDelegate.m</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">UserInterface/Assembly</a> - expanz_AppDelegate.m</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">expanz-iOS-SDK.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntryHi">92.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2012-03-21</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">       2 </span>            : //
+<span class="lineNum">       3 </span>            : //  EXPANZ
+<span class="lineNum">       4 </span>            : //  Copyright 2008-2011 EXPANZ
+<span class="lineNum">       5 </span>            : //  All Rights Reserved.
+<span class="lineNum">       6 </span>            : //
+<span class="lineNum">       7 </span>            : //  NOTICE: Expanz permits you to use, modify, and distribute this file
+<span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
+<span class="lineNum">       9 </span>            : //
+<span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////`
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : #import &quot;Objection.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_AppDelegate.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_UserInterfaceModule.h&quot;
+<span class="lineNum">      15 </span>            : #import &quot;expanz_ui_LoginViewController.h&quot;
+<span class="lineNum">      16 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      17 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span><span class="lineNoCov">          0 : @implementation expanz_AppDelegate</span>
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span><span class="lineCov">          4 : @synthesize window = _window;</span>
+<span class="lineNum">      22 </span><span class="lineCov">         10 : @synthesize navigationController = _navigationController;</span>
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span>            : /* ================================================ Delegate Methods ================================================ */
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            : - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+<span class="lineNum">      28 </span><span class="lineCov">          1 :     </span>
+<span class="lineNum">      29 </span>            :     JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
+<span class="lineNum">      30 </span><span class="lineCov">          1 :     [JSObjection setGlobalInjector:injector];</span>
+<span class="lineNum">      31 </span><span class="lineCov">          1 :     LoginViewController* loginViewController = [[LoginViewController alloc] init];</span>
+<span class="lineNum">      32 </span><span class="lineCov">          1 :     [_navigationController pushViewController:loginViewController animated:NO];</span>
+<span class="lineNum">      33 </span><span class="lineCov">          1 :     [_navigationController setNavigationBarHidden:YES];</span>
+<span class="lineNum">      34 </span><span class="lineCov">          1 :     [self.window addSubview: [_navigationController view]];</span>
+<span class="lineNum">      35 </span><span class="lineCov">          1 :     [self.window makeKeyAndVisible];    </span>
+<span class="lineNum">      36 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      37 </span>            :     return YES;
+<span class="lineNum">      38 </span>            : }
+<span class="lineNum">      39 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      41 </span>            : //- (void) applicationWillResignActive:(UIApplication*)application {
+<span class="lineNum">      42 </span>            :     /*
+<span class="lineNum">      43 </span>            :      Sent when the application is about to move from active to inactive state. This can occur for certain types of 
+<span class="lineNum">      44 </span>            :      temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and 
+<span class="lineNum">      45 </span>            :      it begins the transition to the background state. 
+<span class="lineNum">      46 </span>            :      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use 
+<span class="lineNum">      47 </span>            :      this method to pause the game.
+<span class="lineNum">      48 </span>            :      */
+<span class="lineNum">      49 </span>            : //}
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            : //- (void) applicationDidEnterBackground:(UIApplication*)application {
+<span class="lineNum">      52 </span>            :     /*
+<span class="lineNum">      53 </span>            :      Use this method to release shared resources, save user data, invalidate timers, and store enough application state 
+<span class="lineNum">      54 </span>            :      information to restore your application to its current state in case it is terminated later. 
+<span class="lineNum">      55 </span>            :      If your application supports background execution, this method is called instead of applicationWillTerminate: when 
+<span class="lineNum">      56 </span>            :      the user quits.
+<span class="lineNum">      57 </span>            :      */
+<span class="lineNum">      58 </span>            : //}
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span>            : //- (void) applicationWillEnterForeground:(UIApplication*)application {
+<span class="lineNum">      61 </span>            :     /*
+<span class="lineNum">      62 </span>            :      Called as part of the transition from the background to the inactive state; here you can undo many of the changes 
+<span class="lineNum">      63 </span>            :      made on entering the background.
+<span class="lineNum">      64 </span>            :      */
+<span class="lineNum">      65 </span>            : //}
+<span class="lineNum">      66 </span>            : 
+<span class="lineNum">      67 </span>            : //- (void) applicationDidBecomeActive:(UIApplication*)application {
+<span class="lineNum">      68 </span>            :     /*
+<span class="lineNum">      69 </span>            :      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was 
+<span class="lineNum">      70 </span>            :      previously in the background, optionally refresh the user interface.
+<span class="lineNum">      71 </span>            :      */
+<span class="lineNum">      72 </span>            : //}
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            : //- (void)applicationWillTerminate:(UIApplication*)application {
+<span class="lineNum">      75 </span>            :     /*
+<span class="lineNum">      76 </span>            :      Called when the application is about to terminate.
+<span class="lineNum">      77 </span>            :      Save data if appropriate.
+<span class="lineNum">      78 </span>            :      See also applicationDidEnterBackground:.
+<span class="lineNum">      79 </span>            :      */
+<span class="lineNum">      80 </span>            : //}
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span>            : 
+<span class="lineNum">      83 </span>            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
