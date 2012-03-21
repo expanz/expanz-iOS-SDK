@@ -242,6 +242,13 @@
                 <include name="TableCellForTreeData.xib"/>
             </fileset>
         </copy>
+
+        <copy todir="${template.dir}/expanz iPhone.xctemplate/Supporting Files">
+            <fileset dir="${basedir}/Source/Examples/Configuration">
+                <include name="production_environment.xml"/>
+                <include name="test_environment.xml"/>
+            </fileset>
+        </copy>
     </target>
 
     <target name="--publish.site">
