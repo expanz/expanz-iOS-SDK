@@ -31,13 +31,13 @@
             <td class="headerValue">expanz-iOS-SDK.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">12</td>
             <td class="headerCovTableEntry">55</td>
-            <td class="headerCovTableEntryLo">52.7 %</td>
+            <td class="headerCovTableEntryLo">21.8 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-03-20</td>
+            <td class="headerValue">2012-03-21</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -83,28 +83,28 @@
 <span class="lineNum">      25 </span>            : /* ================================================================================================================== */
 <span class="lineNum">      26 </span>            : @interface expanz_ui_NavigationManager (private)
 <span class="lineNum">      27 </span>            : 
-<span class="lineNum">      28 </span><span class="lineCov">          4 : - (CATransition*) cubeViewTransition;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          2 : - (CATransition*) cubeViewTransition;</span>
 <span class="lineNum">      29 </span>            : 
 <span class="lineNum">      30 </span>            : @end
 <span class="lineNum">      31 </span>            : 
 <span class="lineNum">      32 </span>            : /* ================================================================================================================== */
-<span class="lineNum">      33 </span><span class="lineCov">          1 : @implementation expanz_ui_NavigationManager</span>
+<span class="lineNum">      33 </span><span class="lineNoCov">          0 : @implementation expanz_ui_NavigationManager</span>
 <span class="lineNum">      34 </span>            : 
 <span class="lineNum">      35 </span><span class="lineCov">          1 : objection_register_singleton(expanz_ui_NavigationManager)</span>
 <span class="lineNum">      36 </span><span class="lineCov">          2 : objection_requires(@&quot;reporter&quot;)</span>
 <span class="lineNum">      37 </span>            : 
-<span class="lineNum">      38 </span><span class="lineCov">          8 : @synthesize reporter = _reporter;</span>
+<span class="lineNum">      38 </span><span class="lineCov">          4 : @synthesize reporter = _reporter;</span>
 <span class="lineNum">      39 </span>            : 
 <span class="lineNum">      40 </span>            : 
 <span class="lineNum">      41 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      42 </span><span class="lineCov">          4 : - (id) init {</span>
-<span class="lineNum">      43 </span><span class="lineCov">          4 :     self = [super init];</span>
-<span class="lineNum">      44 </span><span class="lineCov">          4 :     if (self) {</span>
-<span class="lineNum">      45 </span><span class="lineCov">          4 :         SdkAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;</span>
-<span class="lineNum">      46 </span><span class="lineCov">          4 :         _navigationController = appDelegate.navigationController;</span>
-<span class="lineNum">      47 </span><span class="lineCov">          4 :     }</span>
-<span class="lineNum">      48 </span><span class="lineCov">          4 :     return self;</span>
-<span class="lineNum">      49 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">      42 </span><span class="lineCov">          2 : - (id) init {</span>
+<span class="lineNum">      43 </span><span class="lineCov">          2 :     self = [super init];</span>
+<span class="lineNum">      44 </span><span class="lineCov">          2 :     if (self) {</span>
+<span class="lineNum">      45 </span><span class="lineCov">          2 :         SdkAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;</span>
+<span class="lineNum">      46 </span><span class="lineCov">          2 :         _navigationController = appDelegate.navigationController;</span>
+<span class="lineNum">      47 </span><span class="lineCov">          2 :     }</span>
+<span class="lineNum">      48 </span><span class="lineCov">          2 :     return self;</span>
+<span class="lineNum">      49 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      50 </span>            : 
 <span class="lineNum">      51 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      52 </span><span class="lineNoCov">          0 : - (BOOL) showMainMenu {</span>
@@ -120,28 +120,28 @@
 <span class="lineNum">      62 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      63 </span>            : 
 <span class="lineNum">      64 </span>            : 
-<span class="lineNum">      65 </span><span class="lineCov">          2 : - (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem {</span>
-<span class="lineNum">      66 </span><span class="lineCov">          2 :     return [self showActivity:menuItem initialKey:nil];</span>
-<span class="lineNum">      67 </span><span class="lineCov">          2 : }</span>
+<span class="lineNum">      65 </span><span class="lineNoCov">          0 : - (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem {</span>
+<span class="lineNum">      66 </span><span class="lineNoCov">          0 :     return [self showActivity:menuItem initialKey:nil];</span>
+<span class="lineNum">      67 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      68 </span>            : 
 <span class="lineNum">      69 </span>            : - (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem initialKey:(NSString*)initialKey {
-<span class="lineNum">      70 </span><span class="lineCov">          2 : </span>
+<span class="lineNum">      70 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      71 </span>            :     NSString* controllerClassName = [menuItem.style controllerClassNameForActivityId:menuItem.activityId];
-<span class="lineNum">      72 </span><span class="lineCov">          2 :     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);</span>
-<span class="lineNum">      73 </span><span class="lineCov">          2 :     if (clazz == nil) {</span>
-<span class="lineNum">      74 </span><span class="lineCov">          2 :         NSString* errorMessage = [NSString stringWithFormat:@&quot;No controller exists named %@&quot;, controllerClassName];</span>
-<span class="lineNum">      75 </span><span class="lineCov">          1 :         [_reporter reportErrorWithReason:errorMessage];</span>
-<span class="lineNum">      76 </span><span class="lineCov">          1 :         return NO;</span>
+<span class="lineNum">      72 </span><span class="lineNoCov">          0 :     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);</span>
+<span class="lineNum">      73 </span><span class="lineNoCov">          0 :     if (clazz == nil) {</span>
+<span class="lineNum">      74 </span><span class="lineNoCov">          0 :         NSString* errorMessage = [NSString stringWithFormat:@&quot;No controller exists named %@&quot;, controllerClassName];</span>
+<span class="lineNum">      75 </span><span class="lineNoCov">          0 :         [_reporter reportErrorWithReason:errorMessage];</span>
+<span class="lineNum">      76 </span><span class="lineNoCov">          0 :         return NO;</span>
 <span class="lineNum">      77 </span>            :     }
-<span class="lineNum">      78 </span><span class="lineCov">          1 :     else {</span>
+<span class="lineNum">      78 </span><span class="lineNoCov">          0 :     else {</span>
 <span class="lineNum">      79 </span>            :         ActivityInstanceViewController* nextView = [clazz alloc];
-<span class="lineNum">      80 </span><span class="lineCov">          1 :         NSString* nibName = [menuItem.style nibNameForActivityId:menuItem.activityId];</span>
-<span class="lineNum">      81 </span><span class="lineCov">          1 :         nextView = [nextView initWithActivityDefinition:menuItem nibName:nibName initialKey:initialKey];</span>
-<span class="lineNum">      82 </span><span class="lineCov">          1 :         [_navigationController pushViewController:nextView animated:YES];</span>
-<span class="lineNum">      83 </span><span class="lineCov">          1 :         return YES;</span>
+<span class="lineNum">      80 </span><span class="lineNoCov">          0 :         NSString* nibName = [menuItem.style nibNameForActivityId:menuItem.activityId];</span>
+<span class="lineNum">      81 </span><span class="lineNoCov">          0 :         nextView = [nextView initWithActivityDefinition:menuItem nibName:nibName initialKey:initialKey];</span>
+<span class="lineNum">      82 </span><span class="lineNoCov">          0 :         [_navigationController pushViewController:nextView animated:YES];</span>
+<span class="lineNum">      83 </span><span class="lineNoCov">          0 :         return YES;</span>
 <span class="lineNum">      84 </span>            :     }
-<span class="lineNum">      85 </span><span class="lineCov">          1 : }</span>
-<span class="lineNum">      86 </span><span class="lineCov">          2 : </span>
+<span class="lineNum">      85 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      87 </span>            : - (BOOL) showDocument:(NSString*)documentId {
 <span class="lineNum">      88 </span><span class="lineNoCov">          0 :     ActivityInstanceViewController</span>
 <span class="lineNum">      89 </span>            :             * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];
