@@ -249,7 +249,7 @@
             #!/bin/sh
             cd ${basedir}
             git checkout gh-pages
-            git pull
+            git fetch
             rm -fr ./coverage
             cp -fr ${reports.dir}/coverage/ ./coverage
             git add ./coverage
@@ -269,7 +269,7 @@
             #!/bin/sh
             cd ${basedir}
             git checkout gh-pages
-            git pull
+            git fetch
             rm -fr ./installer
             cp -fr ${release.dir} ./installer
             git add ./installer
