@@ -19,7 +19,6 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_DocumentViewController.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_ui_SystemEventReporter.h"
 
 /* ================================================================================================================== */
 @implementation expanz_ui_NavigationManager

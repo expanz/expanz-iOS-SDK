@@ -257,6 +257,7 @@
             cd ${basedir}
             git checkout gh-pages
             git fetch
+            git pull
             rm -fr ./coverage
             cp -fr ${reports.dir}/coverage/ ./coverage
             git add ./coverage
@@ -277,6 +278,7 @@
             cd ${basedir}
             git checkout gh-pages
             git fetch
+            git pull
             rm -fr ./installer
             cp -fr ${release.dir} ./installer
             git add ./installer
