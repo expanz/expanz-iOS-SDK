@@ -65,7 +65,10 @@ latest successful build from our continuous integration server.</a>
 
 . . . are very welcome.
 
-If you're using the API shoot me an email and tell me what you're doing with it.
+* Fork the project
+* Add tests (see coverage report)
+* Make your changes
+* Send a pull request
 
 # Authors
 
