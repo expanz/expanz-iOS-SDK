@@ -6,7 +6,7 @@ This is the iOS SDK for the expanz platform.
 
 ## Getting Started
 
-* Download the <a href="http://www.expanz.com/expanz-Client-SDK-for-Apple-iOS/">latest stable release installer.</a>
+* Download the <a href="http://developer.expanz.com/clientSDKs/">latest stable release installer.</a>
 * Open xcode and choose 'New Expanz Project'.
 * Choose Product/Run.
 
