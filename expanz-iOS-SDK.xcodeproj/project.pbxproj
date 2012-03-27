@@ -344,7 +344,6 @@
 		6B718EAC14EF920300909A38 /* NSString+ExpanzDataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DD814EF920300909A38 /* NSString+ExpanzDataType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718EAD14EF920300909A38 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DD914EF920300909A38 /* NSString+ExpanzDataType.m */; };
 		6B718EB014EF920300909A38 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DD914EF920300909A38 /* NSString+ExpanzDataType.m */; };
-		6B718F2814EF920300909A38 /* CAFilter+Unlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718E0E14EF920300909A38 /* CAFilter+Unlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718F2A14EF920300909A38 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718E0F14EF920300909A38 /* xml_Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718F5614EF921100909A38 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6B718FA514EF962B00909A38 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B718FA314EF962B00909A38 /* Info.plist */; };
@@ -994,7 +993,6 @@
 		6B718DD714EF920300909A38 /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
 		6B718DD814EF920300909A38 /* NSString+ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzDataType.h"; sourceTree = "<group>"; };
 		6B718DD914EF920300909A38 /* NSString+ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataType.m"; sourceTree = "<group>"; };
-		6B718E0E14EF920300909A38 /* CAFilter+Unlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAFilter+Unlock.h"; sourceTree = "<group>"; };
 		6B718E0F14EF920300909A38 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
 		6B718FA314EF962B00909A38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B718FA414EF962B00909A38 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -1587,7 +1585,6 @@
 			children = (
 				6BFDE7761495FA01005D350A /* NSString+Contains.h */,
 				6BFDE7761495FA01005D3505 /* NSString+Contains.m */,
-				6B718E0E14EF920300909A38 /* CAFilter+Unlock.h */,
 				6B718E0F14EF920300909A38 /* xml_Serializable.h */,
 			);
 			path = Utils;
@@ -2308,7 +2305,6 @@
 				6B718EA014EF920300909A38 /* expanz_model_TreeData.h in Headers */,
 				6B718EA614EF920300909A38 /* expanz_model_UserRole.h in Headers */,
 				6B718EAC14EF920300909A38 /* NSString+ExpanzDataType.h in Headers */,
-				6B718F2814EF920300909A38 /* CAFilter+Unlock.h in Headers */,
 				6B718F2A14EF920300909A38 /* xml_Serializable.h in Headers */,
 				6B718FA914EF962B00909A38 /* Prefix.pch in Headers */,
 				6BFDE7761495FA01005D350C /* NSString+Contains.h in Headers */,

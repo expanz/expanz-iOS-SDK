@@ -12,7 +12,6 @@
 
 #import <objc/runtime.h>
 #import "Objection.h"
-#import "CAFilter+Unlock.h"
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_AppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
@@ -21,13 +20,6 @@
 #import "expanz_ui_DocumentViewController.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_ui_SystemEventReporter.h"
-
-/* ================================================================================================================== */
-@interface expanz_ui_NavigationManager (private)
-
-- (CATransition*) cubeViewTransition;
-
-@end
 
 /* ================================================================================================================== */
 @implementation expanz_ui_NavigationManager
@@ -51,12 +43,11 @@ objection_requires(@"reporter")
 /* ================================================ Interface Methods =============================================== */
 - (BOOL) showMainMenu {
     ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
-    [_navigationController pushViewController:menuViewController animated:NO];
+    [_navigationController pushViewController:menuViewController animated:YES];
     [_navigationController setNavigationBarHidden:NO];
     [menuViewController.navigationItem setHidesBackButton:YES];
 
     SdkAppDelegate* delegate = [UIApplication sharedApplication].delegate;
-    [delegate.window.layer addAnimation:[self cubeViewTransition] forKey:nil];
     [delegate.window addSubview:delegate.navigationController.view];
     return YES;
 }
@@ -93,22 +84,6 @@ objection_requires(@"reporter")
             [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
     [_navigationController pushViewController:documentViewController animated:YES];
     return YES;
-}
-
-
-/* ================================================== Private Methods =============================================== */
-//TODO: Private API - replace this with library call.
-- (CATransition*) cubeViewTransition {
-    static const NSTimeInterval kAnimationDuration = 0.75f;
-    CATransition* transition = [CATransition animation];
-    transition.duration = kAnimationDuration;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.subtype = kCATransitionFromRight;
-    transition.delegate = self;
-    CAFilter* filter = [CAFilter filterWithName:@"cube"];
-    [filter setValue:[NSValue valueWithCGPoint:CGPointMake(160, 240)] forKey:@"inputPosition"];
-    transition.filter = filter;
-    return transition;
 }
 
 
