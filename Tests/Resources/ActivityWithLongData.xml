@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="33" xmlns="">
+            <Activity activityHandle="634698672059619429.15" title="Company"
+                ActivityPersistentId="17">
+                <Field id="PersistentId" nullable="0" null="0" value="17" datatype="number"
+                    valid="1"/>
+                <Field id="Name" label="Name" backgroundLabel="Enter the company name"
+                    hint="What is the Company Name" nullable="0" maxLength="254" null="0"
+                    value="Aussie Farmer Direct" datatype="string" contentType="Name" valid="1"/>
+                <Field id="Url" label="WebSite" hint="company website" nullable="1" maxLength="254"
+                    null="0" value="http://www.aussiefarmers.com.au/" datatype="string"
+                    contentType="url" metaType="url" valid="1"/>
+                <Field id="Address" label="Address" hint="Street Address" nullable="1"
+                    maxLength="254" null="0"
+                    value="BUILDING 10 L 3 658 CHURCH ST, EAST RICHMOND, VIC 3121" datatype="string"
+                    valid="1"/>
+                <Field id="Industry" label="Industry" hint="What Industry are they in" nullable="0"
+                    maxLength="254" null="0" valid="1" value="Unknown" datatype="string"/>
+                <Field id="NumberOfEmployees" label="Number Of Employees"
+                    hint="How many employees do they have approximately" nullable="1" null="0"
+                    valid="1" value="1" datatype="number"/>
+                <Field id="CompanyDescription" label="Company Description" nullable="1"
+                    maxLength="4000" null="0" value="$longData$" datatype="string" valid="1">New
+                    South Wales/ACT, Jason Hanns, Business Development Manager, Call: 0433 187 875
+                    Started 2005, 100% Australian owned, 175 "Milkmen", 2009 BRW Fast
+                    Company,80,000(2010) 130,000(2012) customers (20% per year growth).</Field>
+                <Field id="SolutionDesired" label="Solution Desired"
+                    hint="What would be their perfect solution?" nullable="1" maxLength="4000"
+                    null="1" value="$longData$" datatype="string" valid="1"/>
+                <Field id="WhyBuyUs" label="Why Buy Us"
+                    hint="What messages should we ensure they understand about our solution?"
+                    nullable="1" maxLength="4000" null="1" value="$longData$" datatype="string"
+                    valid="1"/>
+                <Field id="Notes" label="Notes" nullable="1" maxLength="4000" null="1"
+                    value="$longData$" datatype="string" valid="1"/>
+                <Field id="Status" label="Status" nullable="0" null="0" valid="1" value="10"
+                    text="Not yet contacted" datatype="string"/>
+                <Field id="NextStep" label="Next Step" nullable="0" null="0" valid="1" value="10"
+                    text="Cold Call" datatype="string"/>
+                <Field id="Temperature" label="Temperature"
+                    hint="How interested is the organisation in solving the problem" nullable="1"
+                    null="1" valid="1" value="0" text="" datatype="string"/>
+                <Field id="LeadType" label="Lead Type" hint="Type of solution we will be offering"
+                    nullable="0" null="0" valid="1" value="10" text="Food Distribution Solution"
+                    datatype="string"/>
+                <Field id="LeadLevel" label="Lead Level" nullable="0" null="0" valid="1" value="10"
+                    text="No Lead Identified" datatype="string"/>
+                <Field id="Result" label="Result" hint="What is the results acheived from last call"
+                    nullable="0" null="0" valid="1" value="10" text="Unavailable Call Back"
+                    datatype="string"/>
+                <Field id="StrategicInterest" label="Strategic Interest"
+                    hint="Why would we be interested in this opportunity ?" nullable="0" null="0"
+                    valid="1" value="1" text="Not Set" datatype="string"/>
+                <Field id="InternalInformationUrl" label="Internal Information" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" contentType="url"
+                    metaType="url" valid="1"/>
+                <Field id="SearchFilter" label="Search Filter" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="ProblemToOvercome" label="Problem To Overcome" nullable="1"
+                    maxLength="4000" null="1" value="$longData$" datatype="string" valid="1"/>
+                <Field id="LeadSource" label="Lead Source" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="ActiveLeadListType" label="Lead Type Filter" nullable="0" maxLength="254"
+                    null="0" valid="1" value="MyLeads" text="My Leads" datatype="string"/>
+                <Field id="SalesPerson.PersistentId" disabled="0" nullable="0" null="0" value="1"
+                    datatype="number" valid="1"/>
+                <Field id="SalesPerson.FirstName" label="First Name" disabled="1" nullable="1"
+                    maxLength="254" null="0" value="Paul" datatype="string" valid="1"/>
+                <Field id="SalesPerson.LastName" label="Last Name" disabled="1" nullable="1"
+                    maxLength="254" null="0" value="Sawkins" datatype="string" valid="1"/>
+                <Field id="SalesPerson.FullName" label="Full Name" disabled="1" nullable="1"
+                    maxLength="254" null="0" value="Paul Sawkins" datatype="string" valid="1"/>
+                <Field id="KeyContact.PersistentId" label="Key Contact" nullable="0" null="0"
+                    valid="1" value="29" datatype="number"/>
+                <Field id="KeyContact.FirstName" label="First Name" nullable="0" maxLength="254"
+                    null="0" value="Trent" datatype="string" valid="1"/>
+                <Field id="KeyContact.LastName" label="Last Name" nullable="0" maxLength="254"
+                    null="0" valid="1" value="Morpeth" datatype="string"/>
+                <Field id="KeyContact.MetInPerson" label="Met In Person" nullable="1" null="1"
+                    value="0" datatype="bool" valid="1"/>
+                <Field id="KeyContact.MobileNumber" label="Mobile Number" nullable="1"
+                    maxLength="254" null="0" value="0419 350 304" datatype="string" valid="1"/>
+                <Field id="KeyContact.DirectPhone" label="Direct Phone" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" valid="1"/>
+                <Field id="KeyContact.ReceptionPhone" label="Reception Phone" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="KeyContact.PreferredPhone" label="Preferred Phone" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="KeyContact.Email" label="Email" nullable="1" maxLength="254" null="0"
+                    value="Trent.Morpeth@aussiefarmers.com.au" datatype="string" contentType="email"
+                    valid="1"/>
+                <Field id="KeyContact.Email2" label="Email 2" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="KeyContact.LinkedIn" label="Linked-In" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="KeyContact.Blog" label="Blog" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="KeyContact.Facebook" label="Facebook" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="KeyContact.Notes" label="Notes" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="KeyContact.PersonType" label="Person Type" nullable="1" maxLength="254"
+                    null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="KeyContact.FullName" label="Full Name" disabled="1" nullable="1"
+                    maxLength="254" null="0" valid="1" value="Trent Morpeth" datatype="string"/>
+                <Field id="Opportunities.PersistentId" nullable="0" null="1" value=""
+                    datatype="number" relationship="aggregate"/>
+                <Field id="Opportunities.HighLevelDescription" label="High Level Description"
+                    nullable="0" valid="0" maxLength="254" null="1" value="" datatype="string"/>
+                <Field id="Opportunities.ExpectedAmount" label="Profit in 12 Months" nullable="0"
+                    valid="0" null="1" value="" datatype="number"/>
+                <Field id="Opportunities.ExpectedMonthlySubscription"
+                    label="Expected Monthly Subscription" nullable="1" null="1" value=""
+                    datatype="number" valid="1"/>
+                <Field id="Opportunities.ExpectedMonthlyEnhancements"
+                    label="Expected Monthly Enhancements" nullable="1" null="1" value=""
+                    datatype="number" valid="1"/>
+                <Field id="Opportunities.SalesPhase" label="Sales Phase"
+                    hint="What is the majority of what needs to happen" nullable="0" null="0"
+                    valid="1" value="10" text="Qualify Potential - Need, Authority, Resources"
+                    datatype="string"/>
+                <Field id="Opportunities.WhyAnything" label="Why Anything"
+                    hint="High level message of the organisations problem" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="Opportunities.WhyBuyNow" label="Why Buy Now"
+                    hint="Why the organisation should act now" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="Opportunities.WhyBuyUs" label="Why Buy Us"
+                    hint="Why we are best for the organisation" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" valid="1"/>
+                <Field id="Opportunities.StrategicInterest" label="Strategic Interest" nullable="0"
+                    null="0" valid="1" value="1" text="Unknown" datatype="string"/>
+                <Field id="Opportunities.Notes" label="Notes" nullable="1" maxLength="4000" null="1"
+                    value="$longData$" datatype="string" valid="1"/>
+                <Field id="Opportunities.Likelihood" label="Likelihood" nullable="0" minValue="0"
+                    maxValue="1" null="0" valid="1" value="0%" datatype="number"/>
+                <Field id="Opportunities.ExpectedClose" label="Expected Close" nullable="1" null="1"
+                    value="" date="" time="" DayOfWeek="" datatype="date" valid="1"/>
+                <Field id="Opportunities.BestCase" label="Best Case Total Revenue" nullable="1"
+                    null="1" value="" datatype="number" valid="1"/>
+                <Field id="Opportunities.Expected" label="One Off Amounts" nullable="1" null="1"
+                    value="" datatype="number" valid="1"/>
+                <Field id="Opportunities.WorstCase" label="Worst Case One Off Amounts" nullable="1"
+                    null="1" value="" datatype="number" valid="1"/>
+                <Field id="People.PersistentId" nullable="0" null="1" value="" datatype="number"
+                    relationship="aggregate"/>
+                <Field id="People.Title" label="Title" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="People.Description" label="Description" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.PersistentId" nullable="0" null="1" value=""
+                    datatype="number" valid="0"/>
+                <Field id="People.Person.FirstName" label="First Name" nullable="0" maxLength="254"
+                    null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.LastName" label="Last Name" nullable="0" maxLength="254"
+                    null="0" valid="1" value="Unknown" datatype="string"/>
+                <Field id="People.Person.MetInPerson" label="Met In Person" nullable="1" null="1"
+                    value="0" datatype="bool" valid="1"/>
+                <Field id="People.Person.MobileNumber" label="Mobile Number" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.DirectPhone" label="Direct Phone" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.ReceptionPhone" label="Reception Phone" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.PreferredPhone" label="Preferred Phone" nullable="1"
+                    maxLength="254" null="1" value="" datatype="string" valid="1"/>
+                <Field id="People.Person.Email" label="Email" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="People.Person.Email2" label="Email 2" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" contentType="email" valid="1"/>
+                <Field id="People.Person.LinkedIn" label="Linked-In" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="People.Person.Blog" label="Blog" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="People.Person.Facebook" label="Facebook" nullable="1" maxLength="254"
+                    null="1" value="" datatype="string" contentType="url" metaType="url" valid="1"/>
+                <Field id="People.Person.Notes" label="Notes" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="People.Person.PersonType" label="Person Type" nullable="1"
+                    maxLength="254" null="1" value="" text="" datatype="string" valid="1"/>
+                <Field id="People.Person.FullName" label="Full Name" disabled="1" nullable="1"
+                    maxLength="254" null="1" valid="1" value="" datatype="string"/>
+                <Field id="Interactions.PersistentId" nullable="0" null="1" value=""
+                    datatype="number" relationship="aggregate"/>
+                <Field id="Interactions.DatePlanned" label="Date Planned" nullable="0" valid="0"
+                    null="1" value="" date="" time="" DayOfWeek="" datatype="datetime"/>
+                <Field id="Interactions.DateCompleted" label="Date Completed" nullable="1" null="1"
+                    value="" date="" time="" DayOfWeek="" datatype="datetime" valid="1"/>
+                <Field id="Interactions.Summary" label="Summary" nullable="0" valid="0"
+                    maxLength="254" null="1" value="" datatype="string"/>
+                <Field id="Interactions.Notes" label="Notes" nullable="1" maxLength="254" null="1"
+                    value="" datatype="string" valid="1"/>
+                <Field id="Interactions.Type" label="Type" nullable="0" null="0" valid="1"
+                    value="10" text="Cold Call" datatype="string"/>
+                <Field id="Interactions.Status" label="Status" nullable="0" null="0" valid="1"
+                    value="10" text="Planned" datatype="string"/>
+                <Types>
+                    <Type id="erp365CRM.SalesPerson" image="SalesPerson"/>
+                    <Type id="erp365CRM.Person" image="Person"/>
+                    <Type id="erp365CRM.Opportunity" image="Opportunity"/>
+                    <Type id="erp365CRM.CompanyPerson" image="CompanyPerson"/>
+                    <Type id="erp365CRM.Interaction" image="Interaction"/>
+                    <Type id="erp365CRM.Company" image="Company"/>
+                </Types>
+            </Activity>
+            <Messages>
+                <Message type="Info" key="" messageSource="Framework">Class member
+                    [InternalInformationUrl] not found in erp365CRM.Company. Treating as
+                    dynamic.</Message>
+                <Message type="Info" key="" source="KeyContact" messageSource="Framework">Class
+                    member [PersonType] not found in erp365CRM.Person. Treating as
+                    dynamic.</Message>
+                <Message type="Info" key="" source="KeyContact" messageSource="Framework">Class
+                    member [FullName] not found in erp365CRM.Person. Treating as dynamic.</Message>
+                <Message type="Info" key="" source="People.Person" messageSource="Framework">Class
+                    member [PersonType] not found in erp365CRM.Person. Treating as
+                    dynamic.</Message>
+                <Message type="Info" key="" source="People.Person" messageSource="Framework">Class
+                    member [FullName] not found in erp365CRM.Person. Treating as dynamic.</Message>
+            </Messages>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/ERP65CRM#634698671869621824:33</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

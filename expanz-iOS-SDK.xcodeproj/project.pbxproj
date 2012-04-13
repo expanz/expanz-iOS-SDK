@@ -346,7 +346,6 @@
 		6B718EB014EF920300909A38 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DD914EF920300909A38 /* NSString+ExpanzDataType.m */; };
 		6B718F2A14EF920300909A38 /* xml_Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718E0F14EF920300909A38 /* xml_Serializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718F5614EF921100909A38 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		6B718FA514EF962B00909A38 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B718FA314EF962B00909A38 /* Info.plist */; };
 		6B718FA914EF962B00909A38 /* Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6B718FA414EF962B00909A38 /* Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B912278143299CA0031F7A8 /* libxml2.dylib */; };
 		6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B932F271433F7CE00834A1B /* libz.dylib */; };
@@ -728,6 +727,7 @@
 		6BFDE7761495FA01005D35A3 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 		6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 		6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */; };
+		6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -944,7 +944,6 @@
 		6B718D9514EF8B6400909A38 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6B718D9614EF8B6400909A38 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B718D9714EF8B6400909A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6B718D9A14EF8B6400909A38 /* libExpanz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libExpanz-Prefix.pch"; sourceTree = "<group>"; };
 		6B718DA514EF920300909A38 /* expanz_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_SdkConfiguration.h; sourceTree = "<group>"; };
 		6B718DA614EF920300909A38 /* expanz_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_SdkConfiguration.m; sourceTree = "<group>"; };
 		6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
@@ -1216,6 +1215,7 @@
 		6BFDE7761495FA01005D359E /* expanz_model_Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Query.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataSourceSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithLongData.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1484,22 +1484,6 @@
 				6B718D9714EF8B6400909A38 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		6B718D9814EF8B6400909A38 /* libExpanz */ = {
-			isa = PBXGroup;
-			children = (
-				6B718D9914EF8B6400909A38 /* Supporting Files */,
-			);
-			path = libExpanz;
-			sourceTree = "<group>";
-		};
-		6B718D9914EF8B6400909A38 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B718D9A14EF8B6400909A38 /* libExpanz-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6B718DA214EF920300909A38 /* Core */ = {
@@ -1831,7 +1815,6 @@
 				6B3F4964143AD4B7005C0A7A /* build.xml */,
 				6BC9F6BD1458EBB5001AF204 /* Dependencies */,
 				6BC9F54F1458EB63001AF204 /* Source */,
-				6B718D9814EF8B6400909A38 /* libExpanz */,
 				6B1F20E714EFDDE9009651FB /* Tests */,
 				6B1E5E8614734404004145D0 /* Frameworks */,
 				6BCAFB9814317B1C00575280 /* Products */,
@@ -1977,6 +1960,7 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */,
 				6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */,
 				6BFDE7761495FA01005D358C /* GetSchemaForActivityXResponse.xml */,
 				6BFDE7761495FA01005D3531 /* ListAvailableSitesResponse.xml */,
@@ -2502,6 +2486,7 @@
 				6B558B431518362300BD810C /* test_environment.xml in Resources */,
 				6B41A0CD151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0D0151877BD009ED6D0 /* Icon@2x.png in Resources */,
+				6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2510,7 +2495,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B718F5614EF921100909A38 /* (null) in Resources */,
-				6B718FA514EF962B00909A38 /* Info.plist in Resources */,
 				6B41A0CB151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CE151877BD009ED6D0 /* Icon@2x.png in Resources */,
 			);

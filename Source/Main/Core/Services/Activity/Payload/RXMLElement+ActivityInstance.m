@@ -21,7 +21,6 @@
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
 
-
 @implementation RXMLElement (ActivityInstance)
 
 - (ActivityInstance*) asActivityInstance {
@@ -74,7 +73,7 @@
         case ExpanzDataTypeNull:
         case ExpanzDataTypeDate:
         case ExpanzDataTypeDateTime:
-            [field setValue:[self attribute:@"value"]];
+            [field setValue:[self parseFieldValueAttribute]];
             break;
 
         case ExpanzDataTypeImage:
@@ -199,6 +198,20 @@
 
     return file;
 
+}
+
+/* ================================================== Private Methods =============================================== */
+
+static const NSString* LONG_DATA_MARKER = @"$longData$";
+
+- (NSString*) parseFieldValueAttribute {
+    NSString* attributeValue = [self attribute:@"value"];
+    if ([attributeValue isEqualToString:LONG_DATA_MARKER]) {
+        return [self text];
+    }
+    else {
+        return attributeValue;
+    }
 }
 
 
