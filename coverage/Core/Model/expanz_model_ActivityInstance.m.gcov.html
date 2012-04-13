@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-03-27</td>
+            <td class="headerValue">2012-04-13</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -72,7 +72,7 @@
 <span class="lineNum">      14 </span>            : #import &quot;expanz_model_GridData.h&quot;
 <span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span><span class="lineCov">         15 : @implementation expanz_model_ActivityInstance</span>
+<span class="lineNum">      17 </span><span class="lineCov">         17 : @implementation expanz_model_ActivityInstance</span>
 <span class="lineNum">      18 </span>            : 
 <span class="lineNum">      19 </span><span class="lineCov">          1 : @synthesize title = _title;</span>
 <span class="lineNum">      20 </span><span class="lineCov">          4 : @synthesize handle = _handle;</span>
@@ -80,26 +80,26 @@
 <span class="lineNum">      22 </span>            : 
 <span class="lineNum">      23 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      24 </span>            : - (id) initWithTitle:(NSString*)title handle:(NSString*)handle persistentId:(NSString*)persistentId {
-<span class="lineNum">      25 </span><span class="lineCov">         25 :     self = [super init];</span>
-<span class="lineNum">      26 </span><span class="lineCov">         25 :     if (self) {</span>
-<span class="lineNum">      27 </span><span class="lineCov">         25 :         _title = [title copy];</span>
-<span class="lineNum">      28 </span><span class="lineCov">         25 :         _handle = [handle copy];</span>
-<span class="lineNum">      29 </span><span class="lineCov">         25 :         _persistentId = [persistentId copy];</span>
-<span class="lineNum">      30 </span><span class="lineCov">         25 :         _fields = [[NSMutableSet alloc] initWithCapacity:20];</span>
-<span class="lineNum">      31 </span><span class="lineCov">         25 :         _messages = [[NSMutableArray alloc] initWithCapacity:10];</span>
-<span class="lineNum">      32 </span><span class="lineCov">         25 :         _dataSets = [[NSMutableArray alloc] initWithCapacity:2];</span>
-<span class="lineNum">      33 </span><span class="lineCov">         25 :     }</span>
-<span class="lineNum">      34 </span><span class="lineCov">         25 :     return self;</span>
-<span class="lineNum">      35 </span><span class="lineCov">         25 : }</span>
-<span class="lineNum">      36 </span><span class="lineCov">         25 : </span>
+<span class="lineNum">      25 </span><span class="lineCov">         27 :     self = [super init];</span>
+<span class="lineNum">      26 </span><span class="lineCov">         27 :     if (self) {</span>
+<span class="lineNum">      27 </span><span class="lineCov">         27 :         _title = [title copy];</span>
+<span class="lineNum">      28 </span><span class="lineCov">         27 :         _handle = [handle copy];</span>
+<span class="lineNum">      29 </span><span class="lineCov">         27 :         _persistentId = [persistentId copy];</span>
+<span class="lineNum">      30 </span><span class="lineCov">         27 :         _fields = [[NSMutableSet alloc] initWithCapacity:20];</span>
+<span class="lineNum">      31 </span><span class="lineCov">         27 :         _messages = [[NSMutableArray alloc] initWithCapacity:10];</span>
+<span class="lineNum">      32 </span><span class="lineCov">         27 :         _dataSets = [[NSMutableArray alloc] initWithCapacity:2];</span>
+<span class="lineNum">      33 </span><span class="lineCov">         27 :     }</span>
+<span class="lineNum">      34 </span><span class="lineCov">         27 :     return self;</span>
+<span class="lineNum">      35 </span><span class="lineCov">         27 : }</span>
+<span class="lineNum">      36 </span><span class="lineCov">         27 : </span>
 <span class="lineNum">      37 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      38 </span>            : - (BOOL) allowsMethodInvocations {
 <span class="lineNum">      39 </span><span class="lineCov">          3 :     for (FieldInstance* field in _fields) {</span>
-<span class="lineNum">      40 </span><span class="lineCov">          2 :         if (field.isDirty) {</span>
-<span class="lineNum">      41 </span><span class="lineCov">          2 :             return NO;</span>
+<span class="lineNum">      40 </span><span class="lineCov">          3 :         if (field.isDirty) {</span>
+<span class="lineNum">      41 </span><span class="lineCov">          3 :             return NO;</span>
 <span class="lineNum">      42 </span><span class="lineCov">          1 :         }</span>
 <span class="lineNum">      43 </span>            :     }
-<span class="lineNum">      44 </span><span class="lineCov">          3 :     return YES;</span>
+<span class="lineNum">      44 </span><span class="lineCov">          4 :     return YES;</span>
 <span class="lineNum">      45 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      46 </span><span class="lineCov">          3 : </span>
 <span class="lineNum">      47 </span>            : - (NSArray*) fields {
@@ -108,19 +108,19 @@
 <span class="lineNum">      50 </span><span class="lineCov">          7 : }</span>
 <span class="lineNum">      51 </span><span class="lineCov">          7 : </span>
 <span class="lineNum">      52 </span>            : - (void) addField:(FieldInstance*)field {
-<span class="lineNum">      53 </span><span class="lineCov">         90 :     [field setParentActivity:self];</span>
-<span class="lineNum">      54 </span><span class="lineCov">         90 :     [_fields addObject:field];</span>
-<span class="lineNum">      55 </span><span class="lineCov">         90 : }</span>
-<span class="lineNum">      56 </span><span class="lineCov">         90 : </span>
+<span class="lineNum">      53 </span><span class="lineCov">        258 :     [field setParentActivity:self];</span>
+<span class="lineNum">      54 </span><span class="lineCov">        258 :     [_fields addObject:field];</span>
+<span class="lineNum">      55 </span><span class="lineCov">        258 : }</span>
+<span class="lineNum">      56 </span><span class="lineCov">        258 : </span>
 <span class="lineNum">      57 </span>            : - (FieldInstance*) fieldWithId:(NSString*)fieldId {
-<span class="lineNum">      58 </span><span class="lineCov">        174 :     for (FieldInstance* field in _fields) {</span>
-<span class="lineNum">      59 </span><span class="lineCov">        757 :         if ([field.fieldId isEqualToString:fieldId]) {</span>
-<span class="lineNum">      60 </span><span class="lineCov">        757 :             return field;</span>
-<span class="lineNum">      61 </span><span class="lineCov">         84 :         }</span>
+<span class="lineNum">      58 </span><span class="lineCov">        176 :     for (FieldInstance* field in _fields) {</span>
+<span class="lineNum">      59 </span><span class="lineCov">        847 :         if ([field.fieldId isEqualToString:fieldId]) {</span>
+<span class="lineNum">      60 </span><span class="lineCov">        847 :             return field;</span>
+<span class="lineNum">      61 </span><span class="lineCov">         86 :         }</span>
 <span class="lineNum">      62 </span>            :     }
-<span class="lineNum">      63 </span><span class="lineCov">        757 :     return nil;</span>
+<span class="lineNum">      63 </span><span class="lineCov">        847 :     return nil;</span>
 <span class="lineNum">      64 </span><span class="lineCov">         90 : }</span>
-<span class="lineNum">      65 </span><span class="lineCov">        174 : </span>
+<span class="lineNum">      65 </span><span class="lineCov">        176 : </span>
 <span class="lineNum">      66 </span>            : 
 <span class="lineNum">      67 </span>            : - (NSArray*) messages {
 <span class="lineNum">      68 </span><span class="lineCov">          6 :     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@&quot;content&quot; ascending:YES];</span>

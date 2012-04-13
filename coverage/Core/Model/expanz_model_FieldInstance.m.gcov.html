@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-03-27</td>
+            <td class="headerValue">2012-04-13</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -69,47 +69,47 @@
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;expanz_model_FieldInstance.h&quot;
 <span class="lineNum">      13 </span>            : 
-<span class="lineNum">      14 </span><span class="lineCov">         63 : @implementation expanz_model_FieldInstance</span>
+<span class="lineNum">      14 </span><span class="lineCov">        231 : @implementation expanz_model_FieldInstance</span>
 <span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span>            : //Readonly properties.  
-<span class="lineNum">      17 </span><span class="lineCov">        839 : @synthesize fieldId = _fieldId;</span>
+<span class="lineNum">      17 </span><span class="lineCov">        929 : @synthesize fieldId = _fieldId;</span>
 <span class="lineNum">      18 </span><span class="lineCov">          1 : @synthesize nullable = _nullable;</span>
 <span class="lineNum">      19 </span><span class="lineCov">          1 : @synthesize defaultValue = _defaultValue;</span>
-<span class="lineNum">      20 </span><span class="lineCov">        123 : @synthesize datatype = _datatype;</span>
-<span class="lineNum">      21 </span><span class="lineCov">        187 : @synthesize disabled = _disabled;</span>
-<span class="lineNum">      22 </span><span class="lineCov">          6 : @synthesize dirty = _dirty;</span>
+<span class="lineNum">      20 </span><span class="lineCov">        291 : @synthesize datatype = _datatype;</span>
+<span class="lineNum">      21 </span><span class="lineCov">        523 : @synthesize disabled = _disabled;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          7 : @synthesize dirty = _dirty;</span>
 <span class="lineNum">      23 </span><span class="lineCov">         15 : @synthesize label = _label;</span>
 <span class="lineNum">      24 </span><span class="lineCov">          1 : @synthesize hint = _hint;</span>
 <span class="lineNum">      25 </span>            : 
 <span class="lineNum">      26 </span>            : //Read-write properties. 
-<span class="lineNum">      27 </span><span class="lineCov">        181 : @synthesize parentActivity = _parentActivity;</span>
-<span class="lineNum">      28 </span><span class="lineCov">        244 : @synthesize value = _value;</span>
+<span class="lineNum">      27 </span><span class="lineCov">        517 : @synthesize parentActivity = _parentActivity;</span>
+<span class="lineNum">      28 </span><span class="lineCov">        583 : @synthesize value = _value;</span>
 <span class="lineNum">      29 </span>            : 
 <span class="lineNum">      30 </span>            : 
 <span class="lineNum">      31 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      32 </span>            : - (id) initWithFieldId:(NSString*)fieldId nullable:(BOOL)nullable defaultValue:(NSString*)defaultValue
-<span class="lineNum">      33 </span><span class="lineCov">         97 :               dataType:(ExpanzDataType)datatype label:(NSString*)label hint:(NSString*)hint {</span>
-<span class="lineNum">      34 </span><span class="lineCov">         97 : </span>
+<span class="lineNum">      33 </span><span class="lineCov">        265 :               dataType:(ExpanzDataType)datatype label:(NSString*)label hint:(NSString*)hint {</span>
+<span class="lineNum">      34 </span><span class="lineCov">        265 : </span>
 <span class="lineNum">      35 </span>            :     self = [super init];
-<span class="lineNum">      36 </span><span class="lineCov">         97 :     if (self) {</span>
-<span class="lineNum">      37 </span><span class="lineCov">         97 :         _fieldId = [fieldId copy];</span>
-<span class="lineNum">      38 </span><span class="lineCov">         97 :         _nullable = nullable;</span>
-<span class="lineNum">      39 </span><span class="lineCov">         97 :         _defaultValue = [defaultValue copy];</span>
-<span class="lineNum">      40 </span><span class="lineCov">         97 :         _datatype = datatype;</span>
-<span class="lineNum">      41 </span><span class="lineCov">         97 :         _label = [label copy];</span>
-<span class="lineNum">      42 </span><span class="lineCov">         97 :         _hint = [hint copy];</span>
-<span class="lineNum">      43 </span><span class="lineCov">         97 :     }</span>
-<span class="lineNum">      44 </span><span class="lineCov">         97 :     return self;</span>
-<span class="lineNum">      45 </span><span class="lineCov">         97 : }</span>
-<span class="lineNum">      46 </span><span class="lineCov">         97 : </span>
+<span class="lineNum">      36 </span><span class="lineCov">        265 :     if (self) {</span>
+<span class="lineNum">      37 </span><span class="lineCov">        265 :         _fieldId = [fieldId copy];</span>
+<span class="lineNum">      38 </span><span class="lineCov">        265 :         _nullable = nullable;</span>
+<span class="lineNum">      39 </span><span class="lineCov">        265 :         _defaultValue = [defaultValue copy];</span>
+<span class="lineNum">      40 </span><span class="lineCov">        265 :         _datatype = datatype;</span>
+<span class="lineNum">      41 </span><span class="lineCov">        265 :         _label = [label copy];</span>
+<span class="lineNum">      42 </span><span class="lineCov">        265 :         _hint = [hint copy];</span>
+<span class="lineNum">      43 </span><span class="lineCov">        265 :     }</span>
+<span class="lineNum">      44 </span><span class="lineCov">        265 :     return self;</span>
+<span class="lineNum">      45 </span><span class="lineCov">        265 : }</span>
+<span class="lineNum">      46 </span><span class="lineCov">        265 : </span>
 <span class="lineNum">      47 </span>            : 
-<span class="lineNum">      48 </span><span class="lineCov">         90 : /* ================================================ Interface Methods =============================================== */</span>
+<span class="lineNum">      48 </span><span class="lineCov">        258 : /* ================================================ Interface Methods =============================================== */</span>
 <span class="lineNum">      49 </span>            : - (void) didFinishEditWithValue:(NSString*)value {
 <span class="lineNum">      50 </span><span class="lineCov">          3 :     LogDebug(@&quot;%@', did finish edit with new value '%@'&quot;, [self description], value);</span>
-<span class="lineNum">      51 </span><span class="lineCov">         90 :     _value = value;</span>
+<span class="lineNum">      51 </span><span class="lineCov">        258 :     _value = value;</span>
 <span class="lineNum">      52 </span><span class="lineCov">          3 :     _dirty = YES;</span>
 <span class="lineNum">      53 </span><span class="lineCov">          3 : </span>
-<span class="lineNum">      54 </span><span class="lineCov">         86 : }</span>
+<span class="lineNum">      54 </span><span class="lineCov">        254 : }</span>
 <span class="lineNum">      55 </span><span class="lineCov">          3 : </span>
 <span class="lineNum">      56 </span>            : - (void) didSynchronizeStateWithServerModel:(NSString*)validatedValue {
 <span class="lineNum">      57 </span><span class="lineCov">         28 :     _value = validatedValue;</span>
