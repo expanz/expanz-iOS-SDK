@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'Tests' target in the 'Tests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#endif
+
+#import <Kiwi-iOS/Kiwi.h>
+#import "Logging.h"
+
+#define assertWillHappen(expression) \
+[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:10000]];\
+if (!expression) [NSException raise:NSInternalInconsistencyException \
+format:@"Expression did not occur before timeout."];
