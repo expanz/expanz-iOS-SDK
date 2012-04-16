@@ -14,14 +14,14 @@
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h" 
 #import "expanz_model_ActivityMenuItem.h"
-#import "TestResource.h"
+#import "expanz_utils_BundleResource.h"
 
 SPEC_BEGIN(RXMLELement_SessionDataSpec)
 
 __block RXMLElement* element;
 
 beforeEach(^{
-    NSString* xmlString = [TestResource withName:@"SessionData.xml"];
+    NSString* xmlString = [BundleResource withName:@"SessionData.xml"];
     element = [RXMLElement elementFromXMLString:xmlString];
 });
 
@@ -49,7 +49,7 @@ describe(@"Parsing children", ^{
 
 describe(@"Error handling", ^{
     it(@"should throw XML validation exception if you pass it the wrong kind of element", ^{
-        NSString* xmlString = [TestResource withName:@"Dodgy.xml"];
+        NSString* xmlString = [BundleResource withName:@"Dodgy.xml"];
         RXMLElement* element = [RXMLElement elementFromXMLString:xmlString]; 
         
         @try {

@@ -15,7 +15,7 @@
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_GridData.h"
 #import "TestFixture_ViewController.h"
-#import "TestResource.h"
+#import "expanz_utils_BundleResource.h"
 #import "RXMLElement+ActivityInstance.h"
 
 
@@ -36,7 +36,7 @@ SPEC_BEGIN(ModelAdapterSpec)
     describe(@"Object creation", ^{
 
         it(@"should be created by ActivityInstanceViewController after receiving activity data", ^{
-            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
             ActivityInstance* activityInstance =
                 [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];
@@ -50,7 +50,7 @@ SPEC_BEGIN(ModelAdapterSpec)
     describe(@"Mapping UITextField controls to expanz_model_Field items in an ActivityInstance", ^{
 
         beforeEach(^{
-            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
             ActivityInstance* activityInstance =
                 [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];
@@ -75,7 +75,7 @@ SPEC_BEGIN(ModelAdapterSpec)
     describe(@"Updating user interface controls with model values.", ^{
 
         beforeEach(^{
-            NSString* xml = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+            NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
             ActivityInstance* activityInstance =
                 [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];
@@ -96,7 +96,7 @@ SPEC_BEGIN(ModelAdapterSpec)
     describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
 
         beforeEach(^{
-            NSString* xml = [TestResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
+            NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
             ActivityInstance* activityInstance =
                 [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];

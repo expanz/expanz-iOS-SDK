@@ -8,10 +8,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "TestResource.h"
+#import "expanz_utils_BundleResource.h"
 
 
-@implementation TestResource
+@implementation expanz_utils_BundleResource
 
 + (NSString*)withName:(NSString*)name {
     

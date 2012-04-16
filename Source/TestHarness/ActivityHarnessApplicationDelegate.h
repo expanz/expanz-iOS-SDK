@@ -8,11 +8,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
 
-@interface TestResource : NSObject
+@interface ActivityHarnessApplicationDelegate : NSObject<UIApplicationDelegate>
 
-+ (NSString*) withName:(NSString*)name;
+@property(nonatomic, strong) UIWindow* window;
+@property(nonatomic, strong) UINavigationController* navigationController;
 
 @end

@@ -25,7 +25,7 @@
 
 /* Begin PBXBuildFile section */
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
-		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; };
+		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B152C641501CB1C004D471A /* CoverageFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB701EC14F34FF70029A94B /* CoverageFix.m */; };
 		6B18A31C151879EB00521FC1 /* JRSwizzle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B558BD015185AD400BD810C /* JRSwizzle.h */; };
 		6B18A31E15187A3500521FC1 /* expanz_AppDelegate.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A093151877BD009ED6D0 /* expanz_AppDelegate.h */; };
@@ -87,6 +87,40 @@
 		6B1F2A7C14D24204000E45FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F2A7B14D24204000E45FD /* Icon.png */; };
 		6B22F5311501B6FA00427F39 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34FE /* ModelAdapterSpec.m */; };
 		6B22F53F1501BD1C00427F39 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22F53E1501BD1C00427F39 /* TestFixture.xib */; };
+		6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */; };
+		6B3EEC61153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */; };
+		6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */; };
+		6B3EEC63153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */; };
+		6B3EEC65153BE6C2001A3579 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */; };
+		6B3EEC66153BE6D7001A3579 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */; };
+		6B3EEC6D153BE73E001A3579 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1C613A15086BDD002037D7 /* UIKit.framework */; };
+		6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
+		6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */; };
+		6B3EEC93153BE90C001A3579 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC87153BE90C001A3579 /* DocumentView.xib */; };
+		6B3EEC94153BE90C001A3579 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC87153BE90C001A3579 /* DocumentView.xib */; };
+		6B3EEC95153BE90C001A3579 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC88153BE90C001A3579 /* Icon.png */; };
+		6B3EEC96153BE90C001A3579 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC88153BE90C001A3579 /* Icon.png */; };
+		6B3EEC97153BE90C001A3579 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC89153BE90C001A3579 /* insurance.png */; };
+		6B3EEC98153BE90C001A3579 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC89153BE90C001A3579 /* insurance.png */; };
+		6B3EEC99153BE90C001A3579 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8A153BE90C001A3579 /* my details.png */; };
+		6B3EEC9A153BE90C001A3579 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8A153BE90C001A3579 /* my details.png */; };
+		6B3EEC9B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6B3EEC9C153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6B3EEC9D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */; };
+		6B3EEC9F153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
+		6B3EECA0153BE90C001A3579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */; };
+		6B3EECA1153BE90C001A3579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */; };
+		6B3EECA3153BE90C001A3579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC90153BE90C001A3579 /* main.m */; };
+		6B3EECA4153BE90C001A3579 /* TestHarness-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */; };
+		6B3EECA6153BE90C001A3579 /* TestHarness-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */; };
+		6B3EECA9153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */; };
+		6B3EECAC153BEF4A001A3579 /* libexpanz-iOS-SDK-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */; };
+		6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
+		6B3EECE0153BF07E001A3579 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
+		6B3EECE1153BF085001A3579 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E85A014EFF58400FA4B5D /* libxml2.dylib */; };
+		6B3EECE4153BF0B7001A3579 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */; };
+		6B3EECE5153BF0D2001A3579 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */; };
+		6B3EECE6153BF1C8001A3579 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3434 /* Thermomix_TMXConsultant_MyDetails.xml */; };
 		6B41A0C3151877BD009ED6D0 /* expanz_AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B41A093151877BD009ED6D0 /* expanz_AppDelegate.h */; };
 		6B41A0C4151877BD009ED6D0 /* expanz_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A094151877BD009ED6D0 /* expanz_AppDelegate.m */; };
 		6B41A0C5151877BD009ED6D0 /* expanz_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A094151877BD009ED6D0 /* expanz_AppDelegate.m */; };
@@ -509,7 +543,7 @@
 		6B9FC83614FDABA600E4CB2C /* NSString+ExpanzDataType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DD814EF920300909A38 /* NSString+ExpanzDataType.h */; };
 		6B9FC83714FDABA600E4CB2C /* expanz_SdkConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_SdkConfiguration.h */; };
 		6B9FC83814FDABA600E4CB2C /* expanz_CoreModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; };
-		6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; };
+		6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BB701EE14F352150029A94B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E85A014EFF58400FA4B5D /* libxml2.dylib */; };
@@ -550,11 +584,9 @@
 		6BB702D914F3C78B0029A94B /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7028214F3C78B0029A94B /* RXMLElement+ResourceCollection.m */; };
 		6BB702DB14F3C78B0029A94B /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7028214F3C78B0029A94B /* RXMLElement+ResourceCollection.m */; };
 		6BB702DE14F3C78B0029A94B /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
-		6BB702DF14F3C78B0029A94B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BB702E114F3C78B0029A94B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BB702E414F3C78B0029A94B /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
 		6BB702E614F3C78B0029A94B /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
-		6BB702E714F3C78B0029A94B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BB702EE14F3C78B0029A94B /* expanz_service_AbstractServiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB7028B14F3C78B0029A94B /* expanz_service_AbstractServiceClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BB702EF14F3C78B0029A94B /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7028C14F3C78B0029A94B /* expanz_service_AbstractServiceClient.m */; };
 		6BB702F114F3C78B0029A94B /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7028C14F3C78B0029A94B /* expanz_service_AbstractServiceClient.m */; };
@@ -641,7 +673,6 @@
 		6BFDE7761495FA01005D343F /* StubActivityClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D343E /* StubActivityClientDelegate.m */; };
 		6BFDE7761495FA01005D3442 /* StubLoginClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3441 /* StubLoginClientDelegate.m */; };
 		6BFDE7761495FA01005D3445 /* StubSystemEventReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3444 /* StubSystemEventReporter.m */; };
-		6BFDE7761495FA01005D3448 /* TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3447 /* TestResource.m */; };
 		6BFDE7761495FA01005D34AA /* SdkConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34A9 /* SdkConfigurationSpec.m */; };
 		6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */; };
 		6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B0 /* ActivitySpec.m */; };
@@ -731,6 +762,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B3EECAA153BEF3F001A3579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BCAFB8E14317B1B00575280 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B1E5E8414734404004145D0;
+			remoteInfo = "expanz-iOS-SDK-StaticLib";
+		};
 		6B558B471518380400BD810C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BCAFB8E14317B1B00575280 /* Project object */;
@@ -866,7 +904,7 @@
 		6B1C613A15086BDD002037D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libexpanz-iOS-SDK-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6B1F20E114EFDDE9009651FB /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1F20E114EFDDE9009651FB /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6B1F20E414EFDDE9009651FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6B1F20E914EFDDE9009651FB /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -874,6 +912,23 @@
 		6B1F20F014EFDDE9009651FB /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B1F2A7B14D24204000E45FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6B22F53E1501BD1C00427F39 /* TestFixture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixture.xib; sourceTree = "<group>"; };
+		6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_utils_BundleResource.h; sourceTree = "<group>"; };
+		6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_utils_BundleResource.m; sourceTree = "<group>"; };
+		6B3EEC6B153BE73E001A3579 /* TestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3EEC87153BE90C001A3579 /* DocumentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
+		6B3EEC88153BE90C001A3579 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6B3EEC89153BE90C001A3579 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
+		6B3EEC8A153BE90C001A3579 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
+		6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
+		6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
+		6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
+		6B3EEC8F153BE90C001A3579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B3EEC90153BE90C001A3579 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestHarness-Info.plist"; sourceTree = "<group>"; };
+		6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestHarness-Prefix.pch"; sourceTree = "<group>"; };
+		6B3EECA7153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
+		6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
+		6B3EECE2153BF0A4001A3579 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B41A093151877BD009ED6D0 /* expanz_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_AppDelegate.h; sourceTree = "<group>"; };
@@ -1140,8 +1195,6 @@
 		6BFDE7761495FA01005D3441 /* StubLoginClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubLoginClientDelegate.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3443 /* StubSystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubSystemEventReporter.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3444 /* StubSystemEventReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubSystemEventReporter.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3446 /* TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResource.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3447 /* TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestResource.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34A9 /* SdkConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SdkConfigurationSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34AC /* AbstractDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDataSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
@@ -1245,6 +1298,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B3EEC68153BE73E001A3579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3EECE5153BF0D2001A3579 /* MobileCoreServices.framework in Frameworks */,
+				6B3EECE4153BF0B7001A3579 /* SystemConfiguration.framework in Frameworks */,
+				6B3EECE1153BF085001A3579 /* libxml2.dylib in Frameworks */,
+				6B3EECE0153BF07E001A3579 /* libz.dylib in Frameworks */,
+				6B3EECAC153BEF4A001A3579 /* libexpanz-iOS-SDK-StaticLib.a in Frameworks */,
+				6B3EEC6D153BE73E001A3579 /* UIKit.framework in Frameworks */,
+				6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */,
+				6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */,
+				6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B718D8E14EF8B6300909A38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1310,7 +1379,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6B1F20E714EFDDE9009651FB /* Tests */ = {
+		6B1F20E714EFDDE9009651FB /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				6B1F20E814EFDDE9009651FB /* Supporting Files */,
@@ -1319,7 +1388,7 @@
 				6BFDE7761495FA01005D3436 /* Utils */,
 				6BFDE7761495FA01005D34A7 /* Unit */,
 			);
-			path = Tests;
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		6B1F20E814EFDDE9009651FB /* Supporting Files */ = {
@@ -1330,6 +1399,35 @@
 				6B1F20F014EFDDE9009651FB /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B3EEC85153BE90C001A3579 /* TestHarness */ = {
+			isa = PBXGroup;
+			children = (
+				6B3EECA7153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.h */,
+				6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */,
+				6B3EEC86153BE90C001A3579 /* Assets */,
+				6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */,
+				6B3EEC90153BE90C001A3579 /* main.m */,
+				6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */,
+				6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */,
+			);
+			name = TestHarness;
+			path = Source/TestHarness;
+			sourceTree = "<group>";
+		};
+		6B3EEC86153BE90C001A3579 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6B3EEC87153BE90C001A3579 /* DocumentView.xib */,
+				6B3EEC88153BE90C001A3579 /* Icon.png */,
+				6B3EEC89153BE90C001A3579 /* insurance.png */,
+				6B3EEC8A153BE90C001A3579 /* my details.png */,
+				6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */,
+				6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
+				6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		6B41A091151877BD009ED6D0 /* UserInterface */ = {
@@ -1567,6 +1665,8 @@
 		6B718E0D14EF920300909A38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */,
+				6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */,
 				6BFDE7761495FA01005D350A /* NSString+Contains.h */,
 				6BFDE7761495FA01005D3505 /* NSString+Contains.m */,
 				6B718E0F14EF920300909A38 /* xml_Serializable.h */,
@@ -1692,6 +1792,7 @@
 		6BC9F54F1458EB63001AF204 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6B3EEC85153BE90C001A3579 /* TestHarness */,
 				6B469FE914EF875900ED659C /* Main */,
 				6BDAB0121499828800541056 /* Examples */,
 			);
@@ -1811,11 +1912,12 @@
 		6BCAFB8C14317B1B00575280 = {
 			isa = PBXGroup;
 			children = (
+				6B3EECE2153BF0A4001A3579 /* CFNetwork.framework */,
 				6B3F4963143AD4B6005C0A7A /* build-configuration.properties */,
 				6B3F4964143AD4B7005C0A7A /* build.xml */,
 				6BC9F6BD1458EBB5001AF204 /* Dependencies */,
 				6BC9F54F1458EB63001AF204 /* Source */,
-				6B1F20E714EFDDE9009651FB /* Tests */,
+				6B1F20E714EFDDE9009651FB /* Specs */,
 				6B1E5E8614734404004145D0 /* Frameworks */,
 				6BCAFB9814317B1C00575280 /* Products */,
 			);
@@ -1827,7 +1929,8 @@
 				6BCAFB9714317B1C00575280 /* Examples.app */,
 				6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */,
 				6B718D9114EF8B6300909A38 /* libexpanzCore.a */,
-				6B1F20E114EFDDE9009651FB /* Tests.octest */,
+				6B1F20E114EFDDE9009651FB /* Specs.octest */,
+				6B3EEC6B153BE73E001A3579 /* TestHarness.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1985,8 +2088,6 @@
 				6B558B451518370500BD810C /* TestFixture_ViewController.m */,
 				6BB701EB14F34FF70029A94B /* CoverageFix.h */,
 				6BB701EC14F34FF70029A94B /* CoverageFix.m */,
-				6BFDE7761495FA01005D3447 /* TestResource.m */,
-				6BFDE7761495FA01005D3446 /* TestResource.h */,
 				6BFDE7761495FA01005D3444 /* StubSystemEventReporter.m */,
 				6BFDE7761495FA01005D3443 /* StubSystemEventReporter.h */,
 				6BFDE7761495FA01005D3441 /* StubLoginClientDelegate.m */,
@@ -2258,6 +2359,9 @@
 				6B41A111151877BD009ED6D0 /* expanz_ui_NavigationManager.h in Headers */,
 				6B41A115151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h in Headers */,
 				6B41A116151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h in Headers */,
+				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
+				6B3EEC9D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h in Headers */,
+				6B3EECA6153BE90C001A3579 /* TestHarness-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2357,6 +2461,7 @@
 				6BFDE7761495FA01005D3595 /* expanz_model_MethodSchema.h in Headers */,
 				6BFDE7761495FA01005D359D /* expanz_model_FieldSchema.h in Headers */,
 				6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */,
+				6B3EEC61153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2381,9 +2486,9 @@
 			productReference = 6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6B1F20E014EFDDE9009651FB /* Tests */ = {
+		6B1F20E014EFDDE9009651FB /* Specs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B1F20F314EFDDE9009651FB /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 6B1F20F314EFDDE9009651FB /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
 				6B1F20DC14EFDDE9009651FB /* Sources */,
 				6B1F20DD14EFDDE9009651FB /* Frameworks */,
@@ -2395,10 +2500,28 @@
 			dependencies = (
 				6B558B481518380400BD810C /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = Specs;
 			productName = Tests;
-			productReference = 6B1F20E114EFDDE9009651FB /* Tests.octest */;
+			productReference = 6B1F20E114EFDDE9009651FB /* Specs.octest */;
 			productType = "com.apple.product-type.bundle";
+		};
+		6B3EEC6A153BE73E001A3579 /* TestHarness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3EEC82153BE73F001A3579 /* Build configuration list for PBXNativeTarget "TestHarness" */;
+			buildPhases = (
+				6B3EEC67153BE73E001A3579 /* Sources */,
+				6B3EEC68153BE73E001A3579 /* Frameworks */,
+				6B3EEC69153BE73E001A3579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B3EECAB153BEF3F001A3579 /* PBXTargetDependency */,
+			);
+			name = TestHarness;
+			productName = TestHarness;
+			productReference = 6B3EEC6B153BE73E001A3579 /* TestHarness.app */;
+			productType = "com.apple.product-type.application";
 		};
 		6B718D9014EF8B6300909A38 /* expanzCore */ = {
 			isa = PBXNativeTarget;
@@ -2459,7 +2582,8 @@
 				6BD5435F1473595F0014F148 /* expanz-iOS-SDK */,
 				6BCAFB9614317B1B00575280 /* Examples */,
 				6B718D9014EF8B6300909A38 /* expanzCore */,
-				6B1F20E014EFDDE9009651FB /* Tests */,
+				6B1F20E014EFDDE9009651FB /* Specs */,
+				6B3EEC6A153BE73E001A3579 /* TestHarness */,
 			);
 		};
 /* End PBXProject section */
@@ -2490,6 +2614,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B3EEC69153BE73E001A3579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3EEC94153BE90C001A3579 /* DocumentView.xib in Resources */,
+				6B3EEC96153BE90C001A3579 /* Icon.png in Resources */,
+				6B3EEC98153BE90C001A3579 /* insurance.png in Resources */,
+				6B3EEC9A153BE90C001A3579 /* my details.png in Resources */,
+				6B3EEC9C153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
+				6B3EECA1153BE90C001A3579 /* InfoPlist.strings in Resources */,
+				6B3EECE6153BF1C8001A3579 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BAF958C14734DEE00168E39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2497,6 +2635,13 @@
 				6B718F5614EF921100909A38 /* (null) in Resources */,
 				6B41A0CB151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CE151877BD009ED6D0 /* Icon@2x.png in Resources */,
+				6B3EEC93153BE90C001A3579 /* DocumentView.xib in Resources */,
+				6B3EEC95153BE90C001A3579 /* Icon.png in Resources */,
+				6B3EEC97153BE90C001A3579 /* insurance.png in Resources */,
+				6B3EEC99153BE90C001A3579 /* my details.png in Resources */,
+				6B3EEC9B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
+				6B3EECA0153BE90C001A3579 /* InfoPlist.strings in Resources */,
+				6B3EECA4153BE90C001A3579 /* TestHarness-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2631,8 +2776,6 @@
 				6BB702CD14F3C78B0029A94B /* expanz_service_MethodInvocationRequest.m in Sources */,
 				6BB702D314F3C78B0029A94B /* RXMLElement+ActivityInstance.m in Sources */,
 				6BB702D914F3C78B0029A94B /* RXMLElement+ResourceCollection.m in Sources */,
-				6BB702DF14F3C78B0029A94B /* (null) in Sources */,
-				6BB702E714F3C78B0029A94B /* (null) in Sources */,
 				6BB702EF14F3C78B0029A94B /* expanz_service_AbstractServiceClient.m in Sources */,
 				6BB702F514F3C78B0029A94B /* expanz_service_DefaultDownloadClient.m in Sources */,
 				6BB702FF14F3C78B0029A94B /* expanz_service_FileDownloadRequest.m in Sources */,
@@ -2673,6 +2816,7 @@
 				6B41A10E151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A112151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A117151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2684,7 +2828,6 @@
 				6BFDE7761495FA01005D343F /* StubActivityClientDelegate.m in Sources */,
 				6BFDE7761495FA01005D3442 /* StubLoginClientDelegate.m in Sources */,
 				6BFDE7761495FA01005D3445 /* StubSystemEventReporter.m in Sources */,
-				6BFDE7761495FA01005D3448 /* TestResource.m in Sources */,
 				6BFDE7761495FA01005D34AA /* SdkConfigurationSpec.m in Sources */,
 				6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */,
 				6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */,
@@ -2755,6 +2898,17 @@
 				6B41A110151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A114151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A119151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B3EEC66153BE6D7001A3579 /* expanz_utils_BundleResource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3EEC67153BE73E001A3579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3EEC9F153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
+				6B3EECA3153BE90C001A3579 /* main.m in Sources */,
+				6B3EECA9153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2828,6 +2982,7 @@
 				6BFDE7761495FA01005D3591 /* expanz_model_MethodSchema.m in Sources */,
 				6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */,
 				6BFDE7761495FA01005D35A1 /* expanz_model_Query.m in Sources */,
+				6B3EEC63153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2936,12 +3091,18 @@
 				6B41A10F151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A113151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A118151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B3EEC65153BE6C2001A3579 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6B3EECAB153BEF3F001A3579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B1E5E8414734404004145D0 /* expanz-iOS-SDK-StaticLib */;
+			targetProxy = 6B3EECAA153BEF3F001A3579 /* PBXContainerItemProxy */;
+		};
 		6B558B481518380400BD810C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6BCAFB9614317B1B00575280 /* Examples */;
@@ -2954,6 +3115,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B1F20EB14EFDDE9009651FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B3EEC8F153BE90C001A3579 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3028,8 +3197,8 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				GCC_PREFIX_HEADER = "Specs/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -3057,8 +3226,8 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				GCC_PREFIX_HEADER = "Specs/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -3070,6 +3239,52 @@
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		6B3EEC83153BE73F001A3579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/TestHarness/TestHarness-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Source/TestHarness/TestHarness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B3EEC84153BE73F001A3579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/TestHarness/TestHarness-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Source/TestHarness/TestHarness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -3257,7 +3472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B1F20F314EFDDE9009651FB /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		6B1F20F314EFDDE9009651FB /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B1F20F114EFDDE9009651FB /* Debug */,
@@ -3265,6 +3480,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6B3EEC82153BE73F001A3579 /* Build configuration list for PBXNativeTarget "TestHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3EEC83153BE73F001A3579 /* Debug */,
+				6B3EEC84153BE73F001A3579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		6B718DA014EF8B6400909A38 /* Build configuration list for PBXNativeTarget "expanzCore" */ = {
 			isa = XCConfigurationList;

@@ -12,7 +12,7 @@
 #import "RXMLElement+SiteDetails.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_SiteList.h"
-#import "TestResource.h"
+#import "expanz_utils_BundleResource.h"
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityMenu.h"
 #import "expanz_model_ActivitySchema.h"
@@ -24,7 +24,7 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
             it(@"should return the AppSites as a collection", ^{
 
-                NSString* responseXml = [TestResource withName:@"ListAvailableSitesResponse.xml"];
+                NSString* responseXml = [BundleResource withName:@"ListAvailableSitesResponse.xml"];
                 RXMLElement* element = [RXMLElement elementFromXMLString:responseXml];
                 SiteList* siteList = [[element child:@"ListAvailableSitesXResult.ESA.AppSites"] asSiteList];
                 LogDebug(@"Site List: %@", siteList);
@@ -39,7 +39,7 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
         describe(@"Parsing response from ListActivitesForSiteX service", ^{
             it(@"should be able to return itself as an ActivityMenu", ^{
 
-                NSString* xml = [TestResource withName:@"ListActivitiesForSiteXResult.xml"];
+                NSString* xml = [BundleResource withName:@"ListActivitiesForSiteXResult.xml"];
                 RXMLElement* element = [RXMLElement elementFromXMLString:xml];
                 ActivityMenu* menu = [[element child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityMenu];
 
@@ -58,7 +58,7 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
 
             it(@"should be able to return itself as an ActivitySchema", ^{
 
-                NSString* xml = [TestResource withName:@"GetSchemaForActivityXResponse.xml"];
+                NSString* xml = [BundleResource withName:@"GetSchemaForActivityXResponse.xml"];
                 LogDebug(@"XML: %@", xml);
 
                 RXMLElement* element = [RXMLElement elementFromXMLString:xml];

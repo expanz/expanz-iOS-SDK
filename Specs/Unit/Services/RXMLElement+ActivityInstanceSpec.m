@@ -19,7 +19,7 @@
 #import "expanz_model_File.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_FieldInstance.h"
-#import "TestResource.h"
+#import "expanz_utils_BundleResource.h"
 #import "NSString+Contains.h"
 
 
@@ -31,7 +31,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         describe(@"Object creation", ^{
 
             beforeEach(^{
-                NSString* xmlString = [TestResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
+                NSString* xmlString = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
                 RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
@@ -50,7 +50,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         describe(@"An activity with messages.", ^{
 
             beforeEach(^{
-                NSString* xmlString = [TestResource withName:@"ActivityWithMessage.xml"];
+                NSString* xmlString = [BundleResource withName:@"ActivityWithMessage.xml"];
                 RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
@@ -65,7 +65,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         describe(@"Activity instance with grid data", ^{
 
             beforeEach(^{
-                NSString* xmlString = [TestResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
+                NSString* xmlString = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
                 RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
@@ -107,7 +107,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             beforeEach(^{
                 NSString* xmlString =
-                        [TestResource withName:@"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"];
+                        [BundleResource withName:@"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"];
                 RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
@@ -137,7 +137,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
         describe(@"Activity with field data", ^{
 
             beforeEach(^{
-                NSString* xmlString = [TestResource withName:@"ActivityWithLongData.xml"];
+                NSString* xmlString = [BundleResource withName:@"ActivityWithLongData.xml"];
                 RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });

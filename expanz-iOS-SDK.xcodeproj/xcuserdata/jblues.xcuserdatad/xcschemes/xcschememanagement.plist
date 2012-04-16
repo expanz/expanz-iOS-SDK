@@ -19,7 +19,7 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Tests.xcscheme</key>
+		<key>Specs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -68,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>6B3539CE1444276C00C8E6C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B3EEC6A153BE73E001A3579</key>
 		<dict>
 			<key>primary</key>
 			<true/>
