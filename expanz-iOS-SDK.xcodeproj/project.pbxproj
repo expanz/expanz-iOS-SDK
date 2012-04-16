@@ -627,6 +627,16 @@
 		6BBC3AC3153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BBC3AC4153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
 		6BBC3AC5153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
+		6BBC3AD1153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD0153C2C9800E68952 /* erp365CRM_Company_ViewController.m */; };
+		6BBC3AD2153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD0153C2C9800E68952 /* erp365CRM_Company_ViewController.m */; };
+		6BBC3AD8153C2CB100E68952 /* erp365CRM.Company.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */; };
+		6BBC3AD9153C2CB100E68952 /* erp365CRM.Company.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */; };
+		6BBC3ADA153C2CB100E68952 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD5153C2CB100E68952 /* insurance.png */; };
+		6BBC3ADB153C2CB100E68952 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD5153C2CB100E68952 /* insurance.png */; };
+		6BBC3ADC153C2CB100E68952 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD6153C2CB100E68952 /* my details.png */; };
+		6BBC3ADD153C2CB100E68952 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD6153C2CB100E68952 /* my details.png */; };
+		6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6BBC3ADF153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -762,6 +772,8 @@
 		6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 		6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */; };
 		6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */; };
+		6BFDE7761495FA01005D35B9 /* CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */; };
+		6BFDE7761495FA01005D35BA /* CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1106,6 +1118,12 @@
 		6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
 		6BBC3ABA153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
 		6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
+		6BBC3ACF153C2C9800E68952 /* erp365CRM_Company_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Company_ViewController.h; sourceTree = "<group>"; };
+		6BBC3AD0153C2C9800E68952 /* erp365CRM_Company_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Company_ViewController.m; sourceTree = "<group>"; };
+		6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = erp365CRM.Company.xib; sourceTree = "<group>"; };
+		6BBC3AD5153C2CB100E68952 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
+		6BBC3AD6153C2CB100E68952 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
+		6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
 		6BC9F6F61458EBB5001AF204 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC9F6F81458EBB5001AF204 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1261,6 +1279,7 @@
 		6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataSourceSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithLongData.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CRM.Customer.Detail.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1756,6 +1775,8 @@
 		6BBC3AB1153C28A200E68952 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC3ACF153C2C9800E68952 /* erp365CRM_Company_ViewController.h */,
+				6BBC3AD0153C2C9800E68952 /* erp365CRM_Company_ViewController.m */,
 				6BBC3AB2153C28A200E68952 /* ESA_Sales_Calc_ViewController.h */,
 				6BBC3AB3153C28A200E68952 /* ESA_Sales_Calc_ViewController.m */,
 				6BBC3AB4153C28A200E68952 /* ESA_Sales_CustomerViewController.h */,
@@ -1949,6 +1970,10 @@
 		6BDAB0131499828800541056 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */,
+				6BBC3AD5153C2CB100E68952 /* insurance.png */,
+				6BBC3AD6153C2CB100E68952 /* my details.png */,
+				6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */,
 				6B22F53E1501BD1C00427F39 /* TestFixture.xib */,
 				6BFDE7761495FA01005D3582 /* DocumentView.xib */,
 				6B1F2A7B14D24204000E45FD /* Icon.png */,
@@ -2035,6 +2060,7 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */,
 				6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */,
 				6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */,
 				6BFDE7761495FA01005D358C /* GetSchemaForActivityXResponse.xml */,
@@ -2580,6 +2606,7 @@
 				6B41A0CD151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0D0151877BD009ED6D0 /* Icon@2x.png in Resources */,
 				6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */,
+				6BFDE7761495FA01005D35B9 /* CRM.Customer.Detail.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2602,6 +2629,11 @@
 				6BBC3AAA153C282D00E68952 /* Sales.Customer.xib in Resources */,
 				6BBC3AAB153C282D00E68952 /* TableCellForGridData.xib in Resources */,
 				6BBC3AAC153C282D00E68952 /* TableCellForTreeData.xib in Resources */,
+				6BFDE7761495FA01005D35BA /* CRM.Customer.Detail.xml in Resources */,
+				6BBC3AD9153C2CB100E68952 /* erp365CRM.Company.xib in Resources */,
+				6BBC3ADB153C2CB100E68952 /* insurance.png in Resources */,
+				6BBC3ADD153C2CB100E68952 /* my details.png in Resources */,
+				6BBC3ADF153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2637,6 +2669,10 @@
 				6B22F53F1501BD1C00427F39 /* TestFixture.xib in Resources */,
 				6B41A0CC151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CF151877BD009ED6D0 /* Icon@2x.png in Resources */,
+				6BBC3AD8153C2CB100E68952 /* erp365CRM.Company.xib in Resources */,
+				6BBC3ADA153C2CB100E68952 /* insurance.png in Resources */,
+				6BBC3ADC153C2CB100E68952 /* my details.png in Resources */,
+				6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2883,6 +2919,7 @@
 				6BBC3AC1153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */,
 				6BBC3AC3153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
 				6BBC3AC5153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
+				6BBC3AD2153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3067,6 +3104,7 @@
 				6BBC3AC0153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */,
 				6BBC3AC2153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
 				6BBC3AC4153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
+				6BBC3AD1153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
