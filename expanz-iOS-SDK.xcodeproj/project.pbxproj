@@ -83,7 +83,6 @@
 		6B1C613B15086BDD002037D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1C613A15086BDD002037D7 /* UIKit.framework */; };
 		6B1F20E314EFDDE9009651FB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */; };
 		6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
-		6B1F20EC14EFDDE9009651FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F20EA14EFDDE9009651FB /* InfoPlist.strings */; };
 		6B1F2A7C14D24204000E45FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F2A7B14D24204000E45FD /* Icon.png */; };
 		6B22F5311501B6FA00427F39 /* ModelAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34FE /* ModelAdapterSpec.m */; };
 		6B22F53F1501BD1C00427F39 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22F53E1501BD1C00427F39 /* TestFixture.xib */; };
@@ -96,24 +95,6 @@
 		6B3EEC6D153BE73E001A3579 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1C613A15086BDD002037D7 /* UIKit.framework */; };
 		6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */; };
-		6B3EEC93153BE90C001A3579 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC87153BE90C001A3579 /* DocumentView.xib */; };
-		6B3EEC94153BE90C001A3579 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC87153BE90C001A3579 /* DocumentView.xib */; };
-		6B3EEC95153BE90C001A3579 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC88153BE90C001A3579 /* Icon.png */; };
-		6B3EEC96153BE90C001A3579 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC88153BE90C001A3579 /* Icon.png */; };
-		6B3EEC97153BE90C001A3579 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC89153BE90C001A3579 /* insurance.png */; };
-		6B3EEC98153BE90C001A3579 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC89153BE90C001A3579 /* insurance.png */; };
-		6B3EEC99153BE90C001A3579 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8A153BE90C001A3579 /* my details.png */; };
-		6B3EEC9A153BE90C001A3579 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8A153BE90C001A3579 /* my details.png */; };
-		6B3EEC9B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */; };
-		6B3EEC9C153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */; };
-		6B3EEC9D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */; };
-		6B3EEC9F153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
-		6B3EECA0153BE90C001A3579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */; };
-		6B3EECA1153BE90C001A3579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */; };
-		6B3EECA3153BE90C001A3579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC90153BE90C001A3579 /* main.m */; };
-		6B3EECA4153BE90C001A3579 /* TestHarness-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */; };
-		6B3EECA6153BE90C001A3579 /* TestHarness-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */; };
-		6B3EECA9153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */; };
 		6B3EECAC153BEF4A001A3579 /* libexpanz-iOS-SDK-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */; };
 		6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6B3EECE0153BF07E001A3579 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
@@ -620,6 +601,32 @@
 		6BB7032A14F3C78B0029A94B /* RXMLElement+SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB702A714F3C78B0029A94B /* RXMLElement+SessionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BB7032B14F3C78B0029A94B /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB702A814F3C78B0029A94B /* RXMLElement+SessionData.m */; };
 		6BB7032D14F3C78B0029A94B /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB702A814F3C78B0029A94B /* RXMLElement+SessionData.m */; };
+		6BBC3A97153C272F00E68952 /* ActivityHarnessApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3A8B153C272F00E68952 /* ActivityHarnessApplicationDelegate.m */; };
+		6BBC3A9E153C272F00E68952 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3A94153C272F00E68952 /* InfoPlist.strings */; };
+		6BBC3A9F153C272F00E68952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3A96153C272F00E68952 /* main.m */; };
+		6BBC3AA0153C282D00E68952 /* TestFixture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22F53E1501BD1C00427F39 /* TestFixture.xib */; };
+		6BBC3AA1153C282D00E68952 /* DocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3582 /* DocumentView.xib */; };
+		6BBC3AA2153C282D00E68952 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F2A7B14D24204000E45FD /* Icon.png */; };
+		6BBC3AA3153C282D00E68952 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
+		6BBC3AA4153C282D00E68952 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0151499828800541056 /* background.png */; };
+		6BBC3AA5153C282D00E68952 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */; };
+		6BBC3AA6153C282D00E68952 /* ESA.Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0171499828800541056 /* ESA.Sales.Customer.Browse.xib */; };
+		6BBC3AA7153C282D00E68952 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0191499828800541056 /* Login.xib */; };
+		6BBC3AA8153C282D00E68952 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01A1499828800541056 /* MainWindow.xib */; };
+		6BBC3AA9153C282D00E68952 /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */; };
+		6BBC3AAA153C282D00E68952 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
+		6BBC3AAB153C282D00E68952 /* TableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* TableCellForGridData.xib */; };
+		6BBC3AAC153C282D00E68952 /* TableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* TableCellForTreeData.xib */; };
+		6BBC3ABC153C28A200E68952 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB3153C28A200E68952 /* ESA_Sales_Calc_ViewController.m */; };
+		6BBC3ABD153C28A200E68952 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB3153C28A200E68952 /* ESA_Sales_Calc_ViewController.m */; };
+		6BBC3ABE153C28A200E68952 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB5153C28A200E68952 /* ESA_Sales_CustomerViewController.m */; };
+		6BBC3ABF153C28A200E68952 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB5153C28A200E68952 /* ESA_Sales_CustomerViewController.m */; };
+		6BBC3AC0153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB7153C28A200E68952 /* Sales_Customer_Browse_ViewController.m */; };
+		6BBC3AC1153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB7153C28A200E68952 /* Sales_Customer_Browse_ViewController.m */; };
+		6BBC3AC2153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
+		6BBC3AC3153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
+		6BBC3AC4153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
+		6BBC3AC5153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -644,11 +651,7 @@
 		6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* TableCellForTreeData.xib */; };
 		6BDAB0341499828800541056 /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01F1499828800541056 /* production_environment.xml */; };
 		6BDAB0351499828800541056 /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
-		6BDAB0361499828800541056 /* ESA_Sales_Calc_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0221499828800541056 /* ESA_Sales_Calc_ViewController.m */; };
-		6BDAB0371499828800541056 /* ESA_Sales_CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0241499828800541056 /* ESA_Sales_CustomerViewController.m */; };
 		6BDAB0381499828800541056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0251499828800541056 /* main.m */; };
-		6BDAB0391499828800541056 /* Sales_Customer_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0271499828800541056 /* Sales_Customer_Browse_ViewController.m */; };
-		6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */; };
 		6BFDE73B1495FA01005D332F /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7411495FA01005D332F /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7271495FA01005D332F /* JSObjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7471495FA01005D332F /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7291495FA01005D332F /* JSObjectionBindingEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -907,28 +910,11 @@
 		6B1F20E114EFDDE9009651FB /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6B1F20E414EFDDE9009651FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6B1F20E914EFDDE9009651FB /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6B1F20EB14EFDDE9009651FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6B1F20F014EFDDE9009651FB /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B1F2A7B14D24204000E45FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6B22F53E1501BD1C00427F39 /* TestFixture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFixture.xib; sourceTree = "<group>"; };
 		6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_utils_BundleResource.h; sourceTree = "<group>"; };
 		6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_utils_BundleResource.m; sourceTree = "<group>"; };
 		6B3EEC6B153BE73E001A3579 /* TestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B3EEC87153BE90C001A3579 /* DocumentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentView.xib; sourceTree = "<group>"; };
-		6B3EEC88153BE90C001A3579 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		6B3EEC89153BE90C001A3579 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
-		6B3EEC8A153BE90C001A3579 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
-		6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
-		6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
-		6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
-		6B3EEC8F153BE90C001A3579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6B3EEC90153BE90C001A3579 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestHarness-Info.plist"; sourceTree = "<group>"; };
-		6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestHarness-Prefix.pch"; sourceTree = "<group>"; };
-		6B3EECA7153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
-		6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
-		6B3EECE2153BF0A4001A3579 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B3F4963143AD4B6005C0A7A /* build-configuration.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-configuration.properties"; sourceTree = "<group>"; };
 		6B3F4964143AD4B7005C0A7A /* build.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		6B41A093151877BD009ED6D0 /* expanz_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_AppDelegate.h; sourceTree = "<group>"; };
@@ -1106,6 +1092,20 @@
 		6BB702A614F3C78B0029A94B /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
 		6BB702A714F3C78B0029A94B /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
 		6BB702A814F3C78B0029A94B /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
+		6BBC3A8A153C272F00E68952 /* ActivityHarnessApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHarnessApplicationDelegate.h; sourceTree = "<group>"; };
+		6BBC3A8B153C272F00E68952 /* ActivityHarnessApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHarnessApplicationDelegate.m; sourceTree = "<group>"; };
+		6BBC3A95153C272F00E68952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BBC3A96153C272F00E68952 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BBC3AB2153C28A200E68952 /* ESA_Sales_Calc_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_Calc_ViewController.h; sourceTree = "<group>"; };
+		6BBC3AB3153C28A200E68952 /* ESA_Sales_Calc_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_Calc_ViewController.m; sourceTree = "<group>"; };
+		6BBC3AB4153C28A200E68952 /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
+		6BBC3AB5153C28A200E68952 /* ESA_Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CustomerViewController.m; sourceTree = "<group>"; };
+		6BBC3AB6153C28A200E68952 /* Sales_Customer_Browse_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_Browse_ViewController.h; sourceTree = "<group>"; };
+		6BBC3AB7153C28A200E68952 /* Sales_Customer_Browse_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_Browse_ViewController.m; sourceTree = "<group>"; };
+		6BBC3AB8153C28A200E68952 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
+		6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
+		6BBC3ABA153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermomix_TMXConsultant_MyDetails_ViewController.h; sourceTree = "<group>"; };
+		6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermomix_TMXConsultant_MyDetails_ViewController.m; sourceTree = "<group>"; };
 		6BC9F6F61458EBB5001AF204 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC9F6F81458EBB5001AF204 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1147,15 +1147,7 @@
 		6BDAB01D1499828800541056 /* TableCellForTreeData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellForTreeData.xib; sourceTree = "<group>"; };
 		6BDAB01F1499828800541056 /* production_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = production_environment.xml; sourceTree = "<group>"; };
 		6BDAB0201499828800541056 /* test_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_environment.xml; sourceTree = "<group>"; };
-		6BDAB0211499828800541056 /* ESA_Sales_Calc_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_Calc_ViewController.h; sourceTree = "<group>"; };
-		6BDAB0221499828800541056 /* ESA_Sales_Calc_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_Calc_ViewController.m; sourceTree = "<group>"; };
-		6BDAB0231499828800541056 /* ESA_Sales_CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_CustomerViewController.h; sourceTree = "<group>"; };
-		6BDAB0241499828800541056 /* ESA_Sales_CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_CustomerViewController.m; sourceTree = "<group>"; };
 		6BDAB0251499828800541056 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BDAB0261499828800541056 /* Sales_Customer_Browse_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_Browse_ViewController.h; sourceTree = "<group>"; };
-		6BDAB0271499828800541056 /* Sales_Customer_Browse_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_Browse_ViewController.m; sourceTree = "<group>"; };
-		6BDAB0281499828800541056 /* Sales_Customer_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sales_Customer_ViewController.h; sourceTree = "<group>"; };
-		6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sales_Customer_ViewController.m; sourceTree = "<group>"; };
 		6BFDE7241495FA01005D332F /* JSObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectFactory.h; sourceTree = "<group>"; };
 		6BFDE7251495FA01005D332F /* JSObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectFactory.m; sourceTree = "<group>"; };
 		6BFDE7261495FA01005D332F /* JSObjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjection.h; sourceTree = "<group>"; };
@@ -1379,55 +1371,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6B1F20E714EFDDE9009651FB /* Specs */ = {
+		6B1F20E714EFDDE9009651FB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6B1F20E814EFDDE9009651FB /* Supporting Files */,
+				6BBC3A89153C272F00E68952 /* Harness */,
 				6BFDE7761495FA01005D3418 /* Integration */,
 				6BFDE7761495FA01005D341F /* Resources */,
 				6BFDE7761495FA01005D3436 /* Utils */,
 				6BFDE7761495FA01005D34A7 /* Unit */,
 			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		6B1F20E814EFDDE9009651FB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B1F20E914EFDDE9009651FB /* Tests-Info.plist */,
-				6B1F20EA14EFDDE9009651FB /* InfoPlist.strings */,
-				6B1F20F014EFDDE9009651FB /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6B3EEC85153BE90C001A3579 /* TestHarness */ = {
-			isa = PBXGroup;
-			children = (
-				6B3EECA7153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.h */,
-				6B3EECA8153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m */,
-				6B3EEC86153BE90C001A3579 /* Assets */,
-				6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */,
-				6B3EEC90153BE90C001A3579 /* main.m */,
-				6B3EEC91153BE90C001A3579 /* TestHarness-Info.plist */,
-				6B3EEC92153BE90C001A3579 /* TestHarness-Prefix.pch */,
-			);
-			name = TestHarness;
-			path = Source/TestHarness;
-			sourceTree = "<group>";
-		};
-		6B3EEC86153BE90C001A3579 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6B3EEC87153BE90C001A3579 /* DocumentView.xib */,
-				6B3EEC88153BE90C001A3579 /* Icon.png */,
-				6B3EEC89153BE90C001A3579 /* insurance.png */,
-				6B3EEC8A153BE90C001A3579 /* my details.png */,
-				6B3EEC8B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib */,
-				6B3EEC8C153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
-				6B3EEC8D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
-			);
-			path = Assets;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		6B41A091151877BD009ED6D0 /* UserInterface */ = {
@@ -1789,10 +1742,37 @@
 			path = Payload;
 			sourceTree = "<group>";
 		};
+		6BBC3A89153C272F00E68952 /* Harness */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC3A8A153C272F00E68952 /* ActivityHarnessApplicationDelegate.h */,
+				6BBC3A8B153C272F00E68952 /* ActivityHarnessApplicationDelegate.m */,
+				6BBC3A94153C272F00E68952 /* InfoPlist.strings */,
+				6BBC3A96153C272F00E68952 /* main.m */,
+			);
+			path = Harness;
+			sourceTree = "<group>";
+		};
+		6BBC3AB1153C28A200E68952 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC3AB2153C28A200E68952 /* ESA_Sales_Calc_ViewController.h */,
+				6BBC3AB3153C28A200E68952 /* ESA_Sales_Calc_ViewController.m */,
+				6BBC3AB4153C28A200E68952 /* ESA_Sales_CustomerViewController.h */,
+				6BBC3AB5153C28A200E68952 /* ESA_Sales_CustomerViewController.m */,
+				6BBC3AB6153C28A200E68952 /* Sales_Customer_Browse_ViewController.h */,
+				6BBC3AB7153C28A200E68952 /* Sales_Customer_Browse_ViewController.m */,
+				6BBC3AB8153C28A200E68952 /* Sales_Customer_ViewController.h */,
+				6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */,
+				6BBC3ABA153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.h */,
+				6BBC3ABB153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		6BC9F54F1458EB63001AF204 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6B3EEC85153BE90C001A3579 /* TestHarness */,
 				6B469FE914EF875900ED659C /* Main */,
 				6BDAB0121499828800541056 /* Examples */,
 			);
@@ -1912,12 +1892,11 @@
 		6BCAFB8C14317B1B00575280 = {
 			isa = PBXGroup;
 			children = (
-				6B3EECE2153BF0A4001A3579 /* CFNetwork.framework */,
 				6B3F4963143AD4B6005C0A7A /* build-configuration.properties */,
 				6B3F4964143AD4B7005C0A7A /* build.xml */,
 				6BC9F6BD1458EBB5001AF204 /* Dependencies */,
 				6BC9F54F1458EB63001AF204 /* Source */,
-				6B1F20E714EFDDE9009651FB /* Specs */,
+				6B1F20E714EFDDE9009651FB /* Tests */,
 				6B1E5E8614734404004145D0 /* Frameworks */,
 				6BCAFB9814317B1C00575280 /* Products */,
 			);
@@ -1958,17 +1937,10 @@
 		6BDAB0121499828800541056 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC3AB1153C28A200E68952 /* Controllers */,
 				6BDAB0131499828800541056 /* Assets */,
 				6BDAB01E1499828800541056 /* Configuration */,
-				6BDAB0211499828800541056 /* ESA_Sales_Calc_ViewController.h */,
-				6BDAB0221499828800541056 /* ESA_Sales_Calc_ViewController.m */,
-				6BDAB0231499828800541056 /* ESA_Sales_CustomerViewController.h */,
-				6BDAB0241499828800541056 /* ESA_Sales_CustomerViewController.m */,
 				6BDAB0251499828800541056 /* main.m */,
-				6BDAB0261499828800541056 /* Sales_Customer_Browse_ViewController.h */,
-				6BDAB0271499828800541056 /* Sales_Customer_Browse_ViewController.m */,
-				6BDAB0281499828800541056 /* Sales_Customer_ViewController.h */,
-				6BDAB0291499828800541056 /* Sales_Customer_ViewController.m */,
 			);
 			name = Examples;
 			path = Source/Examples;
@@ -2360,8 +2332,6 @@
 				6B41A115151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h in Headers */,
 				6B41A116151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h in Headers */,
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
-				6B3EEC9D153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.h in Headers */,
-				6B3EECA6153BE90C001A3579 /* TestHarness-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2593,7 +2563,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B1F20EC14EFDDE9009651FB /* InfoPlist.strings in Resources */,
 				6BFDE7761495FA01005D3421 /* ActivityWithFileResources.xml in Resources */,
 				6BFDE7761495FA01005D3423 /* ActivityWithMessage.xml in Resources */,
 				6BFDE7761495FA01005D3427 /* Dodgy.xml in Resources */,
@@ -2618,13 +2587,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B3EEC94153BE90C001A3579 /* DocumentView.xib in Resources */,
-				6B3EEC96153BE90C001A3579 /* Icon.png in Resources */,
-				6B3EEC98153BE90C001A3579 /* insurance.png in Resources */,
-				6B3EEC9A153BE90C001A3579 /* my details.png in Resources */,
-				6B3EEC9C153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
-				6B3EECA1153BE90C001A3579 /* InfoPlist.strings in Resources */,
 				6B3EECE6153BF1C8001A3579 /* Thermomix_TMXConsultant_MyDetails.xml in Resources */,
+				6BBC3A9E153C272F00E68952 /* InfoPlist.strings in Resources */,
+				6BBC3AA0153C282D00E68952 /* TestFixture.xib in Resources */,
+				6BBC3AA1153C282D00E68952 /* DocumentView.xib in Resources */,
+				6BBC3AA2153C282D00E68952 /* Icon.png in Resources */,
+				6BBC3AA3153C282D00E68952 /* ActivityMenu.xib in Resources */,
+				6BBC3AA4153C282D00E68952 /* background.png in Resources */,
+				6BBC3AA5153C282D00E68952 /* ESA.Sales.Calc.xib in Resources */,
+				6BBC3AA6153C282D00E68952 /* ESA.Sales.Customer.Browse.xib in Resources */,
+				6BBC3AA7153C282D00E68952 /* Login.xib in Resources */,
+				6BBC3AA8153C282D00E68952 /* MainWindow.xib in Resources */,
+				6BBC3AA9153C282D00E68952 /* Sales.Customer.Browse.xib in Resources */,
+				6BBC3AAA153C282D00E68952 /* Sales.Customer.xib in Resources */,
+				6BBC3AAB153C282D00E68952 /* TableCellForGridData.xib in Resources */,
+				6BBC3AAC153C282D00E68952 /* TableCellForTreeData.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2635,13 +2612,6 @@
 				6B718F5614EF921100909A38 /* (null) in Resources */,
 				6B41A0CB151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CE151877BD009ED6D0 /* Icon@2x.png in Resources */,
-				6B3EEC93153BE90C001A3579 /* DocumentView.xib in Resources */,
-				6B3EEC95153BE90C001A3579 /* Icon.png in Resources */,
-				6B3EEC97153BE90C001A3579 /* insurance.png in Resources */,
-				6B3EEC99153BE90C001A3579 /* my details.png in Resources */,
-				6B3EEC9B153BE90C001A3579 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
-				6B3EECA0153BE90C001A3579 /* InfoPlist.strings in Resources */,
-				6B3EECA4153BE90C001A3579 /* TestHarness-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2906,9 +2876,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B3EEC9F153BE90C001A3579 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
-				6B3EECA3153BE90C001A3579 /* main.m in Sources */,
-				6B3EECA9153BEF1D001A3579 /* ActivityHarnessApplicationDelegate.m in Sources */,
+				6BBC3A97153C272F00E68952 /* ActivityHarnessApplicationDelegate.m in Sources */,
+				6BBC3A9F153C272F00E68952 /* main.m in Sources */,
+				6BBC3ABD153C28A200E68952 /* ESA_Sales_Calc_ViewController.m in Sources */,
+				6BBC3ABF153C28A200E68952 /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BBC3AC1153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */,
+				6BBC3AC3153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
+				6BBC3AC5153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3064,11 +3038,7 @@
 				6B558BA11518388C00BD810C /* NSString+Contains.m in Sources */,
 				6B558BA21518388C00BD810C /* expanz_SdkConfiguration.m in Sources */,
 				6B558BA31518388C00BD810C /* expanz_CoreModule.m in Sources */,
-				6BDAB0361499828800541056 /* ESA_Sales_Calc_ViewController.m in Sources */,
-				6BDAB0371499828800541056 /* ESA_Sales_CustomerViewController.m in Sources */,
 				6BDAB0381499828800541056 /* main.m in Sources */,
-				6BDAB0391499828800541056 /* Sales_Customer_Browse_ViewController.m in Sources */,
-				6BDAB03A1499828800541056 /* Sales_Customer_ViewController.m in Sources */,
 				6B152C641501CB1C004D471A /* CoverageFix.m in Sources */,
 				6B558BD415185AD400BD810C /* JRSwizzle.m in Sources */,
 				6B41A0C5151877BD009ED6D0 /* expanz_AppDelegate.m in Sources */,
@@ -3092,6 +3062,11 @@
 				6B41A113151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A118151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
 				6B3EEC65153BE6C2001A3579 /* expanz_utils_BundleResource.m in Sources */,
+				6BBC3ABC153C28A200E68952 /* ESA_Sales_Calc_ViewController.m in Sources */,
+				6BBC3ABE153C28A200E68952 /* ESA_Sales_CustomerViewController.m in Sources */,
+				6BBC3AC0153C28A200E68952 /* Sales_Customer_Browse_ViewController.m in Sources */,
+				6BBC3AC2153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
+				6BBC3AC4153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3111,18 +3086,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6B1F20EA14EFDDE9009651FB /* InfoPlist.strings */ = {
+		6BBC3A94153C272F00E68952 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B1F20EB14EFDDE9009651FB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6B3EEC8E153BE90C001A3579 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B3EEC8F153BE90C001A3579 /* en */,
+				6BBC3A95153C272F00E68952 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3197,8 +3164,8 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Specs/Tests-Info.plist";
+				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				INFOPLIST_FILE = "Tests/Specs-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -3226,8 +3193,8 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Specs/Tests-Info.plist";
+				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				INFOPLIST_FILE = "Tests/Specs-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -3250,11 +3217,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/TestHarness/TestHarness-Prefix.pch";
+				GCC_PREFIX_HEADER = Tests/Harness/Prefix.pch;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Source/TestHarness/TestHarness-Info.plist";
+				INFOPLIST_FILE = Tests/Harness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -3273,11 +3241,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/TestHarness/TestHarness-Prefix.pch";
+				GCC_PREFIX_HEADER = Tests/Harness/Prefix.pch;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Source/TestHarness/TestHarness-Info.plist";
+				INFOPLIST_FILE = Tests/Harness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -3488,6 +3457,7 @@
 				6B3EEC84153BE73F001A3579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B718DA014EF8B6400909A38 /* Build configuration list for PBXNativeTarget "expanzCore" */ = {
 			isa = XCConfigurationList;
