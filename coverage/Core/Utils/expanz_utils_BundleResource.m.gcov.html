@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>LCOV - expanz-iOS-SDK.info - Core/Model/expanz_model_FieldSchema.m</title>
+  <title>LCOV - expanz-iOS-SDK.info - Core/Utils/expanz_utils_BundleResource.m</title>
   <link rel="stylesheet" type="text/css" href="../../gcov.css">
 </head>
 
@@ -19,7 +19,7 @@
         <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">Core/Model</a> - expanz_model_FieldSchema.m</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">Core/Utils</a> - expanz_utils_BundleResource.m</td>
             <td width="5%"></td>
             <td width="15%"></td>
             <td width="10%" class="headerCovTableHead">Hit</td>
@@ -31,9 +31,9 @@
             <td class="headerValue">expanz-iOS-SDK.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">12</td>
-            <td class="headerCovTableEntry">15</td>
-            <td class="headerCovTableEntryMed">80.0 %</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
@@ -66,31 +66,31 @@
 <span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
 <span class="lineNum">       9 </span>            : //
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
-<span class="lineNum">      11 </span>            : #import &quot;expanz_model_FieldSchema.h&quot;
+<span class="lineNum">      11 </span>            : #import &quot;expanz_utils_BundleResource.h&quot;
 <span class="lineNum">      12 </span>            : 
 <span class="lineNum">      13 </span>            : 
-<span class="lineNum">      14 </span><span class="lineNoCov">          0 : @implementation expanz_model_FieldSchema</span>
+<span class="lineNum">      14 </span>            : @implementation expanz_utils_BundleResource
 <span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">         70 : @synthesize name = _name;</span>
-<span class="lineNum">      17 </span><span class="lineNoCov">          0 : @synthesize expanzType = _expanzType;</span>
-<span class="lineNum">      18 </span><span class="lineNoCov">          0 : @synthesize label = _label;</span>
-<span class="lineNum">      19 </span>            : 
-<span class="lineNum">      20 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      21 </span>            : - (id) initWithName:(NSString*)name expanzType:(NSString*)expanzType label:(NSString*)label {
-<span class="lineNum">      22 </span><span class="lineCov">         27 :     self = [super init];</span>
-<span class="lineNum">      23 </span><span class="lineCov">         27 :     if (self) {</span>
-<span class="lineNum">      24 </span><span class="lineCov">         27 :         _name = name;</span>
-<span class="lineNum">      25 </span><span class="lineCov">         27 :         _expanzType = expanzType;</span>
-<span class="lineNum">      26 </span><span class="lineCov">         27 :         _label = label;</span>
-<span class="lineNum">      27 </span><span class="lineCov">         27 :     }</span>
-<span class="lineNum">      28 </span><span class="lineCov">         27 : </span>
-<span class="lineNum">      29 </span>            :     return self;
-<span class="lineNum">      30 </span><span class="lineCov">         27 : }</span>
-<span class="lineNum">      31 </span><span class="lineCov">         27 : </span>
-<span class="lineNum">      32 </span>            : /* ================================================== Utility Methods =============================================== */
-<span class="lineNum">      33 </span>            : - (NSString*) description {
-<span class="lineNum">      34 </span><span class="lineCov">         34 :     return [NSString stringWithFormat:@&quot;FieldSchema: name=%@, expanzType=%@, label=%@&quot;, _name, _expanzType, _label];</span>
-<span class="lineNum">      35 </span><span class="lineCov">         34 : }</span>
+<span class="lineNum">      16 </span><span class="lineNoCov">          0 : + (NSString*)withName:(NSString*)name {</span>
+<span class="lineNum">      17 </span>            :     
+<span class="lineNum">      18 </span><span class="lineNoCov">          0 :     NSString* contents; </span>
+<span class="lineNum">      19 </span><span class="lineNoCov">          0 :     NSRange lastDot = [name rangeOfString:@&quot;.&quot; options:NSBackwardsSearch];</span>
+<span class="lineNum">      20 </span><span class="lineNoCov">          0 :     if (lastDot.location != NSNotFound) {</span>
+<span class="lineNum">      21 </span><span class="lineNoCov">          0 :         NSString* resource = [name substringToIndex:lastDot.location];</span>
+<span class="lineNum">      22 </span><span class="lineNoCov">          0 :         NSString* type = [name substringFromIndex:lastDot.location + 1];</span>
+<span class="lineNum">      23 </span><span class="lineNoCov">          0 :         LogDebug(@&quot;Resource: %@.%@&quot;, resource, type);</span>
+<span class="lineNum">      24 </span><span class="lineNoCov">          0 :         NSString* filePath = [[NSBundle bundleForClass:[self class]] pathForResource:resource ofType:type];</span>
+<span class="lineNum">      25 </span><span class="lineNoCov">          0 :         contents =  [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];        </span>
+<span class="lineNum">      26 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      27 </span>            :     else {
+<span class="lineNum">      28 </span><span class="lineNoCov">          0 :         NSString* filePath = [[NSBundle bundleForClass:[self class]] pathForResource:name ofType:nil];</span>
+<span class="lineNum">      29 </span><span class="lineNoCov">          0 :         contents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];</span>
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      31 </span><span class="lineNoCov">          0 :     if (contents == nil) {</span>
+<span class="lineNum">      32 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Expected contents of file %@ not to be nil&quot;, name];</span>
+<span class="lineNum">      33 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      34 </span><span class="lineNoCov">          0 :     return contents;</span>
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : 
 <span class="lineNum">      38 </span>            : @end

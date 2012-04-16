@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">187</td>
+            <td class="headerCovTableEntry">188</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-13</td>
+            <td class="headerValue">2012-04-16</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -349,38 +349,41 @@
 <span class="lineNum">     291 </span><span class="lineNoCov">          0 :     _subViewStateCache = [[NSMutableDictionary alloc] init];</span>
 <span class="lineNum">     292 </span><span class="lineNoCov">          0 :     unsigned int generatedTag;</span>
 <span class="lineNum">     293 </span><span class="lineNoCov">          0 :     for (UIView* view in [self.view subviews]) {</span>
-<span class="lineNum">     294 </span><span class="lineNoCov">          0 :         //TODO: Fix this stupid way to get the pointer value as in integer;</span>
-<span class="lineNum">     295 </span><span class="lineNoCov">          0 :         if (view.tag == 0) {</span>
-<span class="lineNum">     296 </span><span class="lineNoCov">          0 :             NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@&quot;%p&quot;, view]];</span>
-<span class="lineNum">     297 </span><span class="lineNoCov">          0 :             [scanner scanHexInt:&amp;generatedTag];</span>
-<span class="lineNum">     298 </span><span class="lineNoCov">          0 :             [view setTag:generatedTag];</span>
-<span class="lineNum">     299 </span><span class="lineNoCov">          0 :         }</span>
-<span class="lineNum">     300 </span>            :         else {
-<span class="lineNum">     301 </span><span class="lineNoCov">          0 :             generatedTag = view.tag;</span>
+<span class="lineNum">     294 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     295 </span><span class="lineNoCov">          0 :         //TODO: Fix this stupid way to get the pointer value as in integer;</span>
+<span class="lineNum">     296 </span><span class="lineNoCov">          0 :         if (view.tag == 0) {</span>
+<span class="lineNum">     297 </span><span class="lineNoCov">          0 :             generatedTag = &amp;view;</span>
+<span class="lineNum">     298 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     299 </span><span class="lineNoCov">          0 :             NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@&quot;%p&quot;, view]];</span>
+<span class="lineNum">     300 </span>            :             [scanner scanHexInt:&amp;generatedTag];
+<span class="lineNum">     301 </span>            :             [view setTag:generatedTag];
 <span class="lineNum">     302 </span><span class="lineNoCov">          0 :         }</span>
-<span class="lineNum">     303 </span><span class="lineNoCov">          0 :         [_subViewStateCache</span>
-<span class="lineNum">     304 </span><span class="lineNoCov">          0 :             setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];</span>
-<span class="lineNum">     305 </span><span class="lineNoCov">          0 :         [view setHidden:YES];</span>
-<span class="lineNum">     306 </span>            :     }
-<span class="lineNum">     307 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     308 </span>            :     [self.view addSubview:_loadingHud];
-<span class="lineNum">     309 </span><span class="lineNoCov">          0 :     [_loadingHud show:YES];</span>
-<span class="lineNum">     310 </span>            : 
-<span class="lineNum">     311 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     312 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     303 </span><span class="lineNoCov">          0 :         else {</span>
+<span class="lineNum">     304 </span>            :             generatedTag = view.tag;
+<span class="lineNum">     305 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     306 </span><span class="lineNoCov">          0 :         [_subViewStateCache</span>
+<span class="lineNum">     307 </span><span class="lineNoCov">          0 :             setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];</span>
+<span class="lineNum">     308 </span><span class="lineNoCov">          0 :         [view setHidden:YES];</span>
+<span class="lineNum">     309 </span>            :     }
+<span class="lineNum">     310 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     311 </span>            :     [self.view addSubview:_loadingHud];
+<span class="lineNum">     312 </span><span class="lineNoCov">          0 :     [_loadingHud show:YES];</span>
 <span class="lineNum">     313 </span>            : 
-<span class="lineNum">     314 </span><span class="lineNoCov">          0 : - (void) hideLoadingHud {</span>
-<span class="lineNum">     315 </span><span class="lineNoCov">          0 :     [_loadingHud hide:YES];</span>
-<span class="lineNum">     316 </span>            :     for (NSNumber* tag in [_subViewStateCache allKeys]) {
-<span class="lineNum">     317 </span>            :         UIView* view = [self.view viewWithTag:[tag intValue]];
-<span class="lineNum">     318 </span><span class="lineNoCov">          0 :         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];</span>
-<span class="lineNum">     319 </span>            :         [view setHidden:hidden];
-<span class="lineNum">     320 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     321 </span><span class="lineNoCov">          0 :     _subViewStateCache = nil;</span>
-<span class="lineNum">     322 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     323 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     324 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     325 </span><span class="lineNoCov">          0 : @end</span>
+<span class="lineNum">     314 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     315 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     316 </span>            : 
+<span class="lineNum">     317 </span><span class="lineNoCov">          0 : - (void) hideLoadingHud {</span>
+<span class="lineNum">     318 </span><span class="lineNoCov">          0 :     [_loadingHud hide:YES];</span>
+<span class="lineNum">     319 </span>            :     for (NSNumber* tag in [_subViewStateCache allKeys]) {
+<span class="lineNum">     320 </span>            :         UIView* view = [self.view viewWithTag:[tag intValue]];
+<span class="lineNum">     321 </span><span class="lineNoCov">          0 :         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];</span>
+<span class="lineNum">     322 </span>            :         [view setHidden:hidden];
+<span class="lineNum">     323 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     324 </span><span class="lineNoCov">          0 :     _subViewStateCache = nil;</span>
+<span class="lineNum">     325 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     326 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     327 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     328 </span><span class="lineNoCov">          0 : @end</span>
 </pre>
       </td>
     </tr>
