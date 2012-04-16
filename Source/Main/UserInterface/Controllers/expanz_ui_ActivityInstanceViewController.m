@@ -291,8 +291,11 @@
     _subViewStateCache = [[NSMutableDictionary alloc] init];
     unsigned int generatedTag;
     for (UIView* view in [self.view subviews]) {
+
         //TODO: Fix this stupid way to get the pointer value as in integer;
         if (view.tag == 0) {
+            generatedTag = &view;
+
             NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@"%p", view]];
             [scanner scanHexInt:&generatedTag];
             [view setTag:generatedTag];

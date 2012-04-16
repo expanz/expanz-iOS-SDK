@@ -25,7 +25,6 @@
 //#define DATA_FILE       @"Thermomix.TMXConsultant_MyDetails.xml"
 //#define ACTIVITY_STYLE  @""
 
-
 #define ACTIVITY_NAME   @"erp365CRM.Company"
 #define DATA_FILE       @"CRM.Customer.Detail.xml"
 #define ACTIVITY_STYLE  @""
