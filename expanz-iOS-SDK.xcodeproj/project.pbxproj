@@ -48,7 +48,7 @@
 		6B18A32F15187A3500521FC1 /* expanz_ui_ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0BC151877BD009ED6D0 /* expanz_ui_ModelAdapter.h */; };
 		6B18A33015187A3500521FC1 /* expanz_ui_NavigationManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0BE151877BD009ED6D0 /* expanz_ui_NavigationManager.h */; };
 		6B18A33115187A3500521FC1 /* expanz_ui_SystemEventReporter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C0151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h */; };
-		6B18A33215187A3500521FC1 /* expanz_ui_TextFieldDelegateUtils.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C1151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h */; };
+		6B18A33215187A3500521FC1 /* expanz_ui_TextInputUtils.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C1151877BD009ED6D0 /* expanz_ui_TextInputUtils.h */; };
 		6B1B883914F4D3FB000A3D95 /* JSObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7241495FA01005D332F /* JSObjectFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B883A14F4D3FB000A3D95 /* JSObjectFactory.m in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7251495FA01005D332F /* JSObjectFactory.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B883B14F4D3FB000A3D95 /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7261495FA01005D332F /* JSObjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,10 +185,10 @@
 		6B41A113151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0BF151877BD009ED6D0 /* expanz_ui_NavigationManager.m */; };
 		6B41A114151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0BF151877BD009ED6D0 /* expanz_ui_NavigationManager.m */; };
 		6B41A115151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C0151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h */; };
-		6B41A116151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C1151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h */; };
-		6B41A117151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m */; };
-		6B41A118151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m */; };
-		6B41A119151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m */; };
+		6B41A116151877BD009ED6D0 /* expanz_ui_TextInputUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0C1151877BD009ED6D0 /* expanz_ui_TextInputUtils.h */; };
+		6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */; };
+		6B41A118151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */; };
+		6B41A119151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */; };
 		6B4573A3150DA4290059093A /* DefaultSiteDetailsClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */; };
 		6B558B431518362300BD810C /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
 		6B558B461518370500BD810C /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558B451518370500BD810C /* TestFixture_ViewController.m */; };
@@ -830,7 +830,7 @@
 				6B18A32F15187A3500521FC1 /* expanz_ui_ModelAdapter.h in Copy Headers */,
 				6B18A33015187A3500521FC1 /* expanz_ui_NavigationManager.h in Copy Headers */,
 				6B18A33115187A3500521FC1 /* expanz_ui_SystemEventReporter.h in Copy Headers */,
-				6B18A33215187A3500521FC1 /* expanz_ui_TextFieldDelegateUtils.h in Copy Headers */,
+				6B18A33215187A3500521FC1 /* expanz_ui_TextInputUtils.h in Copy Headers */,
 				6B18A31C151879EB00521FC1 /* JRSwizzle.h in Copy Headers */,
 				6B9FC7DE14FDABA500E4CB2C /* MBProgressHUD.h in Copy Headers */,
 				6B9FC7DF14FDABA500E4CB2C /* JSObjectFactory.h in Copy Headers */,
@@ -970,8 +970,8 @@
 		6B41A0BE151877BD009ED6D0 /* expanz_ui_NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_NavigationManager.h; sourceTree = "<group>"; };
 		6B41A0BF151877BD009ED6D0 /* expanz_ui_NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_NavigationManager.m; sourceTree = "<group>"; };
 		6B41A0C0151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_SystemEventReporter.h; sourceTree = "<group>"; };
-		6B41A0C1151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextFieldDelegateUtils.h; sourceTree = "<group>"; };
-		6B41A0C2151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextFieldDelegateUtils.m; sourceTree = "<group>"; };
+		6B41A0C1151877BD009ED6D0 /* expanz_ui_TextInputUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_TextInputUtils.h; sourceTree = "<group>"; };
+		6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_TextInputUtils.m; sourceTree = "<group>"; };
 		6B558B441518370500BD810C /* TestFixture_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixture_ViewController.h; sourceTree = "<group>"; };
 		6B558B451518370500BD810C /* TestFixture_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixture_ViewController.m; sourceTree = "<group>"; };
 		6B558BB91518483B00BD810C /* SdkAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SdkAppDelegateSpec.m; sourceTree = "<group>"; };
@@ -1418,8 +1418,8 @@
 				6B41A0BE151877BD009ED6D0 /* expanz_ui_NavigationManager.h */,
 				6B41A0BF151877BD009ED6D0 /* expanz_ui_NavigationManager.m */,
 				6B41A0C0151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h */,
-				6B41A0C1151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h */,
-				6B41A0C2151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m */,
+				6B41A0C1151877BD009ED6D0 /* expanz_ui_TextInputUtils.h */,
+				6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -2356,7 +2356,7 @@
 				6B41A10D151877BD009ED6D0 /* expanz_ui_ModelAdapter.h in Headers */,
 				6B41A111151877BD009ED6D0 /* expanz_ui_NavigationManager.h in Headers */,
 				6B41A115151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h in Headers */,
-				6B41A116151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.h in Headers */,
+				6B41A116151877BD009ED6D0 /* expanz_ui_TextInputUtils.h in Headers */,
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2821,7 +2821,7 @@
 				6B41A10A151877BD009ED6D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6B41A10E151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A112151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
-				6B41A117151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2903,7 +2903,7 @@
 				6B41A10C151877BD009ED6D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6B41A110151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A114151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
-				6B41A119151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B41A119151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC66153BE6D7001A3579 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3097,7 +3097,7 @@
 				6B41A10B151877BD009ED6D0 /* expanz_ui_AlertBoxSystemEventReporter.m in Sources */,
 				6B41A10F151877BD009ED6D0 /* expanz_ui_ModelAdapter.m in Sources */,
 				6B41A113151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
-				6B41A118151877BD009ED6D0 /* expanz_ui_TextFieldDelegateUtils.m in Sources */,
+				6B41A118151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC65153BE6C2001A3579 /* expanz_utils_BundleResource.m in Sources */,
 				6BBC3ABC153C28A200E68952 /* ESA_Sales_Calc_ViewController.m in Sources */,
 				6BBC3ABE153C28A200E68952 /* ESA_Sales_CustomerViewController.m in Sources */,

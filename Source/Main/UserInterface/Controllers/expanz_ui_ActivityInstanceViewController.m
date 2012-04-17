@@ -31,7 +31,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_ui_NavigationManager.h"
-#import "expanz_ui_TextFieldDelegateUtils.h"
+#import "expanz_ui_TextInputUtils.h"
 #import "RTProperty.h"
 
 /* ================================================================================================================== */
@@ -44,6 +44,12 @@
 - (void) showLoadingHud;
 
 - (void) hideLoadingHud;
+
+- (unsigned int) createOrRetrieveTagForView:(UIView*)view;
+
+- (void) createCloseButtonForTextView;
+
+- (void) closeTextView;
 
 @end
 
@@ -60,7 +66,7 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
-                       initialKey:(NSString*)initialKey {
+        initialKey:(NSString*)initialKey {
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
@@ -70,6 +76,7 @@
         [self setTitle:_activityDefinition.title];
         [self createActivityRequestWith:initialKey];
         [self cachePropertyNames];
+        [self createCloseButtonForTextView];
     }
     return self;
 }
@@ -84,7 +91,7 @@
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {
-    [[TextFieldDelegateUtils currentlyEditingTextField] resignFirstResponder];
+    [[[TextInputUtils currentlyEditingTextInput] textInputView] resignFirstResponder];
 
     while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
@@ -92,7 +99,7 @@
         usleep(5000000);
     }
     MethodInvocationRequest* methodRequest =
-        [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
+            [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
     [_spinner startAnimating];
     [_activityClient sendMethodInvocationWith:methodRequest delegate:self];
 }
@@ -105,21 +112,21 @@
 - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {
     LogDebug(@"Requesting populateMethod: %@", populateMethod);
     DataPublicationRequest* publicationRequest =
-        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+            [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setPopulateMethod:populateMethod];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {
     LogDebug(@"Requesting query: %@", query);
     DataPublicationRequest* publicationRequest =
-        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+            [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setQuery:query];
 }
 
 - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {
     LogDebug(@"Requesting autoPopulate: %@", autoPopulate == YES ? @"YES" : @"NO");
     DataPublicationRequest* publicationRequest =
-        [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+            [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setAutoPopulate:autoPopulate];
 }
 
@@ -141,7 +148,6 @@
 /* ================================================================================================================== */
 #pragma mark - View lifecycle
 
-
 - (void) viewDidLoad {
     [super viewDidLoad];
 
@@ -151,7 +157,7 @@
                 NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));
 
                 UITableView* tableView =
-                    (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];
+                        (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];
                 if (object == tableView) {
                     [publicationRequest setDataPublicationId:propertyName];
                 }
@@ -193,12 +199,12 @@
 #pragma mark UITextFieldDelegate
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    [TextFieldDelegateUtils setCurrentlyEditingField:textField];
-    [TextFieldDelegateUtils revealFromBeneathKeyboard:textField];
+    [TextInputUtils setCurrentlyEditing:textField];
+    [TextInputUtils revealFromBeneathKeyboard:textField];
 }
 
 - (void) textFieldDidEndEditing:(UITextField*)textField {
-    [TextFieldDelegateUtils restoreBeneathKeyboard:textField];
+    [TextInputUtils restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
@@ -214,10 +220,42 @@
 }
 
 /* ================================================================================================================== */
+#pragma mark UITextViewDelegate
+
+- (void) textViewDidBeginEditing:(UITextView*)textView {
+    [TextInputUtils setCurrentlyEditing:textView];
+    [TextInputUtils revealFromBeneathKeyboard:textView];
+    CGFloat xOrigin = textView.frame.origin.x + textView.frame.size.width - 24;
+    CGFloat yOrigin = textView.frame.origin.y - 15;
+    _closeTextViewButton.frame = CGRectMake(xOrigin, yOrigin, 32, 22);
+    [self.view addSubview:_closeTextViewButton];
+}
+
+- (void) textViewDidEndEditing:(UITextView*)textView {
+    [TextInputUtils restoreBeneathKeyboard:textView];
+}
+
+- (void) closeTextView {
+    [_closeTextViewButton removeFromSuperview];
+    UITextView* textField = (UITextView*) [TextInputUtils currentlyEditingTextInput];
+    [textField resignFirstResponder];
+    FieldInstance* field = [_modelAdapter fieldFor:textField];
+    [field didFinishEditWithValue:textField.text];
+    [self sendDeltaForField:field];
+}
+
+- (void) createCloseButtonForTextView {
+    _closeTextViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_closeTextViewButton addTarget:self action:@selector(closeTextView) forControlEvents:UIControlEventTouchUpInside];
+    [_closeTextViewButton setTitle:@"X" forState:UIControlStateNormal];
+}
+
+
+/* ================================================================================================================== */
 #pragma mark Image Picker Delegate 
 
 - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
-                   editingInfo:(NSDictionary*)editingInfo {
+        editingInfo:(NSDictionary*)editingInfo {
 
     FieldInstance* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
     //[field didFinishEditWithValue:image];
@@ -228,8 +266,8 @@
     NSString* sessionToken = [SessionContext globalContext].sessionToken;
 
     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
-        initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle sessionToken:sessionToken
-               encoding:DeltaEncodingBase64];
+            initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle
+            sessionToken:sessionToken encoding:DeltaEncodingBase64];
     [_activityClient sendDeltaWith:deltaRequest delegate:self];
 
     _currentlyEditingImageView.image = image;
@@ -257,8 +295,8 @@
     //TODO: This should use id<expanz_ui_SystemEventReporter>
     for (Message* message in activityInstance.messages) {
         UIAlertView* alert = [[UIAlertView alloc]
-            initWithTitle:@"System Message" message:message.content delegate:self cancelButtonTitle:@"OK"
-        otherButtonTitles:nil];
+                initWithTitle:@"System Message" message:message.content delegate:self cancelButtonTitle:@"OK"
+                otherButtonTitles:nil];
         [alert show];
     }
 }
@@ -278,10 +316,11 @@
 
 - (void) createActivityRequestWith:(NSString*)initialKey {
     _activityRequest = [[CreateActivityRequest alloc]
-        initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey
-                sessionToken:[SessionContext globalContext].sessionToken];
+            initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey
+            sessionToken:[SessionContext globalContext].sessionToken];
 }
 
+/* ================================================================================================================== */
 - (void) showLoadingHud {
     if (_loadingHud == nil) {
         _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];
@@ -289,27 +328,16 @@
     _loadingHud.delegate = self;
     _loadingHud.labelText = @"Loading";
     _subViewStateCache = [[NSMutableDictionary alloc] init];
-    unsigned int generatedTag;
     for (UIView* view in [self.view subviews]) {
 
-        //TODO: Fix this stupid way to get the pointer value as in integer;
-        if (view.tag == 0) {
-            NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@"%p", view]];
-            [scanner scanHexInt:&generatedTag];
-            [view setTag:generatedTag];
-        }
-        else {
-            generatedTag = view.tag;
-        }
+        unsigned int generatedViewTag = [self createOrRetrieveTagForView:view];
         [_subViewStateCache
-            setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedTag]];
+                setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedViewTag]];
         [view setHidden:YES];
     }
 
     [self.view addSubview:_loadingHud];
     [_loadingHud show:YES];
-
-
 }
 
 - (void) hideLoadingHud {
@@ -320,6 +348,20 @@
         [view setHidden:hidden];
     }
     _subViewStateCache = nil;
+}
+
+/* ================================================================================================================== */
+- (unsigned int) createOrRetrieveTagForView:(UIView*)view {
+    unsigned int generatedTag;
+    if (view.tag == 0) {
+        NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@"%p", view]];
+        [scanner scanHexInt:&generatedTag];
+        [view setTag:generatedTag];
+    }
+    else {
+        generatedTag = view.tag;
+    }
+    return generatedTag;
 }
 
 

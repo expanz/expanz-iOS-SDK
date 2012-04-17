@@ -202,7 +202,7 @@
 
 /* ================================================== Private Methods =============================================== */
 
-static const NSString* LONG_DATA_MARKER = @"$longData$";
+static NSString* const LONG_DATA_MARKER = @"$longData$";
 
 - (NSString*) parseFieldValueAttribute {
     NSString* attributeValue = [self attribute:@"value"];

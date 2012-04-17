@@ -8,9 +8,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import "expanz_ui_TextFieldDelegateUtils.h"
+#import "expanz_ui_TextInputUtils.h"
 
-static UITextField* gCurrentlyEditingField;
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
@@ -19,17 +18,19 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 static CGFloat gAnimatedDistance;
 static BOOL gScrolled;
 
-@implementation expanz_ui_TextFieldDelegateUtils
+static id<UITextInput> gCurrentlyEditingField;
 
+@implementation expanz_ui_TextInputUtils
 
 /* ================================================ Interface Methods =============================================== */
-+ (void) revealFromBeneathKeyboard:(UITextField*)textField {
++ (void) revealFromBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Scrolling to accomodate keyboard");
     if (!gScrolled) {
-        CGRect textFieldRect = [textField.window convertRect:textField.bounds fromView:textField];
+        UIView* view = textInputControl.textInputView;
+        CGRect textFieldRect = [view.window convertRect:view.bounds fromView:view];
         if (textFieldRect.origin.y >= 250) {
             gScrolled = YES;
-            CGRect viewRect = [textField.window convertRect:textField.window.bounds fromView:textField.window];
+            CGRect viewRect = [view.window convertRect:view.window.bounds fromView:view.window];
             CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
             CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
             CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
@@ -42,19 +43,19 @@ static BOOL gScrolled;
             }
             UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
             if (orientation == UIInterfaceOrientationPortrait || orientation ==
-                UIInterfaceOrientationPortraitUpsideDown) {
+                    UIInterfaceOrientationPortraitUpsideDown) {
                 gAnimatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
             }
             else {
                 gAnimatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
             }
-            CGRect viewFrame = textField.window.frame;
+            CGRect viewFrame = view.window.frame;
             viewFrame.origin.y -= gAnimatedDistance;
 
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationBeginsFromCurrentState:YES];
             [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-            [textField.window setFrame:viewFrame];
+            [view.window setFrame:viewFrame];
             [UIView commitAnimations];
         }
         else {
@@ -64,16 +65,17 @@ static BOOL gScrolled;
 }
 
 
-+ (void) restoreBeneathKeyboard:(UITextField*)textField {
++ (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Restoring previous position.");
     if (gScrolled) {
-        CGRect viewFrame = textField.window.frame;
+        UIView* view = textInputControl.textInputView;
+        CGRect viewFrame = view.window.frame;
         viewFrame.origin.y += gAnimatedDistance;
 
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-        [textField.window setFrame:viewFrame];
+        [view.window setFrame:viewFrame];
         [UIView commitAnimations];
     }
     gScrolled = NO;
@@ -81,18 +83,17 @@ static BOOL gScrolled;
 }
 
 
-+ (BOOL) isCurrentlyEditingField:(UITextField*)textField {
-    return textField == gCurrentlyEditingField;
++ (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl {
+    return textInputControl == gCurrentlyEditingField;
 }
 
-+ (UITextField*) currentlyEditingTextField {
++ (id<UITextInput>) currentlyEditingTextInput {
     return gCurrentlyEditingField;
 }
 
 
-+ (void) setCurrentlyEditingField:(UITextField*)textField {
++ (void) setCurrentlyEditing:(id<UITextInput>)textField {
     gCurrentlyEditingField = textField;
-
 }
 
 

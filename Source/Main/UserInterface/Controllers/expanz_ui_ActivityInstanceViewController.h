@@ -23,8 +23,9 @@
 @class MBProgressHUD;
 
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController <expanz_service_ActivityClientDelegate,
-    UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, MBProgressHUDDelegate> {
+@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate,
+        UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,
+        MBProgressHUDDelegate> {
 
 @private
     NSMutableDictionary* _subViewStateCache;
@@ -33,6 +34,7 @@
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;
     UIImageView* _currentlyEditingImageView;
+    UIButton* _closeTextViewButton;
 }
 
 @property(nonatomic, strong, readonly) NSArray* propertyNames;
@@ -46,28 +48,28 @@
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id)initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
-                      initialKey:(NSString*)initialKey;
+- (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
+        initialKey:(NSString*)initialKey;
 
 /**
  * Request model to update with new field value. 
  */
-- (void)sendDeltaForField:(expanz_model_FieldInstance*)textField;
+- (void) sendDeltaForField:(expanz_model_FieldInstance*)textField;
 
 /**
  * Invoke a method on the model. 
  */
-- (void)sendMethodInvocation:(NSString*)methodName;
+- (void) sendMethodInvocation:(NSString*)methodName;
 
 - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding;
 
-- (void)hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
+- (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod;
 
-- (void)hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query;
+- (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query;
 
-- (void)hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
+- (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate;
 
-- (void)willCommenceEditForImageView:(UIButton*)sender;
+- (void) willCommenceEditForImageView:(UIButton*)sender;
 
 
 @end

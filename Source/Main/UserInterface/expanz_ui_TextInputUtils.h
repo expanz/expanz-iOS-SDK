@@ -11,33 +11,33 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_ui_TextFieldDelegateUtils : NSObject
+@interface expanz_ui_TextInputUtils : NSObject
 
 /**
 * If the text field will be hidden by the keyboard becoming active, this method causes the view to scroll so that
 * the text field appears in the remaining space after the keyboard has been presented.
 */
-+ (void) revealFromBeneathKeyboard:(UITextField*)textField;
++ (void) revealFromBeneathKeyboard:(id<UITextInput>)textInputControl;
 
 /**
 * Restore the view to it's previous state prior to calling revealFromBeneathKeyboard.
 */
-+ (void) restoreBeneathKeyboard:(UITextField*)textField;
++ (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl;
 
 /**
 * Returns true if this is the text field that currently has focus.
 */
-+ (BOOL) isCurrentlyEditingField:(UITextField*)textField;
++ (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl;
 
-+ (UITextField*) currentlyEditingTextField;
++ (id<UITextInput>) currentlyEditingTextInput;
 
 /**
 * Registers this text field as the one that currently has focus.
 */
-+ (void) setCurrentlyEditingField:(UITextField*)textField; 
++ (void) setCurrentlyEditing:(id<UITextInput>)textField;
 
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias TextFieldDelegateUtils expanz_ui_TextFieldDelegateUtils;
+@compatibility_alias TextInputUtils expanz_ui_TextInputUtils;

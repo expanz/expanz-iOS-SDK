@@ -17,7 +17,7 @@
 #import "expanz_ui_LoginViewController.h"
 #import "expanz_SdkConfiguration.h"
 #import "expanz_ui_NavigationManager.h"
-#import "expanz_ui_TextFieldDelegateUtils.h"
+#import "expanz_ui_TextInputUtils.h"
 
 
 @implementation expanz_ui_LoginViewController
@@ -103,11 +103,11 @@
 #pragma mark UITextFieldDelegate    
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    [TextFieldDelegateUtils revealFromBeneathKeyboard:textField];
+    [TextInputUtils revealFromBeneathKeyboard:textField];
 }
 
 - (void) textFieldDidEndEditing:(UITextField*)textField {
-    [TextFieldDelegateUtils restoreBeneathKeyboard:textField];
+    [TextInputUtils restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField*)textField {
