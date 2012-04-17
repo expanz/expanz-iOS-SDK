@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - expanz-iOS-SDK.info - Core/Services/Activity/Payload/expanz_service_DeltaRequest.m</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">Core/Services/Activity/Payload</a> - expanz_service_DeltaRequest.m</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">expanz-iOS-SDK.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntryHi">96.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2012-04-17</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">       2 </span>            : //
+<span class="lineNum">       3 </span>            : //  EXPANZ
+<span class="lineNum">       4 </span>            : //  Copyright 2008-2011 EXPANZ
+<span class="lineNum">       5 </span>            : //  All Rights Reserved.
+<span class="lineNum">       6 </span>            : //
+<span class="lineNum">       7 </span>            : //  NOTICE: Expanz permits you to use, modify, and distribute this file
+<span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
+<span class="lineNum">       9 </span>            : //
+<span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : #import &quot;expanz_service_DeltaRequest.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_model_FieldInstance.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_model_SessionContext.h&quot;
+<span class="lineNum">      15 </span>            : #import &quot;expanz_model_ActivityInstance.h&quot;
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span><span class="lineCov">          3 : @implementation expanz_service_DeltaRequest</span>
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span><span class="lineCov">          1 : @synthesize sessionToken = _sessionToken;</span>
+<span class="lineNum">      20 </span><span class="lineCov">          1 : @synthesize activityHandle = _activityHandle;</span>
+<span class="lineNum">      21 </span><span class="lineCov">          1 : @synthesize fieldId = _fieldId;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          1 : @synthesize fieldValue = _fieldValue;</span>
+<span class="lineNum">      23 </span><span class="lineNoCov">          0 : @synthesize encoding = _encoding;</span>
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span>            : /* ================================================= Class Methods ================================================== */
+<span class="lineNum">      26 </span><span class="lineCov">          1 : + (id) forField:(expanz_model_FieldInstance*)field {</span>
+<span class="lineNum">      27 </span><span class="lineCov">          1 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          1 :     return [[DeltaRequest alloc]</span>
+<span class="lineNum">      29 </span>            :         initWithFieldId:field.fieldId fieldValue:field.value activityHandle:field.parentActivity.handle
+<span class="lineNum">      30 </span>            :            sessionToken:sessionToken];
+<span class="lineNum">      31 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">      32 </span>            : 
+<span class="lineNum">      33 </span>            : /* ================================================== Initializers ================================================== */
+<span class="lineNum">      34 </span>            : - (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
+<span class="lineNum">      35 </span><span class="lineCov">          4 :           sessionToken:(NSString*)sessionToken {</span>
+<span class="lineNum">      36 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      37 </span>            :     return [self initWithFieldId:fieldId fieldValue:fieldValue activityHandle:activityHandle sessionToken:sessionToken
+<span class="lineNum">      38 </span><span class="lineCov">          4 :                         encoding:DeltaEncodingDefault];</span>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : }
+<span class="lineNum">      41 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      42 </span>            : - (id) initWithFieldId:(NSString*)fieldId fieldValue:(NSString*)fieldValue activityHandle:(NSString*)activityHandle
+<span class="lineNum">      43 </span>            :           sessionToken:(NSString*)sessionToken encoding:(DeltaEncoding)encoding {
+<span class="lineNum">      44 </span><span class="lineCov">          5 : </span>
+<span class="lineNum">      45 </span><span class="lineCov">          5 :     self = [super init];</span>
+<span class="lineNum">      46 </span>            :     if (self) {
+<span class="lineNum">      47 </span><span class="lineCov">          5 :         _fieldId = [fieldId copy];</span>
+<span class="lineNum">      48 </span><span class="lineCov">          5 :         _fieldValue = [fieldValue copy];</span>
+<span class="lineNum">      49 </span><span class="lineCov">          5 :         _activityHandle = [activityHandle copy];</span>
+<span class="lineNum">      50 </span><span class="lineCov">          5 :         _sessionToken = [sessionToken copy];</span>
+<span class="lineNum">      51 </span><span class="lineCov">          5 :         _encoding = encoding;</span>
+<span class="lineNum">      52 </span><span class="lineCov">          5 :     }</span>
+<span class="lineNum">      53 </span><span class="lineCov">          5 :     return self;</span>
+<span class="lineNum">      54 </span><span class="lineCov">          5 : }</span>
+<span class="lineNum">      55 </span><span class="lineCov">          5 : </span>
+<span class="lineNum">      56 </span><span class="lineCov">          5 : </span>
+<span class="lineNum">      57 </span>            : /* ================================================= Protocol Methods =============================================== */
+<span class="lineNum">      58 </span>            : #define kXmlTemplate @&quot;&lt;ExecX xmlns=\&quot;http://www.expanz.com/ESAService\&quot;&gt;&lt;xml&gt;&lt;ESA&gt;&lt;Activity activityHandle=\&quot;%@\&quot;&gt;\
+<span class="lineNum">      59 </span>            : &lt;Delta id=\&quot;%@\&quot; %@ %@&gt;%@&lt;/Delta&gt;&lt;/Activity&gt;&lt;/ESA&gt;&lt;/xml&gt;&lt;sessionHandle&gt;%@&lt;/sessionHandle&gt;&lt;/ExecX&gt;&quot;
+<span class="lineNum">      60 </span>            : 
+<span class="lineNum">      61 </span>            : - (NSString*) toXml {
+<span class="lineNum">      62 </span>            :     NSString* encodingAttribute = _encoding == DeltaEncodingBase64 ? @&quot;encoding=\&quot;BASE64\&quot;&quot; : @&quot;&quot;;
+<span class="lineNum">      63 </span><span class="lineCov">          6 :     NSString* valueAttribute = _encoding == DeltaEncodingBase64 ? @&quot;value=\&quot;$longData$\&quot;&quot; :</span>
+<span class="lineNum">      64 </span><span class="lineCov">          6 :         [NSString stringWithFormat:@&quot;value=\&quot;%@\&quot;&quot;, _fieldValue];</span>
+<span class="lineNum">      65 </span>            :     NSString* base64Packet = _encoding == DeltaEncodingBase64 ? _fieldValue : @&quot;&quot;;
+<span class="lineNum">      66 </span><span class="lineCov">          6 : </span>
+<span class="lineNum">      67 </span><span class="lineCov">          6 :     return [NSString stringWithFormat:kXmlTemplate, _activityHandle, _fieldId, encodingAttribute, valueAttribute,</span>
+<span class="lineNum">      68 </span>            :                                       base64Packet, _sessionToken];
+<span class="lineNum">      69 </span><span class="lineCov">          6 : }</span>
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span><span class="lineCov">          6 : @end</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

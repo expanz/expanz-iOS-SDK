@@ -107,6 +107,9 @@
 
     <target name="--compile.installer">
         <mkdir dir="${release.dir}"/>
+        <copy todir="/tmp/expanz-xcodePlugin.xcplugin">
+            <fileset dir="${packager.plugin.dir}"/>
+        </copy>
         <exec executable="${packager.path}">
             <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
         </exec>

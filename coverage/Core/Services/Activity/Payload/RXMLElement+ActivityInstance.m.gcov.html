@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - expanz-iOS-SDK.info - Core/Services/Activity/Payload/RXMLElement+ActivityInstance.m</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">Core/Services/Activity/Payload</a> - RXMLElement+ActivityInstance.m</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">expanz-iOS-SDK.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">118</td>
+            <td class="headerCovTableEntry">131</td>
+            <td class="headerCovTableEntryHi">90.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2012-04-17</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">       2 </span>            : //
+<span class="lineNum">       3 </span>            : //  EXPANZ
+<span class="lineNum">       4 </span>            : //  Copyright 2008-2011 EXPANZ
+<span class="lineNum">       5 </span>            : //  All Rights Reserved.
+<span class="lineNum">       6 </span>            : //
+<span class="lineNum">       7 </span>            : //  NOTICE: Expanz permits you to use, modify, and distribute this file
+<span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
+<span class="lineNum">       9 </span>            : //
+<span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : 
+<span class="lineNum">      13 </span>            : #import &quot;RXMLElement+ActivityInstance.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_model_ActivityInstance.h&quot;
+<span class="lineNum">      15 </span>            : #import &quot;expanz_model_FieldInstance.h&quot;
+<span class="lineNum">      16 </span>            : #import &quot;expanz_model_Message.h&quot;
+<span class="lineNum">      17 </span>            : #import &quot;expanz_model_GridData.h&quot;
+<span class="lineNum">      18 </span>            : #import &quot;expanz_model_Column.h&quot;
+<span class="lineNum">      19 </span>            : #import &quot;expanz_model_Row.h&quot;
+<span class="lineNum">      20 </span>            : #import &quot;expanz_model_DataBuilder.h&quot;
+<span class="lineNum">      21 </span>            : #import &quot;expanz_model_Folder.h&quot;
+<span class="lineNum">      22 </span>            : #import &quot;expanz_model_File.h&quot;
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span>            : @implementation RXMLElement (ActivityInstance)
+<span class="lineNum">      25 </span>            : 
+<span class="lineNum">      26 </span><span class="lineCov">         17 : - (ActivityInstance*) asActivityInstance {</span>
+<span class="lineNum">      27 </span><span class="lineCov">         17 :     if (![self.tag isEqualToString:@&quot;Activity&quot;]) {</span>
+<span class="lineNum">      28 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not an Activity.&quot;];</span>
+<span class="lineNum">      29 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      30 </span><span class="lineCov">        548 :     ActivityInstance* activityInstance = [[ActivityInstance alloc]</span>
+<span class="lineNum">      31 </span>            :         initWithTitle:[self attribute:@&quot;title&quot;] handle:[self attribute:@&quot;activityHandle&quot;]
+<span class="lineNum">      32 </span><span class="lineCov">         16 :          persistentId:[self attribute:@&quot;persistentId&quot;]];</span>
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span><span class="lineCov">        288 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">      35 </span>            : 
+<span class="lineNum">      36 </span><span class="lineCov">        272 :         if ([e.tag isEqualToString:@&quot;Field&quot;]) {</span>
+<span class="lineNum">      37 </span><span class="lineCov">        254 :             [activityInstance addField:[e asFieldInstance]];</span>
+<span class="lineNum">      38 </span><span class="lineCov">        254 :         }</span>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span><span class="lineCov">         18 :         else if ([e.tag isEqualToString:@&quot;Messages&quot;]) {</span>
+<span class="lineNum">      41 </span><span class="lineCov">          4 :             [e iterate:@&quot;*&quot; with:^(RXMLElement* messageElement) {</span>
+<span class="lineNum">      42 </span><span class="lineCov">          2 :                 [activityInstance addMessage:[messageElement asMessage]];</span>
+<span class="lineNum">      43 </span><span class="lineCov">          2 :             }];</span>
+<span class="lineNum">      44 </span><span class="lineCov">          2 :         }</span>
+<span class="lineNum">      45 </span>            : 
+<span class="lineNum">      46 </span><span class="lineCov">         16 :         else if ([e.tag isEqualToString:@&quot;Data&quot;]) {</span>
+<span class="lineNum">      47 </span><span class="lineCov">          3 :             [activityInstance addData:[e asData]];</span>
+<span class="lineNum">      48 </span><span class="lineCov">          3 :         }</span>
+<span class="lineNum">      49 </span><span class="lineCov">        272 :     }];</span>
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span><span class="lineCov">         16 :     return activityInstance;</span>
+<span class="lineNum">      52 </span><span class="lineCov">         16 : }</span>
+<span class="lineNum">      53 </span>            : 
+<span class="lineNum">      54 </span>            : /* ================================================================================================================== */
+<span class="lineNum">      55 </span><span class="lineCov">        255 : - (FieldInstance*) asFieldInstance {</span>
+<span class="lineNum">      56 </span><span class="lineCov">        255 :     if (![self.tag isEqualToString:@&quot;Field&quot;]) {</span>
+<span class="lineNum">      57 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a Field.&quot;];</span>
+<span class="lineNum">      58 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      59 </span><span class="lineCov">        254 :     NSString* fieldId = [self attribute:@&quot;id&quot;];</span>
+<span class="lineNum">      60 </span><span class="lineCov">        254 :     BOOL nullable = [[self attribute:@&quot;nullable&quot;] boolValue];</span>
+<span class="lineNum">      61 </span><span class="lineCov">        254 :     NSString* defaultValue = [self attribute:@&quot;null&quot;];</span>
+<span class="lineNum">      62 </span><span class="lineCov">        254 :     ExpanzDataType datatype = [[self attribute:@&quot;datatype&quot;] asExpanzDataType];</span>
+<span class="lineNum">      63 </span><span class="lineCov">        254 :     NSString* label = [self attribute:@&quot;label&quot;];</span>
+<span class="lineNum">      64 </span><span class="lineCov">        254 :     NSString* hint = [self attribute:@&quot;hint&quot;];</span>
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span>            :     FieldInstance* field = [[FieldInstance alloc]
+<span class="lineNum">      67 </span><span class="lineCov">        254 :         initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint];</span>
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span><span class="lineCov">        254 :     switch (field.datatype) {</span>
+<span class="lineNum">      70 </span>            :         case ExpanzDataTypeString:
+<span class="lineNum">      71 </span>            :         case ExpanzDataTypeNumber:
+<span class="lineNum">      72 </span>            :         case ExpanzDataTypeBool:
+<span class="lineNum">      73 </span>            :         case ExpanzDataTypeNull:
+<span class="lineNum">      74 </span>            :         case ExpanzDataTypeDate:
+<span class="lineNum">      75 </span>            :         case ExpanzDataTypeDateTime:
+<span class="lineNum">      76 </span><span class="lineCov">        248 :             [field setValue:[self parseFieldValueAttribute]];</span>
+<span class="lineNum">      77 </span><span class="lineCov">        248 :             break;</span>
+<span class="lineNum">      78 </span>            : 
+<span class="lineNum">      79 </span>            :         case ExpanzDataTypeImage:
+<span class="lineNum">      80 </span><span class="lineCov">          6 :             [field setValue:[self attribute:@&quot;url&quot;]];</span>
+<span class="lineNum">      81 </span><span class="lineCov">          6 :             break;</span>
+<span class="lineNum">      82 </span>            :     }
+<span class="lineNum">      83 </span>            : 
+<span class="lineNum">      84 </span><span class="lineCov">        254 :     [field setDisabled:[[self attribute:@&quot;disabled&quot;] boolValue]];</span>
+<span class="lineNum">      85 </span><span class="lineCov">        254 :     return field;</span>
+<span class="lineNum">      86 </span><span class="lineCov">        254 : }</span>
+<span class="lineNum">      87 </span>            : 
+<span class="lineNum">      88 </span>            : /* ================================================================================================================== */
+<span class="lineNum">      89 </span><span class="lineCov">          3 : - (Message*) asMessage {</span>
+<span class="lineNum">      90 </span><span class="lineCov">          3 :     if (![self.tag isEqualToString:@&quot;Message&quot;]) {</span>
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a Message.&quot;];</span>
+<span class="lineNum">      92 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      93 </span>            :     MessageType
+<span class="lineNum">      94 </span><span class="lineCov">          2 :         messageType = [[self attribute:@&quot;type&quot;] isEqualToString:@&quot;Warning&quot;] ? MessageTypeWarning : MessageTypeError;</span>
+<span class="lineNum">      95 </span><span class="lineCov">          2 :     return [[Message alloc] initWithMessageType:messageType content:[self text]];</span>
+<span class="lineNum">      96 </span>            : }
+<span class="lineNum">      97 </span>            : 
+<span class="lineNum">      98 </span>            : /* ================================================================================================================== */
+<span class="lineNum">      99 </span>            : #pragma mark DataSet and DataSet child elements.
+<span class="lineNum">     100 </span><span class="lineCov">          3 : - (AbstractData*) asData {</span>
+<span class="lineNum">     101 </span><span class="lineCov">          3 :     if (![self.tag isEqualToString:@&quot;Data&quot;]) {</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not Data.&quot;];</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     104 </span><span class="lineCov">        112 :     DataBuilder* dataBuilder =</span>
+<span class="lineNum">     105 </span><span class="lineCov">          3 :         [[DataBuilder alloc] initWithDataId:[self attribute:@&quot;id&quot;] source:[self attribute:@&quot;source&quot;]];</span>
+<span class="lineNum">     106 </span>            : 
+<span class="lineNum">     107 </span><span class="lineCov">         31 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span><span class="lineCov">         28 :         if ([e.tag isEqualToString:@&quot;Columns&quot;]) {</span>
+<span class="lineNum">     110 </span><span class="lineCov">         22 :             [e iterate:@&quot;*&quot; with:^(RXMLElement* columnElement) {</span>
+<span class="lineNum">     111 </span><span class="lineCov">         20 :                 [dataBuilder addColumn:[columnElement asColumn]];</span>
+<span class="lineNum">     112 </span><span class="lineCov">         20 :             }];</span>
+<span class="lineNum">     113 </span><span class="lineCov">          2 :         }</span>
+<span class="lineNum">     114 </span>            : 
+<span class="lineNum">     115 </span><span class="lineCov">         26 :         else if ([e.tag isEqualToString:@&quot;Rows&quot;]) {</span>
+<span class="lineNum">     116 </span><span class="lineCov">         10 :             [e iterate:@&quot;*&quot; with:^(RXMLElement* rowElement) {</span>
+<span class="lineNum">     117 </span><span class="lineCov">          8 :                 [dataBuilder addRow:[rowElement asRow]];</span>
+<span class="lineNum">     118 </span><span class="lineCov">          8 :             }];</span>
+<span class="lineNum">     119 </span><span class="lineCov">          2 :         }</span>
+<span class="lineNum">     120 </span>            : 
+<span class="lineNum">     121 </span><span class="lineCov">         24 :         else if ([e.tag isEqualToString:@&quot;Folder&quot;]) {</span>
+<span class="lineNum">     122 </span><span class="lineCov">         24 :             [dataBuilder addFolder:[e asFolder]];</span>
+<span class="lineNum">     123 </span><span class="lineCov">         24 :         }</span>
+<span class="lineNum">     124 </span><span class="lineCov">         28 :     }];</span>
+<span class="lineNum">     125 </span>            : 
+<span class="lineNum">     126 </span><span class="lineCov">          3 :     return [dataBuilder build];</span>
+<span class="lineNum">     127 </span><span class="lineCov">          3 : }</span>
+<span class="lineNum">     128 </span>            : 
+<span class="lineNum">     129 </span><span class="lineCov">         20 : - (Column*) asColumn {</span>
+<span class="lineNum">     130 </span><span class="lineCov">         20 :     if (![self.tag isEqualToString:@&quot;Column&quot;]) {</span>
+<span class="lineNum">     131 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a Column.&quot;];</span>
+<span class="lineNum">     132 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     133 </span><span class="lineCov">         20 :     NSString* columnId = [self attribute:@&quot;id&quot;];</span>
+<span class="lineNum">     134 </span><span class="lineCov">         20 :     NSString* field = [self attribute:@&quot;field&quot;];</span>
+<span class="lineNum">     135 </span><span class="lineCov">         20 :     NSString* label = [self attribute:@&quot;label&quot;];</span>
+<span class="lineNum">     136 </span><span class="lineCov">         20 :     ExpanzDataType dataType = [[self attribute:@&quot;datatype&quot;] asExpanzDataType];</span>
+<span class="lineNum">     137 </span><span class="lineCov">         20 :     NSInteger width = [[self attribute:@&quot;width&quot;] integerValue];</span>
+<span class="lineNum">     138 </span>            : 
+<span class="lineNum">     139 </span>            :     Column* column =
+<span class="lineNum">     140 </span><span class="lineCov">         20 :         [[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width];</span>
+<span class="lineNum">     141 </span>            : 
+<span class="lineNum">     142 </span><span class="lineCov">         20 :     return column;</span>
+<span class="lineNum">     143 </span><span class="lineCov">         20 : }</span>
+<span class="lineNum">     144 </span>            : 
+<span class="lineNum">     145 </span><span class="lineCov">          8 : - (Row*) asRow {</span>
+<span class="lineNum">     146 </span><span class="lineCov">          8 :     if (![self.tag isEqualToString:@&quot;Row&quot;]) {</span>
+<span class="lineNum">     147 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a Row.&quot;];</span>
+<span class="lineNum">     148 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     149 </span><span class="lineCov">        168 :     Row* row = [[Row alloc] initWithRowId:[self attribute:@&quot;id&quot;] type:[self attribute:@&quot;Type&quot;]];</span>
+<span class="lineNum">     150 </span>            : 
+<span class="lineNum">     151 </span><span class="lineCov">         88 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">     152 </span><span class="lineCov">         80 :         if ([e.tag isEqualToString:@&quot;Cell&quot;]) {</span>
+<span class="lineNum">     153 </span><span class="lineCov">         80 :             [row addCellDefinitionWithId:[e attribute:@&quot;id&quot;] data:[e text]];</span>
+<span class="lineNum">     154 </span><span class="lineCov">         80 :         }</span>
+<span class="lineNum">     155 </span><span class="lineCov">         80 :     }];</span>
+<span class="lineNum">     156 </span>            : 
+<span class="lineNum">     157 </span><span class="lineCov">          8 :     return row;</span>
+<span class="lineNum">     158 </span><span class="lineCov">          8 : }</span>
+<span class="lineNum">     159 </span>            : 
+<span class="lineNum">     160 </span><span class="lineCov">         24 : - (expanz_model_Folder*) asFolder {</span>
+<span class="lineNum">     161 </span><span class="lineCov">         24 :     if (![self.tag isEqualToString:@&quot;Folder&quot;]) {</span>
+<span class="lineNum">     162 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a Folder.&quot;];</span>
+<span class="lineNum">     163 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     164 </span>            : 
+<span class="lineNum">     165 </span><span class="lineCov">         24 :     NSString* id = [self attribute:@&quot;id&quot;];</span>
+<span class="lineNum">     166 </span><span class="lineCov">         24 :     NSString* title = [self attribute:@&quot;title&quot;];</span>
+<span class="lineNum">     167 </span><span class="lineCov">         24 :     NSString* hint = [self attribute:@&quot;hint&quot;];</span>
+<span class="lineNum">     168 </span><span class="lineCov">         24 :     NSString* buttonTitle = [self attribute:@&quot;title&quot;];</span>
+<span class="lineNum">     169 </span><span class="lineCov">         24 :     NSString* sequence = [self attribute:@&quot;sequence&quot;];</span>
+<span class="lineNum">     170 </span>            : 
+<span class="lineNum">     171 </span><span class="lineCov">        464 :     Folder* folder =</span>
+<span class="lineNum">     172 </span><span class="lineCov">         24 :         [[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence];</span>
+<span class="lineNum">     173 </span>            : 
+<span class="lineNum">     174 </span><span class="lineCov">        256 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">     175 </span><span class="lineCov">        232 :         if ([e.tag isEqualToString:@&quot;File&quot;]) {</span>
+<span class="lineNum">     176 </span><span class="lineCov">        232 :             [folder addFile:[e asFile]];</span>
+<span class="lineNum">     177 </span><span class="lineCov">        232 :         }</span>
+<span class="lineNum">     178 </span><span class="lineCov">        232 :     }];</span>
+<span class="lineNum">     179 </span>            : 
+<span class="lineNum">     180 </span><span class="lineCov">         24 :     return folder;</span>
+<span class="lineNum">     181 </span><span class="lineCov">         24 : }</span>
+<span class="lineNum">     182 </span>            : 
+<span class="lineNum">     183 </span><span class="lineCov">        232 : - (expanz_model_File*) asFile {</span>
+<span class="lineNum">     184 </span><span class="lineCov">        232 :     if (![self.tag isEqualToString:@&quot;File&quot;]) {</span>
+<span class="lineNum">     185 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a File.&quot;];</span>
+<span class="lineNum">     186 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     187 </span>            : 
+<span class="lineNum">     188 </span><span class="lineCov">        232 :     NSString* id = [self attribute:@&quot;id&quot;];</span>
+<span class="lineNum">     189 </span><span class="lineCov">        232 :     NSString* title = [self attribute:@&quot;title&quot;];</span>
+<span class="lineNum">     190 </span><span class="lineCov">        232 :     NSString* hint = [self attribute:@&quot;hint&quot;];</span>
+<span class="lineNum">     191 </span><span class="lineCov">        232 :     NSString* fileName = [self attribute:@&quot;filename&quot;];</span>
+<span class="lineNum">     192 </span><span class="lineCov">        232 :     NSString* sequence = [self attribute:@&quot;sequence&quot;];</span>
+<span class="lineNum">     193 </span><span class="lineCov">        232 :     NSString* type = [self attribute:@&quot;type&quot;];</span>
+<span class="lineNum">     194 </span><span class="lineCov">        232 :     NSString* field = [self attribute:@&quot;field&quot;];</span>
+<span class="lineNum">     195 </span>            : 
+<span class="lineNum">     196 </span>            :     File* file = [[File alloc]
+<span class="lineNum">     197 </span><span class="lineCov">        232 :         initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field];</span>
+<span class="lineNum">     198 </span>            : 
+<span class="lineNum">     199 </span><span class="lineCov">        232 :     return file;</span>
+<span class="lineNum">     200 </span>            : 
+<span class="lineNum">     201 </span><span class="lineCov">        232 : }</span>
+<span class="lineNum">     202 </span>            : 
+<span class="lineNum">     203 </span>            : /* ================================================== Private Methods =============================================== */
+<span class="lineNum">     204 </span>            : 
+<span class="lineNum">     205 </span>            : static NSString* const LONG_DATA_MARKER = @&quot;$longData$&quot;;
+<span class="lineNum">     206 </span>            : 
+<span class="lineNum">     207 </span><span class="lineCov">        248 : - (NSString*) parseFieldValueAttribute {</span>
+<span class="lineNum">     208 </span><span class="lineCov">        248 :     NSString* attributeValue = [self attribute:@&quot;value&quot;];</span>
+<span class="lineNum">     209 </span><span class="lineCov">        248 :     if ([attributeValue isEqualToString:LONG_DATA_MARKER]) {</span>
+<span class="lineNum">     210 </span><span class="lineCov">         12 :         return [self text];</span>
+<span class="lineNum">     211 </span>            :     }
+<span class="lineNum">     212 </span>            :     else {
+<span class="lineNum">     213 </span><span class="lineCov">        236 :         return attributeValue;</span>
+<span class="lineNum">     214 </span>            :     }
+<span class="lineNum">     215 </span><span class="lineCov">        248 : }</span>
+<span class="lineNum">     216 </span>            : 
+<span class="lineNum">     217 </span>            : 
+<span class="lineNum">     218 </span>            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
