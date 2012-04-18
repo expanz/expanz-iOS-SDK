@@ -34,7 +34,6 @@
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _activityManager;
     UIImageView* _currentlyEditingImageView;
-    UIButton* _closeTextViewButton;
 }
 
 @property(nonatomic, strong, readonly) NSArray* propertyNames;

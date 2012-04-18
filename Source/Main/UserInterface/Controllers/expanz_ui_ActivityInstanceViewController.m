@@ -47,9 +47,6 @@
 
 - (unsigned int) createOrRetrieveTagForView:(UIView*)view;
 
-- (void) createCloseButtonForTextView;
-
-- (void) closeTextView;
 
 @end
 
@@ -76,7 +73,6 @@
         [self setTitle:_activityDefinition.title];
         [self createActivityRequestWith:initialKey];
         [self cachePropertyNames];
-        [self createCloseButtonForTextView];
     }
     return self;
 }
@@ -194,7 +190,6 @@
     }
 }
 
-
 /* ================================================ Delegate Methods ================================================ */
 #pragma mark UITextFieldDelegate
 
@@ -225,31 +220,16 @@
 - (void) textViewDidBeginEditing:(UITextView*)textView {
     [TextInputUtils setCurrentlyEditing:textView];
     [TextInputUtils revealFromBeneathKeyboard:textView];
-    CGFloat xOrigin = textView.frame.origin.x + textView.frame.size.width - 24;
-    CGFloat yOrigin = textView.frame.origin.y - 15;
-    _closeTextViewButton.frame = CGRectMake(xOrigin, yOrigin, 32, 22);
-    [self.view addSubview:_closeTextViewButton];
+    [self.view addSubview:[TextInputUtils keyboardTools]];
 }
 
 - (void) textViewDidEndEditing:(UITextView*)textView {
+    LogDebug(@"Done editing!");
     [TextInputUtils restoreBeneathKeyboard:textView];
-}
-
-- (void) closeTextView {
-    [_closeTextViewButton removeFromSuperview];
-    UITextView* textField = (UITextView*) [TextInputUtils currentlyEditingTextInput];
-    [textField resignFirstResponder];
-    FieldInstance* field = [_modelAdapter fieldFor:textField];
-    [field didFinishEditWithValue:textField.text];
+    FieldInstance* field = [_modelAdapter fieldFor:textView];
+    [field didFinishEditWithValue:textView.text];
     [self sendDeltaForField:field];
 }
-
-- (void) createCloseButtonForTextView {
-    _closeTextViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_closeTextViewButton addTarget:self action:@selector(closeTextView) forControlEvents:UIControlEventTouchUpInside];
-    [_closeTextViewButton setTitle:@"X" forState:UIControlStateNormal];
-}
-
 
 /* ================================================================================================================== */
 #pragma mark Image Picker Delegate 

@@ -25,6 +25,11 @@
 + (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl;
 
 /**
+* Toolbar for dismissing the keyboard and navigating to the previous/next field.
+*/
++ (UIToolbar*) keyboardTools;
+
+/**
 * Returns true if this is the text field that currently has focus.
 */
 + (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl;
