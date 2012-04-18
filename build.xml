@@ -32,7 +32,7 @@
         --compile.core-lib,
         --compile.framework,
         --set.up.project.templates,
-        --compile.installer,
+        compile.installer,
         --prepare.artifacts,
         --publish.site"/>
 
@@ -49,7 +49,7 @@
         --clean,
         --compile.framework,
         --set.up.project.templates,
-        --compile.installer,
+        compile.installer,
         --prepare.artifacts"/>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END PUBLIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -105,8 +105,11 @@
         </exec>
     </target>
 
-    <target name="--compile.installer">
+    <target name="compile.installer">
         <mkdir dir="${release.dir}"/>
+        <copy todir="/tmp/ProjectTemplates">
+            <fileset dir="${basedir}/Source/Project Templates"/>
+        </copy>
         <copy todir="/tmp/expanz-xcodePlugin.xcplugin">
             <fileset dir="${packager.plugin.dir}"/>
         </copy>
