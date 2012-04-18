@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-16</td>
+            <td class="headerValue">2012-04-18</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -75,7 +75,7 @@
 <span class="lineNum">      17 </span>            : #import &quot;expanz_ui_LoginViewController.h&quot;
 <span class="lineNum">      18 </span>            : #import &quot;expanz_SdkConfiguration.h&quot;
 <span class="lineNum">      19 </span>            : #import &quot;expanz_ui_NavigationManager.h&quot;
-<span class="lineNum">      20 </span>            : #import &quot;expanz_ui_TextFieldDelegateUtils.h&quot;
+<span class="lineNum">      20 </span>            : #import &quot;expanz_ui_TextInputUtils.h&quot;
 <span class="lineNum">      21 </span>            : 
 <span class="lineNum">      22 </span>            : 
 <span class="lineNum">      23 </span><span class="lineNoCov">          0 : @implementation expanz_ui_LoginViewController</span>
@@ -161,11 +161,11 @@
 <span class="lineNum">     103 </span><span class="lineCov">          2 : #pragma mark UITextFieldDelegate    </span>
 <span class="lineNum">     104 </span>            : 
 <span class="lineNum">     105 </span>            : - (void) textFieldDidBeginEditing:(UITextField*)textField {
-<span class="lineNum">     106 </span>            :     [TextFieldDelegateUtils revealFromBeneathKeyboard:textField];
+<span class="lineNum">     106 </span>            :     [TextInputUtils revealFromBeneathKeyboard:textField];
 <span class="lineNum">     107 </span>            : }
 <span class="lineNum">     108 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     109 </span><span class="lineNoCov">          0 : - (void) textFieldDidEndEditing:(UITextField*)textField {</span>
-<span class="lineNum">     110 </span><span class="lineNoCov">          0 :     [TextFieldDelegateUtils restoreBeneathKeyboard:textField];</span>
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 :     [TextInputUtils restoreBeneathKeyboard:textField];</span>
 <span class="lineNum">     111 </span>            : }
 <span class="lineNum">     112 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     113 </span><span class="lineNoCov">          0 : - (BOOL) textFieldShouldReturn:(UITextField*)textField {</span>

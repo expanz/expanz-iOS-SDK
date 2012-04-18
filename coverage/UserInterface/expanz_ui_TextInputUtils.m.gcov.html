@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - expanz-iOS-SDK.info - UserInterface/expanz_ui_TextInputUtils.m</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">UserInterface</a> - expanz_ui_TextInputUtils.m</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">expanz-iOS-SDK.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2012-04-18</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">       2 </span>            : //
+<span class="lineNum">       3 </span>            : //  EXPANZ
+<span class="lineNum">       4 </span>            : //  Copyright 2008-2011 EXPANZ
+<span class="lineNum">       5 </span>            : //  All Rights Reserved.
+<span class="lineNum">       6 </span>            : //
+<span class="lineNum">       7 </span>            : //  NOTICE: Expanz permits you to use, modify, and distribute this file
+<span class="lineNum">       8 </span>            : //  in accordance with the terms of the license agreement accompanying it.
+<span class="lineNum">       9 </span>            : //
+<span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : #import &quot;expanz_ui_TextInputUtils.h&quot;
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span>            : static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
+<span class="lineNum">      15 </span>            : static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
+<span class="lineNum">      16 </span>            : static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
+<span class="lineNum">      17 </span>            : static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
+<span class="lineNum">      18 </span>            : static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
+<span class="lineNum">      19 </span>            : static BOOL gScrolled;
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : static id&lt;UITextInput&gt; gCurrentlyEditingField;
+<span class="lineNum">      22 </span>            : static UIToolbar* gKeyboardTools;
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span>            : @interface expanz_ui_TextInputUtils (Private)
+<span class="lineNum">      25 </span>            : 
+<span class="lineNum">      26 </span>            : + (CGFloat) distanceToScrollFor:(UIView*)textInputView;
+<span class="lineNum">      27 </span>            : 
+<span class="lineNum">      28 </span>            : + (void) doneEditing;
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span>            : @end
+<span class="lineNum">      31 </span>            : 
+<span class="lineNum">      32 </span>            : @implementation expanz_ui_TextInputUtils
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            : /* ================================================ Interface Methods =============================================== */
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 : + (void) revealFromBeneathKeyboard:(id&lt;UITextInput&gt;)textInputControl {</span>
+<span class="lineNum">      36 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Scrolling to accomodate keyboard&quot;);</span>
+<span class="lineNum">      37 </span><span class="lineNoCov">          0 :     UIView* textInputView = textInputControl.textInputView;</span>
+<span class="lineNum">      38 </span><span class="lineNoCov">          0 :     CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];</span>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span><span class="lineNoCov">          0 :     if (!gScrolled &amp;&amp; distanceToScroll &gt; 0) {</span>
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span><span class="lineNoCov">          0 :         gScrolled = YES;</span>
+<span class="lineNum">      43 </span>            : 
+<span class="lineNum">      44 </span><span class="lineNoCov">          0 :         UIToolbar* keyboardTools = [self keyboardTools];</span>
+<span class="lineNum">      45 </span><span class="lineNoCov">          0 :         CGRect keyboardToolsFrame = keyboardTools.frame;</span>
+<span class="lineNum">      46 </span><span class="lineNoCov">          0 :         keyboardToolsFrame.origin.y += distanceToScroll;</span>
+<span class="lineNum">      47 </span><span class="lineNoCov">          0 :         [keyboardTools setFrame:keyboardToolsFrame];</span>
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span><span class="lineNoCov">          0 :         [UIView beginAnimations:nil context:NULL];</span>
+<span class="lineNum">      50 </span><span class="lineNoCov">          0 :         [UIView setAnimationBeginsFromCurrentState:YES];</span>
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 :         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];</span>
+<span class="lineNum">      52 </span><span class="lineNoCov">          0 :         CGRect windowFrame = textInputView.window.frame;</span>
+<span class="lineNum">      53 </span><span class="lineNoCov">          0 :         windowFrame.origin.y -= distanceToScroll;</span>
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 :         [textInputView.window setFrame:windowFrame];</span>
+<span class="lineNum">      55 </span><span class="lineNoCov">          0 :         [UIView commitAnimations];</span>
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      58 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span><span class="lineNoCov">          0 : + (void) restoreBeneathKeyboard:(id&lt;UITextInput&gt;)textInputControl {</span>
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Restoring previous position.&quot;);</span>
+<span class="lineNum">      62 </span><span class="lineNoCov">          0 :     if (gScrolled) {</span>
+<span class="lineNum">      63 </span><span class="lineNoCov">          0 :         UIView* textInputView = textInputControl.textInputView;</span>
+<span class="lineNum">      64 </span><span class="lineNoCov">          0 :         CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];</span>
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span><span class="lineNoCov">          0 :         UIToolbar* keyboardTools = [self keyboardTools];</span>
+<span class="lineNum">      67 </span><span class="lineNoCov">          0 :         CGRect keyboardToolsFrame = keyboardTools.frame;</span>
+<span class="lineNum">      68 </span><span class="lineNoCov">          0 :         keyboardToolsFrame.origin.y -= distanceToScroll;</span>
+<span class="lineNum">      69 </span><span class="lineNoCov">          0 :         [keyboardTools setFrame:keyboardToolsFrame];</span>
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span><span class="lineNoCov">          0 :         [UIView beginAnimations:nil context:NULL];</span>
+<span class="lineNum">      72 </span><span class="lineNoCov">          0 :         [UIView setAnimationBeginsFromCurrentState:YES];</span>
+<span class="lineNum">      73 </span><span class="lineNoCov">          0 :         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];</span>
+<span class="lineNum">      74 </span><span class="lineNoCov">          0 :         CGRect viewFrame = textInputView.window.frame;</span>
+<span class="lineNum">      75 </span><span class="lineNoCov">          0 :         viewFrame.origin.y += distanceToScroll;</span>
+<span class="lineNum">      76 </span><span class="lineNoCov">          0 :         [textInputView.window setFrame:viewFrame];</span>
+<span class="lineNum">      77 </span><span class="lineNoCov">          0 :         [UIView commitAnimations];</span>
+<span class="lineNum">      78 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      79 </span><span class="lineNoCov">          0 :     gScrolled = NO;</span>
+<span class="lineNum">      80 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span><span class="lineNoCov">          0 : + (UIToolbar*) keyboardTools {</span>
+<span class="lineNum">      83 </span><span class="lineNoCov">          0 :     if (gKeyboardTools == nil) {</span>
+<span class="lineNum">      84 </span><span class="lineNoCov">          0 :         gKeyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];</span>
+<span class="lineNum">      85 </span><span class="lineNoCov">          0 :         [gKeyboardTools setBarStyle:UIBarStyleBlack];</span>
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 :         [gKeyboardTools setTranslucent:YES];</span>
+<span class="lineNum">      87 </span>            :         UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
+<span class="lineNum">      88 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];</span>
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            :         UIBarButtonItem* doneButtonItem = [[UIBarButtonItem alloc]
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];</span>
+<span class="lineNum">      92 </span><span class="lineNoCov">          0 :         doneButtonItem.tintColor = gKeyboardTools.tintColor;</span>
+<span class="lineNum">      93 </span>            : 
+<span class="lineNum">      94 </span><span class="lineNoCov">          0 :         [gKeyboardTools setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButtonItem, nil]];</span>
+<span class="lineNum">      95 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      96 </span><span class="lineNoCov">          0 :     return gKeyboardTools;</span>
+<span class="lineNum">      97 </span>            : }
+<span class="lineNum">      98 </span>            : 
+<span class="lineNum">      99 </span><span class="lineNoCov">          0 : + (BOOL) isCurrentlyEditing:(id&lt;UITextInput&gt;)textInputControl {</span>
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     return textInputControl == gCurrentlyEditingField;</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     102 </span>            : 
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 : + (id&lt;UITextInput&gt;) currentlyEditingTextInput {</span>
+<span class="lineNum">     104 </span><span class="lineNoCov">          0 :     return gCurrentlyEditingField;</span>
+<span class="lineNum">     105 </span>            : }
+<span class="lineNum">     106 </span>            : 
+<span class="lineNum">     107 </span>            : 
+<span class="lineNum">     108 </span><span class="lineNoCov">          0 : + (void) setCurrentlyEditing:(id&lt;UITextInput&gt;)textField {</span>
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 :     gCurrentlyEditingField = textField;</span>
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span>            : /* ================================================== Private Methods =============================================== */
+<span class="lineNum">     113 </span><span class="lineNoCov">          0 : + (CGFloat) distanceToScrollFor:(UIView*)textInputView {</span>
+<span class="lineNum">     114 </span><span class="lineNoCov">          0 :     CGFloat animatedDistance = 0;</span>
+<span class="lineNum">     115 </span><span class="lineNoCov">          0 :     CGRect textFieldRect = [textInputView.window convertRect:textInputView.bounds fromView:textInputView];</span>
+<span class="lineNum">     116 </span><span class="lineNoCov">          0 :     if (textFieldRect.origin.y &gt;= 250) {</span>
+<span class="lineNum">     117 </span><span class="lineNoCov">          0 :         CGRect viewRect = [textInputView.window convertRect:textInputView.window.bounds fromView:textInputView.window];</span>
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;</span>
+<span class="lineNum">     119 </span><span class="lineNoCov">          0 :         CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;</span>
+<span class="lineNum">     120 </span><span class="lineNoCov">          0 :         CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;</span>
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 :         CGFloat heightFraction = numerator / denominator;</span>
+<span class="lineNum">     122 </span><span class="lineNoCov">          0 :         if (heightFraction &lt; 0.0) {</span>
+<span class="lineNum">     123 </span><span class="lineNoCov">          0 :             heightFraction = 0.0;</span>
+<span class="lineNum">     124 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 :         else if (heightFraction &gt; 1.0) {</span>
+<span class="lineNum">     126 </span><span class="lineNoCov">          0 :             heightFraction = 1.0;</span>
+<span class="lineNum">     127 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 :         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];</span>
+<span class="lineNum">     129 </span><span class="lineNoCov">          0 :         if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {</span>
+<span class="lineNum">     130 </span><span class="lineNoCov">          0 :             animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);</span>
+<span class="lineNum">     131 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     132 </span>            :         else {
+<span class="lineNum">     133 </span><span class="lineNoCov">          0 :             animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);</span>
+<span class="lineNum">     134 </span>            :         }
+<span class="lineNum">     135 </span>            :     }
+<span class="lineNum">     136 </span>            :     return animatedDistance;
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     138 </span>            : 
+<span class="lineNum">     139 </span><span class="lineNoCov">          0 : + (void) doneEditing {</span>
+<span class="lineNum">     140 </span><span class="lineNoCov">          0 :     [[TextInputUtils keyboardTools] removeFromSuperview];</span>
+<span class="lineNum">     141 </span><span class="lineNoCov">          0 :     [gCurrentlyEditingField.textInputView resignFirstResponder];</span>
+<span class="lineNum">     142 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     143 </span>            : 
+<span class="lineNum">     144 </span>            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
