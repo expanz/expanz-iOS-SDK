@@ -637,6 +637,7 @@
 		6BBC3ADD153C2CB100E68952 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD6153C2CB100E68952 /* my details.png */; };
 		6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BBC3ADF153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
+		6BBE1834153FDA530027EC0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -1313,6 +1314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBE1834153FDA530027EC0A /* QuartzCore.framework in Frameworks */,
 				6B3EECE5153BF0D2001A3579 /* MobileCoreServices.framework in Frameworks */,
 				6B3EECE4153BF0B7001A3579 /* SystemConfiguration.framework in Frameworks */,
 				6B3EECE1153BF085001A3579 /* libxml2.dylib in Frameworks */,

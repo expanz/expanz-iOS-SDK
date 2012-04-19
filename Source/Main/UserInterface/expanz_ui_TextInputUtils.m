@@ -9,9 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <QuartzCore/QuartzCore.h>
 #import "expanz_ui_TextInputUtils.h"
 
+#define radians(degrees) degrees * M_PI / 180
+static TextInputUtils* gSharedTextInputUtils;
 
 @interface expanz_ui_TextInputUtils (Private)
 
@@ -22,8 +23,6 @@
 @end
 
 @implementation expanz_ui_TextInputUtils
-
-static TextInputUtils* gSharedTextInputUtils;
 
 @synthesize scrolled = _scrolled;
 @synthesize currentlyEditingTextInput = _currentlyEditingTextInput;
@@ -41,7 +40,7 @@ static TextInputUtils* gSharedTextInputUtils;
 - (id) init {
     self = [super init];
     if (self) {
-        _keyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];
+        _keyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(-320, 156, 320, 44)];
         [_keyboardTools setBarStyle:UIBarStyleBlack];
         [_keyboardTools setTranslucent:YES];
         UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
@@ -94,7 +93,7 @@ static TextInputUtils* gSharedTextInputUtils;
         keyboardToolsFrame.origin.y -= distanceToScroll;
         [keyboardTools setFrame:keyboardToolsFrame];
 
-        [UIView beginAnimations:nil context:NULL];
+        [UIView beginAnimations:nil context:nil];
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
         CGRect viewFrame = textInputView.window.frame;
@@ -108,6 +107,21 @@ static TextInputUtils* gSharedTextInputUtils;
 - (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl {
     return textInputControl == _currentlyEditingTextInput;
 }
+
+- (void) showKeyboardUtilsInView:(UIView*)view {
+
+    [view addSubview:_keyboardTools];
+
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationBeginsFromCurrentState:NO];
+    [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
+    CGRect viewFrame = _keyboardTools.frame;
+    viewFrame.origin.x += 320;
+    [_keyboardTools setFrame:viewFrame];
+    [UIView commitAnimations];
+
+}
+
 
 
 /* ================================================== Private Methods =============================================== */
@@ -139,35 +153,11 @@ static TextInputUtils* gSharedTextInputUtils;
 
 - (void) doneEditing {
     [_keyboardTools removeFromSuperview];
+    CGRect viewFrame = _keyboardTools.frame;
+    viewFrame.origin.x -= 320;
+    [_keyboardTools setFrame:viewFrame];
     [_currentlyEditingTextInput.textInputView resignFirstResponder];
 }
 
-/* ================================================================================================================== */
-#pragma mark Animation
-
-//- (CALayer*) makeLayer {
-//    CALayer* rotateLayer = [CALayer layer];
-//    rotateLayer.frame = self.view.frame;
-//
-//    rotateLayer.anchorPoint = CGPointMake(0.5f, 0.5f);
-//    CATransform3D sublayerTransform = CATransform3DIdentity;
-//    sublayerTransform.m34 = 1.0 / -750;
-//    [rotateLayer setSublayerTransform:sublayerTransform];
-//    return rotateLayer;
-//}
-//
-//- (CALayer*) makeSurfaceOn:(CATransform3D)world withView:(UIView*)view {
-//    CGRect rect = CGRectMake(0, 0, PAGE_VERTICAL_WIDTH, PAGE_VERTICAL_HEIGHT);
-//    CALayer* imageLayer = [CALayer layer];
-//    imageLayer.anchorPoint = CGPointMake(1, 1);
-//    imageLayer.frame = rect;
-//    imageLayer.transform = world;
-//    UIGraphicsBeginImageContext(view.frame.size);
-//    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-//    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    imageLayer.contents = (__bridge id) [viewImage CGImage];
-//    return imageLayer;
-//}
 
 @end

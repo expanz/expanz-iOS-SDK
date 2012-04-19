@@ -50,6 +50,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 */
 - (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl;
 
+- (void) showKeyboardUtilsInView:(UIView*)view;
+
 
 @end
 

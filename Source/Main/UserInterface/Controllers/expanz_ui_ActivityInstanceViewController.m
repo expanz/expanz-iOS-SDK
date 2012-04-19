@@ -166,7 +166,9 @@
     if (_activityInstance == nil) {
         [self showLoadingHud];
     }
+
 }
+
 
 - (void) viewDidUnload {
     [super viewDidUnload];
@@ -220,10 +222,10 @@
 #pragma mark UITextViewDelegate
 
 - (void) textViewDidBeginEditing:(UITextView*)textView {
-    expanz_ui_TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
+    TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
     [textInputUtils setCurrentlyEditingTextInput:textView];
     [textInputUtils revealFromBeneathKeyboard:textView];
-    [self.view addSubview:[textInputUtils keyboardTools]];
+    [textInputUtils showKeyboardUtilsInView:self.view];
 }
 
 - (void) textViewDidEndEditing:(UITextView*)textView {
