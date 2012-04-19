@@ -67,52 +67,52 @@
 <span class="lineNum">       9 </span>            : //
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
 <span class="lineNum">      11 </span>            : 
-<span class="lineNum">      12 </span>            : #import &quot;expanz_ui_TextInputUtils.h&quot;
-<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      12 </span>            : #import &lt;QuartzCore/QuartzCore.h&gt;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_ui_TextInputUtils.h&quot;
 <span class="lineNum">      14 </span>            : 
-<span class="lineNum">      15 </span>            : @interface expanz_ui_TextInputUtils (Private)
-<span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span>            : - (CGFloat) distanceToScrollFor:(UIView*)textInputView;
-<span class="lineNum">      18 </span>            : 
-<span class="lineNum">      19 </span>            : - (void) doneEditing;
-<span class="lineNum">      20 </span>            : 
-<span class="lineNum">      21 </span>            : @end
-<span class="lineNum">      22 </span>            : 
-<span class="lineNum">      23 </span><span class="lineNoCov">          0 : @implementation expanz_ui_TextInputUtils</span>
-<span class="lineNum">      24 </span>            : 
-<span class="lineNum">      25 </span>            : static TextInputUtils* gSharedTextInputUtils;
-<span class="lineNum">      26 </span>            : 
-<span class="lineNum">      27 </span><span class="lineNoCov">          0 : @synthesize scrolled = _scrolled;</span>
-<span class="lineNum">      28 </span><span class="lineNoCov">          0 : @synthesize currentlyEditingTextInput = _currentlyEditingTextInput;</span>
-<span class="lineNum">      29 </span><span class="lineNoCov">          0 : @synthesize keyboardTools = _keyboardTools;</span>
-<span class="lineNum">      30 </span>            : 
-<span class="lineNum">      31 </span>            : /* ================================================= Class Methods ================================================== */
-<span class="lineNum">      32 </span><span class="lineNoCov">          0 : + (expanz_ui_TextInputUtils*) sharedTextInputUtils {</span>
-<span class="lineNum">      33 </span><span class="lineNoCov">          0 :     if (gSharedTextInputUtils == nil) {</span>
-<span class="lineNum">      34 </span><span class="lineNoCov">          0 :         gSharedTextInputUtils = [[TextInputUtils alloc] init];</span>
-<span class="lineNum">      35 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      36 </span><span class="lineNoCov">          0 :     return gSharedTextInputUtils;</span>
-<span class="lineNum">      37 </span>            : }
-<span class="lineNum">      38 </span>            : 
-<span class="lineNum">      39 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      40 </span><span class="lineNoCov">          0 : - (id) init {</span>
-<span class="lineNum">      41 </span><span class="lineNoCov">          0 :     self = [super init];</span>
-<span class="lineNum">      42 </span><span class="lineNoCov">          0 :     if (self) {</span>
-<span class="lineNum">      43 </span><span class="lineNoCov">          0 :         _keyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];</span>
-<span class="lineNum">      44 </span><span class="lineNoCov">          0 :         [_keyboardTools setBarStyle:UIBarStyleBlack];</span>
-<span class="lineNum">      45 </span><span class="lineNoCov">          0 :         [_keyboardTools setTranslucent:YES];</span>
-<span class="lineNum">      46 </span>            :         UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
-<span class="lineNum">      47 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];</span>
-<span class="lineNum">      48 </span>            : 
-<span class="lineNum">      49 </span>            :         UIBarButtonItem* doneButtonItem = [[UIBarButtonItem alloc]
-<span class="lineNum">      50 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];</span>
-<span class="lineNum">      51 </span><span class="lineNoCov">          0 :         doneButtonItem.tintColor = _keyboardTools.tintColor;</span>
-<span class="lineNum">      52 </span>            : 
-<span class="lineNum">      53 </span><span class="lineNoCov">          0 :         [_keyboardTools setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButtonItem, nil]];</span>
-<span class="lineNum">      54 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      55 </span><span class="lineNoCov">          0 :     return self;</span>
-<span class="lineNum">      56 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            : @interface expanz_ui_TextInputUtils (Private)
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span>            : - (CGFloat) distanceToScrollFor:(UIView*)textInputView;
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : - (void) doneEditing;
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span>            : @end
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span><span class="lineNoCov">          0 : @implementation expanz_ui_TextInputUtils</span>
+<span class="lineNum">      25 </span>            : 
+<span class="lineNum">      26 </span>            : static TextInputUtils* gSharedTextInputUtils;
+<span class="lineNum">      27 </span>            : 
+<span class="lineNum">      28 </span><span class="lineNoCov">          0 : @synthesize scrolled = _scrolled;</span>
+<span class="lineNum">      29 </span><span class="lineNoCov">          0 : @synthesize currentlyEditingTextInput = _currentlyEditingTextInput;</span>
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 : @synthesize keyboardTools = _keyboardTools;</span>
+<span class="lineNum">      31 </span>            : 
+<span class="lineNum">      32 </span>            : /* ================================================= Class Methods ================================================== */
+<span class="lineNum">      33 </span><span class="lineNoCov">          0 : + (expanz_ui_TextInputUtils*) sharedTextInputUtils {</span>
+<span class="lineNum">      34 </span><span class="lineNoCov">          0 :     if (gSharedTextInputUtils == nil) {</span>
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 :         gSharedTextInputUtils = [[TextInputUtils alloc] init];</span>
+<span class="lineNum">      36 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      37 </span><span class="lineNoCov">          0 :     return gSharedTextInputUtils;</span>
+<span class="lineNum">      38 </span>            : }
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : /* ================================================== Initializers ================================================== */
+<span class="lineNum">      41 </span><span class="lineNoCov">          0 : - (id) init {</span>
+<span class="lineNum">      42 </span><span class="lineNoCov">          0 :     self = [super init];</span>
+<span class="lineNum">      43 </span><span class="lineNoCov">          0 :     if (self) {</span>
+<span class="lineNum">      44 </span><span class="lineNoCov">          0 :         _keyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];</span>
+<span class="lineNum">      45 </span><span class="lineNoCov">          0 :         [_keyboardTools setBarStyle:UIBarStyleBlack];</span>
+<span class="lineNum">      46 </span><span class="lineNoCov">          0 :         [_keyboardTools setTranslucent:YES];</span>
+<span class="lineNum">      47 </span>            :         UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
+<span class="lineNum">      48 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];</span>
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            :         UIBarButtonItem* doneButtonItem = [[UIBarButtonItem alloc]
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 :                 initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];</span>
+<span class="lineNum">      52 </span><span class="lineNoCov">          0 :         doneButtonItem.tintColor = _keyboardTools.tintColor;</span>
+<span class="lineNum">      53 </span>            : 
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 :         [_keyboardTools setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButtonItem, nil]];</span>
+<span class="lineNum">      55 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      56 </span><span class="lineNoCov">          0 :     return self;</span>
+<span class="lineNum">      57 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      58 </span>            : 
 <span class="lineNum">      59 </span>            : 
 <span class="lineNum">      60 </span>            : /* ================================================ Interface Methods =============================================== */
@@ -200,7 +200,35 @@
 <span class="lineNum">     142 </span><span class="lineNoCov">          0 :     [_currentlyEditingTextInput.textInputView resignFirstResponder];</span>
 <span class="lineNum">     143 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">     144 </span>            : 
-<span class="lineNum">     145 </span>            : @end
+<span class="lineNum">     145 </span>            : /* ================================================================================================================== */
+<span class="lineNum">     146 </span>            : #pragma mark Animation
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span>            : //- (CALayer*) makeLayer {
+<span class="lineNum">     149 </span>            : //    CALayer* rotateLayer = [CALayer layer];
+<span class="lineNum">     150 </span>            : //    rotateLayer.frame = self.view.frame;
+<span class="lineNum">     151 </span>            : //
+<span class="lineNum">     152 </span>            : //    rotateLayer.anchorPoint = CGPointMake(0.5f, 0.5f);
+<span class="lineNum">     153 </span>            : //    CATransform3D sublayerTransform = CATransform3DIdentity;
+<span class="lineNum">     154 </span>            : //    sublayerTransform.m34 = 1.0 / -750;
+<span class="lineNum">     155 </span>            : //    [rotateLayer setSublayerTransform:sublayerTransform];
+<span class="lineNum">     156 </span>            : //    return rotateLayer;
+<span class="lineNum">     157 </span>            : //}
+<span class="lineNum">     158 </span>            : //
+<span class="lineNum">     159 </span>            : //- (CALayer*) makeSurfaceOn:(CATransform3D)world withView:(UIView*)view {
+<span class="lineNum">     160 </span>            : //    CGRect rect = CGRectMake(0, 0, PAGE_VERTICAL_WIDTH, PAGE_VERTICAL_HEIGHT);
+<span class="lineNum">     161 </span>            : //    CALayer* imageLayer = [CALayer layer];
+<span class="lineNum">     162 </span>            : //    imageLayer.anchorPoint = CGPointMake(1, 1);
+<span class="lineNum">     163 </span>            : //    imageLayer.frame = rect;
+<span class="lineNum">     164 </span>            : //    imageLayer.transform = world;
+<span class="lineNum">     165 </span>            : //    UIGraphicsBeginImageContext(view.frame.size);
+<span class="lineNum">     166 </span>            : //    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+<span class="lineNum">     167 </span>            : //    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
+<span class="lineNum">     168 </span>            : //    UIGraphicsEndImageContext();
+<span class="lineNum">     169 </span>            : //    imageLayer.contents = (__bridge id) [viewImage CGImage];
+<span class="lineNum">     170 </span>            : //    return imageLayer;
+<span class="lineNum">     171 </span>            : //}
+<span class="lineNum">     172 </span>            : 
+<span class="lineNum">     173 </span>            : @end
 </pre>
       </td>
     </tr>
