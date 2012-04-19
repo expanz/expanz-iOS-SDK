@@ -9,6 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <QuartzCore/QuartzCore.h>
 #import "expanz_ui_TextInputUtils.h"
 
 
@@ -54,7 +55,6 @@ static TextInputUtils* gSharedTextInputUtils;
     }
     return self;
 }
-
 
 
 /* ================================================ Interface Methods =============================================== */
@@ -141,5 +141,33 @@ static TextInputUtils* gSharedTextInputUtils;
     [_keyboardTools removeFromSuperview];
     [_currentlyEditingTextInput.textInputView resignFirstResponder];
 }
+
+/* ================================================================================================================== */
+#pragma mark Animation
+
+//- (CALayer*) makeLayer {
+//    CALayer* rotateLayer = [CALayer layer];
+//    rotateLayer.frame = self.view.frame;
+//
+//    rotateLayer.anchorPoint = CGPointMake(0.5f, 0.5f);
+//    CATransform3D sublayerTransform = CATransform3DIdentity;
+//    sublayerTransform.m34 = 1.0 / -750;
+//    [rotateLayer setSublayerTransform:sublayerTransform];
+//    return rotateLayer;
+//}
+//
+//- (CALayer*) makeSurfaceOn:(CATransform3D)world withView:(UIView*)view {
+//    CGRect rect = CGRectMake(0, 0, PAGE_VERTICAL_WIDTH, PAGE_VERTICAL_HEIGHT);
+//    CALayer* imageLayer = [CALayer layer];
+//    imageLayer.anchorPoint = CGPointMake(1, 1);
+//    imageLayer.frame = rect;
+//    imageLayer.transform = world;
+//    UIGraphicsBeginImageContext(view.frame.size);
+//    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    imageLayer.contents = (__bridge id) [viewImage CGImage];
+//    return imageLayer;
+//}
 
 @end
