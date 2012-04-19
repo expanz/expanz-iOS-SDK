@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">203</td>
+            <td class="headerCovTableEntry">206</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-18</td>
+            <td class="headerValue">2012-04-19</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -145,265 +145,268 @@
 <span class="lineNum">      87 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      88 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      89 </span>            : - (void) sendMethodInvocation:(NSString*)methodName {
-<span class="lineNum">      90 </span><span class="lineNoCov">          0 :     [[[TextInputUtils currentlyEditingTextInput] textInputView] resignFirstResponder];</span>
-<span class="lineNum">      91 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      92 </span>            :     while ([_activityInstance allowsMethodInvocations] == NO) {
-<span class="lineNum">      93 </span><span class="lineNoCov">          0 :         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];</span>
-<span class="lineNum">      94 </span><span class="lineNoCov">          0 :         LogDebug(@&quot;Waiting for model synchronization. . . &quot;);</span>
-<span class="lineNum">      95 </span><span class="lineNoCov">          0 :         usleep(5000000);</span>
-<span class="lineNum">      96 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      97 </span><span class="lineNoCov">          0 :     MethodInvocationRequest* methodRequest =</span>
-<span class="lineNum">      98 </span>            :             [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
-<span class="lineNum">      99 </span><span class="lineNoCov">          0 :     [_spinner startAnimating];</span>
-<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     [_activityClient sendMethodInvocationWith:methodRequest delegate:self];</span>
-<span class="lineNum">     101 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     102 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     103 </span>            : /* ================================================================================================================== */
-<span class="lineNum">     104 </span>            : - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding {
-<span class="lineNum">     105 </span>            :     [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
-<span class="lineNum">     106 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     107 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     108 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {</span>
-<span class="lineNum">     109 </span>            :     LogDebug(@&quot;Requesting populateMethod: %@&quot;, populateMethod);
-<span class="lineNum">     110 </span>            :     DataPublicationRequest* publicationRequest =
-<span class="lineNum">     111 </span><span class="lineNoCov">          0 :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];</span>
-<span class="lineNum">     112 </span><span class="lineNoCov">          0 :     [publicationRequest setPopulateMethod:populateMethod];</span>
-<span class="lineNum">     113 </span>            : }
-<span class="lineNum">     114 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     115 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {</span>
-<span class="lineNum">     116 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Requesting query: %@&quot;, query);</span>
-<span class="lineNum">     117 </span>            :     DataPublicationRequest* publicationRequest =
-<span class="lineNum">     118 </span>            :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
-<span class="lineNum">     119 </span><span class="lineNoCov">          0 :     [publicationRequest setQuery:query];</span>
-<span class="lineNum">     120 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     121 </span>            : 
-<span class="lineNum">     122 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {</span>
-<span class="lineNum">     123 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Requesting autoPopulate: %@&quot;, autoPopulate == YES ? @&quot;YES&quot; : @&quot;NO&quot;);</span>
-<span class="lineNum">     124 </span><span class="lineNoCov">          0 :     DataPublicationRequest* publicationRequest =</span>
-<span class="lineNum">     125 </span>            :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
-<span class="lineNum">     126 </span>            :     [publicationRequest setAutoPopulate:autoPopulate];
-<span class="lineNum">     127 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     128 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     129 </span>            : /* ================================================================================================================== */
-<span class="lineNum">     130 </span><span class="lineNoCov">          0 : - (void) willCommenceEditForImageView:(UIButton*)sender {</span>
-<span class="lineNum">     131 </span><span class="lineNoCov">          0 :     _currentlyEditingImageView = [_modelAdapter imageViewFor:sender];</span>
-<span class="lineNum">     132 </span><span class="lineNoCov">          0 :     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];</span>
-<span class="lineNum">     133 </span>            :     imagePicker.delegate = self;
-<span class="lineNum">     134 </span>            :     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-<span class="lineNum">     135 </span><span class="lineNoCov">          0 :         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;</span>
-<span class="lineNum">     136 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     137 </span><span class="lineNoCov">          0 :     else {</span>
-<span class="lineNum">     138 </span><span class="lineNoCov">          0 :         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;</span>
-<span class="lineNum">     139 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     140 </span><span class="lineNoCov">          0 :     [self presentModalViewController:imagePicker animated:YES];</span>
-<span class="lineNum">     141 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     142 </span>            : 
-<span class="lineNum">     143 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     144 </span>            : /* ================================================================================================================== */
-<span class="lineNum">     145 </span><span class="lineNoCov">          0 : #pragma mark - View lifecycle</span>
-<span class="lineNum">     146 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     147 </span>            : - (void) viewDidLoad {
-<span class="lineNum">     148 </span>            :     [super viewDidLoad];
-<span class="lineNum">     149 </span>            : 
-<span class="lineNum">     150 </span>            :     for (DataPublicationRequest* publicationRequest in [_activityRequest dataPublicationRequests]) {
-<span class="lineNum">     151 </span>            :         if (publicationRequest.dataPublicationId == nil) {
-<span class="lineNum">     152 </span><span class="lineNoCov">          0 :             for (NSString* propertyName in [self propertyNames]) {</span>
-<span class="lineNum">     153 </span><span class="lineNoCov">          0 :                 NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));</span>
-<span class="lineNum">     154 </span>            : 
-<span class="lineNum">     155 </span><span class="lineNoCov">          0 :                 UITableView* tableView =</span>
-<span class="lineNum">     156 </span><span class="lineNoCov">          0 :                         (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];</span>
-<span class="lineNum">     157 </span><span class="lineNoCov">          0 :                 if (object == tableView) {</span>
-<span class="lineNum">     158 </span><span class="lineNoCov">          0 :                     [publicationRequest setDataPublicationId:propertyName];</span>
-<span class="lineNum">     159 </span>            :                 }
-<span class="lineNum">     160 </span>            :             }
-<span class="lineNum">     161 </span><span class="lineNoCov">          0 :         }</span>
-<span class="lineNum">     162 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     163 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     164 </span><span class="lineNoCov">          0 :     [_activityClient createActivityWith:_activityRequest delegate:self];</span>
-<span class="lineNum">     165 </span><span class="lineNoCov">          0 :     if (_activityInstance == nil) {</span>
-<span class="lineNum">     166 </span><span class="lineNoCov">          0 :         [self showLoadingHud];</span>
-<span class="lineNum">     167 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     168 </span>            : }
-<span class="lineNum">     169 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     170 </span><span class="lineNoCov">          0 : - (void) viewDidUnload {</span>
-<span class="lineNum">     171 </span><span class="lineNoCov">          0 :     [super viewDidUnload];</span>
-<span class="lineNum">     172 </span><span class="lineNoCov">          0 :     // Release any retained subviews of the main view.</span>
-<span class="lineNum">     173 </span><span class="lineNoCov">          0 :     // e.g. self.myOutlet = nil;</span>
-<span class="lineNum">     174 </span>            : }
-<span class="lineNum">     175 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     176 </span><span class="lineNoCov">          0 : - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {</span>
-<span class="lineNum">     177 </span>            :     // Return YES for supported orientations
-<span class="lineNum">     178 </span>            :     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-<span class="lineNum">     179 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     180 </span>            : 
-<span class="lineNum">     181 </span><span class="lineNoCov">          0 : - (void) didReceiveMemoryWarning {</span>
-<span class="lineNum">     182 </span>            :     [super didReceiveMemoryWarning];
-<span class="lineNum">     183 </span><span class="lineNoCov">          0 :     for (GridData* dataSet in [_activityInstance dataSets]) {</span>
-<span class="lineNum">     184 </span>            :         for (Row* row in [dataSet rows]) {
-<span class="lineNum">     185 </span>            :             for (ImageGridDataCell* imageCell in [row imageCells]) {
-<span class="lineNum">     186 </span><span class="lineNoCov">          0 :                 imageCell.imageData = nil;</span>
-<span class="lineNum">     187 </span><span class="lineNoCov">          0 :                 imageCell.hasAskedImageToLoad = NO;</span>
-<span class="lineNum">     188 </span><span class="lineNoCov">          0 :             }</span>
-<span class="lineNum">     189 </span><span class="lineNoCov">          0 :         }</span>
-<span class="lineNum">     190 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     191 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     192 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     193 </span><span class="lineNoCov">          0 : /* ================================================ Delegate Methods ================================================ */</span>
-<span class="lineNum">     194 </span><span class="lineNoCov">          0 : #pragma mark UITextFieldDelegate</span>
-<span class="lineNum">     195 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     196 </span><span class="lineNoCov">          0 : - (void) textFieldDidBeginEditing:(UITextField*)textField {</span>
-<span class="lineNum">     197 </span>            :     [TextInputUtils setCurrentlyEditing:textField];
-<span class="lineNum">     198 </span>            :     [TextInputUtils revealFromBeneathKeyboard:textField];
-<span class="lineNum">     199 </span>            : }
-<span class="lineNum">     200 </span>            : 
-<span class="lineNum">     201 </span><span class="lineNoCov">          0 : - (void) textFieldDidEndEditing:(UITextField*)textField {</span>
-<span class="lineNum">     202 </span><span class="lineNoCov">          0 :     [TextInputUtils restoreBeneathKeyboard:textField];</span>
-<span class="lineNum">     203 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     204 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     205 </span>            : - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
-<span class="lineNum">     206 </span><span class="lineNoCov">          0 :     [textField resignFirstResponder];</span>
-<span class="lineNum">     207 </span><span class="lineNoCov">          0 :     FieldInstance* field = [_modelAdapter fieldFor:textField];</span>
-<span class="lineNum">     208 </span><span class="lineNoCov">          0 :     [field didFinishEditWithValue:textField.text];</span>
-<span class="lineNum">     209 </span>            :     [self sendDeltaForField:field];
-<span class="lineNum">     210 </span><span class="lineNoCov">          0 :     return YES;</span>
-<span class="lineNum">     211 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     212 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     213 </span><span class="lineNoCov">          0 : - (BOOL) textFieldShouldReturn:(UITextField*)textField {</span>
-<span class="lineNum">     214 </span><span class="lineNoCov">          0 :     return [self textFieldShouldEndEditing:textField];</span>
-<span class="lineNum">     215 </span>            : }
-<span class="lineNum">     216 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     217 </span>            : /* ================================================================================================================== */
-<span class="lineNum">     218 </span><span class="lineNoCov">          0 : #pragma mark UITextViewDelegate</span>
-<span class="lineNum">     219 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     220 </span><span class="lineNoCov">          0 : - (void) textViewDidBeginEditing:(UITextView*)textView {</span>
-<span class="lineNum">     221 </span>            :     [TextInputUtils setCurrentlyEditing:textView];
-<span class="lineNum">     222 </span>            :     [TextInputUtils revealFromBeneathKeyboard:textView];
-<span class="lineNum">     223 </span>            :     [self.view addSubview:[TextInputUtils keyboardTools]];
-<span class="lineNum">     224 </span>            : }
-<span class="lineNum">     225 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     226 </span><span class="lineNoCov">          0 : - (void) textViewDidEndEditing:(UITextView*)textView {</span>
-<span class="lineNum">     227 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Done editing!&quot;);</span>
-<span class="lineNum">     228 </span><span class="lineNoCov">          0 :     [TextInputUtils restoreBeneathKeyboard:textView];</span>
-<span class="lineNum">     229 </span><span class="lineNoCov">          0 :     FieldInstance* field = [_modelAdapter fieldFor:textView];</span>
-<span class="lineNum">     230 </span>            :     [field didFinishEditWithValue:textView.text];
-<span class="lineNum">     231 </span><span class="lineNoCov">          0 :     [self sendDeltaForField:field];</span>
-<span class="lineNum">     232 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     233 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     234 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
-<span class="lineNum">     235 </span><span class="lineNoCov">          0 : #pragma mark Image Picker Delegate </span>
+<span class="lineNum">      90 </span><span class="lineNoCov">          0 :     id&lt;UITextInput&gt; currentlyEditingTextInput = [[TextInputUtils sharedTextInputUtils] currentlyEditingTextInput];</span>
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :     [[currentlyEditingTextInput textInputView] resignFirstResponder];</span>
+<span class="lineNum">      92 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      93 </span>            :     while ([_activityInstance allowsMethodInvocations] == NO) {
+<span class="lineNum">      94 </span><span class="lineNoCov">          0 :         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];</span>
+<span class="lineNum">      95 </span><span class="lineNoCov">          0 :         LogDebug(@&quot;Waiting for model synchronization. . . &quot;);</span>
+<span class="lineNum">      96 </span><span class="lineNoCov">          0 :         usleep(5000000);</span>
+<span class="lineNum">      97 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 :     MethodInvocationRequest* methodRequest =</span>
+<span class="lineNum">      99 </span>            :             [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     [_spinner startAnimating];</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 :     [_activityClient sendMethodInvocationWith:methodRequest delegate:self];</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     104 </span>            : /* ================================================================================================================== */
+<span class="lineNum">     105 </span>            : - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding {
+<span class="lineNum">     106 </span>            :     [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     108 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingPopulateMethod:(NSString*)populateMethod {</span>
+<span class="lineNum">     110 </span>            :     LogDebug(@&quot;Requesting populateMethod: %@&quot;, populateMethod);
+<span class="lineNum">     111 </span>            :     DataPublicationRequest* publicationRequest =
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];</span>
+<span class="lineNum">     113 </span><span class="lineNoCov">          0 :     [publicationRequest setPopulateMethod:populateMethod];</span>
+<span class="lineNum">     114 </span>            : }
+<span class="lineNum">     115 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     116 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingQuery:(NSString*)query {</span>
+<span class="lineNum">     117 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Requesting query: %@&quot;, query);</span>
+<span class="lineNum">     118 </span>            :     DataPublicationRequest* publicationRequest =
+<span class="lineNum">     119 </span>            :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+<span class="lineNum">     120 </span><span class="lineNoCov">          0 :     [publicationRequest setQuery:query];</span>
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     122 </span>            : 
+<span class="lineNum">     123 </span><span class="lineNoCov">          0 : - (void) hasUITableView:(UITableView*)tableView requestingAutoPopulate:(BOOL)autoPopulate {</span>
+<span class="lineNum">     124 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Requesting autoPopulate: %@&quot;, autoPopulate == YES ? @&quot;YES&quot; : @&quot;NO&quot;);</span>
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 :     DataPublicationRequest* publicationRequest =</span>
+<span class="lineNum">     126 </span>            :             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+<span class="lineNum">     127 </span>            :     [publicationRequest setAutoPopulate:autoPopulate];
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     129 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     130 </span>            : /* ================================================================================================================== */
+<span class="lineNum">     131 </span><span class="lineNoCov">          0 : - (void) willCommenceEditForImageView:(UIButton*)sender {</span>
+<span class="lineNum">     132 </span><span class="lineNoCov">          0 :     _currentlyEditingImageView = [_modelAdapter imageViewFor:sender];</span>
+<span class="lineNum">     133 </span><span class="lineNoCov">          0 :     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];</span>
+<span class="lineNum">     134 </span>            :     imagePicker.delegate = self;
+<span class="lineNum">     135 </span>            :     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+<span class="lineNum">     136 </span><span class="lineNoCov">          0 :         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;</span>
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     138 </span><span class="lineNoCov">          0 :     else {</span>
+<span class="lineNum">     139 </span><span class="lineNoCov">          0 :         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;</span>
+<span class="lineNum">     140 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     141 </span><span class="lineNoCov">          0 :     [self presentModalViewController:imagePicker animated:YES];</span>
+<span class="lineNum">     142 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     143 </span>            : 
+<span class="lineNum">     144 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     145 </span>            : /* ================================================================================================================== */
+<span class="lineNum">     146 </span><span class="lineNoCov">          0 : #pragma mark - View lifecycle</span>
+<span class="lineNum">     147 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     148 </span>            : - (void) viewDidLoad {
+<span class="lineNum">     149 </span>            :     [super viewDidLoad];
+<span class="lineNum">     150 </span>            : 
+<span class="lineNum">     151 </span>            :     for (DataPublicationRequest* publicationRequest in [_activityRequest dataPublicationRequests]) {
+<span class="lineNum">     152 </span>            :         if (publicationRequest.dataPublicationId == nil) {
+<span class="lineNum">     153 </span><span class="lineNoCov">          0 :             for (NSString* propertyName in [self propertyNames]) {</span>
+<span class="lineNum">     154 </span><span class="lineNoCov">          0 :                 NSObject* object = objc_msgSend(self, NSSelectorFromString(propertyName));</span>
+<span class="lineNum">     155 </span>            : 
+<span class="lineNum">     156 </span><span class="lineNoCov">          0 :                 UITableView* tableView =</span>
+<span class="lineNum">     157 </span><span class="lineNoCov">          0 :                         (__bridge id) [[_activityRequest keyForDataPublicationRequest:publicationRequest] pointerValue];</span>
+<span class="lineNum">     158 </span><span class="lineNoCov">          0 :                 if (object == tableView) {</span>
+<span class="lineNum">     159 </span><span class="lineNoCov">          0 :                     [publicationRequest setDataPublicationId:propertyName];</span>
+<span class="lineNum">     160 </span>            :                 }
+<span class="lineNum">     161 </span>            :             }
+<span class="lineNum">     162 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     163 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     164 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     165 </span><span class="lineNoCov">          0 :     [_activityClient createActivityWith:_activityRequest delegate:self];</span>
+<span class="lineNum">     166 </span><span class="lineNoCov">          0 :     if (_activityInstance == nil) {</span>
+<span class="lineNum">     167 </span><span class="lineNoCov">          0 :         [self showLoadingHud];</span>
+<span class="lineNum">     168 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     169 </span>            : }
+<span class="lineNum">     170 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     171 </span><span class="lineNoCov">          0 : - (void) viewDidUnload {</span>
+<span class="lineNum">     172 </span><span class="lineNoCov">          0 :     [super viewDidUnload];</span>
+<span class="lineNum">     173 </span><span class="lineNoCov">          0 :     // Release any retained subviews of the main view.</span>
+<span class="lineNum">     174 </span><span class="lineNoCov">          0 :     // e.g. self.myOutlet = nil;</span>
+<span class="lineNum">     175 </span>            : }
+<span class="lineNum">     176 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     177 </span><span class="lineNoCov">          0 : - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {</span>
+<span class="lineNum">     178 </span>            :     // Return YES for supported orientations
+<span class="lineNum">     179 </span>            :     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+<span class="lineNum">     180 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     181 </span>            : 
+<span class="lineNum">     182 </span><span class="lineNoCov">          0 : - (void) didReceiveMemoryWarning {</span>
+<span class="lineNum">     183 </span>            :     [super didReceiveMemoryWarning];
+<span class="lineNum">     184 </span><span class="lineNoCov">          0 :     for (GridData* dataSet in [_activityInstance dataSets]) {</span>
+<span class="lineNum">     185 </span>            :         for (Row* row in [dataSet rows]) {
+<span class="lineNum">     186 </span>            :             for (ImageGridDataCell* imageCell in [row imageCells]) {
+<span class="lineNum">     187 </span><span class="lineNoCov">          0 :                 imageCell.imageData = nil;</span>
+<span class="lineNum">     188 </span><span class="lineNoCov">          0 :                 imageCell.hasAskedImageToLoad = NO;</span>
+<span class="lineNum">     189 </span><span class="lineNoCov">          0 :             }</span>
+<span class="lineNum">     190 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     191 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     192 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     193 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     194 </span><span class="lineNoCov">          0 : /* ================================================ Delegate Methods ================================================ */</span>
+<span class="lineNum">     195 </span><span class="lineNoCov">          0 : #pragma mark UITextFieldDelegate</span>
+<span class="lineNum">     196 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     197 </span><span class="lineNoCov">          0 : - (void) textFieldDidBeginEditing:(UITextField*)textField {</span>
+<span class="lineNum">     198 </span>            :     TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
+<span class="lineNum">     199 </span>            :     [textInputUtils setCurrentlyEditingTextInput:textField];
+<span class="lineNum">     200 </span>            :     [textInputUtils revealFromBeneathKeyboard:textField];
+<span class="lineNum">     201 </span>            : }
+<span class="lineNum">     202 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     203 </span><span class="lineNoCov">          0 : - (void) textFieldDidEndEditing:(UITextField*)textField {</span>
+<span class="lineNum">     204 </span><span class="lineNoCov">          0 :     [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textField];</span>
+<span class="lineNum">     205 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     206 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     207 </span>            : - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
+<span class="lineNum">     208 </span><span class="lineNoCov">          0 :     [textField resignFirstResponder];</span>
+<span class="lineNum">     209 </span><span class="lineNoCov">          0 :     FieldInstance* field = [_modelAdapter fieldFor:textField];</span>
+<span class="lineNum">     210 </span><span class="lineNoCov">          0 :     [field didFinishEditWithValue:textField.text];</span>
+<span class="lineNum">     211 </span>            :     [self sendDeltaForField:field];
+<span class="lineNum">     212 </span><span class="lineNoCov">          0 :     return YES;</span>
+<span class="lineNum">     213 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     214 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     215 </span><span class="lineNoCov">          0 : - (BOOL) textFieldShouldReturn:(UITextField*)textField {</span>
+<span class="lineNum">     216 </span><span class="lineNoCov">          0 :     return [self textFieldShouldEndEditing:textField];</span>
+<span class="lineNum">     217 </span>            : }
+<span class="lineNum">     218 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     219 </span>            : /* ================================================================================================================== */
+<span class="lineNum">     220 </span><span class="lineNoCov">          0 : #pragma mark UITextViewDelegate</span>
+<span class="lineNum">     221 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     222 </span><span class="lineNoCov">          0 : - (void) textViewDidBeginEditing:(UITextView*)textView {</span>
+<span class="lineNum">     223 </span>            :     expanz_ui_TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
+<span class="lineNum">     224 </span>            :     [textInputUtils setCurrentlyEditingTextInput:textView];
+<span class="lineNum">     225 </span>            :     [textInputUtils revealFromBeneathKeyboard:textView];
+<span class="lineNum">     226 </span>            :     [self.view addSubview:[textInputUtils keyboardTools]];
+<span class="lineNum">     227 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     228 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     229 </span><span class="lineNoCov">          0 : - (void) textViewDidEndEditing:(UITextView*)textView {</span>
+<span class="lineNum">     230 </span><span class="lineNoCov">          0 :     LogDebug(@&quot;Done editing!&quot;);</span>
+<span class="lineNum">     231 </span><span class="lineNoCov">          0 :     [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textView];</span>
+<span class="lineNum">     232 </span><span class="lineNoCov">          0 :     FieldInstance* field = [_modelAdapter fieldFor:textView];</span>
+<span class="lineNum">     233 </span>            :     [field didFinishEditWithValue:textView.text];
+<span class="lineNum">     234 </span><span class="lineNoCov">          0 :     [self sendDeltaForField:field];</span>
+<span class="lineNum">     235 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">     236 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     237 </span><span class="lineNoCov">          0 : - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image</span>
-<span class="lineNum">     238 </span>            :         editingInfo:(NSDictionary*)editingInfo {
-<span class="lineNum">     239 </span>            : 
-<span class="lineNum">     240 </span>            :     FieldInstance* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
-<span class="lineNum">     241 </span>            :     //[field didFinishEditWithValue:image];
+<span class="lineNum">     237 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
+<span class="lineNum">     238 </span><span class="lineNoCov">          0 : #pragma mark Image Picker Delegate </span>
+<span class="lineNum">     239 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     240 </span><span class="lineNoCov">          0 : - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image</span>
+<span class="lineNum">     241 </span>            :         editingInfo:(NSDictionary*)editingInfo {
 <span class="lineNum">     242 </span>            : 
-<span class="lineNum">     243 </span><span class="lineNoCov">          0 :     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);</span>
-<span class="lineNum">     244 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     245 </span>            :     NSString* data = [jpegRepresentation base64EncodedString];
-<span class="lineNum">     246 </span><span class="lineNoCov">          0 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
-<span class="lineNum">     247 </span>            : 
-<span class="lineNum">     248 </span>            :     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
-<span class="lineNum">     249 </span><span class="lineNoCov">          0 :             initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle</span>
-<span class="lineNum">     250 </span>            :             sessionToken:sessionToken encoding:DeltaEncodingBase64];
-<span class="lineNum">     251 </span><span class="lineNoCov">          0 :     [_activityClient sendDeltaWith:deltaRequest delegate:self];</span>
-<span class="lineNum">     252 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     253 </span>            :     _currentlyEditingImageView.image = image;
-<span class="lineNum">     254 </span>            :     _currentlyEditingImageView = nil;
-<span class="lineNum">     255 </span>            :     [picker dismissModalViewControllerAnimated:YES];
-<span class="lineNum">     256 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     257 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     258 </span>            : 
-<span class="lineNum">     259 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
-<span class="lineNum">     260 </span><span class="lineNoCov">          0 : #pragma mark CreateActivityClientDelegate</span>
-<span class="lineNum">     261 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     262 </span><span class="lineNoCov">          0 : - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {</span>
-<span class="lineNum">     263 </span>            :     [_spinner stopAnimating];
-<span class="lineNum">     264 </span>            :     if (_activityInstance == nil) {
-<span class="lineNum">     265 </span>            :         [self hideLoadingHud];
-<span class="lineNum">     266 </span>            :         _activityInstance = activityInstance;
-<span class="lineNum">     267 </span>            :         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
-<span class="lineNum">     268 </span><span class="lineNoCov">          0 :         [_modelAdapter updateUIControlsWithModelValues];</span>
-<span class="lineNum">     269 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     270 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     271 </span><span class="lineNoCov">          0 :     for (FieldInstance* field in activityInstance.fields) {</span>
-<span class="lineNum">     272 </span><span class="lineNoCov">          0 :         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];</span>
-<span class="lineNum">     273 </span><span class="lineNoCov">          0 :         [[_modelAdapter textFieldFor:field] setText:field.value];</span>
-<span class="lineNum">     274 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     275 </span><span class="lineNoCov">          0 :     //TODO: This should use id&lt;expanz_ui_SystemEventReporter&gt;</span>
-<span class="lineNum">     276 </span>            :     for (Message* message in activityInstance.messages) {
-<span class="lineNum">     277 </span><span class="lineNoCov">          0 :         UIAlertView* alert = [[UIAlertView alloc]</span>
-<span class="lineNum">     278 </span><span class="lineNoCov">          0 :                 initWithTitle:@&quot;System Message&quot; message:message.content delegate:self cancelButtonTitle:@&quot;OK&quot;</span>
-<span class="lineNum">     279 </span><span class="lineNoCov">          0 :                 otherButtonTitles:nil];</span>
-<span class="lineNum">     280 </span><span class="lineNoCov">          0 :         [alert show];</span>
-<span class="lineNum">     281 </span>            :     }
-<span class="lineNum">     282 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     283 </span>            : 
-<span class="lineNum">     284 </span>            : - (void) requestDidFailWithError:(NSError*)error {
-<span class="lineNum">     285 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     286 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     287 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     288 </span><span class="lineNoCov">          0 : /* ================================================== Private Methods =============================================== */</span>
-<span class="lineNum">     289 </span>            : - (void) cachePropertyNames {
-<span class="lineNum">     290 </span><span class="lineNoCov">          0 :     NSMutableArray* propertyNames = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">     291 </span>            :     for (RTProperty* property in [[self class] rt_properties]) {
-<span class="lineNum">     292 </span><span class="lineNoCov">          0 :         [propertyNames addObject:[property name]];</span>
-<span class="lineNum">     293 </span>            :     }
-<span class="lineNum">     294 </span>            :     _propertyNames = [NSArray arrayWithArray:propertyNames];
-<span class="lineNum">     295 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     296 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     297 </span><span class="lineNoCov">          0 : - (void) createActivityRequestWith:(NSString*)initialKey {</span>
-<span class="lineNum">     298 </span><span class="lineNoCov">          0 :     _activityRequest = [[CreateActivityRequest alloc]</span>
-<span class="lineNum">     299 </span><span class="lineNoCov">          0 :             initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey</span>
-<span class="lineNum">     300 </span><span class="lineNoCov">          0 :             sessionToken:[SessionContext globalContext].sessionToken];</span>
-<span class="lineNum">     301 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     302 </span>            : 
-<span class="lineNum">     303 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
-<span class="lineNum">     304 </span><span class="lineNoCov">          0 : - (void) showLoadingHud {</span>
-<span class="lineNum">     305 </span>            :     if (_loadingHud == nil) {
-<span class="lineNum">     306 </span>            :         _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];
-<span class="lineNum">     307 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     308 </span>            :     _loadingHud.delegate = self;
-<span class="lineNum">     309 </span>            :     _loadingHud.labelText = @&quot;Loading&quot;;
-<span class="lineNum">     310 </span><span class="lineNoCov">          0 :     _subViewStateCache = [[NSMutableDictionary alloc] init];</span>
-<span class="lineNum">     311 </span><span class="lineNoCov">          0 :     for (UIView* view in [self.view subviews]) {</span>
-<span class="lineNum">     312 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     313 </span><span class="lineNoCov">          0 :         unsigned int generatedViewTag = [self createOrRetrieveTagForView:view];</span>
-<span class="lineNum">     314 </span><span class="lineNoCov">          0 :         [_subViewStateCache</span>
-<span class="lineNum">     315 </span><span class="lineNoCov">          0 :                 setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedViewTag]];</span>
-<span class="lineNum">     316 </span><span class="lineNoCov">          0 :         [view setHidden:YES];</span>
-<span class="lineNum">     317 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     318 </span>            : 
-<span class="lineNum">     319 </span><span class="lineNoCov">          0 :     [self.view addSubview:_loadingHud];</span>
-<span class="lineNum">     320 </span><span class="lineNoCov">          0 :     [_loadingHud show:YES];</span>
-<span class="lineNum">     321 </span>            : }
-<span class="lineNum">     322 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     323 </span><span class="lineNoCov">          0 : - (void) hideLoadingHud {</span>
-<span class="lineNum">     324 </span>            :     [_loadingHud hide:YES];
-<span class="lineNum">     325 </span><span class="lineNoCov">          0 :     for (NSNumber* tag in [_subViewStateCache allKeys]) {</span>
-<span class="lineNum">     326 </span><span class="lineNoCov">          0 :         UIView* view = [self.view viewWithTag:[tag intValue]];</span>
-<span class="lineNum">     327 </span><span class="lineNoCov">          0 :         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];</span>
-<span class="lineNum">     328 </span>            :         [view setHidden:hidden];
-<span class="lineNum">     329 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     330 </span><span class="lineNoCov">          0 :     _subViewStateCache = nil;</span>
-<span class="lineNum">     331 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     332 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     333 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
-<span class="lineNum">     334 </span><span class="lineNoCov">          0 : - (unsigned int) createOrRetrieveTagForView:(UIView*)view {</span>
-<span class="lineNum">     335 </span><span class="lineNoCov">          0 :     unsigned int generatedTag;</span>
-<span class="lineNum">     336 </span><span class="lineNoCov">          0 :     if (view.tag == 0) {</span>
-<span class="lineNum">     337 </span><span class="lineNoCov">          0 :         NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@&quot;%p&quot;, view]];</span>
-<span class="lineNum">     338 </span>            :         [scanner scanHexInt:&amp;generatedTag];
-<span class="lineNum">     339 </span>            :         [view setTag:generatedTag];
-<span class="lineNum">     340 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     341 </span><span class="lineNoCov">          0 :     else {</span>
-<span class="lineNum">     342 </span><span class="lineNoCov">          0 :         generatedTag = view.tag;</span>
+<span class="lineNum">     243 </span>            :     FieldInstance* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
+<span class="lineNum">     244 </span>            :     //[field didFinishEditWithValue:image];
+<span class="lineNum">     245 </span>            : 
+<span class="lineNum">     246 </span><span class="lineNoCov">          0 :     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);</span>
+<span class="lineNum">     247 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     248 </span>            :     NSString* data = [jpegRepresentation base64EncodedString];
+<span class="lineNum">     249 </span><span class="lineNoCov">          0 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
+<span class="lineNum">     250 </span>            : 
+<span class="lineNum">     251 </span>            :     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
+<span class="lineNum">     252 </span><span class="lineNoCov">          0 :             initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle</span>
+<span class="lineNum">     253 </span>            :             sessionToken:sessionToken encoding:DeltaEncodingBase64];
+<span class="lineNum">     254 </span><span class="lineNoCov">          0 :     [_activityClient sendDeltaWith:deltaRequest delegate:self];</span>
+<span class="lineNum">     255 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     256 </span>            :     _currentlyEditingImageView.image = image;
+<span class="lineNum">     257 </span>            :     _currentlyEditingImageView = nil;
+<span class="lineNum">     258 </span>            :     [picker dismissModalViewControllerAnimated:YES];
+<span class="lineNum">     259 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     260 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     261 </span>            : 
+<span class="lineNum">     262 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
+<span class="lineNum">     263 </span><span class="lineNoCov">          0 : #pragma mark CreateActivityClientDelegate</span>
+<span class="lineNum">     264 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     265 </span><span class="lineNoCov">          0 : - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {</span>
+<span class="lineNum">     266 </span>            :     [_spinner stopAnimating];
+<span class="lineNum">     267 </span>            :     if (_activityInstance == nil) {
+<span class="lineNum">     268 </span>            :         [self hideLoadingHud];
+<span class="lineNum">     269 </span>            :         _activityInstance = activityInstance;
+<span class="lineNum">     270 </span>            :         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
+<span class="lineNum">     271 </span><span class="lineNoCov">          0 :         [_modelAdapter updateUIControlsWithModelValues];</span>
+<span class="lineNum">     272 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     273 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     274 </span><span class="lineNoCov">          0 :     for (FieldInstance* field in activityInstance.fields) {</span>
+<span class="lineNum">     275 </span><span class="lineNoCov">          0 :         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];</span>
+<span class="lineNum">     276 </span><span class="lineNoCov">          0 :         [[_modelAdapter textFieldFor:field] setText:field.value];</span>
+<span class="lineNum">     277 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     278 </span><span class="lineNoCov">          0 :     //TODO: This should use id&lt;expanz_ui_SystemEventReporter&gt;</span>
+<span class="lineNum">     279 </span>            :     for (Message* message in activityInstance.messages) {
+<span class="lineNum">     280 </span><span class="lineNoCov">          0 :         UIAlertView* alert = [[UIAlertView alloc]</span>
+<span class="lineNum">     281 </span><span class="lineNoCov">          0 :                 initWithTitle:@&quot;System Message&quot; message:message.content delegate:self cancelButtonTitle:@&quot;OK&quot;</span>
+<span class="lineNum">     282 </span><span class="lineNoCov">          0 :                 otherButtonTitles:nil];</span>
+<span class="lineNum">     283 </span><span class="lineNoCov">          0 :         [alert show];</span>
+<span class="lineNum">     284 </span>            :     }
+<span class="lineNum">     285 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     286 </span>            : 
+<span class="lineNum">     287 </span>            : - (void) requestDidFailWithError:(NSError*)error {
+<span class="lineNum">     288 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     289 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     290 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     291 </span><span class="lineNoCov">          0 : /* ================================================== Private Methods =============================================== */</span>
+<span class="lineNum">     292 </span>            : - (void) cachePropertyNames {
+<span class="lineNum">     293 </span><span class="lineNoCov">          0 :     NSMutableArray* propertyNames = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">     294 </span>            :     for (RTProperty* property in [[self class] rt_properties]) {
+<span class="lineNum">     295 </span><span class="lineNoCov">          0 :         [propertyNames addObject:[property name]];</span>
+<span class="lineNum">     296 </span>            :     }
+<span class="lineNum">     297 </span>            :     _propertyNames = [NSArray arrayWithArray:propertyNames];
+<span class="lineNum">     298 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     299 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     300 </span><span class="lineNoCov">          0 : - (void) createActivityRequestWith:(NSString*)initialKey {</span>
+<span class="lineNum">     301 </span><span class="lineNoCov">          0 :     _activityRequest = [[CreateActivityRequest alloc]</span>
+<span class="lineNum">     302 </span><span class="lineNoCov">          0 :             initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey</span>
+<span class="lineNum">     303 </span><span class="lineNoCov">          0 :             sessionToken:[SessionContext globalContext].sessionToken];</span>
+<span class="lineNum">     304 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     305 </span>            : 
+<span class="lineNum">     306 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
+<span class="lineNum">     307 </span><span class="lineNoCov">          0 : - (void) showLoadingHud {</span>
+<span class="lineNum">     308 </span>            :     if (_loadingHud == nil) {
+<span class="lineNum">     309 </span>            :         _loadingHud = [[MBProgressHUD alloc] initWithView:self.view];
+<span class="lineNum">     310 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     311 </span>            :     _loadingHud.delegate = self;
+<span class="lineNum">     312 </span>            :     _loadingHud.labelText = @&quot;Loading&quot;;
+<span class="lineNum">     313 </span><span class="lineNoCov">          0 :     _subViewStateCache = [[NSMutableDictionary alloc] init];</span>
+<span class="lineNum">     314 </span><span class="lineNoCov">          0 :     for (UIView* view in [self.view subviews]) {</span>
+<span class="lineNum">     315 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     316 </span><span class="lineNoCov">          0 :         unsigned int generatedViewTag = [self createOrRetrieveTagForView:view];</span>
+<span class="lineNum">     317 </span><span class="lineNoCov">          0 :         [_subViewStateCache</span>
+<span class="lineNum">     318 </span><span class="lineNoCov">          0 :                 setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedViewTag]];</span>
+<span class="lineNum">     319 </span><span class="lineNoCov">          0 :         [view setHidden:YES];</span>
+<span class="lineNum">     320 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     321 </span>            : 
+<span class="lineNum">     322 </span><span class="lineNoCov">          0 :     [self.view addSubview:_loadingHud];</span>
+<span class="lineNum">     323 </span><span class="lineNoCov">          0 :     [_loadingHud show:YES];</span>
+<span class="lineNum">     324 </span>            : }
+<span class="lineNum">     325 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     326 </span><span class="lineNoCov">          0 : - (void) hideLoadingHud {</span>
+<span class="lineNum">     327 </span>            :     [_loadingHud hide:YES];
+<span class="lineNum">     328 </span><span class="lineNoCov">          0 :     for (NSNumber* tag in [_subViewStateCache allKeys]) {</span>
+<span class="lineNum">     329 </span><span class="lineNoCov">          0 :         UIView* view = [self.view viewWithTag:[tag intValue]];</span>
+<span class="lineNum">     330 </span><span class="lineNoCov">          0 :         BOOL hidden = [[_subViewStateCache objectForKey:tag] boolValue];</span>
+<span class="lineNum">     331 </span>            :         [view setHidden:hidden];
+<span class="lineNum">     332 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     333 </span><span class="lineNoCov">          0 :     _subViewStateCache = nil;</span>
+<span class="lineNum">     334 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     335 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     336 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
+<span class="lineNum">     337 </span><span class="lineNoCov">          0 : - (unsigned int) createOrRetrieveTagForView:(UIView*)view {</span>
+<span class="lineNum">     338 </span><span class="lineNoCov">          0 :     unsigned int generatedTag;</span>
+<span class="lineNum">     339 </span><span class="lineNoCov">          0 :     if (view.tag == 0) {</span>
+<span class="lineNum">     340 </span><span class="lineNoCov">          0 :         NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@&quot;%p&quot;, view]];</span>
+<span class="lineNum">     341 </span>            :         [scanner scanHexInt:&amp;generatedTag];
+<span class="lineNum">     342 </span>            :         [view setTag:generatedTag];
 <span class="lineNum">     343 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     344 </span><span class="lineNoCov">          0 :     return generatedTag;</span>
-<span class="lineNum">     345 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     346 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">     347 </span>            : 
-<span class="lineNum">     348 </span><span class="lineNoCov">          0 : @end</span>
+<span class="lineNum">     344 </span><span class="lineNoCov">          0 :     else {</span>
+<span class="lineNum">     345 </span><span class="lineNoCov">          0 :         generatedTag = view.tag;</span>
+<span class="lineNum">     346 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     347 </span><span class="lineNoCov">          0 :     return generatedTag;</span>
+<span class="lineNum">     348 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     349 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     350 </span>            : 
+<span class="lineNum">     351 </span><span class="lineNoCov">          0 : @end</span>
 </pre>
       </td>
     </tr>

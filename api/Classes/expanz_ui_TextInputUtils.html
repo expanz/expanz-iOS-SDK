@@ -36,23 +36,31 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/currentlyEditingTextInput">&nbsp;&nbsp;&nbsp;&nbsp;currentlyEditingTextInput</option>
+	
+	<option value="//api/name/keyboardTools">&nbsp;&nbsp;&nbsp;&nbsp;keyboardTools</option>
+	
+	<option value="//api/name/scrolled">&nbsp;&nbsp;&nbsp;&nbsp;scrolled</option>
+	
+	
 	
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/currentlyEditingTextInput">&nbsp;&nbsp;&nbsp;&nbsp;+ currentlyEditingTextInput</option>
-	
-	<option value="//api/name/isCurrentlyEditing:">&nbsp;&nbsp;&nbsp;&nbsp;+ isCurrentlyEditing:</option>
-	
-	<option value="//api/name/keyboardTools">&nbsp;&nbsp;&nbsp;&nbsp;+ keyboardTools</option>
-	
-	<option value="//api/name/restoreBeneathKeyboard:">&nbsp;&nbsp;&nbsp;&nbsp;+ restoreBeneathKeyboard:</option>
-	
-	<option value="//api/name/revealFromBeneathKeyboard:">&nbsp;&nbsp;&nbsp;&nbsp;+ revealFromBeneathKeyboard:</option>
-	
-	<option value="//api/name/setCurrentlyEditing:">&nbsp;&nbsp;&nbsp;&nbsp;+ setCurrentlyEditing:</option>
+	<option value="//api/name/sharedTextInputUtils">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedTextInputUtils</option>
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/isCurrentlyEditing:">&nbsp;&nbsp;&nbsp;&nbsp;- isCurrentlyEditing:</option>
+	
+	<option value="//api/name/restoreBeneathKeyboard:">&nbsp;&nbsp;&nbsp;&nbsp;- restoreBeneathKeyboard:</option>
+	
+	<option value="//api/name/revealFromBeneathKeyboard:">&nbsp;&nbsp;&nbsp;&nbsp;- revealFromBeneathKeyboard:</option>
 	
 	
 	
@@ -74,25 +82,35 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentlyEditingTextInput">currentlyEditingTextInput</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyboardTools">keyboardTools</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrolled">scrolled</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentlyEditingTextInput">currentlyEditingTextInput</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedTextInputUtils">sharedTextInputUtils</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isCurrentlyEditing:">isCurrentlyEditing:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyboardTools">keyboardTools</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restoreBeneathKeyboard:">restoreBeneathKeyboard:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/revealFromBeneathKeyboard:">revealFromBeneathKeyboard:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCurrentlyEditing:">setCurrentlyEditing:</a></span></li>
-	
 </ul></li>
-
-
 
 
 			</ul>
@@ -139,7 +157,35 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/revealFromBeneathKeyboard:">+&nbsp;revealFromBeneathKeyboard:</a></code>
+		<code><a href="#//api/name/scrolled">&nbsp;&nbsp;scrolled</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentlyEditingTextInput">&nbsp;&nbsp;currentlyEditingTextInput</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keyboardTools">&nbsp;&nbsp;keyboardTools</a></code>
+		<span class="tooltip"><p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedTextInputUtils">+&nbsp;sharedTextInputUtils</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/revealFromBeneathKeyboard:">&ndash;&nbsp;revealFromBeneathKeyboard:</a></code>
 		<span class="tooltip"><p>If the text field will be hidden by the keyboard becoming active, this method causes the view to scroll so that
 the text field appears in the remaining space after the keyboard has been presented.</p></span>
 	</span>
@@ -147,36 +193,15 @@ the text field appears in the remaining space after the keyboard has been presen
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/restoreBeneathKeyboard:">+&nbsp;restoreBeneathKeyboard:</a></code>
+		<code><a href="#//api/name/restoreBeneathKeyboard:">&ndash;&nbsp;restoreBeneathKeyboard:</a></code>
 		<span class="tooltip"><p>Restore the view to it&rsquo;s previous state prior to calling revealFromBeneathKeyboard.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/keyboardTools">+&nbsp;keyboardTools</a></code>
-		<span class="tooltip"><p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/isCurrentlyEditing:">+&nbsp;isCurrentlyEditing:</a></code>
-		<span class="tooltip"><p>Returns true if this is the text field that currently has focus.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/currentlyEditingTextInput">+&nbsp;currentlyEditingTextInput</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setCurrentlyEditing:">+&nbsp;setCurrentlyEditing:</a></code>
-		<span class="tooltip"><p>Registers this text field as the one that currently has focus.</p></span>
+		<code><a href="#//api/name/isCurrentlyEditing:">&ndash;&nbsp;isCurrentlyEditing:</a></code>
+		<span class="tooltip"><p>Returns true if this is the field or text view with current focus.</p></span>
 	</span>
 	
 	
@@ -189,11 +214,9 @@ the text field appears in the remaining space after the keyboard has been presen
 					
 					
 					
-					
-					
 					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
 	<a name="//api/name/currentlyEditingTextInput" title="currentlyEditingTextInput"></a>
@@ -203,17 +226,17 @@ the text field appears in the remaining space after the keyboard has been presen
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isCurrentlyEditing:" title="isCurrentlyEditing:"></a>
-	<h3 class="subsubtitle method-title">isCurrentlyEditing:</h3>
+	<a name="//api/name/keyboardTools" title="keyboardTools"></a>
+	<h3 class="subsubtitle method-title">keyboardTools</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns true if this is the text field that currently has focus.</p>
+		<p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (BOOL)isCurrentlyEditing:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIToolbar *keyboardTools</code></div>
 	
 	
 	
@@ -224,7 +247,7 @@ the text field appears in the remaining space after the keyboard has been presen
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns true if this is the text field that currently has focus.</p>
+		<p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p>
 	</div>
 	
 	
@@ -242,17 +265,47 @@ the text field appears in the remaining space after the keyboard has been presen
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/keyboardTools" title="keyboardTools"></a>
-	<h3 class="subsubtitle method-title">keyboardTools</h3>
+	<a name="//api/name/scrolled" title="scrolled"></a>
+	<h3 class="subsubtitle method-title">scrolled</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedTextInputUtils" title="sharedTextInputUtils"></a>
+	<h3 class="subsubtitle method-title">sharedTextInputUtils</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isCurrentlyEditing:" title="isCurrentlyEditing:"></a>
+	<h3 class="subsubtitle method-title">isCurrentlyEditing:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p>
+		<p>Returns true if this is the field or text view with current focus.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (UIToolbar *)keyboardTools</code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isCurrentlyEditing:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
 	
 	
 	
@@ -263,7 +316,7 @@ the text field appears in the remaining space after the keyboard has been presen
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Toolbar for dismissing the keyboard and navigating to the previous/next field.</p>
+		<p>Returns true if this is the field or text view with current focus.</p>
 	</div>
 	
 	
@@ -291,7 +344,7 @@ the text field appears in the remaining space after the keyboard has been presen
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)restoreBeneathKeyboard:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)restoreBeneathKeyboard:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
 	
 	
 	
@@ -331,7 +384,7 @@ the text field appears in the remaining space after the keyboard has been presen
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)revealFromBeneathKeyboard:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)revealFromBeneathKeyboard:(id&lt;UITextInput&gt;)<em>textInputControl</em></code></div>
 	
 	
 	
@@ -360,48 +413,7 @@ the text field appears in the remaining space after the keyboard has been presen
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/setCurrentlyEditing:" title="setCurrentlyEditing:"></a>
-	<h3 class="subsubtitle method-title">setCurrentlyEditing:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Registers this text field as the one that currently has focus.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>+ (void)setCurrentlyEditing:(id&lt;UITextInput&gt;)<em>textField</em></code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Registers this text field as the one that currently has focus.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">expanz_ui_TextInputUtils.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
-					
-					
 					
 					
 				</div>
@@ -414,7 +426,7 @@ the text field appears in the remaining space after the keyboard has been presen
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-18)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-19)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						
