@@ -87,7 +87,8 @@
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {
-    [[[TextInputUtils currentlyEditingTextInput] textInputView] resignFirstResponder];
+    id<UITextInput> currentlyEditingTextInput = [[TextInputUtils sharedTextInputUtils] currentlyEditingTextInput];
+    [[currentlyEditingTextInput textInputView] resignFirstResponder];
 
     while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
@@ -194,12 +195,13 @@
 #pragma mark UITextFieldDelegate
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    [TextInputUtils setCurrentlyEditing:textField];
-    [TextInputUtils revealFromBeneathKeyboard:textField];
+    TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
+    [textInputUtils setCurrentlyEditingTextInput:textField];
+    [textInputUtils revealFromBeneathKeyboard:textField];
 }
 
 - (void) textFieldDidEndEditing:(UITextField*)textField {
-    [TextInputUtils restoreBeneathKeyboard:textField];
+    [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
@@ -218,14 +220,15 @@
 #pragma mark UITextViewDelegate
 
 - (void) textViewDidBeginEditing:(UITextView*)textView {
-    [TextInputUtils setCurrentlyEditing:textView];
-    [TextInputUtils revealFromBeneathKeyboard:textView];
-    [self.view addSubview:[TextInputUtils keyboardTools]];
+    expanz_ui_TextInputUtils* textInputUtils = [TextInputUtils sharedTextInputUtils];
+    [textInputUtils setCurrentlyEditingTextInput:textView];
+    [textInputUtils revealFromBeneathKeyboard:textView];
+    [self.view addSubview:[textInputUtils keyboardTools]];
 }
 
 - (void) textViewDidEndEditing:(UITextView*)textView {
     LogDebug(@"Done editing!");
-    [TextInputUtils restoreBeneathKeyboard:textView];
+    [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textView];
     FieldInstance* field = [_modelAdapter fieldFor:textView];
     [field didFinishEditWithValue:textView.text];
     [self sendDeltaForField:field];

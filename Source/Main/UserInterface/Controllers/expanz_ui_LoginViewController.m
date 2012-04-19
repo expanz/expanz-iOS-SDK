@@ -103,11 +103,11 @@
 #pragma mark UITextFieldDelegate    
 
 - (void) textFieldDidBeginEditing:(UITextField*)textField {
-    [TextInputUtils revealFromBeneathKeyboard:textField];
+    [[TextInputUtils sharedTextInputUtils] revealFromBeneathKeyboard:textField];
 }
 
 - (void) textFieldDidEndEditing:(UITextField*)textField {
-    [TextInputUtils restoreBeneathKeyboard:textField];
+    [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textField];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField*)textField {

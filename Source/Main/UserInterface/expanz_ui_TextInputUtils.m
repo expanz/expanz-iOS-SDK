@@ -11,35 +11,61 @@
 
 #import "expanz_ui_TextInputUtils.h"
 
-static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
-static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
-static BOOL gScrolled;
-
-static id<UITextInput> gCurrentlyEditingField;
-static UIToolbar* gKeyboardTools;
 
 @interface expanz_ui_TextInputUtils (Private)
 
-+ (CGFloat) distanceToScrollFor:(UIView*)textInputView;
+- (CGFloat) distanceToScrollFor:(UIView*)textInputView;
 
-+ (void) doneEditing;
+- (void) doneEditing;
 
 @end
 
 @implementation expanz_ui_TextInputUtils
 
+static TextInputUtils* gSharedTextInputUtils;
+
+@synthesize scrolled = _scrolled;
+@synthesize currentlyEditingTextInput = _currentlyEditingTextInput;
+@synthesize keyboardTools = _keyboardTools;
+
+/* ================================================= Class Methods ================================================== */
++ (expanz_ui_TextInputUtils*) sharedTextInputUtils {
+    if (gSharedTextInputUtils == nil) {
+        gSharedTextInputUtils = [[TextInputUtils alloc] init];
+    }
+    return gSharedTextInputUtils;
+}
+
+/* ================================================== Initializers ================================================== */
+- (id) init {
+    self = [super init];
+    if (self) {
+        _keyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];
+        [_keyboardTools setBarStyle:UIBarStyleBlack];
+        [_keyboardTools setTranslucent:YES];
+        UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
+                initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
+        UIBarButtonItem* doneButtonItem = [[UIBarButtonItem alloc]
+                initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
+        doneButtonItem.tintColor = _keyboardTools.tintColor;
+
+        [_keyboardTools setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButtonItem, nil]];
+    }
+    return self;
+}
+
+
+
 /* ================================================ Interface Methods =============================================== */
-+ (void) revealFromBeneathKeyboard:(id<UITextInput>)textInputControl {
+- (void) revealFromBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Scrolling to accomodate keyboard");
     UIView* textInputView = textInputControl.textInputView;
     CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];
 
-    if (!gScrolled && distanceToScroll > 0) {
+    if (!_scrolled && distanceToScroll > 0) {
 
-        gScrolled = YES;
+        _scrolled = YES;
 
         UIToolbar* keyboardTools = [self keyboardTools];
         CGRect keyboardToolsFrame = keyboardTools.frame;
@@ -57,9 +83,9 @@ static UIToolbar* gKeyboardTools;
     }
 }
 
-+ (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl {
+- (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Restoring previous position.");
-    if (gScrolled) {
+    if (_scrolled) {
         UIView* textInputView = textInputControl.textInputView;
         CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];
 
@@ -76,41 +102,16 @@ static UIToolbar* gKeyboardTools;
         [textInputView.window setFrame:viewFrame];
         [UIView commitAnimations];
     }
-    gScrolled = NO;
+    _scrolled = NO;
 }
 
-+ (UIToolbar*) keyboardTools {
-    if (gKeyboardTools == nil) {
-        gKeyboardTools = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 156, 320, 44)];
-        [gKeyboardTools setBarStyle:UIBarStyleBlack];
-        [gKeyboardTools setTranslucent:YES];
-        UIBarButtonItem* flexibleSpaceLeft = [[UIBarButtonItem alloc]
-                initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-
-        UIBarButtonItem* doneButtonItem = [[UIBarButtonItem alloc]
-                initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
-        doneButtonItem.tintColor = gKeyboardTools.tintColor;
-
-        [gKeyboardTools setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButtonItem, nil]];
-    }
-    return gKeyboardTools;
+- (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl {
+    return textInputControl == _currentlyEditingTextInput;
 }
 
-+ (BOOL) isCurrentlyEditing:(id<UITextInput>)textInputControl {
-    return textInputControl == gCurrentlyEditingField;
-}
-
-+ (id<UITextInput>) currentlyEditingTextInput {
-    return gCurrentlyEditingField;
-}
-
-
-+ (void) setCurrentlyEditing:(id<UITextInput>)textField {
-    gCurrentlyEditingField = textField;
-}
 
 /* ================================================== Private Methods =============================================== */
-+ (CGFloat) distanceToScrollFor:(UIView*)textInputView {
+- (CGFloat) distanceToScrollFor:(UIView*)textInputView {
     CGFloat animatedDistance = 0;
     CGRect textFieldRect = [textInputView.window convertRect:textInputView.bounds fromView:textInputView];
     if (textFieldRect.origin.y >= 250) {
@@ -136,9 +137,9 @@ static UIToolbar* gKeyboardTools;
     return animatedDistance;
 }
 
-+ (void) doneEditing {
-    [[TextInputUtils keyboardTools] removeFromSuperview];
-    [gCurrentlyEditingField.textInputView resignFirstResponder];
+- (void) doneEditing {
+    [_keyboardTools removeFromSuperview];
+    [_currentlyEditingTextInput.textInputView resignFirstResponder];
 }
 
 @end
