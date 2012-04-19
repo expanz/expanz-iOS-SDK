@@ -262,6 +262,7 @@
             #!/bin/sh
             cd ${basedir}
             git checkout gh-pages
+            rm -fr ${basedir}/Source
             git fetch
             git pull
             rm -fr ./coverage
@@ -283,6 +284,7 @@
             #!/bin/sh
             cd ${basedir}
             git checkout gh-pages
+            rm -fr ${basedir}/Source
             git fetch
             git pull
             rm -fr ./installer
