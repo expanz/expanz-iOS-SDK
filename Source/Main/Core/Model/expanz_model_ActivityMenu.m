@@ -29,8 +29,8 @@
     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition {
-    [_activities addObject:activityDefinition];
+- (void) addMenuItem:(expanz_model_MenuItem*)menuItem {
+    [_activities addObject:menuItem];
 }
 
 

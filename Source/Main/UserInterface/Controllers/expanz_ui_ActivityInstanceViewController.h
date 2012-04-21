@@ -14,18 +14,16 @@
 #import "expanz_service_ActivityClientDelegate.h"
 #import "MBProgressHUD.h"
 
-@class expanz_model_ActivityMenuItem;
 @class expanz_model_FieldInstance;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailTableCell;
 @class expanz_ui_NavigationManager;
 @class MBProgressHUD;
+@class expanz_model_MenuItem;
 
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate,
-        UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,
-        MBProgressHUDDelegate> {
+@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, MBProgressHUDDelegate> {
 
 @private
     NSMutableDictionary* _subViewStateCache;
@@ -37,17 +35,17 @@
 }
 
 @property(nonatomic, strong, readonly) NSArray* propertyNames;
-@property(nonatomic, strong, readonly) expanz_model_ActivityMenuItem* activityDefinition;
+@property(nonatomic, strong, readonly) expanz_model_MenuItem* menuItem;
 @property(nonatomic, strong, readonly) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, strong, readonly) expanz_ui_ModelAdapter* modelAdapter;
-@property(nonatomic, retain) IBOutlet UIActivityIndicatorView* spinner;
-
+@property(nonatomic, weak) IBOutlet UIActivityIndicatorView* spinner;
+@property(nonatomic, weak) IBOutlet UISearchBar* searchBar;
 
 
 /**
  * Initialize a new activity instance view controller with the supplied activity and record identifier key.  
  */
-- (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
+- (id) initWithMenuItem:(expanz_model_MenuItem*)menuItem nibName:(NSString*)nibName
         initialKey:(NSString*)initialKey;
 
 /**

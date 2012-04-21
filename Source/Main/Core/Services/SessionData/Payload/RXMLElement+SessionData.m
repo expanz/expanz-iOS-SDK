@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionData.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
@@ -55,15 +55,14 @@
     ProcessArea* processArea =
         [[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]];
     [self iterate:@"*" with:^(RXMLElement* e) {
-        [processArea addActivityDefinition:[e asActivityDefinition]];
+        [processArea addMenuItem:[e asMenuItem]];
     }];
     return processArea;
 }
 
-- (ActivityMenuItem*) asActivityDefinition {
+- (MenuItem*) asMenuItem {
     ActivityStyle* style = [ActivityStyle fromString: [self attribute:@"style"] ];
-    return [[ActivityMenuItem alloc]
-        initWithActivityId:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
+    return [[MenuItem alloc] initWithActivityId:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
 }
 
 - (UserRole*) asUserRole {

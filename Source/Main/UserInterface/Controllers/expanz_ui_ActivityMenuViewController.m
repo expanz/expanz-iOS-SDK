@@ -11,7 +11,7 @@
 
 #import "Objection.h"
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_model_Menu.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_SessionDataRequest.h"
@@ -87,7 +87,7 @@
         return [[[_menu.processAreas objectAtIndex:section] activities] count];
     }
     else {
-        return [[_menu allActivities] count];
+        return [[_menu allMenuItems] count];
     }
 }
 
@@ -109,31 +109,31 @@
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.detailTextLabel.textColor = [UIColor darkGrayColor];
         cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
 
     if (tableView.style == UITableViewStyleGrouped) {
         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-        ActivityMenuItem* activity = [processArea.activities objectAtIndex:indexPath.row];
-        cell.textLabel.text = [activity title];
+        MenuItem* menuItem = [processArea.activities objectAtIndex:indexPath.row];
+        cell.textLabel.text = [menuItem title];
     }
     else {
-        ActivityMenuItem* activity = [[_menu allActivities] objectAtIndex:indexPath.row];
+        MenuItem* activity = [[_menu allMenuItems] objectAtIndex:indexPath.row];
         cell.textLabel.text = [activity title];
     }
     return cell;
 }
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ActivityMenuItem* activityDefinition;
+    MenuItem* menuItem;
     if (tableView.style == UITableViewStyleGrouped) {
         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-        activityDefinition = [processArea.activities objectAtIndex:indexPath.row];
+        menuItem = [processArea.activities objectAtIndex:indexPath.row];
     }
     else {
-        activityDefinition = [[_menu allActivities] objectAtIndex:indexPath.row];
+        menuItem = [[_menu allMenuItems] objectAtIndex:indexPath.row];
     }
-    if ([_activityManger showActivity:activityDefinition]) {
+    if ([_activityManger showActivity:menuItem]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

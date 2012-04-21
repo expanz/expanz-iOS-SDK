@@ -30,9 +30,9 @@
 
     ActivityMenu* activityList = [[ActivityMenu alloc] init];
     [self iterate:@"*" with:^(RXMLElement* element) {
-        ActivityMenuItem* definition = [[ActivityMenuItem alloc]
+        MenuItem* menuItem = [[MenuItem alloc]
                 initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
-        [activityList addActivityDefinition:definition];
+        [activityList addMenuItem:menuItem];
     }];
     return activityList;
 }

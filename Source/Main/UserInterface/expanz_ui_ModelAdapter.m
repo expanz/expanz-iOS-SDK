@@ -13,7 +13,7 @@
 #import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_FieldInstance.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_model_GridData.h"
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -50,7 +50,7 @@
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
-        _activityName = [viewController.activityDefinition.activityId copy];
+        _activityName = [viewController.menuItem.activityId copy];
         _activityInstance = viewController.activityInstance;
         _controller = viewController;
         _propertyNames = viewController.propertyNames;
@@ -197,10 +197,10 @@
                     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
                     button.frame = imageView.frame;
                     [button addTarget:_controller action:@selector(willCommenceEditForImageView:)
-                     forControlEvents:UIControlEventTouchUpInside];
+                            forControlEvents:UIControlEventTouchUpInside];
                     [_controller.view addSubview:button];
                     [_imageButtonMappings
-                        setObject:imageView forKey:[NSValue valueWithPointer:(__bridge void*) button]];
+                            setObject:imageView forKey:[NSValue valueWithPointer:(__bridge void*) button]];
                 }
             }
         }
@@ -235,8 +235,10 @@
             }
             else {
                 [_tableViewMappings setObject:tableView forKey:selectorName];
+
                 AbstractData* data = [_activityInstance dataWithId:selectorName];
                 AbstractDataRenderer* renderer = [data withDataRendererFor:tableView activityName:_activityName];
+                [renderer makeSearchableWith:_controller.searchBar controller:_controller];
                 [_dataRenderers addObject:renderer];
                 [tableView setDataSource:renderer];
                 [tableView setDelegate:renderer];

@@ -14,7 +14,7 @@
 #import "Objection.h"
 #import "MARTNSObject.h"
 #import "expanz_model_SessionContext.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
@@ -33,6 +33,7 @@
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextInputUtils.h"
 #import "RTProperty.h"
+#import "expanz_model_MenuItem.h"
 
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
@@ -55,22 +56,23 @@
 @implementation expanz_ui_ActivityInstanceViewController
 
 @synthesize propertyNames = _propertyNames;
-@synthesize activityDefinition = _activityDefinition;
+@synthesize menuItem = _menuItem;
 @synthesize activityInstance = _activityInstance;
 @synthesize modelAdapter = _modelAdapter;
 @synthesize spinner = _spinner;
+@synthesize searchBar = _searchBar;
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition nibName:(NSString*)nibName
+- (id) initWithMenuItem:(expanz_model_MenuItem*)menuItem nibName:(NSString*)nibName
         initialKey:(NSString*)initialKey {
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
-        _activityDefinition = activityDefinition;
-        [self setTitle:_activityDefinition.title];
+        _menuItem = menuItem;
+        [self setTitle:_menuItem.title];
         [self createActivityRequestWith:initialKey];
         [self cachePropertyNames];
     }
@@ -87,6 +89,7 @@
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {
+    LogDebug(@"Sending method invocation: %@", methodName);
     id<UITextInput> currentlyEditingTextInput = [[TextInputUtils sharedTextInputUtils] currentlyEditingTextInput];
     [[currentlyEditingTextInput textInputView] resignFirstResponder];
 
@@ -301,7 +304,7 @@
 
 - (void) createActivityRequestWith:(NSString*)initialKey {
     _activityRequest = [[CreateActivityRequest alloc]
-            initWithActivityName:_activityDefinition.activityId style:_activityDefinition.style initialKey:initialKey
+            initWithActivityName:_menuItem.activityId style:_menuItem.style initialKey:initialKey
             sessionToken:[SessionContext globalContext].sessionToken];
 }
 

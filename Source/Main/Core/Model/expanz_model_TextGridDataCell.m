@@ -22,9 +22,12 @@
     if (self) {
         _text = [text copy];
     }
-
     return self;
+}
 
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"TextCell: text=%@", _text];
 }
 
 @end

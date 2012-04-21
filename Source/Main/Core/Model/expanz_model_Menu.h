@@ -46,7 +46,7 @@
 */
 - (void) addUserRole:(expanz_model_UserRole*)userRole;
 
-- (NSArray*) allActivities;
+- (NSArray*) allMenuItems;
 
 @end
 

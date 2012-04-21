@@ -35,7 +35,6 @@
 		6B18A32215187A3500521FC1 /* UIView+ModelAdapter.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A09F151877BD009ED6D0 /* UIView+ModelAdapter.h */; };
 		6B18A32315187A3500521FC1 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0A2151877BD009ED6D0 /* expanz_ui_components_TextFieldTableCell.h */; };
 		6B18A32415187A3500521FC1 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0A4151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.h */; };
-		6B18A32515187A3500521FC1 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0A7151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6B18A32615187A3500521FC1 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0A9151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.h */; };
 		6B18A32715187A3500521FC1 /* expanz_ui_DocumentViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0AB151877BD009ED6D0 /* expanz_ui_DocumentViewController.h */; };
 		6B18A32815187A3500521FC1 /* expanz_ui_LoginViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0AD151877BD009ED6D0 /* expanz_ui_LoginViewController.h */; };
@@ -136,7 +135,6 @@
 		6B41A0E2151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A5151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m */; };
 		6B41A0E3151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A5151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m */; };
 		6B41A0E4151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A5151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m */; };
-		6B41A0E5151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B41A0A7151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6B41A0E6151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B41A0E7151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */; };
 		6B41A0E8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */; };
@@ -240,7 +238,7 @@
 		6B558B891518388C00BD810C /* expanz_model_SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7021914F39DB70029A94B /* expanz_model_SiteList.m */; };
 		6B558B8A1518388C00BD810C /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */; };
 		6B558B8B1518388C00BD810C /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */; };
-		6B558B8C1518388C00BD810C /* expanz_model_ActivityMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_ActivityMenuItem.m */; };
+		6B558B8C1518388C00BD810C /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_MenuItem.m */; };
 		6B558B8D1518388C00BD810C /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB314EF920300909A38 /* expanz_model_ActivityInstance.m */; };
 		6B558B8E1518388C00BD810C /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB514EF920300909A38 /* expanz_model_ActivityStyle.m */; };
 		6B558B8F1518388C00BD810C /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB714EF920300909A38 /* expanz_model_Column.m */; };
@@ -296,9 +294,9 @@
 		6B718E2E14EF920300909A38 /* expanz_model_AbstractGridDataCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718E2F14EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */; };
 		6B718E3214EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */; };
-		6B718E3414EF920300909A38 /* expanz_model_ActivityMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_ActivityMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B718E3514EF920300909A38 /* expanz_model_ActivityMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_ActivityMenuItem.m */; };
-		6B718E3814EF920300909A38 /* expanz_model_ActivityMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_ActivityMenuItem.m */; };
+		6B718E3414EF920300909A38 /* expanz_model_MenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_MenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B718E3514EF920300909A38 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_MenuItem.m */; };
+		6B718E3814EF920300909A38 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB114EF920300909A38 /* expanz_model_MenuItem.m */; };
 		6B718E3A14EF920300909A38 /* expanz_model_ActivityInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB214EF920300909A38 /* expanz_model_ActivityInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B718E3B14EF920300909A38 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB314EF920300909A38 /* expanz_model_ActivityInstance.m */; };
 		6B718E3E14EF920300909A38 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B718DB314EF920300909A38 /* expanz_model_ActivityInstance.m */; };
@@ -428,7 +426,7 @@
 		6B9FC7C414FDAB8200E4CB2C /* expanz_model_SiteList.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB7021814F39DB70029A94B /* expanz_model_SiteList.h */; };
 		6B9FC7C514FDAB8200E4CB2C /* expanz_model_AbstractData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */; };
 		6B9FC7C614FDAB8200E4CB2C /* expanz_model_AbstractGridDataCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */; };
-		6B9FC7C714FDAB8200E4CB2C /* expanz_model_ActivityMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_ActivityMenuItem.h */; };
+		6B9FC7C714FDAB8200E4CB2C /* expanz_model_MenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_MenuItem.h */; };
 		6B9FC7C814FDAB8200E4CB2C /* expanz_model_ActivityInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB214EF920300909A38 /* expanz_model_ActivityInstance.h */; };
 		6B9FC7C914FDAB8200E4CB2C /* expanz_model_ActivityStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */; };
 		6B9FC7CA14FDAB8200E4CB2C /* expanz_model_Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB614EF920300909A38 /* expanz_model_Column.h */; };
@@ -501,7 +499,7 @@
 		6B9FC81F14FDABA500E4CB2C /* expanz_model_SiteList.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BB7021814F39DB70029A94B /* expanz_model_SiteList.h */; };
 		6B9FC82014FDABA500E4CB2C /* expanz_model_AbstractData.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAC14EF920300909A38 /* expanz_model_AbstractData.h */; };
 		6B9FC82114FDABA500E4CB2C /* expanz_model_AbstractGridDataCell.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */; };
-		6B9FC82214FDABA500E4CB2C /* expanz_model_ActivityMenuItem.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_ActivityMenuItem.h */; };
+		6B9FC82214FDABA500E4CB2C /* expanz_model_MenuItem.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB014EF920300909A38 /* expanz_model_MenuItem.h */; };
 		6B9FC82314FDABA500E4CB2C /* expanz_model_ActivityInstance.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB214EF920300909A38 /* expanz_model_ActivityInstance.h */; };
 		6B9FC82414FDABA500E4CB2C /* expanz_model_ActivityStyle.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */; };
 		6B9FC82514FDABA500E4CB2C /* expanz_model_Column.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DB614EF920300909A38 /* expanz_model_Column.h */; };
@@ -527,6 +525,11 @@
 		6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
+		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
+		6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
+		6BB47E5215410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */; };
+		6BB47E5315410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */; };
 		6BB701EE14F352150029A94B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E85A014EFF58400FA4B5D /* libxml2.dylib */; };
 		6BB701EF14F352180029A94B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */; };
 		6BB701F014F3521A0029A94B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */; };
@@ -773,8 +776,11 @@
 		6BFDE7761495FA01005D35A4 /* expanz_model_Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
 		6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */; };
 		6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */; };
-		6BFDE7761495FA01005D35B9 /* CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */; };
-		6BFDE7761495FA01005D35BA /* CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */; };
+		6BFDE7761495FA01005D35B9 /* erp365CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */; };
+		6BFDE7761495FA01005D35BA /* erp365CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */; };
+		6BFDE7761495FA01005D35BC /* erp365CRM.Customer.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */; };
+		6BFDE7761495FA01005D35BD /* erp365CRM.Customer.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */; };
+		6BFDE7761495FA01005D35BF /* ActivityMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BE /* ActivityMenu.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -818,7 +824,6 @@
 				6B18A32215187A3500521FC1 /* UIView+ModelAdapter.h in Copy Headers */,
 				6B18A32315187A3500521FC1 /* expanz_ui_components_TextFieldTableCell.h in Copy Headers */,
 				6B18A32415187A3500521FC1 /* expanz_ui_components_ThumbnailTableCell.h in Copy Headers */,
-				6B18A32515187A3500521FC1 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
 				6B18A32615187A3500521FC1 /* expanz_ui_ActivityMenuViewController.h in Copy Headers */,
 				6B18A32715187A3500521FC1 /* expanz_ui_DocumentViewController.h in Copy Headers */,
 				6B18A32815187A3500521FC1 /* expanz_ui_LoginViewController.h in Copy Headers */,
@@ -883,7 +888,7 @@
 				6B9FC81F14FDABA500E4CB2C /* expanz_model_SiteList.h in Copy Headers */,
 				6B9FC82014FDABA500E4CB2C /* expanz_model_AbstractData.h in Copy Headers */,
 				6B9FC82114FDABA500E4CB2C /* expanz_model_AbstractGridDataCell.h in Copy Headers */,
-				6B9FC82214FDABA500E4CB2C /* expanz_model_ActivityMenuItem.h in Copy Headers */,
+				6B9FC82214FDABA500E4CB2C /* expanz_model_MenuItem.h in Copy Headers */,
 				6B9FC82314FDABA500E4CB2C /* expanz_model_ActivityInstance.h in Copy Headers */,
 				6B9FC82414FDABA500E4CB2C /* expanz_model_ActivityStyle.h in Copy Headers */,
 				6B9FC82514FDABA500E4CB2C /* expanz_model_Column.h in Copy Headers */,
@@ -946,7 +951,6 @@
 		6B41A0A3151877BD009ED6D0 /* expanz_ui_components_TextFieldTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_TextFieldTableCell.m; sourceTree = "<group>"; };
 		6B41A0A4151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_components_ThumbnailTableCell.h; sourceTree = "<group>"; };
 		6B41A0A5151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_components_ThumbnailTableCell.m; sourceTree = "<group>"; };
-		6B41A0A7151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityInstanceViewController.m; sourceTree = "<group>"; };
 		6B41A0A9151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityMenuViewController.h; sourceTree = "<group>"; };
 		6B41A0AA151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityMenuViewController.m; sourceTree = "<group>"; };
@@ -1004,8 +1008,8 @@
 		6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
 		6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractGridDataCell.h; sourceTree = "<group>"; };
 		6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractGridDataCell.m; sourceTree = "<group>"; };
-		6B718DB014EF920300909A38 /* expanz_model_ActivityMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityMenuItem.h; sourceTree = "<group>"; };
-		6B718DB114EF920300909A38 /* expanz_model_ActivityMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityMenuItem.m; sourceTree = "<group>"; };
+		6B718DB014EF920300909A38 /* expanz_model_MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MenuItem.h; sourceTree = "<group>"; };
+		6B718DB114EF920300909A38 /* expanz_model_MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MenuItem.m; sourceTree = "<group>"; };
 		6B718DB214EF920300909A38 /* expanz_model_ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityInstance.h; sourceTree = "<group>"; };
 		6B718DB314EF920300909A38 /* expanz_model_ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityInstance.m; sourceTree = "<group>"; };
 		6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityStyle.h; sourceTree = "<group>"; };
@@ -1057,7 +1061,11 @@
 		6BA4DD5C14E926970061FAC9 /* NSData+ExpanzAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ExpanzAdditions.h"; sourceTree = "<group>"; };
 		6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ExpanzAdditions.m"; sourceTree = "<group>"; };
 		6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = Dependencies/Frameworks/LRResty.framework; sourceTree = "<group>"; };
+		6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../Developer/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
+		6BB47E4C15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Company_Browse_ViewController.h; sourceTree = "<group>"; };
+		6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Company_Browse_ViewController.m; sourceTree = "<group>"; };
+		6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = erp365CRM.Company.Browse.xib; sourceTree = "<group>"; };
 		6BB701EB14F34FF70029A94B /* CoverageFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageFix.h; sourceTree = "<group>"; };
 		6BB701EC14F34FF70029A94B /* CoverageFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageFix.m; sourceTree = "<group>"; };
 		6BB7021714F39DB70029A94B /* expanz_model_AppSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AppSite.m; sourceTree = "<group>"; };
@@ -1280,7 +1288,9 @@
 		6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35B4 /* QueryDataSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataSourceSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityWithLongData.xml; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CRM.Customer.Detail.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365CRM.Customer.Detail.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365CRM.Customer.Browse.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35BE /* ActivityMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityMenu.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1473,7 +1483,7 @@
 		6B41A0A6151877BD009ED6D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B41A0A7151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h */,
+				6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */,
 				6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */,
 				6B41A0A9151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.h */,
 				6B41A0AA151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.m */,
@@ -1590,8 +1600,8 @@
 				6B718DAD14EF920300909A38 /* expanz_model_AbstractData.m */,
 				6B718DAE14EF920300909A38 /* expanz_model_AbstractGridDataCell.h */,
 				6B718DAF14EF920300909A38 /* expanz_model_AbstractGridDataCell.m */,
-				6B718DB014EF920300909A38 /* expanz_model_ActivityMenuItem.h */,
-				6B718DB114EF920300909A38 /* expanz_model_ActivityMenuItem.m */,
+				6B718DB014EF920300909A38 /* expanz_model_MenuItem.h */,
+				6B718DB114EF920300909A38 /* expanz_model_MenuItem.m */,
 				6B718DB214EF920300909A38 /* expanz_model_ActivityInstance.h */,
 				6B718DB314EF920300909A38 /* expanz_model_ActivityInstance.m */,
 				6B718DB414EF920300909A38 /* expanz_model_ActivityStyle.h */,
@@ -1777,6 +1787,8 @@
 		6BBC3AB1153C28A200E68952 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BB47E4C15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.h */,
+				6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */,
 				6BBC3ACF153C2C9800E68952 /* erp365CRM_Company_ViewController.h */,
 				6BBC3AD0153C2C9800E68952 /* erp365CRM_Company_ViewController.m */,
 				6BBC3AB2153C28A200E68952 /* ESA_Sales_Calc_ViewController.h */,
@@ -1972,6 +1984,7 @@
 		6BDAB0131499828800541056 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */,
 				6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */,
 				6BBC3AD5153C2CB100E68952 /* insurance.png */,
 				6BBC3AD6153C2CB100E68952 /* my details.png */,
@@ -2062,7 +2075,9 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D35B8 /* CRM.Customer.Detail.xml */,
+				6BFDE7761495FA01005D35BE /* ActivityMenu.xml */,
+				6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */,
+				6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */,
 				6BFDE7761495FA01005D35B6 /* ActivityWithLongData.xml */,
 				6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */,
 				6BFDE7761495FA01005D358C /* GetSchemaForActivityXResponse.xml */,
@@ -2310,7 +2325,7 @@
 				6B9FC7C414FDAB8200E4CB2C /* expanz_model_SiteList.h in Headers */,
 				6B9FC7C514FDAB8200E4CB2C /* expanz_model_AbstractData.h in Headers */,
 				6B9FC7C614FDAB8200E4CB2C /* expanz_model_AbstractGridDataCell.h in Headers */,
-				6B9FC7C714FDAB8200E4CB2C /* expanz_model_ActivityMenuItem.h in Headers */,
+				6B9FC7C714FDAB8200E4CB2C /* expanz_model_MenuItem.h in Headers */,
 				6B9FC7C814FDAB8200E4CB2C /* expanz_model_ActivityInstance.h in Headers */,
 				6B9FC7C914FDAB8200E4CB2C /* expanz_model_ActivityStyle.h in Headers */,
 				6B9FC7CA14FDAB8200E4CB2C /* expanz_model_Column.h in Headers */,
@@ -2345,7 +2360,6 @@
 				6B41A0D9151877BD009ED6D0 /* UIView+ModelAdapter.h in Headers */,
 				6B41A0DD151877BD009ED6D0 /* expanz_ui_components_TextFieldTableCell.h in Headers */,
 				6B41A0E1151877BD009ED6D0 /* expanz_ui_components_ThumbnailTableCell.h in Headers */,
-				6B41A0E5151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
 				6B41A0E9151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.h in Headers */,
 				6B41A0ED151877BD009ED6D0 /* expanz_ui_DocumentViewController.h in Headers */,
 				6B41A0F1151877BD009ED6D0 /* expanz_ui_LoginViewController.h in Headers */,
@@ -2360,6 +2374,7 @@
 				6B41A115151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h in Headers */,
 				6B41A116151877BD009ED6D0 /* expanz_ui_TextInputUtils.h in Headers */,
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
+				6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2370,7 +2385,7 @@
 				6B718E1614EF920300909A38 /* expanz_SdkConfiguration.h in Headers */,
 				6B718E2814EF920300909A38 /* expanz_model_AbstractData.h in Headers */,
 				6B718E2E14EF920300909A38 /* expanz_model_AbstractGridDataCell.h in Headers */,
-				6B718E3414EF920300909A38 /* expanz_model_ActivityMenuItem.h in Headers */,
+				6B718E3414EF920300909A38 /* expanz_model_MenuItem.h in Headers */,
 				6B718E3A14EF920300909A38 /* expanz_model_ActivityInstance.h in Headers */,
 				6B718E4014EF920300909A38 /* expanz_model_ActivityStyle.h in Headers */,
 				6B718E4614EF920300909A38 /* expanz_model_Column.h in Headers */,
@@ -2608,7 +2623,8 @@
 				6B41A0CD151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0D0151877BD009ED6D0 /* Icon@2x.png in Resources */,
 				6BFDE7761495FA01005D35B7 /* ActivityWithLongData.xml in Resources */,
-				6BFDE7761495FA01005D35B9 /* CRM.Customer.Detail.xml in Resources */,
+				6BFDE7761495FA01005D35B9 /* erp365CRM.Customer.Detail.xml in Resources */,
+				6BFDE7761495FA01005D35BC /* erp365CRM.Customer.Browse.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2631,11 +2647,13 @@
 				6BBC3AAA153C282D00E68952 /* Sales.Customer.xib in Resources */,
 				6BBC3AAB153C282D00E68952 /* TableCellForGridData.xib in Resources */,
 				6BBC3AAC153C282D00E68952 /* TableCellForTreeData.xib in Resources */,
-				6BFDE7761495FA01005D35BA /* CRM.Customer.Detail.xml in Resources */,
+				6BFDE7761495FA01005D35BA /* erp365CRM.Customer.Detail.xml in Resources */,
 				6BBC3AD9153C2CB100E68952 /* erp365CRM.Company.xib in Resources */,
 				6BBC3ADB153C2CB100E68952 /* insurance.png in Resources */,
 				6BBC3ADD153C2CB100E68952 /* my details.png in Resources */,
 				6BBC3ADF153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
+				6BFDE7761495FA01005D35BD /* erp365CRM.Customer.Browse.xml in Resources */,
+				6BB47E5315410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2646,6 +2664,7 @@
 				6B718F5614EF921100909A38 /* (null) in Resources */,
 				6B41A0CB151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CE151877BD009ED6D0 /* Icon@2x.png in Resources */,
+				6BFDE7761495FA01005D35BF /* ActivityMenu.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2675,6 +2694,7 @@
 				6BBC3ADA153C2CB100E68952 /* insurance.png in Resources */,
 				6BBC3ADC153C2CB100E68952 /* my details.png in Resources */,
 				6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */,
+				6BB47E5215410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2751,7 +2771,7 @@
 				6B718E1714EF920300909A38 /* expanz_SdkConfiguration.m in Sources */,
 				6B718E2914EF920300909A38 /* expanz_model_AbstractData.m in Sources */,
 				6B718E2F14EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */,
-				6B718E3514EF920300909A38 /* expanz_model_ActivityMenuItem.m in Sources */,
+				6B718E3514EF920300909A38 /* expanz_model_MenuItem.m in Sources */,
 				6B718E3B14EF920300909A38 /* expanz_model_ActivityInstance.m in Sources */,
 				6B718E4114EF920300909A38 /* expanz_model_ActivityStyle.m in Sources */,
 				6B718E4714EF920300909A38 /* expanz_model_Column.m in Sources */,
@@ -2922,6 +2942,7 @@
 				6BBC3AC3153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
 				6BBC3AC5153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 				6BBC3AD2153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
+				6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2942,7 +2963,7 @@
 				6B718E1A14EF920300909A38 /* expanz_SdkConfiguration.m in Sources */,
 				6B718E2C14EF920300909A38 /* expanz_model_AbstractData.m in Sources */,
 				6B718E3214EF920300909A38 /* expanz_model_AbstractGridDataCell.m in Sources */,
-				6B718E3814EF920300909A38 /* expanz_model_ActivityMenuItem.m in Sources */,
+				6B718E3814EF920300909A38 /* expanz_model_MenuItem.m in Sources */,
 				6B718E3E14EF920300909A38 /* expanz_model_ActivityInstance.m in Sources */,
 				6B718E4414EF920300909A38 /* expanz_model_ActivityStyle.m in Sources */,
 				6B718E4A14EF920300909A38 /* expanz_model_Column.m in Sources */,
@@ -3053,7 +3074,7 @@
 				6B558B891518388C00BD810C /* expanz_model_SiteList.m in Sources */,
 				6B558B8A1518388C00BD810C /* expanz_model_AbstractData.m in Sources */,
 				6B558B8B1518388C00BD810C /* expanz_model_AbstractGridDataCell.m in Sources */,
-				6B558B8C1518388C00BD810C /* expanz_model_ActivityMenuItem.m in Sources */,
+				6B558B8C1518388C00BD810C /* expanz_model_MenuItem.m in Sources */,
 				6B558B8D1518388C00BD810C /* expanz_model_ActivityInstance.m in Sources */,
 				6B558B8E1518388C00BD810C /* expanz_model_ActivityStyle.m in Sources */,
 				6B558B8F1518388C00BD810C /* expanz_model_Column.m in Sources */,
@@ -3107,6 +3128,7 @@
 				6BBC3AC2153C28A200E68952 /* Sales_Customer_ViewController.m in Sources */,
 				6BBC3AC4153C28A200E68952 /* Thermomix_TMXConsultant_MyDetails_ViewController.m in Sources */,
 				6BBC3AD1153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
+				6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

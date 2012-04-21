@@ -77,5 +77,12 @@
     return nil;
 }
 
+/* ================================================================================================================== */
+#pragma mark AbstractData Template Methods
+
+- (int) count {
+    return [_rows count];
+}
+
 
 @end

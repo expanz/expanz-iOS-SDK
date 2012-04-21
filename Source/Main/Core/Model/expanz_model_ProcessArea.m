@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_ProcessArea.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 
 @implementation expanz_model_ProcessArea
 
@@ -34,12 +34,12 @@
     return [_activities sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addActivityDefinition:(ActivityMenuItem*)activity {
-    [_activities addObject:activity];
+- (void) addMenuItem:(expanz_model_MenuItem*)menuItem {
+    [_activities addObject:menuItem];
 }
 
-- (ActivityMenuItem*) activityWithName:(NSString*)activityName {
-    for (ActivityMenuItem* activity in _activities) {
+- (MenuItem*) menuItemWithName:(NSString*)activityName {
+    for (MenuItem* activity in _activities) {
         if ([activity.activityId isEqualToString:activityName]) {
             return activity;
         }

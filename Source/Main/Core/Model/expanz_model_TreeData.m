@@ -35,4 +35,13 @@
     [_folders addObject:folder];
 }
 
+/* ================================================================================================================== */
+#pragma mark AbstractData Template Methods
+
+- (int) count {
+    return [_folders count];
+}
+
+
+
 @end

@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "expanz_model_ActivityStyle.h"
 
-@interface expanz_model_ActivityMenuItem : NSObject
+@interface expanz_model_MenuItem : NSObject
 
 @property(nonatomic, strong, readonly) NSString* activityId;
 @property(nonatomic, strong, readonly) NSString* title;
@@ -23,4 +23,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ActivityMenuItem expanz_model_ActivityMenuItem ;
+@compatibility_alias MenuItem expanz_model_MenuItem;

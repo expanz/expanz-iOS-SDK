@@ -8,13 +8,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import <Foundation/Foundation.h>
 
 @class expanz_model_AbstractData;
 @class expanz_ui_NavigationManager;
 
 
-@interface expanz_ui_AbstractDataRenderer : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface expanz_ui_AbstractDataRenderer : NSObject<UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate> {
+
+    NSMutableArray* _filteredListContent;
+
+}
 
 @property(nonatomic, strong) expanz_ui_NavigationManager* activityManager;
 
@@ -33,12 +38,20 @@
 */
 @property(nonatomic, strong, readonly) NSString* activityName;
 
+/**
+* Search controller responsible for filtering results list.
+*/
+@property(nonatomic, strong, readonly) UISearchDisplayController* searchController;
+
 
 /**
 * Initializes the renderer with data.
 */
-- (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
-      activityName:(NSString*)activityName;
+- (id) initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
+        activityName:(NSString*)activityName;
+
+
+- (void) makeSearchableWith:(UISearchBar*)searchBar controller:(UIViewController*)controller;
 
 @end
 

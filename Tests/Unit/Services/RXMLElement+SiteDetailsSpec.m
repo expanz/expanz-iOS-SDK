@@ -13,7 +13,7 @@
 #import "expanz_model_AppSite.h"
 #import "expanz_model_SiteList.h"
 #import "expanz_utils_BundleResource.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_model_ActivityMenu.h"
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_model_Query.h"
@@ -46,9 +46,9 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
                 LogDebug(@"List: %@", menu.activities);
 
                 [[menu.activities should] haveCountOf:5];
-                ActivityMenuItem* activityDefinition = [[menu activities] objectAtIndex:0];
-                [[[activityDefinition activityId] should] equal:@"MySample.MyAdvancedCalculator"];
-                [[[activityDefinition title] should] equal:@"Advanced Calculator"];
+                MenuItem* menuItem = [[menu activities] objectAtIndex:0];
+                [[[menuItem activityId] should] equal:@"MySample.MyAdvancedCalculator"];
+                [[[menuItem title] should] equal:@"Advanced Calculator"];
 
 
             });

@@ -22,7 +22,11 @@
 @private
     NSMutableArray* _observedCells;
     expanz_model_GridData* _gridData;
+    __weak NSArray* _fieldNames;
+    BOOL _shouldCheckForFieldNamesToRender;
+    BOOL _hasFieldNames;
 }
+
 
 /**
 * Injection point for loading custom table cells from a nib.

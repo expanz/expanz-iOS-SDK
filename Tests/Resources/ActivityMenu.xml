@@ -1,0 +1,38 @@
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" operationalMode="Testing" timeZone="(GMT+10:00) Canberra, Melbourne, Sydney"
+             blobCacheURL="https://www.expanz.com/BlobCache/" UserCultureName="en-AU" keepDBStats="0" responseTime="0"
+             xmlns="">
+            <Menu hasWorkflowTrays="0" canChangeCompanyRole="0">
+                <ProcessArea id="Leads" title="Leads">
+                    <Activity title="CRM.Company" name="erp365CRM.Company" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Opportunites" title="Opportunites">
+                    <Activity title="Opportunity" name="erp365CRM.Opportunity" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Interactions" title="Interactions">
+                    <Activity title="Interaction" name="erp365CRM.Interaction" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Steps_To_Close" title="Steps To Close">
+                    <Activity title="Steps To Close" name="erp365CRM.StepsToClose" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="People" title="People">
+                    <Activity title="Person" name="erp365CRM.Person" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Forecast" title="Forecast">
+                    <Activity title="Opportunity" name="erp365CRM.Opportunity" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Items" title="Items">
+                    <Activity title="Item For Sale" name="erp365CRM.ItemForSale" style="Browse"/>
+                </ProcessArea>
+                <ProcessArea id="Administration" title="Administration">
+                    <Activity title="Maintain Sales People" name="erp365CRM.SalesPerson" style="Browse"/>
+                </ProcessArea>
+                <Roles/>
+            </Menu>
+            <UIPreferences/>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/ERP65CRM#634705323693910451:111</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

@@ -12,7 +12,7 @@
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 
 
 SPEC_BEGIN(MenuSpec)
@@ -60,30 +60,30 @@ SPEC_BEGIN(MenuSpec)
         it(@"should allow returning the activities for all process areas as a single sorted collection", ^{
             ProcessArea* processArea1 = [[ProcessArea alloc] initWithProcessId:@"Documents" andTitle:@"Documents"];
 
-            ActivityMenuItem* activity1 = [[ActivityMenuItem alloc]
+            MenuItem* activity1 = [[MenuItem alloc]
                 initWithActivityId:@"Customers" title:@"Customers" style:[ActivityStyle defaultStyle]];
-            ActivityMenuItem* activity2 = [[ActivityMenuItem alloc]
+            MenuItem* activity2 = [[MenuItem alloc]
                 initWithActivityId:@"Invoices" title:@"Invoices" style:[ActivityStyle defaultStyle]];
 
-            [processArea1 addActivityDefinition:activity1];
-            [processArea1 addActivityDefinition:activity2];
+            [processArea1 addMenuItem:activity1];
+            [processArea1 addMenuItem:activity2];
             [menu addProcessArea:processArea1];
 
             ProcessArea* processArea2 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
 
-            ActivityMenuItem* activity3 = [[ActivityMenuItem alloc]
+            MenuItem* activity3 = [[MenuItem alloc]
                 initWithActivityId:@"Order Tracking" title:@"Order Tracking" style:[ActivityStyle defaultStyle]];
-            ActivityMenuItem* activity4 = [[ActivityMenuItem alloc]
+            MenuItem* activity4 = [[MenuItem alloc]
                 initWithActivityId:@"Engagements" title:@"Engagements" style:[ActivityStyle defaultStyle]];
 
-            [processArea2 addActivityDefinition:activity3];
-            [processArea2 addActivityDefinition:activity4];
+            [processArea2 addMenuItem:activity3];
+            [processArea2 addMenuItem:activity4];
             [menu addProcessArea:processArea2];
 
             ProcessArea* processArea3 = [[ProcessArea alloc] initWithProcessId:@"Consultants" andTitle:@"Consultants"];
             [menu addProcessArea:processArea3];
 
-            [[[menu allActivities] should] haveCountOf:4];
+            [[[menu allMenuItems] should] haveCountOf:4];
         });
 
     });

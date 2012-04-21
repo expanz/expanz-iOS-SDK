@@ -12,7 +12,7 @@
 
 #import <objc/runtime.h>
 #import "Objection.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 #import "expanz_AppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_ActivityMenuViewController.h"
@@ -52,11 +52,11 @@ objection_requires(@"reporter")
 }
 
 
-- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem {
+- (BOOL) showActivity:(MenuItem*)menuItem {
     return [self showActivity:menuItem initialKey:nil];
 }
 
-- (BOOL) showActivity:(expanz_model_ActivityMenuItem*)menuItem initialKey:(NSString*)initialKey {
+- (BOOL) showActivity:(MenuItem*)menuItem initialKey:(NSString*)initialKey {
 
     NSString* controllerClassName = [menuItem.style controllerClassNameForActivityId:menuItem.activityId];
     id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
@@ -68,7 +68,7 @@ objection_requires(@"reporter")
     else {
         ActivityInstanceViewController* nextView = [clazz alloc];
         NSString* nibName = [menuItem.style nibNameForActivityId:menuItem.activityId];
-        nextView = [nextView initWithActivityDefinition:menuItem nibName:nibName initialKey:initialKey];
+        nextView = [nextView initWithMenuItem:menuItem nibName:nibName initialKey:initialKey];
         [_navigationController pushViewController:nextView animated:YES];
         return YES;
     }

@@ -82,6 +82,10 @@
     return [_imageCells sortedArrayUsingDescriptors:_sortDescriptors];
 }
 
+ /* ================================================== Utility Methods =============================================== */
+ - (NSString*) description {
+     return [NSString stringWithFormat:@"Row: cells = %@", [self cells]];
+ }
 
 /* ================================================== Private Methods =============================================== */
 - (void) buildCellsIfRequired {

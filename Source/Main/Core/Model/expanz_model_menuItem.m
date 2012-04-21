@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 
-@implementation expanz_model_ActivityMenuItem
+@implementation expanz_model_MenuItem
 
 @synthesize activityId = _activityId;
 @synthesize title = _title;

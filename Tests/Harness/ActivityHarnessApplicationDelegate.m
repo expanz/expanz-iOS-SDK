@@ -18,15 +18,15 @@
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_utils_BundleResource.h"
 #import "expanz_model_ActivityStyle.h"
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_menuItem.h"
 
 
 //#define ACTIVITY_NAME   @"Thermomix.TMXConsultant.MyDetails"
 //#define DATA_FILE       @"Thermomix.TMXConsultant_MyDetails.xml"
 //#define ACTIVITY_STYLE  @""
 
-#define ACTIVITY_NAME   @"erp365CRM.Company"
-#define DATA_FILE       @"CRM.Customer.Detail.xml"
+#define ACTIVITY_NAME   @"erp365CRM.Company.Browse"
+#define DATA_FILE       @"erp365CRM.Customer.Browse.xml"
 #define ACTIVITY_STYLE  @""
 
 
@@ -43,17 +43,17 @@
 
     NavigationManager* navigationManager = [[NavigationManager alloc] init];
     navigationManager.reporter = [[AlertBoxSystemEventReporter alloc] init];
-    ActivityMenuItem* activityMenuItem =
-        [[ActivityMenuItem alloc] initWithActivityId:ACTIVITY_NAME title:@"Stub" style:[ActivityStyle defaultStyle]];
+    MenuItem* menuItem =
+            [[MenuItem alloc] initWithActivityId:ACTIVITY_NAME title:@"Stub" style:[ActivityStyle defaultStyle]];
 
-    [navigationManager showActivity:activityMenuItem];
+    [navigationManager showActivity:menuItem];
     [_window makeKeyAndVisible];
 
     NSString* data = [expanz_utils_BundleResource withName:DATA_FILE];
     //LogDebug(@"Activity data: %@", data);
     RXMLElement* element = [RXMLElement elementFromXMLString:data];
-    ActivityInstanceViewController* controller =
-        (ActivityInstanceViewController*) [_navigationController topViewController];
+    ActivityInstanceViewController
+            * controller = (ActivityInstanceViewController*) [_navigationController topViewController];
     ActivityInstance* activityInstance = [[element child:@"ExecXResult.ESA.Activity"] asActivityInstance];
     LogDebug(@"Activity instance: %@", activityInstance);
 

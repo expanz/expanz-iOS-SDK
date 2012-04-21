@@ -36,14 +36,29 @@
 
 - (void) addCellDefinitionWithId:(NSString*)cellId data:(NSString*)data;
 
+/**
+* Returns the cell with the given id, or nil.
+*/
 - (expanz_model_AbstractGridDataCell*) cellWithId:(NSString*)cellId;
 
+/**
+* Returns the cell matching the given field id, or nil.
+*/
 - (expanz_model_AbstractGridDataCell*) cellForFieldId:(NSString*)fieldId;
 
+/**
+* All `expanz_model_AbstractGridDataCell`s in the Row.
+*/
 - (NSArray*) cells;
 
+/**
+* All of the `expanz_model_TextGridDataCell`s in the Row.
+*/
 - (NSArray*) textCells;
 
+/**
+* All of the `expanz_model_ImageGridDataCell`s in the Row.
+*/
 - (NSArray*) imageCells;
 
 

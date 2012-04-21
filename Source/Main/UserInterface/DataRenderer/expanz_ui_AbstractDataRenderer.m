@@ -19,29 +19,44 @@
 @synthesize data = _data;
 @synthesize tableView = _tableView;
 @synthesize activityName = _activityName;
+@synthesize searchController = _searchController;
 
 
 /* ================================================== Initializers ================================================== */
-- (id)initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
-          activityName:(NSString*)activityName {
+- (id) initWithData:(AbstractData*)data tableView:(UITableView*)tableView
+        activityName:(NSString*)activityName {
+
     self = [super init];
     if (self) {
         _data = data;
         _tableView = tableView;
         _activityName = [activityName copy];
         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _filteredListContent = [NSMutableArray arrayWithCapacity:[_data count]];
     }
     return self;
 }
 
+/* ================================================ Interface Methods =============================================== */
+- (void) makeSearchableWith:(UISearchBar*)searchBar controller:(UIViewController*)controller {
+    if (searchBar != nil) {
+        LogDebug(@"Binding UISearchBar to UITableView: %@", _tableView);
+        _searchController =
+                [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:controller];
+        _searchController.delegate = self;
+        _searchController.searchResultsDataSource = self;
+        _searchController.searchResultsDelegate = self;
+    }
+}
+
+
 /* ================================================= Protocol Methods =============================================== */
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     return nil;
 }
-
 
 @end

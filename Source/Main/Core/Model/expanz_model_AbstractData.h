@@ -21,6 +21,8 @@
 
 - (id) initWithDataId:(NSString*)dataId;
 
+- (int) count;
+
 
 @end
 

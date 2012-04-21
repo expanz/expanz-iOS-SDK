@@ -60,7 +60,7 @@
 }
 
 
-- (NSArray*)allActivities {
+- (NSArray*) allMenuItems {
     if (_allActivities == nil) {
         _allActivities = [[NSMutableArray alloc] init];
         for (ProcessArea* processArea in [self processAreas]) {

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_model_ActivityMenuItem.h"
+#import "expanz_model_MenuItem.h"
 
 @interface expanz_model_ActivityMenu : NSObject {
 
@@ -20,7 +20,7 @@
 
 @property(nonatomic, strong, readonly) NSArray* activities;
 
-- (void) addActivityDefinition:(expanz_model_ActivityMenuItem*)activityDefinition;
+- (void) addMenuItem:(expanz_model_MenuItem*)menuItem;
 
 @end
 /* ================================================================================================================== */
