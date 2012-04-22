@@ -58,7 +58,7 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUISearchBar" id="391129048">
+					<object class="IBUISearchBar" id="984913503">
 						<reference key="NSNextResponder" ref="131824419"/>
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{320, 44}</string>
@@ -112,7 +112,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">searchBar</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="391129048"/>
+						<reference key="destination" ref="984913503"/>
 					</object>
 					<int key="connectionID">48</int>
 				</object>
@@ -157,7 +157,7 @@
 						<reference key="object" ref="131824419"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="614204575"/>
-							<reference ref="391129048"/>
+							<reference ref="984913503"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -178,7 +178,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
-						<reference key="object" ref="391129048"/>
+						<reference key="object" ref="984913503"/>
 						<reference key="parent" ref="131824419"/>
 					</object>
 				</array>

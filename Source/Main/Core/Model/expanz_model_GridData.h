@@ -37,6 +37,12 @@
 */
 - (id) initWithDataId:(NSString*)dataId source:(NSString*)source;
 
+
+/**
+* List of field IDs contained within this grid data.
+*/
+- (NSArray*) fieldIdentifiers;
+
 /**
 * Adds a column to the data set.
 */

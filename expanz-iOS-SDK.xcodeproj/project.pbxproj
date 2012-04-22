@@ -526,6 +526,7 @@
 		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E5215410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */; };
@@ -694,7 +695,7 @@
 		6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */; };
 		6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B0 /* ActivitySpec.m */; };
 		6BFDE7761495FA01005D34B3 /* ColumnSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B2 /* ColumnSpec.m */; };
-		6BFDE7761495FA01005D34B5 /* DataSetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B4 /* DataSetSpec.m */; };
+		6BFDE7761495FA01005D34B5 /* GridDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B4 /* GridDataSpec.m */; };
 		6BFDE7761495FA01005D34B7 /* FieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B6 /* FieldSpec.m */; };
 		6BFDE7761495FA01005D34B9 /* FileResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34B8 /* FileResourceSpec.m */; };
 		6BFDE7761495FA01005D34BB /* FileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D34BA /* FileSpec.m */; };
@@ -817,6 +818,7 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
 				6B18A31E15187A3500521FC1 /* expanz_AppDelegate.h in Copy Headers */,
 				6B18A31F15187A3500521FC1 /* expanz_UserInterfaceModule.h in Copy Headers */,
 				6B18A32015187A3500521FC1 /* expanz_model_AbstractData+DataRenderer.h in Copy Headers */,
@@ -1219,7 +1221,7 @@
 		6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInstanceSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34B0 /* ActivitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34B2 /* ColumnSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnSpec.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D34B4 /* DataSetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSetSpec.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D34B4 /* GridDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridDataSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34B6 /* FieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34B8 /* FileResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileResourceSpec.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D34BA /* FileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSpec.m; sourceTree = "<group>"; };
@@ -2152,7 +2154,7 @@
 				6BFDE7761495FA01005D34BA /* FileSpec.m */,
 				6BFDE7761495FA01005D34B8 /* FileResourceSpec.m */,
 				6BFDE7761495FA01005D34B6 /* FieldSpec.m */,
-				6BFDE7761495FA01005D34B4 /* DataSetSpec.m */,
+				6BFDE7761495FA01005D34B4 /* GridDataSpec.m */,
 				6BFDE7761495FA01005D34B2 /* ColumnSpec.m */,
 				6BFDE7761495FA01005D34B0 /* ActivitySpec.m */,
 				6BFDE7761495FA01005D34AE /* ActivityInstanceSpec.m */,
@@ -2860,7 +2862,7 @@
 				6BFDE7761495FA01005D34AF /* ActivityInstanceSpec.m in Sources */,
 				6BFDE7761495FA01005D34B1 /* ActivitySpec.m in Sources */,
 				6BFDE7761495FA01005D34B3 /* ColumnSpec.m in Sources */,
-				6BFDE7761495FA01005D34B5 /* DataSetSpec.m in Sources */,
+				6BFDE7761495FA01005D34B5 /* GridDataSpec.m in Sources */,
 				6BFDE7761495FA01005D34B7 /* FieldSpec.m in Sources */,
 				6BFDE7761495FA01005D34B9 /* FileResourceSpec.m in Sources */,
 				6BFDE7761495FA01005D34BB /* FileSpec.m in Sources */,

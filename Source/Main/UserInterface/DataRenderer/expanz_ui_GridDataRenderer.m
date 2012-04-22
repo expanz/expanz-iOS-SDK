@@ -22,9 +22,7 @@
 
 @interface expanz_ui_GridDataRenderer (Private)
 
-- (void) checkForFieldNamesToRenderFor:(UITableView*)tableView;
-
-- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractGridDataCell*)abstractCell;
+- (void) storeFieldNamesToRenderOn:(UITableView*)tableView;
 
 - (ThumbnailTableCell*) dequeueTableCellFor:(UITableView*)tableView reuseId:(NSString*)reuseId;
 
@@ -38,6 +36,10 @@
 @implementation expanz_ui_GridDataRenderer
 
 @synthesize tableCell = _tableCell;
+@synthesize mainLabelFieldId = _mainLabelFieldId;
+@synthesize subLabelFieldId = _subLabelFieldId;
+@synthesize thumbnailFieldId = _thumbnailFieldId;
+
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
@@ -47,7 +49,7 @@
     if (self) {
         _gridData = (GridData*) self.data;
         _observedCells = [[NSMutableArray alloc] init];
-        _shouldCheckForFieldNamesToRender = YES;
+        _shouldStoreFieldIdentifiersToRender = YES;
     }
     return self;
 }
@@ -71,25 +73,27 @@
         cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
     }
 
+    if (_shouldStoreFieldIdentifiersToRender) {
+        [self storeFieldNamesToRenderOn:tableView];
+    }
+
     Row* row = [self tableView:tableView rowForIndexPath:indexPath];
 
-    if (_shouldCheckForFieldNamesToRender) {
-        [self checkForFieldNamesToRenderFor:tableView];
+    if ([_thumbnailFieldId length] > 0) {
+        ImageGridDataCell* imageCell = [row cellForFieldId:_thumbnailFieldId];
+        cell.thumbnail.image = [UIImage imageWithData:imageCell.imageData];
+        if (cell.thumbnail.image == nil) {
+            LogDebug(@"Observing cell for an image that hasn't loaded yet.");
+            [imageCell addObserver:self forKeyPath:@"imageData" options:0 context:(__bridge void*) cell];
+            [_observedCells addObject:imageCell];
+            if (imageCell.hasAskedImageToLoad == NO) {
+                [imageCell loadImage];
+            }
+        }
     }
 
-    if (_hasFieldNames) {
-        LogDebug(@"Populating cell with fieldNames: %@", _fieldNames);
-        for (NSString* fieldName in _fieldNames) {
-            AbstractGridDataCell* abstractCell = [row cellForFieldId:fieldName];
-            [self populateCel:cell withDataFrom:abstractCell];
-        }
-    }
-    else {
-        NSArray* abstractCells = [row cells];
-        for (AbstractGridDataCell* abstractCell in abstractCells) {
-            [self populateCel:cell withDataFrom:abstractCell];
-        }
-    }
+    cell.mainLabel.text = ((TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId]).text;
+    cell.subLabel.text = ((TextGridDataCell*) [row cellForFieldId:_subLabelFieldId]).text;
 
     return cell;
 }
@@ -146,40 +150,29 @@
 
 
 /* ================================================== Private Methods =============================================== */
-- (void) checkForFieldNamesToRenderFor:(UITableView*)tableView {
-    _fieldNames = [tableView fieldNames];
-    if (_fieldNames != nil) {
-        _hasFieldNames = YES;
+- (void) storeFieldNamesToRenderOn:(UITableView*)tableView {
+    NSArray* candidateFieldNames = [tableView fieldNames];
+    if ([candidateFieldNames count] == 0) {
+        candidateFieldNames = [_gridData fieldIdentifiers];
     }
-    _shouldCheckForFieldNamesToRender = NO;
-}
+    LogDebug(@"Candidate field names: %@", candidateFieldNames);
 
-- (void) populateCel:(ThumbnailTableCell*)cell withDataFrom:(AbstractGridDataCell*)gridDataCell {
-
-    if ([gridDataCell isKindOfClass:[ImageGridDataCell class]] && cell.thumbnail.image == nil) {
-        ImageGridDataCell* imageCell = (ImageGridDataCell*) gridDataCell;
-        cell.thumbnail.image = [UIImage imageWithData:imageCell.imageData];
-        if (cell.thumbnail.image == nil) {
-            LogDebug(@"Observing cell for an image. . . ");
-            [imageCell addObserver:self forKeyPath:@"imageData" options:0 context:(__bridge void*) cell];
+    for (NSString* fieldName in candidateFieldNames) {
+        AbstractGridDataCell* cell = [[[_gridData rows] objectAtIndex:0] cellForFieldId:fieldName];
+        if ([cell isKindOfClass:[ImageGridDataCell class]] && [_thumbnailFieldId length] == 0) {
+            _thumbnailFieldId = fieldName;
+            LogDebug(@"Thumbnail field ID will be: %@", _thumbnailFieldId);
         }
-        if (imageCell.hasAskedImageToLoad == NO) {
-            [imageCell loadImage];
-            [_observedCells addObject:imageCell];
+        else if ([cell isKindOfClass:[TextGridDataCell class]] && [_mainLabelFieldId length] == 0) {
+            _mainLabelFieldId = fieldName;
+            LogDebug(@"Main label field ID will be: %@", _mainLabelFieldId);
         }
-        else {
-            LogDebug(@"Image already loaded. . . ");
+        else if ([cell isKindOfClass:[TextGridDataCell class]] && [_subLabelFieldId length] == 0) {
+            _subLabelFieldId = fieldName;
+            LogDebug(@"Detail label field ID will be: %@", _subLabelFieldId);
         }
     }
-    else if ([gridDataCell isKindOfClass:[TextGridDataCell class]]) {
-        TextGridDataCell* textCell = (TextGridDataCell*) gridDataCell;
-        if (cell.mainLabel.text == nil) {
-            cell.mainLabel.text = textCell.text;
-        }
-        else if (cell.subLabel.text == nil) {
-            cell.subLabel.text = textCell.text;
-        }
-    }
+    _shouldStoreFieldIdentifiersToRender = NO;
 }
 
 - (ThumbnailTableCell*) dequeueTableCellFor:(UITableView*)tableView reuseId:(NSString*)reuseId {
@@ -209,17 +202,18 @@
 - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
 
     [_filteredListContent removeAllObjects];
+    int searchOptions = (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);
+    NSRange searchTextRange = NSMakeRange(0, [searchText length]);
 
     for (Row* row in [_gridData rows]) {
+        NSString* mainLabeltext = [(TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId] text];
+        NSString* subLabelText = [(TextGridDataCell*) [row cellForFieldId:_subLabelFieldId] text];
 
-        NSComparisonResult result;
-        int searchOptions = (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);
-        for (TextGridDataCell* cell in [row textCells]) {
-            result = [cell.text compare:searchText options:searchOptions range:NSMakeRange(0, [searchText length])];
-            if (result == NSOrderedSame) {
-                [_filteredListContent addObject:row];
-                break;
-            }
+        NSComparisonResult matchMain = [mainLabeltext compare:searchText options:searchOptions range:searchTextRange];
+        NSComparisonResult matchSub = [subLabelText compare:searchText options:searchOptions range:searchTextRange];
+
+        if (matchMain == NSOrderedSame || matchSub == NSOrderedSame) {
+            [_filteredListContent addObject:row];
         }
     }
 }

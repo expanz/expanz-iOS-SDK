@@ -14,7 +14,7 @@
 @interface expanz_ui_FieldFilter : NSObject {
 
 @private
-    NSMutableDictionary* _cache;
+    NSMutableArray* _fields;
 }
 
 - (NSArray*) fields;

@@ -22,16 +22,18 @@
 @private
     NSMutableArray* _observedCells;
     expanz_model_GridData* _gridData;
-    __weak NSArray* _fieldNames;
-    BOOL _shouldCheckForFieldNamesToRender;
-    BOOL _hasFieldNames;
+    BOOL _shouldStoreFieldIdentifiersToRender;
 }
 
 
 /**
 * Injection point for loading custom table cells from a nib.
 */
-@property(nonatomic, assign) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
+@property(nonatomic, weak) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
+
+@property(nonatomic, strong, readonly) NSString* mainLabelFieldId;
+@property(nonatomic, strong, readonly) NSString* subLabelFieldId;
+@property(nonatomic, strong, readonly) NSString* thumbnailFieldId;
 
 
 @end
