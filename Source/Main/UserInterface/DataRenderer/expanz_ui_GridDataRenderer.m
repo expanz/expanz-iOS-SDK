@@ -28,7 +28,7 @@
 
 - (Row*) tableView:(UITableView*)tableView rowForIndexPath:(NSIndexPath*)indexPath;
 
-- (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope;
+- (void) thumbnailTableViewCell:(ThumbnailTableCell*)cell setThumbnailImageFor:(Row*)row;
 
 @end
 /* ================================================================================================================== */
@@ -61,17 +61,14 @@
         return [_filteredListContent count];
     }
     else {
-        return [_gridData.rows count];
+        return [[_gridData rows] count];
     }
-
 }
 
 - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
 
     ThumbnailTableCell* cell = [self dequeueTableCellFor:tableView reuseId:[_gridData dataId]];
-    if (indexPath.row % 2) {
-        cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
-    }
+    [self setBackgroundColorForIndexPath:indexPath OnCell:cell];
 
     if (_shouldStoreFieldIdentifiersToRender) {
         [self storeFieldNamesToRenderOn:tableView];
@@ -79,19 +76,7 @@
 
     Row* row = [self tableView:tableView rowForIndexPath:indexPath];
 
-    if ([_thumbnailFieldId length] > 0) {
-        ImageGridDataCell* imageCell = [row cellForFieldId:_thumbnailFieldId];
-        cell.thumbnail.image = [UIImage imageWithData:imageCell.imageData];
-        if (cell.thumbnail.image == nil) {
-            LogDebug(@"Observing cell for an image that hasn't loaded yet.");
-            [imageCell addObserver:self forKeyPath:@"imageData" options:0 context:(__bridge void*) cell];
-            [_observedCells addObject:imageCell];
-            if (imageCell.hasAskedImageToLoad == NO) {
-                [imageCell loadImage];
-            }
-        }
-    }
-
+    [self thumbnailTableViewCell:cell setThumbnailImageFor:row];
     cell.mainLabel.text = ((TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId]).text;
     cell.subLabel.text = ((TextGridDataCell*) [row cellForFieldId:_subLabelFieldId]).text;
 
@@ -115,6 +100,21 @@
 /* ================================================================================================================== */
 #pragma mark Add Images as they Load
 
+- (void) thumbnailTableViewCell:(ThumbnailTableCell*)cell setThumbnailImageFor:(Row*)row {
+    if ([_thumbnailFieldId length] > 0) {
+        ImageGridDataCell* imageCell = [row cellForFieldId:_thumbnailFieldId];
+        cell.thumbnail.image = [UIImage imageWithData:imageCell.imageData];
+        if (cell.thumbnail.image == nil) {
+            LogDebug(@"Observing cell for an image that hasn't loaded yet.");
+            [imageCell addObserver:self forKeyPath:@"imageData" options:0 context:(__bridge void*) cell];
+            [_observedCells addObject:imageCell];
+            if (imageCell.hasAskedImageToLoad == NO) {
+                [imageCell loadImage];
+            }
+        }
+    }
+}
+
 - (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change
         context:(void*)context {
 
@@ -126,36 +126,31 @@
 }
 
 /* ================================================================================================================== */
-#pragma mark -
-#pragma mark UISearchDisplayController Delegate Methods
+#pragma mark Content Filtering for UISearchDisplayController delegate
 
-- (BOOL) searchDisplayController:(UISearchDisplayController*)controller
-        shouldReloadTableForSearchString:(NSString*)searchString {
+- (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
 
-    NSArray* scope = [self.searchController.searchBar scopeButtonTitles];
-    NSInteger selectedScopeButtonIndex = [self.searchController.searchBar selectedScopeButtonIndex];
-    [self filterContentForSearchText:searchString scope:[scope objectAtIndex:selectedScopeButtonIndex]];
-    return YES;
+    [_filteredListContent removeAllObjects];
+    NSRange searchTextRange = NSMakeRange(0, [searchText length]);
+    int searchOptions = [self searchOptions];
+
+    for (Row* row in [_gridData rows]) {
+        NSString* titleText = [(TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId] text];
+        NSString* detailText = [(TextGridDataCell*) [row cellForFieldId:_subLabelFieldId] text];
+
+        if (([titleText compare:searchText options:searchOptions range:searchTextRange]) == NSOrderedSame ||
+                ([detailText compare:searchText options:searchOptions range:searchTextRange]) == NSOrderedSame) {
+            [_filteredListContent addObject:row];
+        }
+    }
 }
-
-
-- (BOOL) searchDisplayController:(UISearchDisplayController*)controller
-        shouldReloadTableForSearchScope:(NSInteger)searchOption {
-
-    NSString* searchText = [self.searchController.searchBar text];
-    NSArray* searchScope = [self.searchController.searchBar scopeButtonTitles];
-    [self filterContentForSearchText:searchText scope:[searchScope objectAtIndex:searchOption]];
-    return YES;
-}
-
 
 /* ================================================== Private Methods =============================================== */
 - (void) storeFieldNamesToRenderOn:(UITableView*)tableView {
     NSArray* candidateFieldNames = [tableView fieldNames];
     if ([candidateFieldNames count] == 0) {
         candidateFieldNames = [_gridData fieldIdentifiers];
-    }
-    LogDebug(@"Candidate field names: %@", candidateFieldNames);
+    }LogDebug(@"Candidate field names: %@", candidateFieldNames);
 
     for (NSString* fieldName in candidateFieldNames) {
         AbstractGridDataCell* cell = [[[_gridData rows] objectAtIndex:0] cellForFieldId:fieldName];
@@ -198,25 +193,5 @@
     }
     return row;
 }
-
-- (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-
-    [_filteredListContent removeAllObjects];
-    int searchOptions = (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);
-    NSRange searchTextRange = NSMakeRange(0, [searchText length]);
-
-    for (Row* row in [_gridData rows]) {
-        NSString* mainLabeltext = [(TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId] text];
-        NSString* subLabelText = [(TextGridDataCell*) [row cellForFieldId:_subLabelFieldId] text];
-
-        NSComparisonResult matchMain = [mainLabeltext compare:searchText options:searchOptions range:searchTextRange];
-        NSComparisonResult matchSub = [subLabelText compare:searchText options:searchOptions range:searchTextRange];
-
-        if (matchMain == NSOrderedSame || matchSub == NSOrderedSame) {
-            [_filteredListContent addObject:row];
-        }
-    }
-}
-
 
 @end

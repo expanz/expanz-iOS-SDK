@@ -21,6 +21,9 @@
 }
 
 - (NSArray*) folders;
+
+- (expanz_model_Folder*) folderWithId:(NSString*)folderId;
+
 - (void) addFolder:(expanz_model_Folder*)folder;
 
 

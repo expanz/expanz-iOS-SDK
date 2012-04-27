@@ -9,21 +9,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_AbstractData.h"
+#import <UIKit/UIKit.h>
+#import "expanz_ui_ActivityInstanceViewController.h"
 
-@implementation expanz_model_AbstractData
+@interface Thermomix_DocumentMaintenance_Portal_ViewController : expanz_ui_ActivityInstanceViewController
 
-@synthesize dataId = _dataId;
-
-/* ================================================== Initializers ================================================== */
-
-- (id) initWithDataId:(NSString*)dataId {
-    self = [super init];
-    if (self) {
-        _dataId = [dataId copy];
-    }
-    return self;
-}
-
+@property(nonatomic, retain) IBOutlet UITableView* DocumentsTree;
 
 @end

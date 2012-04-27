@@ -30,6 +30,16 @@
     return [_folders sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
+- (Folder*) folderWithId:(NSString*)folderId {
+
+    for (Folder* folder in _folders) {
+        if ([[folder folderId] isEqualToString:folderId]) {
+            return folder;
+        }
+    }
+    return nil;
+}
+
 
 - (void)addFolder:(expanz_model_Folder*)folder {
     [_folders addObject:folder];

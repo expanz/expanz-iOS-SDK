@@ -15,7 +15,8 @@
 @class expanz_ui_NavigationManager;
 
 
-@interface expanz_ui_AbstractDataRenderer : NSObject<UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate> {
+@interface expanz_ui_AbstractDataRenderer : NSObject<UITableViewDataSource, UITableViewDelegate,
+        UISearchDisplayDelegate> {
 
     NSMutableArray* _filteredListContent;
 
@@ -51,7 +52,28 @@
         activityName:(NSString*)activityName;
 
 
+/* ================================================================================================================== */
+#pragma mark Searching
+
+/**
+* Injection point for a searchBar.
+*/
 - (void) makeSearchableWith:(UISearchBar*)searchBar controller:(UIViewController*)controller;
+
+/**
+* Search options to direct the style of search (case-insensitive, etc) in both GridDataRenderer and TreeDataRender.
+*/
+- (int) searchOptions;
+
+/**
+* Abstract method with concrete implementation in GridDataRenderer and TreeDataRenderer.
+*/
+- (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope;
+
+
+
+/* ================================================================================================================== */
+- (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell;
 
 @end
 

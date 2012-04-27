@@ -25,9 +25,13 @@
 //#define DATA_FILE       @"Thermomix.TMXConsultant_MyDetails.xml"
 //#define ACTIVITY_STYLE  @""
 
-#define ACTIVITY_NAME   @"erp365CRM.Company.Browse"
-#define DATA_FILE       @"erp365CRM.Customer.Browse.xml"
+#define ACTIVITY_NAME   @"Thermomix.DocumentMaintenance.Portal"
+#define DATA_FILE       @"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"
 #define ACTIVITY_STYLE  @""
+
+//#define ACTIVITY_NAME   @"erp365CRM.Company.Browse"
+//#define DATA_FILE       @"erp365CRM.Customer.Browse.xml"
+//#define ACTIVITY_STYLE  @""
 
 
 @implementation ActivityHarnessApplicationDelegate
