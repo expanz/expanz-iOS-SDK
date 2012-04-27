@@ -114,7 +114,7 @@
             <fileset dir="${packager.plugin.dir}"/>
         </copy>
         <exec executable="${packager.path}">
-            <arg line="--doc ${source.installer.dir}/installer.pmdoc --out ${packager.out}"/>
+            <arg line="--doc ${source.installer.dir}/sdk-installer.pmdoc --out ${packager.out}"/>
         </exec>
     </target>
 
