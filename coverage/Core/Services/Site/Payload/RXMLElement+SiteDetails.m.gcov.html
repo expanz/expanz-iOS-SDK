@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -88,9 +88,9 @@
 <span class="lineNum">      30 </span>            : 
 <span class="lineNum">      31 </span><span class="lineCov">         22 :     ActivityMenu* activityList = [[ActivityMenu alloc] init];</span>
 <span class="lineNum">      32 </span><span class="lineCov">         12 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* element) {</span>
-<span class="lineNum">      33 </span>            :         ActivityMenuItem* definition = [[ActivityMenuItem alloc]
+<span class="lineNum">      33 </span>            :         MenuItem* menuItem = [[MenuItem alloc]
 <span class="lineNum">      34 </span><span class="lineCov">         10 :                 initWithActivityId:[element attribute:@&quot;id&quot;] title:[element attribute:@&quot;name&quot;] style:nil];</span>
-<span class="lineNum">      35 </span><span class="lineCov">         10 :         [activityList addActivityDefinition:definition];</span>
+<span class="lineNum">      35 </span><span class="lineCov">         10 :         [activityList addMenuItem:menuItem];</span>
 <span class="lineNum">      36 </span><span class="lineCov">         20 :     }];</span>
 <span class="lineNum">      37 </span><span class="lineCov">          2 :     return activityList;</span>
 <span class="lineNum">      38 </span><span class="lineCov">          2 : }</span>

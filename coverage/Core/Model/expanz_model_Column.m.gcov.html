@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -71,11 +71,11 @@
 <span class="lineNum">      13 </span>            : #import &quot;expanz_model_Column.h&quot;
 <span class="lineNum">      14 </span>            : 
 <span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">          9 : @implementation expanz_model_Column</span>
+<span class="lineNum">      16 </span><span class="lineCov">         11 : @implementation expanz_model_Column</span>
 <span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span><span class="lineCov">         64 : @synthesize dataSet = _dataSet;</span>
+<span class="lineNum">      18 </span><span class="lineCov">         68 : @synthesize dataSet = _dataSet;</span>
 <span class="lineNum">      19 </span><span class="lineCov">        265 : @synthesize columnId = _columnId;</span>
-<span class="lineNum">      20 </span><span class="lineCov">         12 : @synthesize fieldId = _fieldId;</span>
+<span class="lineNum">      20 </span><span class="lineCov">         14 : @synthesize fieldId = _fieldId;</span>
 <span class="lineNum">      21 </span><span class="lineCov">         11 : @synthesize label = _label;</span>
 <span class="lineNum">      22 </span><span class="lineCov">         48 : @synthesize dataType = _dataType;</span>
 <span class="lineNum">      23 </span><span class="lineCov">         11 : @synthesize width = _width;</span>
@@ -83,19 +83,19 @@
 <span class="lineNum">      25 </span>            : 
 <span class="lineNum">      26 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      27 </span>            : - (id) initWithColumnId:(NSString*)columnId field:(NSString*)field label:(NSString*)label
-<span class="lineNum">      28 </span><span class="lineCov">         33 :                dataType:(ExpanzDataType)dataType width:(NSInteger)width {</span>
-<span class="lineNum">      29 </span><span class="lineCov">         33 : </span>
-<span class="lineNum">      30 </span><span class="lineCov">         32 :     self = [super init];</span>
-<span class="lineNum">      31 </span><span class="lineCov">         33 :     if (self) {</span>
-<span class="lineNum">      32 </span><span class="lineCov">         33 :         _columnId = [columnId copy];</span>
-<span class="lineNum">      33 </span><span class="lineCov">         33 :         _fieldId = [field copy];</span>
-<span class="lineNum">      34 </span><span class="lineCov">         33 :         _label = [label copy];</span>
-<span class="lineNum">      35 </span><span class="lineCov">         33 :         _dataType = dataType;</span>
-<span class="lineNum">      36 </span><span class="lineCov">         33 :         _width = width;</span>
-<span class="lineNum">      37 </span><span class="lineCov">         33 :     }</span>
-<span class="lineNum">      38 </span><span class="lineCov">         33 :     return self;</span>
-<span class="lineNum">      39 </span><span class="lineCov">         33 : }</span>
-<span class="lineNum">      40 </span><span class="lineCov">         33 : </span>
+<span class="lineNum">      28 </span><span class="lineCov">         35 :                dataType:(ExpanzDataType)dataType width:(NSInteger)width {</span>
+<span class="lineNum">      29 </span><span class="lineCov">         35 : </span>
+<span class="lineNum">      30 </span><span class="lineCov">         34 :     self = [super init];</span>
+<span class="lineNum">      31 </span><span class="lineCov">         35 :     if (self) {</span>
+<span class="lineNum">      32 </span><span class="lineCov">         35 :         _columnId = [columnId copy];</span>
+<span class="lineNum">      33 </span><span class="lineCov">         35 :         _fieldId = [field copy];</span>
+<span class="lineNum">      34 </span><span class="lineCov">         35 :         _label = [label copy];</span>
+<span class="lineNum">      35 </span><span class="lineCov">         35 :         _dataType = dataType;</span>
+<span class="lineNum">      36 </span><span class="lineCov">         35 :         _width = width;</span>
+<span class="lineNum">      37 </span><span class="lineCov">         35 :     }</span>
+<span class="lineNum">      38 </span><span class="lineCov">         35 :     return self;</span>
+<span class="lineNum">      39 </span><span class="lineCov">         35 : }</span>
+<span class="lineNum">      40 </span><span class="lineCov">         35 : </span>
 <span class="lineNum">      41 </span>            : @end
 </pre>
       </td>

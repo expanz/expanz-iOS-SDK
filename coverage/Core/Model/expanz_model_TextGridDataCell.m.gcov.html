@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntryMed">81.8 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -80,12 +80,15 @@
 <span class="lineNum">      22 </span><span class="lineCov">         44 :     if (self) {</span>
 <span class="lineNum">      23 </span><span class="lineCov">         44 :         _text = [text copy];</span>
 <span class="lineNum">      24 </span><span class="lineCov">         44 :     }</span>
-<span class="lineNum">      25 </span><span class="lineCov">         44 : </span>
-<span class="lineNum">      26 </span>            :     return self;
+<span class="lineNum">      25 </span><span class="lineCov">         44 :     return self;</span>
+<span class="lineNum">      26 </span><span class="lineCov">         44 : }</span>
 <span class="lineNum">      27 </span><span class="lineCov">         44 : </span>
-<span class="lineNum">      28 </span>            : }
-<span class="lineNum">      29 </span><span class="lineCov">         44 : </span>
-<span class="lineNum">      30 </span>            : @end
+<span class="lineNum">      28 </span>            : /* ================================================== Utility Methods =============================================== */
+<span class="lineNum">      29 </span>            : - (NSString*) description {
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 :     return [NSString stringWithFormat:@&quot;TextCell: text=%@&quot;, _text];</span>
+<span class="lineNum">      31 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      32 </span>            : 
+<span class="lineNum">      33 </span>            : @end
 </pre>
       </td>
     </tr>

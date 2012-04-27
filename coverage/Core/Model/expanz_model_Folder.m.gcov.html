@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -73,7 +73,7 @@
 <span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span><span class="lineCov">          1 : @implementation expanz_model_Folder</span>
 <span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span><span class="lineCov">          1 : @synthesize folderId = _folderId;</span>
+<span class="lineNum">      18 </span><span class="lineCov">          3 : @synthesize folderId = _folderId;</span>
 <span class="lineNum">      19 </span><span class="lineCov">          1 : @synthesize title = _title;</span>
 <span class="lineNum">      20 </span><span class="lineCov">          1 : @synthesize hint = _hint;</span>
 <span class="lineNum">      21 </span><span class="lineCov">          1 : @synthesize buttonTitle = _buttonTitle;</span>
@@ -82,20 +82,20 @@
 <span class="lineNum">      24 </span>            : 
 <span class="lineNum">      25 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      26 </span>            : - (id)initWithFolderId:(NSString*)folderId title:(NSString*)title hint:(NSString*)hint
-<span class="lineNum">      27 </span><span class="lineCov">         31 :            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence {</span>
-<span class="lineNum">      28 </span><span class="lineCov">         31 : </span>
+<span class="lineNum">      27 </span><span class="lineCov">         32 :            buttonTitle:(NSString*)buttonTitle sequence:(NSString*)sequence {</span>
+<span class="lineNum">      28 </span><span class="lineCov">         32 : </span>
 <span class="lineNum">      29 </span>            :     self = [super init];
-<span class="lineNum">      30 </span><span class="lineCov">         31 :     if (self) {</span>
-<span class="lineNum">      31 </span><span class="lineCov">         31 :         _folderId = [folderId copy];</span>
-<span class="lineNum">      32 </span><span class="lineCov">         31 :         _title = [title copy];</span>
-<span class="lineNum">      33 </span><span class="lineCov">         31 :         _hint = [hint copy];</span>
-<span class="lineNum">      34 </span><span class="lineCov">         31 :         _buttonTitle = [buttonTitle copy];</span>
-<span class="lineNum">      35 </span><span class="lineCov">         31 :         _sequence = [sequence copy];</span>
-<span class="lineNum">      36 </span><span class="lineCov">         31 :         _files = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">      37 </span><span class="lineCov">         31 :     }</span>
-<span class="lineNum">      38 </span><span class="lineCov">         31 :     return self;</span>
-<span class="lineNum">      39 </span><span class="lineCov">         31 : }</span>
-<span class="lineNum">      40 </span><span class="lineCov">         31 : </span>
+<span class="lineNum">      30 </span><span class="lineCov">         32 :     if (self) {</span>
+<span class="lineNum">      31 </span><span class="lineCov">         32 :         _folderId = [folderId copy];</span>
+<span class="lineNum">      32 </span><span class="lineCov">         32 :         _title = [title copy];</span>
+<span class="lineNum">      33 </span><span class="lineCov">         32 :         _hint = [hint copy];</span>
+<span class="lineNum">      34 </span><span class="lineCov">         32 :         _buttonTitle = [buttonTitle copy];</span>
+<span class="lineNum">      35 </span><span class="lineCov">         32 :         _sequence = [sequence copy];</span>
+<span class="lineNum">      36 </span><span class="lineCov">         32 :         _files = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">      37 </span><span class="lineCov">         32 :     }</span>
+<span class="lineNum">      38 </span><span class="lineCov">         32 :     return self;</span>
+<span class="lineNum">      39 </span><span class="lineCov">         32 : }</span>
+<span class="lineNum">      40 </span><span class="lineCov">         32 : </span>
 <span class="lineNum">      41 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      42 </span>            : - (NSArray*)files {
 <span class="lineNum">      43 </span><span class="lineCov">          4 :     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@&quot;sequence&quot; ascending:YES];</span>

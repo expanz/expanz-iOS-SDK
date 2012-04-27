@@ -44,6 +44,8 @@
 	
 	<option value="//api/name/data">&nbsp;&nbsp;&nbsp;&nbsp;data</option>
 	
+	<option value="//api/name/searchController">&nbsp;&nbsp;&nbsp;&nbsp;searchController</option>
+	
 	<option value="//api/name/tableView">&nbsp;&nbsp;&nbsp;&nbsp;tableView</option>
 	
 	
@@ -53,7 +55,15 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/filterContentForSearchText:scope:">&nbsp;&nbsp;&nbsp;&nbsp;- filterContentForSearchText:scope:</option>
+	
 	<option value="//api/name/initWithData:tableView:activityName:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithData:tableView:activityName:</option>
+	
+	<option value="//api/name/makeSearchableWith:controller:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSearchableWith:controller:</option>
+	
+	<option value="//api/name/searchOptions">&nbsp;&nbsp;&nbsp;&nbsp;- searchOptions</option>
+	
+	<option value="//api/name/setBackgroundColorForIndexPath:OnCell:">&nbsp;&nbsp;&nbsp;&nbsp;- setBackgroundColorForIndexPath:OnCell:</option>
 	
 	
 	
@@ -83,6 +93,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/data">data</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchController">searchController</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView">tableView</a></span></li>
 	
 </ul></li>
@@ -93,7 +105,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filterContentForSearchText:scope:">filterContentForSearchText:scope:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithData:tableView:activityName:">initWithData:tableView:activityName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSearchableWith:controller:">makeSearchableWith:controller:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchOptions">searchOptions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBackgroundColorForIndexPath:OnCell:">setBackgroundColorForIndexPath:OnCell:</a></span></li>
 	
 </ul></li>
 
@@ -122,7 +142,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">UITableViewDataSource<br />UITableViewDelegate</td>
+	<td class="specification-value">UISearchDisplayDelegate<br />UITableViewDataSource<br />UITableViewDelegate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">expanz_ui_AbstractDataRenderer.h</td>
@@ -173,8 +193,43 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/searchController">&nbsp;&nbsp;searchController</a></code>
+		<span class="tooltip"><p>Search controller responsible for filtering results list.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/initWithData:tableView:activityName:">&ndash;&nbsp;initWithData:tableView:activityName:</a></code>
 		<span class="tooltip"><p>Initializes the renderer with <a href="#//api/name/data">data</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeSearchableWith:controller:">&ndash;&nbsp;makeSearchableWith:controller:</a></code>
+		<span class="tooltip"><p>Injection point for a searchBar.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchOptions">&ndash;&nbsp;searchOptions</a></code>
+		<span class="tooltip"><p>Search options to direct the style of search (case-insensitive, etc) in both GridDataRenderer and TreeDataRender.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filterContentForSearchText:scope:">&ndash;&nbsp;filterContentForSearchText:scope:</a></code>
+		<span class="tooltip"><p>Abstract method with concrete implementation in GridDataRenderer and TreeDataRenderer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBackgroundColorForIndexPath:OnCell:">&ndash;&nbsp;setBackgroundColorForIndexPath:OnCell:</a></code>
+		
 	</span>
 	
 	
@@ -277,6 +332,45 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/searchController" title="searchController"></a>
+	<h3 class="subsubtitle method-title">searchController</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Search controller responsible for filtering results list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UISearchDisplayController *searchController</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Search controller responsible for filtering results list.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">expanz_ui_AbstractDataRenderer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/tableView" title="tableView"></a>
 	<h3 class="subsubtitle method-title">tableView</h3>
 	
@@ -326,6 +420,45 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/filterContentForSearchText:scope:" title="filterContentForSearchText:scope:"></a>
+	<h3 class="subsubtitle method-title">filterContentForSearchText:scope:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Abstract method with concrete implementation in GridDataRenderer and TreeDataRenderer.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)filterContentForSearchText:(NSString *)<em>searchText</em> scope:(NSString *)<em>scope</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Abstract method with concrete implementation in GridDataRenderer and TreeDataRenderer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">expanz_ui_AbstractDataRenderer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initWithData:tableView:activityName:" title="initWithData:tableView:activityName:"></a>
 	<h3 class="subsubtitle method-title">initWithData:tableView:activityName:</h3>
 	
@@ -364,6 +497,91 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/makeSearchableWith:controller:" title="makeSearchableWith:controller:"></a>
+	<h3 class="subsubtitle method-title">makeSearchableWith:controller:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Injection point for a searchBar.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)makeSearchableWith:(UISearchBar *)<em>searchBar</em> controller:(UIViewController *)<em>controller</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Injection point for a searchBar.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">expanz_ui_AbstractDataRenderer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchOptions" title="searchOptions"></a>
+	<h3 class="subsubtitle method-title">searchOptions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Search options to direct the style of search (case-insensitive, etc) in both GridDataRenderer and TreeDataRender.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)searchOptions</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Search options to direct the style of search (case-insensitive, etc) in both GridDataRenderer and TreeDataRender.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">expanz_ui_AbstractDataRenderer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBackgroundColorForIndexPath:OnCell:" title="setBackgroundColorForIndexPath:OnCell:"></a>
+	<h3 class="subsubtitle method-title">setBackgroundColorForIndexPath:OnCell:</h3>
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -377,7 +595,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-21)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						

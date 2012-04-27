@@ -51,11 +51,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/activityWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- activityWithName:</option>
-	
-	<option value="//api/name/addActivityDefinition:">&nbsp;&nbsp;&nbsp;&nbsp;- addActivityDefinition:</option>
+	<option value="//api/name/addMenuItem:">&nbsp;&nbsp;&nbsp;&nbsp;- addMenuItem:</option>
 	
 	<option value="//api/name/initWithProcessId:andTitle:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithProcessId:andTitle:</option>
+	
+	<option value="//api/name/menuItemWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- menuItemWithName:</option>
 	
 	
 	
@@ -93,11 +93,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activityWithName:">activityWithName:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addActivityDefinition:">addActivityDefinition:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addMenuItem:">addMenuItem:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithProcessId:andTitle:">initWithProcessId:andTitle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/menuItemWithName:">menuItemWithName:</a></span></li>
 	
 </ul></li>
 
@@ -174,14 +174,14 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addActivityDefinition:">&ndash;&nbsp;addActivityDefinition:</a></code>
+		<code><a href="#//api/name/addMenuItem:">&ndash;&nbsp;addMenuItem:</a></code>
 		<span class="tooltip"><p>Adds an activity to the process area.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/activityWithName:">&ndash;&nbsp;activityWithName:</a></code>
+		<code><a href="#//api/name/menuItemWithName:">&ndash;&nbsp;menuItemWithName:</a></code>
 		<span class="tooltip"><p>Returns the activity with the supplied id, or nil if none matching.</p></span>
 	</span>
 	
@@ -231,47 +231,8 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/activityWithName:" title="activityWithName:"></a>
-	<h3 class="subsubtitle method-title">activityWithName:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the activity with the supplied id, or nil if none matching.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (expanz_model_ActivityMenuItem *)activityWithName:(NSString *)<em>activityName</em></code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the activity with the supplied id, or nil if none matching.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">expanz_model_ProcessArea.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/addActivityDefinition:" title="addActivityDefinition:"></a>
-	<h3 class="subsubtitle method-title">addActivityDefinition:</h3>
+	<a name="//api/name/addMenuItem:" title="addMenuItem:"></a>
+	<h3 class="subsubtitle method-title">addMenuItem:</h3>
 	
 	
 	
@@ -280,7 +241,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)addActivityDefinition:(expanz_model_ActivityMenuItem *)<em>activity</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addMenuItem:(expanz_model_MenuItem *)<em>menuItem</em></code></div>
 	
 	
 	
@@ -347,6 +308,45 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/menuItemWithName:" title="menuItemWithName:"></a>
+	<h3 class="subsubtitle method-title">menuItemWithName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the activity with the supplied id, or nil if none matching.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (expanz_model_MenuItem *)menuItemWithName:(NSString *)<em>activityName</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the activity with the supplied id, or nil if none matching.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">expanz_model_ProcessArea.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -360,7 +360,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-21)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -68,7 +68,7 @@
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;RXMLElement+SessionData.h&quot;
-<span class="lineNum">      13 </span>            : #import &quot;expanz_model_ActivityMenuItem.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_model_menuItem.h&quot;
 <span class="lineNum">      14 </span>            : #import &quot;expanz_model_Menu.h&quot;
 <span class="lineNum">      15 </span>            : #import &quot;expanz_model_ProcessArea.h&quot;
 <span class="lineNum">      16 </span>            : #import &quot;expanz_model_UserRole.h&quot;
@@ -113,26 +113,25 @@
 <span class="lineNum">      55 </span><span class="lineCov">         76 :     ProcessArea* processArea =</span>
 <span class="lineNum">      56 </span><span class="lineCov">         12 :         [[ProcessArea alloc] initWithProcessId:[self attribute:@&quot;id&quot;] andTitle:[self attribute:@&quot;title&quot;]];</span>
 <span class="lineNum">      57 </span><span class="lineCov">         50 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
-<span class="lineNum">      58 </span><span class="lineCov">         38 :         [processArea addActivityDefinition:[e asActivityDefinition]];</span>
+<span class="lineNum">      58 </span><span class="lineCov">         38 :         [processArea addMenuItem:[e asMenuItem]];</span>
 <span class="lineNum">      59 </span><span class="lineCov">         38 :     }];</span>
 <span class="lineNum">      60 </span><span class="lineCov">         12 :     return processArea;</span>
 <span class="lineNum">      61 </span><span class="lineCov">         12 : }</span>
 <span class="lineNum">      62 </span>            : 
-<span class="lineNum">      63 </span><span class="lineCov">         38 : - (ActivityMenuItem*) asActivityDefinition {</span>
+<span class="lineNum">      63 </span><span class="lineCov">         38 : - (MenuItem*) asMenuItem {</span>
 <span class="lineNum">      64 </span><span class="lineCov">         38 :     ActivityStyle* style = [ActivityStyle fromString: [self attribute:@&quot;style&quot;] ];</span>
-<span class="lineNum">      65 </span><span class="lineCov">         38 :     return [[ActivityMenuItem alloc]</span>
-<span class="lineNum">      66 </span>            :         initWithActivityId:[self attribute:@&quot;name&quot;] title:[self attribute:@&quot;title&quot;] style:style];
-<span class="lineNum">      67 </span><span class="lineCov">         38 : }</span>
-<span class="lineNum">      68 </span>            : 
-<span class="lineNum">      69 </span><span class="lineCov">          5 : - (UserRole*) asUserRole {</span>
-<span class="lineNum">      70 </span><span class="lineCov">          5 :     if (![self.tag isEqualToString:@&quot;UserRole&quot;]) {</span>
-<span class="lineNum">      71 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a UserRole.&quot;];</span>
-<span class="lineNum">      72 </span><span class="lineCov">          1 :     }</span>
-<span class="lineNum">      73 </span><span class="lineCov">          4 :     return [[UserRole alloc] initWithRoleId:[self attribute:@&quot;id&quot;] andDescription:[self text]];</span>
-<span class="lineNum">      74 </span>            : }
+<span class="lineNum">      65 </span><span class="lineCov">         38 :     return [[MenuItem alloc] initWithActivityId:[self attribute:@&quot;name&quot;] title:[self attribute:@&quot;title&quot;] style:style];</span>
+<span class="lineNum">      66 </span><span class="lineCov">         38 : }</span>
+<span class="lineNum">      67 </span>            : 
+<span class="lineNum">      68 </span><span class="lineCov">          5 : - (UserRole*) asUserRole {</span>
+<span class="lineNum">      69 </span><span class="lineCov">          5 :     if (![self.tag isEqualToString:@&quot;UserRole&quot;]) {</span>
+<span class="lineNum">      70 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Element is not a UserRole.&quot;];</span>
+<span class="lineNum">      71 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      72 </span><span class="lineCov">          4 :     return [[UserRole alloc] initWithRoleId:[self attribute:@&quot;id&quot;] andDescription:[self text]];</span>
+<span class="lineNum">      73 </span>            : }
+<span class="lineNum">      74 </span>            : 
 <span class="lineNum">      75 </span>            : 
-<span class="lineNum">      76 </span>            : 
-<span class="lineNum">      77 </span>            : @end
+<span class="lineNum">      76 </span>            : @end
 </pre>
       </td>
     </tr>

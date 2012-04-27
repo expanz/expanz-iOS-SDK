@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -69,7 +69,7 @@
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;Objection.h&quot;
 <span class="lineNum">      13 </span>            : #import &quot;expanz_model_ProcessArea.h&quot;
-<span class="lineNum">      14 </span>            : #import &quot;expanz_model_ActivityMenuItem.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_model_menuItem.h&quot;
 <span class="lineNum">      15 </span>            : #import &quot;expanz_model_Menu.h&quot;
 <span class="lineNum">      16 </span>            : #import &quot;expanz_model_SessionContext.h&quot;
 <span class="lineNum">      17 </span>            : #import &quot;expanz_service_SessionDataRequest.h&quot;
@@ -145,7 +145,7 @@
 <span class="lineNum">      87 </span><span class="lineNoCov">          0 :         return [[[_menu.processAreas objectAtIndex:section] activities] count];</span>
 <span class="lineNum">      88 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      89 </span>            :     else {
-<span class="lineNum">      90 </span>            :         return [[_menu allActivities] count];
+<span class="lineNum">      90 </span>            :         return [[_menu allMenuItems] count];
 <span class="lineNum">      91 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      92 </span>            : }
 <span class="lineNum">      93 </span><span class="lineNoCov">          0 : </span>
@@ -167,31 +167,31 @@
 <span class="lineNum">     109 </span><span class="lineNoCov">          0 :         cell.textLabel.backgroundColor = [UIColor clearColor];</span>
 <span class="lineNum">     110 </span><span class="lineNoCov">          0 :         cell.detailTextLabel.textColor = [UIColor darkGrayColor];</span>
 <span class="lineNum">     111 </span><span class="lineNoCov">          0 :         cell.detailTextLabel.backgroundColor = [UIColor clearColor];</span>
-<span class="lineNum">     112 </span><span class="lineNoCov">          0 :         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;</span>
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 :         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;</span>
 <span class="lineNum">     113 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">     114 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     115 </span><span class="lineNoCov">          0 :     if (tableView.style == UITableViewStyleGrouped) {</span>
 <span class="lineNum">     116 </span><span class="lineNoCov">          0 :         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];</span>
-<span class="lineNum">     117 </span>            :         ActivityMenuItem* activity = [processArea.activities objectAtIndex:indexPath.row];
-<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         cell.textLabel.text = [activity title];</span>
+<span class="lineNum">     117 </span>            :         MenuItem* menuItem = [processArea.activities objectAtIndex:indexPath.row];
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         cell.textLabel.text = [menuItem title];</span>
 <span class="lineNum">     119 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">     120 </span><span class="lineNoCov">          0 :     else {</span>
-<span class="lineNum">     121 </span><span class="lineNoCov">          0 :         ActivityMenuItem* activity = [[_menu allActivities] objectAtIndex:indexPath.row];</span>
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 :         MenuItem* activity = [[_menu allMenuItems] objectAtIndex:indexPath.row];</span>
 <span class="lineNum">     122 </span><span class="lineNoCov">          0 :         cell.textLabel.text = [activity title];</span>
 <span class="lineNum">     123 </span>            :     }
 <span class="lineNum">     124 </span><span class="lineNoCov">          0 :     return cell;</span>
 <span class="lineNum">     125 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">     126 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     127 </span><span class="lineNoCov">          0 : - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {</span>
-<span class="lineNum">     128 </span><span class="lineNoCov">          0 :     ActivityMenuItem* activityDefinition;</span>
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 :     MenuItem* menuItem;</span>
 <span class="lineNum">     129 </span>            :     if (tableView.style == UITableViewStyleGrouped) {
 <span class="lineNum">     130 </span>            :         ProcessArea* processArea = [_menu.processAreas objectAtIndex:indexPath.section];
-<span class="lineNum">     131 </span><span class="lineNoCov">          0 :         activityDefinition = [processArea.activities objectAtIndex:indexPath.row];</span>
+<span class="lineNum">     131 </span><span class="lineNoCov">          0 :         menuItem = [processArea.activities objectAtIndex:indexPath.row];</span>
 <span class="lineNum">     132 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">     133 </span><span class="lineNoCov">          0 :     else {</span>
-<span class="lineNum">     134 </span><span class="lineNoCov">          0 :         activityDefinition = [[_menu allActivities] objectAtIndex:indexPath.row];</span>
+<span class="lineNum">     134 </span><span class="lineNoCov">          0 :         menuItem = [[_menu allMenuItems] objectAtIndex:indexPath.row];</span>
 <span class="lineNum">     135 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     136 </span><span class="lineNoCov">          0 :     if ([_activityManger showActivity:activityDefinition]) {</span>
+<span class="lineNum">     136 </span><span class="lineNoCov">          0 :     if ([_activityManger showActivity:menuItem]) {</span>
 <span class="lineNum">     137 </span>            :         [tableView deselectRowAtIndexPath:indexPath animated:YES];
 <span class="lineNum">     138 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">     139 </span>            : }

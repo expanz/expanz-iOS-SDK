@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">55</td>
-            <td class="headerCovTableEntry">59</td>
-            <td class="headerCovTableEntryHi">93.2 %</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntryHi">90.2 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-21</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -140,43 +140,47 @@
 <span class="lineNum">      82 </span><span class="lineCov">          8 :     return [_imageCells sortedArrayUsingDescriptors:_sortDescriptors];</span>
 <span class="lineNum">      83 </span><span class="lineCov">          8 : }</span>
 <span class="lineNum">      84 </span><span class="lineCov">          8 : </span>
-<span class="lineNum">      85 </span>            : 
-<span class="lineNum">      86 </span>            : /* ================================================== Private Methods =============================================== */
-<span class="lineNum">      87 </span>            : - (void) buildCellsIfRequired {
-<span class="lineNum">      88 </span>            : 
-<span class="lineNum">      89 </span><span class="lineCov">         16 :     if (_textCells == nil || _imageCells == nil) {</span>
-<span class="lineNum">      90 </span>            :         _textCells = [[NSMutableArray alloc] init];
-<span class="lineNum">      91 </span><span class="lineCov">          8 :         _imageCells = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">      92 </span><span class="lineCov">          8 : </span>
-<span class="lineNum">      93 </span><span class="lineCov">          8 :         for (NSString* cellId in [_cellDefinitions allKeys]) {</span>
-<span class="lineNum">      94 </span>            :             Column* column = [_gridData columnWithId:cellId];
-<span class="lineNum">      95 </span><span class="lineCov">         47 :             if (column == nil) {</span>
-<span class="lineNum">      96 </span><span class="lineCov">         47 :                 [NSException raise:NSInternalInconsistencyException format:@&quot;No column for cell with id: %@&quot;, cellId];</span>
-<span class="lineNum">      97 </span><span class="lineCov">         47 :             }</span>
-<span class="lineNum">      98 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      99 </span><span class="lineNoCov">          0 :             NSString* data = [_cellDefinitions valueForKey:cellId];</span>
-<span class="lineNum">     100 </span>            :             switch (column.dataType) {
-<span class="lineNum">     101 </span><span class="lineCov">         47 :                 case ExpanzDataTypeString:</span>
-<span class="lineNum">     102 </span><span class="lineCov">         47 :                 case ExpanzDataTypeNumber:</span>
-<span class="lineNum">     103 </span>            :                 case ExpanzDataTypeDate:
-<span class="lineNum">     104 </span>            :                 case ExpanzDataTypeDateTime:
-<span class="lineNum">     105 </span>            :                     [_textCells addObject:[[TextGridDataCell alloc] initWithCellId:cellId text:data]];
-<span class="lineNum">     106 </span>            :                     break;
-<span class="lineNum">     107 </span><span class="lineCov">         43 :                 case ExpanzDataTypeImage:</span>
-<span class="lineNum">     108 </span><span class="lineCov">         43 :                     [_imageCells addObject:[[ImageGridDataCell alloc] initWithCellId:cellId imageUrl:data]];</span>
-<span class="lineNum">     109 </span>            :                     break;
-<span class="lineNum">     110 </span><span class="lineCov">          4 :                 case ExpanzDataTypeBool:</span>
-<span class="lineNum">     111 </span><span class="lineCov">          4 :                     //TODO: Handle this!</span>
-<span class="lineNum">     112 </span>            :                     break;
-<span class="lineNum">     113 </span>            :                 case ExpanzDataTypeNull:
-<span class="lineNum">     114 </span>            :                     break;
-<span class="lineNum">     115 </span>            :             }
-<span class="lineNum">     116 </span>            :         }
-<span class="lineNum">     117 </span>            :     }
-<span class="lineNum">     118 </span><span class="lineCov">         47 : }</span>
-<span class="lineNum">     119 </span><span class="lineCov">          8 : </span>
-<span class="lineNum">     120 </span><span class="lineCov">         16 : </span>
-<span class="lineNum">     121 </span>            : @end
+<span class="lineNum">      85 </span>            :  /* ================================================== Utility Methods =============================================== */
+<span class="lineNum">      86 </span>            :  - (NSString*) description {
+<span class="lineNum">      87 </span>            :      return [NSString stringWithFormat:@&quot;Row: cells = %@&quot;, [self cells]];
+<span class="lineNum">      88 </span><span class="lineNoCov">          0 :  }</span>
+<span class="lineNum">      89 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      90 </span>            : /* ================================================== Private Methods =============================================== */
+<span class="lineNum">      91 </span>            : - (void) buildCellsIfRequired {
+<span class="lineNum">      92 </span>            : 
+<span class="lineNum">      93 </span><span class="lineCov">         16 :     if (_textCells == nil || _imageCells == nil) {</span>
+<span class="lineNum">      94 </span>            :         _textCells = [[NSMutableArray alloc] init];
+<span class="lineNum">      95 </span><span class="lineCov">          8 :         _imageCells = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">      96 </span><span class="lineCov">          8 : </span>
+<span class="lineNum">      97 </span><span class="lineCov">          8 :         for (NSString* cellId in [_cellDefinitions allKeys]) {</span>
+<span class="lineNum">      98 </span>            :             Column* column = [_gridData columnWithId:cellId];
+<span class="lineNum">      99 </span><span class="lineCov">         47 :             if (column == nil) {</span>
+<span class="lineNum">     100 </span><span class="lineCov">         47 :                 [NSException raise:NSInternalInconsistencyException format:@&quot;No column for cell with id: %@&quot;, cellId];</span>
+<span class="lineNum">     101 </span><span class="lineCov">         47 :             }</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :             NSString* data = [_cellDefinitions valueForKey:cellId];</span>
+<span class="lineNum">     104 </span>            :             switch (column.dataType) {
+<span class="lineNum">     105 </span><span class="lineCov">         47 :                 case ExpanzDataTypeString:</span>
+<span class="lineNum">     106 </span><span class="lineCov">         47 :                 case ExpanzDataTypeNumber:</span>
+<span class="lineNum">     107 </span>            :                 case ExpanzDataTypeDate:
+<span class="lineNum">     108 </span>            :                 case ExpanzDataTypeDateTime:
+<span class="lineNum">     109 </span>            :                     [_textCells addObject:[[TextGridDataCell alloc] initWithCellId:cellId text:data]];
+<span class="lineNum">     110 </span>            :                     break;
+<span class="lineNum">     111 </span><span class="lineCov">         43 :                 case ExpanzDataTypeImage:</span>
+<span class="lineNum">     112 </span><span class="lineCov">         43 :                     [_imageCells addObject:[[ImageGridDataCell alloc] initWithCellId:cellId imageUrl:data]];</span>
+<span class="lineNum">     113 </span>            :                     break;
+<span class="lineNum">     114 </span><span class="lineCov">          4 :                 case ExpanzDataTypeBool:</span>
+<span class="lineNum">     115 </span><span class="lineCov">          4 :                     //TODO: Handle this!</span>
+<span class="lineNum">     116 </span>            :                     break;
+<span class="lineNum">     117 </span>            :                 case ExpanzDataTypeNull:
+<span class="lineNum">     118 </span>            :                     break;
+<span class="lineNum">     119 </span>            :             }
+<span class="lineNum">     120 </span>            :         }
+<span class="lineNum">     121 </span>            :     }
+<span class="lineNum">     122 </span><span class="lineCov">         47 : }</span>
+<span class="lineNum">     123 </span><span class="lineCov">          8 : </span>
+<span class="lineNum">     124 </span><span class="lineCov">         16 : </span>
+<span class="lineNum">     125 </span>            : @end
 </pre>
       </td>
     </tr>
