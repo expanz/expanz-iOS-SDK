@@ -27,7 +27,6 @@
 
 @implementation expanz_ui_TreeDataRenderer
 
-@synthesize tableCell = _tableCell;
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithData:(expanz_model_AbstractData*)data tableView:(UITableView*)tableView
@@ -91,10 +90,6 @@
     }
 }
 
-- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return 44;
-}
-
 /* ================================================================================================================== */
 #pragma mark -
 #pragma mark UISearchDisplayController Delegate Methods
@@ -107,20 +102,23 @@
 
     for (Folder* folder in [_treeData folders]) {
         for (File* file in [folder files]) {
-            if (([file.title compare:searchText options:searchOptions range:searchTextRange]) == NSOrderedSame) {
+            NSComparisonResult match = [file.title compare:searchText options:searchOptions range:searchTextRange];
+            if (file.title && match == NSOrderedSame) {
                 [_filteredListContent addObject:file];
             }
         }
     }
 }
 
+- (NSString*) nibNameForTableCell {
+    return @"TableCellForTreeData";
+}
+
 /* ================================================== Private Methods =============================================== */
 - (ThumbnailTableCell*) dequeueTableCellFor:(UITableView*)tableView reuseId:(NSString*)reuseId {
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"TableCellForTreeData" owner:self options:nil];
-        cell = self.tableCell;
-        self.tableCell = nil;
+        cell = (ThumbnailTableCell*) [self loadTableCellFromNib];
     }
     return cell;
 }

@@ -19,6 +19,7 @@
         UISearchDisplayDelegate> {
 
     NSMutableArray* _filteredListContent;
+    NSUInteger _cellHeight;
 
 }
 
@@ -43,6 +44,11 @@
 * Search controller responsible for filtering results list.
 */
 @property(nonatomic, strong, readonly) UISearchDisplayController* searchController;
+
+/**
+* Injection point for loading custom table cells from a nib.
+*/
+@property(nonatomic, weak) IBOutlet UITableViewCell* tableCell;
 
 
 /**
@@ -70,7 +76,12 @@
 */
 - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope;
 
+/**
+* Abstract method that returns the name of the nib to use.
+*/
+- (NSString*) nibNameForTableCell;
 
+- (UITableViewCell*) loadTableCellFromNib;
 
 /* ================================================================================================================== */
 - (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell;

@@ -25,12 +25,6 @@
     BOOL _shouldStoreFieldIdentifiersToRender;
 }
 
-
-/**
-* Injection point for loading custom table cells from a nib.
-*/
-@property(nonatomic, weak) IBOutlet expanz_ui_components_ThumbnailTableCell* tableCell;
-
 @property(nonatomic, strong, readonly) NSString* mainLabelFieldId;
 @property(nonatomic, strong, readonly) NSString* subLabelFieldId;
 @property(nonatomic, strong, readonly) NSString* thumbnailFieldId;

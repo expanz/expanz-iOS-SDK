@@ -8,6 +8,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#import <CoreGraphics/CoreGraphics.h>
 #import "expanz_ui_AbstractDataRenderer.h"
 #import "expanz_model_AbstractData.h"
 #import "expanz_ui_NavigationManager.h"
@@ -20,6 +22,7 @@
 @synthesize tableView = _tableView;
 @synthesize activityName = _activityName;
 @synthesize searchController = _searchController;
+@synthesize tableCell = _tableCell;
 
 
 /* ================================================== Initializers ================================================== */
@@ -56,6 +59,12 @@
     }
 }
 
+- (UITableViewCell*) loadTableCellFromNib {
+    [[NSBundle mainBundle] loadNibNamed:[self nibNameForTableCell] owner:self options:nil];
+    UITableViewCell* cell = self.tableCell;
+    self.tableCell = nil;
+    return cell;
+}
 
 /* ================================================= Protocol Methods =============================================== */
 #pragma mark UISearchDisplayController Delegate Methods
@@ -83,19 +92,30 @@
     return (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);
 }
 
+- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+    if (_cellHeight == 0) {
+        _cellHeight = [self loadTableCellFromNib].frame.size.height;
+    }
+    return _cellHeight;
+}
+
 /* ================================================= Abstract Methods =============================================== */
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     return nil;
 }
 
 - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
 
+}
+
+- (NSString*) nibNameForTableCell {
+    return nil;
 }
 
 

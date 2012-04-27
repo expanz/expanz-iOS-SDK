@@ -795,6 +795,15 @@
 		6BFDE7761495FA01005D35BA /* erp365CRM.Customer.Detail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */; };
 		6BFDE7761495FA01005D35BC /* erp365CRM.Customer.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */; };
 		6BFDE7761495FA01005D35BD /* erp365CRM.Customer.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */; };
+		6BFDE7761495FA01005D35C0 /* erp365CRM.Person.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */; };
+		6BFDE7761495FA01005D35C1 /* erp365CRM.Person.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */; };
+		6BFDE7761495FA01005D35C2 /* erp365CRM.Person.Browse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */; };
+		6BFDE7761495FA01005D35C4 /* erp365CRM.Person.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */; };
+		6BFDE7761495FA01005D35C5 /* erp365CRM.Person.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */; };
+		6BFDE7761495FA01005D35C6 /* erp365CRM.Person.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */; };
+		6BFDE7761495FA01005D35C9 /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
+		6BFDE7761495FA01005D35CA /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
+		6BFDE7761495FA01005D35CB /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1309,6 +1318,10 @@
 		6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365CRM.Customer.Detail.xml; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365CRM.Customer.Browse.xml; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35BE /* ActivityMenu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ActivityMenu.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = erp365CRM.Person.Browse.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = erp365CRM.Person.Browse.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35C7 /* erp365CRM_Person_Browse_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Person_Browse_ViewController.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Person_Browse_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1805,6 +1818,8 @@
 		6BBC3AB1153C28A200E68952 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */,
+				6BFDE7761495FA01005D35C7 /* erp365CRM_Person_Browse_ViewController.h */,
 				6BB7135F1544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.h */,
 				6BB713601544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m */,
 				6BB47E4C15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.h */,
@@ -2004,6 +2019,7 @@
 		6BDAB0131499828800541056 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */,
 				6BB7135B1544E525003614C2 /* Thermomix.DocumentMaintenance.Portal.xib */,
 				6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */,
 				6BBC3AD4153C2CB100E68952 /* erp365CRM.Company.xib */,
@@ -2096,6 +2112,7 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */,
 				6BFDE7761495FA01005D35BE /* ActivityMenu.xml */,
 				6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */,
 				6BFDE7761495FA01005D35B8 /* erp365CRM.Customer.Detail.xml */,
@@ -2647,6 +2664,8 @@
 				6BFDE7761495FA01005D35BC /* erp365CRM.Customer.Browse.xml in Resources */,
 				6BCDDF03154A4CA3009EE515 /* ESA_Sales_Calc_ActivityInstance.xml in Resources */,
 				6BCDDF05154A4CB1009EE515 /* ActivityMenu.xml in Resources */,
+				6BFDE7761495FA01005D35C1 /* erp365CRM.Person.Browse.xml in Resources */,
+				6BFDE7761495FA01005D35C5 /* erp365CRM.Person.Browse.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2691,6 +2710,8 @@
 				6BCDDF10154A4CC0009EE515 /* Dodgy.xml in Resources */,
 				6BCDDF11154A4CC0009EE515 /* ActivityWithMessage.xml in Resources */,
 				6BCDDF12154A4CC0009EE515 /* ActivityWithFileResources.xml in Resources */,
+				6BFDE7761495FA01005D35C2 /* erp365CRM.Person.Browse.xml in Resources */,
+				6BFDE7761495FA01005D35C6 /* erp365CRM.Person.Browse.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2749,6 +2770,8 @@
 				6BCDDF21154A4CCD009EE515 /* Dodgy.xml in Resources */,
 				6BCDDF22154A4CCD009EE515 /* ActivityWithMessage.xml in Resources */,
 				6BCDDF23154A4CCD009EE515 /* ActivityWithFileResources.xml in Resources */,
+				6BFDE7761495FA01005D35C0 /* erp365CRM.Person.Browse.xml in Resources */,
+				6BFDE7761495FA01005D35C4 /* erp365CRM.Person.Browse.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2959,6 +2982,7 @@
 				6B558BC11518483B00BD810C /* LoginViewControllerSpec.m in Sources */,
 				6B558BC21518483B00BD810C /* FieldFilterSpec.m in Sources */,
 				6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */,
+				6BFDE7761495FA01005D35CA /* erp365CRM_Person_Browse_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2976,6 +3000,7 @@
 				6BBC3AD2153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
 				6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 				6BB713621544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
+				6BFDE7761495FA01005D35CB /* erp365CRM_Person_Browse_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3163,6 +3188,7 @@
 				6BBC3AD1153C2C9800E68952 /* erp365CRM_Company_ViewController.m in Sources */,
 				6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 				6BB713611544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
+				6BFDE7761495FA01005D35C9 /* erp365CRM_Person_Browse_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

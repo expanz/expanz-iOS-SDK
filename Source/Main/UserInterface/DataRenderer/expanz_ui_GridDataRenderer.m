@@ -35,7 +35,6 @@
 
 @implementation expanz_ui_GridDataRenderer
 
-@synthesize tableCell = _tableCell;
 @synthesize mainLabelFieldId = _mainLabelFieldId;
 @synthesize subLabelFieldId = _subLabelFieldId;
 @synthesize thumbnailFieldId = _thumbnailFieldId;
@@ -93,10 +92,6 @@
     }
 }
 
-- (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return 75;
-}
-
 /* ================================================================================================================== */
 #pragma mark Add Images as they Load
 
@@ -130,20 +125,31 @@
 
 - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
 
+    LogDebug(@"Let's get some filter action!!!!");
+
     [_filteredListContent removeAllObjects];
     NSRange searchTextRange = NSMakeRange(0, [searchText length]);
     int searchOptions = [self searchOptions];
 
     for (Row* row in [_gridData rows]) {
+
         NSString* titleText = [(TextGridDataCell*) [row cellForFieldId:_mainLabelFieldId] text];
         NSString* detailText = [(TextGridDataCell*) [row cellForFieldId:_subLabelFieldId] text];
 
-        if (([titleText compare:searchText options:searchOptions range:searchTextRange]) == NSOrderedSame ||
-                ([detailText compare:searchText options:searchOptions range:searchTextRange]) == NSOrderedSame) {
+        NSComparisonResult matchTitle = [titleText compare:searchText options:searchOptions range:searchTextRange];
+        NSComparisonResult matchDetail = [detailText compare:searchText options:searchOptions range:searchTextRange];
+
+
+        if ((titleText && matchTitle == NSOrderedSame) || (detailText && matchDetail == NSOrderedSame)) {
             [_filteredListContent addObject:row];
         }
     }
 }
+
+- (NSString*) nibNameForTableCell {
+    return @"TableCellForGridData";
+}
+
 
 /* ================================================== Private Methods =============================================== */
 - (void) storeFieldNamesToRenderOn:(UITableView*)tableView {
@@ -173,9 +179,7 @@
 - (ThumbnailTableCell*) dequeueTableCellFor:(UITableView*)tableView reuseId:(NSString*)reuseId {
     ThumbnailTableCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"TableCellForGridData" owner:self options:nil];
-        cell = self.tableCell;
-        self.tableCell = nil;
+        cell = (ThumbnailTableCell*) [self loadTableCellFromNib];
     }
     cell.thumbnail.image = nil;
     cell.mainLabel.text = nil;
@@ -186,6 +190,7 @@
 - (Row*) tableView:(UITableView*)tableView rowForIndexPath:(NSIndexPath*)indexPath {
     Row* row;
     if (tableView == self.searchController.searchResultsTableView) {
+        LogDebug(@"Return da filter results");
         row = [_filteredListContent objectAtIndex:indexPath.row];
     }
     else {
