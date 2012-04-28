@@ -33,8 +33,12 @@
 //#define DATA_FILE       @"erp365CRM.Customer.Browse.xml"
 //#define ACTIVITY_STYLE  @""
 
-#define ACTIVITY_NAME   @"erp365CRM.Person.Browse"
-#define DATA_FILE       @"erp365CRM.Person.Browse.xml"
+//#define ACTIVITY_NAME   @"erp365CRM.Person.Browse"
+//#define DATA_FILE       @"erp365CRM.Person.Browse.xml"
+//#define ACTIVITY_STYLE  @""
+
+#define ACTIVITY_NAME   @"erp365CRM.Person"
+#define DATA_FILE       @"erp365CRM.Person.xml"
 #define ACTIVITY_STYLE  @""
 
 

@@ -1,0 +1,52 @@
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="6" xmlns="">
+            <Activity activityHandle="634712172881610152.11" title="Person" ActivityPersistentId="16">
+                <Field id="PersistentId" nullable="0" null="0" value="16" datatype="number" valid="1"/>
+                <Field id="FirstName" label="First Name" nullable="0" maxLength="254" null="0" value="Jeremy"
+                       datatype="string" valid="1"/>
+                <Field id="LastName" label="Last Name" nullable="0" maxLength="254" null="0" valid="1" value="Unknown"
+                       datatype="string"/>
+                <Field id="MetInPerson" label="Met In Person" nullable="1" null="1" value="0" datatype="bool"
+                       valid="1"/>
+                <Field id="MobileNumber" label="Mobile Number" nullable="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="DirectPhone" label="Direct Phone" nullable="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="ReceptionPhone" label="Reception Phone" nullable="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="PreferredPhone" label="Preferred Phone" nullable="1" maxLength="254" null="1" value=""
+                       datatype="string" valid="1"/>
+                <Field id="Email" label="Email" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       contentType="email" valid="1"/>
+                <Field id="Email2" label="Email 2" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       contentType="email" valid="1"/>
+                <Field id="LinkedIn" label="Linked-In" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       contentType="url" metaType="url" valid="1"/>
+                <Field id="Blog" label="Blog" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       contentType="url" metaType="url" valid="1"/>
+                <Field id="Facebook" label="Facebook" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       contentType="url" metaType="url" valid="1"/>
+                <Field id="Notes" label="Notes" nullable="1" maxLength="254" null="1" value="" datatype="string"
+                       valid="1"/>
+                <Field id="PersonType" label="Person Type" nullable="1" maxLength="254" null="1" value="" text=""
+                       datatype="string" valid="1"/>
+                <Field id="FullName" label="Full Name" disabled="1" nullable="1" maxLength="254" null="0" valid="1"
+                       value="Jeremy Unknown" datatype="string"/>
+                <Types>
+                    <Type id="erp365CRM.Person" image="Person"/>
+                </Types>
+            </Activity>
+            <Messages>
+                <Message type="Info" key="" messageSource="Framework">Class member [PersonType] not found in
+                    erp365CRM.Person. Treating as dynamic.
+                </Message>
+                <Message type="Info" key="" messageSource="Framework">Class member [FullName] not found in
+                    erp365CRM.Person. Treating as dynamic.
+                </Message>
+            </Messages>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/ERP65CRM#634712172844698452:150</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

@@ -9,7 +9,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "expanz_ui_AbstractDataRenderer.h"
 #import "expanz_model_AbstractData.h"
 #import "expanz_ui_NavigationManager.h"

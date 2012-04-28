@@ -804,6 +804,17 @@
 		6BFDE7761495FA01005D35C9 /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
 		6BFDE7761495FA01005D35CA /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
 		6BFDE7761495FA01005D35CB /* erp365CRM_Person_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */; };
+		6BFDE7761495FA01005D35CD /* erp365CRM.Person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */; };
+		6BFDE7761495FA01005D35CE /* erp365CRM.Person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */; };
+		6BFDE7761495FA01005D35CF /* erp365CRM.Person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */; };
+		6BFDE7761495FA01005D35D1 /* erp365CRM.Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */; };
+		6BFDE7761495FA01005D35D2 /* erp365CRM.Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */; };
+		6BFDE7761495FA01005D35D3 /* erp365CRM.Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */; };
+		6BFDE7761495FA01005D35D6 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
+		6BFDE7761495FA01005D35D7 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
+		6BFDE7761495FA01005D35D8 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
+		6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */; };
+		6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1322,6 +1333,12 @@
 		6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = erp365CRM.Person.Browse.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35C7 /* erp365CRM_Person_Browse_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Person_Browse_ViewController.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Person_Browse_ViewController.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = erp365CRM.Person.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = erp365CRM.Person.xib; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35D4 /* erp365CRM_Person_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Person_ViewController.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Person_ViewController.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AutoContentSize.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AutoContentSize.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1490,6 +1507,8 @@
 		6B41A09A151877BD009ED6D0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */,
+				6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */,
 				6B41A09B151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.h */,
 				6B41A09C151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.m */,
 				6B41A09D151877BD009ED6D0 /* UITableView+DataPublication.h */,
@@ -1818,6 +1837,8 @@
 		6BBC3AB1153C28A200E68952 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */,
+				6BFDE7761495FA01005D35D4 /* erp365CRM_Person_ViewController.h */,
 				6BFDE7761495FA01005D35C8 /* erp365CRM_Person_Browse_ViewController.m */,
 				6BFDE7761495FA01005D35C7 /* erp365CRM_Person_Browse_ViewController.h */,
 				6BB7135F1544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.h */,
@@ -2019,6 +2040,7 @@
 		6BDAB0131499828800541056 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */,
 				6BFDE7761495FA01005D35C3 /* erp365CRM.Person.Browse.xib */,
 				6BB7135B1544E525003614C2 /* Thermomix.DocumentMaintenance.Portal.xib */,
 				6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */,
@@ -2112,6 +2134,7 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */,
 				6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */,
 				6BFDE7761495FA01005D35BE /* ActivityMenu.xml */,
 				6BFDE7761495FA01005D35BB /* erp365CRM.Customer.Browse.xml */,
@@ -2413,6 +2436,7 @@
 				6B41A116151877BD009ED6D0 /* expanz_ui_TextInputUtils.h in Headers */,
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
 				6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
+				6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2666,6 +2690,8 @@
 				6BCDDF05154A4CB1009EE515 /* ActivityMenu.xml in Resources */,
 				6BFDE7761495FA01005D35C1 /* erp365CRM.Person.Browse.xml in Resources */,
 				6BFDE7761495FA01005D35C5 /* erp365CRM.Person.Browse.xib in Resources */,
+				6BFDE7761495FA01005D35CE /* erp365CRM.Person.xml in Resources */,
+				6BFDE7761495FA01005D35D2 /* erp365CRM.Person.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2712,6 +2738,8 @@
 				6BCDDF12154A4CC0009EE515 /* ActivityWithFileResources.xml in Resources */,
 				6BFDE7761495FA01005D35C2 /* erp365CRM.Person.Browse.xml in Resources */,
 				6BFDE7761495FA01005D35C6 /* erp365CRM.Person.Browse.xib in Resources */,
+				6BFDE7761495FA01005D35CF /* erp365CRM.Person.xml in Resources */,
+				6BFDE7761495FA01005D35D3 /* erp365CRM.Person.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2772,6 +2800,8 @@
 				6BCDDF23154A4CCD009EE515 /* ActivityWithFileResources.xml in Resources */,
 				6BFDE7761495FA01005D35C0 /* erp365CRM.Person.Browse.xml in Resources */,
 				6BFDE7761495FA01005D35C4 /* erp365CRM.Person.Browse.xib in Resources */,
+				6BFDE7761495FA01005D35CD /* erp365CRM.Person.xml in Resources */,
+				6BFDE7761495FA01005D35D1 /* erp365CRM.Person.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2922,6 +2952,7 @@
 				6B41A112151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
+				6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2983,6 +3014,7 @@
 				6B558BC21518483B00BD810C /* FieldFilterSpec.m in Sources */,
 				6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */,
 				6BFDE7761495FA01005D35CA /* erp365CRM_Person_Browse_ViewController.m in Sources */,
+				6BFDE7761495FA01005D35D7 /* erp365CRM_Person_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3001,6 +3033,7 @@
 				6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 				6BB713621544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35CB /* erp365CRM_Person_Browse_ViewController.m in Sources */,
+				6BFDE7761495FA01005D35D8 /* erp365CRM_Person_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3189,6 +3222,7 @@
 				6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */,
 				6BB713611544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35C9 /* erp365CRM_Person_Browse_ViewController.m in Sources */,
+				6BFDE7761495FA01005D35D6 /* erp365CRM_Person_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
