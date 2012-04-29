@@ -10,17 +10,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
+static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.25;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
-static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
+static const NSUInteger PORTRAIT_KEYBOARD_HEIGHT = 216;
+static const NSUInteger LANDSCAPE_KEYBOARD_HEIGHT = 162;
+static const NSUInteger TOOLBAR_HEIGHT = 44;
+static const NSUInteger MARGIN = 6;
 
 
 @interface expanz_ui_TextInputUtils : NSObject {
 
 @private
     BOOL _scrolled;
+    double _distanceToScrollFrame;
+    NSUInteger _distanceToScrollContainerView;
     UIToolbar* _keyboardTools;
 }
 

@@ -505,6 +505,7 @@
 		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
+		6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
 		6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E5215410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */; };
@@ -851,6 +852,7 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */,
 				6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
 				6B18A31E15187A3500521FC1 /* expanz_AppDelegate.h in Copy Headers */,
 				6B18A31F15187A3500521FC1 /* expanz_UserInterfaceModule.h in Copy Headers */,

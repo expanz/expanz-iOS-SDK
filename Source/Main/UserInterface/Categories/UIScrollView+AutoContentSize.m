@@ -19,10 +19,10 @@
     if (autosizeContent) {
         CGFloat contentWidth =
                 self.frame.size.width == self.superview.frame.size.width ? self.superview.frame.size.width :
-                self.frame.size.width + 120;
+                self.frame.size.width + 10;
         CGFloat contentHeight =
                 self.frame.size.height == self.superview.frame.size.height ? self.superview.frame.size.height :
-                self.frame.size.height + 120;
+                self.frame.size.height + 10;
         self.contentSize = CGSizeMake(contentWidth, contentHeight);
     }
 }

@@ -9,6 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "expanz_ui_TextInputUtils.h"
 
 #define radians(degrees) degrees * M_PI / 180
@@ -16,7 +17,7 @@ static TextInputUtils* gSharedTextInputUtils;
 
 @interface expanz_ui_TextInputUtils (Private)
 
-- (CGFloat) distanceToScrollFor:(UIView*)textInputView;
+- (void) calculateDistanceToScrollFor:(UIView*)textInputView;
 
 - (void) doneEditing;
 
@@ -60,23 +61,31 @@ static TextInputUtils* gSharedTextInputUtils;
 - (void) revealFromBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Scrolling to accomodate keyboard");
     UIView* textInputView = textInputControl.textInputView;
-    CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];
+    [self calculateDistanceToScrollFor:textInputView];
 
-    if (!_scrolled && distanceToScroll > 0) {
+    if (!_scrolled && _distanceToScrollFrame > 0) {
 
         _scrolled = YES;
 
         UIToolbar* keyboardTools = [self keyboardTools];
         CGRect keyboardToolsFrame = keyboardTools.frame;
-        keyboardToolsFrame.origin.y += distanceToScroll;
+        keyboardToolsFrame.origin.y += _distanceToScrollFrame;
         [keyboardTools setFrame:keyboardToolsFrame];
 
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
         CGRect windowFrame = textInputView.window.frame;
-        windowFrame.origin.y -= distanceToScroll;
+        windowFrame.origin.y -= _distanceToScrollFrame;
         [textInputView.window setFrame:windowFrame];
+
+        if (_distanceToScrollContainerView > 0) {
+            UIScrollView* containerView = (UIScrollView*) textInputView.superview;
+            CGPoint contentOffset = containerView.contentOffset;
+            contentOffset.y += _distanceToScrollContainerView;
+            containerView.contentOffset = contentOffset;
+        }
+
         [UIView commitAnimations];
 
     }
@@ -84,22 +93,31 @@ static TextInputUtils* gSharedTextInputUtils;
 
 - (void) restoreBeneathKeyboard:(id<UITextInput>)textInputControl {
     LogDebug(@"Restoring previous position.");
+
     if (_scrolled) {
         UIView* textInputView = textInputControl.textInputView;
-        CGFloat distanceToScroll = [self distanceToScrollFor:textInputView];
 
         UIToolbar* keyboardTools = [self keyboardTools];
         CGRect keyboardToolsFrame = keyboardTools.frame;
-        keyboardToolsFrame.origin.y -= distanceToScroll;
+        keyboardToolsFrame.origin.y -= _distanceToScrollFrame;
         [keyboardTools setFrame:keyboardToolsFrame];
 
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
         CGRect viewFrame = textInputView.window.frame;
-        viewFrame.origin.y += distanceToScroll;
+        viewFrame.origin.y += _distanceToScrollFrame;
         [textInputView.window setFrame:viewFrame];
+
+        if (_distanceToScrollContainerView > 0) {
+            UIScrollView* containerView = (UIScrollView*) textInputView.superview;
+            CGPoint contentOffset = containerView.contentOffset;
+            contentOffset.y -= _distanceToScrollContainerView;
+            containerView.contentOffset = contentOffset;
+        }
+
         [UIView commitAnimations];
+
     }
     _scrolled = NO;
 }
@@ -125,8 +143,10 @@ static TextInputUtils* gSharedTextInputUtils;
 
 
 /* ================================================== Private Methods =============================================== */
-- (CGFloat) distanceToScrollFor:(UIView*)textInputView {
-    CGFloat animatedDistance = 0;
+- (void) calculateDistanceToScrollFor:(UIView*)textInputView {
+    _distanceToScrollFrame = 0;
+    _distanceToScrollContainerView = 0;
+
     CGRect textFieldRect = [textInputView.window convertRect:textInputView.bounds fromView:textInputView];
     if (textFieldRect.origin.y >= 250) {
         CGRect viewRect = [textInputView.window convertRect:textInputView.window.bounds fromView:textInputView.window];
@@ -142,13 +162,22 @@ static TextInputUtils* gSharedTextInputUtils;
         }
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
         if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
-            animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+            _distanceToScrollFrame = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
         }
         else {
-            animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+            _distanceToScrollFrame = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+        }
+        if ([textInputView.superview isKindOfClass:[UIScrollView class]]) {
+            UIScrollView* scrollView = (UIScrollView*) textInputView.superview;
+            NSUInteger scrollHeight = scrollView.contentSize.height;
+            NSUInteger currentOffset = scrollView.contentOffset.y;
+            CGFloat textInputLower = textInputView.frame.origin.y + textInputView.frame.size.height;
+            CGFloat lowerViewCoord = 416 + scrollView.contentOffset.y - TOOLBAR_HEIGHT - MARGIN;
+            if (textInputLower > (lowerViewCoord)) {
+                _distanceToScrollContainerView = textInputLower - lowerViewCoord;
+            }
         }
     }
-    return animatedDistance;
 }
 
 - (void) doneEditing {
