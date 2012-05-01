@@ -17,7 +17,6 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_NavigationManager.h"
-#import "expanz_service_SessionDataClient.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
@@ -32,7 +31,7 @@
     if (self) {
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
-        _activityManger = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
 
         SessionDataRequest* sessionDataRequest =
@@ -133,7 +132,7 @@
     else {
         menuItem = [[_menu allMenuItems] objectAtIndex:indexPath.row];
     }
-    if ([_activityManger showActivity:menuItem]) {
+    if ([_navigationManager showActivityFor:menuItem]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

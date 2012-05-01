@@ -33,21 +33,17 @@
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextInputUtils.h"
 #import "RTProperty.h"
-#import "expanz_model_MenuItem.h"
+#import "expanz_ui_utils_ViewTagger.h"
+
 
 /* ================================================================================================================== */
 @interface expanz_ui_ActivityInstanceViewController (private)
 
 - (void) cachePropertyNames;
 
-- (void) createActivityRequestWith:(NSString*)initialKey;
-
 - (void) showLoadingHud;
 
 - (void) hideLoadingHud;
-
-- (unsigned int) createOrRetrieveTagForView:(UIView*)view;
-
 
 @end
 
@@ -55,29 +51,33 @@
 /* ================================================================================================================== */
 @implementation expanz_ui_ActivityInstanceViewController
 
+
 @synthesize propertyNames = _propertyNames;
-@synthesize menuItem = _menuItem;
 @synthesize activityInstance = _activityInstance;
 @synthesize modelAdapter = _modelAdapter;
 @synthesize spinner = _spinner;
 @synthesize searchBar = _searchBar;
+@synthesize activityId = _activityId;
+@synthesize style = _style;
+
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithMenuItem:(expanz_model_MenuItem*)menuItem nibName:(NSString*)nibName
-        initialKey:(NSString*)initialKey {
+- (id) initWithActivityId:(NSString*)activityId title:(NSString*)title style:(expanz_model_ActivityStyle*)style
+        initialKey:(NSString*)initialKey nibName:(NSString*)nibName {
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
-        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
-        _menuItem = menuItem;
-        [self setTitle:_menuItem.title];
-        [self createActivityRequestWith:initialKey];
+        _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
+        _activityId = [activityId copy];
+        [self setTitle:title];
+        _style = style;
         [self cachePropertyNames];
     }
     return self;
 }
+
 
 /* ================================================ Interface Methods =============================================== */
 - (void) sendDeltaForField:(FieldInstance*)field {
@@ -150,7 +150,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    LogDebug(@"@@@@@@ VIEW DID LOAD");
     for (DataPublicationRequest* publicationRequest in [_activityRequest dataPublicationRequests]) {
         if (publicationRequest.dataPublicationId == nil) {
             for (NSString* propertyName in [self propertyNames]) {
@@ -302,9 +302,9 @@
     _propertyNames = [NSArray arrayWithArray:propertyNames];
 }
 
-- (void) createActivityRequestWith:(NSString*)initialKey {
+- (void) attachToServerWithInitialKey:(NSString*)initialKey {
     _activityRequest = [[CreateActivityRequest alloc]
-            initWithActivityName:_menuItem.activityId style:_menuItem.style initialKey:initialKey
+            initWithActivityName:_activityId style:_style initialKey:initialKey
             sessionToken:[SessionContext globalContext].sessionToken];
 }
 
@@ -318,9 +318,8 @@
     _subViewStateCache = [[NSMutableDictionary alloc] init];
     for (UIView* view in [self.view subviews]) {
 
-        unsigned int generatedViewTag = [self createOrRetrieveTagForView:view];
-        [_subViewStateCache
-                setObject:[NSNumber numberWithBool:view.hidden] forKey:[NSNumber numberWithInt:generatedViewTag]];
+        NSNumber* viewTag = [NSNumber numberWithInt:[ViewTagger tagForView:view]];
+        [_subViewStateCache setObject:[NSNumber numberWithBool:view.hidden] forKey:viewTag];
         [view setHidden:YES];
     }
 
@@ -337,20 +336,5 @@
     }
     _subViewStateCache = nil;
 }
-
-/* ================================================================================================================== */
-- (unsigned int) createOrRetrieveTagForView:(UIView*)view {
-    unsigned int generatedTag;
-    if (view.tag == 0) {
-        NSScanner* scanner = [NSScanner scannerWithString:[NSString stringWithFormat:@"%p", view]];
-        [scanner scanHexInt:&generatedTag];
-        [view setTag:generatedTag];
-    }
-    else {
-        generatedTag = view.tag;
-    }
-    return generatedTag;
-}
-
 
 @end

@@ -10,23 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_ui_AbstractDataRenderer.h"
-
-@class expanz_ui_NavigationManager;
-@class expanz_model_TreeData;
-@class expanz_ui_components_ThumbnailTableCell;
 
 
-@interface expanz_ui_TreeDataRenderer : expanz_ui_AbstractDataRenderer {
+@interface expanz_ui_utils_ViewTagger : NSObject
 
-@private
-    expanz_model_TreeData* _treeData;
-}
-
+/**
+* If the view already has a tag allocated, returns the existing tag, otherwise creates a unique one.
+*/
++ (NSUInteger) tagForView:(UIView*)view;
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias TreeDataRenderer expanz_ui_TreeDataRenderer;
-
-
+@compatibility_alias ViewTagger expanz_ui_utils_ViewTagger;

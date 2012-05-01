@@ -34,10 +34,6 @@ typedef enum {
 
 - (BOOL) isBrowse;
 
-- (NSString*) controllerClassNameForActivityId:(NSString*)activityId;
-
-- (NSString*) nibNameForActivityId:(NSString*)activityId;
-
 @end
 /* ================================================================================================================== */
 @compatibility_alias ActivityStyle expanz_model_ActivityStyle;

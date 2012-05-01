@@ -22,7 +22,7 @@
 
 @private
     id<expanz_service_SessionDataClient> _sessionDataClient;
-    expanz_ui_NavigationManager* _activityManger;
+    expanz_ui_NavigationManager* _navigationManager;
     id<expanz_ui_SystemEventReporter> _reporter;
 }
 

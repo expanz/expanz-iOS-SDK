@@ -19,6 +19,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_DocumentViewController.h"
 #import "expanz_model_ActivityInstance.h"
+#import "expanz_ui_ActivityControllerBuilder.h"
 
 /* ================================================================================================================== */
 @implementation expanz_ui_NavigationManager
@@ -40,7 +41,7 @@ objection_requires(@"reporter")
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (BOOL) showMainMenu {
+- (ActivityMenuViewController*) showMainMenu {
     ActivityMenuViewController* menuViewController = [[ActivityMenuViewController alloc] init];
     [_navigationController pushViewController:menuViewController animated:YES];
     [_navigationController setNavigationBarHidden:NO];
@@ -48,41 +49,43 @@ objection_requires(@"reporter")
 
     SdkAppDelegate* delegate = [UIApplication sharedApplication].delegate;
     [delegate.window addSubview:delegate.navigationController.view];
-    return YES;
+    return menuViewController;
 }
 
 
-- (BOOL) showActivity:(MenuItem*)menuItem {
-    return [self showActivity:menuItem initialKey:nil];
+- (ActivityInstanceViewController*) showActivityFor:(MenuItem*)menuItem {
+    return [self showActivityFor:menuItem initialKey:nil];
 }
 
-- (BOOL) showActivity:(MenuItem*)menuItem initialKey:(NSString*)initialKey {
+- (ActivityInstanceViewController*) showActivityFor:(MenuItem*)menuItem initialKey:(NSString*)initialKey {
 
-    NSString* controllerClassName = [menuItem.style controllerClassNameForActivityId:menuItem.activityId];
-    id clazz = objc_getClass([controllerClassName cStringUsingEncoding:NSASCIIStringEncoding]);
-    if (clazz == nil) {
-        NSString* errorMessage = [NSString stringWithFormat:@"No controller exists named %@", controllerClassName];
-        [_reporter reportErrorWithReason:errorMessage];
-        return NO;
+    ActivityControllerBuilder* controllerBuilder = [ActivityControllerBuilder forActivityId:menuItem.activityId];
+    [controllerBuilder setTitle:menuItem.title];
+    [controllerBuilder setStyle:menuItem.style];
+    [controllerBuilder setInitialKey:initialKey];
+    [controllerBuilder setShouldAttachToServer:YES];
+    ActivityInstanceViewController* nextViewController = [controllerBuilder build];
+
+    if (nextViewController) {
+        [_navigationController pushViewController:nextViewController animated:YES];
+        return nextViewController;
     }
     else {
-        ActivityInstanceViewController* nextView = [clazz alloc];
-        NSString* nibName = [menuItem.style nibNameForActivityId:menuItem.activityId];
-        nextView = [nextView initWithMenuItem:menuItem nibName:nibName initialKey:initialKey];
-        [_navigationController pushViewController:nextView animated:YES];
-        return YES;
+        NSString* errorMessage =
+                [NSString stringWithFormat:@"No controller exists for activity: %@", menuItem.activityId];
+        [_reporter reportErrorWithReason:errorMessage];
+        return nil;
     }
 }
 
-- (BOOL) showDocument:(NSString*)documentId {
-    ActivityInstanceViewController
-            * currentActivity = (ActivityInstanceViewController*) [_navigationController topViewController];
-    NSString* activityHandle = [currentActivity activityInstance].handle;
+- (DocumentViewController*) showDocument:(NSString*)documentId {
+    NSString* activityHandle =
+            [(ActivityInstanceViewController*) [_navigationController topViewController] activityInstance].handle;
 
     DocumentViewController* documentViewController =
             [[DocumentViewController alloc] initWithDocumentId:documentId activityHandle:activityHandle];
     [_navigationController pushViewController:documentViewController animated:YES];
-    return YES;
+    return documentViewController;
 }
 
 

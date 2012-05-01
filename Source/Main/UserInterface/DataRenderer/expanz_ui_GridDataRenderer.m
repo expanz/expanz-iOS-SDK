@@ -85,9 +85,9 @@
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     Row* row = [self tableView:tableView rowForIndexPath:indexPath];
 
-    MenuItem* edit =
+    MenuItem* menuItem =
             [[MenuItem alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([self.activityManager showActivity:edit initialKey:row.rowId]) {
+    if ([self.activityManager showActivityFor:menuItem initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
@@ -97,7 +97,7 @@
 
 - (void) thumbnailTableViewCell:(ThumbnailTableCell*)cell setThumbnailImageFor:(Row*)row {
     if ([_thumbnailFieldId length] > 0) {
-        ImageGridDataCell* imageCell = [row cellForFieldId:_thumbnailFieldId];
+        ImageGridDataCell* imageCell = (ImageGridDataCell*) [row cellForFieldId:_thumbnailFieldId];
         cell.thumbnail.image = [UIImage imageWithData:imageCell.imageData];
         if (cell.thumbnail.image == nil) {
             LogDebug(@"Observing cell for an image that hasn't loaded yet.");

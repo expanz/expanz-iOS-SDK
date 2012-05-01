@@ -1,0 +1,2589 @@
+<ExecXResponse xmlns="http://www.expanz.com/ESAService">
+    <ExecXResult>
+        <ESA success="1" responseTime="63" xmlns="">
+            <Activity activityHandle="634713294687001065.85" dirty="False" ActivityPersistentId="0">
+                <Field id="PersistentId" null="1" value=""/>
+                <Field id="Name" null="1" value="" valid="0"/>
+                <Field id="Url" null="1" value="" valid="1"/>
+                <Field id="Address" null="1" value="" valid="1"/>
+                <Field id="Industry" null="0" valid="1" value="Unknown"/>
+                <Field id="NumberOfEmployees" null="0" valid="1" value="1"/>
+                <Field id="CompanyDescription" null="1" value="$longData$" valid="1"></Field>
+                <Field id="SolutionDesired" null="1" value="$longData$" valid="1"></Field>
+                <Field id="WhyBuyUs" null="1" value="$longData$" valid="1"></Field>
+                <Field id="Notes" null="1" value="$longData$" valid="1"></Field>
+                <Field id="Status" null="0" valid="1" value="10" text="Not yet contacted"/>
+                <Field id="NextStep" null="0" valid="1" value="10" text="Cold Call"/>
+                <Field id="Temperature" null="0" valid="1" value="1" text="Do not know"/>
+                <Field id="LeadType" null="0" valid="1" value="10" text="Food Distribution Solution"/>
+                <Field id="LeadLevel" null="0" valid="1" value="10" text="No Lead Identified"/>
+                <Field id="Result" null="0" valid="1" value="1" text="None"/>
+                <Field id="StrategicInterest" null="0" valid="1" value="1" text="Not Set"/>
+                <Field id="InternalInformationUrl" null="1" value="" valid="1"/>
+                <Field id="SearchFilter" null="1" value="" valid="1"/>
+                <Field id="ProblemToOvercome" null="1" value="$longData$" valid="1"></Field>
+                <Field id="LeadSource" null="1" value="" valid="1"/>
+                <Field id="ActiveLeadListType" null="0" valid="1" value="MyLeads" text="My Leads"/>
+                <Data id="CompanyNamesQueryTableView" source="Company.MakeDataElement(from idbquery)">
+                    <Columns>
+                        <Column id="1" field="PersistentId" label="PersistentId" datatype="number" width="100"
+                                SubDataType="integer"/>
+                        <Column id="2" field="Name" label="Name" datatype="string" width="100"
+                                columnToolTip="What is the Company Name"/>
+                        <Column id="3" field="Url" label="WebSite" datatype="string" width="100"
+                                columnToolTip="company website" metaType="url"/>
+                        <Column id="4" field="Address" label="Address" datatype="string" width="100"
+                                columnToolTip="Street Address"/>
+                        <Column id="5" field="Industry" label="Industry" datatype="string" width="100"
+                                columnToolTip="What Industry are they in"/>
+                        <Column id="6" field="NumberOfEmployees" label="Number Of Employees" datatype="number"
+                                width="100" SubDataType="decimal"
+                                columnToolTip="How many employees do they have approximately"/>
+                        <Column id="7" field="CompanyDescription" label="Company Description" datatype="string"
+                                width="100"/>
+                        <Column id="8" field="SolutionDesired" label="Solution Desired" datatype="string" width="100"
+                                columnToolTip="What would be their perfect solution?"/>
+                        <Column id="9" field="WhyBuyUs" label="Why Buy Us" datatype="string" width="100"
+                                columnToolTip="What messages should we ensure they understand about our solution?"/>
+                        <Column id="10" field="Notes" label="Notes" datatype="string" width="100"/>
+                        <Column id="11" field="Status" label="Status" datatype="string" width="100"/>
+                        <Column id="12" field="NextStep" label="Next Step" datatype="string" width="100"/>
+                        <Column id="13" field="Temperature" label="Temperature" datatype="string" width="100"
+                                columnToolTip="How interested is the organisation in solving the problem"/>
+                        <Column id="14" field="LeadType" label="Lead Type" datatype="string" width="100"
+                                columnToolTip="Type of solution we will be offering"/>
+                        <Column id="15" field="LeadLevel" label="Lead Level" datatype="string" width="100"/>
+                        <Column id="16" field="Result" label="Result" datatype="string" width="100"
+                                columnToolTip="What is the results acheived from last call"/>
+                        <Column id="17" field="StrategicInterest" label="Strategic Interest" datatype="string"
+                                width="100" columnToolTip="Why would we be interested in this opportunity ?"/>
+                        <Column id="18" field="InternalInformationUrl" label="Internal Information" datatype="string"
+                                width="100" metaType="url"/>
+                        <Column id="19" field="SearchFilter" label="Search Filter" datatype="string" width="100"/>
+                        <Column id="20" field="ProblemToOvercome" label="Problem To Overcome" datatype="string"
+                                width="100"/>
+                        <Column id="21" field="LeadSource" label="Lead Source" datatype="string" width="100"/>
+                        <Column id="22" field="ActiveLeadListType" label="Lead Type Filter" datatype="string"
+                                width="100"/>
+                        <Column id="23" field="SalesPerson.PersistentId" label="PersistentId" datatype="number"
+                                width="100" SubDataType="integer"/>
+                        <Column id="24" field="SalesPerson.FirstName" label="First Name" datatype="string" width="100"/>
+                        <Column id="25" field="SalesPerson.LastName" label="Last Name" datatype="string" width="100"/>
+                        <Column id="26" field="SalesPerson.FullName" label="Full Name" datatype="string" width="100"/>
+                        <Column id="27" field="KeyContact.PersistentId" label="Key Contact" datatype="number"
+                                width="100" SubDataType="integer"/>
+                        <Column id="28" field="KeyContact.FirstName" label="First Name" datatype="string" width="100"/>
+                        <Column id="29" field="KeyContact.LastName" label="Last Name" datatype="string" width="100"/>
+                        <Column id="30" field="KeyContact.MetInPerson" label="Met In Person" datatype="bool"
+                                width="100"/>
+                        <Column id="31" field="KeyContact.MobileNumber" label="Mobile Number" datatype="string"
+                                width="100"/>
+                        <Column id="32" field="KeyContact.DirectPhone" label="Direct Phone" datatype="string"
+                                width="100"/>
+                        <Column id="33" field="KeyContact.ReceptionPhone" label="Reception Phone" datatype="string"
+                                width="100"/>
+                        <Column id="34" field="KeyContact.PreferredPhone" label="Preferred Phone" datatype="string"
+                                width="100"/>
+                        <Column id="35" field="KeyContact.Email" label="Email" datatype="string" width="100"/>
+                        <Column id="36" field="KeyContact.Email2" label="Email 2" datatype="string" width="100"/>
+                        <Column id="37" field="KeyContact.LinkedIn" label="Linked-In" datatype="string" width="100"
+                                metaType="url"/>
+                        <Column id="38" field="KeyContact.Blog" label="Blog" datatype="string" width="100"
+                                metaType="url"/>
+                        <Column id="39" field="KeyContact.Facebook" label="Facebook" datatype="string" width="100"
+                                metaType="url"/>
+                        <Column id="40" field="KeyContact.Notes" label="Notes" datatype="string" width="100"/>
+                        <Column id="41" field="KeyContact.PersonType" label="Person Type" datatype="string"
+                                width="100"/>
+                        <Column id="42" field="KeyContact.FullName" label="Full Name" datatype="string" width="100"/>
+                    </Columns>
+                    <Rows Type="cell">
+                        <Row Type="erp365CRM.Company" id="50">
+                            <Cell id="1" sortValue="0000000050">50</Cell>
+                            <Cell id="2">Aquer Foods</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">(03) 9585 1768</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="56">
+                            <Cell id="1" sortValue="0000000056">56</Cell>
+                            <Cell id="2">Associated Food Service</Cell>
+                            <Cell id="3">http://www.associatedfoodservice.com</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Contact - Mr Robert Alfredini Mobile: 0413 126 066</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="17">
+                            <Cell id="1" sortValue="0000000017">17</Cell>
+                            <Cell id="2">Aussie Farmer Direct</Cell>
+                            <Cell id="3">http://www.aussiefarmers.com.au/</Cell>
+                            <Cell id="4">BUILDING 10 L 3 658 CHURCH ST, EAST RICHMOND, VIC 3121</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">New South Wales/ACT, Jason Hanns, Business Development Manager, Call: 0433 187
+                                875 Started 2005, 100% Australian owned, 175 "Milkmen", 2009 BRW Fast
+                                Company,80,000(2010) 130,000(2012) customers (20% per year growth).
+                            </Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000010" value="Unavailable Call Back">Unavailable Call Back
+                            </Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000029">29</Cell>
+                            <Cell id="28">Trent</Cell>
+                            <Cell id="29">Morpeth</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0419 350 304</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">Trent.Morpeth@aussiefarmers.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Trent Morpeth</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="54">
+                            <Cell id="1" sortValue="0000000054">54</Cell>
+                            <Cell id="2">Aussie Health Products</Cell>
+                            <Cell id="3">http://www.aussiehealthproducts.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Phone: (07) 56 689 352 Email: mail@aussiehealthproducts.com.au</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="20">
+                            <Cell id="1" sortValue="0000000020">20</Cell>
+                            <Cell id="2">Austral Herbs</Cell>
+                            <Cell id="3">http://www.australherbs.com.au/</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Has website that changes pricing depending on login - wholesale or individual.
+                                02 6778 7357
+                            </Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000010" value="Unavailable Call Back">Unavailable Call Back
+                            </Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000031">31</Cell>
+                            <Cell id="28">Kym</Cell>
+                            <Cell id="29">Grant</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">02 6778 7357</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">kym@australherbs.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Kym Grant</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="9">
+                            <Cell id="1" sortValue="0000000009">9</Cell>
+                            <Cell id="2">Back to Eden</Cell>
+                            <Cell id="3">http://www.backtoeden.com.au</Cell>
+                            <Cell id="4">Cnr Bedford and Park Rd Hombush NSW 2040</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Organic products - majority is fresh fruit and vegetables. Own trucks with
+                                daily delivery runs. lots of farmers agreements for
+                                products,jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjlkhotouiybpoiuy0oiuypoiy9uytoiuyouytv9tvoutiutoulytviutvouyouiytboiuyoiutbouyouiytoiuyoiuyouyboiuyoiuuyobiytouiytoiuybpoiuyobiyoytobiuyij
+                            </Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9">Knows of SoulFresh.</Cell>
+                            <Cell id="10">WA Reception - 9746-0070</Cell>
+                            <Cell id="11" sortValue="0000000060" value="Site Visit Planned">Site Visit Planned</Cell>
+                            <Cell id="12" sortValue="0000000020" value="Await meeting or scheduled phone call">Await
+                                meeting or scheduled phone call
+                            </Cell>
+                            <Cell id="13" sortValue="0000000040" value="Warm - some interest">Warm - some interest
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000070" value="Appointment Made">Appointment Made</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20">lost stock, contract packing, not able to go on holidays, QA on product
+                                leaving and arriving, sales on the floor (iPads), cannot do simple production
+                                internally, no web sales B2B, no price based on cost, lots of stress
+                            </Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000033">33</Cell>
+                            <Cell id="28">Graeme</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0418 972 972</Cell>
+                            <Cell id="32">02 9746 0070</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Graeme Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="40">
+                            <Cell id="1" sortValue="0000000040">40</Cell>
+                            <Cell id="2">Belgian Delights</Cell>
+                            <Cell id="3">http://www.belgiandelights.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">Trade Show</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="58">
+                            <Cell id="1" sortValue="0000000058">58</Cell>
+                            <Cell id="2">Bidvest Food Service v</Cell>
+                            <Cell id="3">http://www.bidvest.com.au</Cell>
+                            <Cell id="4">548 - 572 Clayton Road, Clayton Vic 3168</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000058">58</Cell>
+                            <Cell id="28">Debi</Cell>
+                            <Cell id="29">Sinclair</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Debi Sinclair</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="10">
+                            <Cell id="1" sortValue="0000000010">10</Cell>
+                            <Cell id="2">Bravo Gelato</Cell>
+                            <Cell id="3">http://www.bravogelato.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">+61 2 8845 0145</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10">02 8845 0145 Filipe Operations sales@bravogelato.com.au Kathy, in factory -
+                                stocktake at the moment Karen, Filipe busy at the moment in the factory - try later...
+                                Lots of overseas orders at the moment.
+                            </Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000020"
+                                  value="High Interest - in an area we would like to grow">High Interest - in an area we
+                                would like to grow
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000005">5</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="16">
+                            <Cell id="1" sortValue="0000000016">16</Cell>
+                            <Cell id="2">Dave Perks</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">0424282465</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000020" value="Cool - not sure if interested">Cool - not sure
+                                if interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">MattC</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000018">18</Cell>
+                            <Cell id="28">Dave</Cell>
+                            <Cell id="29">Perks</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0424282465</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Dave Perks</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="11">
+                            <Cell id="1" sortValue="0000000011">11</Cell>
+                            <Cell id="2">deligrains.com</Cell>
+                            <Cell id="3">http://www.deligrains.com</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">National Sales / Customer Service, Amyson Pty Ltd, 29 Elizabeth Street,
+                                Wetherill Park NSW 2164 Australia Tel: (02) 9756 6338, Email: info@DeliGrains.com
+                            </Cell>
+                            <Cell id="8">Deligrains: Trucks - Discussions with Don at Organic Food Expo</Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10">not in today - Don - not in the office - back next tuesday. At organic food
+                                expo and has own distribution network starting up. Hi Don, We had a discussion about
+                                software that I would like to take further at a time that suits you. You indicated you
+                                have 4 trucks at the moment and a sister company in Melbourne. This is very similar to
+                                another company that uses our software – a few reps visiting outlets taking orders and
+                                looking at competitive products, a few trucks doing delivery without lots of
+                                administration. Our system is online, built with a small distribution company and simple
+                                to use. It covers financials (replacing the MYOB), sales orders in store by the reps,
+                                regular call cycles, regular delivery runs, inventory purchasing based on sales history,
+                                overseas suppliers and everyone in one system. Please let me know if there is a time
+                                that would suit you for me to come and get a better understanding of your needs.
+                            </Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000010">10</Cell>
+                            <Cell id="28">Don</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">02 9756 6338</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36">info@deligrains.com</Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Don Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="7">
+                            <Cell id="1" sortValue="0000000007">7</Cell>
+                            <Cell id="2">Deshel Foods (NSW) and Eustralis (WA)</Cell>
+                            <Cell id="3">http://www.deshel.com.au</Cell>
+                            <Cell id="4">Unit 7, 4-6 Aquatic drive, Frenchs Forest, NSW 2086</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Specialists in dried and frozen fine european foods. Sebastian Reception 02-
+                                9981-4446 (2) Frederic Bardinet frederic.bardinet@eustralis.com.au
+                                http://www.eustralis.com.au/spip.php?page=contact
+                                https://erp365.jira.com/wiki/display/ERP/Deshel+Foods+Requirements
+                            </Cell>
+                            <Cell id="8">Solution for NSW and also Perth.</Cell>
+                            <Cell id="9">Know the business model - can simplify many business processes. Already in
+                                Perth and NSW
+                            </Cell>
+                            <Cell id="10">Elerig Liguet - Sales manager - 0425-154-534 Frederick back in Australia
+                                (Perth) in mid April 2012 - sent email
+                            </Cell>
+                            <Cell id="11" sortValue="0000000080" value="Project Delayed or Possible Later">Project
+                                Delayed or Possible Later
+                            </Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000040" value="Warm - some interest">Warm - some interest
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000050" value="Send Information">Send Information</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Deshel+Foods+Requirements</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000053">53</Cell>
+                            <Cell id="28">Frederick</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40">http://www.eustralis.com.au •Partner businesses in Qld, Vic, SA as well.
+                            </Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Frederick Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="57">
+                            <Cell id="1" sortValue="0000000057">57</Cell>
+                            <Cell id="2">Dorr paper and food supplies</Cell>
+                            <Cell id="3">http://www.dorr.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000057">57</Cell>
+                            <Cell id="28">Stephen</Cell>
+                            <Cell id="29">Radford</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0425 756</Cell>
+                            <Cell id="32">9372 1922</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Stephen Radford</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="4">
+                            <Cell id="1" sortValue="0000000004">4</Cell>
+                            <Cell id="2">Eclipse Wholefoods</Cell>
+                            <Cell id="3">http://www.eclipsewholefoods.com.au</Cell>
+                            <Cell id="4">rear 221 windsor st richmond</Cell>
+                            <Cell id="5">Organic foods</Cell>
+                            <Cell id="6" sortValue="0000007.00">7</Cell>
+                            <Cell id="7">Small company that has just started up (2011). Eclipse Wholefoods: Fibresil and
+                                other organic products branching into more interesting products such as design your own
+                                museli, iMuseli (for corporates) with ability to edit packaging, Breakfasts at IKU, own
+                                retail outlet, farmers markets (Shared), new contract with 20 stores plus more options -
+                                expecting 4x increase over 12 months. Family owns the building they are in. Has
+                                financial partner lined up for UK expansion. Has regular monday delivery runs - has 200
+                                customers, shops, online and factories. Also Drop/ships product. Will require a weekly
+                                restocking run to IKU shops - IKU sells for him and he pays rent (import IKU orders?)
+                                brett@eclipsewholefoods.com.au 02 8060 4507 500+ products now sold in many packaging
+                                sizes Buying a 24 stacker oven now (last one was cheap at $5000). Website currently
+                                hosted in USA - has dropdown to purchase same item in different sizes. 10% of business
+                                is shop. 500 products - stock out of control - lots of re-keying data and manually
+                                printing recipies then update actuals later. Does do repacking. No stock forecasting
+                                now. Monday delivery runs to shops, online stores, factories and drop ship products
+                                being sent. Does contract manufacturing, has POS and scanning. Currently talking to IKU
+                                about 20 shops (Breakfasts) and will need to replenish locations weekly. Pays rent to
+                                shops (rather than a wholesale business) and hence will need to import information from
+                                IkU - rent is based on sales, no sales no rent. Farmers markets (Multiple) is shared
+                                space - use NCR macrofood system. Generated price lists by category, images, descrption
+                                with specific formats and for product types (Bulk etc) and nutritional panels. FSANZ
+                                database of foods is matched to products = need to generate imagery as required.
+                            </Cell>
+                            <Cell id="8">Reduce 3 or 4 hours per day currently spent updating transactions Currently not
+                                able to plan stock requirements (delay in entering production details). Enable
+                                significant growth plans for the business Integrate production and ordering, financials
+                                and website - while tracking organics plus enabling recipes, imuseli and other products.
+                                Manufacturing recipies (cooking ovens recently purchased) and stock purchasing made easy
+                                FSANZ database import, able to re-inport - mapping of database to his products and use
+                                in nutritional panels. Generated price list by catagories and price lists, images,
+                                descriptions, monthly locked, has summary pages etc and bulk only version. Tracks
+                                supplier last price and also competitors prices. Different products available if
+                                wholesale or retail customer. Make your own museli in the future - website to select
+                                ingredients Design your own museli + own box in iMuseli label in future. Website UI to
+                                be separate - has web developer working in ASP. Sports clubs and schools purchasing to
+                                raise money for their school. Wholesale prices are fixed for the month. Supplier price
+                                is based on last cost. Lots of Drop Shipping. Toasting ovens (24 stacker) now.
+                            </Cell>
+                            <Cell id="9">Integrated website, production, financials, POS, farmers markets. Understand
+                                Organics and can do custom development especially in the web area or custom product
+                                design. Able to extend database to Australian products. Cost based on Revenue model ok.
+                            </Cell>
+                            <Cell id="10">Cashflow crisis at the moment Called 28/9 Struggling right at this minute with
+                                software. System for managing everything = written on Filemaker. full of holes - enter
+                                all stuff, some talks and some calculates and no idea of stock. Shop - ingredients,
+                                repackage and sell, mix products together, sell products. Sales - shop, internet,
+                                wholesale to distributors. Recent decision not to go with distributors as they take such
+                                a big chunk - Father on gold coast - victorian distributor in the future. Not enough
+                                profit margin in the product at the moment. Range of products - regular cycle... Very
+                                simple system built. Recipie database - processing the recipie and take inventory from
+                                the system. Repack products, food information and purchasing and invoicing. contacts. No
+                                time to maintain or keep developing it has forgotten how to develop it. Biggest problem
+                                as hard to keep track of stock - repacked and processed and no calculations happening at
+                                the moment. Accounting WIP - not tracked. Only total values at the moment. opened the
+                                shop as well recently - every penny to stock at the moment - quadrupling monthly at the
+                                moment $10 not possible at the moment. 6 months to a sustainable level - Launched at
+                                expo (going for a year before that). do not have cash flow to keep up with orders as
+                                cannot fulfill them at the moment. Capital bottleneck at the moment. Call in three
+                                months.......... 40,000 units per month.... negotiating at the moment Spiral foods - do
+                                what they do but wet food - he does dry food. in house business. Asked to be approached
+                                2 weeks after the tradeshow - Week beginning 15th
+                            </Cell>
+                            <Cell id="11" sortValue="0000000030" value="Phone conversation has been had about project">
+                                Phone conversation has been had about project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000030" value="Scope Project">Scope Project</Cell>
+                            <Cell id="13" sortValue="0000000050" value="Hot - very interested">Hot - very interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000070" value="Appointment Made">Appointment Made</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Eclipse+Wholefoods</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000007">7</Cell>
+                            <Cell id="28">Brett</Cell>
+                            <Cell id="29">Monoghan</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31">0404 193 864</Cell>
+                            <Cell id="32">02 8060 4507</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">brett@eclipsewholefoods.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Brett Monoghan</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="37">
+                            <Cell id="1" sortValue="0000000037">37</Cell>
+                            <Cell id="2">Emma and Toms</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">Road</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="62">
+                            <Cell id="1" sortValue="0000000062">62</Cell>
+                            <Cell id="2">Foamco</Cell>
+                            <Cell id="3">http://www.foamco.com.au</Cell>
+                            <Cell id="4">27 Pembury Rd, Minto. NSW 2566</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">make foam mattresses</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000040" value="Non-Food Distributor">Non-Food Distributor
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000066">66</Cell>
+                            <Cell id="28">Peter</Cell>
+                            <Cell id="29">Keen</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0427 312 285</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">8796 9500</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Peter Keen</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="38">
+                            <Cell id="1" sortValue="0000000038">38</Cell>
+                            <Cell id="2">Galaxy Imports</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">Road</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000046">46</Cell>
+                            <Cell id="28">Unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">9519-2544</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="29">
+                            <Cell id="1" sortValue="0000000029">29</Cell>
+                            <Cell id="2">Green Tucker Store</Cell>
+                            <Cell id="3">http://www.greentucker.org.au</Cell>
+                            <Cell id="4">51 Arthur st Forestville</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000038">38</Cell>
+                            <Cell id="28">Unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="32">
+                            <Cell id="1" sortValue="0000000032">32</Cell>
+                            <Cell id="2">Grove Fruit Juice</Cell>
+                            <Cell id="3">http://www.grovejuice.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000041">41</Cell>
+                            <Cell id="28">Unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">02-3349-0555</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="53">
+                            <Cell id="1" sortValue="0000000053">53</Cell>
+                            <Cell id="2">Harbour Foods</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Phone: (02) 9531 8388</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="51">
+                            <Cell id="1" sortValue="0000000051">51</Cell>
+                            <Cell id="2">Healthy Food Media</Cell>
+                            <Cell id="3">http://www.healthyfoodforlife.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Phone: (03) 9686 7997</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10">Sells products from the Muesli company</Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="22">
+                            <Cell id="1" sortValue="0000000022">22</Cell>
+                            <Cell id="2">Heard Systems</Cell>
+                            <Cell id="3">http://www.heardsystems.com.au/</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000003.00">3</Cell>
+                            <Cell id="7">Inventory and manufacturer of cattle pregnancy probe A Roger Allen Investment
+                            </Cell>
+                            <Cell id="8">Integrated system</Cell>
+                            <Cell id="9">Roger Allen. Ready to go</Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000070" value="Discussing specific project">Discussing specific
+                                project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000050" value="Price Proposal">Price Proposal</Cell>
+                            <Cell id="13" sortValue="0000000050" value="Hot - very interested">Hot - very interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000040" value="Non-Food Distributor">Non-Food Distributor
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000050" value="Send Information">Send Information</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Heard+Systems</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20">Rapid growth plans and integrated systems required</Cell>
+                            <Cell id="21">Roger Allen</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000020">20</Cell>
+                            <Cell id="28">Jeremy</Cell>
+                            <Cell id="29">Cocks</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31">0407 304 569</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">jeremy@heardsystems.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Jeremy Cocks</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="31">
+                            <Cell id="1" sortValue="0000000031">31</Cell>
+                            <Cell id="2">Heather Brae Shortbreads</Cell>
+                            <Cell id="3">http://www.heatherbraeshortbreads.com.au</Cell>
+                            <Cell id="4">35 Lipton Drive, Thomastown, Vic 3074</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000040">40</Cell>
+                            <Cell id="28">Heather</Cell>
+                            <Cell id="29">Brae</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">03-9460-4111</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Heather Brae</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="52">
+                            <Cell id="1" sortValue="0000000052">52</Cell>
+                            <Cell id="2">Herbal Serenity</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Phone: 0412 026 160</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="41">
+                            <Cell id="1" sortValue="0000000041">41</Cell>
+                            <Cell id="2">Honest to Goodness</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000047">47</Cell>
+                            <Cell id="28">Matt</Cell>
+                            <Cell id="29">Ward</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Matt Ward</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="2">
+                            <Cell id="1" sortValue="0000000002">2</Cell>
+                            <Cell id="2">Jewel of India</Cell>
+                            <Cell id="3">http://www.jewelofindiacurries.com</Cell>
+                            <Cell id="4">683 Gardeners Road, Mascot, Sydney, NSW, 2020</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Food production lines (2) Indian food and Thai foods. Lots of large contracts.
+                                Lots of customers. Combination of large corporates and small businesses. Details here.
+                                https://erp365.jira.com/wiki/display/ERP/Jewel+of+India+Requirements
+                            </Cell>
+                            <Cell id="8">Manufacturing and orders and financials. Integration with scale ingredient
+                                weiging and recipie management POS for small shop Integration with payroll system
+                                Tracability point of view... - Lot number where used reports of interest.. - Light
+                                Manufacturing - Single production line - Elaborate - lots of meals produced, indian
+                                asian, thai, sizes, weight. Frozen or chilled finished meals. - Product lines
+                            </Cell>
+                            <Cell id="9">Custom development gives exactly what they want - likes this. Running a very
+                                lean business and do not want to introduce complexity - so lean they do stock counts
+                                only once per year and do not issue / receipt stock.
+                            </Cell>
+                            <Cell id="10">Have also met Kinshore Matta the Owner and MD kishore@jewelofindiacurries.com
+                                0402 389 391 0417-004-563 Jim Keating - General Manager Wants us to meet another person
+                                (Henry?) who is involved in the discussions.
+                            </Cell>
+                            <Cell id="11" sortValue="0000000070" value="Discussing specific project">Discussing specific
+                                project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000060" value="Close Plan">Close Plan</Cell>
+                            <Cell id="13" sortValue="0000000040" value="Warm - some interest">Warm - some interest
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000060" value="Wants Call back">Wants Call back</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Jewel+of+India+Requirements</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000003">3</Cell>
+                            <Cell id="28">Jim</Cell>
+                            <Cell id="29">Keatinge</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31">0417 004 563</Cell>
+                            <Cell id="32">02 9669 6411</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">jim@jewelofindiacurries.com</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Jim Keatinge</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="33">
+                            <Cell id="1" sortValue="0000000033">33</Cell>
+                            <Cell id="2">kedumba foods</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">road</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000042">42</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="49">
+                            <Cell id="1" sortValue="0000000049">49</Cell>
+                            <Cell id="2">Make it Cheaper</Cell>
+                            <Cell id="3">http://www.makeitcheaper.com.au/</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000050" value="Professional Services Organisation">Professional
+                                Services Organisation
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">newspaper</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="61">
+                            <Cell id="1" sortValue="0000000061">61</Cell>
+                            <Cell id="2">NDA Supplimenting Australia</Cell>
+                            <Cell id="3">http://www.teamnda.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">NDA are the fastest growing supplement distribution company in Australia and we
+                                are looking to expand internationally by adding a Head Sales Representative in NEW
+                                ZEALAND
+                            </Cell>
+                            <Cell id="8">integrated ERP system, purchase forecasting, ipads for sales reps, customers
+                                ordering online,
+                            </Cell>
+                            <Cell id="9">Existing system</Cell>
+                            <Cell id="10">My business partner Shane will be in touch with you as he runs the back of
+                                house department of the business and will be able to let you know exactly what we
+                                require. Thanks Paul. Tom Doig NDA - Supplementing Australia
+                            </Cell>
+                            <Cell id="11" sortValue="0000000020" value="Sent Blind Email">Sent Blind Email</Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000020" value="Cool - not sure if interested">Cool - not sure
+                                if interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000040" value="Non-Food Distributor">Non-Food Distributor
+                            </Cell>
+                            <Cell id="15" sortValue="0000000030" value="B &lt; 12 Months to lead">B &lt; 12 Months to
+                                lead
+                            </Cell>
+                            <Cell id="16" sortValue="0000000020" value="Left Message on Voice Mail">Left Message on
+                                Voice Mail
+                            </Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Tom+Doig</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20">Manual systems, manual order entry, excel price lists,</Cell>
+                            <Cell id="21">MattC</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000064">64</Cell>
+                            <Cell id="28">Tom</Cell>
+                            <Cell id="29">Doig</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">+61 404 108 564</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">tomdoig.nda@gmail.com</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Tom Doig</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="36">
+                            <Cell id="1" sortValue="0000000036">36</Cell>
+                            <Cell id="2">Oracle Organic</Cell>
+                            <Cell id="3">http://www.oracleorganic.com</Cell>
+                            <Cell id="4">5/25 Burrows rd, Alexandria nsw 2015</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000045">45</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="18">
+                            <Cell id="1" sortValue="0000000018">18</Cell>
+                            <Cell id="2">Organics Australia Online</Cell>
+                            <Cell id="3">http://www.organicsaustraliaonline.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000020" value="Sent Blind Email">Sent Blind Email</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000050" value="Send Information">Send Information</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000026">26</Cell>
+                            <Cell id="28">Shine Trust</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">email@oao.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Shine Trust Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="5">
+                            <Cell id="1" sortValue="0000000005">5</Cell>
+                            <Cell id="2">OZ Harvest</Cell>
+                            <Cell id="3">http://www.ozharvest.com.au</Cell>
+                            <Cell id="4">Level 3, 215 - 225 Euston Rd, Alexandria, 2015</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Food re-distribution charity. OzHarvest: Charity - Proposal sent - requires
+                                funding Tom.Sawkins@ozharvest.org Reception phone 02 9516 3877 Michelle Cutler was GM -
+                                now on maternity leave Sophie Given is new GM sophie.given@ozharvest.org
+                            </Cell>
+                            <Cell id="8">Lynfox integrated system - they get lynfox for free as board member.</Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10">Michelle Cutler is the GM who is reviewing the alternative uses of cash and
+                                will review what we have submitted. Tom Sawkins is the operations manager. Had meeting
+                                17/8/11 Tom has a requirement but no money. The charity is growing fast going from NSW
+                                to National and needs systems. They have been trying to build some capability in
+                                FileMaker Pro. Tom has said he can get donations to help so I will put togther a
+                                proposal that outlines the resources that would be required and if he can get the
+                                resources together then we can work with him. there will be significant changes to the
+                                distribution model to suit their reuqirements = but it does not look very difficult.
+                                Meeting organised for week beginning 15/8/11
+                            </Cell>
+                            <Cell id="11" sortValue="0000000070" value="Discussing specific project">Discussing specific
+                                project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000030" value="Scope Project">Scope Project</Cell>
+                            <Cell id="13" sortValue="0000000050" value="Hot - very interested">Hot - very interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000030" value="B &lt; 12 Months to lead">B &lt; 12 Months to
+                                lead
+                            </Cell>
+                            <Cell id="16" sortValue="0000000050" value="Send Information">Send Information</Cell>
+                            <Cell id="17" sortValue="0000000030"
+                                  value="Medium - Significant differences to what we have now">Medium - Significant
+                                differences to what we have now
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Oz+Harvest+Requirements</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000013">13</Cell>
+                            <Cell id="28">Sophie</Cell>
+                            <Cell id="29">Giben</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">(02) 9516 3877</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Sophie Giben</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="44">
+                            <Cell id="1" sortValue="0000000044">44</Cell>
+                            <Cell id="2">Parkers Organic Juices</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4">22-24 Booralee St, Botany NSW 2019</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8">Sales reps selling from the truck using ipads</Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10">Just got the hang of quickbooks - wanted something to work with Quickbooks and
+                                ipads. Contact to assess erp interest.
+                            </Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000020" value="Cool - not sure if interested">Cool - not sure
+                                if interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000030" value="B &lt; 12 Months to lead">B &lt; 12 Months to
+                                lead
+                            </Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Parkers+Organic+Juices+Requirements
+                            </Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="6">
+                            <Cell id="1" sortValue="0000000006">6</Cell>
+                            <Cell id="2">Pet Pacific (chase after goodness live)</Cell>
+                            <Cell id="3">http://www.petpacific.com.au/Default.aspx</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">02 4728 6000 8,000 products, Wholesale ownly - not direct to public.</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" value=""></Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000005">5</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="55">
+                            <Cell id="1" sortValue="0000000055">55</Cell>
+                            <Cell id="2">PFD Food Service</Cell>
+                            <Cell id="3">http://www.pfdfoods.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Phone: 131 733</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="34">
+                            <Cell id="1" sortValue="0000000034">34</Cell>
+                            <Cell id="2">scatzo food industries</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4">156-174 kensington road west melb vic 3003</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">supermarket</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000043">43</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="39">
+                            <Cell id="1" sortValue="0000000039">39</Cell>
+                            <Cell id="2">Sodexo</Cell>
+                            <Cell id="3">http://au.sodexo.com/auen/aboutus/sdxgroup/sdxgroup.asp</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000050" value="Professional Services Organisation">Professional
+                                Services Organisation
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000020"
+                                  value="High Interest - in an area we would like to grow">High Interest - in an area we
+                                would like to grow
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">Web</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="19">
+                            <Cell id="1" sortValue="0000000019">19</Cell>
+                            <Cell id="2">Sonoma</Cell>
+                            <Cell id="3">http://www.sonoma.com.au/</Cell>
+                            <Cell id="4">Head Office,32-44 Birmingham St, Alexandria NSW 2015</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000010" value="Unavailable Call Back">Unavailable Call Back
+                            </Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000027">27</Cell>
+                            <Cell id="28">Becky</Cell>
+                            <Cell id="29">Bowcock</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32">02 9690 2060</Cell>
+                            <Cell id="33">02 8362 1800</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">info@sonoma.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Becky Bowcock</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="60">
+                            <Cell id="1" sortValue="0000000060">60</Cell>
+                            <Cell id="2">SoulFresh</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000025.00">25</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8">Manufacturing of Soups</Cell>
+                            <Cell id="9">Integrated with the rest of the suite.</Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000070" value="Discussing specific project">Discussing specific
+                                project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000030" value="Scope Project">Scope Project</Cell>
+                            <Cell id="13" sortValue="0000000050" value="Hot - very interested">Hot - very interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000070" value="Appointment Made">Appointment Made</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000062">62</Cell>
+                            <Cell id="28">Brian</Cell>
+                            <Cell id="29">Ganly</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31">0450 581 715</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Brian Ganly</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="27">
+                            <Cell id="1" sortValue="0000000027">27</Cell>
+                            <Cell id="2">Specialist Lense Manufacturer (WA)</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Manufactures specticals and specialist lenses for welding industry etc allowing
+                                focus. J
+                            </Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9">Single solution - Perth customers</Cell>
+                            <Cell id="10">document will be passed to us to review</Cell>
+                            <Cell id="11" sortValue="0000000070" value="Discussing specific project">Discussing specific
+                                project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000020" value="Cool - not sure if interested">Cool - not sure
+                                if interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000040" value="Non-Food Distributor">Non-Food Distributor
+                            </Cell>
+                            <Cell id="15" sortValue="0000000030" value="B &lt; 12 Months to lead">B &lt; 12 Months to
+                                lead
+                            </Cell>
+                            <Cell id="16" sortValue="0000000050" value="Send Information">Send Information</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20">Lots of disperate systems and expensive to maintain - hamish doing review and
+                                plan. Microsoft CRM installed ($100k) - hated and only used by 2 of the 10 reps. Lots of
+                                suppliers for lots of systems and need a strategy. two companies in myob, manufacturing
+                                and warehouse system and secondary system hosted in house that backfeeds data to myob
+                                (credits etc). Airs Safety glasses can order through their website (needs work) document
+                                will be passed to use to review
+                            </Cell>
+                            <Cell id="21">Hamish Holder</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000036">36</Cell>
+                            <Cell id="28">Hamish</Cell>
+                            <Cell id="29">Holder</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31">0411-407-087</Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">hamish.holder@gmail.com</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Hamish Holder</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="3">
+                            <Cell id="1" sortValue="0000000003">3</Cell>
+                            <Cell id="2">Spiral Foods</Cell>
+                            <Cell id="3">http://www.spiralfoods.com.au</Cell>
+                            <Cell id="4">Unit 4, 56 - 72 John Street, Leichhardt NSW 2040</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">many organic foods and also some manufactured items Twitter.com/spiralfoods Has
+                                masterchef sponsorship keeping them very busy at the moment. 02-8231-4404
+                                Raphaelle@SpiralFoods.com.au 02-8231-4400 Reception 1300-303-794 reception (Caroline)
+                            </Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9">Organic food specialist including light manufacturing</Cell>
+                            <Cell id="10">Masterchef was july last year. Email sent 23/3/12</Cell>
+                            <Cell id="11" sortValue="0000000030" value="Phone conversation has been had about project">
+                                Phone conversation has been had about project
+                            </Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000020" value="Cool - not sure if interested">Cool - not sure
+                                if interested
+                            </Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000030" value="B &lt; 12 Months to lead">B &lt; 12 Months to
+                                lead
+                            </Cell>
+                            <Cell id="16" sortValue="0000000010" value="Unavailable Call Back">Unavailable Call Back
+                            </Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18">https://erp365.jira.com/wiki/display/ERP/Spiral+Foods+Requirements</Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000004">4</Cell>
+                            <Cell id="28">Raphaelle</Cell>
+                            <Cell id="29">Wilson</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32">02 8231 4404</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">Raphaelle@SpiralFoods.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Raphaelle Wilson</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="30">
+                            <Cell id="1" sortValue="0000000030">30</Cell>
+                            <Cell id="2">Table of Plenty</Cell>
+                            <Cell id="3">http://www.tableofplenty.com.au</Cell>
+                            <Cell id="4">15 Anderson st Surry Hills</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">Muesli Manufacturer as seen in coles</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000039">39</Cell>
+                            <Cell id="28">Customer line</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32">1300-13-77-82</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">info@tableofplenty.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Customer line Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="63">
+                            <Cell id="1" sortValue="0000000063">63</Cell>
+                            <Cell id="2">The market grocer</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4">T2, Sydney Markets, Austin Av, Homebush west</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7">makes nut mixes etc for coles</Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">supermarket</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000000">0</Cell>
+                            <Cell id="28">?</Cell>
+                            <Cell id="29">?</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">? ?</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="59">
+                            <Cell id="1" sortValue="0000000059">59</Cell>
+                            <Cell id="2">The Muesli Company</Cell>
+                            <Cell id="3">http://www.themueslicompany.com.au/home</Cell>
+                            <Cell id="4">26 Chaffey Street,Thomastown 3074 ,Victoria</Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000059">59</Cell>
+                            <Cell id="28">Peter</Cell>
+                            <Cell id="29">Pavlis</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">3 9469 3177</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">pp@themueslicompany.com.au</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Peter Pavlis</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="28">
+                            <Cell id="1" sortValue="0000000028">28</Cell>
+                            <Cell id="2">The organic cleavers meat company</Cell>
+                            <Cell id="3">http://www.organicmeat.com.au</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21"></Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000037">37</Cell>
+                            <Cell id="28">Unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Unknown Unknown</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="24">
+                            <Cell id="1" sortValue="0000000024">24</Cell>
+                            <Cell id="2">Thermomix Taiwan</Cell>
+                            <Cell id="3"></Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8">Single integrated system</Cell>
+                            <Cell id="9">Working in AU,</Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000015" value="Strike up conversation">Strike up conversation
+                            </Cell>
+                            <Cell id="13" sortValue="0000000040" value="Warm - some interest">Warm - some interest
+                            </Cell>
+                            <Cell id="14" sortValue="0000000070" value="Thermomix Organisation">Thermomix Organisation
+                            </Cell>
+                            <Cell id="15" sortValue="0000000040" value="A &lt; 6 months or an appointment made">A &lt; 6
+                                months or an appointment made
+                            </Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000010"
+                                  value="High Interest - similar to what we have already">High Interest - similar to
+                                what we have already
+                            </Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20">Current systems not working or able to scale</Cell>
+                            <Cell id="21">TMX Parent</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000025">25</Cell>
+                            <Cell id="28">Andreas</Cell>
+                            <Cell id="29">Zeidler</Cell>
+                            <Cell id="30">Yes</Cell>
+                            <Cell id="31">+41 (0) 79 503 0849</Cell>
+                            <Cell id="32">+41 (0) 44 786 0160</Cell>
+                            <Cell id="33"></Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35">andreas.zeidler@vorwerk.ch</Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40">Key contact</Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">Andreas Zeidler</Cell>
+                        </Row>
+                        <Row Type="erp365CRM.Company" id="35">
+                            <Cell id="1" sortValue="0000000035">35</Cell>
+                            <Cell id="2">wicked foods catering</Cell>
+                            <Cell id="3">http://www.wickedfoods.com</Cell>
+                            <Cell id="4"></Cell>
+                            <Cell id="5">Unknown</Cell>
+                            <Cell id="6" sortValue="0000001.00">1</Cell>
+                            <Cell id="7"></Cell>
+                            <Cell id="8"></Cell>
+                            <Cell id="9"></Cell>
+                            <Cell id="10"></Cell>
+                            <Cell id="11" sortValue="0000000010" value="Not yet contacted">Not yet contacted</Cell>
+                            <Cell id="12" sortValue="0000000010" value="Cold Call">Cold Call</Cell>
+                            <Cell id="13" sortValue="0000000001" value="Do not know">Do not know</Cell>
+                            <Cell id="14" sortValue="0000000010" value="Food Distribution Solution">Food Distribution
+                                Solution
+                            </Cell>
+                            <Cell id="15" sortValue="0000000010" value="No Lead Identified">No Lead Identified</Cell>
+                            <Cell id="16" sortValue="0000000001" value="None">None</Cell>
+                            <Cell id="17" sortValue="0000000001" value="Not Set">Not Set</Cell>
+                            <Cell id="18"></Cell>
+                            <Cell id="19"></Cell>
+                            <Cell id="20"></Cell>
+                            <Cell id="21">Road</Cell>
+                            <Cell id="22" value="MyLeads">My Leads</Cell>
+                            <Cell id="23" sortValue="0000000001">1</Cell>
+                            <Cell id="24">Paul</Cell>
+                            <Cell id="25">Sawkins</Cell>
+                            <Cell id="26">Paul Sawkins</Cell>
+                            <Cell id="27" sortValue="0000000044">44</Cell>
+                            <Cell id="28">unknown</Cell>
+                            <Cell id="29">Unknown</Cell>
+                            <Cell id="30">(null)</Cell>
+                            <Cell id="31"></Cell>
+                            <Cell id="32"></Cell>
+                            <Cell id="33">9420-5333</Cell>
+                            <Cell id="34"></Cell>
+                            <Cell id="35"></Cell>
+                            <Cell id="36"></Cell>
+                            <Cell id="37"></Cell>
+                            <Cell id="38"></Cell>
+                            <Cell id="39"></Cell>
+                            <Cell id="40"></Cell>
+                            <Cell id="41" value=""></Cell>
+                            <Cell id="42">unknown Unknown</Cell>
+                        </Row>
+                    </Rows>
+                </Data>
+                <Field id="SalesPerson.FullName" null="1" valid="1" value=""/>
+                <Field id="KeyContact.FullName" null="1" valid="1" value=""/>
+                <Field id="SalesPerson.PersistentId" null="1" value=""/>
+                <Field id="SalesPerson.FirstName" null="1" value="" valid="1"/>
+                <Field id="SalesPerson.LastName" null="1" value="" valid="1"/>
+                <Field id="KeyContact.PersistentId" null="0" valid="1" value="0"/>
+                <Field id="KeyContact.FirstName" null="1" value="" valid="1"/>
+                <Field id="KeyContact.LastName" null="0" valid="1" value="Unknown"/>
+                <Field id="KeyContact.MetInPerson" null="1" value="0" valid="1"/>
+                <Field id="KeyContact.MobileNumber" null="1" value="" valid="1"/>
+                <Field id="KeyContact.DirectPhone" null="1" value="" valid="1"/>
+                <Field id="KeyContact.ReceptionPhone" null="1" value="" valid="1"/>
+                <Field id="KeyContact.PreferredPhone" null="1" value="" valid="1"/>
+                <Field id="KeyContact.Email" null="1" value="" valid="1"/>
+                <Field id="KeyContact.Email2" null="1" value="" valid="1"/>
+                <Field id="KeyContact.LinkedIn" null="1" value="" valid="1"/>
+                <Field id="KeyContact.Blog" null="1" value="" valid="1"/>
+                <Field id="KeyContact.Facebook" null="1" value="" valid="1"/>
+                <Field id="KeyContact.Notes" null="1" value="" valid="1"/>
+                <Field id="KeyContact.PersonType" null="1" value="" text="" valid="1"/>
+                <Field id="Opportunities.PersistentId" null="1" value=""/>
+                <Field id="Opportunities.HighLevelDescription" null="1" value="" valid="0"/>
+                <Field id="Opportunities.ExpectedAmount" null="1" value="" valid="0"/>
+                <Field id="Opportunities.ExpectedMonthlySubscription" null="1" value="" valid="1"/>
+                <Field id="Opportunities.ExpectedMonthlyEnhancements" null="1" value="" valid="1"/>
+                <Field id="Opportunities.SalesPhase" null="0" valid="1" value="10"
+                       text="Qualify Potential - Need, Authority, Resources"/>
+                <Field id="Opportunities.WhyAnything" null="1" value="" valid="1"/>
+                <Field id="Opportunities.WhyBuyNow" null="1" value="" valid="1"/>
+                <Field id="Opportunities.WhyBuyUs" null="1" value="" valid="1"/>
+                <Field id="Opportunities.StrategicInterest" null="0" valid="1" value="1" text="Unknown"/>
+                <Field id="Opportunities.Notes" null="1" value="$longData$" valid="1"></Field>
+                <Field id="Opportunities.Likelihood" null="0" valid="1" value="0%"/>
+                <Field id="Opportunities.ExpectedClose" null="1" value="" date="" time="" DayOfWeek="" valid="1"/>
+                <Field id="Opportunities.BestCase" null="1" value="" valid="1"/>
+                <Field id="Opportunities.Expected" null="1" value="" valid="1"/>
+                <Field id="Opportunities.WorstCase" null="1" value="" valid="1"/>
+                <Field id="People.PersistentId" null="1" value=""/>
+                <Field id="People.Title" null="1" value="" valid="1"/>
+                <Field id="People.Description" null="0" value="Unknown" valid="1"/>
+                <Field id="People.Person.PersistentId" null="1" value="" valid="0"/>
+                <Field id="People.Person.FirstName" null="1" value="" valid="1"/>
+                <Field id="People.Person.LastName" null="0" valid="1" value="Unknown"/>
+                <Field id="People.Person.FullName" null="1" valid="1" value=""/>
+                <Field id="People.Person.MetInPerson" null="1" value="0" valid="1"/>
+                <Field id="People.Person.MobileNumber" null="1" value="" valid="1"/>
+                <Field id="People.Person.DirectPhone" null="1" value="" valid="1"/>
+                <Field id="People.Person.ReceptionPhone" null="1" value="" valid="1"/>
+                <Field id="People.Person.PreferredPhone" null="1" value="" valid="1"/>
+                <Field id="People.Person.Email" null="1" value="" valid="1"/>
+                <Field id="People.Person.Email2" null="1" value="" valid="1"/>
+                <Field id="People.Person.LinkedIn" null="1" value="" valid="1"/>
+                <Field id="People.Person.Blog" null="1" value="" valid="1"/>
+                <Field id="People.Person.Facebook" null="1" value="" valid="1"/>
+                <Field id="People.Person.Notes" null="1" value="" valid="1"/>
+                <Field id="People.Person.PersonType" null="1" value="" text="" valid="1"/>
+                <ModelObject id="People" dirty="False"/>
+                <Field id="Interactions.PersistentId" null="1" value=""/>
+                <Field id="Interactions.DatePlanned" null="1" value="" date="" time="" DayOfWeek="" valid="0"/>
+                <Field id="Interactions.DateCompleted" null="1" value="" date="" time="" DayOfWeek="" valid="1"/>
+                <Field id="Interactions.Summary" null="1" value="" valid="0"/>
+                <Field id="Interactions.Notes" null="1" value="" valid="1"/>
+                <Field id="Interactions.Type" null="0" valid="1" value="10" text="Cold Call"/>
+                <Field id="Interactions.Status" null="0" valid="1" value="10" text="Planned"/>
+                <Method name="Restart" result="null"/>
+            </Activity>
+        </ESA>
+    </ExecXResult>
+    <sessionHandle>net.tcp://127.0.0.1:8200/ERP65CRM#634713294637902645:191</sessionHandle>
+    <errors i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+</ExecXResponse>

@@ -13,7 +13,6 @@
 #import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_FieldInstance.h"
-#import "expanz_model_menuItem.h"
 #import "expanz_model_GridData.h"
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -50,7 +49,7 @@
 - (id) initWithViewController:(ActivityInstanceViewController*)viewController {
     self = [super init];
     if (self) {
-        _activityName = [viewController.menuItem.activityId copy];
+        _activityName = viewController.activityId;
         _activityInstance = viewController.activityInstance;
         _controller = viewController;
         _propertyNames = viewController.propertyNames;

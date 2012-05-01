@@ -63,30 +63,5 @@
     return [[_name lowercaseString] isEqualToString:@"browse"];
 }
 
-- (NSString*) controllerClassNameForActivityId:(NSString*)activityId {
-    NSMutableString* controllerClassName = [NSMutableString
-            stringWithString:[activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]];
-    if (![self isDefault]) {
-        [controllerClassName appendString:[NSString stringWithFormat:@"_%@", self.name]];
-    }
-    [controllerClassName appendString:@"_ViewController"];
-    LogDebug(@"Controller class name: %@", controllerClassName);
-    return controllerClassName;
-
-}
-
-- (NSString*) nibNameForActivityId:(NSString*)activityId {
-    NSString* nibName;
-    if ([self isDefault]) {
-        nibName = activityId;
-    }
-    else {
-        nibName = [NSString stringWithFormat:@"%@.%@", activityId, self.name];
-    }
-    LogDebug(@"Nib name: %@", nibName);
-    return nibName;
-
-}
-
 
 @end

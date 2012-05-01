@@ -15,6 +15,9 @@
 #import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_MenuItem;
+@class expanz_ui_ActivityInstanceViewController;
+@class expanz_ui_DocumentViewController;
+@class expanz_ui_ActivityMenuViewController;
 
 /**
 * Responsible for navigating between activity views.
@@ -27,13 +30,14 @@
 
 @property(nonatomic, strong) id<expanz_ui_SystemEventReporter> reporter;
 
-- (BOOL) showMainMenu;
+- (expanz_ui_ActivityMenuViewController*) showMainMenu;
 
-- (BOOL) showActivity:(expanz_model_MenuItem*)menuItem;
+- (expanz_ui_ActivityInstanceViewController*) showActivityFor:(expanz_model_MenuItem*)menuItem;
 
-- (BOOL) showActivity:(expanz_model_MenuItem*)menuItem initialKey:(NSString*)initialKey;
+- (expanz_ui_ActivityInstanceViewController*) showActivityFor:(expanz_model_MenuItem*)menuItem
+        initialKey:(NSString*)initialKey;
 
-- (BOOL) showDocument:(NSString*)documentId;
+- (expanz_ui_DocumentViewController*) showDocument:(NSString*)documentId;
 
 @end
 

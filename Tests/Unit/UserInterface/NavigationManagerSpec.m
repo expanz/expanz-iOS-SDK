@@ -19,13 +19,13 @@ SPEC_BEGIN(NavigationManagerSpec)
 
         describe(@"Transitioning from a menu or activity to another activity view", ^{
 
-            __block NavigationManager* activityManager;
+            __block NavigationManager* navigationManager;
             __block StubSystemEventReporter* reporter;
 
             beforeEach(^{
-                activityManager = [[NavigationManager alloc] init];
+                navigationManager = [[NavigationManager alloc] init];
                 reporter = [[StubSystemEventReporter alloc] init];
-                activityManager.reporter = reporter;
+                navigationManager.reporter = reporter;
             });
 
             it(@"should transition to the activity according to activity definition", ^{
@@ -33,7 +33,7 @@ SPEC_BEGIN(NavigationManagerSpec)
                 MenuItem* menuItem = [[MenuItem alloc]
                         initWithActivityId:@"TestFixture" title:@"TestFixture" style:[ActivityStyle defaultStyle]];
 
-                [activityManager showActivity:menuItem];
+                [navigationManager showActivityFor:menuItem];
             });
 
             it(@"should report an error if the activity requires a controller that doesn't exist", ^{
@@ -42,7 +42,7 @@ SPEC_BEGIN(NavigationManagerSpec)
                         initWithActivityId:@"My.Fun.Documents" title:@"My Fun Documents"
                         style:[ActivityStyle browseStyle]];
 
-                [activityManager showActivity:menuItem];
+                [navigationManager showActivityFor:menuItem];
                 [[reporter.message should] equal:@"No controller exists named My_Fun_Documents_Browse_ViewController"];
 
             });

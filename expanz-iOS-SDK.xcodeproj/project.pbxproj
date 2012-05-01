@@ -167,6 +167,16 @@
 		6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */; };
 		6B41A118151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */; };
 		6B4573A3150DA4290059093A /* DefaultSiteDetailsClientIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */; };
+		6B517157154D1DE9003EB22C /* expanz_model_Query.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35A2 /* expanz_model_Query.h */; };
+		6B517158154D1DE9003EB22C /* expanz_model_FieldSchema.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D359B /* expanz_model_FieldSchema.h */; };
+		6B517159154D1DE9003EB22C /* expanz_model_MethodSchema.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3593 /* expanz_model_MethodSchema.h */; };
+		6B51715A154D1DE9003EB22C /* expanz_model_ActivitySchema.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3589 /* expanz_model_ActivitySchema.h */; };
+		6B51715B154D1DE9003EB22C /* expanz_utils_BundleResource.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */; };
+		6B51715C154D1DE9003EB22C /* NSString+Contains.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D350A /* NSString+Contains.h */; };
+		6B51715D154D1DE9003EB22C /* xml_Serializable.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718E0F14EF920300909A38 /* xml_Serializable.h */; };
+		6B5171CA154F9A63003EB22C /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
+		6B5171CD154FABE3003EB22C /* expanz_ui_utils_ViewTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */; };
+		6B5171CE154FAC18003EB22C /* expanz_ui_ActivityControllerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E6 /* expanz_ui_ActivityControllerBuilder.m */; };
 		6B558B431518362300BD810C /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
 		6B558B461518370500BD810C /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558B451518370500BD810C /* TestFixture_ViewController.m */; };
 		6B558B491518388C00BD810C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -816,6 +826,15 @@
 		6BFDE7761495FA01005D35D8 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
 		6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */; };
 		6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
+		6BFDE7761495FA01005D35DE /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
+		6BFDE7761495FA01005D35DF /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
+		6BFDE7761495FA01005D35E0 /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
+		6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */; };
+		6BFDE7761495FA01005D35E5 /* expanz_ui_utils_ViewTagger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E4 /* expanz_ui_utils_ViewTagger.h */; };
+		6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E6 /* expanz_ui_ActivityControllerBuilder.m */; };
+		6BFDE7761495FA01005D35E9 /* expanz_ui_ActivityControllerBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */; };
+		6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
+		6BFDE7761495FA01005D35ED /* NSString+ExpanzUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -852,6 +871,13 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6B517157154D1DE9003EB22C /* expanz_model_Query.h in Copy Headers */,
+				6B517158154D1DE9003EB22C /* expanz_model_FieldSchema.h in Copy Headers */,
+				6B517159154D1DE9003EB22C /* expanz_model_MethodSchema.h in Copy Headers */,
+				6B51715A154D1DE9003EB22C /* expanz_model_ActivitySchema.h in Copy Headers */,
+				6B51715B154D1DE9003EB22C /* expanz_utils_BundleResource.h in Copy Headers */,
+				6B51715C154D1DE9003EB22C /* NSString+Contains.h in Copy Headers */,
+				6B51715D154D1DE9003EB22C /* xml_Serializable.h in Copy Headers */,
 				6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */,
 				6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
 				6B18A31E15187A3500521FC1 /* expanz_AppDelegate.h in Copy Headers */,
@@ -1341,6 +1367,13 @@
 		6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Person_ViewController.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AutoContentSize.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AutoContentSize.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365NewCompany.xml; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_utils_ViewTagger.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35E4 /* expanz_ui_utils_ViewTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_utils_ViewTagger.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35E6 /* expanz_ui_ActivityControllerBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_ActivityControllerBuilder.m; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityControllerBuilder.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzUtils.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzUtils.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1482,6 +1515,7 @@
 				6B41A0C0151877BD009ED6D0 /* expanz_ui_SystemEventReporter.h */,
 				6B41A0C1151877BD009ED6D0 /* expanz_ui_TextInputUtils.h */,
 				6B41A0C2151877BD009ED6D0 /* expanz_ui_TextInputUtils.m */,
+				6BFDE7761495FA01005D35E1 /* Utils */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -1535,6 +1569,8 @@
 		6B41A0A6151877BD009ED6D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */,
+				6BFDE7761495FA01005D35E6 /* expanz_ui_ActivityControllerBuilder.m */,
 				6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */,
 				6B41A0A8151877BD009ED6D0 /* expanz_ui_ActivityInstanceViewController.m */,
 				6B41A0A9151877BD009ED6D0 /* expanz_ui_ActivityMenuViewController.h */,
@@ -1701,6 +1737,8 @@
 		6B718E0D14EF920300909A38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */,
+				6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */,
 				6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */,
 				6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */,
 				6BFDE7761495FA01005D350A /* NSString+Contains.h */,
@@ -2136,6 +2174,7 @@
 		6BFDE7761495FA01005D341F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */,
 				6BFDE7761495FA01005D35CC /* erp365CRM.Person.xml */,
 				6BFDE7761495FA01005D35BF /* erp365CRM.Person.Browse.xml */,
 				6BFDE7761495FA01005D35BE /* ActivityMenu.xml */,
@@ -2321,6 +2360,15 @@
 			path = Payload;
 			sourceTree = "<group>";
 		};
+		6BFDE7761495FA01005D35E1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDE7761495FA01005D35E4 /* expanz_ui_utils_ViewTagger.h */,
+				6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2439,6 +2487,9 @@
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
 				6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
 				6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */,
+				6BFDE7761495FA01005D35E5 /* expanz_ui_utils_ViewTagger.h in Headers */,
+				6BFDE7761495FA01005D35E9 /* expanz_ui_ActivityControllerBuilder.h in Headers */,
+				6BFDE7761495FA01005D35ED /* NSString+ExpanzUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2694,6 +2745,7 @@
 				6BFDE7761495FA01005D35C5 /* erp365CRM.Person.Browse.xib in Resources */,
 				6BFDE7761495FA01005D35CE /* erp365CRM.Person.xml in Resources */,
 				6BFDE7761495FA01005D35D2 /* erp365CRM.Person.xib in Resources */,
+				6BFDE7761495FA01005D35DF /* erp365NewCompany.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2742,6 +2794,7 @@
 				6BFDE7761495FA01005D35C6 /* erp365CRM.Person.Browse.xib in Resources */,
 				6BFDE7761495FA01005D35CF /* erp365CRM.Person.xml in Resources */,
 				6BFDE7761495FA01005D35D3 /* erp365CRM.Person.xib in Resources */,
+				6BFDE7761495FA01005D35E0 /* erp365NewCompany.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2804,6 +2857,7 @@
 				6BFDE7761495FA01005D35C4 /* erp365CRM.Person.Browse.xib in Resources */,
 				6BFDE7761495FA01005D35CD /* erp365CRM.Person.xml in Resources */,
 				6BFDE7761495FA01005D35D1 /* erp365CRM.Person.xib in Resources */,
+				6BFDE7761495FA01005D35DE /* erp365NewCompany.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2955,6 +3009,9 @@
 				6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
 				6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */,
+				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
+				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
+				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3110,6 +3167,7 @@
 				6BFDE7761495FA01005D3599 /* expanz_model_FieldSchema.m in Sources */,
 				6BFDE7761495FA01005D35A1 /* expanz_model_Query.m in Sources */,
 				6B3EEC63153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
+				6B5171CA154F9A63003EB22C /* NSString+ExpanzUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3225,6 +3283,8 @@
 				6BB713611544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35C9 /* erp365CRM_Person_Browse_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35D6 /* erp365CRM_Person_ViewController.m in Sources */,
+				6B5171CD154FABE3003EB22C /* expanz_ui_utils_ViewTagger.m in Sources */,
+				6B5171CE154FAC18003EB22C /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
