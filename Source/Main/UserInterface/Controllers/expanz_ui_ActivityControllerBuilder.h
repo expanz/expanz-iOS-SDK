@@ -13,6 +13,7 @@
 #import "expanz_model_ActivityStyle.h"
 
 @class expanz_ui_ActivityInstanceViewController;
+@class expanz_model_ActivityInstance;
 
 
 @interface expanz_ui_ActivityControllerBuilder : NSObject {
@@ -24,6 +25,7 @@
 @property(nonatomic, strong) ActivityStyle* style;
 @property(nonatomic, strong) NSString* initialKey;
 @property(nonatomic) BOOL shouldAttachToServer;
+@property(nonatomic, strong) expanz_model_ActivityInstance* activityInstance;
 
 + (expanz_ui_ActivityControllerBuilder*) forActivityId:(NSString*)activityId;
 

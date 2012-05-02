@@ -11,9 +11,10 @@
 
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ActivityControllerBuilder.h"
-#import "expanz_ui_SystemEventReporter.h"
 #import "Objection.h"
 #import "NSString+ExpanzUtils.h"
+#import "expanz_model_ActivityInstance.h"
+
 
 @interface expanz_ui_ActivityControllerBuilder (Private)
 
@@ -21,12 +22,16 @@
 
 @end
 
+
 @implementation expanz_ui_ActivityControllerBuilder
 
 @synthesize title = _title;
 @synthesize style = _style;
 @synthesize initialKey = _initialKey;
 @synthesize shouldAttachToServer = _shouldAttachToServer;
+@synthesize activityInstance = _activityInstance;
+
+
 
 /* ================================================= Class Methods ================================================== */
 + (expanz_ui_ActivityControllerBuilder*) forActivityId:(NSString*)activityId {
@@ -39,6 +44,7 @@
     self = [super init];
     if (self) {
         _activityId = activityId;
+        _style = [ActivityStyle defaultStyle];
     }
     return self;
 }
@@ -51,7 +57,9 @@
     if (clazz) {
         ActivityInstanceViewController* controller = [clazz alloc];
         NSString* nibName = [NSString nibNameForActivityId:_activityId style:_style];
-        [controller initWithActivityId:_activityId title:_title style:_style initialKey:_initialKey nibName:nibName];
+        controller = [controller
+                initWithActivityId:_activityId title:_title style:_style initialKey:_initialKey nibName:nibName
+                data:_activityInstance];
         if (_shouldAttachToServer) {
             [controller attachToServerWithInitialKey:_initialKey];
         }

@@ -177,6 +177,12 @@
 		6B5171CA154F9A63003EB22C /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
 		6B5171CD154FABE3003EB22C /* expanz_ui_utils_ViewTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */; };
 		6B5171CE154FAC18003EB22C /* expanz_ui_ActivityControllerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E6 /* expanz_ui_ActivityControllerBuilder.m */; };
+		6B5171F3154FB8FD003EB22C /* expanziOS.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F2 /* expanziOS.h */; };
+		6B5171F4154FB8FD003EB22C /* expanzUserInterface.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */; };
+		6B5171F5154FB8FD003EB22C /* expanz_ui_ActivityControllerBuilder.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */; };
+		6B5171F6154FB8FD003EB22C /* expanz_ui_utils_ViewTagger.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E4 /* expanz_ui_utils_ViewTagger.h */; };
+		6B5171F7154FB8FD003EB22C /* expanzCore.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EE /* expanzCore.h */; };
+		6B5171F8154FB8FD003EB22C /* NSString+ExpanzUtils.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */; };
 		6B558B431518362300BD810C /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
 		6B558B461518370500BD810C /* TestFixture_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558B451518370500BD810C /* TestFixture_ViewController.m */; };
 		6B558B491518388C00BD810C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -835,6 +841,11 @@
 		6BFDE7761495FA01005D35E9 /* expanz_ui_ActivityControllerBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */; };
 		6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
 		6BFDE7761495FA01005D35ED /* NSString+ExpanzUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */; };
+		6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EE /* expanzCore.h */; };
+		6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */; };
+		6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F2 /* expanziOS.h */; };
+		6BFDE7761495FA01005D35F5 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */; };
+		6BFDE7761495FA01005D35F7 /* UIButton+ExpanzTextures.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -871,6 +882,12 @@
 			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				6B5171F3154FB8FD003EB22C /* expanziOS.h in Copy Headers */,
+				6B5171F4154FB8FD003EB22C /* expanzUserInterface.h in Copy Headers */,
+				6B5171F5154FB8FD003EB22C /* expanz_ui_ActivityControllerBuilder.h in Copy Headers */,
+				6B5171F6154FB8FD003EB22C /* expanz_ui_utils_ViewTagger.h in Copy Headers */,
+				6B5171F7154FB8FD003EB22C /* expanzCore.h in Copy Headers */,
+				6B5171F8154FB8FD003EB22C /* NSString+ExpanzUtils.h in Copy Headers */,
 				6B517157154D1DE9003EB22C /* expanz_model_Query.h in Copy Headers */,
 				6B517158154D1DE9003EB22C /* expanz_model_FieldSchema.h in Copy Headers */,
 				6B517159154D1DE9003EB22C /* expanz_model_MethodSchema.h in Copy Headers */,
@@ -1374,6 +1391,11 @@
 		6BFDE7761495FA01005D35E8 /* expanz_ui_ActivityControllerBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityControllerBuilder.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzUtils.m"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35EC /* NSString+ExpanzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzUtils.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35EE /* expanzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzCore.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzUserInterface.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35F2 /* expanziOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanziOS.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExpanzTextures.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ExpanzTextures.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1500,6 +1522,8 @@
 		6B41A091151877BD009ED6D0 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35F2 /* expanziOS.h */,
+				6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */,
 				6B41A092151877BD009ED6D0 /* Assembly */,
 				6B41A097151877BD009ED6D0 /* Assets */,
 				6B41A09A151877BD009ED6D0 /* Categories */,
@@ -1543,6 +1567,8 @@
 		6B41A09A151877BD009ED6D0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */,
+				6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */,
 				6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */,
 				6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */,
 				6B41A09B151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.h */,
@@ -1659,6 +1685,7 @@
 		6B718DA214EF920300909A38 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDE7761495FA01005D35EE /* expanzCore.h */,
 				6BB7026E14F3C78B0029A94B /* Services */,
 				6B718DAB14EF920300909A38 /* Model */,
 				6B718E0D14EF920300909A38 /* Utils */,
@@ -2490,6 +2517,10 @@
 				6BFDE7761495FA01005D35E5 /* expanz_ui_utils_ViewTagger.h in Headers */,
 				6BFDE7761495FA01005D35E9 /* expanz_ui_ActivityControllerBuilder.h in Headers */,
 				6BFDE7761495FA01005D35ED /* NSString+ExpanzUtils.h in Headers */,
+				6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */,
+				6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */,
+				6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */,
+				6BFDE7761495FA01005D35F7 /* UIButton+ExpanzTextures.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3012,6 +3043,7 @@
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
+				6BFDE7761495FA01005D35F5 /* UIButton+ExpanzTextures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3634,7 +3666,7 @@
 		6BD543611473595F0014F148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = ExpanzIOS;
+				PRODUCT_NAME = expanziOS;
 				SRCROOT = Source/Main/;
 			};
 			name = Debug;
@@ -3642,8 +3674,9 @@
 		6BD543621473595F0014F148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = ExpanzIOS;
+				PRODUCT_NAME = expanziOS;
 				SRCROOT = Source/Main/;
+				VALIDATE_PRODUCT = expanziOS;
 			};
 			name = Release;
 		};

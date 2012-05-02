@@ -20,7 +20,7 @@
 @interface expanz_service_DefaultActivityClient (private)
 
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-           forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate;
+        forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate;
 
 @end
 
@@ -40,19 +40,19 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest
-                   delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
     [self doRequestWith:activityRequest forDelegate:delegate];
 }
 
 - (void) sendDeltaWith:(DeltaRequest*)deltaRequest
-              delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
     [self doRequestWith:deltaRequest forDelegate:delegate];
 }
 
 - (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
-                         delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
     [self doRequestWith:methodRequest forDelegate:delegate];
 }
@@ -60,21 +60,21 @@
 
 /* ================================================== Private Methods =============================================== */
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-           forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
 
     [self.httpTransport post:_serviceUrl payload:[xmlPayload toXml] headers:[self requestHeaders]
-                   withBlock:^(LRRestyResponse* response) {
+            withBlock:^(LRRestyResponse* response) {
 
-                       if (response.status == 200) {
-                           LogDebug(@"Response: %@, ", [response asString]);
-                           RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
-                           RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
-                           [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
-                       }
-                       else {
-                           [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
-                       }
-                   }];
+                if (response.status == 200) {
+                    LogDebug(@"Response: %@, ", [response asString]);
+                    RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+                    RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
+                    [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
+                }
+                else {
+                    [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+                }
+            }];
 }
 
 @end

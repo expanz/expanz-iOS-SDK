@@ -64,7 +64,7 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithActivityId:(NSString*)activityId title:(NSString*)title style:(expanz_model_ActivityStyle*)style
-        initialKey:(NSString*)initialKey nibName:(NSString*)nibName {
+        initialKey:(NSString*)initialKey nibName:(NSString*)nibName data:(expanz_model_ActivityInstance*)data {
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
@@ -73,6 +73,10 @@
         _activityId = [activityId copy];
         [self setTitle:title];
         _style = style;
+        if (data != nil) {
+            _activityInstance = data;
+            _shouldInitializeModelAdapterOnNextResponse = YES;
+        }
         [self cachePropertyNames];
     }
     return self;
@@ -89,6 +93,10 @@
 }
 
 - (void) sendMethodInvocation:(NSString*)methodName {
+    [self sendMethodInvocation:methodName withDelegate:self];
+}
+
+- (void) sendMethodInvocation:(NSString*)methodName withDelegate:(expanz_ui_ActivityInstanceViewController*)delegate {
     LogDebug(@"Sending method invocation: %@", methodName);
     id<UITextInput> currentlyEditingTextInput = [[TextInputUtils sharedTextInputUtils] currentlyEditingTextInput];
     [[currentlyEditingTextInput textInputView] resignFirstResponder];
@@ -101,8 +109,9 @@
     MethodInvocationRequest* methodRequest =
             [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];
     [_spinner startAnimating];
-    [_activityClient sendMethodInvocationWith:methodRequest delegate:self];
+    [_activityClient sendMethodInvocationWith:methodRequest delegate:delegate];
 }
+
 
 /* ================================================================================================================== */
 - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding {
@@ -165,8 +174,11 @@
         }
     }
 
-    [_activityClient createActivityWith:_activityRequest delegate:self];
-    if (_activityInstance == nil) {
+    if (_activityRequest) {
+        [_activityClient createActivityWith:_activityRequest delegate:self];
+    }
+
+    if (_activityInstance == nil || _shouldInitializeModelAdapterOnNextResponse) {
         [self showLoadingHud];
     }
 
@@ -268,15 +280,24 @@
 #pragma mark CreateActivityClientDelegate
 
 - (void) requestDidFinishWithActivityInstance:(ActivityInstance*)activityInstance {
+    LogDebug(@"Controller %@, got activity: %@", self.title, activityInstance);
     [_spinner stopAnimating];
+
     if (_activityInstance == nil) {
-        [self hideLoadingHud];
         _activityInstance = activityInstance;
+        _shouldInitializeModelAdapterOnNextResponse = YES;
+    }
+
+    if (_shouldInitializeModelAdapterOnNextResponse) {
+        LogDebug(@"OK init model adapter");
+        [self hideLoadingHud];
         _modelAdapter = [[ModelAdapter alloc] initWithViewController:self];
         [_modelAdapter updateUIControlsWithModelValues];
+        _shouldInitializeModelAdapterOnNextResponse = NO;
     }
 
     for (FieldInstance* field in activityInstance.fields) {
+        LogDebug(@"Field: '%@' has value '%@'", field.fieldId, field.value);
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
         [[_modelAdapter textFieldFor:field] setText:field.value];
     }

@@ -58,7 +58,7 @@
     MenuItem* menuItem =
             [[MenuItem alloc] initWithActivityId:ACTIVITY_NAME title:@"Stub" style:[ActivityStyle defaultStyle]];
 
-    [navigationManager showActivityFrom:menuItem];
+    [navigationManager showActivityFor:menuItem];
     [_window makeKeyAndVisible];
 
     NSString* data = [expanz_utils_BundleResource withName:DATA_FILE];

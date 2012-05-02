@@ -23,6 +23,7 @@
 @class MBProgressHUD;
 @class expanz_model_MenuItem;
 @class expanz_model_ActivityStyle;
+@class expanz_model_ActivityInstance;
 
 
 @interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate,
@@ -36,6 +37,7 @@
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _navigationManager;
     UIImageView* _currentlyEditingImageView;
+    BOOL _shouldInitializeModelAdapterOnNextResponse;
 }
 
 @property(nonatomic, strong, readonly) NSString* activityId;
@@ -54,7 +56,7 @@
  * `ActivityInstanceControllerBuilder` to obtain a controller instance.
  */
 - (id) initWithActivityId:(NSString*)activityId title:(NSString*)title style:(expanz_model_ActivityStyle*)style
-        initialKey:(NSString*)initialKey nibName:(NSString*)nibName;
+        initialKey:(NSString*)initialKey nibName:(NSString*)nibName data:(expanz_model_ActivityInstance*)data;
 
 /**
 * Creates or retrieves an instance of the activity on the remote server using the specified data key.
@@ -67,9 +69,15 @@
 - (void) sendDeltaForField:(expanz_model_FieldInstance*)textField;
 
 /**
- * Invoke a method on the model. 
+ * Invoke a method on the model, attaching the results to self.
  */
 - (void) sendMethodInvocation:(NSString*)methodName;
+
+/**
+* Invoke a method on the model, attaching the results to another controller;
+*/
+- (void) sendMethodInvocation:(NSString*)methodName withDelegate:(expanz_ui_ActivityInstanceViewController*)delegate;
+
 
 - (void) hasUITableView:(UITableView*)tableView requestingDataBinding:(BOOL)dataBinding;
 

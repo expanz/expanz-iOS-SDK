@@ -46,7 +46,7 @@
 							<object class="IBUIButton" id="409887338">
 								<reference key="NSNextResponder" ref="798657355"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{7, 496}, {308, 37}}</string>
+								<string key="NSFrame">{{16, 505}, {288, 37}}</string>
 								<reference key="NSSuperview" ref="798657355"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -311,7 +311,7 @@
 							<object class="IBUITextView" id="146224508">
 								<reference key="NSNextResponder" ref="798657355"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{16, 330}, {288, 159}}</string>
+								<string key="NSFrame">{{18, 329}, {282, 159}}</string>
 								<reference key="NSSuperview" ref="798657355"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="409887338"/>
@@ -490,7 +490,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="409887338"/>
 							<reference ref="934323661"/>
-							<reference ref="146224508"/>
 							<reference ref="883409201"/>
 							<reference ref="931503736"/>
 							<reference ref="68664404"/>
@@ -499,6 +498,7 @@
 							<reference ref="745498583"/>
 							<reference ref="13107338"/>
 							<reference ref="677301505"/>
+							<reference ref="146224508"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -590,6 +590,20 @@
 				<string key="155.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="156.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="157.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<object class="NSMutableDictionary" key="158.IBAttributePlaceholdersKey">
+					<string key="NS.key.0">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+					<object class="IBUIUserDefinedRuntimeAttributesPlaceholder" key="NS.object.0">
+						<string key="name">IBUserDefinedRuntimeAttributesPlaceholderName</string>
+						<reference key="object" ref="409887338"/>
+						<array key="userDefinedRuntimeAttributes">
+							<object class="IBUserDefinedRuntimeAttribute">
+								<string key="typeIdentifier">com.apple.InterfaceBuilder.userDefinedRuntimeAttributeType.boolean</string>
+								<string key="keyPath">glossy</string>
+								<boolean value="YES" key="value"/>
+							</object>
+						</array>
+					</object>
+				</object>
 				<string key="158.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>

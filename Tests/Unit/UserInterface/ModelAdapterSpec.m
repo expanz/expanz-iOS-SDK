@@ -28,7 +28,7 @@ SPEC_BEGIN(ModelAdapterSpec)
 
             viewController = [[TestFixture_ViewController alloc]
                     initWithActivityId:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle] initialKey:nil
-                    nibName:@"TextFixture"];
+                    nibName:@"TextFixture" data:nil];
             [viewController shouldNotBeNil];
             [viewController.view shouldNotBeNil];
         });
