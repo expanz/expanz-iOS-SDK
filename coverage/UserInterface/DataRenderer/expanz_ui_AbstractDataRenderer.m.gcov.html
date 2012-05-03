@@ -31,13 +31,13 @@
             <td class="headerValue">expanz-iOS-SDK.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">36</td>
             <td class="headerCovTableEntry">68</td>
-            <td class="headerCovTableEntryLo">45.6 %</td>
+            <td class="headerCovTableEntryLo">52.9 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -67,117 +67,116 @@
 <span class="lineNum">       9 </span>            : //
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
 <span class="lineNum">      11 </span>            : 
-<span class="lineNum">      12 </span>            : #import &lt;CoreGraphics/CoreGraphics.h&gt;
-<span class="lineNum">      13 </span>            : #import &quot;expanz_ui_AbstractDataRenderer.h&quot;
-<span class="lineNum">      14 </span>            : #import &quot;expanz_model_AbstractData.h&quot;
-<span class="lineNum">      15 </span>            : #import &quot;expanz_ui_NavigationManager.h&quot;
+<span class="lineNum">      12 </span>            : #import &quot;expanz_ui_AbstractDataRenderer.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_model_AbstractData.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_ui_NavigationManager.h&quot;
+<span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span><span class="lineNoCov">          0 : @implementation expanz_ui_AbstractDataRenderer</span>
-<span class="lineNum">      19 </span>            : 
-<span class="lineNum">      20 </span><span class="lineNoCov">          0 : @synthesize activityManager = _activityManager;</span>
-<span class="lineNum">      21 </span><span class="lineCov">          1 : @synthesize data = _data;</span>
-<span class="lineNum">      22 </span><span class="lineNoCov">          0 : @synthesize tableView = _tableView;</span>
-<span class="lineNum">      23 </span><span class="lineNoCov">          0 : @synthesize activityName = _activityName;</span>
-<span class="lineNum">      24 </span><span class="lineCov">          1 : @synthesize searchController = _searchController;</span>
-<span class="lineNum">      25 </span><span class="lineCov">          5 : @synthesize tableCell = _tableCell;</span>
+<span class="lineNum">      17 </span><span class="lineNoCov">          0 : @implementation expanz_ui_AbstractDataRenderer</span>
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span><span class="lineNoCov">          0 : @synthesize activityManager = _activityManager;</span>
+<span class="lineNum">      20 </span><span class="lineCov">          1 : @synthesize data = _data;</span>
+<span class="lineNum">      21 </span><span class="lineNoCov">          0 : @synthesize tableView = _tableView;</span>
+<span class="lineNum">      22 </span><span class="lineNoCov">          0 : @synthesize activityName = _activityName;</span>
+<span class="lineNum">      23 </span><span class="lineCov">          1 : @synthesize searchController = _searchController;</span>
+<span class="lineNum">      24 </span><span class="lineCov">          5 : @synthesize tableCell = _tableCell;</span>
+<span class="lineNum">      25 </span>            : 
 <span class="lineNum">      26 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      27 </span>            : 
-<span class="lineNum">      28 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      29 </span>            : - (id) initWithData:(AbstractData*)data tableView:(UITableView*)tableView
-<span class="lineNum">      30 </span><span class="lineCov">          1 :         activityName:(NSString*)activityName {</span>
-<span class="lineNum">      31 </span><span class="lineCov">          1 : </span>
-<span class="lineNum">      32 </span>            :     self = [super init];
-<span class="lineNum">      33 </span><span class="lineCov">          1 :     if (self) {</span>
-<span class="lineNum">      34 </span><span class="lineCov">          1 :         _data = data;</span>
-<span class="lineNum">      35 </span><span class="lineCov">          1 :         _tableView = tableView;</span>
-<span class="lineNum">      36 </span><span class="lineCov">          1 :         _activityName = [activityName copy];</span>
-<span class="lineNum">      37 </span><span class="lineCov">          1 :         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];</span>
-<span class="lineNum">      38 </span><span class="lineCov">          1 :         _filteredListContent = [[NSMutableArray alloc] init];</span>
-<span class="lineNum">      39 </span><span class="lineCov">          1 :     }</span>
-<span class="lineNum">      40 </span><span class="lineCov">          1 :     return self;</span>
-<span class="lineNum">      41 </span><span class="lineCov">          1 : }</span>
-<span class="lineNum">      42 </span><span class="lineCov">          1 : </span>
-<span class="lineNum">      43 </span>            : 
-<span class="lineNum">      44 </span>            : /* ================================================ Interface Methods =============================================== */
-<span class="lineNum">      45 </span>            : - (void) makeSearchableWith:(UISearchBar*)searchBar controller:(UIViewController*)controller {
-<span class="lineNum">      46 </span>            :     if (searchBar != nil) {
-<span class="lineNum">      47 </span><span class="lineCov">          1 :         LogDebug(@&quot;Binding UISearchBar to UITableView: %@&quot;, _tableView);</span>
-<span class="lineNum">      48 </span><span class="lineCov">          1 :         _searchController =</span>
-<span class="lineNum">      49 </span><span class="lineNoCov">          0 :                 [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:controller];</span>
-<span class="lineNum">      50 </span><span class="lineNoCov">          0 :         _searchController.delegate = self;</span>
-<span class="lineNum">      51 </span>            :         _searchController.searchResultsDataSource = self;
-<span class="lineNum">      52 </span><span class="lineNoCov">          0 :         _searchController.searchResultsDelegate = self;</span>
-<span class="lineNum">      53 </span><span class="lineCov">          2 :     }</span>
-<span class="lineNum">      54 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      55 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      56 </span><span class="lineCov">          1 : - (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell {</span>
-<span class="lineNum">      57 </span>            :     if (indexPath.row % 2) {
-<span class="lineNum">      58 </span>            :         cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
-<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      60 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      61 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      62 </span><span class="lineNoCov">          0 : - (UITableViewCell*) loadTableCellFromNib {</span>
-<span class="lineNum">      63 </span><span class="lineNoCov">          0 :     [[NSBundle mainBundle] loadNibNamed:[self nibNameForTableCell] owner:self options:nil];</span>
-<span class="lineNum">      64 </span>            :     UITableViewCell* cell = self.tableCell;
-<span class="lineNum">      65 </span><span class="lineCov">          1 :     self.tableCell = nil;</span>
-<span class="lineNum">      66 </span><span class="lineCov">          1 :     return cell;</span>
-<span class="lineNum">      67 </span><span class="lineCov">          1 : }</span>
-<span class="lineNum">      68 </span><span class="lineCov">          1 : </span>
-<span class="lineNum">      69 </span><span class="lineCov">          1 : /* ================================================= Protocol Methods =============================================== */</span>
-<span class="lineNum">      70 </span><span class="lineCov">          1 : #pragma mark UISearchDisplayController Delegate Methods</span>
-<span class="lineNum">      71 </span>            : 
-<span class="lineNum">      72 </span>            : - (BOOL) searchDisplayController:(UISearchDisplayController*)controller
-<span class="lineNum">      73 </span>            :         shouldReloadTableForSearchString:(NSString*)searchString {
-<span class="lineNum">      74 </span>            : 
-<span class="lineNum">      75 </span>            :     NSArray* scope = [self.searchController.searchBar scopeButtonTitles];
-<span class="lineNum">      76 </span><span class="lineNoCov">          0 :     NSInteger selectedScopeButtonIndex = [self.searchController.searchBar selectedScopeButtonIndex];</span>
-<span class="lineNum">      77 </span><span class="lineNoCov">          0 :     [self filterContentForSearchText:searchString scope:[scope objectAtIndex:selectedScopeButtonIndex]];</span>
-<span class="lineNum">      78 </span>            :     return YES;
-<span class="lineNum">      79 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      27 </span>            : /* ================================================== Initializers ================================================== */
+<span class="lineNum">      28 </span>            : - (id) initWithData:(AbstractData*)data tableView:(UITableView*)tableView
+<span class="lineNum">      29 </span><span class="lineCov">          1 :         activityName:(NSString*)activityName {</span>
+<span class="lineNum">      30 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      31 </span>            :     self = [super init];
+<span class="lineNum">      32 </span><span class="lineCov">          1 :     if (self) {</span>
+<span class="lineNum">      33 </span><span class="lineCov">          1 :         _data = data;</span>
+<span class="lineNum">      34 </span><span class="lineCov">          1 :         _tableView = tableView;</span>
+<span class="lineNum">      35 </span><span class="lineCov">          1 :         _activityName = [activityName copy];</span>
+<span class="lineNum">      36 </span><span class="lineCov">          1 :         _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];</span>
+<span class="lineNum">      37 </span><span class="lineCov">          1 :         _filteredListContent = [[NSMutableArray alloc] init];</span>
+<span class="lineNum">      38 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      39 </span><span class="lineCov">          1 :     return self;</span>
+<span class="lineNum">      40 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">      41 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      42 </span>            : 
+<span class="lineNum">      43 </span>            : /* ================================================ Interface Methods =============================================== */
+<span class="lineNum">      44 </span>            : - (void) makeSearchableWith:(UISearchBar*)searchBar controller:(UIViewController*)controller {
+<span class="lineNum">      45 </span>            :     if (searchBar != nil) {
+<span class="lineNum">      46 </span><span class="lineCov">          1 :         LogDebug(@&quot;Binding UISearchBar to UITableView: %@&quot;, _tableView);</span>
+<span class="lineNum">      47 </span><span class="lineCov">          1 :         _searchController =</span>
+<span class="lineNum">      48 </span><span class="lineCov">          1 :                 [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:controller];</span>
+<span class="lineNum">      49 </span><span class="lineCov">          1 :         _searchController.delegate = self;</span>
+<span class="lineNum">      50 </span>            :         _searchController.searchResultsDataSource = self;
+<span class="lineNum">      51 </span><span class="lineCov">          1 :         _searchController.searchResultsDelegate = self;</span>
+<span class="lineNum">      52 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      53 </span><span class="lineCov">          3 : }</span>
+<span class="lineNum">      54 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      55 </span><span class="lineCov">          1 : - (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell {</span>
+<span class="lineNum">      56 </span>            :     if (indexPath.row % 2) {
+<span class="lineNum">      57 </span>            :         cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
+<span class="lineNum">      58 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      59 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      60 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 : - (UITableViewCell*) loadTableCellFromNib {</span>
+<span class="lineNum">      62 </span><span class="lineNoCov">          0 :     [[NSBundle mainBundle] loadNibNamed:[self nibNameForTableCell] owner:self options:nil];</span>
+<span class="lineNum">      63 </span>            :     UITableViewCell* cell = self.tableCell;
+<span class="lineNum">      64 </span><span class="lineCov">          1 :     self.tableCell = nil;</span>
+<span class="lineNum">      65 </span><span class="lineCov">          1 :     return cell;</span>
+<span class="lineNum">      66 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">      67 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      68 </span><span class="lineCov">          1 : /* ================================================= Protocol Methods =============================================== */</span>
+<span class="lineNum">      69 </span><span class="lineCov">          1 : #pragma mark UISearchDisplayController Delegate Methods</span>
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            : - (BOOL) searchDisplayController:(UISearchDisplayController*)controller
+<span class="lineNum">      72 </span>            :         shouldReloadTableForSearchString:(NSString*)searchString {
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            :     NSArray* scope = [self.searchController.searchBar scopeButtonTitles];
+<span class="lineNum">      75 </span><span class="lineNoCov">          0 :     NSInteger selectedScopeButtonIndex = [self.searchController.searchBar selectedScopeButtonIndex];</span>
+<span class="lineNum">      76 </span><span class="lineNoCov">          0 :     [self filterContentForSearchText:searchString scope:[scope objectAtIndex:selectedScopeButtonIndex]];</span>
+<span class="lineNum">      77 </span>            :     return YES;
+<span class="lineNum">      78 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      79 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      80 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      81 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      82 </span>            : - (BOOL) searchDisplayController:(UISearchDisplayController*)controller
-<span class="lineNum">      83 </span><span class="lineNoCov">          0 :         shouldReloadTableForSearchScope:(NSInteger)searchOption {</span>
-<span class="lineNum">      84 </span>            : 
-<span class="lineNum">      85 </span>            :     NSString* searchText = [self.searchController.searchBar text];
-<span class="lineNum">      86 </span>            :     NSArray* searchScope = [self.searchController.searchBar scopeButtonTitles];
-<span class="lineNum">      87 </span><span class="lineNoCov">          0 :     [self filterContentForSearchText:searchText scope:[searchScope objectAtIndex:searchOption]];</span>
-<span class="lineNum">      88 </span><span class="lineNoCov">          0 :     return YES;</span>
-<span class="lineNum">      89 </span>            : }
-<span class="lineNum">      90 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      91 </span><span class="lineNoCov">          0 : - (int) searchOptions {</span>
-<span class="lineNum">      92 </span><span class="lineNoCov">          0 :     return (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);</span>
-<span class="lineNum">      93 </span>            : }
-<span class="lineNum">      94 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      95 </span>            : - (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-<span class="lineNum">      96 </span><span class="lineNoCov">          0 :     if (_cellHeight == 0) {</span>
-<span class="lineNum">      97 </span><span class="lineNoCov">          0 :         _cellHeight = [self loadTableCellFromNib].frame.size.height;</span>
-<span class="lineNum">      98 </span>            :     }
-<span class="lineNum">      99 </span>            :     return _cellHeight;
-<span class="lineNum">     100 </span>            : }
-<span class="lineNum">     101 </span><span class="lineCov">          4 : </span>
-<span class="lineNum">     102 </span><span class="lineCov">          4 : /* ================================================= Abstract Methods =============================================== */</span>
-<span class="lineNum">     103 </span><span class="lineCov">          1 : </span>
-<span class="lineNum">     104 </span><span class="lineCov">          1 : - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {</span>
-<span class="lineNum">     105 </span><span class="lineCov">          4 :     return 0;</span>
-<span class="lineNum">     106 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">      81 </span>            : - (BOOL) searchDisplayController:(UISearchDisplayController*)controller
+<span class="lineNum">      82 </span><span class="lineNoCov">          0 :         shouldReloadTableForSearchScope:(NSInteger)searchOption {</span>
+<span class="lineNum">      83 </span>            : 
+<span class="lineNum">      84 </span>            :     NSString* searchText = [self.searchController.searchBar text];
+<span class="lineNum">      85 </span>            :     NSArray* searchScope = [self.searchController.searchBar scopeButtonTitles];
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 :     [self filterContentForSearchText:searchText scope:[searchScope objectAtIndex:searchOption]];</span>
+<span class="lineNum">      87 </span><span class="lineNoCov">          0 :     return YES;</span>
+<span class="lineNum">      88 </span>            : }
+<span class="lineNum">      89 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      90 </span><span class="lineNoCov">          0 : - (int) searchOptions {</span>
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :     return (NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch);</span>
+<span class="lineNum">      92 </span>            : }
+<span class="lineNum">      93 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      94 </span>            : - (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+<span class="lineNum">      95 </span><span class="lineNoCov">          0 :     if (_cellHeight == 0) {</span>
+<span class="lineNum">      96 </span><span class="lineNoCov">          0 :         _cellHeight = [self loadTableCellFromNib].frame.size.height;</span>
+<span class="lineNum">      97 </span>            :     }
+<span class="lineNum">      98 </span>            :     return _cellHeight;
+<span class="lineNum">      99 </span>            : }
+<span class="lineNum">     100 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">     101 </span><span class="lineCov">          4 : /* ================================================= Abstract Methods =============================================== */</span>
+<span class="lineNum">     102 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">     103 </span><span class="lineCov">          1 : - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {</span>
+<span class="lineNum">     104 </span><span class="lineCov">          4 :     return 0;</span>
+<span class="lineNum">     105 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">     106 </span>            : 
 <span class="lineNum">     107 </span>            : 
-<span class="lineNum">     108 </span>            : 
-<span class="lineNum">     109 </span>            : - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-<span class="lineNum">     110 </span>            :     return nil;
-<span class="lineNum">     111 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     112 </span>            : 
-<span class="lineNum">     113 </span><span class="lineNoCov">          0 : - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {</span>
-<span class="lineNum">     114 </span>            : 
-<span class="lineNum">     115 </span>            : }
-<span class="lineNum">     116 </span>            : 
-<span class="lineNum">     117 </span><span class="lineNoCov">          0 : - (NSString*) nibNameForTableCell {</span>
-<span class="lineNum">     118 </span>            :     return nil;
-<span class="lineNum">     119 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     108 </span>            : - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+<span class="lineNum">     109 </span>            :     return nil;
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 : - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {</span>
+<span class="lineNum">     113 </span>            : 
+<span class="lineNum">     114 </span>            : }
+<span class="lineNum">     115 </span>            : 
+<span class="lineNum">     116 </span><span class="lineNoCov">          0 : - (NSString*) nibNameForTableCell {</span>
+<span class="lineNum">     117 </span>            :     return nil;
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     119 </span>            : 
 <span class="lineNum">     120 </span>            : 
-<span class="lineNum">     121 </span>            : 
-<span class="lineNum">     122 </span><span class="lineNoCov">          0 : @end</span>
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 : @end</span>
 </pre>
       </td>
     </tr>

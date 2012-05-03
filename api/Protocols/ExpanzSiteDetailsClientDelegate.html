@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>expanz_service_FileDownloadClientDelegate Protocol Reference</title>
+		<title>ExpanzSiteDetailsClientDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">expanz_service_FileDownloadClientDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">ExpanzSiteDetailsClientDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -42,9 +42,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/requestDidFinishWithData:">&nbsp;&nbsp;&nbsp;&nbsp;- requestDidFinishWithData:</option>
+	<option value="//api/name/requestDidFinishWithActivityMenu:">&nbsp;&nbsp;&nbsp;&nbsp;- requestDidFinishWithActivityMenu:</option>
 	
-	<option value="//api/name/requestDidFinishWithResourceCollection:">&nbsp;&nbsp;&nbsp;&nbsp;- requestDidFinishWithResourceCollection:</option>
+	<option value="//api/name/requestDidFinishWithActivitySchema:">&nbsp;&nbsp;&nbsp;&nbsp;- requestDidFinishWithActivitySchema:</option>
+	
+	<option value="//api/name/requestDidFinishWithSiteList:">&nbsp;&nbsp;&nbsp;&nbsp;- requestDidFinishWithSiteList:</option>
 	
 	
 	
@@ -72,9 +74,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestDidFinishWithData:">requestDidFinishWithData:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestDidFinishWithActivityMenu:">requestDidFinishWithActivityMenu:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestDidFinishWithResourceCollection:">requestDidFinishWithResourceCollection:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestDidFinishWithActivitySchema:">requestDidFinishWithActivitySchema:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestDidFinishWithSiteList:">requestDidFinishWithSiteList:</a></span></li>
 	
 </ul></li>
 
@@ -83,7 +87,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="expanz_service_FileDownloadClientDelegate Protocol Reference" name="top"></a>
+				<a title="ExpanzSiteDetailsClientDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,7 +96,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">expanz_service_FileDownloadClientDelegate Protocol Reference</h1>
+						<h1 class="title title-header">ExpanzSiteDetailsClientDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -100,10 +104,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/expanz_service_AbstractServiceClientDelegate.html">expanz_service_AbstractServiceClientDelegate</a></td>
+	<td class="specification-value"><a href="../Protocols/ExpanzAbstractServiceClientDelegate.html">ExpanzAbstractServiceClientDelegate</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">expanz_service_FileDownloadClientDelegate.h</td>
+	<td class="specification-value">ExpanzSiteDetailsClient.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,14 +127,21 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/requestDidFinishWithResourceCollection:">&ndash;&nbsp;requestDidFinishWithResourceCollection:</a></code>
+		<code><a href="#//api/name/requestDidFinishWithSiteList:">&ndash;&nbsp;requestDidFinishWithSiteList:</a></code>
 		
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/requestDidFinishWithData:">&ndash;&nbsp;requestDidFinishWithData:</a></code>
+		<code><a href="#//api/name/requestDidFinishWithActivityMenu:">&ndash;&nbsp;requestDidFinishWithActivityMenu:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestDidFinishWithActivitySchema:">&ndash;&nbsp;requestDidFinishWithActivitySchema:</a></code>
 		
 	</span>
 	
@@ -153,15 +164,22 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/requestDidFinishWithData:" title="requestDidFinishWithData:"></a>
-	<h3 class="subsubtitle method-title">requestDidFinishWithData:</h3>
+	<a name="//api/name/requestDidFinishWithActivityMenu:" title="requestDidFinishWithActivityMenu:"></a>
+	<h3 class="subsubtitle method-title">requestDidFinishWithActivityMenu:</h3>
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/requestDidFinishWithResourceCollection:" title="requestDidFinishWithResourceCollection:"></a>
-	<h3 class="subsubtitle method-title">requestDidFinishWithResourceCollection:</h3>
+	<a name="//api/name/requestDidFinishWithActivitySchema:" title="requestDidFinishWithActivitySchema:"></a>
+	<h3 class="subsubtitle method-title">requestDidFinishWithActivitySchema:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestDidFinishWithSiteList:" title="requestDidFinishWithSiteList:"></a>
+	<h3 class="subsubtitle method-title">requestDidFinishWithSiteList:</h3>
 	
 	
 </div>
@@ -179,7 +197,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-27)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						

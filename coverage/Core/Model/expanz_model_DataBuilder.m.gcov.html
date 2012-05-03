@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -74,48 +74,48 @@
 <span class="lineNum">      16 </span>            : #import &quot;expanz_model_GridData.h&quot;
 <span class="lineNum">      17 </span>            : #import &quot;expanz_model_TreeData.h&quot;
 <span class="lineNum">      18 </span>            : 
-<span class="lineNum">      19 </span><span class="lineCov">          3 : @implementation expanz_model_DataBuilder</span>
+<span class="lineNum">      19 </span><span class="lineCov">          8 : @implementation expanz_model_DataBuilder</span>
 <span class="lineNum">      20 </span>            : 
 <span class="lineNum">      21 </span>            : 
 <span class="lineNum">      22 </span>            : /* ================================================== Initializers ================================================== */
 <span class="lineNum">      23 </span>            : - (id)initWithDataId:(NSString*)dataId source:(NSString*)source {
-<span class="lineNum">      24 </span><span class="lineCov">          3 :     self = [super init];</span>
-<span class="lineNum">      25 </span><span class="lineCov">          3 :     if (self) {</span>
-<span class="lineNum">      26 </span><span class="lineCov">          3 :         _dataId = [dataId copy];</span>
-<span class="lineNum">      27 </span><span class="lineCov">          3 :         _source = [source copy];</span>
-<span class="lineNum">      28 </span><span class="lineCov">          3 :     }</span>
-<span class="lineNum">      29 </span><span class="lineCov">          3 :     return self;</span>
-<span class="lineNum">      30 </span><span class="lineCov">          3 : }</span>
-<span class="lineNum">      31 </span><span class="lineCov">          3 : </span>
+<span class="lineNum">      24 </span><span class="lineCov">          8 :     self = [super init];</span>
+<span class="lineNum">      25 </span><span class="lineCov">          8 :     if (self) {</span>
+<span class="lineNum">      26 </span><span class="lineCov">          8 :         _dataId = [dataId copy];</span>
+<span class="lineNum">      27 </span><span class="lineCov">          8 :         _source = [source copy];</span>
+<span class="lineNum">      28 </span><span class="lineCov">          8 :     }</span>
+<span class="lineNum">      29 </span><span class="lineCov">          8 :     return self;</span>
+<span class="lineNum">      30 </span><span class="lineCov">          8 : }</span>
+<span class="lineNum">      31 </span><span class="lineCov">          8 : </span>
 <span class="lineNum">      32 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      33 </span>            : - (expanz_model_AbstractData*)build {
-<span class="lineNum">      34 </span><span class="lineCov">          3 :     return _data;</span>
-<span class="lineNum">      35 </span><span class="lineCov">          3 : }</span>
+<span class="lineNum">      34 </span><span class="lineCov">          8 :     return _data;</span>
+<span class="lineNum">      35 </span><span class="lineCov">          8 : }</span>
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : - (void)addRow:(expanz_model_Row*)row {
-<span class="lineNum">      38 </span><span class="lineCov">          8 :     if (_data == nil) {</span>
-<span class="lineNum">      39 </span><span class="lineCov">          8 :         _data = [[GridData alloc] initWithDataId:_dataId source:_source];</span>
+<span class="lineNum">      38 </span><span class="lineCov">         28 :     if (_data == nil) {</span>
+<span class="lineNum">      39 </span><span class="lineCov">         28 :         _data = [[GridData alloc] initWithDataId:_dataId source:_source];</span>
 <span class="lineNum">      40 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      41 </span><span class="lineNoCov">          0 :     else if ([_data class] == [TreeData class]) {</span>
-<span class="lineNum">      42 </span><span class="lineCov">          8 :         [NSException raise:NSInvalidArgumentException</span>
+<span class="lineNum">      42 </span><span class="lineCov">         28 :         [NSException raise:NSInvalidArgumentException</span>
 <span class="lineNum">      43 </span><span class="lineNoCov">          0 :                     format:@&quot;Can't add both GridData and TreeData attributes to the same instance.&quot;];</span>
 <span class="lineNum">      44 </span>            :     }
 <span class="lineNum">      45 </span><span class="lineNoCov">          0 :     GridData* gridData = (GridData*) _data;</span>
-<span class="lineNum">      46 </span><span class="lineCov">          8 :     [gridData addRow:row];</span>
-<span class="lineNum">      47 </span><span class="lineCov">          8 : }</span>
-<span class="lineNum">      48 </span><span class="lineCov">          8 : </span>
+<span class="lineNum">      46 </span><span class="lineCov">         28 :     [gridData addRow:row];</span>
+<span class="lineNum">      47 </span><span class="lineCov">         28 : }</span>
+<span class="lineNum">      48 </span><span class="lineCov">         28 : </span>
 <span class="lineNum">      49 </span>            : - (void)addColumn:(expanz_model_Column*)column {
-<span class="lineNum">      50 </span><span class="lineCov">         20 :     if (_data == nil) {</span>
-<span class="lineNum">      51 </span><span class="lineCov">         20 :         _data = [[GridData alloc] initWithDataId:_dataId source:_source];</span>
-<span class="lineNum">      52 </span><span class="lineCov">          2 :     }</span>
-<span class="lineNum">      53 </span><span class="lineCov">          2 :     else if ([_data class] == [TreeData class]) {</span>
-<span class="lineNum">      54 </span><span class="lineCov">         18 :         [NSException raise:NSInvalidArgumentException</span>
+<span class="lineNum">      50 </span><span class="lineCov">         70 :     if (_data == nil) {</span>
+<span class="lineNum">      51 </span><span class="lineCov">         70 :         _data = [[GridData alloc] initWithDataId:_dataId source:_source];</span>
+<span class="lineNum">      52 </span><span class="lineCov">          7 :     }</span>
+<span class="lineNum">      53 </span><span class="lineCov">          7 :     else if ([_data class] == [TreeData class]) {</span>
+<span class="lineNum">      54 </span><span class="lineCov">         63 :         [NSException raise:NSInvalidArgumentException</span>
 <span class="lineNum">      55 </span><span class="lineNoCov">          0 :                     format:@&quot;Can't add both GridData and TreeData attributes to the same instance.&quot;];</span>
 <span class="lineNum">      56 </span>            :     }
 <span class="lineNum">      57 </span><span class="lineNoCov">          0 :     GridData* gridData = (GridData*) _data;</span>
-<span class="lineNum">      58 </span><span class="lineCov">         20 :     [gridData addColumn:column];</span>
-<span class="lineNum">      59 </span><span class="lineCov">         20 : }</span>
-<span class="lineNum">      60 </span><span class="lineCov">         20 : </span>
+<span class="lineNum">      58 </span><span class="lineCov">         70 :     [gridData addColumn:column];</span>
+<span class="lineNum">      59 </span><span class="lineCov">         70 : }</span>
+<span class="lineNum">      60 </span><span class="lineCov">         70 : </span>
 <span class="lineNum">      61 </span>            : - (void)addFolder:(expanz_model_Folder*)folder {
 <span class="lineNum">      62 </span><span class="lineCov">         24 :     if (_data == nil) {</span>
 <span class="lineNum">      63 </span><span class="lineCov">         24 :         _data = [[TreeData alloc] initWithDataId:_dataId];</span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -69,7 +69,7 @@
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : 
 <span class="lineNum">      13 </span>            : #import &quot;expanz_model_ActivityInstance.h&quot;
-<span class="lineNum">      14 </span>            : #import &quot;expanz_model_FieldInstance.h&quot;
+<span class="lineNum">      14 </span>            : #import &quot;expanz_model_Field.h&quot;
 <span class="lineNum">      15 </span>            : #import &quot;expanz_model_ResourceCollection.h&quot;
 <span class="lineNum">      16 </span>            : #import &quot;expanz_service_DefaultDownloadClient.h&quot;
 <span class="lineNum">      17 </span>            : #import &quot;expanz_service_FileRequest.h&quot;
@@ -98,7 +98,7 @@
 <span class="lineNum">      40 </span>            : 
 <span class="lineNum">      41 </span>            : /* ================================================= Protocol Methods =============================================== */
 <span class="lineNum">      42 </span>            : - (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
-<span class="lineNum">      43 </span>            :                     delegate:(id&lt;expanz_service_FileDownloadClientDelegate&gt;)delegate {
+<span class="lineNum">      43 </span>            :                     delegate:(id&lt;ExpanzFileDownloadClientDelegate&gt;)delegate {
 <span class="lineNum">      44 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      45 </span><span class="lineNoCov">          0 :     [self.httpTransport post:_fileRequestUrl payload:[fileRequest toXml] headers:[self requestHeaders]</span>
 <span class="lineNum">      46 </span>            :                    withBlock:^(LRRestyResponse* response) {
@@ -109,7 +109,7 @@
 <span class="lineNum">      51 </span><span class="lineNoCov">          0 :                            RXMLElement* activityElement = [responseElement child:@&quot;ExecXResult.ESA.Activity&quot;];</span>
 <span class="lineNum">      52 </span><span class="lineNoCov">          0 :                            RXMLElement* resourceElement = [responseElement child:@&quot;ExecXResult.ESA.Files&quot;];</span>
 <span class="lineNum">      53 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      54 </span><span class="lineNoCov">          0 :                            FieldInstance* titleField = [[activityElement asActivityInstance] fieldWithId:@&quot;File.Title&quot;];</span>
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 :                            Field* titleField = [[activityElement asActivityInstance] fieldWithId:@&quot;File.Title&quot;];</span>
 <span class="lineNum">      55 </span><span class="lineNoCov">          0 :                            LogDebug(&quot;Creating resource collection with title: %@&quot;, titleField.value);</span>
 <span class="lineNum">      56 </span>            :                            ResourceCollection
 <span class="lineNum">      57 </span><span class="lineNoCov">          0 :                                * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];</span>
@@ -125,7 +125,7 @@
 <span class="lineNum">      67 </span>            : 
 <span class="lineNum">      68 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      69 </span><span class="lineNoCov">          0 : - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest</span>
-<span class="lineNum">      70 </span>            :                  delegate:(id&lt;expanz_service_FileDownloadClientDelegate&gt;)delegate {
+<span class="lineNum">      70 </span>            :                  delegate:(id&lt;ExpanzFileDownloadClientDelegate&gt;)delegate {
 <span class="lineNum">      71 </span>            : 
 <span class="lineNum">      72 </span>            :     [self.httpTransport post:_getBlobUrl payload:[downloadRequest toXml] headers:[self requestHeaders]
 <span class="lineNum">      73 </span><span class="lineNoCov">          0 :                    withBlock:^(LRRestyResponse* response) {</span>

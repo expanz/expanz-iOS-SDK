@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -68,7 +68,7 @@
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;expanz_service_DeltaRequest.h&quot;
-<span class="lineNum">      13 </span>            : #import &quot;expanz_model_FieldInstance.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;expanz_model_Field.h&quot;
 <span class="lineNum">      14 </span>            : #import &quot;expanz_model_SessionContext.h&quot;
 <span class="lineNum">      15 </span>            : #import &quot;expanz_model_ActivityInstance.h&quot;
 <span class="lineNum">      16 </span>            : 
@@ -81,7 +81,7 @@
 <span class="lineNum">      23 </span><span class="lineNoCov">          0 : @synthesize encoding = _encoding;</span>
 <span class="lineNum">      24 </span>            : 
 <span class="lineNum">      25 </span>            : /* ================================================= Class Methods ================================================== */
-<span class="lineNum">      26 </span><span class="lineCov">          1 : + (id) forField:(expanz_model_FieldInstance*)field {</span>
+<span class="lineNum">      26 </span><span class="lineCov">          1 : + (id) forField:(expanz_model_Field*)field {</span>
 <span class="lineNum">      27 </span><span class="lineCov">          1 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
 <span class="lineNum">      28 </span><span class="lineCov">          1 :     return [[DeltaRequest alloc]</span>
 <span class="lineNum">      29 </span>            :         initWithFieldId:field.fieldId fieldValue:field.value activityHandle:field.parentActivity.handle

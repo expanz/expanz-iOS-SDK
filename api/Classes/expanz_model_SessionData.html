@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>expanz_service_LoginClient Protocol Reference</title>
+		<title>expanz_model_SessionData Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">expanz_service_LoginClient Protocol Reference</h1>
+				<h1 class="hideInXcode">expanz_model_SessionData Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -36,13 +36,26 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/blobCacheUrl">&nbsp;&nbsp;&nbsp;&nbsp;blobCacheUrl</option>
+	
+	<option value="//api/name/menu">&nbsp;&nbsp;&nbsp;&nbsp;menu</option>
+	
+	<option value="//api/name/operationalMode">&nbsp;&nbsp;&nbsp;&nbsp;operationalMode</option>
+	
+	<option value="//api/name/timeZone">&nbsp;&nbsp;&nbsp;&nbsp;timeZone</option>
+	
+	<option value="//api/name/userCultureName">&nbsp;&nbsp;&nbsp;&nbsp;userCultureName</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/createSessionWith:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- createSessionWith:delegate:</option>
+	<option value="//api/name/initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:</option>
 	
 	
 	
@@ -64,13 +77,27 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/blobCacheUrl">blobCacheUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/menu">menu</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/operationalMode">operationalMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeZone">timeZone</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userCultureName">userCultureName</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createSessionWith:delegate:">createSessionWith:delegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:">initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:</a></span></li>
 	
 </ul></li>
 
@@ -79,7 +106,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="expanz_service_LoginClient Protocol Reference" name="top"></a>
+				<a title="expanz_model_SessionData Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -88,18 +115,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">expanz_service_LoginClient Protocol Reference</h1>
+						<h1 class="title title-header">expanz_model_SessionData Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Conforms to</td>
+	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">expanz_service_LoginClient.h</td>
+	<td class="specification-value">expanz_model_SessionData.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -119,11 +146,46 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createSessionWith:delegate:">&ndash;&nbsp;createSessionWith:delegate:</a></code>
-		<span class="tooltip"><p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p></span>
+		<code><a href="#//api/name/operationalMode">&nbsp;&nbsp;operationalMode</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timeZone">&nbsp;&nbsp;timeZone</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/blobCacheUrl">&nbsp;&nbsp;blobCacheUrl</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userCultureName">&nbsp;&nbsp;userCultureName</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/menu">&nbsp;&nbsp;menu</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:">&ndash;&nbsp;initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:</a></code>
+		
 	</span>
 	
-	<span class="task-item-suffix">required method</span>
+	
 </li>
 						</ul>
 						
@@ -132,6 +194,47 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/blobCacheUrl" title="blobCacheUrl"></a>
+	<h3 class="subsubtitle method-title">blobCacheUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/menu" title="menu"></a>
+	<h3 class="subsubtitle method-title">menu</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/operationalMode" title="operationalMode"></a>
+	<h3 class="subsubtitle method-title">operationalMode</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timeZone" title="timeZone"></a>
+	<h3 class="subsubtitle method-title">timeZone</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userCultureName" title="userCultureName"></a>
+	<h3 class="subsubtitle method-title">userCultureName</h3>
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -142,40 +245,8 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/createSessionWith:delegate:" title="createSessionWith:delegate:"></a>
-	<h3 class="subsubtitle method-title">createSessionWith:delegate:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (void)createSessionWith:(expanz_service_SessionRequest *)<em>sessionRequest</em> delegate:(id&lt;expanz_service_LoginClientDelegate&gt;)<em>delegate</em></code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">expanz_service_LoginClient.h</code><br />
-	</div>				
+	<a name="//api/name/initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:" title="initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:"></a>
+	<h3 class="subsubtitle method-title">initWithOperationalMode:timeZone:blobCacheUrl:userCultureName:menu:</h3>
 	
 	
 </div>
@@ -193,7 +264,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-27)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						

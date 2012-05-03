@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>expanz_service_SiteDetailsClient Protocol Reference</title>
+		<title>ExpanzSessionDataClient Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">expanz_service_SiteDetailsClient Protocol Reference</h1>
+				<h1 class="hideInXcode">ExpanzSessionDataClient Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -42,11 +42,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/listActivitiesForSite:withDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- listActivitiesForSite:withDelegate:</option>
-	
-	<option value="//api/name/listAvailableSitesWithDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- listAvailableSitesWithDelegate:</option>
-	
-	<option value="//api/name/site:requestSchemaForActivity:withDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- site:requestSchemaForActivity:withDelegate:</option>
+	<option value="//api/name/retrieveSessionDataWith:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- retrieveSessionDataWith:delegate:</option>
 	
 	
 	
@@ -74,11 +70,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/listActivitiesForSite:withDelegate:">listActivitiesForSite:withDelegate:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/listAvailableSitesWithDelegate:">listAvailableSitesWithDelegate:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/site:requestSchemaForActivity:withDelegate:">site:requestSchemaForActivity:withDelegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/retrieveSessionDataWith:delegate:">retrieveSessionDataWith:delegate:</a></span></li>
 	
 </ul></li>
 
@@ -87,7 +79,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="expanz_service_SiteDetailsClient Protocol Reference" name="top"></a>
+				<a title="ExpanzSessionDataClient Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -96,7 +88,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">expanz_service_SiteDetailsClient Protocol Reference</h1>
+						<h1 class="title title-header">ExpanzSessionDataClient Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -107,7 +99,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">expanz_service_SiteDetailsClient.h</td>
+	<td class="specification-value">ExpanzSessionDataClient.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -127,22 +119,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/listAvailableSitesWithDelegate:">&ndash;&nbsp;listAvailableSitesWithDelegate:</a></code>
-		
-	</span>
-	
-	<span class="task-item-suffix">required method</span>
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/listActivitiesForSite:withDelegate:">&ndash;&nbsp;listActivitiesForSite:withDelegate:</a></code>
-		
-	</span>
-	
-	<span class="task-item-suffix">required method</span>
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/site:requestSchemaForActivity:withDelegate:">&ndash;&nbsp;site:requestSchemaForActivity:withDelegate:</a></code>
-		
+		<code><a href="#//api/name/retrieveSessionDataWith:delegate:">&ndash;&nbsp;retrieveSessionDataWith:delegate:</a></code>
+		<span class="tooltip"><p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -164,22 +142,40 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/listActivitiesForSite:withDelegate:" title="listActivitiesForSite:withDelegate:"></a>
-	<h3 class="subsubtitle method-title">listActivitiesForSite:withDelegate:</h3>
+	<a name="//api/name/retrieveSessionDataWith:delegate:" title="retrieveSessionDataWith:delegate:"></a>
+	<h3 class="subsubtitle method-title">retrieveSessionDataWith:delegate:</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/listAvailableSitesWithDelegate:" title="listAvailableSitesWithDelegate:"></a>
-	<h3 class="subsubtitle method-title">listAvailableSitesWithDelegate:</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p>
+	</div>		
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/site:requestSchemaForActivity:withDelegate:" title="site:requestSchemaForActivity:withDelegate:"></a>
-	<h3 class="subsubtitle method-title">site:requestSchemaForActivity:withDelegate:</h3>
+	<div class="method-subsection method-declaration"><code>- (void)retrieveSessionDataWith:(expanz_service_SessionDataRequest *)<em>sessionDataRequest</em> delegate:(id&lt;ExpanzSessionDataClientDelegate&gt;)<em>delegate</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Presents credentials to the expanz server and returns a SessionContext, which contains a session token.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ExpanzSessionDataClient.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -197,7 +193,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-04-27)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
 						

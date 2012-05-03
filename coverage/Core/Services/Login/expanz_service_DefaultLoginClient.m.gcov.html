@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -88,7 +88,7 @@
 <span class="lineNum">      30 </span><span class="lineCov">          4 : }</span>
 <span class="lineNum">      31 </span>            : 
 <span class="lineNum">      32 </span>            : /* ================================================= Protocol Methods =============================================== */
-<span class="lineNum">      33 </span>            : - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id&lt;expanz_service_LoginClientDelegate&gt;)delegate {
+<span class="lineNum">      33 </span>            : - (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id&lt;ExpanzLoginClientDelegate&gt;)delegate {
 <span class="lineNum">      34 </span><span class="lineCov">          6 : </span>
 <span class="lineNum">      35 </span>            :     [self.httpTransport post:_serviceUrl payload:[sessionRequest toXml] headers:[self requestHeaders]
 <span class="lineNum">      36 </span><span class="lineCov">          2 :             withBlock:^(LRRestyResponse* response) {</span>

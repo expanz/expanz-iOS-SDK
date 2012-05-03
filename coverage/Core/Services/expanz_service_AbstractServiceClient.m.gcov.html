@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -68,11 +68,11 @@
 <span class="lineNum">      10 </span>            : ////////////////////////////////////////////////////////////////////////////////
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;expanz_service_AbstractServiceClient.h&quot;
-<span class="lineNum">      13 </span>            : #import &quot;expanz_service_AbstractServiceClientDelegate.h&quot;
+<span class="lineNum">      13 </span>            : #import &quot;ExpanzAbstractServiceClientDelegate.h&quot;
 <span class="lineNum">      14 </span>            : 
 <span class="lineNum">      15 </span><span class="lineCov">          7 : @implementation expanz_service_AbstractServiceClient</span>
 <span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span><span class="lineCov">         17 : @synthesize httpTransport = _httpTransport;</span>
+<span class="lineNum">      17 </span><span class="lineCov">         11 : @synthesize httpTransport = _httpTransport;</span>
 <span class="lineNum">      18 </span>            : 
 <span class="lineNum">      19 </span>            : 
 <span class="lineNum">      20 </span>            : /* ================================================== Initializers ================================================== */
@@ -84,11 +84,11 @@
 <span class="lineNum">      26 </span><span class="lineCov">         19 :     return self;</span>
 <span class="lineNum">      27 </span><span class="lineCov">         19 : }</span>
 <span class="lineNum">      28 </span>            : 
-<span class="lineNum">      29 </span><span class="lineCov">         14 : - (NSDictionary*) requestHeaders {</span>
-<span class="lineNum">      30 </span><span class="lineCov">         14 :     return [NSDictionary dictionaryWithObject:@&quot;text/xml&quot; forKey:@&quot;Content-Type&quot;];</span>
+<span class="lineNum">      29 </span><span class="lineCov">          8 : - (NSDictionary*) requestHeaders {</span>
+<span class="lineNum">      30 </span><span class="lineCov">          8 :     return [NSDictionary dictionaryWithObject:@&quot;text/xml&quot; forKey:@&quot;Content-Type&quot;];</span>
 <span class="lineNum">      31 </span>            : }
 <span class="lineNum">      32 </span>            : 
-<span class="lineNum">      33 </span>            : - (void) dispatchErrorWith:(id&lt;expanz_service_AbstractServiceClientDelegate&gt;)delegate statusCode:(NSInteger)statusCode
+<span class="lineNum">      33 </span>            : - (void) dispatchErrorWith:(id&lt;ExpanzAbstractServiceClientDelegate&gt;)delegate statusCode:(NSInteger)statusCode
 <span class="lineNum">      34 </span><span class="lineNoCov">          0 :                   userInfo:(NSString*)userInfo {</span>
 <span class="lineNum">      35 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">      36 </span>            :     [delegate requestDidFailWithError:[NSError errorWithDomain:NSStringFromClass([self class]) code:statusCode

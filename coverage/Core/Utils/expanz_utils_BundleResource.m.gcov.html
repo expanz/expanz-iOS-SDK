@@ -31,13 +31,13 @@
             <td class="headerValue">expanz-iOS-SDK.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntryLo">72.2 %</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-04-27</td>
+            <td class="headerValue">2012-05-03</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -71,26 +71,26 @@
 <span class="lineNum">      13 </span>            : 
 <span class="lineNum">      14 </span>            : @implementation expanz_utils_BundleResource
 <span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">         19 : + (NSString*)withName:(NSString*)name {</span>
+<span class="lineNum">      16 </span><span class="lineNoCov">          0 : + (NSString*)withName:(NSString*)name {</span>
 <span class="lineNum">      17 </span>            :     
-<span class="lineNum">      18 </span><span class="lineCov">         19 :     NSString* contents; </span>
-<span class="lineNum">      19 </span><span class="lineCov">         19 :     NSRange lastDot = [name rangeOfString:@&quot;.&quot; options:NSBackwardsSearch];</span>
-<span class="lineNum">      20 </span><span class="lineCov">         19 :     if (lastDot.location != NSNotFound) {</span>
-<span class="lineNum">      21 </span><span class="lineCov">         19 :         NSString* resource = [name substringToIndex:lastDot.location];</span>
-<span class="lineNum">      22 </span><span class="lineCov">         19 :         NSString* type = [name substringFromIndex:lastDot.location + 1];</span>
-<span class="lineNum">      23 </span><span class="lineCov">         19 :         LogDebug(@&quot;Resource: %@.%@&quot;, resource, type);</span>
-<span class="lineNum">      24 </span><span class="lineCov">         19 :         NSString* filePath = [[NSBundle bundleForClass:[self class]] pathForResource:resource ofType:type];</span>
-<span class="lineNum">      25 </span><span class="lineCov">         19 :         contents =  [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];        </span>
-<span class="lineNum">      26 </span><span class="lineCov">         19 :     }</span>
+<span class="lineNum">      18 </span><span class="lineNoCov">          0 :     NSString* contents; </span>
+<span class="lineNum">      19 </span><span class="lineNoCov">          0 :     NSRange lastDot = [name rangeOfString:@&quot;.&quot; options:NSBackwardsSearch];</span>
+<span class="lineNum">      20 </span><span class="lineNoCov">          0 :     if (lastDot.location != NSNotFound) {</span>
+<span class="lineNum">      21 </span><span class="lineNoCov">          0 :         NSString* resource = [name substringToIndex:lastDot.location];</span>
+<span class="lineNum">      22 </span><span class="lineNoCov">          0 :         NSString* type = [name substringFromIndex:lastDot.location + 1];</span>
+<span class="lineNum">      23 </span><span class="lineNoCov">          0 :         LogDebug(@&quot;Resource: %@.%@&quot;, resource, type);</span>
+<span class="lineNum">      24 </span><span class="lineNoCov">          0 :         NSString* filePath = [[NSBundle bundleForClass:[self class]] pathForResource:resource ofType:type];</span>
+<span class="lineNum">      25 </span><span class="lineNoCov">          0 :         contents =  [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];        </span>
+<span class="lineNum">      26 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      27 </span>            :     else {
 <span class="lineNum">      28 </span><span class="lineNoCov">          0 :         NSString* filePath = [[NSBundle bundleForClass:[self class]] pathForResource:name ofType:nil];</span>
 <span class="lineNum">      29 </span><span class="lineNoCov">          0 :         contents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];</span>
 <span class="lineNum">      30 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      31 </span><span class="lineCov">         19 :     if (contents == nil) {</span>
+<span class="lineNum">      31 </span><span class="lineNoCov">          0 :     if (contents == nil) {</span>
 <span class="lineNum">      32 </span><span class="lineNoCov">          0 :         [NSException raise:NSInvalidArgumentException format:@&quot;Expected contents of file %@ not to be nil&quot;, name];</span>
 <span class="lineNum">      33 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      34 </span><span class="lineCov">         19 :     return contents;</span>
-<span class="lineNum">      35 </span><span class="lineCov">         19 : }</span>
+<span class="lineNum">      34 </span><span class="lineNoCov">          0 :     return contents;</span>
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 : }</span>
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : 
 <span class="lineNum">      38 </span>            : @end
