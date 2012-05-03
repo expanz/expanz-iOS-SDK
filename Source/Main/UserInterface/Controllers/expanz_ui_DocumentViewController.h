@@ -9,18 +9,19 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "expanz_service_FileDownloadClientDelegate.h"
+#import "ExpanzFileDownloadClient.h"
 
-@protocol expanz_service_FileDownloadClient;
+
+@protocol ExpanzFileDownloadClient;
 @class MBProgressHUD;
 
 
-@interface expanz_ui_DocumentViewController : UIViewController<expanz_service_FileDownloadClientDelegate,
+@interface expanz_ui_DocumentViewController : UIViewController<ExpanzFileDownloadClientDelegate,
     UIPrintInteractionControllerDelegate> {
 
 @private
     MBProgressHUD* _loadingHud;
-    id<expanz_service_FileDownloadClient> _fileDownloadClient;
+    id<ExpanzFileDownloadClient> _fileDownloadClient;
 }
 
 

@@ -71,7 +71,7 @@
     return [_queries sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addField:(expanz_model_FieldInstance*)field {
+- (void) addField:(expanz_model_Field*)field {
     [_fields addObject:field];
 }
 

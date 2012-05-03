@@ -10,9 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 #import "expanz_service_AbstractServiceClient.h"
-#import "expanz_service_FileDownloadClient.h"
+#import "ExpanzFileDownloadClient.h"
 
-@interface expanz_service_DefaultDownloadClient : expanz_service_AbstractServiceClient<expanz_service_FileDownloadClient>
+@interface expanz_service_DefaultDownloadClient : expanz_service_AbstractServiceClient<ExpanzFileDownloadClient>
 
 
 @property (nonatomic, strong, readonly) NSString* fileRequestUrl;

@@ -11,24 +11,24 @@
 
 #import "Objection.h"
 #import "IntegrationUtils.h"
-#import "expanz_service_LoginClient.h" 
+#import "ExpanzLoginClient.h"
 #import "StubLoginClientDelegate.h"
 #import "expanz_service_SessionRequest.h"
 #import "expanz_UserInterfaceModule.h"
 #import "expanz_service_CreateActivityRequest.h"
-#import "expanz_service_ActivityClient.h"
+#import "ExpanzActivityClient.h"
 #import "StubActivityClientDelegate.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_model_SessionContext.h"
-#import "../../Source/Main/Core/expanz_SdkConfiguration.h"
+#import "expanz_SdkConfiguration.h"
 
 
 @implementation IntegrationUtils
 
 + (void) useDefaultBackendForIntegrationTests {
     SdkConfiguration* configuration = [[SdkConfiguration alloc]
-        initWithBaseUrl:@"http://expanzdemo.cloudapp.net:8080/ESAService.svc/restish" preferredSite:@"SALES"
-               userType:@"Alternate"];
+        initWithBaseUrl:@"http://test.expanz.com/ESADemoService/ESAService.svc/restish" preferredSite:@"SALES"
+               userType:@"Primary"];
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 }
@@ -39,7 +39,7 @@
     if ([SessionContext globalContext] == nil) {
         JSObjectionInjector* testInjector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
 
-        id<expanz_service_LoginClient> loginClient = [testInjector getObject:@protocol(expanz_service_LoginClient)];
+        id<ExpanzLoginClient> loginClient = [testInjector getObject:@protocol(ExpanzLoginClient)];
         SessionRequest* sessionRequest =
             [[SessionRequest alloc] initWithUserName:@"demo4" password:@"demo" appSite:@"SALES" userType:@"Alternate"];
         StubLoginClientDelegate* loginDelegate = [[StubLoginClientDelegate alloc] init];
@@ -55,8 +55,8 @@
         initWithActivityName:@"Sales.Customer" style:[ActivityStyle browseStyle] initialKey:nil
                 sessionToken:[SessionContext globalContext].sessionToken];
 
-    id<expanz_service_ActivityClient>
-        activityClient = [testInjector getObject:@protocol(expanz_service_ActivityClient)];
+    id<ExpanzActivityClient>
+        activityClient = [testInjector getObject:@protocol(ExpanzActivityClient)];
 
     StubActivityClientDelegate* delegate = [[StubActivityClientDelegate alloc] init];
 

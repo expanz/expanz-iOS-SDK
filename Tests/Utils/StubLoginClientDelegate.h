@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_LoginClient.h"
+#import "ExpanzLoginClient.h"
 @class expanz_model_SessionContext;
 
-@interface StubLoginClientDelegate : NSObject<expanz_service_LoginClientDelegate>
+@interface StubLoginClientDelegate : NSObject<ExpanzLoginClientDelegate>
 
 @property(nonatomic, strong) expanz_model_SessionContext* sessionContext;
 @property(nonatomic, strong) NSError* error;

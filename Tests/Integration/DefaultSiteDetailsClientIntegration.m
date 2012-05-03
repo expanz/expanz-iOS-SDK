@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_SiteDetailsClientDelegate.h"
+#import "ExpanzSiteDetailsClientDelegate.h"
 #import "expanz_model_SiteList.h"
-#import "expanz_service_SiteDetailsClient.h"
+#import "ExpanzSiteDetailsClient.h"
 #import "JSObjectionInjector.h"
 #import "JSObjection.h"
 #import "expanz_CoreModule.h"
@@ -20,7 +20,7 @@
 #import "expanz_model_ActivitySchema.h"
 
 /* ================================================================================================================== */
-@interface TestSiteClientIntegrationDelegate : NSObject<expanz_service_SiteDetailsClientDelegate>
+@interface TestSiteClientIntegrationDelegate : NSObject<ExpanzSiteDetailsClientDelegate>
 @property(nonatomic, strong) SiteList* siteList;
 @property(nonatomic, strong) ActivityMenu* activityList;
 @property(nonatomic, strong) ActivitySchema* activitySchema;
@@ -50,13 +50,13 @@
 SPEC_BEGIN(DefaultSiteDetailsClientIntegration)
 
 
-        __block id<expanz_service_SiteDetailsClient> siteClient;
+        __block id<ExpanzSiteDetailsClient> siteClient;
         __block TestSiteClientIntegrationDelegate* delegate;
 
         beforeEach(^{
             [IntegrationUtils useDefaultBackendForIntegrationTests];
             JSObjectionInjector* injector = [JSObjection createInjector:[[CoreModule alloc] init]];
-            siteClient = [injector getObject:@protocol(expanz_service_SiteDetailsClient)];
+            siteClient = [injector getObject:@protocol(ExpanzSiteDetailsClient)];
             delegate = [[TestSiteClientIntegrationDelegate alloc] init];
         });
 

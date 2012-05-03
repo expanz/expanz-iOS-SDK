@@ -30,7 +30,7 @@
     self = [super initWithNibName:@"ActivityMenu" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"activities";
-        _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SessionDataClient)];
+        _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSessionDataClient)];
         _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
 

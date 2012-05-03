@@ -10,12 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
+#import "ExpanzActivityClient.h"
 #import "MBProgressHUD.h"
 #import "expanz_model_ActivityStyle.h"
 
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 @class expanz_ui_ModelAdapter;
 @class expanz_service_CreateActivityRequest;
 @class expanz_ui_components_ThumbnailTableCell;
@@ -26,14 +25,14 @@
 @class expanz_model_ActivityInstance;
 
 
-@interface expanz_ui_ActivityInstanceViewController : UIViewController<expanz_service_ActivityClientDelegate,
+@interface expanz_ui_ActivityInstanceViewController : UIViewController<ExpanzActivityClientDelegate,
         UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,
         MBProgressHUDDelegate> {
 
 @private
     NSMutableDictionary* _subViewStateCache;
     MBProgressHUD* _loadingHud;
-    id<expanz_service_ActivityClient> _activityClient;
+    id<ExpanzActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
     expanz_ui_NavigationManager* _navigationManager;
     UIImageView* _currentlyEditingImageView;
@@ -66,7 +65,7 @@
 /**
  * Request model to update with new field value. 
  */
-- (void) sendDeltaForField:(expanz_model_FieldInstance*)textField;
+- (void) sendDeltaForField:(expanz_model_Field*)textField;
 
 /**
  * Invoke a method on the model, attaching the results to self.

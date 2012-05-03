@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
+#import "ExpanzActivityClient.h"
 #import "expanz_service_AbstractServiceClient.h"
 
-@interface expanz_service_DefaultActivityClient : AbstractServiceClient<expanz_service_ActivityClient>
+@interface expanz_service_DefaultActivityClient : AbstractServiceClient<ExpanzActivityClient>
 
 @property(nonatomic, strong, readonly) NSString* serviceUrl;
 

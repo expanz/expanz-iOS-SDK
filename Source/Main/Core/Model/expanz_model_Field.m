@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 
-@implementation expanz_model_FieldInstance
+@implementation expanz_model_Field
 
 //Readonly properties.  
 @synthesize fieldId = _fieldId;

@@ -50,7 +50,7 @@
 
 
 /* ================================================== Private Methods =============================================== */
-- (NSMutableDictionary*) mutableFields {
+- (NSMutableArray*) mutableFields {
     return _fields;
 }
 

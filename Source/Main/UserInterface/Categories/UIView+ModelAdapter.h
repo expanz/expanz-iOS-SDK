@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_ui_ModelAdapter;
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 
 @interface UIView (ModelAdapter)
 

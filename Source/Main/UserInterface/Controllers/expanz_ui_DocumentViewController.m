@@ -13,7 +13,7 @@
 #import "expanz_model_FileResource.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_service_FileRequest.h"
-#import "expanz_service_FileDownloadClient.h"
+#import "ExpanzFileDownloadClient.h"
 #import "expanz_service_FileDownloadRequest.h"
 #import "expanz_ui_DocumentViewController.h"
 #import "MBProgressHUD.h"
@@ -33,7 +33,7 @@
     if (self) {
         _documentId = [documentId copy];
         _activityHandle = [activityHandle copy];
-        _fileDownloadClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_FileDownloadClient)];
+        _fileDownloadClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzFileDownloadClient)];
     }
     return self;
 }

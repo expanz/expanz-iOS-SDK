@@ -11,7 +11,6 @@
 
 
 #import "expanz_service_AbstractServiceClient.h"
-#import "expanz_service_SiteDetailsClientDelegate.h"
 #import "expanz_service_DefaultSiteDetailsClient.h"
 #import "expanz_model_SiteList.h"
 #import "expanz_model_ActivityMenu.h"
@@ -22,7 +21,7 @@
 @interface expanz_service_DefaultSiteDetailsClient (private)
 
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-        forDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate;
+        forDelegate:(id<ExpanzSiteDetailsClientDelegate>)delegate;
 
 @end
 
@@ -49,7 +48,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) listAvailableSitesWithDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+- (void) listAvailableSitesWithDelegate:(id<ExpanzSiteDetailsClientDelegate>)delegate {
 
     [self.httpTransport get:self.listAvailableSitesUrl withBlock:^(LRRestyResponse* response) {
 
@@ -66,7 +65,7 @@
     }];
 }
 
-- (void) listActivitiesForSite:(NSString*)site withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+- (void) listActivitiesForSite:(NSString*)site withDelegate:(id<ExpanzSiteDetailsClientDelegate>)delegate {
 
     NSDictionary* parameters = [NSDictionary dictionaryWithObject:site forKey:@"site"];
     [self.httpTransport get:self.listActivitiesForSiteUrl parameters:parameters withBlock:^(LRRestyResponse* response) {
@@ -87,7 +86,7 @@
 
 
 - (void) site:(NSString*)siteId requestSchemaForActivity:(NSString*)activityId
-        withDelegate:(id<expanz_service_SiteDetailsClientDelegate>)delegate {
+        withDelegate:(id<ExpanzSiteDetailsClientDelegate>)delegate {
 
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:siteId, @"site", activityId, @"activity", nil];
     [self.httpTransport get:self.schemaForActivityUrl parameters:params withBlock:^(LRRestyResponse* response) {

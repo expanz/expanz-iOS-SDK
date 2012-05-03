@@ -18,7 +18,7 @@ typedef enum {
 }  DeltaEncoding;
 
 
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 
 @interface expanz_service_DeltaRequest : NSObject<xml_Serializable>
 
@@ -31,7 +31,7 @@ typedef enum {
 /**
  * Creates an auto-released instance from using field data.
  */
-+ (id) forField:(expanz_model_FieldInstance*)field;
++ (id) forField:(expanz_model_Field*)field;
 
 
 /**

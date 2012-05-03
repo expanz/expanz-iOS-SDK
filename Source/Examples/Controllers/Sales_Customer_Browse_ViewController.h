@@ -17,5 +17,4 @@
 
 @property(nonatomic, strong) IBOutlet UITableView* ListCustomersMobile;
 
-
 @end

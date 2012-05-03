@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 @class expanz_model_FileResource;
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 
 
 @interface expanz_model_ResourceCollection : NSObject {

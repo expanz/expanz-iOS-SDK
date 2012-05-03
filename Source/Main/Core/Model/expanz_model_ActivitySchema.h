@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 @class expanz_model_MethodSchema;
 @class expanz_model_FieldSchema;
 @class expanz_model_ActivityStyle;

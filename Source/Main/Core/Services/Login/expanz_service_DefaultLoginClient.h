@@ -12,17 +12,17 @@
 #import <Foundation/Foundation.h>
 #import "expanz_service_AbstractServiceClient.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_service_LoginClient.h"
 #import "expanz_service_SessionRequest.h"
+#import "ExpanzLoginClient.h"
 
 
-@interface expanz_service_DefaultLoginClient : AbstractServiceClient<expanz_service_LoginClient>
+@interface expanz_service_DefaultLoginClient : AbstractServiceClient<ExpanzLoginClient>
 
 @property (nonatomic, strong, readonly) NSString* serviceUrl;
 
 - (id) initWithServiceUrl:(NSString*)serviceUrl;
 
-- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate;
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ExpanzLoginClientDelegate>)delegate;
 
 
 @end

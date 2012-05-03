@@ -10,19 +10,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_LoginClient.h"
-#import "expanz_service_LoginClientDelegate.h"
+#import "ExpanzAbstractServiceClientDelegate.h"
 
 @class expanz_service_SessionRequest;
 @class expanz_model_SessionContext;
+@protocol ExpanzLoginClientDelegate;
 
-@protocol expanz_service_LoginClient <NSObject>
+
+@protocol ExpanzLoginClientDelegate<ExpanzAbstractServiceClientDelegate>
+
+@optional
+
+- (void) requestDidFinishWithSessionContext:(expanz_model_SessionContext*)sessionContext;
+
+@end
+/* ================================================================================================================== */
+
+@protocol ExpanzLoginClient<NSObject>
 
 /** 
  * Presents credentials to the expanz server and returns a SessionContext, which contains a session token.  
  */
 - (void) createSessionWith:(expanz_service_SessionRequest*)sessionRequest 
-                  delegate:(id<expanz_service_LoginClientDelegate>)delegate;
+                  delegate:(id<ExpanzLoginClientDelegate>)delegate;
 
 @end
 

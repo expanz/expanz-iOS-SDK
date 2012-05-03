@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "Objection.h"
-#import "expanz_service_SessionDataClient.h"
+#import "ExpanzSessionDataClient.h"
 #import "IntegrationUtils.h"
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_model_Menu.h"
@@ -50,7 +50,7 @@ SPEC_BEGIN(DefaultSessionDataClientIntegration)
 
 describe(@"Retrieve session data using an access token", ^{
     
-    __block id<expanz_service_SessionDataClient> sessionDataClient; 
+    __block id<ExpanzSessionDataClient> sessionDataClient;
     __block TestSessionDataClientDelegate* delegate; 
     
     beforeEach(^{

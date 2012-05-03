@@ -15,7 +15,6 @@
 #import "expanz_service_DefaultActivityClient.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "expanz_service_SiteDetailsClient.h"
 #import "expanz_service_DefaultSiteDetailsClient.h"
 
 
@@ -26,30 +25,30 @@
     [self bindBlock:^(JSObjectionInjector* context) {
         SdkConfiguration* config = [SdkConfiguration globalConfiguration];
         return [[DefaultActivityClient alloc] initWithServiceUrl:[config execXServiceUrl]];
-    }    toProtocol:@protocol(expanz_service_ActivityClient)];
+    }    toProtocol:@protocol(ExpanzActivityClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
         SdkConfiguration* config = [SdkConfiguration globalConfiguration];
         return [[DefaultDownloadClient alloc]
                 initWithFileRequestUrl:[config execXServiceUrl] getBlobUrl:[config getBlobServiceUrl]];
-    }    toProtocol:@protocol(expanz_service_FileDownloadClient)];
+    }    toProtocol:@protocol(ExpanzFileDownloadClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
         SdkConfiguration* config = [SdkConfiguration globalConfiguration];
         return [[DefaultLoginClient alloc] initWithServiceUrl:[config createSessionServiceUrl]];
-    }    toProtocol:@protocol(expanz_service_LoginClient)];
+    }    toProtocol:@protocol(ExpanzLoginClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
         SdkConfiguration* config = [SdkConfiguration globalConfiguration];
         return [[DefaultSessionDataClient alloc] initWithServiceUrl:[config execXServiceUrl]];
-    }    toProtocol:@protocol(expanz_service_SessionDataClient)];
+    }    toProtocol:@protocol(ExpanzSessionDataClient)];
     /* ============================================================================================================== */
     [self bindBlock:^(JSObjectionInjector* context) {
         SdkConfiguration* config = [SdkConfiguration globalConfiguration];
         return [[DefaultSiteDetailsClient alloc] initWithListAvailableSitesUrl:[config listAvailableSitesUrl]
                                                       listActivitiesForSiteUrl:[config listActivitiesForSiteUrl]
                                                           schemaForActivityUrl:[config schemaForActivityUrl]];
-    }    toProtocol:@protocol(expanz_service_SiteDetailsClient)];
+    }    toProtocol:@protocol(ExpanzSiteDetailsClient)];
 
 }
 @end

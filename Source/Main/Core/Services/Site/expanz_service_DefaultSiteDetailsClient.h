@@ -10,10 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_SiteDetailsClient.h"
+#import "ExpanzSiteDetailsClient.h"
 #import "expanz_service_AbstractServiceClient.h"
 
-@interface expanz_service_DefaultSiteDetailsClient : AbstractServiceClient<expanz_service_SiteDetailsClient>
+@interface expanz_service_DefaultSiteDetailsClient : AbstractServiceClient<ExpanzSiteDetailsClient>
 
 @property(nonatomic, strong, readonly) NSString* listAvailableSitesUrl;
 @property(nonatomic, strong, readonly) NSString* listActivitiesForSiteUrl;

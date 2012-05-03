@@ -61,7 +61,7 @@ objection_requires(@"reporter")
 
     ActivityControllerBuilder* controllerBuilder = [ActivityControllerBuilder forActivityId:menuItem.activityId];
     [controllerBuilder setTitle:menuItem.title];
-    [controllerBuilder setStyle:menuItem.style];
+    [controllerBuilder setActivityStyle:menuItem.style];
     [controllerBuilder setInitialKey:initialKey];
     [controllerBuilder setShouldAttachToServer:YES];
     ActivityInstanceViewController* nextViewController = [controllerBuilder build];

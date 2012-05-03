@@ -22,7 +22,7 @@
 }
 
 @property(nonatomic, strong) NSString* title;
-@property(nonatomic, strong) ActivityStyle* style;
+@property(nonatomic, strong) ActivityStyle* activityStyle;
 @property(nonatomic, strong) NSString* initialKey;
 @property(nonatomic) BOOL shouldAttachToServer;
 @property(nonatomic, strong) expanz_model_ActivityInstance* activityInstance;

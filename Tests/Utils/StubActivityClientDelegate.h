@@ -10,12 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_ActivityClient.h"
-#import "expanz_service_ActivityClientDelegate.h"
+#import "ExpanzActivityClient.h"
+#import "ExpanzActivityClientDelegate.h"
 
 @class expanz_model_ActivityInstance;
 
-@interface StubActivityClientDelegate : NSObject<expanz_service_ActivityClientDelegate>
+@interface StubActivityClientDelegate : NSObject<ExpanzActivityClientDelegate>
 
 @property(nonatomic, strong) expanz_model_ActivityInstance* activityInstance;
 @property(nonatomic, strong) NSError* error;

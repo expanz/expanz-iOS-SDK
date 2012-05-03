@@ -12,7 +12,7 @@
 #import "StubActivityClientDelegate.h"
 #import "IntegrationUtils.h"
 #import "expanz_UserInterfaceModule.h"
-#import "expanz_service_ActivityClient.h"
+#import "ExpanzActivityClient.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_service_DefaultActivityClient.h"
@@ -25,14 +25,14 @@
 SPEC_BEGIN(DefaultActivityClientIntegration)
 
 
-    __block id<expanz_service_ActivityClient> activityClient;
+    __block id<ExpanzActivityClient> activityClient;
     __block StubActivityClientDelegate* delegate;
 
     beforeEach(^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
         [IntegrationUtils loginWithDefaultUserIfRequired];
         JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
-        activityClient = [injector getObject:@protocol(expanz_service_ActivityClient)];
+        activityClient = [injector getObject:@protocol(ExpanzActivityClient)];
         delegate = [[StubActivityClientDelegate alloc] init];
     });
 

@@ -11,7 +11,7 @@
 
 
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_FileRequest.h"
@@ -40,7 +40,7 @@
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
-                    delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
+                    delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
 
     [self.httpTransport post:_fileRequestUrl payload:[fileRequest toXml] headers:[self requestHeaders]
                    withBlock:^(LRRestyResponse* response) {
@@ -51,7 +51,7 @@
                            RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
                            RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
 
-                           FieldInstance* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
+                           Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
                            LogDebug("Creating resource collection with title: %@", titleField.value);
                            ResourceCollection
                                * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
@@ -67,7 +67,7 @@
 
 
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
-                 delegate:(id<expanz_service_FileDownloadClientDelegate>)delegate {
+                 delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
 
     [self.httpTransport post:_getBlobUrl payload:[downloadRequest toXml] headers:[self requestHeaders]
                    withBlock:^(LRRestyResponse* response) {

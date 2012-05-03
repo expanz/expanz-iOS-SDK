@@ -12,7 +12,7 @@
 #import <objc/message.h>
 #import <LRResty/LRResty.h>
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_GridData.h"
 #import "expanz_ui_GridDataRenderer.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
@@ -66,11 +66,11 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Mapping UI controls to model
 
-- (UITextField*) textFieldFor:(expanz_model_FieldInstance*)field {
+- (UITextField*) textFieldFor:(expanz_model_Field*)field {
     return [_textFieldMappings objectForKey:field.fieldId];
 }
 
-- (FieldInstance*) fieldFor:(UIView*)uiView {
+- (Field*) fieldFor:(UIView*)uiView {
     NSString* fieldId = [uiView fieldIdInModelAdapter:self];
     return [_activityInstance fieldWithId:fieldId];
 }
@@ -97,14 +97,14 @@
 - (void) updateLabelsWithModelValues {
     for (NSString* fieldId in [_labelMappings allKeys]) {
         UILabel* label = [_labelMappings valueForKey:fieldId];
-        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
+        Field* field = [_activityInstance fieldWithId:fieldId];
         [label setText:field.label];
     }
 }
 
 - (void) updateUITextFieldsWithModelValues {
     for (NSString* fieldId in [_textFieldMappings allKeys]) {
-        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
+        Field* field = [_activityInstance fieldWithId:fieldId];
         UITextField* textField = [_textFieldMappings valueForKey:fieldId];
 
         if ([field isDisabled]) {
@@ -121,21 +121,23 @@
 - (void) updateUIImagesWithModelValues {
     LogDebug(@"Updating images . . . . ");
     for (NSString* fieldId in [_imageFieldMappings allKeys]) {
-        FieldInstance* field = [_activityInstance fieldWithId:fieldId];
+        Field* field = [_activityInstance fieldWithId:fieldId];
         LogDebug(@"Field: %@", field);
         LogDebug(@"Image url: %@", field.value);
 
-        [[LRResty client] get:field.value withBlock:^(LRRestyResponse* response) {
-            LogDebug(@"In completion block");
-            if (response.status == 200) {
-                UIImageView* imageView = [_imageFieldMappings valueForKey:fieldId];
-                imageView.image = [UIImage imageWithData:[response responseData]];
-            }
-            else {
-                //TODO: Handle this?
-                LogError(@"Can't download the image: %@", field.value);
-            }
-        }];
+        if (field.value) {
+            [[LRResty client] get:field.value withBlock:^(LRRestyResponse* response) {
+                LogDebug(@"In completion block");
+                if (response.status == 200) {
+                    UIImageView* imageView = [_imageFieldMappings valueForKey:fieldId];
+                    imageView.image = [UIImage imageWithData:[response responseData]];
+                }
+                else {
+                    //TODO: Handle this?
+                    LogError(@"Can't download the image: %@", field.value);
+                }
+            }];
+        }
     }
 }
 
@@ -159,7 +161,7 @@
     _readOnlyTextFields = [[NSMutableDictionary alloc] init];
 
     for (NSString* propertyName in _propertyNames) {
-        FieldInstance* field = [_activityInstance fieldWithId:propertyName];
+        Field* field = [_activityInstance fieldWithId:propertyName];
 
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
@@ -182,7 +184,7 @@
     _imageFieldMappings = [[NSMutableDictionary alloc] init];
     _imageButtonMappings = [[NSMutableDictionary alloc] init];
     for (NSString* propertyName in _propertyNames) {
-        FieldInstance* field = [_activityInstance fieldWithId:propertyName];
+        Field* field = [_activityInstance fieldWithId:propertyName];
 
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));

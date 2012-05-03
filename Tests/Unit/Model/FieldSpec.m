@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 
 SPEC_BEGIN(FieldSpec)
 
-    __block FieldInstance* field;
+    __block Field* field;
 
     beforeEach(^{
-        field = [[FieldInstance alloc]
+        field = [[Field alloc]
             initWithFieldId:@"op1" nullable:NO defaultValue:nil dataType:ExpanzDataTypeNumber label:@"First Name"
                        hint:@"Try typing your name, doh."];
     });

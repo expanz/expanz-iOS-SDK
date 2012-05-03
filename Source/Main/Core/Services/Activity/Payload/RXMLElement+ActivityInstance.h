@@ -11,7 +11,7 @@
 
 #import "RXMLElement.h"
 @class expanz_model_ActivityInstance;
-@class expanz_model_FieldInstance;
+@class expanz_model_Field;
 @class expanz_model_Message;
 @class expanz_model_GridData;
 @class expanz_model_Column;
@@ -34,7 +34,7 @@
 /**
 * Maps the element onto an `expanz_model_Field` object.
 */
-- (expanz_model_FieldInstance*) asFieldInstance;
+- (expanz_model_Field*) asFieldInstance;
 
 /**
 * Maps the element onto an `expanz_model_Message` object.

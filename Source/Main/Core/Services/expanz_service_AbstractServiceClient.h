@@ -15,7 +15,7 @@
 
 @class expanz_SdkConfiguration;
 @protocol expanz_ui_SystemEventReporter;
-@protocol expanz_service_AbstractServiceClientDelegate;
+@protocol ExpanzAbstractServiceClientDelegate;
 
 
 /**
@@ -27,7 +27,7 @@
 
 - (NSDictionary*) requestHeaders;
 
-- (void) dispatchErrorWith:(id<expanz_service_AbstractServiceClientDelegate>)delegate statusCode:(NSInteger)statusCode
+- (void) dispatchErrorWith:(id<ExpanzAbstractServiceClientDelegate>)delegate statusCode:(NSInteger)statusCode
                   userInfo:(NSString*)userInfo;
 
 @end

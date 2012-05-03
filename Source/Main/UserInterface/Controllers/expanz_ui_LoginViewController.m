@@ -32,9 +32,9 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) init {
-    self = [super initWithNibName:@"Login" bundle:[NSBundle bundleForClass:[LoginViewController class]]];
+    self = [super initWithNibName:@"Login" bundle:[NSBundle mainBundle]];
     if (self) {
-        _loginClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_LoginClient)];
+        _loginClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzLoginClient)];
         _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
     }
@@ -86,7 +86,9 @@
 
 
 - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-
+    if (! (self.userNameCell && self.passwordCell)) {
+        [[NSBundle mainBundle] loadNibNamed:@"UserNameAndPasswordTableCells" owner:self options:nil];
+    }
     if ([indexPath row] == 0) {
         return self.userNameCell;
     }
@@ -169,5 +171,7 @@
 - (void) requestDidFailWithError:(NSError*)error {
     [_reporter reportErrorWithReason:@"There was an an unrecoverable system error accessing session data"];
 }
+
+
 
 @end

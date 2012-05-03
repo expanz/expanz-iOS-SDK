@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_SessionDataClientDelegate.h"
+
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_DefaultSessionDataClient.h"
 #import "RXMLElement.h"
@@ -31,7 +31,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) retrieveSessionDataWith:(SessionDataRequest*)request
-                        delegate:(id<expanz_service_SessionDataClientDelegate>)delegate {
+                        delegate:(id<ExpanzSessionDataClientDelegate>)delegate {
 
     [self.httpTransport
         post:_serviceUrl payload:[request toXml] headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {

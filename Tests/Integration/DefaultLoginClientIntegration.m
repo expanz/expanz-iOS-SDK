@@ -29,7 +29,7 @@ describe(@"Authenticating with the site manager.", ^{
     beforeEach(^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
         JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
-        loginClient = [injector getObject:@protocol(expanz_service_LoginClient)];
+        loginClient = [injector getObject:@protocol(ExpanzLoginClient)];
         loginDelegate = [[StubLoginClientDelegate alloc] init];
     });
           

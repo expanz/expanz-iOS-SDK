@@ -17,7 +17,7 @@
 /**
  * Represents an item within an `expanz_model_ActivityInstance` requiring user input. 
  */
-@interface expanz_model_FieldInstance : NSObject
+@interface expanz_model_Field : NSObject
 
 
 /* ================================================================================================================== */
@@ -72,4 +72,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias FieldInstance expanz_model_FieldInstance;
+@compatibility_alias Field expanz_model_Field;

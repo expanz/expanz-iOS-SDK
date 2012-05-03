@@ -13,6 +13,7 @@
 #import "expanz_ui_NavigationManager.h"
 #import "StubSystemEventReporter.h"
 #import "expanz_model_menuItem.h"
+#import "NSString+Contains.h"
 
 
 SPEC_BEGIN(NavigationManagerSpec)
@@ -43,7 +44,7 @@ SPEC_BEGIN(NavigationManagerSpec)
                         style:[ActivityStyle browseStyle]];
 
                 [navigationManager showActivityFor:menuItem];
-                [[reporter.message should] equal:@"No controller exists named My_Fun_Documents_Browse_ViewController"];
+                [[theValue([reporter.message contains:@"No controller exists for activity"]) should] beYes];
 
             });
 

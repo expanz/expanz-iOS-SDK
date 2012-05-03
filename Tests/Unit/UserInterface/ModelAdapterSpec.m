@@ -11,35 +11,38 @@
 
 #import "expanz_model_menuItem.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_ui_ModelAdapter.h"
 #import "expanz_model_GridData.h"
-#import "TestFixture_ViewController.h"
 #import "expanz_utils_BundleResource.h"
 #import "RXMLElement+ActivityInstance.h"
+#import "expanz_ui_ActivityInstanceViewController.h"
+#import "expanz_ui_ActivityControllerBuilder.h"
+#import "Sales_Customer_ViewController.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
 
-        __block TestFixture_ViewController* viewController;
+        __block Sales_Customer_ViewController* viewController;
         __block ModelAdapter* modelAdapter;
 
         beforeEach(^{
 
-            viewController = [[TestFixture_ViewController alloc]
-                    initWithActivityId:@"ESA.Sales.Calc" title:@"Calc" style:[ActivityStyle defaultStyle] initialKey:nil
-                    nibName:@"TextFixture" data:nil];
+            viewController = [[ActivityControllerBuilder forActivityId:@"Sales.Customer"] build];
+
             [viewController shouldNotBeNil];
             [viewController.view shouldNotBeNil];
+
+            NSString* xml = [BundleResource withName:@"ESA_Sales_ActivityInstanceDetail.xml"];
+            ActivityInstance* activityInstance =
+                    [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            [viewController requestDidFinishWithActivityInstance:activityInstance];
+            modelAdapter = viewController.modelAdapter;
         });
 
         describe(@"Object creation", ^{
 
             it(@"should be created by ActivityInstanceViewController after receiving activity data", ^{
-                NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
-                ActivityInstance* activityInstance =
-                        [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-                [viewController requestDidFinishWithActivityInstance:activityInstance];
 
                 modelAdapter = viewController.modelAdapter;
                 [modelAdapter shouldNotBeNil];
@@ -49,22 +52,15 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         describe(@"Mapping UITextField controls to expanz_model_Field items in an ActivityInstance", ^{
 
-            beforeEach(^{
-                NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
-                ActivityInstance* activityInstance =
-                        [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-                [viewController requestDidFinishWithActivityInstance:activityInstance];
-                modelAdapter = viewController.modelAdapter;
-            });
 
             it(@"should return the Field corresponding to a UITextField", ^{
-                FieldInstance* field = [modelAdapter fieldFor:viewController.Op1];
+                Field* field = [modelAdapter fieldFor:viewController.FirstName];
                 [field shouldNotBeNil];
-                [[field.fieldId should] equal:@"Op1"];
+                [[field.fieldId should] equal:@"FirstName"];
             });
 
             it(@"should map the other way - return a UITextField for an expanz_model_field. ", ^{
-                FieldInstance* field = [modelAdapter.activityInstance fieldWithId:@"Op2"];
+                Field* field = [modelAdapter.activityInstance fieldWithId:@"FirstName"];
                 id textControl = [modelAdapter textFieldFor:field];
                 [textControl shouldNotBeNil];
                 LogDebug(@"Text Control: %@", textControl);
@@ -74,37 +70,36 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         describe(@"Updating user interface controls with model values.", ^{
 
-            beforeEach(^{
-                NSString* xml = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
-                ActivityInstance* activityInstance =
-                        [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-                [viewController requestDidFinishWithActivityInstance:activityInstance];
-                modelAdapter = viewController.modelAdapter;
-            });
 
             it(@"should update each user interface control with the corresponding model value. ", ^{
 
-                FieldInstance* op1 = [modelAdapter.activityInstance fieldWithId:@"Op1"];
-                op1.value = @"9999";
+                Field* firstName = [modelAdapter.activityInstance fieldWithId:@"FirstName"];
+                firstName.value = @"9999";
 
                 [modelAdapter updateUIControlsWithModelValues];
-                [[viewController.Op1.text should] equal:@"9999"];
+                UITextField* textField = (UITextField*) viewController.FirstName;
+                [[[textField text] should] equal:@"9999"];
             });
 
         });
 
         describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
 
+            __block ModelAdapter* anotherModelAdapter;
+
             beforeEach(^{
+                ActivityControllerBuilder* builder = [ActivityControllerBuilder forActivityId:@"Sales.Customer"];
+                [builder setActivityStyle:[ActivityStyle browseStyle]];
+                ActivityInstanceViewController* anotherViewController = [builder build];
                 NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
-                ActivityInstance* activityInstance =
-                        [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
-                [viewController requestDidFinishWithActivityInstance:activityInstance];
-                modelAdapter = viewController.modelAdapter;
+                RXMLElement* element = [[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"];
+                ActivityInstance* activityInstance = [element asActivityInstance];
+                [anotherViewController requestDidFinishWithActivityInstance:activityInstance];
+                anotherModelAdapter = anotherViewController.modelAdapter;
             });
 
             it(@"should return a UITableView corresponding to a DataSet", ^{
-                GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"customersList"];
+                GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"ListCustomersMobile"];
                 UITableView* tableView = [modelAdapter tableViewFor:dataSet];
                 [tableView shouldNotBeNil];
             });

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_GridData.h"
 
 
@@ -36,7 +36,7 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (BOOL) allowsMethodInvocations {
-    for (FieldInstance* field in _fields) {
+    for (Field* field in _fields) {
         if (field.isDirty) {
             return NO;
         }
@@ -49,13 +49,13 @@
     return [_fields sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addField:(FieldInstance*)field {
+- (void) addField:(Field*)field {
     [field setParentActivity:self];
     [_fields addObject:field];
 }
 
-- (FieldInstance*) fieldWithId:(NSString*)fieldId {
-    for (FieldInstance* field in _fields) {
+- (Field*) fieldWithId:(NSString*)fieldId {
+    for (Field* field in _fields) {
         if ([field.fieldId isEqualToString:fieldId]) {
             return field;
         }

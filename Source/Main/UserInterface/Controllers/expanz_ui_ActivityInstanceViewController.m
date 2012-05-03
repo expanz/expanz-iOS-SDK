@@ -21,10 +21,9 @@
 #import "expanz_model_Row.h"
 #import "expanz_model_TextGridDataCell.h"
 #import "expanz_model_ImageGridDataCell.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_service_CreateActivityRequest.h"
 #import "expanz_service_MethodInvocationRequest.h"
-#import "expanz_service_ActivityClientDelegate.h"
 #import "expanz_service_DeltaRequest.h"
 #import "expanz_service_DataPublicationRequest.h"
 #import "MBProgressHUD.h"
@@ -68,7 +67,7 @@
 
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
-        _activityClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_ActivityClient)];
+        _activityClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzActivityClient)];
         _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _activityId = [activityId copy];
         [self setTitle:title];
@@ -84,7 +83,7 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-- (void) sendDeltaForField:(FieldInstance*)field {
+- (void) sendDeltaForField:(Field*)field {
     if ([field isDirty]) {
         [_spinner startAnimating];
         DeltaRequest* deltaRequest = [DeltaRequest forField:field];
@@ -223,7 +222,7 @@
 
 - (BOOL) textFieldShouldEndEditing:(UITextField*)textField {
     [textField resignFirstResponder];
-    FieldInstance* field = [_modelAdapter fieldFor:textField];
+    Field* field = [_modelAdapter fieldFor:textField];
     [field didFinishEditWithValue:textField.text];
     [self sendDeltaForField:field];
     return YES;
@@ -246,7 +245,7 @@
 - (void) textViewDidEndEditing:(UITextView*)textView {
     LogDebug(@"Done editing!");
     [[TextInputUtils sharedTextInputUtils] restoreBeneathKeyboard:textView];
-    FieldInstance* field = [_modelAdapter fieldFor:textView];
+    Field* field = [_modelAdapter fieldFor:textView];
     [field didFinishEditWithValue:textView.text];
     [self sendDeltaForField:field];
 }
@@ -257,7 +256,7 @@
 - (void) imagePickerController:(UIImagePickerController*)picker didFinishPickingImage:(UIImage*)image
         editingInfo:(NSDictionary*)editingInfo {
 
-    FieldInstance* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
+    Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
     //[field didFinishEditWithValue:image];
 
     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
@@ -296,7 +295,7 @@
         _shouldInitializeModelAdapterOnNextResponse = NO;
     }
 
-    for (FieldInstance* field in activityInstance.fields) {
+    for (Field* field in activityInstance.fields) {
         LogDebug(@"Field: '%@' has value '%@'", field.fieldId, field.value);
         [[_activityInstance fieldWithId:field.fieldId] didSynchronizeStateWithServerModel:field.value];
         [[_modelAdapter textFieldFor:field] setText:field.value];

@@ -23,7 +23,7 @@
                 <Types>
                     <Type id="Sales.Customer" image="Customer"/>
                 </Types>
-                <Data id="customersList" source="Sales.Customer.ListMe">
+                <Data id="ListCustomersMobile" source="Sales.Customer.ListMe">
                     <Columns>
                         <Column id="1" field="PersistentId" label="PersistentId" datatype="number" width="100"
                                 SubDataType="integer"/>

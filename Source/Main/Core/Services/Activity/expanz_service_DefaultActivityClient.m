@@ -20,7 +20,7 @@
 @interface expanz_service_DefaultActivityClient (private)
 
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-        forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate;
+        forDelegate:(id<ExpanzActivityClientDelegate>)delegate;
 
 @end
 
@@ -40,19 +40,19 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) createActivityWith:(CreateActivityRequest*)activityRequest
-        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<ExpanzActivityClientDelegate>)delegate {
 
     [self doRequestWith:activityRequest forDelegate:delegate];
 }
 
 - (void) sendDeltaWith:(DeltaRequest*)deltaRequest
-        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<ExpanzActivityClientDelegate>)delegate {
 
     [self doRequestWith:deltaRequest forDelegate:delegate];
 }
 
 - (void) sendMethodInvocationWith:(expanz_service_MethodInvocationRequest*)methodRequest
-        delegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        delegate:(id<ExpanzActivityClientDelegate>)delegate {
 
     [self doRequestWith:methodRequest forDelegate:delegate];
 }
@@ -60,7 +60,7 @@
 
 /* ================================================== Private Methods =============================================== */
 - (void) doRequestWith:(id<xml_Serializable>)xmlPayload
-        forDelegate:(id<expanz_service_ActivityClientDelegate>)delegate {
+        forDelegate:(id<ExpanzActivityClientDelegate>)delegate {
 
     [self.httpTransport post:_serviceUrl payload:[xmlPayload toXml] headers:[self requestHeaders]
             withBlock:^(LRRestyResponse* response) {

@@ -11,9 +11,9 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_AbstractServiceClient.h"
-#import "expanz_service_SessionDataClient.h"
+#import "ExpanzSessionDataClient.h"
 
-@interface expanz_service_DefaultSessionDataClient : AbstractServiceClient<expanz_service_SessionDataClient>
+@interface expanz_service_DefaultSessionDataClient : AbstractServiceClient<ExpanzSessionDataClient>
 - (id) initWithServiceUrl:(NSString*)serviceUrl;
 
 

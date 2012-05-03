@@ -30,7 +30,7 @@
 }
 
 /* ================================================= Protocol Methods =============================================== */
-- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<expanz_service_LoginClientDelegate>)delegate {
+- (void) createSessionWith:(SessionRequest*)sessionRequest delegate:(id<ExpanzLoginClientDelegate>)delegate {
 
     [self.httpTransport post:_serviceUrl payload:[sessionRequest toXml] headers:[self requestHeaders]
             withBlock:^(LRRestyResponse* response) {

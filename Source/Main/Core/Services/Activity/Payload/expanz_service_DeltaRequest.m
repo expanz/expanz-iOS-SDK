@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_service_DeltaRequest.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_model_ActivityInstance.h"
 
@@ -23,7 +23,7 @@
 @synthesize encoding = _encoding;
 
 /* ================================================= Class Methods ================================================== */
-+ (id) forField:(expanz_model_FieldInstance*)field {
++ (id) forField:(expanz_model_Field*)field {
     NSString* sessionToken = [SessionContext globalContext].sessionToken;
     return [[DeltaRequest alloc]
         initWithFieldId:field.fieldId fieldValue:field.value activityHandle:field.parentActivity.handle

@@ -18,7 +18,7 @@
 #import "expanz_model_TextGridDataCell.h"
 #import "expanz_model_File.h"
 #import "expanz_model_Folder.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_utils_BundleResource.h"
 #import "NSString+Contains.h"
 
@@ -144,13 +144,13 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             it(@"should parse an activity with regular fields.", ^{
                 ActivityInstance* activityInstance = [activityElement asActivityInstance];
-                FieldInstance* field = [activityInstance fieldWithId:@"Name"];
+                Field* field = [activityInstance fieldWithId:@"Name"];
                 [[[field value] should] equal:@"Aussie Farmer Direct"];
             });
 
             it(@"should parse an activity with long-data fields. ", ^{
                 ActivityInstance* activityInstance = [activityElement asActivityInstance];
-                FieldInstance* field = [activityInstance fieldWithId:@"CompanyDescription"];
+                Field* field = [activityInstance fieldWithId:@"CompanyDescription"];
                 [[[field value] shouldNot] equal:@"$longData$"];
                 LogDebug(@"Field value: %@", [field value]);
             });

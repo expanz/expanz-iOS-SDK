@@ -33,14 +33,17 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) loadImage {
     self.hasAskedImageToLoad = YES;
-    [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
-        if (response.status == 200) {
-            self.imageData = [response responseData];
-        }
-        else {
-            self.imageData = nil;
-        }
-    }];
+    if (_imageUrl.length > 0) {
+        LogDebug(@"Loading the shiz: %@", _imageUrl);
+        [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
+            if (response.status == 200) {
+                self.imageData = [response responseData];
+            }
+            else {
+                self.imageData = nil;
+            }
+        }];
+    }
 }
 
 @end

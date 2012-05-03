@@ -34,6 +34,9 @@
 @implementation UITextField (ModelAdapter)
 
 - (NSString*) fieldIdInModelAdapter:(expanz_ui_ModelAdapter*)modelAdapter {
+    LogDebug(@"Let's get the field then!!!");
+    LogDebug(@"%@", [modelAdapter valueForKey:@"_textFieldMappings"]);
+    LogDebug(@"%p", self);
     return [[[modelAdapter valueForKey:@"_textFieldMappings"] allKeysForObject:self] objectAtIndex:0];
 }
 

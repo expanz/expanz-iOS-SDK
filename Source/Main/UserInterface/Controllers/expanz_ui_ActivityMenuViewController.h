@@ -10,18 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
-#import "expanz_service_SessionDataClient.h"
-#import "expanz_service_SessionDataClientDelegate.h"
+#import "ExpanzSessionDataClient.h"
 #import "expanz_ui_SystemEventReporter.h"
 
 @class expanz_model_Menu;
 @class expanz_ui_NavigationManager;
 
 
-@interface expanz_ui_ActivityMenuViewController : UIViewController<expanz_service_SessionDataClientDelegate> {
+@interface expanz_ui_ActivityMenuViewController : UIViewController<ExpanzSessionDataClientDelegate> {
 
 @private
-    id<expanz_service_SessionDataClient> _sessionDataClient;
+    id<ExpanzSessionDataClient> _sessionDataClient;
     expanz_ui_NavigationManager* _navigationManager;
     id<expanz_ui_SystemEventReporter> _reporter;
 }

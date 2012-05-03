@@ -169,8 +169,6 @@ static TextInputUtils* gSharedTextInputUtils;
         }
         if ([textInputView.superview isKindOfClass:[UIScrollView class]]) {
             UIScrollView* scrollView = (UIScrollView*) textInputView.superview;
-            NSUInteger scrollHeight = scrollView.contentSize.height;
-            NSUInteger currentOffset = scrollView.contentOffset.y;
             CGFloat textInputLower = textInputView.frame.origin.y + textInputView.frame.size.height;
             CGFloat lowerViewCoord = 416 + scrollView.contentOffset.y - TOOLBAR_HEIGHT - MARGIN;
             if (textInputLower > (lowerViewCoord)) {
