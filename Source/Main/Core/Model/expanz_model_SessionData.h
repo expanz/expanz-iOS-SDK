@@ -18,12 +18,14 @@
 
 @property(nonatomic, strong, readonly) NSString* operationalMode;
 @property(nonatomic, strong, readonly) NSString* timeZone;
-@property(nonatomic, strong, readonly) NSString* filedownLoadPrefix;
+@property(nonatomic, strong, readonly) NSString* blobCacheUrl;
 @property(nonatomic, strong, readonly) NSString* userCultureName;
 @property(nonatomic, strong, readonly) expanz_model_Menu* menu;
 
 - (id) initWithOperationalMode:(NSString*)operationalMode timeZone:(NSString*)timeZone
-        filedownLoadPrefix:(NSString*)filedownLoadPrefix userCultureName:(NSString*)userCultureName
+        blobCacheUrl:(NSString*)filedownLoadPrefix userCultureName:(NSString*)userCultureName
         menu:(expanz_model_Menu*)menu;
 
 @end
+/* ================================================================================================================== */
+@compatibility_alias SessionData expanz_model_SessionData;

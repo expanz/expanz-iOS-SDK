@@ -17,20 +17,20 @@
 
 @synthesize operationalMode = _operationalMode;
 @synthesize timeZone = _timeZone;
-@synthesize filedownLoadPrefix = _filedownLoadPrefix;
+@synthesize blobCacheUrl = _blobCacheUrl;
 @synthesize userCultureName = _userCultureName;
 @synthesize menu = _menu;
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithOperationalMode:(NSString*)operationalMode timeZone:(NSString*)timeZone
-        filedownLoadPrefix:(NSString*)filedownLoadPrefix userCultureName:(NSString*)userCultureName
+        blobCacheUrl:(NSString*)blobCacheUrl userCultureName:(NSString*)userCultureName
         menu:(expanz_model_Menu*)menu {
 
     self = [super init];
     if (self) {
         _operationalMode = operationalMode;
         _timeZone = timeZone;
-        _filedownLoadPrefix = filedownLoadPrefix;
+        _blobCacheUrl = blobCacheUrl;
         _userCultureName = userCultureName;
         _menu = menu;
     }

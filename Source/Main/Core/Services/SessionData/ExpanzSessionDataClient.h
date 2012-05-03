@@ -15,12 +15,13 @@
 @class expanz_model_Menu;
 @class expanz_service_SessionDataRequest;
 @protocol ExpanzSessionDataClientDelegate;
+@class expanz_model_SessionData;
 
 @protocol ExpanzSessionDataClientDelegate<ExpanzAbstractServiceClientDelegate>
 
 @optional
 
-- (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu;
+- (void) requestDidFinishWithSessionData:(expanz_model_SessionData*)sessionData;
 
 @end
 /* ================================================================================================================== */

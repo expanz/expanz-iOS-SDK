@@ -9,7 +9,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "ExpanzSiteDetailsClientDelegate.h"
 #import "expanz_model_SiteList.h"
 #import "ExpanzSiteDetailsClient.h"
 #import "JSObjectionInjector.h"

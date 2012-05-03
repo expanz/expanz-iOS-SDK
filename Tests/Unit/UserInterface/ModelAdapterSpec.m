@@ -19,6 +19,7 @@
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ActivityControllerBuilder.h"
 #import "Sales_Customer_ViewController.h"
+#import "Sales_Customer_Browse_ViewController.h"
 
 
 SPEC_BEGIN(ModelAdapterSpec)
@@ -33,7 +34,7 @@ SPEC_BEGIN(ModelAdapterSpec)
             [viewController shouldNotBeNil];
             [viewController.view shouldNotBeNil];
 
-            NSString* xml = [BundleResource withName:@"ESA_Sales_ActivityInstanceDetail.xml"];
+            NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
             ActivityInstance* activityInstance =
                     [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];
@@ -90,16 +91,25 @@ SPEC_BEGIN(ModelAdapterSpec)
             beforeEach(^{
                 ActivityControllerBuilder* builder = [ActivityControllerBuilder forActivityId:@"Sales.Customer"];
                 [builder setActivityStyle:[ActivityStyle browseStyle]];
-                ActivityInstanceViewController* anotherViewController = [builder build];
+                viewController = [builder build];
+                [viewController shouldNotBeNil];
+                [viewController.view shouldNotBeNil];
+
                 NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
                 RXMLElement* element = [[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"];
                 ActivityInstance* activityInstance = [element asActivityInstance];
-                [anotherViewController requestDidFinishWithActivityInstance:activityInstance];
-                anotherModelAdapter = anotherViewController.modelAdapter;
+                LogDebug(@"@@@@@@@@@@@@@@@@@@@@@@@@Activity instance: %@", activityInstance.dataSets);
+
+                [viewController requestDidFinishWithActivityInstance:activityInstance];
+                modelAdapter = viewController.modelAdapter;
+
+
             });
 
             it(@"should return a UITableView corresponding to a DataSet", ^{
-                GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"ListCustomersMobile"];
+                GridData* dataSet =
+                        (GridData*) [modelAdapter.activityInstance dataWithId:@"ListCustomersMobile"];
+                [dataSet shouldNotBeNil];
                 UITableView* tableView = [modelAdapter tableViewFor:dataSet];
                 [tableView shouldNotBeNil];
             });

@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ExpanzActivityClient.h"
-#import "ExpanzActivityClientDelegate.h"
 
 @class expanz_model_ActivityInstance;
 

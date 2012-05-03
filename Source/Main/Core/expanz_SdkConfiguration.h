@@ -13,11 +13,15 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_SdkConfiguration : NSObject
+@interface expanz_SdkConfiguration : NSObject {
+
+    NSString* _blobCacheUrl;
+}
 
 @property(nonatomic, strong, readonly) NSString* baseUrl;
 @property(nonatomic, strong, readonly) NSString* preferredSite;
 @property(nonatomic, strong, readonly) NSString* userType;
+@property(nonatomic, strong) NSString* blobCacheUrl;
 
 
 + (expanz_SdkConfiguration*) globalConfiguration;

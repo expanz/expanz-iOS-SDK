@@ -14,11 +14,27 @@
 #import "expanz_model_Menu.h"
 #import "expanz_model_ProcessArea.h"
 #import "expanz_model_UserRole.h"
+#import "expanz_model_SessionData.h"
 
 @implementation RXMLElement (SessionData)
 
 
 /* ================================================ Interface Methods =============================================== */
+- (expanz_model_SessionData*) asSessionData {
+    if (![self.tag isEqualToString:@"ESA"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not ESA."];
+    }
+
+    NSString* operationalMode = [self attribute:@"operationalMode"];
+    NSString* timeZone = [self attribute:@"timeZone"];
+    NSString* blobCacheUrl = [self attribute:@"blobCacheURL"];
+    NSString* userCultureName = [self attribute:@"UserCultureName"];
+    Menu* menu = [[self child:@"Menu"] asMenu];
+
+    return [[SessionData alloc]
+            initWithOperationalMode:operationalMode timeZone:timeZone blobCacheUrl:blobCacheUrl
+            userCultureName:userCultureName menu:menu];
+}
 
 
 - (Menu*) asMenu {
@@ -53,7 +69,7 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not a ProcessArea."];
     }
     ProcessArea* processArea =
-        [[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]];
+            [[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]];
     [self iterate:@"*" with:^(RXMLElement* e) {
         [processArea addMenuItem:[e asMenuItem]];
     }];
@@ -61,7 +77,7 @@
 }
 
 - (MenuItem*) asMenuItem {
-    ActivityStyle* style = [ActivityStyle fromString: [self attribute:@"style"] ];
+    ActivityStyle* style = [ActivityStyle fromString:[self attribute:@"style"]];
     return [[MenuItem alloc] initWithActivityId:[self attribute:@"name"] title:[self attribute:@"title"] style:style];
 }
 

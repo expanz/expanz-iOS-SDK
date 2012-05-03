@@ -17,11 +17,12 @@
 #import "expanz_service_DefaultSessionDataClient.h"
 #import "expanz_UserInterfaceModule.h"
 #import "expanz_model_SessionContext.h"
+#import "expanz_model_SessionData.h"
 
 /* ================================================================================================================== */
 #pragma mark Call back methods for XmlPostSessionDataClient
 
-@interface TestSessionDataClientDelegate : NSObject<expanz_service_SessionDataClientDelegate> 
+@interface TestSessionDataClientDelegate : NSObject<ExpanzSessionDataClientDelegate>
 
 @property (nonatomic, strong, readonly) Menu* menu;
 @property (nonatomic, strong, readonly) NSError* error;
@@ -33,8 +34,8 @@
 @synthesize menu = _menu;
 @synthesize error = _error;
 
-- (void) requestDidFinishWithMenu:(Menu*)menu {
-    _menu = menu;
+- (void) requestDidFinishWithSessionData:(expanz_model_SessionData*)sessionData {
+    _menu = sessionData.menu;
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
@@ -57,7 +58,7 @@ describe(@"Retrieve session data using an access token", ^{
         [IntegrationUtils useDefaultBackendForIntegrationTests];
         [IntegrationUtils loginWithDefaultUserIfRequired];        
         JSObjectionInjector* injector = [JSObjection createInjector:[[UserInterfaceModule alloc] init]];
-        sessionDataClient = [injector getObject:@protocol(expanz_service_SessionDataClient)];
+        sessionDataClient = [injector getObject:@protocol(ExpanzSessionDataClient)];
         delegate = [[TestSessionDataClientDelegate alloc] init];
     });
     

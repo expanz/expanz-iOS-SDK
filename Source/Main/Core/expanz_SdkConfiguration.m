@@ -22,6 +22,7 @@ static SdkConfiguration* _globalConfiguration;
 @synthesize preferredSite = _preferredSite;
 @synthesize userType = _userType;
 
+
 /* ================================================= Class Methods ================================================== */
 + (void) setGlobalConfiguration:(SdkConfiguration*)configuration {
     if (_globalConfiguration != nil) {
@@ -58,6 +59,7 @@ static SdkConfiguration* _globalConfiguration;
         _baseUrl = [url copy];
         _preferredSite = [site copy];
         _userType = [userType copy];
+        _blobCacheUrl = @"";
     }
     return self;
 }
@@ -73,6 +75,16 @@ static SdkConfiguration* _globalConfiguration;
 }
 
 /* ================================================ Interface Methods =============================================== */
+- (NSString*) blobCacheUrl {
+    return _blobCacheUrl;
+}
+
+- (void) setBlobCacheUrl:(NSString*)blobCacheUrl {
+    if (blobCacheUrl != nil) {
+        _blobCacheUrl = blobCacheUrl;
+    }
+}
+
 - (NSString*) createSessionServiceUrl {
     return [NSString stringWithFormat:@"%@/CreateSessionX", _baseUrl];
 }

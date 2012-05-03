@@ -39,7 +39,7 @@
         if (response.status == 200) {
             LogDebug(@"Response: %@, ", [response asString]);
             RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
-            [delegate requestDidFinishWithMenu:[[element child:@"ExecXResult.ESA.Menu"] asMenu]];
+            [delegate requestDidFinishWithSessionData:[[element child:@"ExecXResult.ESA"] asSessionData]];
         }
         else {
             [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];

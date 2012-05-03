@@ -17,6 +17,8 @@
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_ui_ActivityMenuViewController.h"
 #import "expanz_ui_NavigationManager.h"
+#import "expanz_model_SessionData.h"
+#import "expanz_SdkConfiguration.h"
 
 
 @implementation expanz_ui_ActivityMenuViewController
@@ -140,8 +142,10 @@
 /* ================================================================================================================== */
 #pragma mark SessionDataClientDelegate 
 
-- (void) requestDidFinishWithMenu:(Menu*)menu {
-    _menu = menu;
+- (void) requestDidFinishWithSessionData:(expanz_model_SessionData*)sessionData; {
+    LogDebug(@"BlobCacheUrl: %@", sessionData.blobCacheUrl);
+    [[SdkConfiguration globalConfiguration] setBlobCacheUrl:sessionData.blobCacheUrl];
+    _menu = sessionData.menu;
     [self.menuTable reloadData];
 }
 

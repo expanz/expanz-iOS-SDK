@@ -93,5 +93,9 @@
     return [_rows count];
 }
 
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"GridData id=%@", self.dataId];
+}
 
 @end

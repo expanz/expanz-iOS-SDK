@@ -76,6 +76,7 @@
 }
 
 - (UITableView*) tableViewFor:(expanz_model_GridData*)dataSet {
+    LogDebug(@"$$$$$$$$$$$$$$$$$$$Table view mappings: %@", _tableViewMappings);
     return [_tableViewMappings objectForKey:dataSet.dataId];
 }
 
