@@ -60,7 +60,6 @@
 @synthesize style = _style;
 
 
-
 /* ================================================== Initializers ================================================== */
 - (id) initWithActivityId:(NSString*)activityId title:(NSString*)title style:(expanz_model_ActivityStyle*)style
         initialKey:(NSString*)initialKey nibName:(NSString*)nibName data:(expanz_model_ActivityInstance*)data {
@@ -136,6 +135,13 @@
     DataPublicationRequest* publicationRequest =
             [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
     [publicationRequest setAutoPopulate:autoPopulate];
+}
+
+- (void) hasUITableView:(UITableView*)tableView requestingContextObject:(NSString*)contextObject {
+    LogDebug(@"Requesting contextObject: %@", contextObject);
+    DataPublicationRequest* publicationRequest =
+            [_activityRequest dataPublicationRequestFor:[NSValue valueWithPointer:(__bridge void*) tableView]];
+    [publicationRequest setContextObject:contextObject];
 }
 
 /* ================================================================================================================== */

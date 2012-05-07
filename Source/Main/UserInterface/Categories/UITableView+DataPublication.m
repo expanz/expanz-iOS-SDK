@@ -59,13 +59,25 @@ static char const* const fieldNameskey = "fieldNames";
     [activityController hasUITableView:self requestingAutoPopulate:autoPopulate];
 }
 
+
+- (void) setContextObject:(NSString*)contextObject {
+    ActivityInstanceViewController* activityController = [self activityController];
+    [activityController hasUITableView:self requestingDataBinding:YES];
+    [activityController hasUITableView:self requestingContextObject:contextObject];
+}
+
 - (NSArray*) fieldNames {
     return objc_getAssociatedObject(self, fieldNameskey);
+}
+
+- (FieldFilter*) fieldFilter {
+    return nil;
 }
 
 - (void) setFieldFilter:(FieldFilter*)fieldFilter {
     objc_setAssociatedObject(self, fieldNameskey, [fieldFilter fields], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
 
 
 - (void) setMyDataSource:(id<UITableViewDataSource>)dataSource {
@@ -81,9 +93,6 @@ static char const* const fieldNameskey = "fieldNames";
     }
 }
 
-- (FieldFilter*) fieldFilter {
-    return nil;
-}
 
 /* ================================================== Private Methods =============================================== */
 

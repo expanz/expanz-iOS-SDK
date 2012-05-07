@@ -19,4 +19,6 @@
 
 + (NSString*) nibNameForActivityId:(NSString*)activityId style:(expanz_model_ActivityStyle*)style;
 
+- (NSString*) asXmlAttribute:(NSString*)attributeName;
+
 @end

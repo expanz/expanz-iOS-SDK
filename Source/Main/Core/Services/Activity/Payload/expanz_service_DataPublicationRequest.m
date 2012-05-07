@@ -11,6 +11,7 @@
 
 
 #import "expanz_service_DataPublicationRequest.h"
+#import "NSString+ExpanzUtils.h"
 
 
 @implementation expanz_service_DataPublicationRequest
@@ -19,6 +20,7 @@
 @synthesize populateMethod = _populateMethod;
 @synthesize autoPopulate = _autoPopulate;
 @synthesize useThumbnailImages = _useThumbnailImages;
+@synthesize contextObject = _contextObject;
 
 /* ================================================== Initializers ================================================== */
 - (id) init {
@@ -48,11 +50,12 @@
 /* ================================================= Protocol Methods =============================================== */
 
 #define kXmlTemplate @"<DataPublication useThumbNailImages=\"%@\" id=\"%@\" populateMethod=\"%@\" query=\"%@\" "\
-"autoPopulate=\"%@\"/>"
+"%@ autoPopulate=\"%@\"/>"
 
 - (NSString*) toXml {
     return [NSString stringWithFormat:kXmlTemplate, _useThumbnailImages == YES ? @"1" : @"0", _dataPublicationId,
                                       _populateMethod != nil ? _populateMethod : @"", _query,
+                                      _contextObject != nil ? [_contextObject asXmlAttribute:@"contextObject"] : @"",
                                       _autoPopulate == YES ? @"1" : @"0"];
 }
 

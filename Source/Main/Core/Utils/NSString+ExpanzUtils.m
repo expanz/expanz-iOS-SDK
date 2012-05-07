@@ -41,4 +41,9 @@
     return nibName;
 }
 
+- (NSString*) asXmlAttribute:(NSString*)attributeName {
+    return [NSString stringWithFormat:@"%@ = \"%@\" ", attributeName, self];
+}
+
+
 @end

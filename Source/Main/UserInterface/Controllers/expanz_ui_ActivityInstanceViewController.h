@@ -88,6 +88,7 @@
 
 - (void) willCommenceEditForImageView:(UIButton*)sender;
 
+- (void) hasUITableView:(UITableView*)tableView requestingContextObject:(NSString*)contextObject;
 
 @end
 

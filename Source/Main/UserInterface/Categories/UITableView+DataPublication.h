@@ -40,9 +40,15 @@
 - (void) setAutoPopulate:(BOOL)autoPopulate;
 
 /**
+* Sets the contextObject for data binding. Defaults to the main activity object.
+*/
+- (void) setContextObject:(NSString*)contextObject;
+
+/**
 * List of field names to display, or nil for `expanz_ui_GridDataRenderer` to infer.
 */
 - (NSArray*) fieldNames;
+
 
 
 @end

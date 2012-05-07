@@ -21,11 +21,12 @@
     BOOL _autoPopulate;
 }
 
-@property(nonatomic, retain) NSString* dataPublicationId;
-@property(nonatomic, retain) NSString* populateMethod;
-@property(nonatomic, retain) NSString* query;
+@property(nonatomic, strong) NSString* dataPublicationId;
+@property(nonatomic, strong) NSString* populateMethod;
+@property(nonatomic, strong) NSString* query;
 @property(nonatomic) BOOL autoPopulate;
 @property(nonatomic) BOOL useThumbnailImages;
+@property(nonatomic, strong) NSString* contextObject;
 
 @end
 
