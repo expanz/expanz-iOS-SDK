@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-05-03</td>
+            <td class="headerValue">2012-05-08</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -69,18 +69,18 @@
 <span class="lineNum">      11 </span>            : #import &quot;expanz_ui_QueryDataSource.h&quot;
 <span class="lineNum">      12 </span>            : #import &lt;objc/runtime.h&gt;
 <span class="lineNum">      13 </span>            : 
-<span class="lineNum">      14 </span><span class="lineCov">          2 : @implementation expanz_ui_QueryDataSource</span>
+<span class="lineNum">      14 </span><span class="lineCov">          7 : @implementation expanz_ui_QueryDataSource</span>
 <span class="lineNum">      15 </span>            : 
 <span class="lineNum">      16 </span>            : /* ================================================= Class Methods ================================================== */
 <span class="lineNum">      17 </span><span class="lineCov">          4 : + (BOOL) resolveInstanceMethod:(SEL)sel {</span>
-<span class="lineNum">      18 </span><span class="lineCov">         12 :     NSString* name = NSStringFromSelector(sel);</span>
+<span class="lineNum">      18 </span><span class="lineCov">         22 :     NSString* name = NSStringFromSelector(sel);</span>
 <span class="lineNum">      19 </span><span class="lineCov">          4 :     if ([name hasPrefix:@&quot;set&quot;]) {</span>
-<span class="lineNum">      20 </span><span class="lineCov">          6 :         IMP imp = imp_implementationWithBlock((void*) objc_unretainedPointer(^(id me, BOOL selected) {</span>
-<span class="lineNum">      21 </span><span class="lineCov">          4 :             NSString* fieldName = [name substringFromIndex:3];</span>
-<span class="lineNum">      22 </span><span class="lineCov">          4 :             fieldName = [fieldName substringToIndex:[fieldName length] - 1];</span>
-<span class="lineNum">      23 </span><span class="lineCov">          4 :             NSMutableDictionary* cache = [me performSelector:@selector(cache)];</span>
-<span class="lineNum">      24 </span><span class="lineCov">          4 :             [cache setObject:[NSNumber numberWithBool:selected] forKey:fieldName];</span>
-<span class="lineNum">      25 </span><span class="lineCov">         12 :         }));</span>
+<span class="lineNum">      20 </span><span class="lineCov">         11 :         IMP imp = imp_implementationWithBlock((void*) objc_unretainedPointer(^(id me, BOOL selected) {</span>
+<span class="lineNum">      21 </span><span class="lineCov">          9 :             NSString* fieldName = [name substringFromIndex:3];</span>
+<span class="lineNum">      22 </span><span class="lineCov">          9 :             fieldName = [fieldName substringToIndex:[fieldName length] - 1];</span>
+<span class="lineNum">      23 </span><span class="lineCov">          9 :             NSMutableDictionary* cache = [me performSelector:@selector(cache)];</span>
+<span class="lineNum">      24 </span><span class="lineCov">          9 :             [cache setObject:[NSNumber numberWithBool:selected] forKey:fieldName];</span>
+<span class="lineNum">      25 </span><span class="lineCov">         22 :         }));</span>
 <span class="lineNum">      26 </span><span class="lineCov">          2 :         class_addMethod(self, sel, imp, &quot;v@:c&quot;);</span>
 <span class="lineNum">      27 </span>            :         return YES;
 <span class="lineNum">      28 </span><span class="lineCov">          2 :     }</span>
@@ -88,13 +88,13 @@
 <span class="lineNum">      30 </span><span class="lineCov">          4 : }</span>
 <span class="lineNum">      31 </span>            : 
 <span class="lineNum">      32 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      33 </span><span class="lineCov">          3 : - (id) init {</span>
-<span class="lineNum">      34 </span><span class="lineCov">          3 :     self = [super init];</span>
-<span class="lineNum">      35 </span><span class="lineCov">          3 :     if (self) {</span>
-<span class="lineNum">      36 </span><span class="lineCov">          3 :         _cache = [[NSMutableDictionary alloc] init];</span>
-<span class="lineNum">      37 </span><span class="lineCov">          3 :     }</span>
-<span class="lineNum">      38 </span><span class="lineCov">          3 :     return self;</span>
-<span class="lineNum">      39 </span><span class="lineCov">          3 : }</span>
+<span class="lineNum">      33 </span><span class="lineCov">          8 : - (id) init {</span>
+<span class="lineNum">      34 </span><span class="lineCov">          8 :     self = [super init];</span>
+<span class="lineNum">      35 </span><span class="lineCov">          8 :     if (self) {</span>
+<span class="lineNum">      36 </span><span class="lineCov">          8 :         _cache = [[NSMutableDictionary alloc] init];</span>
+<span class="lineNum">      37 </span><span class="lineCov">          8 :     }</span>
+<span class="lineNum">      38 </span><span class="lineCov">          8 :     return self;</span>
+<span class="lineNum">      39 </span><span class="lineCov">          8 : }</span>
 <span class="lineNum">      40 </span>            : 
 <span class="lineNum">      41 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      42 </span><span class="lineCov">          4 : - (NSString*) query {</span>
@@ -124,8 +124,8 @@
 <span class="lineNum">      66 </span><span class="lineNoCov">          0 : /* ================================================== Private Methods =============================================== */</span>
 <span class="lineNum">      67 </span>            : - (NSMutableDictionary*) cache {
 <span class="lineNum">      68 </span>            :     return _cache;
-<span class="lineNum">      69 </span><span class="lineCov">          4 : }</span>
-<span class="lineNum">      70 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      69 </span><span class="lineCov">          9 : }</span>
+<span class="lineNum">      70 </span><span class="lineCov">          9 : </span>
 <span class="lineNum">      71 </span>            : @end
 </pre>
       </td>
