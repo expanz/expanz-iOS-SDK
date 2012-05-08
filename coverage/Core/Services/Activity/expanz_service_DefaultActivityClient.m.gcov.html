@@ -125,17 +125,18 @@
 <span class="lineNum">      67 </span><span class="lineCov">         15 : </span>
 <span class="lineNum">      68 </span>            :                 if (response.status == 200) {
 <span class="lineNum">      69 </span><span class="lineCov">          5 :                     LogDebug(@&quot;Response: %@, &quot;, [response asString]);</span>
-<span class="lineNum">      70 </span>            :                     RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
-<span class="lineNum">      71 </span><span class="lineCov">          5 :                     RXMLElement* activityElement = [responseElement child:@&quot;ExecXResult.ESA.Activity&quot;];</span>
-<span class="lineNum">      72 </span>            :                     [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
-<span class="lineNum">      73 </span><span class="lineCov">          5 :                 }</span>
-<span class="lineNum">      74 </span><span class="lineCov">          5 :                 else {</span>
-<span class="lineNum">      75 </span><span class="lineCov">          5 :                     [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];</span>
-<span class="lineNum">      76 </span><span class="lineCov">          5 :                 }</span>
-<span class="lineNum">      77 </span><span class="lineCov">          5 :             }];</span>
-<span class="lineNum">      78 </span><span class="lineCov">          5 : }</span>
-<span class="lineNum">      79 </span>            : 
-<span class="lineNum">      80 </span><span class="lineNoCov">          0 : @end</span>
+<span class="lineNum">      70 </span>            :                     RXMLElement* responseElement =
+<span class="lineNum">      71 </span><span class="lineCov">          5 :                             [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];</span>
+<span class="lineNum">      72 </span>            :                     RXMLElement* activityElement = [responseElement child:@&quot;ExecXResult.ESA.Activity&quot;];
+<span class="lineNum">      73 </span><span class="lineCov">          5 :                     [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];</span>
+<span class="lineNum">      74 </span><span class="lineCov">          5 :                 }</span>
+<span class="lineNum">      75 </span>            :                 else {
+<span class="lineNum">      76 </span><span class="lineCov">          5 :                     [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];</span>
+<span class="lineNum">      77 </span><span class="lineCov">          5 :                 }</span>
+<span class="lineNum">      78 </span><span class="lineCov">          5 :             }];</span>
+<span class="lineNum">      79 </span><span class="lineCov">          5 : }</span>
+<span class="lineNum">      80 </span>            : 
+<span class="lineNum">      81 </span><span class="lineNoCov">          0 : @end</span>
 </pre>
       </td>
     </tr>

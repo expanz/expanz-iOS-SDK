@@ -89,24 +89,25 @@
 <span class="lineNum">      31 </span>            : 
 <span class="lineNum">      32 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      33 </span>            : - (void) retrieveSessionDataWith:(SessionDataRequest*)request
-<span class="lineNum">      34 </span><span class="lineCov">          1 :                         delegate:(id&lt;ExpanzSessionDataClientDelegate&gt;)delegate {</span>
+<span class="lineNum">      34 </span><span class="lineCov">          1 :         delegate:(id&lt;ExpanzSessionDataClientDelegate&gt;)delegate {</span>
 <span class="lineNum">      35 </span><span class="lineCov">          3 : </span>
-<span class="lineNum">      36 </span>            :     [self.httpTransport
-<span class="lineNum">      37 </span><span class="lineCov">          1 :         post:_serviceUrl payload:[request toXml] headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {</span>
+<span class="lineNum">      36 </span>            :     [self.httpTransport post:_serviceUrl payload:[request toXml] headers:[self requestHeaders]
+<span class="lineNum">      37 </span><span class="lineCov">          1 :             withBlock:^(LRRestyResponse* response) {</span>
 <span class="lineNum">      38 </span>            : 
-<span class="lineNum">      39 </span><span class="lineCov">          1 :         if (response.status == 200) {</span>
-<span class="lineNum">      40 </span>            :             LogDebug(@&quot;Response: %@, &quot;, [response asString]);
-<span class="lineNum">      41 </span><span class="lineCov">          1 :             RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];</span>
-<span class="lineNum">      42 </span><span class="lineCov">          1 :             [delegate requestDidFinishWithSessionData:[[element child:@&quot;ExecXResult.ESA&quot;] asSessionData]];</span>
-<span class="lineNum">      43 </span><span class="lineCov">          1 :         }</span>
-<span class="lineNum">      44 </span><span class="lineCov">          1 :         else {</span>
-<span class="lineNum">      45 </span><span class="lineCov">          1 :             [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];</span>
-<span class="lineNum">      46 </span>            :         }
-<span class="lineNum">      47 </span><span class="lineNoCov">          0 :     }];</span>
-<span class="lineNum">      48 </span>            : }
-<span class="lineNum">      49 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      39 </span><span class="lineCov">          1 :                 if (response.status == 200) {</span>
+<span class="lineNum">      40 </span>            :                     LogDebug(@&quot;Response: %@, &quot;, [response asString]);
+<span class="lineNum">      41 </span><span class="lineCov">          1 :                     RXMLElement* element =</span>
+<span class="lineNum">      42 </span><span class="lineCov">          1 :                             [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];</span>
+<span class="lineNum">      43 </span>            :                     [delegate requestDidFinishWithSessionData:[[element child:@&quot;ExecXResult.ESA&quot;] asSessionData]];
+<span class="lineNum">      44 </span><span class="lineCov">          1 :                 }</span>
+<span class="lineNum">      45 </span><span class="lineCov">          1 :                 else {</span>
+<span class="lineNum">      46 </span><span class="lineCov">          1 :                     [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];</span>
+<span class="lineNum">      47 </span>            :                 }
+<span class="lineNum">      48 </span><span class="lineNoCov">          0 :             }];</span>
+<span class="lineNum">      49 </span>            : }
 <span class="lineNum">      50 </span><span class="lineCov">          1 : </span>
-<span class="lineNum">      51 </span>            : @end
+<span class="lineNum">      51 </span><span class="lineCov">          1 : </span>
+<span class="lineNum">      52 </span>            : @end
 </pre>
       </td>
     </tr>

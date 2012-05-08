@@ -123,7 +123,7 @@
 <span class="lineNum">      65 </span><span class="lineCov">         10 : }</span>
 <span class="lineNum">      66 </span><span class="lineCov">         10 : </span>
 <span class="lineNum">      67 </span>            : - (id) initWithXmlString:(NSString*)configXml {
-<span class="lineNum">      68 </span><span class="lineCov">          2 :     RXMLElement* element = [RXMLElement elementFromXMLString:configXml];</span>
+<span class="lineNum">      68 </span><span class="lineCov">          2 :     RXMLElement* element = [RXMLElement elementFromXMLString:configXml encoding:NSUTF8StringEncoding];</span>
 <span class="lineNum">      69 </span><span class="lineCov">          2 : </span>
 <span class="lineNum">      70 </span>            :     NSString* baseUrl = [element attribute:@&quot;URL&quot;];
 <span class="lineNum">      71 </span><span class="lineCov">          2 :     NSString* preferredSite = [element attribute:@&quot;preferredSite&quot;];</span>

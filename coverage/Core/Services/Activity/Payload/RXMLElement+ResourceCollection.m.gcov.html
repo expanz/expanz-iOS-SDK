@@ -80,7 +80,7 @@
 <span class="lineNum">      22 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      23 </span><span class="lineCov">          3 :     ResourceCollection* collection = [[ResourceCollection alloc] initWithTitle:title];</span>
 <span class="lineNum">      24 </span>            : 
-<span class="lineNum">      25 </span><span class="lineCov">          2 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">      25 </span><span class="lineCov">          2 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* e) {</span>
 <span class="lineNum">      26 </span><span class="lineCov">          1 :         [collection addFileResource:[e asFileResource]];</span>
 <span class="lineNum">      27 </span><span class="lineCov">          1 :     }];</span>
 <span class="lineNum">      28 </span>            : 

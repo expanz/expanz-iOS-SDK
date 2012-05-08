@@ -105,14 +105,14 @@
 <span class="lineNum">      47 </span>            : 
 <span class="lineNum">      48 </span><span class="lineCov">         41 :     Menu* menu = [[Menu alloc] initWithHasWorkFlowTrays:hasWorkFlowTrays canChangeCompanyRole:canChangeCompanyRoles];</span>
 <span class="lineNum">      49 </span>            : 
-<span class="lineNum">      50 </span><span class="lineCov">         18 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">      50 </span><span class="lineCov">         18 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* e) {</span>
 <span class="lineNum">      51 </span>            : 
 <span class="lineNum">      52 </span><span class="lineCov">         15 :         if ([e.tag isEqualToString:@&quot;ProcessArea&quot;]) {</span>
 <span class="lineNum">      53 </span><span class="lineCov">         12 :             [menu addProcessArea:[e asProcessArea]];</span>
 <span class="lineNum">      54 </span><span class="lineCov">         12 :         }</span>
 <span class="lineNum">      55 </span>            : 
 <span class="lineNum">      56 </span><span class="lineCov">          3 :         else if ([e.tag isEqualToString:@&quot;Roles&quot;]) {</span>
-<span class="lineNum">      57 </span><span class="lineCov">          7 :             [e iterate:@&quot;*&quot; with:^(RXMLElement* roleElement) {</span>
+<span class="lineNum">      57 </span><span class="lineCov">          7 :             [e iterate:@&quot;*&quot; usingBlock:^(RXMLElement* roleElement) {</span>
 <span class="lineNum">      58 </span><span class="lineCov">          4 :                 [menu addUserRole:[roleElement asUserRole]];</span>
 <span class="lineNum">      59 </span><span class="lineCov">          4 :             }];</span>
 <span class="lineNum">      60 </span>            : 
@@ -128,7 +128,7 @@
 <span class="lineNum">      70 </span><span class="lineCov">          1 :     }</span>
 <span class="lineNum">      71 </span><span class="lineCov">         76 :     ProcessArea* processArea =</span>
 <span class="lineNum">      72 </span><span class="lineCov">         12 :             [[ProcessArea alloc] initWithProcessId:[self attribute:@&quot;id&quot;] andTitle:[self attribute:@&quot;title&quot;]];</span>
-<span class="lineNum">      73 </span><span class="lineCov">         50 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">      73 </span><span class="lineCov">         50 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* e) {</span>
 <span class="lineNum">      74 </span><span class="lineCov">         38 :         [processArea addMenuItem:[e asMenuItem]];</span>
 <span class="lineNum">      75 </span><span class="lineCov">         38 :     }];</span>
 <span class="lineNum">      76 </span><span class="lineCov">         12 :     return processArea;</span>

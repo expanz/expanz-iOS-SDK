@@ -87,7 +87,7 @@
 <span class="lineNum">      29 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">      30 </span>            : 
 <span class="lineNum">      31 </span><span class="lineCov">         58 :     ActivityMenu* activityList = [[ActivityMenu alloc] init];</span>
-<span class="lineNum">      32 </span><span class="lineCov">         30 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* element) {</span>
+<span class="lineNum">      32 </span><span class="lineCov">         30 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* element) {</span>
 <span class="lineNum">      33 </span>            :         MenuItem* menuItem = [[MenuItem alloc]
 <span class="lineNum">      34 </span><span class="lineCov">         28 :                 initWithActivityId:[element attribute:@&quot;id&quot;] title:[element attribute:@&quot;name&quot;] style:nil];</span>
 <span class="lineNum">      35 </span><span class="lineCov">         28 :         [activityList addMenuItem:menuItem];</span>
@@ -129,7 +129,7 @@
 <span class="lineNum">      71 </span>            : 
 <span class="lineNum">      72 </span><span class="lineCov">         84 :     ActivitySchema* activitySchema =</span>
 <span class="lineNum">      73 </span><span class="lineCov">          2 :             [[ActivitySchema alloc] initWithActivityId:[self attribute:@&quot;id&quot;] title:[self attribute:@&quot;title&quot;]];</span>
-<span class="lineNum">      74 </span><span class="lineCov">         44 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">      74 </span><span class="lineCov">         44 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* e) {</span>
 <span class="lineNum">      75 </span>            : 
 <span class="lineNum">      76 </span><span class="lineCov">         42 :         if ([e.tag isEqualToString:@&quot;Field&quot;]) {</span>
 <span class="lineNum">      77 </span><span class="lineCov">         22 :             [activitySchema addField:[e asFieldSchema]];</span>
@@ -182,7 +182,7 @@
 <span class="lineNum">     124 </span><span class="lineNoCov">          0 :     }</span>
 <span class="lineNum">     125 </span><span class="lineCov">         14 :     Query* query = [[Query alloc] initWithQueryId:[self attribute:@&quot;id&quot;]];</span>
 <span class="lineNum">     126 </span>            : 
-<span class="lineNum">     127 </span><span class="lineCov">          8 :     [self iterate:@&quot;*&quot; with:^(RXMLElement* e) {</span>
+<span class="lineNum">     127 </span><span class="lineCov">          8 :     [self iterate:@&quot;*&quot; usingBlock:^(RXMLElement* e) {</span>
 <span class="lineNum">     128 </span>            :         FieldSchema* fieldSchema =
 <span class="lineNum">     129 </span><span class="lineCov">          6 :                 [[FieldSchema alloc] initWithName:[e attribute:@&quot;name&quot;] expanzType:nil label:[e attribute:@&quot;title&quot;]];</span>
 <span class="lineNum">     130 </span><span class="lineCov">          6 :         [query addField:fieldSchema];</span>
