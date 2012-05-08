@@ -12,7 +12,7 @@
 
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_DefaultSessionDataClient.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 #import "RXMLElement+SessionData.h"
 
 
@@ -31,20 +31,21 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) retrieveSessionDataWith:(SessionDataRequest*)request
-                        delegate:(id<ExpanzSessionDataClientDelegate>)delegate {
+        delegate:(id<ExpanzSessionDataClientDelegate>)delegate {
 
-    [self.httpTransport
-        post:_serviceUrl payload:[request toXml] headers:[self requestHeaders] withBlock:^(LRRestyResponse* response) {
+    [self.httpTransport post:_serviceUrl payload:[request toXml] headers:[self requestHeaders]
+            withBlock:^(LRRestyResponse* response) {
 
-        if (response.status == 200) {
-            LogDebug(@"Response: %@, ", [response asString]);
-            RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
-            [delegate requestDidFinishWithSessionData:[[element child:@"ExecXResult.ESA"] asSessionData]];
-        }
-        else {
-            [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
-        }
-    }];
+                if (response.status == 200) {
+                    LogDebug(@"Response: %@, ", [response asString]);
+                    RXMLElement* element =
+                            [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
+                    [delegate requestDidFinishWithSessionData:[[element child:@"ExecXResult.ESA"] asSessionData]];
+                }
+                else {
+                    [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+                }
+            }];
 }
 
 

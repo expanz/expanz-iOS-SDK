@@ -25,7 +25,7 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
             it(@"should return the AppSites as a collection", ^{
 
                 NSString* responseXml = [BundleResource withName:@"ListAvailableSitesResponse.xml"];
-                RXMLElement* element = [RXMLElement elementFromXMLString:responseXml];
+                RXMLElement* element = [RXMLElement elementFromXMLString:responseXml encoding:NSUTF8StringEncoding];
                 SiteList* siteList = [[element child:@"ListAvailableSitesXResult.ESA.AppSites"] asSiteList];
                 LogDebug(@"Site List: %@", siteList);
                 [[[siteList sites] should] haveCountOf:3];
@@ -40,7 +40,7 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
             it(@"should be able to return itself as an ActivityMenu", ^{
 
                 NSString* xml = [BundleResource withName:@"ListActivitiesForSiteXResult.xml"];
-                RXMLElement* element = [RXMLElement elementFromXMLString:xml];
+                RXMLElement* element = [RXMLElement elementFromXMLString:xml encoding:NSUTF8StringEncoding];
                 ActivityMenu* menu = [[element child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityMenu];
 
                 LogDebug(@"List: %@", menu.activities);
@@ -61,9 +61,9 @@ SPEC_BEGIN(RXMLElement_SiteDetails)
                 NSString* xml = [BundleResource withName:@"GetSchemaForActivityXResponse.xml"];
                 LogDebug(@"XML: %@", xml);
 
-                RXMLElement* element = [RXMLElement elementFromXMLString:xml];
+                RXMLElement* element = [RXMLElement elementFromXMLString:xml encoding:NSUTF8StringEncoding];
                 ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" usingBlock:^(RXMLElement* e) {
                     [schema addQuery:[e asQuery]];
                 }];
 

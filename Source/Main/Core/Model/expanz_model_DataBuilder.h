@@ -24,10 +24,13 @@
 @private
     expanz_model_AbstractData* _data;
     NSString* _dataId;
-    NSString* _source;
 }
 
-- (id) initWithDataId:(NSString*)dataId source:(NSString*)source;
+@property (nonatomic, strong) NSString* source;
+@property (nonatomic, strong) NSString* query;
+@property (nonatomic, strong) NSString* contextObject;
+
+- (id) initWithDataId:(NSString*)dataId;
 
 - (expanz_model_AbstractData*) build;
 

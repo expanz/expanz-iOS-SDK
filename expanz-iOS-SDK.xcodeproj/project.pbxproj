@@ -202,9 +202,6 @@
 		6B558B591518388C00BD810C /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B558B5A1518388C00BD810C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F7241458EBB6001AF204 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B558B5B1518388C00BD810C /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B558B5C1518388C00BD810C /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D354E /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B558B5D1518388C00BD810C /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3546 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B558B5E1518388C00BD810C /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D353E /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B558B721518388C00BD810C /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7027314F3C78B0029A94B /* expanz_service_DefaultActivityClient.m */; };
 		6B558B731518388C00BD810C /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7027614F3C78B0029A94B /* expanz_service_CreateActivityRequest.m */; };
 		6B558B741518388C00BD810C /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7027814F3C78B0029A94B /* expanz_service_DataPublicationRequest.m */; };
@@ -265,7 +262,6 @@
 		6B558BD315185AD400BD810C /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558BD115185AD400BD810C /* JRSwizzle.m */; };
 		6B558BD415185AD400BD810C /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558BD115185AD400BD810C /* JRSwizzle.m */; };
 		6B59CFF414FF19FF002F25CA /* ListActivitiesForSiteXResult.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */; };
-		6B62F2D914E8F07F00B9EEA0 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
 		6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */; };
 		6B6E859714EFF4FF00FA4B5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
@@ -379,9 +375,6 @@
 		6B9FC79C14FDAB8200E4CB2C /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
 		6B9FC79D14FDAB8200E4CB2C /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6B9FC79E14FDAB8200E4CB2C /* NSData+ExpanzAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA4DD5C14E926970061FAC9 /* NSData+ExpanzAdditions.h */; };
-		6B9FC79F14FDAB8200E4CB2C /* TBXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D354B /* TBXML.h */; };
-		6B9FC7A014FDAB8200E4CB2C /* RXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3543 /* RXMLElement.h */; };
-		6B9FC7A114FDAB8200E4CB2C /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D353B /* NSDataAdditions.h */; };
 		6B9FC7A214FDAB8200E4CB2C /* NSNotificationCenter+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72C1458EBB6001AF204 /* NSNotificationCenter+OCMAdditions.h */; };
 		6B9FC7A314FDAB8200E4CB2C /* OCMArg.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72D1458EBB6001AF204 /* OCMArg.h */; };
 		6B9FC7A414FDAB8200E4CB2C /* OCMConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72E1458EBB6001AF204 /* OCMConstraint.h */; };
@@ -514,7 +507,6 @@
 		6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB3C1551FBFE0012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB5315520F530012C252 /* UserNameAndPasswordTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */; };
-		6BB1BB701552212C0012C252 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */; };
 		6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
 		6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
 		6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
@@ -644,6 +636,9 @@
 		6BCDDF21154A4CCD009EE515 /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3426 /* Dodgy.xml */; };
 		6BCDDF22154A4CCD009EE515 /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3422 /* ActivityWithMessage.xml */; };
 		6BCDDF23154A4CCD009EE515 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3420 /* ActivityWithFileResources.xml */; };
+		6BD1BDAC1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
+		6BD1BDAD1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
+		6BD1BDAE1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
 		6BD5432514734FBD0014F148 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FA1458EBB5001AF204 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5432614734FBD0014F148 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FD1458EBB5001AF204 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5432714734FBD0014F148 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FF1458EBB5001AF204 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -732,15 +727,6 @@
 		6BFDE7761495FA01005D3526 /* expanz_CoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BFDE7761495FA01005D352B /* expanz_model_AppSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3529 /* expanz_model_AppSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BFDE7761495FA01005D3532 /* ListAvailableSitesResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3531 /* ListAvailableSitesResponse.xml */; };
-		6BFDE7761495FA01005D353D /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D353B /* NSDataAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFDE7761495FA01005D353F /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D353E /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFDE7761495FA01005D3541 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D353E /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFDE7761495FA01005D3545 /* RXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3543 /* RXMLElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFDE7761495FA01005D3547 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3546 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFDE7761495FA01005D3549 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3546 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFDE7761495FA01005D354D /* TBXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D354B /* TBXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFDE7761495FA01005D354F /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D354E /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BFDE7761495FA01005D3551 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D354E /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BFDE7761495FA01005D3555 /* ExpanzAbstractServiceClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3553 /* ExpanzAbstractServiceClientDelegate.h */; };
 		6BFDE7761495FA01005D3562 /* expanz_service_DefaultSiteDetailsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3560 /* expanz_service_DefaultSiteDetailsClient.h */; };
 		6BFDE7761495FA01005D3564 /* expanz_service_DefaultSiteDetailsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3563 /* expanz_service_DefaultSiteDetailsClient.m */; };
@@ -1181,7 +1167,6 @@
 		6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		6BC9F7231458EBB6001AF204 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BC9F7241458EBB6001AF204 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6BC9F72C1458EBB6001AF204 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		6BC9F72D1458EBB6001AF204 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		6BC9F72E1458EBB6001AF204 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
@@ -1193,6 +1178,7 @@
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RaptureXML.framework; sourceTree = "<group>"; };
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
@@ -1291,12 +1277,6 @@
 		6BFDE7761495FA01005D3529 /* expanz_model_AppSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AppSite.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3531 /* ListAvailableSitesResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ListAvailableSitesResponse.xml; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3533 /* DefaultSiteDetailsClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSiteDetailsClientIntegration.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D353B /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D353E /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3543 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D3546 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D354B /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D354E /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3553 /* ExpanzAbstractServiceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzAbstractServiceClientDelegate.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3560 /* expanz_service_DefaultSiteDetailsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultSiteDetailsClient.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D3563 /* expanz_service_DefaultSiteDetailsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultSiteDetailsClient.m; sourceTree = "<group>"; };
@@ -1353,6 +1333,7 @@
 			files = (
 				6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */,
 				6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
+				6BD1BDAC1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,6 +1368,7 @@
 				6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */,
 				6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */,
 				6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */,
+				6BD1BDAE1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1415,10 +1397,10 @@
 				6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */,
 				6BCAFBA014317B1C00575280 /* CoreGraphics.framework in Frameworks */,
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
-				6B62F2D914E8F07F00B9EEA0 /* OCHamcrestIOS.framework in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
 				6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
+				6BD1BDAD1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1899,7 +1881,6 @@
 				6BC9F6F71458EBB5001AF204 /* MAObjCRuntime */,
 				6BC9F7221458EBB6001AF204 /* Reachability */,
 				6BFACBA414679916007C7265 /* NSData+Base64 */,
-				6BFDE7761495FA01005D353A /* RaptureXML */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -1945,8 +1926,8 @@
 		6BC9F7251458EBB6001AF204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */,
 				6BCAFB9A14317B1C00575280 /* SDK */,
-				6BC9F7271458EBB6001AF204 /* OCHamcrestIOS.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -2292,19 +2273,6 @@
 			name = Assembly;
 			sourceTree = "<group>";
 		};
-		6BFDE7761495FA01005D353A /* RaptureXML */ = {
-			isa = PBXGroup;
-			children = (
-				6BFDE7761495FA01005D354E /* TBXML.m */,
-				6BFDE7761495FA01005D354B /* TBXML.h */,
-				6BFDE7761495FA01005D3546 /* RXMLElement.m */,
-				6BFDE7761495FA01005D3543 /* RXMLElement.h */,
-				6BFDE7761495FA01005D353E /* NSDataAdditions.m */,
-				6BFDE7761495FA01005D353B /* NSDataAdditions.h */,
-			);
-			path = RaptureXML;
-			sourceTree = "<group>";
-		};
 		6BFDE7761495FA01005D3556 /* Site */ = {
 			isa = PBXGroup;
 			children = (
@@ -2362,9 +2330,6 @@
 				6B9FC79C14FDAB8200E4CB2C /* RTUnregisteredClass.h in Headers */,
 				6B9FC79D14FDAB8200E4CB2C /* Reachability.h in Headers */,
 				6B9FC79E14FDAB8200E4CB2C /* NSData+ExpanzAdditions.h in Headers */,
-				6B9FC79F14FDAB8200E4CB2C /* TBXML.h in Headers */,
-				6B9FC7A014FDAB8200E4CB2C /* RXMLElement.h in Headers */,
-				6B9FC7A114FDAB8200E4CB2C /* NSDataAdditions.h in Headers */,
 				6B9FC7A214FDAB8200E4CB2C /* NSNotificationCenter+OCMAdditions.h in Headers */,
 				6B9FC7A314FDAB8200E4CB2C /* OCMArg.h in Headers */,
 				6B9FC7A414FDAB8200E4CB2C /* OCMConstraint.h in Headers */,
@@ -2516,7 +2481,6 @@
 				6BB7031A14F3C78B0029A94B /* expanz_service_DefaultSessionDataClient.h in Headers */,
 				6BB7032014F3C78B0029A94B /* ExpanzSessionDataClient.h in Headers */,
 				6BB7032414F3C78B0029A94B /* expanz_service_SessionDataRequest.h in Headers */,
-				6BFDE7761495FA01005D353D /* NSDataAdditions.h in Headers */,
 				6B1B883914F4D3FB000A3D95 /* JSObjectFactory.h in Headers */,
 				6B1B883A14F4D3FB000A3D95 /* JSObjectFactory.m in Headers */,
 				6B1B883B14F4D3FB000A3D95 /* JSObjection.h in Headers */,
@@ -2538,8 +2502,6 @@
 				6B1B884B14F4D3FB000A3D95 /* NSObject+Objection.h in Headers */,
 				6B1B884C14F4D3FB000A3D95 /* NSObject+Objection.m in Headers */,
 				6B1B884D14F4D3FB000A3D95 /* Objection.h in Headers */,
-				6BFDE7761495FA01005D3545 /* RXMLElement.h in Headers */,
-				6BFDE7761495FA01005D354D /* TBXML.h in Headers */,
 				6BB7032A14F3C78B0029A94B /* RXMLElement+SessionData.h in Headers */,
 				6BFDE7761495FA01005D3555 /* ExpanzAbstractServiceClientDelegate.h in Headers */,
 				6BFDE7761495FA01005D3562 /* expanz_service_DefaultSiteDetailsClient.h in Headers */,
@@ -2914,9 +2876,6 @@
 				6BB7031B14F3C78B0029A94B /* expanz_service_DefaultSessionDataClient.m in Sources */,
 				6BB7032514F3C78B0029A94B /* expanz_service_SessionDataRequest.m in Sources */,
 				6BB7032B14F3C78B0029A94B /* RXMLElement+SessionData.m in Sources */,
-				6BFDE7761495FA01005D353F /* NSDataAdditions.m in Sources */,
-				6BFDE7761495FA01005D3547 /* RXMLElement.m in Sources */,
-				6BFDE7761495FA01005D354F /* TBXML.m in Sources */,
 				6BFDE7761495FA01005D3564 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
 				6BFDE7761495FA01005D356F /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D3579 /* RXMLElement+SiteDetails.m in Sources */,
@@ -3014,7 +2973,6 @@
 				6BFDE7761495FA01005D35B5 /* QueryDataSourceSpec.m in Sources */,
 				6BAA7E2E155150BA00399A27 /* NSString+ExpanzUtils.m in Sources */,
 				6BB1BB3C1551FBFE0012C252 /* Sales_Customer_ViewController.m in Sources */,
-				6BB1BB701552212C0012C252 /* expanz_utils_BundleResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3094,9 +3052,6 @@
 				6BB7031D14F3C78B0029A94B /* expanz_service_DefaultSessionDataClient.m in Sources */,
 				6BB7032714F3C78B0029A94B /* expanz_service_SessionDataRequest.m in Sources */,
 				6BB7032D14F3C78B0029A94B /* RXMLElement+SessionData.m in Sources */,
-				6BFDE7761495FA01005D3541 /* NSDataAdditions.m in Sources */,
-				6BFDE7761495FA01005D3549 /* RXMLElement.m in Sources */,
-				6BFDE7761495FA01005D3551 /* TBXML.m in Sources */,
 				6BFDE7761495FA01005D3566 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
 				6BFDE7761495FA01005D3571 /* expanz_model_ActivityMenu.m in Sources */,
 				6BFDE7761495FA01005D357B /* RXMLElement+SiteDetails.m in Sources */,
@@ -3135,9 +3090,6 @@
 				6B558B591518388C00BD810C /* RTUnregisteredClass.m in Sources */,
 				6B558B5A1518388C00BD810C /* Reachability.m in Sources */,
 				6B558B5B1518388C00BD810C /* NSData+ExpanzAdditions.m in Sources */,
-				6B558B5C1518388C00BD810C /* TBXML.m in Sources */,
-				6B558B5D1518388C00BD810C /* RXMLElement.m in Sources */,
-				6B558B5E1518388C00BD810C /* NSDataAdditions.m in Sources */,
 				6B558B721518388C00BD810C /* expanz_service_DefaultActivityClient.m in Sources */,
 				6B558B731518388C00BD810C /* expanz_service_CreateActivityRequest.m in Sources */,
 				6B558B741518388C00BD810C /* expanz_service_DataPublicationRequest.m in Sources */,

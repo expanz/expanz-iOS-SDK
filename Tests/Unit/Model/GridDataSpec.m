@@ -19,7 +19,8 @@ SPEC_BEGIN(GridDataSpec)
         __block GridData* data;
 
         beforeEach(^{
-            data = [[GridData alloc] initWithDataId:@"customersList" source:@"Customer.ListMe"];
+            data = [[GridData alloc]
+                    initWithDataId:@"customersList" source:@"Customer.ListMe" query:nil contextObject:nil];
         });
 
         describe(@"Object creation", ^{

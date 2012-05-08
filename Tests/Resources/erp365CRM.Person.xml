@@ -201,8 +201,7 @@
                     <Type id="erp365CRM.Company" image="Company"/>
                 </Types>
                 <Data id="CompanyPeopleDescriptionsQueryTableView" clearOnly="1"/>
-                <Data id="CompanyPeopleDescriptionsQueryTableView" contextObject="People"
-                      source="People.MakeDataElement(from idbquery)">
+                <Data id="CompanyPeopleDescriptionsQueryTableView">
                     <Columns>
                         <Column id="1" field="Person.FirstName" label="First Name" datatype="string" width="150"/>
                         <Column id="2" field="Person.LastName" label="Last Name" datatype="string" width="150"/>

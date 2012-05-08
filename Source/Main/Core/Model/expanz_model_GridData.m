@@ -17,12 +17,19 @@
 @implementation expanz_model_GridData
 
 @synthesize source = _source;
+@synthesize query = _query;
+@synthesize contextObject = _contextObject;
+
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithDataId:(NSString*)dataId source:(NSString*)source {
+- (id) initWithDataId:(NSString*)dataId source:(NSString*)source query:(NSString*)query
+        contextObject:(NSString*)contextObject {
+
     self = [super initWithDataId:dataId];
     if (self) {
         _source = [source copy];
+        _query = [query copy];
+        _contextObject = [contextObject copy];
         _columns = [[NSMutableArray alloc] init];
         _rows = [[NSMutableArray alloc] init];
     }

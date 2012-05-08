@@ -30,7 +30,11 @@ SPEC_BEGIN(ImageCellSpec)
         it(@"should load the image in an asynchronous thead", ^{
             NSString* url = @"http://www.google.com.ph/images/srpr/logo3w.png";
             imageCell = [[ImageGridDataCell alloc] initWithCellId:@"mugShot" imageUrl:url];
-            assertWillHappen(imageCell.imageData != nil);
+            [imageCell loadImage];
+
+            [[expectFutureValue(imageCell.imageData) shouldEventuallyBeforeTimingOutAfter(4.0)] beNonNil];
+
+
         });
     });
 

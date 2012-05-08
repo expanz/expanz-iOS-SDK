@@ -17,6 +17,7 @@
 
 SPEC_BEGIN(FileDownloadRequestSpec)
 
+/* ================================================================================================================== */
     describe(@"Object creation", ^{
 
         it(@"should allow initialization with blobId, isByteArray, activityHandle and session token attribtues", ^{
@@ -44,6 +45,7 @@ SPEC_BEGIN(FileDownloadRequestSpec)
 
     });
 
+/* ================================================================================================================== */
     describe(@"Xml serialization", ^{
 
         it(@"should be able to serialize itself to xml, for sending to the remote service", ^{

@@ -54,7 +54,8 @@
 
         if (response.status == 200) {
             LogDebug(@"Response: %@, ", [response asString]);
-            RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+            RXMLElement* responseElement =
+                    [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
 
             SiteList* siteList = [[responseElement child:@"ListAvailableSitesXResult.ESA.AppSites"] asSiteList];
             [delegate requestDidFinishWithSiteList:siteList];
@@ -72,8 +73,9 @@
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
-            ActivityMenu* activityList = [[[RXMLElement elementFromXMLString:[response asString]]
-                    child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityMenu];
+            ActivityMenu* activityList =
+                    [[[RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding]
+                            child:@"ListActivitiesForSiteXResult.ESA.Activities"] asActivityMenu];
             [delegate requestDidFinishWithActivityMenu:activityList];
         }
         else {
@@ -93,9 +95,9 @@
 
         if (response.status == 200) {
             LogDebug(@"Response: %@", [response asString]);
-            RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+            RXMLElement* element = [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
             ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-            [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+            [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" usingBlock:^(RXMLElement* e) {
                 [schema addQuery:[e asQuery]];
             }];
             [delegate requestDidFinishWithActivitySchema:schema];

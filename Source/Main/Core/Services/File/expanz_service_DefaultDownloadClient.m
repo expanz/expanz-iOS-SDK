@@ -16,7 +16,7 @@
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_service_FileDownloadRequest.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 #import "RXMLElement+ActivityInstance.h"
 #import "RXMLElement+ResourceCollection.h"
 
@@ -40,48 +40,49 @@
 
 /* ================================================= Protocol Methods =============================================== */
 - (void) sendFileRequestWith:(expanz_service_FileRequest*)fileRequest
-                    delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
+        delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
 
     [self.httpTransport post:_fileRequestUrl payload:[fileRequest toXml] headers:[self requestHeaders]
-                   withBlock:^(LRRestyResponse* response) {
+            withBlock:^(LRRestyResponse* response) {
 
-                       if (response.status == 200) {
-                           LogDebug(@"Response: %@, ", [response asString]);
-                           RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
-                           RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
-                           RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
+                if (response.status == 200) {
+                    LogDebug(@"Response: %@, ", [response asString]);
+                    RXMLElement* responseElement =
+                            [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
+                    RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
+                    RXMLElement* resourceElement = [responseElement child:@"ExecXResult.ESA.Files"];
 
-                           Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
-                           LogDebug("Creating resource collection with title: %@", titleField.value);
-                           ResourceCollection
-                               * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
-                           LogDebug(@"Created resource collection: %@", resourceCollection);
-                           [delegate requestDidFinishWithResourceCollection:resourceCollection];
+                    Field* titleField = [[activityElement asActivityInstance] fieldWithId:@"File.Title"];
+                    LogDebug("Creating resource collection with title: %@", titleField.value);
+                    ResourceCollection
+                            * resourceCollection = [resourceElement asResourceCollectionWithTitle:titleField.value];
+                    LogDebug(@"Created resource collection: %@", resourceCollection);
+                    [delegate requestDidFinishWithResourceCollection:resourceCollection];
 
-                       }
-                       else {
-                           [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
-                       }
-                   }];
+                }
+                else {
+                    [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+                }
+            }];
 }
 
 
 - (void) downloadFileWith:(expanz_service_FileDownloadRequest*)downloadRequest
-                 delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
+        delegate:(id<ExpanzFileDownloadClientDelegate>)delegate {
 
     [self.httpTransport post:_getBlobUrl payload:[downloadRequest toXml] headers:[self requestHeaders]
-                   withBlock:^(LRRestyResponse* response) {
+            withBlock:^(LRRestyResponse* response) {
 
-                       if (response.status == 200) {
-                           LogDebug(@"Response: %@, ", [response asString]);
-                           NSData* data = [response responseData];
-                           [delegate requestDidFinishWithData:data];
+                if (response.status == 200) {
+                    LogDebug(@"Response: %@, ", [response asString]);
+                    NSData* data = [response responseData];
+                    [delegate requestDidFinishWithData:data];
 
-                       }
-                       else {
-                           [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
-                       }
-                   }];
+                }
+                else {
+                    [super dispatchErrorWith:delegate statusCode:response.status userInfo:[response asString]];
+                }
+            }];
 }
 
 

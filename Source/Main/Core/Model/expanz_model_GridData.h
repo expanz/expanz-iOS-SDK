@@ -28,14 +28,17 @@
 
 }
 
-@property (nonatomic, strong, readonly) NSString* source;
-@property (nonatomic, strong, readonly) NSArray* rows; 
-@property (nonatomic, strong, readonly) NSArray* columns; 
+@property(nonatomic, strong, readonly) NSString* source;
+@property(nonatomic, strong, readonly) NSString* query;
+@property(nonatomic, strong, readonly) NSString* contextObject;
+@property(nonatomic, strong, readonly) NSArray* rows;
+@property(nonatomic, strong, readonly) NSArray* columns;
 
 /**
 * Initializes an instance with the supplied id and source attributes.
 */
-- (id) initWithDataId:(NSString*)dataId source:(NSString*)source;
+- (id) initWithDataId:(NSString*)dataId source:(NSString*)source query:(NSString*)query
+        contextObject:(NSString*)contextObject;
 
 
 /**

@@ -67,7 +67,8 @@
 
                 if (response.status == 200) {
                     LogDebug(@"Response: %@, ", [response asString]);
-                    RXMLElement* responseElement = [RXMLElement elementFromXMLString:[response asString]];
+                    RXMLElement* responseElement =
+                            [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
                     RXMLElement* activityElement = [responseElement child:@"ExecXResult.ESA.Activity"];
                     [delegate requestDidFinishWithActivityInstance:[activityElement asActivityInstance]];
                 }

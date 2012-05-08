@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 
 @class expanz_model_SessionContext;
 

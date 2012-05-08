@@ -24,7 +24,7 @@ SPEC_BEGIN(MethodInvocationRequestSpec)
             [[MethodInvocationRequest alloc] initWithActivityInstance:activity methodName:@"Add"];
     });
 
-
+/* ================================================================================================================== */
     describe(@"Objection creation", ^{
 
         it(@"should allow creation with activityInstance and method name attributes.", ^{
@@ -34,6 +34,7 @@ SPEC_BEGIN(MethodInvocationRequestSpec)
         });
     });
 
+/* ================================================================================================================== */
     describe(@"xml marshalling", ^{
 
         it(@"should allow marshalling to xml for sending to the service endpoint.", ^{
@@ -46,5 +47,5 @@ SPEC_BEGIN(MethodInvocationRequestSpec)
 
     });
 
-
+/* ================================================================================================================== */
     SPEC_END

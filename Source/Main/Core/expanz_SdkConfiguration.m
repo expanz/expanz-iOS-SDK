@@ -11,7 +11,7 @@
 
 
 #import "expanz_SdkConfiguration.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 
 
 @implementation expanz_SdkConfiguration
@@ -65,7 +65,7 @@ static SdkConfiguration* _globalConfiguration;
 }
 
 - (id) initWithXmlString:(NSString*)configXml {
-    RXMLElement* element = [RXMLElement elementFromXMLString:configXml];
+    RXMLElement* element = [RXMLElement elementFromXMLString:configXml encoding:NSUTF8StringEncoding];
 
     NSString* baseUrl = [element attribute:@"URL"];
     NSString* preferredSite = [element attribute:@"preferredSite"];

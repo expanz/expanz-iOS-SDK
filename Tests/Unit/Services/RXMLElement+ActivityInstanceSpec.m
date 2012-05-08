@@ -20,8 +20,6 @@
 #import "expanz_model_Folder.h"
 #import "expanz_model_Field.h"
 #import "expanz_utils_BundleResource.h"
-#import "NSString+Contains.h"
-
 
 SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
@@ -32,7 +30,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             beforeEach(^{
                 NSString* xmlString = [BundleResource withName:@"ESA_Sales_Calc_ActivityInstance.xml"];
-                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
 
@@ -51,7 +49,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             beforeEach(^{
                 NSString* xmlString = [BundleResource withName:@"ActivityWithMessage.xml"];
-                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
 
@@ -66,7 +64,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             beforeEach(^{
                 NSString* xmlString = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
-                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
 
@@ -108,7 +106,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             beforeEach(^{
                 NSString* xmlString =
                         [BundleResource withName:@"Thermomix_DocumentMaintenance_Portal_ActivityInstance.xml"];
-                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
 
@@ -138,7 +136,7 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
 
             beforeEach(^{
                 NSString* xmlString = [BundleResource withName:@"ActivityWithLongData.xml"];
-                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+                RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
                 activityElement = [rootElement child:@"ExecXResult.ESA.Activity"];
             });
 
@@ -164,7 +162,8 @@ SPEC_BEGIN(RXMLElement_ActivityInstanceSpec)
             __block RXMLElement* e;
 
             beforeEach(^{
-                e = [RXMLElement elementFromXMLString:@"<wrong><xml>this is the wrong xml.</xml></wrong>"];
+                e = [RXMLElement elementFromXMLString:@"<wrong><xml>this is the wrong xml.</xml></wrong>"
+                        encoding:NSUTF8StringEncoding];
             });
 
             it(@"should throw NSException if you feed it the wrong kind of activity.", ^{

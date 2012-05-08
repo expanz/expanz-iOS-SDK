@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 
 @class expanz_model_FileResource;
 @class expanz_model_ResourceCollection;

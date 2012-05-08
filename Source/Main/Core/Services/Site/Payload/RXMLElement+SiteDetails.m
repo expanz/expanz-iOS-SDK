@@ -29,7 +29,7 @@
     }
 
     ActivityMenu* activityList = [[ActivityMenu alloc] init];
-    [self iterate:@"*" with:^(RXMLElement* element) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* element) {
         MenuItem* menuItem = [[MenuItem alloc]
                 initWithActivityId:[element attribute:@"id"] title:[element attribute:@"name"] style:nil];
         [activityList addMenuItem:menuItem];
@@ -71,7 +71,7 @@
 
     ActivitySchema* activitySchema =
             [[ActivitySchema alloc] initWithActivityId:[self attribute:@"id"] title:[self attribute:@"title"]];
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Field"]) {
             [activitySchema addField:[e asFieldSchema]];
@@ -124,7 +124,7 @@
     }
     Query* query = [[Query alloc] initWithQueryId:[self attribute:@"id"]];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
         FieldSchema* fieldSchema =
                 [[FieldSchema alloc] initWithName:[e attribute:@"name"] expanzType:nil label:[e attribute:@"title"]];
         [query addField:fieldSchema];

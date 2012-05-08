@@ -17,6 +17,7 @@
 
 SPEC_BEGIN(FileRequestSpec)
 
+/* ================================================================================================================== */
     describe(@"Object creation", ^{
 
         it(@"should allow initialization with fileId, activityHandle and sessionToken attributes.", ^{
@@ -39,6 +40,7 @@ SPEC_BEGIN(FileRequestSpec)
 
     });
 
+/* ================================================================================================================== */
     describe(@"Xml serialization", ^{
 
         it(@"should be able to serialize itself to xml", ^{
@@ -50,4 +52,5 @@ SPEC_BEGIN(FileRequestSpec)
 
     });
 
+/* ================================================================================================================== */
     SPEC_END

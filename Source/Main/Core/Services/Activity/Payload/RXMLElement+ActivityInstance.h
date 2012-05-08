@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field;
 @class expanz_model_Message;
@@ -20,6 +20,7 @@
 @class expanz_model_Folder;
 @class expanz_model_File;
 @class expanz_model_FileResource;
+@class expanz_model_AbstractData;
 
 /**
  * Adds methods to RXMLElement for parsing results of XmlPostActivityClient invocations. 
@@ -44,7 +45,7 @@
 /**
 * Maps the element onto an `expanz_model_DataSet` object.
 */
-- (expanz_model_GridData*) asData;
+- (expanz_model_AbstractData*) asData;
 
 /**
 * Maps the element onto an `expanz_model_Column` object.

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RXMLElement+SessionData.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 
 @class expanz_model_Menu;
 @class expanz_model_ProcessArea;

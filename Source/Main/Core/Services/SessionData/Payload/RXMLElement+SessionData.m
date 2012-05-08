@@ -47,14 +47,14 @@
 
     Menu* menu = [[Menu alloc] initWithHasWorkFlowTrays:hasWorkFlowTrays canChangeCompanyRole:canChangeCompanyRoles];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"ProcessArea"]) {
             [menu addProcessArea:[e asProcessArea]];
         }
 
         else if ([e.tag isEqualToString:@"Roles"]) {
-            [e iterate:@"*" with:^(RXMLElement* roleElement) {
+            [e iterate:@"*" usingBlock:^(RXMLElement* roleElement) {
                 [menu addUserRole:[roleElement asUserRole]];
             }];
 
@@ -70,7 +70,7 @@
     }
     ProcessArea* processArea =
             [[ProcessArea alloc] initWithProcessId:[self attribute:@"id"] andTitle:[self attribute:@"title"]];
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
         [processArea addMenuItem:[e asMenuItem]];
     }];
     return processArea;

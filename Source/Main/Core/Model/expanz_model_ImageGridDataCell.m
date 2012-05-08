@@ -29,7 +29,6 @@
             _imageUrl = [[SdkConfiguration globalConfiguration].blobCacheUrl
                     stringByAppendingString:[imageUrl stringByReplacingOccurrencesOfString:@"\\" withString:@"/"]];
         }
-        [self loadImage];
     }
     return self;
 }
@@ -38,7 +37,6 @@
 - (void) loadImage {
     self.hasAskedImageToLoad = YES;
     if (_imageUrl) {
-        LogDebug(@"Loading the shiz: %@", _imageUrl);
         [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
             if (response.status == 200) {
                 self.imageData = [response responseData];

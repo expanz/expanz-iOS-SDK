@@ -13,7 +13,7 @@
 #import "RXMLElement+ResourceCollection.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_utils_BundleResource.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 
 
 SPEC_BEGIN(RXMLElement_ResourceCollection)
@@ -24,7 +24,7 @@ SPEC_BEGIN(RXMLElement_ResourceCollection)
 
         beforeEach(^{
             NSString* xmlString = [BundleResource withName:@"ActivityWithFileResources.xml"];
-            RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString];
+            RXMLElement* rootElement = [RXMLElement elementFromXMLString:xmlString encoding:NSUTF8StringEncoding];
             resourceElement = [rootElement child:@"ExecXResult.ESA.Files"];
         });
 

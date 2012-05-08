@@ -22,7 +22,7 @@
     }
     ResourceCollection* collection = [[ResourceCollection alloc] initWithTitle:title];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
         [collection addFileResource:[e asFileResource]];
     }];
 

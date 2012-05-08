@@ -12,7 +12,7 @@
 #import "expanz_service_SessionRequest.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 #import "RXMLElement+SessionContext.h"
 
 
@@ -37,7 +37,8 @@
 
                 if (response.status == 200) {
                     LogDebug(@"Response: %@, ", [response asString]);
-                    RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+                    RXMLElement* element =
+                            [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
                     [delegate requestDidFinishWithSessionContext:[element asSessionContext]];
                 }
                 else {

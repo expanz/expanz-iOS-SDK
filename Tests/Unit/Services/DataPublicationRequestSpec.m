@@ -18,6 +18,7 @@ SPEC_BEGIN(DataPublicationRequestSpec)
             request = [[DataPublicationRequest alloc] init];
         });
 
+/* ================================================================================================================== */
         describe(@"Mutable properties", ^{
 
             it(@"should default the populateMethod attribute to 'ListMe'", ^{
@@ -53,4 +54,5 @@ SPEC_BEGIN(DataPublicationRequestSpec)
 
         });
 
+/* ================================================================================================================== */
         SPEC_END

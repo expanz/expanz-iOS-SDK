@@ -11,13 +11,14 @@
 
 #import "xml_Serializable.h"
 #import "expanz_service_CreateActivityRequest.h"
-#import "RXMLElement.h"
+#import <RaptureXML/RXMLElement.h>
 #import "expanz_service_DataPublicationRequest.h"
 #import "NSString+Contains.h"
 
 
 SPEC_BEGIN(CreateActivityRequestSpec)
 
+/* ================================================================================================================== */
     describe(@"Object creation", ^{
 
         it(@"should allow initialization with activityName and sessionToken parameters.", ^{
@@ -31,13 +32,14 @@ SPEC_BEGIN(CreateActivityRequestSpec)
 
     });
 
+/* ================================================================================================================== */
     describe(@"Web service integration.", ^{
 
         it(@"should be able to marshal itself to XML to send over the wire as a web service request.", ^{
             id<xml_Serializable> request = [[CreateActivityRequest alloc]
                 initWithActivityName:@"Calculator" style:[ActivityStyle defaultStyle] initialKey:nil
                         sessionToken:@"xx2348b"];
-            RXMLElement* e = [RXMLElement elementFromXMLString:[request toXml]];
+            RXMLElement* e = [RXMLElement elementFromXMLString:[request toXml] encoding:NSUTF8StringEncoding];
             [e shouldNotBeNil];
         });
 
@@ -68,5 +70,5 @@ SPEC_BEGIN(CreateActivityRequestSpec)
         });
     });
 
-
+/* ================================================================================================================== */
     SPEC_END

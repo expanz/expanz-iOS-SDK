@@ -20,6 +20,7 @@
 #import "expanz_model_DataBuilder.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
+#import "expanz_model_AbstractData.h"
 
 @implementation RXMLElement (ActivityInstance)
 
@@ -28,17 +29,17 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
     }
     ActivityInstance* activityInstance = [[ActivityInstance alloc]
-        initWithTitle:[self attribute:@"title"] handle:[self attribute:@"activityHandle"]
-         persistentId:[self attribute:@"persistentId"]];
+            initWithTitle:[self attribute:@"title"] handle:[self attribute:@"activityHandle"]
+            persistentId:[self attribute:@"persistentId"]];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Field"]) {
             [activityInstance addField:[e asFieldInstance]];
         }
 
         else if ([e.tag isEqualToString:@"Messages"]) {
-            [e iterate:@"*" with:^(RXMLElement* messageElement) {
+            [e iterate:@"*" usingBlock:^(RXMLElement* messageElement) {
                 [activityInstance addMessage:[messageElement asMessage]];
             }];
         }
@@ -64,7 +65,8 @@
     NSString* hint = [self attribute:@"hint"];
 
     Field* field = [[Field alloc]
-        initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint];
+            initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label
+            hint:hint];
 
     switch (field.datatype) {
         case ExpanzDataTypeString:
@@ -91,7 +93,7 @@
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Message."];
     }
     MessageType
-        messageType = [[self attribute:@"type"] isEqualToString:@"Warning"] ? MessageTypeWarning : MessageTypeError;
+            messageType = [[self attribute:@"type"] isEqualToString:@"Warning"] ? MessageTypeWarning : MessageTypeError;
     return [[Message alloc] initWithMessageType:messageType content:[self text]];
 }
 
@@ -101,19 +103,21 @@
     if (![self.tag isEqualToString:@"Data"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not Data."];
     }
-    DataBuilder* dataBuilder =
-        [[DataBuilder alloc] initWithDataId:[self attribute:@"id"] source:[self attribute:@"source"]];
+    DataBuilder* dataBuilder = [[DataBuilder alloc] initWithDataId:[self attribute:@"id"]];
+    [dataBuilder setSource:[self attribute:@"source"]];
+    [dataBuilder setQuery:[self attribute:@"query"]];
+    [dataBuilder setContextObject:[self attribute:@"contextObject"]];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
 
         if ([e.tag isEqualToString:@"Columns"]) {
-            [e iterate:@"*" with:^(RXMLElement* columnElement) {
+            [e iterate:@"*" usingBlock:^(RXMLElement* columnElement) {
                 [dataBuilder addColumn:[columnElement asColumn]];
             }];
         }
 
         else if ([e.tag isEqualToString:@"Rows"]) {
-            [e iterate:@"*" with:^(RXMLElement* rowElement) {
+            [e iterate:@"*" usingBlock:^(RXMLElement* rowElement) {
                 [dataBuilder addRow:[rowElement asRow]];
             }];
         }
@@ -136,8 +140,7 @@
     ExpanzDataType dataType = [[self attribute:@"datatype"] asExpanzDataType];
     NSInteger width = [[self attribute:@"width"] integerValue];
 
-    Column* column =
-        [[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width];
+    Column* column = [[Column alloc] initWithColumnId:columnId field:field label:label dataType:dataType width:width];
 
     return column;
 }
@@ -148,7 +151,7 @@
     }
     Row* row = [[Row alloc] initWithRowId:[self attribute:@"id"] type:[self attribute:@"Type"]];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"Cell"]) {
             [row addCellDefinitionWithId:[e attribute:@"id"] data:[e text]];
         }
@@ -169,9 +172,9 @@
     NSString* sequence = [self attribute:@"sequence"];
 
     Folder* folder =
-        [[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence];
+            [[Folder alloc] initWithFolderId:id title:title hint:hint buttonTitle:buttonTitle sequence:sequence];
 
-    [self iterate:@"*" with:^(RXMLElement* e) {
+    [self iterate:@"*" usingBlock:^(RXMLElement* e) {
         if ([e.tag isEqualToString:@"File"]) {
             [folder addFile:[e asFile]];
         }
@@ -194,7 +197,7 @@
     NSString* field = [self attribute:@"field"];
 
     File* file = [[File alloc]
-        initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field];
+            initWithFileId:id title:title hint:hint fileName:fileName sequence:sequence type:type field:field];
 
     return file;
 

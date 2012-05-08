@@ -29,14 +29,16 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         beforeEach(^{
 
-            viewController = [[ActivityControllerBuilder forActivityId:@"Sales.Customer"] build];
+            viewController =
+                    (Sales_Customer_ViewController*) [[ActivityControllerBuilder forActivityId:@"Sales.Customer"]
+                            build];
 
             [viewController shouldNotBeNil];
             [viewController.view shouldNotBeNil];
 
             NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
-            ActivityInstance* activityInstance =
-                    [[[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"] asActivityInstance];
+            ActivityInstance* activityInstance = [[[RXMLElement elementFromXMLString:xml encoding:NSUTF8StringEncoding]
+                    child:@"ExecXResult.ESA.Activity"] asActivityInstance];
             [viewController requestDidFinishWithActivityInstance:activityInstance];
             modelAdapter = viewController.modelAdapter;
         });
@@ -86,8 +88,6 @@ SPEC_BEGIN(ModelAdapterSpec)
 
         describe(@"Mapping UITableView controls to expanz_model_DataSet items in an ActivityInstance", ^{
 
-            __block ModelAdapter* anotherModelAdapter;
-
             beforeEach(^{
                 ActivityControllerBuilder* builder = [ActivityControllerBuilder forActivityId:@"Sales.Customer"];
                 [builder setActivityStyle:[ActivityStyle browseStyle]];
@@ -96,7 +96,8 @@ SPEC_BEGIN(ModelAdapterSpec)
                 [viewController.view shouldNotBeNil];
 
                 NSString* xml = [BundleResource withName:@"ESA_Sales_Customer_ActivityInstance.xml"];
-                RXMLElement* element = [[RXMLElement elementFromXMLString:xml] child:@"ExecXResult.ESA.Activity"];
+                RXMLElement* element = [[RXMLElement elementFromXMLString:xml encoding:NSUTF8StringEncoding]
+                        child:@"ExecXResult.ESA.Activity"];
                 ActivityInstance* activityInstance = [element asActivityInstance];
                 LogDebug(@"@@@@@@@@@@@@@@@@@@@@@@@@Activity instance: %@", activityInstance.dataSets);
 
@@ -107,8 +108,7 @@ SPEC_BEGIN(ModelAdapterSpec)
             });
 
             it(@"should return a UITableView corresponding to a DataSet", ^{
-                GridData* dataSet =
-                        (GridData*) [modelAdapter.activityInstance dataWithId:@"ListCustomersMobile"];
+                GridData* dataSet = (GridData*) [modelAdapter.activityInstance dataWithId:@"ListCustomersMobile"];
                 [dataSet shouldNotBeNil];
                 UITableView* tableView = [modelAdapter tableViewFor:dataSet];
                 [tableView shouldNotBeNil];

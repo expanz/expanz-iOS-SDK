@@ -70,7 +70,9 @@
 }
 
 - (void) addMessage:(expanz_model_Message*)message {
-    [_messages addObject:message];
+    if (message) {
+        [_messages addObject:message];
+    }
 }
 
 - (NSArray*) dataSets {
@@ -79,7 +81,9 @@
 }
 
 - (void) addData:(AbstractData*)data {
-    [_dataSets addObject:data];
+    if (data) {
+        [_dataSets addObject:data];
+    }
 }
 
 - (expanz_model_AbstractData*) dataWithId:(NSString*)dataSetId {
