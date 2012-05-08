@@ -10,9 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <QuartzCore/QuartzCore.h>
-#import "UIButton+ExpanzTextures.h"
+#import "NSString+ColorConversion.h"
 
 @implementation UIButton (ExpanzTextures)
+
+- (void) setStain:(NSString*)stain {
+    CAGradientLayer* stainLayer = [CAGradientLayer layer];
+    stainLayer.frame = self.layer.bounds;
+    stainLayer.backgroundColor = [[stain toUIColor] CGColor];
+    [[self layer] insertSublayer:stainLayer atIndex:0];
+}
 
 - (void) setGlossy:(BOOL)glossy {
     CALayer* layer = self.layer;

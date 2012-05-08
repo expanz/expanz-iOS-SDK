@@ -11,10 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UIButton (ExpanzTextures)
+@interface NSString (ColorConversion)
 
-- (void) setGlossy:(BOOL)glossy;
-
-- (void) setStain:(NSString*)stain;
+- (UIColor*) toUIColor;
 
 @end

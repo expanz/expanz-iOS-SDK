@@ -789,13 +789,18 @@
 		6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EE /* expanzCore.h */; };
 		6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */; };
 		6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F2 /* expanziOS.h */; };
-		6BFDE7761495FA01005D35F5 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */; };
-		6BFDE7761495FA01005D35F7 /* UIButton+ExpanzTextures.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */; };
+		6BFDE7761495FA01005D35F5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FB /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
 		6BFDE7761495FA01005D35FE /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
+		6BFDE7761495FA01005D3600 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */; };
+		6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */; };
+		6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */; };
+		6BFDE7761495FA01005D360A /* UIButton+ExpanzTextures.h in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3609 /* UIButton+ExpanzTextures.h */; };
+		6BFDE7761495FA01005D360D /* UINavigationController+PushPopRotated.h in Headers */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1323,10 +1328,12 @@
 		6BFDE7761495FA01005D35EE /* expanzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzCore.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzUserInterface.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35F2 /* expanziOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanziOS.h; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExpanzTextures.m"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ExpanzTextures.h"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SessionData.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SessionData.h; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ColorConversion.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ColorConversion.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExpanzTextures.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D3609 /* UIButton+ExpanzTextures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIButton+ExpanzTextures.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1497,8 +1504,10 @@
 		6B41A09A151877BD009ED6D0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDE7761495FA01005D35F6 /* UIButton+ExpanzTextures.h */,
-				6BFDE7761495FA01005D35F4 /* UIButton+ExpanzTextures.m */,
+				6BFDE7761495FA01005D3609 /* UIButton+ExpanzTextures.h */,
+				6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */,
+				6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */,
+				6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */,
 				6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */,
 				6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */,
 				6B41A09B151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.h */,
@@ -2429,9 +2438,10 @@
 				6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */,
 				6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */,
 				6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */,
-				6BFDE7761495FA01005D35F7 /* UIButton+ExpanzTextures.h in Headers */,
 				6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */,
 				6BD1BDBD1558F19000F1D055 /* RXMLElement.h in Headers */,
+				6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */,
+				6BFDE7761495FA01005D360D /* UINavigationController+PushPopRotated.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2717,6 +2727,7 @@
 				6B718F5614EF921100909A38 /* (null) in Resources */,
 				6B41A0CB151877BD009ED6D0 /* 37x-Checkmark.png in Resources */,
 				6B41A0CE151877BD009ED6D0 /* Icon@2x.png in Resources */,
+				6BFDE7761495FA01005D360A /* UIButton+ExpanzTextures.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2920,10 +2931,13 @@
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
-				6BFDE7761495FA01005D35F5 /* UIButton+ExpanzTextures.m in Sources */,
+				6BFDE7761495FA01005D35F5 /* (null) in Sources */,
 				6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */,
+				6BFDE7761495FA01005D3600 /* (null) in Sources */,
+				6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */,
+				6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

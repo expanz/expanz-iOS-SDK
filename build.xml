@@ -246,6 +246,7 @@
                 <include name="MainWindow.xib"/>
                 <include name="TableCellForGridData.xib"/>
                 <include name="TableCellForTreeData.xib"/>
+                <include name="UserNameAndPasswordTableCells.xib"/>
             </fileset>
         </copy>
 
