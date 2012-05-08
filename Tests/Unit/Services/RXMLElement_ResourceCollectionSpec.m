@@ -13,7 +13,7 @@
 #import "RXMLElement+ResourceCollection.h"
 #import "expanz_model_ResourceCollection.h"
 #import "expanz_utils_BundleResource.h"
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 
 
 SPEC_BEGIN(RXMLElement_ResourceCollection)

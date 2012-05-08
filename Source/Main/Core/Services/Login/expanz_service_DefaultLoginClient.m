@@ -12,7 +12,7 @@
 #import "expanz_service_SessionRequest.h"
 #import "expanz_model_SessionContext.h"
 #import "expanz_service_DefaultLoginClient.h"
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 #import "RXMLElement+SessionContext.h"
 
 

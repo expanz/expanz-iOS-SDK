@@ -16,7 +16,7 @@
 #import "expanz_service_DefaultDownloadClient.h"
 #import "expanz_service_FileRequest.h"
 #import "expanz_service_FileDownloadRequest.h"
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 #import "RXMLElement+ActivityInstance.h"
 #import "RXMLElement+ResourceCollection.h"
 

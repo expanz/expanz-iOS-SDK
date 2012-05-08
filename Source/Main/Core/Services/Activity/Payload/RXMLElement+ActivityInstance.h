@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 @class expanz_model_ActivityInstance;
 @class expanz_model_Field;
 @class expanz_model_Message;

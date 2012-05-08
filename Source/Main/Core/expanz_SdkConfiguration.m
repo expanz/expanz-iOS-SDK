@@ -11,7 +11,7 @@
 
 
 #import "expanz_SdkConfiguration.h"
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 
 
 @implementation expanz_SdkConfiguration

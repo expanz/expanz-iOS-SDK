@@ -12,7 +12,7 @@
 
 #import "expanz_service_SessionDataRequest.h"
 #import "expanz_service_DefaultSessionDataClient.h"
-#import <RaptureXML/RXMLElement.h>
+#import "RXMLElement.h"
 #import "RXMLElement+SessionData.h"
 
 

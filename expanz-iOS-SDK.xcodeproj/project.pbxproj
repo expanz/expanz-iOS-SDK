@@ -636,9 +636,10 @@
 		6BCDDF21154A4CCD009EE515 /* Dodgy.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3426 /* Dodgy.xml */; };
 		6BCDDF22154A4CCD009EE515 /* ActivityWithMessage.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3422 /* ActivityWithMessage.xml */; };
 		6BCDDF23154A4CCD009EE515 /* ActivityWithFileResources.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3420 /* ActivityWithFileResources.xml */; };
-		6BD1BDAC1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
-		6BD1BDAD1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
-		6BD1BDAE1558BAC200F1D055 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */; };
+		6BD1BDBD1558F19000F1D055 /* RXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD1BDBB1558F19000F1D055 /* RXMLElement.h */; };
+		6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1BDBC1558F19000F1D055 /* RXMLElement.m */; };
+		6BD1BDBF1558F19000F1D055 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1BDBC1558F19000F1D055 /* RXMLElement.m */; };
+		6BD1BDC01558F19000F1D055 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1BDBC1558F19000F1D055 /* RXMLElement.m */; };
 		6BD5432514734FBD0014F148 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FA1458EBB5001AF204 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5432614734FBD0014F148 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FD1458EBB5001AF204 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BD5432714734FBD0014F148 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F6FF1458EBB5001AF204 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -1179,6 +1180,8 @@
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RaptureXML.framework; sourceTree = "<group>"; };
+		6BD1BDBB1558F19000F1D055 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
+		6BD1BDBC1558F19000F1D055 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
@@ -1333,7 +1336,6 @@
 			files = (
 				6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */,
 				6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
-				6BD1BDAC1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,7 +1370,6 @@
 				6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */,
 				6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */,
 				6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */,
-				6BD1BDAE1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,7 +1401,6 @@
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
 				6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
-				6BD1BDAD1558BAC200F1D055 /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1874,6 +1874,7 @@
 		6BC9F6BE1458EBB5001AF204 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6BD1BDBA1558F19000F1D055 /* RaptureXML */,
 				6B558BCF15185AD400BD810C /* JRSwizzle */,
 				6B1107C714CD3DDC00D0A4FE /* MBProgressHUD */,
 				6BFDE7231495FA01005D332F /* objection */,
@@ -2013,6 +2014,15 @@
 			);
 			name = SDK;
 			path = "../../expanz-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		6BD1BDBA1558F19000F1D055 /* RaptureXML */ = {
+			isa = PBXGroup;
+			children = (
+				6BD1BDBB1558F19000F1D055 /* RXMLElement.h */,
+				6BD1BDBC1558F19000F1D055 /* RXMLElement.m */,
+			);
+			path = RaptureXML;
 			sourceTree = "<group>";
 		};
 		6BDAB0121499828800541056 /* Examples */ = {
@@ -2421,6 +2431,7 @@
 				6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */,
 				6BFDE7761495FA01005D35F7 /* UIButton+ExpanzTextures.h in Headers */,
 				6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */,
+				6BD1BDBD1558F19000F1D055 /* RXMLElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2912,6 +2923,7 @@
 				6BFDE7761495FA01005D35F5 /* UIButton+ExpanzTextures.m in Sources */,
 				6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */,
+				6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2989,6 +3001,7 @@
 				6BB713621544E560003614C2 /* Thermomix_DocumentMaintenance_Portal_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35CB /* erp365CRM_Person_Browse_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35D8 /* erp365CRM_Person_ViewController.m in Sources */,
+				6BD1BDC01558F19000F1D055 /* RXMLElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3175,6 +3188,7 @@
 				6B5171CE154FAC18003EB22C /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */,
 				6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */,
+				6BD1BDBF1558F19000F1D055 /* RXMLElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3220,6 +3234,10 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -3247,6 +3265,10 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
