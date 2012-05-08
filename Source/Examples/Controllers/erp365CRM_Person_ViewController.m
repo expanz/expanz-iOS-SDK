@@ -9,7 +9,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "erp365CRM_Person_ViewController.h"
 
 @implementation erp365CRM_Person_ViewController
@@ -46,6 +45,7 @@
 @synthesize ReceptionPhone = _ReceptionPhone;
 
 
+
 @synthesize BlogLabel = _BlogLabel;
 
 @synthesize DirectPhoneLabel = _DirectPhoneLabel;
@@ -76,7 +76,7 @@
 
 @synthesize ReceptionPhoneLabel = _ReceptionPhoneLabel;
 
-@synthesize scrollView = _scrollView;
+@synthesize scrollView = _scrollView; 
 
 
 - (IBAction) doDefaultActionMenu {
@@ -112,14 +112,6 @@
 }
 
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
-//    LogDebug(@"This is how tall I am: %@", NSStringFromCGRect(_scrollView.frame));
-//    CGFloat contentWidth = _scrollView.frame.size.width == 320 ? 320 : _scrollView.frame.size.width + 120;
-//    CGFloat contentHeight = _scrollView.frame.size.height == 416 ? 416 : _scrollView.frame.size.height + 120;
-//    _scrollView.contentSize = CGSizeMake(contentWidth, contentHeight);
-
-}
 
 
 @end
