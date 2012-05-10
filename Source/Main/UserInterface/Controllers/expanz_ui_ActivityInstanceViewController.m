@@ -102,7 +102,7 @@
     while ([_activityInstance allowsMethodInvocations] == NO) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         LogDebug(@"Waiting for model synchronization. . . ");
-        usleep(5000000);
+        usleep(5000);
     }
     MethodInvocationRequest* methodRequest =
             [[MethodInvocationRequest alloc] initWithActivityInstance:_activityInstance methodName:methodName];

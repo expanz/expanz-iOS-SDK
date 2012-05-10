@@ -167,14 +167,15 @@
         if (field != nil) {
             UIControl* uiControl = objc_msgSend(_controller, NSSelectorFromString(propertyName));
             if (field.datatype == ExpanzDataTypeString || field.datatype == ExpanzDataTypeNumber) {
-                UITextField* textField = (UITextField*) uiControl;
-                if (textField == nil) {
+                if (uiControl == nil) {
                     LogInfo(kNoMappingWarning, @"UITextField", field.fieldId);
                 }
                 else {
-                    [_textFieldMappings setObject:textField forKey:propertyName];
+                    [_textFieldMappings setObject:uiControl forKey:propertyName];
                     id<UITextFieldDelegate> delegate = _controller;
-                    [textField setDelegate:delegate];
+                    if ([uiControl respondsToSelector:@selector(setDelegate:)]) {
+                        [uiControl setValue:_controller forKey:@"delegate"];
+                    }
                 }
             }
         }
