@@ -33,7 +33,6 @@
     if (self) {
         self.title = @"activities";
         _sessionDataClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSessionDataClient)];
-        _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _reporter = [[JSObjection globalInjector] getObject:@protocol(expanz_ui_SystemEventReporter)];
 
         SessionDataRequest* sessionDataRequest =
@@ -134,7 +133,7 @@
     else {
         menuItem = [[_menu allMenuItems] objectAtIndex:indexPath.row];
     }
-    if ([_navigationManager showActivityFor:menuItem]) {
+    if ([[NavigationManager sharedNavigationManager] showActivityFor:menuItem]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

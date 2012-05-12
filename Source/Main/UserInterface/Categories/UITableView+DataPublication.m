@@ -13,21 +13,13 @@
 #import <objc/runtime.h>
 #import "UITableView+DataPublication.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
-#import "expanz_AppDelegate.h"
 #import "expanz_ui_FieldFilter.h"
 #import "expanz_ui_QueryDataSource.h"
 #import "JRSwizzle.h"
+#import "expanz_ui_NavigationManager.h"
 
 static char const* const fieldNameskey = "fieldNames";
 
-/* ================================================================================================================== */
-@interface UITableView (DataPublication_private)
-
-- (ActivityInstanceViewController*) activityController;
-
-@end
-
-/* ================================================================================================================== */
 @implementation UITableView (DataPublication)
 
 + (void) load {
@@ -37,31 +29,35 @@ static char const* const fieldNameskey = "fieldNames";
 
 
 - (void) setExpanzDataBinding:(BOOL)dataBinding {
-    ActivityInstanceViewController* activityController = [self activityController];
-    [activityController hasUITableView:self requestingDataBinding:dataBinding];
+    [[[NavigationManager sharedNavigationManager] currentActivityController]
+            hasUITableView:self requestingDataBinding:dataBinding];
 }
 
 - (void) setPopulateMethod:(NSString*)populateMethod {
-    ActivityInstanceViewController* activityController = [self activityController];
+    ActivityInstanceViewController* activityController =
+            [[NavigationManager sharedNavigationManager] currentActivityController];
     [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingPopulateMethod:populateMethod];
 }
 
 - (void) setQuery:(NSString*)query {
-    ActivityInstanceViewController* activityController = [self activityController];
+    ActivityInstanceViewController* activityController =
+            [[NavigationManager sharedNavigationManager] currentActivityController];
     [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingQuery:query];
 }
 
 - (void) setAutoPopulate:(BOOL)autoPopulate {
-    ActivityInstanceViewController* activityController = [self activityController];
+    ActivityInstanceViewController* activityController =
+            [[NavigationManager sharedNavigationManager] currentActivityController];
     [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingAutoPopulate:autoPopulate];
 }
 
 
 - (void) setContextObject:(NSString*)contextObject {
-    ActivityInstanceViewController* activityController = [self activityController];
+    ActivityInstanceViewController* activityController =
+            [[NavigationManager sharedNavigationManager] currentActivityController];
     [activityController hasUITableView:self requestingDataBinding:YES];
     [activityController hasUITableView:self requestingContextObject:contextObject];
 }
@@ -79,7 +75,6 @@ static char const* const fieldNameskey = "fieldNames";
 }
 
 
-
 - (void) setMyDataSource:(id<UITableViewDataSource>)dataSource {
     if ([dataSource isKindOfClass:[QueryDataSource class]]) {
         QueryDataSource* queryDataSource = (QueryDataSource*) dataSource;
@@ -93,16 +88,5 @@ static char const* const fieldNameskey = "fieldNames";
     }
 }
 
-
-/* ================================================== Private Methods =============================================== */
-
-- (ActivityInstanceViewController*) activityController {
-    id appDelegate = (SdkAppDelegate*) [UIApplication sharedApplication].delegate;
-    UIViewController* topController = [appDelegate navigationController].topViewController;
-    if ([topController isKindOfClass:([ActivityInstanceViewController class])]) {
-        return (ActivityInstanceViewController*) topController;
-    }
-    return nil;
-}
 
 @end

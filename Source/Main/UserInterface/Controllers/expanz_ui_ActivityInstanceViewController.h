@@ -34,7 +34,6 @@
     MBProgressHUD* _loadingHud;
     id<ExpanzActivityClient> _activityClient;
     expanz_service_CreateActivityRequest* _activityRequest;
-    expanz_ui_NavigationManager* _navigationManager;
     UIImageView* _currentlyEditingImageView;
     BOOL _shouldInitializeModelAdapterOnNextResponse;
 }

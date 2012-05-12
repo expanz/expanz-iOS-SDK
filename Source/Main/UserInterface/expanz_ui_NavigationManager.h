@@ -13,6 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "Objection.h"
 #import "expanz_ui_SystemEventReporter.h"
+#import "expanz_ui_ActivityInstanceViewController.h"
 
 @class expanz_model_MenuItem;
 @class expanz_ui_ActivityInstanceViewController;
@@ -30,6 +31,8 @@
 
 @property(nonatomic, strong) id<expanz_ui_SystemEventReporter> reporter;
 
++ (expanz_ui_NavigationManager*) sharedNavigationManager;
+
 - (expanz_ui_ActivityMenuViewController*) showMainMenu;
 
 - (expanz_ui_ActivityInstanceViewController*) showActivityFor:(expanz_model_MenuItem*)menuItem;
@@ -38,6 +41,8 @@
         initialKey:(NSString*)initialKey;
 
 - (expanz_ui_DocumentViewController*) showDocument:(NSString*)documentId;
+
+- (ActivityInstanceViewController*) currentActivityController;
 
 @end
 

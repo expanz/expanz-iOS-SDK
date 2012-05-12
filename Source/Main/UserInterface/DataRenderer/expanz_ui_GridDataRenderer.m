@@ -87,7 +87,7 @@
 
     MenuItem* menuItem =
             [[MenuItem alloc] initWithActivityId:self.activityName title:@"Edit" style:[ActivityStyle defaultStyle]];
-    if ([self.activityManager showActivityFor:menuItem initialKey:row.rowId]) {
+    if ([[NavigationManager sharedNavigationManager] showActivityFor:menuItem initialKey:row.rowId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

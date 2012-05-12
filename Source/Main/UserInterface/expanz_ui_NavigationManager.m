@@ -16,12 +16,10 @@
 #import "expanz_AppDelegate.h"
 #import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_ActivityMenuViewController.h"
-#import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_DocumentViewController.h"
 #import "expanz_model_ActivityInstance.h"
 #import "expanz_ui_ActivityControllerBuilder.h"
 
-/* ================================================================================================================== */
 @implementation expanz_ui_NavigationManager
 
 objection_register_singleton(expanz_ui_NavigationManager)
@@ -29,6 +27,10 @@ objection_requires(@"reporter")
 
 @synthesize reporter = _reporter;
 
+/* ================================================= Class Methods ================================================== */
++ (expanz_ui_NavigationManager*) sharedNavigationManager {
+    return [[JSObjection globalInjector] getObject:[NavigationManager class]];
+}
 
 /* ================================================== Initializers ================================================== */
 - (id) init {
@@ -87,6 +89,17 @@ objection_requires(@"reporter")
     [_navigationController pushViewController:documentViewController animated:YES];
     return documentViewController;
 }
+
+/* ================================================================================================================== */
+- (ActivityInstanceViewController*) currentActivityController {
+    SdkAppDelegate* appDelegate = (SdkAppDelegate*) [UIApplication sharedApplication].delegate;
+    UIViewController* topController = [appDelegate navigationController].topViewController;
+    if ([topController isKindOfClass:([ActivityInstanceViewController class])]) {
+        return (ActivityInstanceViewController*) topController;
+    }
+    return nil;
+}
+
 
 
 @end

@@ -29,7 +29,6 @@
 #import "MBProgressHUD.h"
 #import "expanz_ui_ActivityInstanceViewController.h"
 #import "expanz_ui_ModelAdapter.h"
-#import "expanz_ui_NavigationManager.h"
 #import "expanz_ui_TextInputUtils.h"
 #import "RTProperty.h"
 #import "expanz_ui_utils_ViewTagger.h"
@@ -67,7 +66,6 @@
     self = [super initWithNibName:nibName bundle:[NSBundle mainBundle]];
     if (self) {
         _activityClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzActivityClient)];
-        _navigationManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _activityId = [activityId copy];
         [self setTitle:title];
         _style = style;

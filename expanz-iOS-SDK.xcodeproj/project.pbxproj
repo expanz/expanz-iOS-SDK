@@ -263,7 +263,6 @@
 		6B558BD415185AD400BD810C /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B558BD115185AD400BD810C /* JRSwizzle.m */; };
 		6B59CFF414FF19FF002F25CA /* ListActivitiesForSiteXResult.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B59CFF314FF19FF002F25CA /* ListActivitiesForSiteXResult.xml */; };
 		6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B65251432A07B00B584C1 /* libsqlite3.dylib */; };
-		6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */; };
 		6B6E859714EFF4FF00FA4B5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
 		6B6E859914EFF52900FA4B5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */; };
 		6B6E859B14EFF54B00FA4B5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
@@ -375,12 +374,6 @@
 		6B9FC79C14FDAB8200E4CB2C /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7041458EBB5001AF204 /* RTUnregisteredClass.h */; };
 		6B9FC79D14FDAB8200E4CB2C /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7231458EBB6001AF204 /* Reachability.h */; };
 		6B9FC79E14FDAB8200E4CB2C /* NSData+ExpanzAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA4DD5C14E926970061FAC9 /* NSData+ExpanzAdditions.h */; };
-		6B9FC7A214FDAB8200E4CB2C /* NSNotificationCenter+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72C1458EBB6001AF204 /* NSNotificationCenter+OCMAdditions.h */; };
-		6B9FC7A314FDAB8200E4CB2C /* OCMArg.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72D1458EBB6001AF204 /* OCMArg.h */; };
-		6B9FC7A414FDAB8200E4CB2C /* OCMConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72E1458EBB6001AF204 /* OCMConstraint.h */; };
-		6B9FC7A514FDAB8200E4CB2C /* OCMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F72F1458EBB6001AF204 /* OCMock.h */; };
-		6B9FC7A614FDAB8200E4CB2C /* OCMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7301458EBB6001AF204 /* OCMockObject.h */; };
-		6B9FC7A714FDAB8200E4CB2C /* OCMockRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC9F7311458EBB6001AF204 /* OCMockRecorder.h */; };
 		6B9FC7A814FDAB8200E4CB2C /* ExpanzAbstractServiceClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3553 /* ExpanzAbstractServiceClientDelegate.h */; };
 		6B9FC7A914FDAB8200E4CB2C /* ExpanzActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB7027014F3C78B0029A94B /* ExpanzActivityClient.h */; };
 		6B9FC7AB14FDAB8200E4CB2C /* expanz_service_DefaultActivityClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB7027214F3C78B0029A94B /* expanz_service_DefaultActivityClient.h */; };
@@ -508,7 +501,7 @@
 		6BB1BB3C1551FBFE0012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB5315520F530012C252 /* UserNameAndPasswordTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */; };
 		6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
-		6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
+		6BB1EF1D154BFE7E000C1C86 /* UIScrollView+ContentSizeUtils.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+ContentSizeUtils.h */; };
 		6BB47E4E15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E4F15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB47E4D15410AD700D8A0A7 /* erp365CRM_Company_Browse_ViewController.m */; };
 		6BB47E5215410AE900D8A0A7 /* erp365CRM.Company.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB47E5115410AE900D8A0A7 /* erp365CRM.Company.Browse.xib */; };
@@ -600,6 +593,7 @@
 		6BBC3ADC153C2CB100E68952 /* my details.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD6153C2CB100E68952 /* my details.png */; };
 		6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BBE1834153FDA530027EC0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
+		6BC17F22155E3BFE000B3AA4 /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -775,8 +769,8 @@
 		6BFDE7761495FA01005D35D1 /* erp365CRM.Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */; };
 		6BFDE7761495FA01005D35D6 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
 		6BFDE7761495FA01005D35D8 /* erp365CRM_Person_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */; };
-		6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */; };
-		6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */; };
+		6BFDE7761495FA01005D35DA /* UIScrollView+ContentSizeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35D9 /* UIScrollView+ContentSizeUtils.m */; };
+		6BFDE7761495FA01005D35DC /* UIScrollView+ContentSizeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DB /* UIScrollView+ContentSizeUtils.h */; };
 		6BFDE7761495FA01005D35DE /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
 		6BFDE7761495FA01005D35DF /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
 		6BFDE7761495FA01005D35E0 /* erp365NewCompany.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */; };
@@ -800,7 +794,7 @@
 		6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */; };
 		6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */; };
 		6BFDE7761495FA01005D360A /* UIButton+ExpanzTextures.h in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3609 /* UIButton+ExpanzTextures.h */; };
-		6BFDE7761495FA01005D360D /* UINavigationController+PushPopRotated.h in Headers */ = {isa = PBXBuildFile; };
+		6BFDE7761495FA01005D360D /* (null) in Headers */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -850,7 +844,7 @@
 				6B51715B154D1DE9003EB22C /* expanz_utils_BundleResource.h in Copy Headers */,
 				6B51715C154D1DE9003EB22C /* NSString+Contains.h in Copy Headers */,
 				6B51715D154D1DE9003EB22C /* xml_Serializable.h in Copy Headers */,
-				6BB1EF1D154BFE7E000C1C86 /* UIScrollView+AutoContentSize.h in Copy Headers */,
+				6BB1EF1D154BFE7E000C1C86 /* UIScrollView+ContentSizeUtils.h in Copy Headers */,
 				6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */,
 				6B18A31E15187A3500521FC1 /* expanz_AppDelegate.h in Copy Headers */,
 				6B18A31F15187A3500521FC1 /* expanz_UserInterfaceModule.h in Copy Headers */,
@@ -1156,6 +1150,7 @@
 		6BBC3AD5153C2CB100E68952 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
 		6BBC3AD6153C2CB100E68952 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
 		6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
+		6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Kiwi-iOS.framework"; sourceTree = "<group>"; };
 		6BC9F6F61458EBB5001AF204 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC9F6F81458EBB5001AF204 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1173,18 +1168,10 @@
 		6BC9F7051458EBB5001AF204 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		6BC9F7231458EBB6001AF204 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BC9F7241458EBB6001AF204 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		6BC9F72C1458EBB6001AF204 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		6BC9F72D1458EBB6001AF204 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
-		6BC9F72E1458EBB6001AF204 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
-		6BC9F72F1458EBB6001AF204 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
-		6BC9F7301458EBB6001AF204 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
-		6BC9F7311458EBB6001AF204 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
-		6BC9F7321458EBB6001AF204 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		6BCAFB9714317B1C00575280 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCAFB9B14317B1C00575280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BCAFB9D14317B1C00575280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BCAFB9F14317B1C00575280 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RaptureXML.framework; sourceTree = "<group>"; };
 		6BD1BDBB1558F19000F1D055 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		6BD1BDBC1558F19000F1D055 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
@@ -1316,8 +1303,8 @@
 		6BFDE7761495FA01005D35D0 /* erp365CRM.Person.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = erp365CRM.Person.xib; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35D4 /* erp365CRM_Person_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = erp365CRM_Person_ViewController.h; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35D5 /* erp365CRM_Person_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = erp365CRM_Person_ViewController.m; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AutoContentSize.m"; sourceTree = "<group>"; };
-		6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AutoContentSize.h"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35D9 /* UIScrollView+ContentSizeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ContentSizeUtils.m"; sourceTree = "<group>"; };
+		6BFDE7761495FA01005D35DB /* UIScrollView+ContentSizeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ContentSizeUtils.h"; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35DD /* erp365NewCompany.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = erp365NewCompany.xml; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35E2 /* expanz_ui_utils_ViewTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_ui_utils_ViewTagger.m; sourceTree = "<group>"; };
 		6BFDE7761495FA01005D35E4 /* expanz_ui_utils_ViewTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_utils_ViewTagger.h; sourceTree = "<group>"; };
@@ -1359,7 +1346,7 @@
 				6B6E859714EFF4FF00FA4B5D /* QuartzCore.framework in Frameworks */,
 				6B1F20E314EFDDE9009651FB /* SenTestingKit.framework in Frameworks */,
 				6B1F20E614EFDDE9009651FB /* Foundation.framework in Frameworks */,
-				6B6E854314EFF39500FA4B5D /* Kiwi-iOS.framework in Frameworks */,
+				6BC17F22155E3BFE000B3AA4 /* Kiwi-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,8 +1495,8 @@
 				6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */,
 				6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */,
 				6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */,
-				6BFDE7761495FA01005D35DB /* UIScrollView+AutoContentSize.h */,
-				6BFDE7761495FA01005D35D9 /* UIScrollView+AutoContentSize.m */,
+				6BFDE7761495FA01005D35DB /* UIScrollView+ContentSizeUtils.h */,
+				6BFDE7761495FA01005D35D9 /* UIScrollView+ContentSizeUtils.m */,
 				6B41A09B151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.h */,
 				6B41A09C151877BD009ED6D0 /* expanz_model_AbstractData+DataRenderer.m */,
 				6B41A09D151877BD009ED6D0 /* UITableView+DataPublication.h */,
@@ -1875,7 +1862,6 @@
 			children = (
 				6BC9F6BE1458EBB5001AF204 /* External */,
 				6BC9F7251458EBB6001AF204 /* Frameworks */,
-				6BC9F7281458EBB6001AF204 /* Libraries */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -1936,48 +1922,10 @@
 		6BC9F7251458EBB6001AF204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BD1BDAB1558BAC200F1D055 /* RaptureXML.framework */,
+				6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */,
 				6BCAFB9A14317B1C00575280 /* SDK */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		6BC9F7281458EBB6001AF204 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				6BC9F7291458EBB6001AF204 /* OCMock */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		6BC9F7291458EBB6001AF204 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				6BC9F72A1458EBB6001AF204 /* Headers */,
-				6BC9F7321458EBB6001AF204 /* libOCMock.a */,
-			);
-			path = OCMock;
-			sourceTree = "<group>";
-		};
-		6BC9F72A1458EBB6001AF204 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				6BC9F72B1458EBB6001AF204 /* OCMock */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		6BC9F72B1458EBB6001AF204 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				6BC9F72C1458EBB6001AF204 /* NSNotificationCenter+OCMAdditions.h */,
-				6BC9F72D1458EBB6001AF204 /* OCMArg.h */,
-				6BC9F72E1458EBB6001AF204 /* OCMConstraint.h */,
-				6BC9F72F1458EBB6001AF204 /* OCMock.h */,
-				6BC9F7301458EBB6001AF204 /* OCMockObject.h */,
-				6BC9F7311458EBB6001AF204 /* OCMockRecorder.h */,
-			);
-			path = OCMock;
 			sourceTree = "<group>";
 		};
 		6BCAFB8C14317B1B00575280 = {
@@ -2349,12 +2297,6 @@
 				6B9FC79C14FDAB8200E4CB2C /* RTUnregisteredClass.h in Headers */,
 				6B9FC79D14FDAB8200E4CB2C /* Reachability.h in Headers */,
 				6B9FC79E14FDAB8200E4CB2C /* NSData+ExpanzAdditions.h in Headers */,
-				6B9FC7A214FDAB8200E4CB2C /* NSNotificationCenter+OCMAdditions.h in Headers */,
-				6B9FC7A314FDAB8200E4CB2C /* OCMArg.h in Headers */,
-				6B9FC7A414FDAB8200E4CB2C /* OCMConstraint.h in Headers */,
-				6B9FC7A514FDAB8200E4CB2C /* OCMock.h in Headers */,
-				6B9FC7A614FDAB8200E4CB2C /* OCMockObject.h in Headers */,
-				6B9FC7A714FDAB8200E4CB2C /* OCMockRecorder.h in Headers */,
 				6B9FC7A814FDAB8200E4CB2C /* ExpanzAbstractServiceClientDelegate.h in Headers */,
 				6B9FC7A914FDAB8200E4CB2C /* ExpanzActivityClient.h in Headers */,
 				6B9FC7AB14FDAB8200E4CB2C /* expanz_service_DefaultActivityClient.h in Headers */,
@@ -2431,7 +2373,7 @@
 				6B41A116151877BD009ED6D0 /* expanz_ui_TextInputUtils.h in Headers */,
 				6B3EEC60153BE66C001A3579 /* expanz_utils_BundleResource.h in Headers */,
 				6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */,
-				6BFDE7761495FA01005D35DC /* UIScrollView+AutoContentSize.h in Headers */,
+				6BFDE7761495FA01005D35DC /* UIScrollView+ContentSizeUtils.h in Headers */,
 				6BFDE7761495FA01005D35E5 /* expanz_ui_utils_ViewTagger.h in Headers */,
 				6BFDE7761495FA01005D35E9 /* expanz_ui_ActivityControllerBuilder.h in Headers */,
 				6BFDE7761495FA01005D35ED /* NSString+ExpanzUtils.h in Headers */,
@@ -2441,7 +2383,7 @@
 				6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */,
 				6BD1BDBD1558F19000F1D055 /* RXMLElement.h in Headers */,
 				6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */,
-				6BFDE7761495FA01005D360D /* UINavigationController+PushPopRotated.h in Headers */,
+				6BFDE7761495FA01005D360D /* (null) in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2927,7 +2869,7 @@
 				6B41A112151877BD009ED6D0 /* expanz_ui_NavigationManager.m in Sources */,
 				6B41A117151877BD009ED6D0 /* expanz_ui_TextInputUtils.m in Sources */,
 				6B3EEC62153BE66C001A3579 /* expanz_utils_BundleResource.m in Sources */,
-				6BFDE7761495FA01005D35DA /* UIScrollView+AutoContentSize.m in Sources */,
+				6BFDE7761495FA01005D35DA /* UIScrollView+ContentSizeUtils.m in Sources */,
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
@@ -3309,9 +3251,17 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					"\"$SRCROOT/Dependencies/Libraries/Kiwi\"",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -3338,9 +3288,17 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					"\"$SRCROOT/Dependencies/Libraries/Kiwi\"",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

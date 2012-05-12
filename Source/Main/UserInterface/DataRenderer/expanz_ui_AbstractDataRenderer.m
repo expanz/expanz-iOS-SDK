@@ -16,7 +16,6 @@
 
 @implementation expanz_ui_AbstractDataRenderer
 
-@synthesize activityManager = _activityManager;
 @synthesize data = _data;
 @synthesize tableView = _tableView;
 @synthesize activityName = _activityName;
@@ -33,7 +32,6 @@
         _data = data;
         _tableView = tableView;
         _activityName = [activityName copy];
-        _activityManager = [[JSObjection globalInjector] getObject:[NavigationManager class]];
         _filteredListContent = [[NSMutableArray alloc] init];
     }
     return self;

@@ -9,8 +9,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "UIScrollView+AutoContentSize.h"
 
+#import "UIScrollView+ContentSizeUtils.h"
 
 @implementation UIScrollView (AutoContentSize)
 

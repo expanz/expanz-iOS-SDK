@@ -23,8 +23,6 @@
 
 }
 
-@property(nonatomic, strong) expanz_ui_NavigationManager* activityManager;
-
 /**
 * Data to be rendered.
 */

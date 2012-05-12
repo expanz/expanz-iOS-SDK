@@ -85,7 +85,7 @@
 
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     File* file = [self tableView:tableView fileForIndexPath:indexPath];
-    if ([self.activityManager showDocument:file.fileId]) {
+    if ([[NavigationManager sharedNavigationManager] showDocument:file.fileId]) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
 }

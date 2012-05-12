@@ -15,6 +15,6 @@
 
 - (void) setGlossy:(BOOL)glossy;
 
-- (void) setStain:(NSString*)stain;
+- (void) setStain:(UIColor*)stainColor;
 
 @end
