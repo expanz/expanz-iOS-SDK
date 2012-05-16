@@ -11,9 +11,17 @@
 
 #import <Foundation/Foundation.h>
 
+static int const CONTENT_MARGIN = 50;
+static short const PORTRAIT_WIDTH = 320;
+static short const PORTRAIT_HEIGHT = 416;
+
 @interface UIScrollView (AutoContentSize)
 
-- (void) setAutosizeContent:(BOOL)autosizeContent;
+- (void) setAutoContentSizePortrait:(BOOL)autosizeContent;
+
+- (void) setAutoContentSizePortraitHorizontal:(BOOL)autosizeContent;
+
+- (void) setAutoContentSizePortraitVertical:(BOOL)autosizeContent;
 
 
 @end
