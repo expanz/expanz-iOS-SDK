@@ -182,15 +182,6 @@
 				<key>Path</key>
 				<string>ExpanzFrameworks/expanziOS.framework</string>
 			</dict>
-			<key>ExpanzFrameworks/LRResty.framework</key>
-			<dict>
-				<key>Group</key>
-				<array>
-					<string>Supporting Files</string>
-				</array>
-				<key>Path</key>
-				<string>ExpanzFrameworks/LRResty.framework</string>
-			</dict>
 		</dict>
 		<key>Nodes</key>
 		<array>
@@ -210,7 +201,6 @@
 			<string>Supporting Files/production_environment.xml</string>
 			<string>Supporting Files/test_environment.xml</string>			
 			<string>ExpanzFrameworks/expanziOS.framework</string>
-			<string>ExpanzFrameworks/LRResty.framework</string>			
 		</array>
 	</dict>
 
