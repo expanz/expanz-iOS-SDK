@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import <LRResty/LRResty.h>
+#import "LRResty.h"
 #import "expanz_model_ImageGridDataCell.h"
 #import "expanz_SdkConfiguration.h"
 

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import <LRResty/LRResty.h>
+#import "LRResty.h"
 #import "xml_Serializable.h"
 
 @class expanz_SdkConfiguration;

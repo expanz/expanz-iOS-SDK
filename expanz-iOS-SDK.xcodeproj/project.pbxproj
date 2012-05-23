@@ -492,8 +492,6 @@
 		6B9FC83714FDABA600E4CB2C /* expanz_SdkConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_SdkConfiguration.h */; };
 		6B9FC83814FDABA600E4CB2C /* expanz_CoreModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; };
 		6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
-		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BAA7E2E155150BA00399A27 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
@@ -594,6 +592,79 @@
 		6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BBE1834153FDA530027EC0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
 		6BC17F22155E3BFE000B3AA4 /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */; };
+		6BC89F2A156CF99D00FE32EC /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89EF7156CF99D00FE32EC /* NSData+Base64.h */; };
+		6BC89F2B156CF99E00FE32EC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EF8156CF99D00FE32EC /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F2C156CF99E00FE32EC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EF8156CF99D00FE32EC /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F2D156CF99E00FE32EC /* NSDictionary+QueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89EF9156CF99D00FE32EC /* NSDictionary+QueryString.h */; };
+		6BC89F2E156CF99E00FE32EC /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFA156CF99D00FE32EC /* NSDictionary+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F2F156CF99E00FE32EC /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFA156CF99D00FE32EC /* NSDictionary+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F30156CF99E00FE32EC /* NSObject+Tap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89EFB156CF99D00FE32EC /* NSObject+Tap.h */; };
+		6BC89F31156CF99E00FE32EC /* NSObject+Tap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFC156CF99D00FE32EC /* NSObject+Tap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F32156CF99E00FE32EC /* NSObject+Tap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFC156CF99D00FE32EC /* NSObject+Tap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F33156CF99E00FE32EC /* NSRunLoop+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89EFD156CF99D00FE32EC /* NSRunLoop+Additions.h */; };
+		6BC89F34156CF99E00FE32EC /* NSRunLoop+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFE156CF99D00FE32EC /* NSRunLoop+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F35156CF99E00FE32EC /* NSRunLoop+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89EFE156CF99D00FE32EC /* NSRunLoop+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F36156CF99E00FE32EC /* NSString+QueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89EFF156CF99D00FE32EC /* NSString+QueryString.h */; };
+		6BC89F37156CF99E00FE32EC /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F00156CF99D00FE32EC /* NSString+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F38156CF99E00FE32EC /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F00156CF99D00FE32EC /* NSString+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F39156CF99E00FE32EC /* NSURL+QueryInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F01156CF99D00FE32EC /* NSURL+QueryInspector.h */; };
+		6BC89F3A156CF99E00FE32EC /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F02156CF99D00FE32EC /* NSURL+QueryInspector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F3B156CF99E00FE32EC /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F02156CF99D00FE32EC /* NSURL+QueryInspector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F3C156CF99E00FE32EC /* LRResty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F03156CF99D00FE32EC /* LRResty.h */; };
+		6BC89F3D156CF99E00FE32EC /* LRResty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F04156CF99D00FE32EC /* LRResty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F3E156CF99E00FE32EC /* LRResty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F04156CF99D00FE32EC /* LRResty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F3F156CF99E00FE32EC /* LRRestyClient+DELETE.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F05156CF99D00FE32EC /* LRRestyClient+DELETE.h */; };
+		6BC89F40156CF99E00FE32EC /* LRRestyClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F06156CF99D00FE32EC /* LRRestyClient+DELETE.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F41156CF99E00FE32EC /* LRRestyClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F06156CF99D00FE32EC /* LRRestyClient+DELETE.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F42156CF99E00FE32EC /* LRRestyClient+GET.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F07156CF99D00FE32EC /* LRRestyClient+GET.h */; };
+		6BC89F43156CF99E00FE32EC /* LRRestyClient+GET.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F08156CF99D00FE32EC /* LRRestyClient+GET.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F44156CF99E00FE32EC /* LRRestyClient+GET.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F08156CF99D00FE32EC /* LRRestyClient+GET.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F45156CF99E00FE32EC /* LRRestyClient+POST.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F09156CF99D00FE32EC /* LRRestyClient+POST.h */; };
+		6BC89F46156CF99E00FE32EC /* LRRestyClient+POST.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0A156CF99D00FE32EC /* LRRestyClient+POST.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F47156CF99E00FE32EC /* LRRestyClient+POST.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0A156CF99D00FE32EC /* LRRestyClient+POST.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F48156CF99E00FE32EC /* LRRestyClient+PUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F0B156CF99D00FE32EC /* LRRestyClient+PUT.h */; };
+		6BC89F49156CF99E00FE32EC /* LRRestyClient+PUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0C156CF99D00FE32EC /* LRRestyClient+PUT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F4A156CF99E00FE32EC /* LRRestyClient+PUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0C156CF99D00FE32EC /* LRRestyClient+PUT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F4B156CF99E00FE32EC /* LRRestyClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F0D156CF99D00FE32EC /* LRRestyClient.h */; };
+		6BC89F4C156CF99E00FE32EC /* LRRestyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0E156CF99D00FE32EC /* LRRestyClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F4D156CF99E00FE32EC /* LRRestyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F0E156CF99D00FE32EC /* LRRestyClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F4E156CF99E00FE32EC /* LRRestyClientBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F0F156CF99D00FE32EC /* LRRestyClientBlockDelegate.h */; };
+		6BC89F4F156CF99E00FE32EC /* LRRestyClientBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F10156CF99D00FE32EC /* LRRestyClientBlockDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F50156CF99E00FE32EC /* LRRestyClientBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F10156CF99D00FE32EC /* LRRestyClientBlockDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F51156CF99E00FE32EC /* LRRestyClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F11156CF99D00FE32EC /* LRRestyClientDelegate.h */; };
+		6BC89F52156CF99E00FE32EC /* LRRestyClientProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F12156CF99D00FE32EC /* LRRestyClientProxyDelegate.h */; };
+		6BC89F53156CF99E00FE32EC /* LRRestyClientProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F13156CF99D00FE32EC /* LRRestyClientProxyDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F54156CF99E00FE32EC /* LRRestyClientProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F13156CF99D00FE32EC /* LRRestyClientProxyDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F55156CF99E00FE32EC /* LRRestyClientResponseDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F14156CF99D00FE32EC /* LRRestyClientResponseDelegate.h */; };
+		6BC89F56156CF99E00FE32EC /* LRRestyClientStreamingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F15156CF99D00FE32EC /* LRRestyClientStreamingDelegate.h */; };
+		6BC89F57156CF99E00FE32EC /* LRRestyClientStreamingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F16156CF99D00FE32EC /* LRRestyClientStreamingDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F58156CF99E00FE32EC /* LRRestyClientStreamingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F16156CF99D00FE32EC /* LRRestyClientStreamingDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F59156CF99E00FE32EC /* LRRestyHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F17156CF99D00FE32EC /* LRRestyHTTPClient.h */; };
+		6BC89F5A156CF99E00FE32EC /* LRRestyHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F18156CF99D00FE32EC /* LRRestyHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F5B156CF99E00FE32EC /* LRRestyHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F18156CF99D00FE32EC /* LRRestyHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F5C156CF99E00FE32EC /* LRRestyRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F19156CF99D00FE32EC /* LRRestyRequest+Internal.h */; };
+		6BC89F5D156CF99E00FE32EC /* LRRestyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F1A156CF99D00FE32EC /* LRRestyRequest.h */; };
+		6BC89F5E156CF99E00FE32EC /* LRRestyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F1B156CF99D00FE32EC /* LRRestyRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F5F156CF99E00FE32EC /* LRRestyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F1B156CF99D00FE32EC /* LRRestyRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F60156CF99E00FE32EC /* LRRestyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F1C156CF99D00FE32EC /* LRRestyRequestDelegate.h */; };
+		6BC89F61156CF99E00FE32EC /* LRRestyRequestPayload.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F1D156CF99D00FE32EC /* LRRestyRequestPayload.h */; };
+		6BC89F62156CF99E00FE32EC /* LRRestyRequestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F1E156CF99D00FE32EC /* LRRestyRequestPayload.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F63156CF99E00FE32EC /* LRRestyRequestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F1E156CF99D00FE32EC /* LRRestyRequestPayload.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F64156CF99E00FE32EC /* LRRestyResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F1F156CF99D00FE32EC /* LRRestyResource.h */; };
+		6BC89F65156CF99E00FE32EC /* LRRestyResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F20156CF99D00FE32EC /* LRRestyResource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F66156CF99E00FE32EC /* LRRestyResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F20156CF99D00FE32EC /* LRRestyResource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F67156CF99E00FE32EC /* LRRestyResourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F21156CF99D00FE32EC /* LRRestyResourceDelegate.h */; };
+		6BC89F68156CF99E00FE32EC /* LRRestyResponse+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F22156CF99D00FE32EC /* LRRestyResponse+Internal.h */; };
+		6BC89F69156CF99E00FE32EC /* LRRestyResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F23156CF99D00FE32EC /* LRRestyResponse.h */; };
+		6BC89F6A156CF99E00FE32EC /* LRRestyResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F24156CF99D00FE32EC /* LRRestyResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F6B156CF99E00FE32EC /* LRRestyResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F24156CF99D00FE32EC /* LRRestyResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F6C156CF99E00FE32EC /* LRRestyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F25156CF99D00FE32EC /* LRRestyTypes.h */; };
+		6BC89F6D156CF99E00FE32EC /* LRSynchronousProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F26156CF99D00FE32EC /* LRSynchronousProxy.h */; };
+		6BC89F6E156CF99E00FE32EC /* LRSynchronousProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F27156CF99D00FE32EC /* LRSynchronousProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F6F156CF99E00FE32EC /* LRSynchronousProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F27156CF99D00FE32EC /* LRSynchronousProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F70156CF99E00FE32EC /* LRURLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC89F28156CF99D00FE32EC /* LRURLRequestOperation.h */; };
+		6BC89F71156CF99E00FE32EC /* LRURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F29156CF99D00FE32EC /* LRURLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BC89F72156CF99E00FE32EC /* LRURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC89F29156CF99D00FE32EC /* LRURLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -783,13 +854,11 @@
 		6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EE /* expanzCore.h */; };
 		6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */; };
 		6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F2 /* expanziOS.h */; };
-		6BFDE7761495FA01005D35F5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FB /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
 		6BFDE7761495FA01005D35FE /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
-		6BFDE7761495FA01005D3600 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */; };
 		6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */; };
 		6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */; };
@@ -1151,6 +1220,57 @@
 		6BBC3AD6153C2CB100E68952 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
 		6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
 		6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Kiwi-iOS.framework"; sourceTree = "<group>"; };
+		6BC89EF7156CF99D00FE32EC /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		6BC89EF8156CF99D00FE32EC /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		6BC89EF9156CF99D00FE32EC /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		6BC89EFA156CF99D00FE32EC /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		6BC89EFB156CF99D00FE32EC /* NSObject+Tap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tap.h"; sourceTree = "<group>"; };
+		6BC89EFC156CF99D00FE32EC /* NSObject+Tap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tap.m"; sourceTree = "<group>"; };
+		6BC89EFD156CF99D00FE32EC /* NSRunLoop+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+Additions.h"; sourceTree = "<group>"; };
+		6BC89EFE156CF99D00FE32EC /* NSRunLoop+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+Additions.m"; sourceTree = "<group>"; };
+		6BC89EFF156CF99D00FE32EC /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
+		6BC89F00156CF99D00FE32EC /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
+		6BC89F01156CF99D00FE32EC /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
+		6BC89F02156CF99D00FE32EC /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
+		6BC89F03156CF99D00FE32EC /* LRResty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRResty.h; sourceTree = "<group>"; };
+		6BC89F04156CF99D00FE32EC /* LRResty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRResty.m; sourceTree = "<group>"; };
+		6BC89F05156CF99D00FE32EC /* LRRestyClient+DELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+DELETE.h"; sourceTree = "<group>"; };
+		6BC89F06156CF99D00FE32EC /* LRRestyClient+DELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+DELETE.m"; sourceTree = "<group>"; };
+		6BC89F07156CF99D00FE32EC /* LRRestyClient+GET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+GET.h"; sourceTree = "<group>"; };
+		6BC89F08156CF99D00FE32EC /* LRRestyClient+GET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+GET.m"; sourceTree = "<group>"; };
+		6BC89F09156CF99D00FE32EC /* LRRestyClient+POST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+POST.h"; sourceTree = "<group>"; };
+		6BC89F0A156CF99D00FE32EC /* LRRestyClient+POST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+POST.m"; sourceTree = "<group>"; };
+		6BC89F0B156CF99D00FE32EC /* LRRestyClient+PUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+PUT.h"; sourceTree = "<group>"; };
+		6BC89F0C156CF99D00FE32EC /* LRRestyClient+PUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+PUT.m"; sourceTree = "<group>"; };
+		6BC89F0D156CF99D00FE32EC /* LRRestyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClient.h; sourceTree = "<group>"; };
+		6BC89F0E156CF99D00FE32EC /* LRRestyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClient.m; sourceTree = "<group>"; };
+		6BC89F0F156CF99D00FE32EC /* LRRestyClientBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientBlockDelegate.h; sourceTree = "<group>"; };
+		6BC89F10156CF99D00FE32EC /* LRRestyClientBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientBlockDelegate.m; sourceTree = "<group>"; };
+		6BC89F11156CF99D00FE32EC /* LRRestyClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientDelegate.h; sourceTree = "<group>"; };
+		6BC89F12156CF99D00FE32EC /* LRRestyClientProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientProxyDelegate.h; sourceTree = "<group>"; };
+		6BC89F13156CF99D00FE32EC /* LRRestyClientProxyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientProxyDelegate.m; sourceTree = "<group>"; };
+		6BC89F14156CF99D00FE32EC /* LRRestyClientResponseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientResponseDelegate.h; sourceTree = "<group>"; };
+		6BC89F15156CF99D00FE32EC /* LRRestyClientStreamingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientStreamingDelegate.h; sourceTree = "<group>"; };
+		6BC89F16156CF99D00FE32EC /* LRRestyClientStreamingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientStreamingDelegate.m; sourceTree = "<group>"; };
+		6BC89F17156CF99D00FE32EC /* LRRestyHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyHTTPClient.h; sourceTree = "<group>"; };
+		6BC89F18156CF99D00FE32EC /* LRRestyHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyHTTPClient.m; sourceTree = "<group>"; };
+		6BC89F19156CF99D00FE32EC /* LRRestyRequest+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyRequest+Internal.h"; sourceTree = "<group>"; };
+		6BC89F1A156CF99D00FE32EC /* LRRestyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequest.h; sourceTree = "<group>"; };
+		6BC89F1B156CF99D00FE32EC /* LRRestyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyRequest.m; sourceTree = "<group>"; };
+		6BC89F1C156CF99D00FE32EC /* LRRestyRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequestDelegate.h; sourceTree = "<group>"; };
+		6BC89F1D156CF99D00FE32EC /* LRRestyRequestPayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequestPayload.h; sourceTree = "<group>"; };
+		6BC89F1E156CF99D00FE32EC /* LRRestyRequestPayload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyRequestPayload.m; sourceTree = "<group>"; };
+		6BC89F1F156CF99D00FE32EC /* LRRestyResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResource.h; sourceTree = "<group>"; };
+		6BC89F20156CF99D00FE32EC /* LRRestyResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyResource.m; sourceTree = "<group>"; };
+		6BC89F21156CF99D00FE32EC /* LRRestyResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResourceDelegate.h; sourceTree = "<group>"; };
+		6BC89F22156CF99D00FE32EC /* LRRestyResponse+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyResponse+Internal.h"; sourceTree = "<group>"; };
+		6BC89F23156CF99D00FE32EC /* LRRestyResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResponse.h; sourceTree = "<group>"; };
+		6BC89F24156CF99D00FE32EC /* LRRestyResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyResponse.m; sourceTree = "<group>"; };
+		6BC89F25156CF99D00FE32EC /* LRRestyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyTypes.h; sourceTree = "<group>"; };
+		6BC89F26156CF99D00FE32EC /* LRSynchronousProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSynchronousProxy.h; sourceTree = "<group>"; };
+		6BC89F27156CF99D00FE32EC /* LRSynchronousProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSynchronousProxy.m; sourceTree = "<group>"; };
+		6BC89F28156CF99D00FE32EC /* LRURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRURLRequestOperation.h; sourceTree = "<group>"; };
+		6BC89F29156CF99D00FE32EC /* LRURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRURLRequestOperation.m; sourceTree = "<group>"; };
 		6BC9F6F61458EBB5001AF204 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC9F6F81458EBB5001AF204 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1329,7 +1449,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */,
-				6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,7 +1513,6 @@
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
-				6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1848,6 +1966,72 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		6BC89EF5156CF99D00FE32EC /* LRResty */ = {
+			isa = PBXGroup;
+			children = (
+				6BC89EF6156CF99D00FE32EC /* Categories */,
+				6BC89F03156CF99D00FE32EC /* LRResty.h */,
+				6BC89F04156CF99D00FE32EC /* LRResty.m */,
+				6BC89F05156CF99D00FE32EC /* LRRestyClient+DELETE.h */,
+				6BC89F06156CF99D00FE32EC /* LRRestyClient+DELETE.m */,
+				6BC89F07156CF99D00FE32EC /* LRRestyClient+GET.h */,
+				6BC89F08156CF99D00FE32EC /* LRRestyClient+GET.m */,
+				6BC89F09156CF99D00FE32EC /* LRRestyClient+POST.h */,
+				6BC89F0A156CF99D00FE32EC /* LRRestyClient+POST.m */,
+				6BC89F0B156CF99D00FE32EC /* LRRestyClient+PUT.h */,
+				6BC89F0C156CF99D00FE32EC /* LRRestyClient+PUT.m */,
+				6BC89F0D156CF99D00FE32EC /* LRRestyClient.h */,
+				6BC89F0E156CF99D00FE32EC /* LRRestyClient.m */,
+				6BC89F0F156CF99D00FE32EC /* LRRestyClientBlockDelegate.h */,
+				6BC89F10156CF99D00FE32EC /* LRRestyClientBlockDelegate.m */,
+				6BC89F11156CF99D00FE32EC /* LRRestyClientDelegate.h */,
+				6BC89F12156CF99D00FE32EC /* LRRestyClientProxyDelegate.h */,
+				6BC89F13156CF99D00FE32EC /* LRRestyClientProxyDelegate.m */,
+				6BC89F14156CF99D00FE32EC /* LRRestyClientResponseDelegate.h */,
+				6BC89F15156CF99D00FE32EC /* LRRestyClientStreamingDelegate.h */,
+				6BC89F16156CF99D00FE32EC /* LRRestyClientStreamingDelegate.m */,
+				6BC89F17156CF99D00FE32EC /* LRRestyHTTPClient.h */,
+				6BC89F18156CF99D00FE32EC /* LRRestyHTTPClient.m */,
+				6BC89F19156CF99D00FE32EC /* LRRestyRequest+Internal.h */,
+				6BC89F1A156CF99D00FE32EC /* LRRestyRequest.h */,
+				6BC89F1B156CF99D00FE32EC /* LRRestyRequest.m */,
+				6BC89F1C156CF99D00FE32EC /* LRRestyRequestDelegate.h */,
+				6BC89F1D156CF99D00FE32EC /* LRRestyRequestPayload.h */,
+				6BC89F1E156CF99D00FE32EC /* LRRestyRequestPayload.m */,
+				6BC89F1F156CF99D00FE32EC /* LRRestyResource.h */,
+				6BC89F20156CF99D00FE32EC /* LRRestyResource.m */,
+				6BC89F21156CF99D00FE32EC /* LRRestyResourceDelegate.h */,
+				6BC89F22156CF99D00FE32EC /* LRRestyResponse+Internal.h */,
+				6BC89F23156CF99D00FE32EC /* LRRestyResponse.h */,
+				6BC89F24156CF99D00FE32EC /* LRRestyResponse.m */,
+				6BC89F25156CF99D00FE32EC /* LRRestyTypes.h */,
+				6BC89F26156CF99D00FE32EC /* LRSynchronousProxy.h */,
+				6BC89F27156CF99D00FE32EC /* LRSynchronousProxy.m */,
+				6BC89F28156CF99D00FE32EC /* LRURLRequestOperation.h */,
+				6BC89F29156CF99D00FE32EC /* LRURLRequestOperation.m */,
+			);
+			path = LRResty;
+			sourceTree = "<group>";
+		};
+		6BC89EF6156CF99D00FE32EC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6BC89EF7156CF99D00FE32EC /* NSData+Base64.h */,
+				6BC89EF8156CF99D00FE32EC /* NSData+Base64.m */,
+				6BC89EF9156CF99D00FE32EC /* NSDictionary+QueryString.h */,
+				6BC89EFA156CF99D00FE32EC /* NSDictionary+QueryString.m */,
+				6BC89EFB156CF99D00FE32EC /* NSObject+Tap.h */,
+				6BC89EFC156CF99D00FE32EC /* NSObject+Tap.m */,
+				6BC89EFD156CF99D00FE32EC /* NSRunLoop+Additions.h */,
+				6BC89EFE156CF99D00FE32EC /* NSRunLoop+Additions.m */,
+				6BC89EFF156CF99D00FE32EC /* NSString+QueryString.h */,
+				6BC89F00156CF99D00FE32EC /* NSString+QueryString.m */,
+				6BC89F01156CF99D00FE32EC /* NSURL+QueryInspector.h */,
+				6BC89F02156CF99D00FE32EC /* NSURL+QueryInspector.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		6BC9F54F1458EB63001AF204 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -1869,6 +2053,7 @@
 		6BC9F6BE1458EBB5001AF204 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6BC89EF5156CF99D00FE32EC /* LRResty */,
 				6BD1BDBA1558F19000F1D055 /* RaptureXML */,
 				6B558BCF15185AD400BD810C /* JRSwizzle */,
 				6B1107C714CD3DDC00D0A4FE /* MBProgressHUD */,
@@ -2384,6 +2569,35 @@
 				6BD1BDBD1558F19000F1D055 /* RXMLElement.h in Headers */,
 				6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */,
 				6BFDE7761495FA01005D360D /* (null) in Headers */,
+				6BC89F2A156CF99D00FE32EC /* NSData+Base64.h in Headers */,
+				6BC89F2D156CF99E00FE32EC /* NSDictionary+QueryString.h in Headers */,
+				6BC89F30156CF99E00FE32EC /* NSObject+Tap.h in Headers */,
+				6BC89F33156CF99E00FE32EC /* NSRunLoop+Additions.h in Headers */,
+				6BC89F36156CF99E00FE32EC /* NSString+QueryString.h in Headers */,
+				6BC89F39156CF99E00FE32EC /* NSURL+QueryInspector.h in Headers */,
+				6BC89F3C156CF99E00FE32EC /* LRResty.h in Headers */,
+				6BC89F3F156CF99E00FE32EC /* LRRestyClient+DELETE.h in Headers */,
+				6BC89F42156CF99E00FE32EC /* LRRestyClient+GET.h in Headers */,
+				6BC89F45156CF99E00FE32EC /* LRRestyClient+POST.h in Headers */,
+				6BC89F48156CF99E00FE32EC /* LRRestyClient+PUT.h in Headers */,
+				6BC89F4B156CF99E00FE32EC /* LRRestyClient.h in Headers */,
+				6BC89F4E156CF99E00FE32EC /* LRRestyClientBlockDelegate.h in Headers */,
+				6BC89F51156CF99E00FE32EC /* LRRestyClientDelegate.h in Headers */,
+				6BC89F52156CF99E00FE32EC /* LRRestyClientProxyDelegate.h in Headers */,
+				6BC89F55156CF99E00FE32EC /* LRRestyClientResponseDelegate.h in Headers */,
+				6BC89F56156CF99E00FE32EC /* LRRestyClientStreamingDelegate.h in Headers */,
+				6BC89F59156CF99E00FE32EC /* LRRestyHTTPClient.h in Headers */,
+				6BC89F5C156CF99E00FE32EC /* LRRestyRequest+Internal.h in Headers */,
+				6BC89F5D156CF99E00FE32EC /* LRRestyRequest.h in Headers */,
+				6BC89F60156CF99E00FE32EC /* LRRestyRequestDelegate.h in Headers */,
+				6BC89F61156CF99E00FE32EC /* LRRestyRequestPayload.h in Headers */,
+				6BC89F64156CF99E00FE32EC /* LRRestyResource.h in Headers */,
+				6BC89F67156CF99E00FE32EC /* LRRestyResourceDelegate.h in Headers */,
+				6BC89F68156CF99E00FE32EC /* LRRestyResponse+Internal.h in Headers */,
+				6BC89F69156CF99E00FE32EC /* LRRestyResponse.h in Headers */,
+				6BC89F6C156CF99E00FE32EC /* LRRestyTypes.h in Headers */,
+				6BC89F6D156CF99E00FE32EC /* LRSynchronousProxy.h in Headers */,
+				6BC89F70156CF99E00FE32EC /* LRURLRequestOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2507,6 +2721,7 @@
 			buildPhases = (
 				6B1F20DC14EFDDE9009651FB /* Sources */,
 				6B1F20DD14EFDDE9009651FB /* Frameworks */,
+				6BC89F73156CFA8900FE32EC /* Kick Simulator */,
 				6B1F20DE14EFDDE9009651FB /* Resources */,
 				6B1F20DF14EFDDE9009651FB /* ShellScript */,
 			);
@@ -2741,6 +2956,20 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\n##\n# Copyright 2008 Apple Inc.\n# All rights reserved.\n#\n# iPhoneSimulator platform\n# This script runs all of the unit tests for the target test bundle specified by the passed-in environment.\n# This script is generally intended to be invoked by ${DEVELOPER_TOOLS_DIR}/RunUnitTests. The interface or location of this script may change in future releases.\n##\n#\n# Input:\n#   See ${DEVELOPER_TOOLS_DIR}/RunUnitTests for input variables\n\nMessage() {\n    # usage: Message line type message\n    # Echo the message to stdout as the given type of message and continue\n    echo \"${PLATFORM_DEVELOPER_TOOLS_DIR}/Tools/RunPlatformUnitTests:${1}: ${2}: ${3}\"\n}\n\nNote() {\n    # usage: Notify line message\n    # Echo the message to stdout as a note and continue\n    Message \"${1}\" note \"${2}\"\n}\n\nWarning() {\n    # usage: Warning line message\n    # Echo the message to stdout as a note and continue\n    Message \"${1}\" warning \"${2}\"\n}\n\nError() {\n    # usage: Notify line message\n    # Echo the message to stdout as an error and continue\n    Message \"${1}\" error \"${2}\"\n}\n\nFail() {\n    # usage: Fail line message\n    # Echo the message to stdout and return 1, the universal error code\n    Error \"${1}\" \"${2}\"\n    exit 1\n}\n\n### Do not run tests on anything but a \"build\".\n\nif [ \"${ACTION}\" != \"build\" ]; then\nexit 0\nfi\n\n### Silently skip tests if TEST_AFTER_BUILD is NO\n\nif [ \"${TEST_AFTER_BUILD}\" = \"NO\" ]; then\nexit 0\nfi\n\n### Source RunUnitTests.include functionality\n\nif [ \"${DEVELOPER_TOOLS_DIR}\" = \"\" ]; then\nFail ${LINENO} \"DEVELOPER_TOOLS_DIR is not set.\"\nfi\n\nif [ \"${PLATFORM_DEVELOPER_TOOLS_DIR}\" = \"\" ]; then\nFail ${LINENO} \"PLATFORM_DEVELOPER_TOOLS_DIR is not set.\"\nfi\n\nincludeFile=\"${DEVELOPER_TOOLS_DIR}/RunPlatformUnitTests.include\"\nif [ ! -r \"${includeFile}\" ]; then\nFail ${LINENO} \"Cannot read include file ${includeFile}\"\nfi\n\nsource \"${includeFile}\"\n\nif [ 0 != $? ]; then\nFail ${LINENO} \"Could not source include file ${includeFile}\"\nfi\n\n### Define a sensible default for the path to the otest\n\nif [ \"${OTEST}\" = \"\" ]; then\nOTEST=\"${SDKROOT}/Developer/usr/bin/otest\"\nfi\n\nMain() {\n    # usage: Main\n    # Determine how tests need to be run and run them.\n    \n    # GC not supported by the simulator\n    TEST_GC_STATES=\"OFF\"\n    \n    Configure_TEST_ARCHS\n    \n    if [ \"${TEST_HOST}\" != \"\" ]; then\n    \n    export OTHER_TEST_FLAGS=\"-RegisterForSystemEvents\"\n    RunTestsForApplication \"${TEST_HOST}\" \"${TEST_BUNDLE_PATH}\"\n    \n    else\n    # If no TEST_HOST is specified, assume we're running the test bundle.\n    \n    RunTestsForBundle \"${TEST_BUNDLE_PATH}\"\n    fi\n}\n\n### Update the dyld environment to support running tests out of the build directory.\n\n# Sets and exports the following environment variables:\n#   DYLD_ROOT_PATH\n#   DYLD_FRAMEWORK_PATH\n#   DYLD_LIBRARY_PATH\n#   DYLD_NEW_LOCAL_SHARED_REGIONS\n#   DYLD_NO_FIX_PREBINDING\n\nif [ \"${DYLD_FRAMEWORK_PATH}\" != \"\" ]; then\nDYLD_FRAMEWORK_PATH=\"${BUILT_PRODUCTS_DIR}:${SDKROOT}${DEVELOPER_LIBRARY_DIR}/Frameworks:${DYLD_FRAMEWORK_PATH}\"\nelse\nDYLD_FRAMEWORK_PATH=\"${BUILT_PRODUCTS_DIR}:${SDKROOT}${DEVELOPER_LIBRARY_DIR}/Frameworks\"\nfi\n\nif [ \"${DYLD_LIBRARY_PATH}\" != \"\" ]; then\nDYLD_LIBRARY_PATH=\"${BUILT_PRODUCTS_DIR}:${DYLD_LIBRARY_PATH}\"\nelse\nDYLD_LIBRARY_PATH=\"${BUILT_PRODUCTS_DIR}\"\nfi\n\nif [ \"${DYLD_ROOT_PATH}\" != \"\" ]; then\nDYLD_ROOT_PATH=\"${SDKROOT}:${DYLD_ROOT_PATH}\"\nelse\nDYLD_ROOT_PATH=\"${SDKROOT}\"\nfi\n\nDYLD_NEW_LOCAL_SHARED_REGIONS=YES\nDYLD_NO_FIX_PREBINDING=YES\nIPHONE_SIMULATOR_ROOT=$SDKROOT\t\t## rdar://6528939\nCFFIXED_USER_HOME=\"${HOME}/Library/Application Support/iPhone Simulator/$IPHONESIMULATOR_PLATFORM_VERSION\"\n\nEXPORT_VARS=(DYLD_FRAMEWORK_PATH DYLD_LIBRARY_PATH DYLD_NEW_LOCAL_SHARED_REGIONS DYLD_NO_FIX_PREBINDING DYLD_ROOT_PATH IPHONE_SIMULATOR_ROOT CFFIXED_USER_HOME )\n\n### Run the tests\n\nMain";
 		};
+		6BC89F73156CFA8900FE32EC /* Kick Simulator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Kick Simulator";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\necho \"--------------------- Simulator Kicker! -------------------------\"\nexport XCODE_BASE=`xcode-select -print-path`\nexport SIMULATOR_RELATIVE_PATH=\"Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app\"\nexport SIMULATOR_FULL_PATH=\"$XCODE_BASE/$SIMULATOR_RELATIVE_PATH\"\nosascript -e \"tell application \\\"$SIMULATOR_FULL_PATH\\\" to quit\"\n\n";
+		};
 		6BD54363147359930014F148 /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2873,13 +3102,33 @@
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
-				6BFDE7761495FA01005D35F5 /* (null) in Sources */,
 				6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */,
-				6BFDE7761495FA01005D3600 /* (null) in Sources */,
 				6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */,
 				6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */,
+				6BC89F2B156CF99E00FE32EC /* NSData+Base64.m in Sources */,
+				6BC89F2E156CF99E00FE32EC /* NSDictionary+QueryString.m in Sources */,
+				6BC89F31156CF99E00FE32EC /* NSObject+Tap.m in Sources */,
+				6BC89F34156CF99E00FE32EC /* NSRunLoop+Additions.m in Sources */,
+				6BC89F37156CF99E00FE32EC /* NSString+QueryString.m in Sources */,
+				6BC89F3A156CF99E00FE32EC /* NSURL+QueryInspector.m in Sources */,
+				6BC89F3D156CF99E00FE32EC /* LRResty.m in Sources */,
+				6BC89F40156CF99E00FE32EC /* LRRestyClient+DELETE.m in Sources */,
+				6BC89F43156CF99E00FE32EC /* LRRestyClient+GET.m in Sources */,
+				6BC89F46156CF99E00FE32EC /* LRRestyClient+POST.m in Sources */,
+				6BC89F49156CF99E00FE32EC /* LRRestyClient+PUT.m in Sources */,
+				6BC89F4C156CF99E00FE32EC /* LRRestyClient.m in Sources */,
+				6BC89F4F156CF99E00FE32EC /* LRRestyClientBlockDelegate.m in Sources */,
+				6BC89F53156CF99E00FE32EC /* LRRestyClientProxyDelegate.m in Sources */,
+				6BC89F57156CF99E00FE32EC /* LRRestyClientStreamingDelegate.m in Sources */,
+				6BC89F5A156CF99E00FE32EC /* LRRestyHTTPClient.m in Sources */,
+				6BC89F5E156CF99E00FE32EC /* LRRestyRequest.m in Sources */,
+				6BC89F62156CF99E00FE32EC /* LRRestyRequestPayload.m in Sources */,
+				6BC89F65156CF99E00FE32EC /* LRRestyResource.m in Sources */,
+				6BC89F6A156CF99E00FE32EC /* LRRestyResponse.m in Sources */,
+				6BC89F6E156CF99E00FE32EC /* LRSynchronousProxy.m in Sources */,
+				6BC89F71156CF99E00FE32EC /* LRURLRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3145,6 +3394,28 @@
 				6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */,
 				6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBF1558F19000F1D055 /* RXMLElement.m in Sources */,
+				6BC89F2C156CF99E00FE32EC /* NSData+Base64.m in Sources */,
+				6BC89F2F156CF99E00FE32EC /* NSDictionary+QueryString.m in Sources */,
+				6BC89F32156CF99E00FE32EC /* NSObject+Tap.m in Sources */,
+				6BC89F35156CF99E00FE32EC /* NSRunLoop+Additions.m in Sources */,
+				6BC89F38156CF99E00FE32EC /* NSString+QueryString.m in Sources */,
+				6BC89F3B156CF99E00FE32EC /* NSURL+QueryInspector.m in Sources */,
+				6BC89F3E156CF99E00FE32EC /* LRResty.m in Sources */,
+				6BC89F41156CF99E00FE32EC /* LRRestyClient+DELETE.m in Sources */,
+				6BC89F44156CF99E00FE32EC /* LRRestyClient+GET.m in Sources */,
+				6BC89F47156CF99E00FE32EC /* LRRestyClient+POST.m in Sources */,
+				6BC89F4A156CF99E00FE32EC /* LRRestyClient+PUT.m in Sources */,
+				6BC89F4D156CF99E00FE32EC /* LRRestyClient.m in Sources */,
+				6BC89F50156CF99E00FE32EC /* LRRestyClientBlockDelegate.m in Sources */,
+				6BC89F54156CF99E00FE32EC /* LRRestyClientProxyDelegate.m in Sources */,
+				6BC89F58156CF99E00FE32EC /* LRRestyClientStreamingDelegate.m in Sources */,
+				6BC89F5B156CF99E00FE32EC /* LRRestyHTTPClient.m in Sources */,
+				6BC89F5F156CF99E00FE32EC /* LRRestyRequest.m in Sources */,
+				6BC89F63156CF99E00FE32EC /* LRRestyRequestPayload.m in Sources */,
+				6BC89F66156CF99E00FE32EC /* LRRestyResource.m in Sources */,
+				6BC89F6B156CF99E00FE32EC /* LRRestyResponse.m in Sources */,
+				6BC89F6F156CF99E00FE32EC /* LRSynchronousProxy.m in Sources */,
+				6BC89F72156CF99E00FE32EC /* LRURLRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
