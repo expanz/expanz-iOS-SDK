@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 759)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -208,7 +208,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/datatype">&nbsp;&nbsp;datatype</a></code>
-		<span class="tooltip"><p>The field&rsquo;s <a href="#//api/name/datatype">datatype</a>.</p></span>
+		<span class="tooltip"><p>The field&rsquo;s datatype.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -243,7 +243,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/value">value</a> held by this field.</p></span>
+		<span class="tooltip"><p>The value held by this field.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -295,12 +295,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The field&rsquo;s <a href="#//api/name/datatype">datatype</a>.</p>
+		<p>The field&rsquo;s datatype.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) ExpanzDataType datatype</code></div>
-	
+
+    
 	
 	
 	
@@ -310,7 +312,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The field&rsquo;s <a href="#//api/name/datatype">datatype</a>.</p>
+		<p>The field&rsquo;s datatype.</p>
 	</div>
 	
 	
@@ -337,9 +339,11 @@
 		<p>The <a href="#//api/name/value">value</a> the field is initialized with, ie user is presented initially with this <a href="#//api/name/value">value</a>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *defaultValue</code></div>
-	
+
+    
 	
 	
 	
@@ -376,9 +380,11 @@
 		<p>Indicates the client model is not yet synchronized with the server model.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isDirty) BOOL dirty</code></div>
-	
+
+    
 	
 	
 	
@@ -415,9 +421,11 @@
 		<p>Weather the field allows user input</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter=isDisabled) BOOL disabled</code></div>
-	
+
+    
 	
 	
 	
@@ -454,9 +462,11 @@
 		<p>Unique identifier.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *fieldId</code></div>
-	
+
+    
 	
 	
 	
@@ -493,9 +503,11 @@
 		<p>Additional user instructions for the field.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *hint</code></div>
-	
+
+    
 	
 	
 	
@@ -532,9 +544,11 @@
 		<p>Label to display next to the field</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *label</code></div>
-	
+
+    
 	
 	
 	
@@ -571,9 +585,11 @@
 		<p>Indicates if the field is mandatory.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isNullable) BOOL nullable</code></div>
-	
+
+    
 	
 	
 	
@@ -610,9 +626,11 @@
 		<p>Reference to the activity this field belongs to.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) expanz_model_ActivityInstance *parentActivity</code></div>
-	
+
+    
 	
 	
 	
@@ -646,12 +664,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/value">value</a> held by this field.</p>
+		<p>The value held by this field.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, retain) NSString *value</code></div>
-	
+
+    
 	
 	
 	
@@ -661,7 +681,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The <a href="#//api/name/value">value</a> held by this field.</p>
+		<p>The value held by this field.</p>
 	</div>
 	
 	
@@ -698,9 +718,11 @@
 		<p>Invoked when <a href="#//api/name/value">value</a> is changed as a result of user edit. Marks the field as <a href="#//api/name/dirty">dirty</a>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (void)didFinishEditWithValue:(NSString *)<em>value</em></code></div>
-	
+
+    
 	
 	
 	
@@ -737,9 +759,11 @@
 		<p>Invoked to indicate the server state has been synchronized with the client-side state. Marks the field as clean.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (void)didSynchronizeStateWithServerModel:(NSString *)<em>validatedValue</em></code></div>
-	
+
+    
 	
 	
 	
@@ -771,6 +795,10 @@
 	<h3 class="subsubtitle method-title">initWithFieldId:nullable:defaultValue:dataType:label:hint:</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFieldId:(NSString *)<em>fieldId</em> nullable:(BOOL)<em>nullable</em> defaultValue:(NSString *)<em>defaultValue</em> dataType:(ExpanzDataType)<em>datatype</em> label:(NSString *)<em>label</em> hint:(NSString *)<em>hint</em></code></div>
+
+    
 </div>
 						
 					</div>
@@ -786,9 +814,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-08)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-23)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -876,6 +904,14 @@
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>

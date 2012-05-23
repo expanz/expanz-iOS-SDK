@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 759)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -247,7 +247,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/columns">&ndash;&nbsp;columns</a></code>
-		<span class="tooltip"><p>Returns a copy of the data set&rsquo;s <a href="#//api/name/columns">columns</a>.</p></span>
+		<span class="tooltip"><p>Returns a copy of the data set&rsquo;s columns.</p></span>
 	</span>
 	
 	
@@ -275,7 +275,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/rows">&ndash;&nbsp;rows</a></code>
-		<span class="tooltip"><p>Returns a copy of the data set&rsquo;s <a href="#//api/name/rows">rows</a>.</p></span>
+		<span class="tooltip"><p>Returns a copy of the data set&rsquo;s rows.</p></span>
 	</span>
 	
 	
@@ -304,6 +304,10 @@
 	<h3 class="subsubtitle method-title">columns</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *columns</code></div>
+
+    
 </div>
 						
 						<div class="section-method">
@@ -311,6 +315,10 @@
 	<h3 class="subsubtitle method-title">contextObject</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *contextObject</code></div>
+
+    
 </div>
 						
 						<div class="section-method">
@@ -318,6 +326,10 @@
 	<h3 class="subsubtitle method-title">query</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *query</code></div>
+
+    
 </div>
 						
 						<div class="section-method">
@@ -325,6 +337,10 @@
 	<h3 class="subsubtitle method-title">rows</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *rows</code></div>
+
+    
 </div>
 						
 						<div class="section-method">
@@ -332,6 +348,10 @@
 	<h3 class="subsubtitle method-title">source</h3>
 	
 	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *source</code></div>
+
+    
 </div>
 						
 					</div>
@@ -354,9 +374,11 @@
 		<p>Adds a column to the data set.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (void)addColumn:(expanz_model_Column *)<em>column</em></code></div>
-	
+
+    
 	
 	
 	
@@ -393,9 +415,11 @@
 		<p>Adds a row to the data set.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (void)addRow:(expanz_model_Row *)<em>row</em></code></div>
-	
+
+    
 	
 	
 	
@@ -432,9 +456,11 @@
 		<p>Returns the column with the supplied field id parameter or nil.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (expanz_model_Column *)columnWithFieldId:(NSString *)<em>fieldId</em></code></div>
-	
+
+    
 	
 	
 	
@@ -471,9 +497,11 @@
 		<p>Returns the column with the supplied id parameter or nil.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (expanz_model_Column *)columnWithId:(NSString *)<em>columnId</em></code></div>
-	
+
+    
 	
 	
 	
@@ -507,12 +535,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a copy of the data set&rsquo;s <a href="#//api/name/columns">columns</a>.</p>
+		<p>Returns a copy of the data set&rsquo;s columns.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSArray *)columns</code></div>
-	
+
+    
 	
 	
 	
@@ -522,7 +552,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a copy of the data set&rsquo;s <a href="#//api/name/columns">columns</a>.</p>
+		<p>Returns a copy of the data set&rsquo;s columns.</p>
 	</div>
 	
 	
@@ -549,9 +579,11 @@
 		<p>List of field IDs contained within this grid data.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSArray *)fieldIdentifiers</code></div>
-	
+
+    
 	
 	
 	
@@ -588,9 +620,11 @@
 		<p>Initializes an instance with the supplied id and <a href="#//api/name/source">source</a> attributes.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (id)initWithDataId:(NSString *)<em>dataId</em> source:(NSString *)<em>source</em> query:(NSString *)<em>query</em> contextObject:(NSString *)<em>contextObject</em></code></div>
-	
+
+    
 	
 	
 	
@@ -627,9 +661,11 @@
 		<p>Returns the row with the supplied row id, or nil.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (expanz_model_Row *)rowWithId:(NSString *)<em>rowId</em></code></div>
-	
+
+    
 	
 	
 	
@@ -663,12 +699,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a copy of the data set&rsquo;s <a href="#//api/name/rows">rows</a>.</p>
+		<p>Returns a copy of the data set&rsquo;s rows.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSArray *)rows</code></div>
-	
+
+    
 	
 	
 	
@@ -678,7 +716,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a copy of the data set&rsquo;s <a href="#//api/name/rows">rows</a>.</p>
+		<p>Returns a copy of the data set&rsquo;s rows.</p>
 	</div>
 	
 	
@@ -708,9 +746,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-08)</span><br />
+						<p><span class="copyright">&copy; 2012 expanz. All rights reserved. (Last updated: 2012-05-23)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 759)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -798,6 +836,14 @@
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>
