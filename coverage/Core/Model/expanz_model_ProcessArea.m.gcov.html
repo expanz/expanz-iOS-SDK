@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-05-28</td>
+            <td class="headerValue">2012-05-29</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -72,7 +72,7 @@
 <span class="lineNum">      14 </span>            : 
 <span class="lineNum">      15 </span><span class="lineCov">          7 : @implementation expanz_model_ProcessArea</span>
 <span class="lineNum">      16 </span>            : 
-<span class="lineNum">      17 </span><span class="lineCov">          7 : @synthesize processId = _processId;</span>
+<span class="lineNum">      17 </span><span class="lineCov">          4 : @synthesize processId = _processId;</span>
 <span class="lineNum">      18 </span><span class="lineCov">          4 : @synthesize title = _title;</span>
 <span class="lineNum">      19 </span>            : 
 <span class="lineNum">      20 </span>            : /* ================================================== Initializers ================================================== */
@@ -98,11 +98,11 @@
 <span class="lineNum">      40 </span><span class="lineCov">         44 : </span>
 <span class="lineNum">      41 </span>            : - (MenuItem*) menuItemWithName:(NSString*)activityName {
 <span class="lineNum">      42 </span><span class="lineCov">          3 :     for (MenuItem* activity in _activities) {</span>
-<span class="lineNum">      43 </span><span class="lineCov">          5 :         if ([activity.activityId isEqualToString:activityName]) {</span>
-<span class="lineNum">      44 </span><span class="lineCov">          5 :             return activity;</span>
+<span class="lineNum">      43 </span><span class="lineCov">          3 :         if ([activity.activityId isEqualToString:activityName]) {</span>
+<span class="lineNum">      44 </span><span class="lineCov">          3 :             return activity;</span>
 <span class="lineNum">      45 </span><span class="lineCov">          2 :         }</span>
 <span class="lineNum">      46 </span>            :     }
-<span class="lineNum">      47 </span><span class="lineCov">          5 :     return nil;</span>
+<span class="lineNum">      47 </span><span class="lineCov">          3 :     return nil;</span>
 <span class="lineNum">      48 </span><span class="lineCov">          1 : }</span>
 <span class="lineNum">      49 </span><span class="lineCov">          3 : </span>
 <span class="lineNum">      50 </span>            : 
