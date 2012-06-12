@@ -31,9 +31,9 @@
             <td class="headerValue">expanz-iOS-SDK.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">34</td>
-            <td class="headerCovTableEntry">38</td>
-            <td class="headerCovTableEntryMed">89.5 %</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntryMed">89.7 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
@@ -108,25 +108,26 @@
 <span class="lineNum">      50 </span><span class="lineCov">          1 :         [NSException raise:NSInvalidArgumentException</span>
 <span class="lineNum">      51 </span>            :                 format:@&quot;Expected QueryDataSource to have one query, but instead got: %@&quot;, queries];
 <span class="lineNum">      52 </span>            :     }
-<span class="lineNum">      53 </span><span class="lineCov">          3 :     return [queries objectAtIndex:0];</span>
-<span class="lineNum">      54 </span><span class="lineCov">          4 : }</span>
-<span class="lineNum">      55 </span>            : 
-<span class="lineNum">      56 </span>            : /* ================================================================================================================== */
-<span class="lineNum">      57 </span>            : - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-<span class="lineNum">      58 </span><span class="lineNoCov">          0 :     return nil;</span>
-<span class="lineNum">      59 </span>            : }
-<span class="lineNum">      60 </span><span class="lineNoCov">          0 : </span>
-<span class="lineNum">      61 </span>            : 
-<span class="lineNum">      62 </span>            : - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-<span class="lineNum">      63 </span>            :     return 0;
-<span class="lineNum">      64 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      65 </span>            : 
-<span class="lineNum">      66 </span><span class="lineNoCov">          0 : /* ================================================== Private Methods =============================================== */</span>
-<span class="lineNum">      67 </span>            : - (NSMutableDictionary*) cache {
-<span class="lineNum">      68 </span>            :     return _cache;
-<span class="lineNum">      69 </span><span class="lineCov">          9 : }</span>
-<span class="lineNum">      70 </span><span class="lineCov">          9 : </span>
-<span class="lineNum">      71 </span>            : @end
+<span class="lineNum">      53 </span><span class="lineCov">          3 :     NSString* codeFormattedQuery = [queries objectAtIndex:0];</span>
+<span class="lineNum">      54 </span><span class="lineCov">          3 :     return [codeFormattedQuery stringByReplacingOccurrencesOfString:@&quot;_&quot; withString:@&quot;.&quot;];</span>
+<span class="lineNum">      55 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : /* ================================================================================================================== */
+<span class="lineNum">      58 </span>            : - (UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     return nil;</span>
+<span class="lineNum">      60 </span>            : }
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">      62 </span>            : 
+<span class="lineNum">      63 </span>            : - (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+<span class="lineNum">      64 </span>            :     return 0;
+<span class="lineNum">      65 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      66 </span>            : 
+<span class="lineNum">      67 </span><span class="lineNoCov">          0 : /* ================================================== Private Methods =============================================== */</span>
+<span class="lineNum">      68 </span>            : - (NSMutableDictionary*) cache {
+<span class="lineNum">      69 </span>            :     return _cache;
+<span class="lineNum">      70 </span><span class="lineCov">          9 : }</span>
+<span class="lineNum">      71 </span><span class="lineCov">          9 : </span>
+<span class="lineNum">      72 </span>            : @end
 </pre>
       </td>
     </tr>

@@ -319,24 +319,24 @@
 <span class="lineNum">     261 </span><span class="lineNoCov">          0 :         editingInfo:(NSDictionary*)editingInfo {</span>
 <span class="lineNum">     262 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     263 </span>            :     Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
-<span class="lineNum">     264 </span>            :     //[field didFinishEditWithValue:image];
-<span class="lineNum">     265 </span>            : 
-<span class="lineNum">     266 </span>            :     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
-<span class="lineNum">     267 </span>            : 
-<span class="lineNum">     268 </span><span class="lineNoCov">          0 :     NSString* data = [jpegRepresentation base64EncodedString];</span>
-<span class="lineNum">     269 </span><span class="lineNoCov">          0 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
-<span class="lineNum">     270 </span>            : 
-<span class="lineNum">     271 </span><span class="lineNoCov">          0 :     DeltaRequest* deltaRequest = [[DeltaRequest alloc]</span>
-<span class="lineNum">     272 </span>            :             initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle
-<span class="lineNum">     273 </span>            :             sessionToken:sessionToken encoding:DeltaEncodingBase64];
-<span class="lineNum">     274 </span><span class="lineNoCov">          0 :     [_activityClient sendDeltaWith:deltaRequest delegate:self];</span>
-<span class="lineNum">     275 </span>            : 
+<span class="lineNum">     264 </span>            : 
+<span class="lineNum">     265 </span>            :     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
+<span class="lineNum">     266 </span>            : 
+<span class="lineNum">     267 </span>            :     NSString* data = [jpegRepresentation base64EncodedString];
+<span class="lineNum">     268 </span><span class="lineNoCov">          0 :     NSString* sessionToken = [SessionContext globalContext].sessionToken;</span>
+<span class="lineNum">     269 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     270 </span>            :     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
+<span class="lineNum">     271 </span><span class="lineNoCov">          0 :             initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle</span>
+<span class="lineNum">     272 </span>            :             sessionToken:sessionToken encoding:DeltaEncodingBase64];
+<span class="lineNum">     273 </span><span class="lineNoCov">          0 :     //LogDebug(@&quot;Here's the delta request: %@&quot;, deltaRequest);</span>
+<span class="lineNum">     274 </span>            :     [_activityClient sendDeltaWith:deltaRequest delegate:self];
+<span class="lineNum">     275 </span><span class="lineNoCov">          0 : </span>
 <span class="lineNum">     276 </span><span class="lineNoCov">          0 :     _currentlyEditingImageView.image = image;</span>
-<span class="lineNum">     277 </span><span class="lineNoCov">          0 :     _currentlyEditingImageView = nil;</span>
+<span class="lineNum">     277 </span>            :     _currentlyEditingImageView = nil;
 <span class="lineNum">     278 </span>            :     [picker dismissModalViewControllerAnimated:YES];
 <span class="lineNum">     279 </span>            : }
-<span class="lineNum">     280 </span>            : 
-<span class="lineNum">     281 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     280 </span><span class="lineNoCov">          0 : </span>
+<span class="lineNum">     281 </span>            : 
 <span class="lineNum">     282 </span><span class="lineNoCov">          0 : /* ================================================================================================================== */</span>
 <span class="lineNum">     283 </span>            : #pragma mark CreateActivityClientDelegate
 <span class="lineNum">     284 </span><span class="lineNoCov">          0 : </span>
