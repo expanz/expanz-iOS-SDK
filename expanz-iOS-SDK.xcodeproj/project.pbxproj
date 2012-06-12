@@ -24,6 +24,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6B02963F157342D100EF78D7 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B152C641501CB1C004D471A /* CoverageFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB701EC14F34FF70029A94B /* CoverageFix.m */; };
@@ -494,7 +495,6 @@
 		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BAA7E2E155150BA00399A27 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
-		6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB3C1551FBFE0012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB5315520F530012C252 /* UserNameAndPasswordTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */; };
 		6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
@@ -2882,7 +2882,6 @@
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
-				6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */,
 				6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */,
@@ -3152,6 +3151,7 @@
 				6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */,
 				6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBF1558F19000F1D055 /* RXMLElement.m in Sources */,
+				6B02963F157342D100EF78D7 /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,7 +50,8 @@
         [NSException raise:NSInvalidArgumentException
                 format:@"Expected QueryDataSource to have one query, but instead got: %@", queries];
     }
-    return [queries objectAtIndex:0];
+    NSString* codeFormattedQuery = [queries objectAtIndex:0];
+    return [codeFormattedQuery stringByReplacingOccurrencesOfString:@"_" withString:@"."];
 }
 
 /* ================================================================================================================== */
@@ -59,7 +60,7 @@
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 

@@ -52,7 +52,7 @@
 
 - (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell {
     if (indexPath.row % 2) {
-        cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
+        cell.backgroundView.backgroundColor = [UIColor whiteColor];
     }
 }
 
