@@ -31,6 +31,7 @@
 - (void) thumbnailTableViewCell:(ThumbnailTableCell*)cell setThumbnailImageFor:(Row*)row;
 
 @end
+
 /* ================================================================================================================== */
 
 @implementation expanz_ui_GridDataRenderer
@@ -147,7 +148,10 @@
 }
 
 - (NSString*) nibNameForTableCell {
-    return @"DefaultTableCellForGridData";
+    if ([_nibNameForTableCell length] == 0) {
+        _nibNameForTableCell = @"DefaultTableCellForGridData";
+    }
+    return _nibNameForTableCell;
 }
 
 

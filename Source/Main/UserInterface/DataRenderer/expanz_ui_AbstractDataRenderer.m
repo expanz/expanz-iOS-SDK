@@ -11,7 +11,6 @@
 
 #import "expanz_ui_AbstractDataRenderer.h"
 #import "expanz_model_AbstractData.h"
-#import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_AbstractDataRenderer
@@ -21,6 +20,7 @@
 @synthesize activityName = _activityName;
 @synthesize searchController = _searchController;
 @synthesize tableCell = _tableCell;
+@synthesize nibNameForTableCell = _nibNameForTableCell;
 
 
 /* ================================================== Initializers ================================================== */

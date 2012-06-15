@@ -20,6 +20,7 @@
 
     NSMutableArray* _filteredListContent;
     NSUInteger _cellHeight;
+    NSString* _nibNameForTableCell;
 
 }
 
@@ -42,6 +43,8 @@
 * Search controller responsible for filtering results list.
 */
 @property(nonatomic, strong, readonly) UISearchDisplayController* searchController;
+
+@property(nonatomic, strong) NSString* nibNameForTableCell;
 
 /**
 * Injection point for loading custom table cells from a nib.
@@ -74,10 +77,6 @@
 */
 - (void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope;
 
-/**
-* Abstract method that returns the name of the nib to use.
-*/
-- (NSString*) nibNameForTableCell;
 
 - (UITableViewCell*) loadTableCellFromNib;
 
