@@ -42,6 +42,8 @@
 	
 	<option value="//api/name/data">&nbsp;&nbsp;&nbsp;&nbsp;data</option>
 	
+	<option value="//api/name/nibNameForTableCell">&nbsp;&nbsp;&nbsp;&nbsp;nibNameForTableCell</option>
+	
 	<option value="//api/name/searchController">&nbsp;&nbsp;&nbsp;&nbsp;searchController</option>
 	
 	<option value="//api/name/tableCell">&nbsp;&nbsp;&nbsp;&nbsp;tableCell</option>
@@ -62,8 +64,6 @@
 	<option value="//api/name/loadTableCellFromNib">&nbsp;&nbsp;&nbsp;&nbsp;- loadTableCellFromNib</option>
 	
 	<option value="//api/name/makeSearchableWith:controller:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSearchableWith:controller:</option>
-	
-	<option value="//api/name/nibNameForTableCell">&nbsp;&nbsp;&nbsp;&nbsp;- nibNameForTableCell</option>
 	
 	<option value="//api/name/searchOptions">&nbsp;&nbsp;&nbsp;&nbsp;- searchOptions</option>
 	
@@ -95,6 +95,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/data">data</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nibNameForTableCell">nibNameForTableCell</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchController">searchController</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableCell">tableCell</a></span></li>
@@ -116,8 +118,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadTableCellFromNib">loadTableCellFromNib</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSearchableWith:controller:">makeSearchableWith:controller:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nibNameForTableCell">nibNameForTableCell</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchOptions">searchOptions</a></span></li>
 	
@@ -201,6 +201,13 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/nibNameForTableCell">&nbsp;&nbsp;nibNameForTableCell</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/tableCell">&nbsp;&nbsp;tableCell</a></code>
 		<span class="tooltip"><p>Injection point for loading custom table cells from a nib.</p></span>
 	</span>
@@ -231,13 +238,6 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/filterContentForSearchText:scope:">&ndash;&nbsp;filterContentForSearchText:scope:</a></code>
 		<span class="tooltip"><p>Abstract method with concrete implementation in GridDataRenderer and TreeDataRenderer.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/nibNameForTableCell">&ndash;&nbsp;nibNameForTableCell</a></code>
-		<span class="tooltip"><p>Abstract method that returns the name of the nib to use.</p></span>
 	</span>
 	
 	
@@ -348,6 +348,17 @@
 	</div>				
 	
 	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nibNameForTableCell" title="nibNameForTableCell"></a>
+	<h3 class="subsubtitle method-title">nibNameForTableCell</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *nibNameForTableCell</code></div>
+
+    
 </div>
 						
 						<div class="section-method">
@@ -601,47 +612,6 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Injection point for a searchBar.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">expanz_ui_AbstractDataRenderer.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/nibNameForTableCell" title="nibNameForTableCell"></a>
-	<h3 class="subsubtitle method-title">nibNameForTableCell</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Abstract method that returns the name of the nib to use.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)nibNameForTableCell</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Abstract method that returns the name of the nib to use.</p>
 	</div>
 	
 	
