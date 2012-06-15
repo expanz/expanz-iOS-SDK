@@ -147,7 +147,7 @@
 }
 
 - (NSString*) nibNameForTableCell {
-    return @"TableCellForGridData";
+    return @"DefaultTableCellForGridData";
 }
 
 

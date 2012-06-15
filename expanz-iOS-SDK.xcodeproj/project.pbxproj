@@ -645,12 +645,12 @@
 		6BDAB02A1499828800541056 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
 		6BDAB02B1499828800541056 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0151499828800541056 /* background.png */; };
 		6BDAB02C1499828800541056 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */; };
-		6BDAB02E1499828800541056 /* TableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* TableCellForGridData.xib */; };
+		6BDAB02E1499828800541056 /* DefaultTableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */; };
 		6BDAB02F1499828800541056 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0191499828800541056 /* Login.xib */; };
 		6BDAB0301499828800541056 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01A1499828800541056 /* MainWindow.xib */; };
 		6BDAB0311499828800541056 /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */; };
 		6BDAB0321499828800541056 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
-		6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* TableCellForTreeData.xib */; };
+		6BDAB0331499828800541056 /* DefaultTableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */; };
 		6BDAB0341499828800541056 /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01F1499828800541056 /* production_environment.xml */; };
 		6BDAB0351499828800541056 /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
 		6BDAB0381499828800541056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0251499828800541056 /* main.m */; };
@@ -1173,12 +1173,12 @@
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
-		6BDAB0181499828800541056 /* TableCellForGridData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellForGridData.xib; sourceTree = "<group>"; };
+		6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableCellForGridData.xib; sourceTree = "<group>"; };
 		6BDAB0191499828800541056 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		6BDAB01A1499828800541056 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.Browse.xib; sourceTree = "<group>"; };
 		6BDAB01C1499828800541056 /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
-		6BDAB01D1499828800541056 /* TableCellForTreeData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellForTreeData.xib; sourceTree = "<group>"; };
+		6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableCellForTreeData.xib; sourceTree = "<group>"; };
 		6BDAB01F1499828800541056 /* production_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = production_environment.xml; sourceTree = "<group>"; };
 		6BDAB0201499828800541056 /* test_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_environment.xml; sourceTree = "<group>"; };
 		6BDAB0251499828800541056 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -2008,8 +2008,8 @@
 				6BDAB01A1499828800541056 /* MainWindow.xib */,
 				6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */,
 				6BDAB01C1499828800541056 /* Sales.Customer.xib */,
-				6BDAB0181499828800541056 /* TableCellForGridData.xib */,
-				6BDAB01D1499828800541056 /* TableCellForTreeData.xib */,
+				6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */,
+				6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */,
 				6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */,
 			);
 			path = Assets;
@@ -2676,12 +2676,12 @@
 				6BDAB02A1499828800541056 /* ActivityMenu.xib in Resources */,
 				6BDAB02B1499828800541056 /* background.png in Resources */,
 				6BDAB02C1499828800541056 /* ESA.Sales.Calc.xib in Resources */,
-				6BDAB02E1499828800541056 /* TableCellForGridData.xib in Resources */,
+				6BDAB02E1499828800541056 /* DefaultTableCellForGridData.xib in Resources */,
 				6BDAB02F1499828800541056 /* Login.xib in Resources */,
 				6BDAB0301499828800541056 /* MainWindow.xib in Resources */,
 				6BDAB0311499828800541056 /* Sales.Customer.Browse.xib in Resources */,
 				6BDAB0321499828800541056 /* Sales.Customer.xib in Resources */,
-				6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */,
+				6BDAB0331499828800541056 /* DefaultTableCellForTreeData.xib in Resources */,
 				6BDAB0341499828800541056 /* production_environment.xml in Resources */,
 				6BDAB0351499828800541056 /* test_environment.xml in Resources */,
 				6B1F2A7C14D24204000E45FD /* Icon.png in Resources */,

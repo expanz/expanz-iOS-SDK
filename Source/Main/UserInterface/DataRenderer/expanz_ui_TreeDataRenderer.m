@@ -111,7 +111,7 @@
 }
 
 - (NSString*) nibNameForTableCell {
-    return @"TableCellForTreeData";
+    return @"DefaultTableCellForTreeData";
 }
 
 /* ================================================== Private Methods =============================================== */

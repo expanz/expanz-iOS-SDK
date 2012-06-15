@@ -240,8 +240,8 @@
                 <include name="Icon.png"/>
                 <include name="Login.xib"/>
                 <include name="MainWindow.xib"/>
-                <include name="TableCellForGridData.xib"/>
-                <include name="TableCellForTreeData.xib"/>
+                <include name="DefaultTableCellForGridData.xib"/>
+                <include name="DefaultTableCellForTreeData.xib"/>
                 <include name="UserNameAndPasswordTableCells.xib"/>
             </fileset>
         </copy>
