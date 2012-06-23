@@ -19,11 +19,6 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Kiwi.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>Specs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>

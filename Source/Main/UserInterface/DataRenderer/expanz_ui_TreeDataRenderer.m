@@ -111,7 +111,10 @@
 }
 
 - (NSString*) nibNameForTableCell {
-    return @"TableCellForTreeData";
+    if ([_nibNameForTableCell length] == 0) {
+        _nibNameForTableCell = @"DefaultTableCellForTreeData";
+    }
+    return _nibNameForTableCell;
 }
 
 /* ================================================== Private Methods =============================================== */

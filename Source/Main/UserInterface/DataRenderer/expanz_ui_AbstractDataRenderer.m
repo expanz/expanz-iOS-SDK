@@ -11,7 +11,6 @@
 
 #import "expanz_ui_AbstractDataRenderer.h"
 #import "expanz_model_AbstractData.h"
-#import "expanz_ui_NavigationManager.h"
 
 
 @implementation expanz_ui_AbstractDataRenderer
@@ -21,6 +20,7 @@
 @synthesize activityName = _activityName;
 @synthesize searchController = _searchController;
 @synthesize tableCell = _tableCell;
+@synthesize nibNameForTableCell = _nibNameForTableCell;
 
 
 /* ================================================== Initializers ================================================== */
@@ -52,7 +52,7 @@
 
 - (void) setBackgroundColorForIndexPath:(NSIndexPath*)indexPath OnCell:(UITableViewCell*)cell {
     if (indexPath.row % 2) {
-        cell.backgroundView.backgroundColor = [UIColor colorWithRed:0.969 green:0.969 blue:0.969 alpha:1];
+        cell.backgroundView.backgroundColor = [UIColor whiteColor];
     }
 }
 

@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import <LRResty/LRResty.h>
+#import "LRResty.h"
 #import "expanz_model_ImageGridDataCell.h"
 #import "expanz_SdkConfiguration.h"
 
@@ -37,6 +37,7 @@
 - (void) loadImage {
     self.hasAskedImageToLoad = YES;
     if (_imageUrl) {
+        LogDebug(@"Image URL: %@", _imageUrl);
         [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
             if (response.status == 200) {
                 self.imageData = [response responseData];

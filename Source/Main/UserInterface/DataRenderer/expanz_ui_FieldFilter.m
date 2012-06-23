@@ -21,9 +21,10 @@
         IMP imp = imp_implementationWithBlock((void*) objc_unretainedPointer(^(id me, BOOL selected) {
             NSString* fieldName = [name substringFromIndex:3];
             fieldName = [fieldName substringToIndex:[fieldName length] - 1];
+            fieldName = [fieldName stringByReplacingOccurrencesOfString:@"_" withString:@"."];
             if (selected) {
-                NSMutableArray* cache = [me performSelector:@selector(mutableFields)];
-                [cache addObject:fieldName];
+                NSMutableArray* fieldNames = [me performSelector:@selector(mutableFields)];
+                [fieldNames addObject:fieldName];
             }
 
         }));

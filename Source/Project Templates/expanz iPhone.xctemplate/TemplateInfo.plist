@@ -83,14 +83,14 @@
 				<key>Path</key>
 				<string>Assets/DocumentView.xib</string>
 			</dict>
-			<key>Assets/TableCellForGridData.xib</key>
+			<key>Assets/DefaultTableCellForGridData.xib</key>
 			<dict>
 				<key>Group</key>
 				<array>
 					<string>Assets</string>
 				</array>
 				<key>Path</key>
-				<string>Assets/TableCellForGridData.xib</string>
+				<string>Assets/DefaultTableCellForGridData.xib</string>
 			</dict>
             <key>Assets/UserNameAndPasswordTableCells.xib</key>
             <dict>
@@ -128,14 +128,14 @@
 				<key>Path</key>
 				<string>Assets/MainWindow.xib</string>
 			</dict>
-			<key>Assets/TableCellForTreeData.xib</key>
+			<key>Assets/DefaultTableCellForTreeData.xib</key>
 			<dict>
 				<key>Group</key>
 				<array>
 					<string>Assets</string>
 				</array>
 				<key>Path</key>
-				<string>Assets/TableCellForTreeData.xib</string>
+				<string>Assets/DefaultTableCellForTreeData.xib</string>
 			</dict>
 			<key>main.m</key>
 			<dict>
@@ -182,15 +182,6 @@
 				<key>Path</key>
 				<string>ExpanzFrameworks/expanziOS.framework</string>
 			</dict>
-			<key>ExpanzFrameworks/LRResty.framework</key>
-			<dict>
-				<key>Group</key>
-				<array>
-					<string>Supporting Files</string>
-				</array>
-				<key>Path</key>
-				<string>ExpanzFrameworks/LRResty.framework</string>
-			</dict>
 		</dict>
 		<key>Nodes</key>
 		<array>
@@ -200,17 +191,16 @@
 			<string>Assets/ActivityMenu.xib</string>
 			<string>Assets/background.png</string>
 			<string>Assets/DocumentView.xib</string>			
-			<string>Assets/TableCellForGridData.xib</string>
+			<string>Assets/DefaultTableCellForGridData.xib</string>
 			<string>Assets/Icon.png</string>
 			<string>Assets/Login.xib</string>
 			<string>Assets/MainWindow.xib</string>
-			<string>Assets/TableCellForTreeData.xib</string>
+			<string>Assets/DefaultTableCellForTreeData.xib</string>
             <string>Assets/UserNameAndPasswordTableCells.xib</string>
 			<string>Supporting Files/en.lproj/InfoPlist.strings</string>
 			<string>Supporting Files/production_environment.xml</string>
 			<string>Supporting Files/test_environment.xml</string>			
 			<string>ExpanzFrameworks/expanziOS.framework</string>
-			<string>ExpanzFrameworks/LRResty.framework</string>			
 		</array>
 	</dict>
 

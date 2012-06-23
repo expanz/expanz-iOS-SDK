@@ -24,6 +24,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6B02963F157342D100EF78D7 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6B039BA31435D81B0036F9B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B039BA21435D81B0036F9B5 /* QuartzCore.framework */; };
 		6B1107CB14CD3DDC00D0A4FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1107C914CD3DDC00D0A4FE /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B152C641501CB1C004D471A /* CoverageFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB701EC14F34FF70029A94B /* CoverageFix.m */; };
@@ -93,7 +94,6 @@
 		6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */; };
 		6B3EECAC153BEF4A001A3579 /* libexpanz-iOS-SDK-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8514734404004145D0 /* libexpanz-iOS-SDK-StaticLib.a */; };
-		6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6B3EECE0153BF07E001A3579 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
 		6B3EECE1153BF085001A3579 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E85A014EFF58400FA4B5D /* libxml2.dylib */; };
 		6B3EECE4153BF0B7001A3579 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */; };
@@ -492,12 +492,9 @@
 		6B9FC83714FDABA600E4CB2C /* expanz_SdkConfiguration.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6B718DA514EF920300909A38 /* expanz_SdkConfiguration.h */; };
 		6B9FC83814FDABA600E4CB2C /* expanz_CoreModule.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3524 /* expanz_CoreModule.h */; };
 		6BA4DD5F14E926970061FAC9 /* NSData+ExpanzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
-		6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BA56EF7154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BA56F0C1542B5F60050A5A4 /* expanz_ui_ActivityInstanceViewController.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */; };
 		6BAA7E2E155150BA00399A27 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
-		6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB3C1551FBFE0012C252 /* Sales_Customer_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC3AB9153C28A200E68952 /* Sales_Customer_ViewController.m */; };
 		6BB1BB5315520F530012C252 /* UserNameAndPasswordTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */; };
 		6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EA /* NSString+ExpanzUtils.m */; };
@@ -509,7 +506,6 @@
 		6BB701EF14F352180029A94B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */; };
 		6BB701F014F3521A0029A94B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859C14EFF57300FA4B5D /* MobileCoreServices.framework */; };
 		6BB701F114F3521C0029A94B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859A14EFF54B00FA4B5D /* libz.dylib */; };
-		6BB701F314F352350029A94B /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */; };
 		6BB701F414F3523A0029A94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1E5E8714734404004145D0 /* Foundation.framework */; };
 		6BB7021A14F39DB70029A94B /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7021714F39DB70029A94B /* expanz_model_AppSite.m */; };
 		6BB7021C14F39DB70029A94B /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7021714F39DB70029A94B /* expanz_model_AppSite.m */; };
@@ -594,6 +590,10 @@
 		6BBC3ADE153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */; };
 		6BBE1834153FDA530027EC0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */; };
 		6BC17F22155E3BFE000B3AA4 /* Kiwi-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */; };
+		6BC8A262156D269C00FE32EC /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8A261156D269C00FE32EC /* libLRResty.a */; };
+		6BC8A263156D269C00FE32EC /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8A261156D269C00FE32EC /* libLRResty.a */; };
+		6BC8A264156D269C00FE32EC /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8A261156D269C00FE32EC /* libLRResty.a */; };
+		6BC8A265156D269C00FE32EC /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8A261156D269C00FE32EC /* libLRResty.a */; };
 		6BC9F78B1458EBB6001AF204 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F6F81458EBB5001AF204 /* LICENSE */; };
 		6BCAFB9C14317B1C00575280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9B14317B1C00575280 /* UIKit.framework */; };
 		6BCAFB9E14317B1C00575280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCAFB9D14317B1C00575280 /* Foundation.framework */; };
@@ -645,12 +645,12 @@
 		6BDAB02A1499828800541056 /* ActivityMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0141499828800541056 /* ActivityMenu.xib */; };
 		6BDAB02B1499828800541056 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0151499828800541056 /* background.png */; };
 		6BDAB02C1499828800541056 /* ESA.Sales.Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */; };
-		6BDAB02E1499828800541056 /* TableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* TableCellForGridData.xib */; };
+		6BDAB02E1499828800541056 /* DefaultTableCellForGridData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */; };
 		6BDAB02F1499828800541056 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0191499828800541056 /* Login.xib */; };
 		6BDAB0301499828800541056 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01A1499828800541056 /* MainWindow.xib */; };
 		6BDAB0311499828800541056 /* Sales.Customer.Browse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */; };
 		6BDAB0321499828800541056 /* Sales.Customer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01C1499828800541056 /* Sales.Customer.xib */; };
-		6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* TableCellForTreeData.xib */; };
+		6BDAB0331499828800541056 /* DefaultTableCellForTreeData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */; };
 		6BDAB0341499828800541056 /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB01F1499828800541056 /* production_environment.xml */; };
 		6BDAB0351499828800541056 /* test_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAB0201499828800541056 /* test_environment.xml */; };
 		6BDAB0381499828800541056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAB0251499828800541056 /* main.m */; };
@@ -783,13 +783,11 @@
 		6BFDE7761495FA01005D35EF /* expanzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35EE /* expanzCore.h */; };
 		6BFDE7761495FA01005D35F1 /* expanzUserInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F0 /* expanzUserInterface.h */; };
 		6BFDE7761495FA01005D35F3 /* expanziOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F2 /* expanziOS.h */; };
-		6BFDE7761495FA01005D35F5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FB /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35F8 /* expanz_model_SessionData.m */; };
 		6BFDE7761495FA01005D35FD /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
 		6BFDE7761495FA01005D35FE /* expanz_model_SessionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D35FC /* expanz_model_SessionData.h */; };
-		6BFDE7761495FA01005D3600 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3603 /* NSString+ColorConversion.m */; };
 		6BFDE7761495FA01005D3606 /* NSString+ColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3605 /* NSString+ColorConversion.h */; };
 		6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDE7761495FA01005D3607 /* UIButton+ExpanzTextures.m */; };
@@ -951,7 +949,6 @@
 		6B1E5E8714734404004145D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6B1F20E114EFDDE9009651FB /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		6B1F20E414EFDDE9009651FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6B1F2A7B14D24204000E45FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6B3EEC5E153BE66C001A3579 /* expanz_utils_BundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_utils_BundleResource.h; sourceTree = "<group>"; };
 		6B3EEC5F153BE66C001A3579 /* expanz_utils_BundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_utils_BundleResource.m; sourceTree = "<group>"; };
@@ -1019,7 +1016,6 @@
 		6B6E85C214F115B000FA4B5D /* DefaultLoginClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultLoginClientIntegration.m; sourceTree = "<group>"; };
 		6B6E85C314F115B000FA4B5D /* DefaultSessionDataClientIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSessionDataClientIntegration.m; sourceTree = "<group>"; };
 		6B718D9114EF8B6300909A38 /* libexpanzCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libexpanzCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B718D9214EF8B6400909A38 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6B718D9514EF8B6400909A38 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6B718D9614EF8B6400909A38 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B718D9714EF8B6400909A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1081,7 +1077,6 @@
 		6B932F351433FA4000834A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../../Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6BA4DD5C14E926970061FAC9 /* NSData+ExpanzAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ExpanzAdditions.h"; sourceTree = "<group>"; };
 		6BA4DD5D14E926970061FAC9 /* NSData+ExpanzAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ExpanzAdditions.m"; sourceTree = "<group>"; };
-		6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = Dependencies/Frameworks/LRResty.framework; sourceTree = "<group>"; };
 		6BA56EF6154295460050A5A4 /* expanz_ui_ActivityInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_ui_ActivityInstanceViewController.h; sourceTree = "<group>"; };
 		6BA75B9F144C037A007148B3 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../Developer/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameAndPasswordTableCells.xib; sourceTree = "<group>"; };
@@ -1151,6 +1146,7 @@
 		6BBC3AD6153C2CB100E68952 /* my details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my details.png"; sourceTree = "<group>"; };
 		6BBC3AD7153C2CB100E68952 /* Thermomix.TMXConsultant.MyDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Thermomix.TMXConsultant.MyDetails.xib; sourceTree = "<group>"; };
 		6BC17F21155E3BFE000B3AA4 /* Kiwi-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Kiwi-iOS.framework"; sourceTree = "<group>"; };
+		6BC8A261156D269C00FE32EC /* libLRResty.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLRResty.a; path = Dependencies/Libraries/libLRResty.a; sourceTree = "<group>"; };
 		6BC9F6F61458EBB5001AF204 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC9F6F81458EBB5001AF204 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6BC9F6F91458EBB5001AF204 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1177,12 +1173,12 @@
 		6BDAB0141499828800541056 /* ActivityMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityMenu.xib; sourceTree = "<group>"; };
 		6BDAB0151499828800541056 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BDAB0161499828800541056 /* ESA.Sales.Calc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESA.Sales.Calc.xib; sourceTree = "<group>"; };
-		6BDAB0181499828800541056 /* TableCellForGridData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellForGridData.xib; sourceTree = "<group>"; };
+		6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableCellForGridData.xib; sourceTree = "<group>"; };
 		6BDAB0191499828800541056 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		6BDAB01A1499828800541056 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.Browse.xib; sourceTree = "<group>"; };
 		6BDAB01C1499828800541056 /* Sales.Customer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sales.Customer.xib; sourceTree = "<group>"; };
-		6BDAB01D1499828800541056 /* TableCellForTreeData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellForTreeData.xib; sourceTree = "<group>"; };
+		6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableCellForTreeData.xib; sourceTree = "<group>"; };
 		6BDAB01F1499828800541056 /* production_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = production_environment.xml; sourceTree = "<group>"; };
 		6BDAB0201499828800541056 /* test_environment.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_environment.xml; sourceTree = "<group>"; };
 		6BDAB0251499828800541056 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1329,7 +1325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD543D31473612E0014F148 /* Foundation.framework in Frameworks */,
-				6BA4DDF814E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
+				6BC8A262156D269C00FE32EC /* libLRResty.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,8 +1358,8 @@
 				6B3EECAC153BEF4A001A3579 /* libexpanz-iOS-SDK-StaticLib.a in Frameworks */,
 				6B3EEC6D153BE73E001A3579 /* UIKit.framework in Frameworks */,
 				6B3EEC6E153BE73E001A3579 /* Foundation.framework in Frameworks */,
-				6B3EECAD153BEF73001A3579 /* LRResty.framework in Frameworks */,
 				6B3EEC6F153BE73E001A3579 /* CoreGraphics.framework in Frameworks */,
+				6BC8A265156D269C00FE32EC /* libLRResty.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1372,11 +1368,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB701EE14F352150029A94B /* libxml2.dylib in Frameworks */,
-				6BB701F314F352350029A94B /* LRResty.framework in Frameworks */,
 				6BB701F414F3523A0029A94B /* Foundation.framework in Frameworks */,
 				6BB701F114F3521C0029A94B /* libz.dylib in Frameworks */,
 				6BB701F014F3521A0029A94B /* MobileCoreServices.framework in Frameworks */,
 				6BB701EF14F352180029A94B /* SystemConfiguration.framework in Frameworks */,
+				6BC8A264156D269C00FE32EC /* libLRResty.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,7 +1390,7 @@
 				6B912279143299CA0031F7A8 /* libxml2.dylib in Frameworks */,
 				6B6B65261432A07B00B584C1 /* libsqlite3.dylib in Frameworks */,
 				6B932F281433F7CE00834A1B /* libz.dylib in Frameworks */,
-				6BA4DDFA14E92C3D0061FAC9 /* LRResty.framework in Frameworks */,
+				6BC8A263156D269C00FE32EC /* libLRResty.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,6 +1409,7 @@
 		6B1E5E8614734404004145D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BC8A261156D269C00FE32EC /* libLRResty.a */,
 				6B1C613A15086BDD002037D7 /* UIKit.framework */,
 				6B6E85A014EFF58400FA4B5D /* libxml2.dylib */,
 				6B6E859E14EFF57B00FA4B5D /* SystemConfiguration.framework */,
@@ -1421,11 +1418,8 @@
 				6B6E859614EFF4FF00FA4B5D /* QuartzCore.framework */,
 				6B6E859814EFF52900FA4B5D /* CoreGraphics.framework */,
 				6B6E854214EFF39500FA4B5D /* Kiwi-iOS.framework */,
-				6BA4DDF714E92C3D0061FAC9 /* LRResty.framework */,
 				6B1E5E8714734404004145D0 /* Foundation.framework */,
-				6B718D9214EF8B6400909A38 /* Cocoa.framework */,
 				6B1F20E214EFDDE9009651FB /* SenTestingKit.framework */,
-				6B1F20E414EFDDE9009651FB /* UIKit.framework */,
 				6B718D9414EF8B6400909A38 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -2014,8 +2008,8 @@
 				6BDAB01A1499828800541056 /* MainWindow.xib */,
 				6BDAB01B1499828800541056 /* Sales.Customer.Browse.xib */,
 				6BDAB01C1499828800541056 /* Sales.Customer.xib */,
-				6BDAB0181499828800541056 /* TableCellForGridData.xib */,
-				6BDAB01D1499828800541056 /* TableCellForTreeData.xib */,
+				6BDAB0181499828800541056 /* DefaultTableCellForGridData.xib */,
+				6BDAB01D1499828800541056 /* DefaultTableCellForTreeData.xib */,
 				6BB1BB5015520D6E0012C252 /* UserNameAndPasswordTableCells.xib */,
 			);
 			path = Assets;
@@ -2507,6 +2501,7 @@
 			buildPhases = (
 				6B1F20DC14EFDDE9009651FB /* Sources */,
 				6B1F20DD14EFDDE9009651FB /* Frameworks */,
+				6BC89F73156CFA8900FE32EC /* Kick Simulator */,
 				6B1F20DE14EFDDE9009651FB /* Resources */,
 				6B1F20DF14EFDDE9009651FB /* ShellScript */,
 			);
@@ -2681,12 +2676,12 @@
 				6BDAB02A1499828800541056 /* ActivityMenu.xib in Resources */,
 				6BDAB02B1499828800541056 /* background.png in Resources */,
 				6BDAB02C1499828800541056 /* ESA.Sales.Calc.xib in Resources */,
-				6BDAB02E1499828800541056 /* TableCellForGridData.xib in Resources */,
+				6BDAB02E1499828800541056 /* DefaultTableCellForGridData.xib in Resources */,
 				6BDAB02F1499828800541056 /* Login.xib in Resources */,
 				6BDAB0301499828800541056 /* MainWindow.xib in Resources */,
 				6BDAB0311499828800541056 /* Sales.Customer.Browse.xib in Resources */,
 				6BDAB0321499828800541056 /* Sales.Customer.xib in Resources */,
-				6BDAB0331499828800541056 /* TableCellForTreeData.xib in Resources */,
+				6BDAB0331499828800541056 /* DefaultTableCellForTreeData.xib in Resources */,
 				6BDAB0341499828800541056 /* production_environment.xml in Resources */,
 				6BDAB0351499828800541056 /* test_environment.xml in Resources */,
 				6B1F2A7C14D24204000E45FD /* Icon.png in Resources */,
@@ -2740,6 +2735,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\n##\n# Copyright 2008 Apple Inc.\n# All rights reserved.\n#\n# iPhoneSimulator platform\n# This script runs all of the unit tests for the target test bundle specified by the passed-in environment.\n# This script is generally intended to be invoked by ${DEVELOPER_TOOLS_DIR}/RunUnitTests. The interface or location of this script may change in future releases.\n##\n#\n# Input:\n#   See ${DEVELOPER_TOOLS_DIR}/RunUnitTests for input variables\n\nMessage() {\n    # usage: Message line type message\n    # Echo the message to stdout as the given type of message and continue\n    echo \"${PLATFORM_DEVELOPER_TOOLS_DIR}/Tools/RunPlatformUnitTests:${1}: ${2}: ${3}\"\n}\n\nNote() {\n    # usage: Notify line message\n    # Echo the message to stdout as a note and continue\n    Message \"${1}\" note \"${2}\"\n}\n\nWarning() {\n    # usage: Warning line message\n    # Echo the message to stdout as a note and continue\n    Message \"${1}\" warning \"${2}\"\n}\n\nError() {\n    # usage: Notify line message\n    # Echo the message to stdout as an error and continue\n    Message \"${1}\" error \"${2}\"\n}\n\nFail() {\n    # usage: Fail line message\n    # Echo the message to stdout and return 1, the universal error code\n    Error \"${1}\" \"${2}\"\n    exit 1\n}\n\n### Do not run tests on anything but a \"build\".\n\nif [ \"${ACTION}\" != \"build\" ]; then\nexit 0\nfi\n\n### Silently skip tests if TEST_AFTER_BUILD is NO\n\nif [ \"${TEST_AFTER_BUILD}\" = \"NO\" ]; then\nexit 0\nfi\n\n### Source RunUnitTests.include functionality\n\nif [ \"${DEVELOPER_TOOLS_DIR}\" = \"\" ]; then\nFail ${LINENO} \"DEVELOPER_TOOLS_DIR is not set.\"\nfi\n\nif [ \"${PLATFORM_DEVELOPER_TOOLS_DIR}\" = \"\" ]; then\nFail ${LINENO} \"PLATFORM_DEVELOPER_TOOLS_DIR is not set.\"\nfi\n\nincludeFile=\"${DEVELOPER_TOOLS_DIR}/RunPlatformUnitTests.include\"\nif [ ! -r \"${includeFile}\" ]; then\nFail ${LINENO} \"Cannot read include file ${includeFile}\"\nfi\n\nsource \"${includeFile}\"\n\nif [ 0 != $? ]; then\nFail ${LINENO} \"Could not source include file ${includeFile}\"\nfi\n\n### Define a sensible default for the path to the otest\n\nif [ \"${OTEST}\" = \"\" ]; then\nOTEST=\"${SDKROOT}/Developer/usr/bin/otest\"\nfi\n\nMain() {\n    # usage: Main\n    # Determine how tests need to be run and run them.\n    \n    # GC not supported by the simulator\n    TEST_GC_STATES=\"OFF\"\n    \n    Configure_TEST_ARCHS\n    \n    if [ \"${TEST_HOST}\" != \"\" ]; then\n    \n    export OTHER_TEST_FLAGS=\"-RegisterForSystemEvents\"\n    RunTestsForApplication \"${TEST_HOST}\" \"${TEST_BUNDLE_PATH}\"\n    \n    else\n    # If no TEST_HOST is specified, assume we're running the test bundle.\n    \n    RunTestsForBundle \"${TEST_BUNDLE_PATH}\"\n    fi\n}\n\n### Update the dyld environment to support running tests out of the build directory.\n\n# Sets and exports the following environment variables:\n#   DYLD_ROOT_PATH\n#   DYLD_FRAMEWORK_PATH\n#   DYLD_LIBRARY_PATH\n#   DYLD_NEW_LOCAL_SHARED_REGIONS\n#   DYLD_NO_FIX_PREBINDING\n\nif [ \"${DYLD_FRAMEWORK_PATH}\" != \"\" ]; then\nDYLD_FRAMEWORK_PATH=\"${BUILT_PRODUCTS_DIR}:${SDKROOT}${DEVELOPER_LIBRARY_DIR}/Frameworks:${DYLD_FRAMEWORK_PATH}\"\nelse\nDYLD_FRAMEWORK_PATH=\"${BUILT_PRODUCTS_DIR}:${SDKROOT}${DEVELOPER_LIBRARY_DIR}/Frameworks\"\nfi\n\nif [ \"${DYLD_LIBRARY_PATH}\" != \"\" ]; then\nDYLD_LIBRARY_PATH=\"${BUILT_PRODUCTS_DIR}:${DYLD_LIBRARY_PATH}\"\nelse\nDYLD_LIBRARY_PATH=\"${BUILT_PRODUCTS_DIR}\"\nfi\n\nif [ \"${DYLD_ROOT_PATH}\" != \"\" ]; then\nDYLD_ROOT_PATH=\"${SDKROOT}:${DYLD_ROOT_PATH}\"\nelse\nDYLD_ROOT_PATH=\"${SDKROOT}\"\nfi\n\nDYLD_NEW_LOCAL_SHARED_REGIONS=YES\nDYLD_NO_FIX_PREBINDING=YES\nIPHONE_SIMULATOR_ROOT=$SDKROOT\t\t## rdar://6528939\nCFFIXED_USER_HOME=\"${HOME}/Library/Application Support/iPhone Simulator/$IPHONESIMULATOR_PLATFORM_VERSION\"\n\nEXPORT_VARS=(DYLD_FRAMEWORK_PATH DYLD_LIBRARY_PATH DYLD_NEW_LOCAL_SHARED_REGIONS DYLD_NO_FIX_PREBINDING DYLD_ROOT_PATH IPHONE_SIMULATOR_ROOT CFFIXED_USER_HOME )\n\n### Run the tests\n\nMain";
+		};
+		6BC89F73156CFA8900FE32EC /* Kick Simulator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Kick Simulator";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\necho \"--------------------- Simulator Kicker! -------------------------\"\nexport XCODE_BASE=`xcode-select -print-path`\nexport SIMULATOR_RELATIVE_PATH=\"Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app\"\nexport SIMULATOR_FULL_PATH=\"$XCODE_BASE/$SIMULATOR_RELATIVE_PATH\"\nosascript -e \"tell application \\\"$SIMULATOR_FULL_PATH\\\" to quit\"\n\n";
 		};
 		6BD54363147359930014F148 /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2873,11 +2882,8 @@
 				6BFDE7761495FA01005D35E3 /* expanz_ui_utils_ViewTagger.m in Sources */,
 				6BFDE7761495FA01005D35E7 /* expanz_ui_ActivityControllerBuilder.m in Sources */,
 				6BFDE7761495FA01005D35EB /* NSString+ExpanzUtils.m in Sources */,
-				6BFDE7761495FA01005D35F5 /* (null) in Sources */,
-				6BB1BB3B1551FB100012C252 /* Sales_Customer_ViewController.m in Sources */,
 				6BFDE7761495FA01005D35F9 /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBE1558F19000F1D055 /* RXMLElement.m in Sources */,
-				6BFDE7761495FA01005D3600 /* (null) in Sources */,
 				6BFDE7761495FA01005D3604 /* NSString+ColorConversion.m in Sources */,
 				6BFDE7761495FA01005D3608 /* UIButton+ExpanzTextures.m in Sources */,
 			);
@@ -3145,6 +3151,7 @@
 				6BB1BB71155221310012C252 /* NSString+ExpanzUtils.m in Sources */,
 				6BFDE7761495FA01005D35FA /* expanz_model_SessionData.m in Sources */,
 				6BD1BDBF1558F19000F1D055 /* RXMLElement.m in Sources */,
+				6B02963F157342D100EF78D7 /* Sales_Customer_ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3193,12 +3200,14 @@
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
 				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../MacProjects/llvm/Release+Asserts/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3224,16 +3233,19 @@
 				HEADER_SEARCH_PATHS = (
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
 				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../MacProjects/llvm/Release+Asserts/lib\"",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$SDKROOT/usr/include/libxml2 $SDKROOT/usr/include/libsqllite/** $SRCROOT/Dependencies/Libraries/LRResty";
 			};
 			name = Release;
 		};
@@ -3255,6 +3267,7 @@
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
 					"\"$SRCROOT/Dependencies/Libraries/Kiwi\"",
+					$SRCROOT/Dependencies/Libraries/LRResty,
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -3292,6 +3305,7 @@
 					$SDKROOT/usr/include/libxml2,
 					"$SDKROOT/usr/include/libsqllite/**",
 					"\"$SRCROOT/Dependencies/Libraries/Kiwi\"",
+					$SRCROOT/Dependencies/Libraries/LRResty,
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -3324,8 +3338,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/Harness/Prefix.pch;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
 				INFOPLIST_FILE = Tests/Harness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -3348,8 +3371,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/Harness/Prefix.pch;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
 				INFOPLIST_FILE = Tests/Harness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -3373,10 +3405,20 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/Resources/expanzCore-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -3395,10 +3437,20 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Main/Resources/expanzCore-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -3472,9 +3524,17 @@
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -3501,9 +3561,17 @@
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					$SDKROOT/usr/include/libxml2,
+					"$SDKROOT/usr/include/libsqllite/**",
+					$SRCROOT/Dependencies/Libraries/LRResty,
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -3511,6 +3579,7 @@
 				);
 				PRODUCT_NAME = Examples;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$SDKROOT/usr/include/libxml2 $SDKROOT/usr/include/libsqllite/** $SRCROOT/Dependencies/Libraries/LRResty";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

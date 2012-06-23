@@ -261,7 +261,6 @@
         editingInfo:(NSDictionary*)editingInfo {
 
     Field* field = [_modelAdapter fieldFor:_currentlyEditingImageView];
-    //[field didFinishEditWithValue:image];
 
     NSData* jpegRepresentation = UIImageJPEGRepresentation(image, 4.0);
 
@@ -271,6 +270,7 @@
     DeltaRequest* deltaRequest = [[DeltaRequest alloc]
             initWithFieldId:field.fieldId fieldValue:data activityHandle:_activityInstance.handle
             sessionToken:sessionToken encoding:DeltaEncodingBase64];
+    //LogDebug(@"Here's the delta request: %@", deltaRequest);
     [_activityClient sendDeltaWith:deltaRequest delegate:self];
 
     _currentlyEditingImageView.image = image;
