@@ -14,17 +14,23 @@
 
 @implementation UIScrollView (AutoContentSize)
 
-- (void) setAutosizeContent:(BOOL)autosizeContent {
-
+- (void) setAutoContentSizePortrait:(BOOL)autosizeContent {
     if (autosizeContent) {
-        CGFloat contentWidth =
-                self.frame.size.width == self.superview.frame.size.width ? self.superview.frame.size.width :
-                self.frame.size.width + 10;
-        CGFloat contentHeight =
-                self.frame.size.height == self.superview.frame.size.height ? self.superview.frame.size.height :
-                self.frame.size.height + 10;
-        self.contentSize = CGSizeMake(contentWidth, contentHeight);
+        self.contentSize = CGSizeMake(PORTRAIT_WIDTH + CONTENT_MARGIN, PORTRAIT_HEIGHT + CONTENT_MARGIN);
     }
 }
+
+- (void) setAutoContentSizePortraitHorizontal:(BOOL)autosizeContent {
+    if (autosizeContent) {
+        self.contentSize = CGSizeMake(PORTRAIT_WIDTH + CONTENT_MARGIN, PORTRAIT_HEIGHT);
+    }
+}
+
+- (void) setAutoContentSizePortraitVertical:(BOOL)autosizeContent {
+    if (autosizeContent) {
+        self.contentSize = CGSizeMake(PORTRAIT_WIDTH, PORTRAIT_HEIGHT + CONTENT_MARGIN);
+    }
+}
+
 
 @end
