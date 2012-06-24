@@ -95,11 +95,11 @@
 <span class="lineNum">      37 </span>            : /* ================================================ Interface Methods =============================================== */
 <span class="lineNum">      38 </span>            : - (BOOL) allowsMethodInvocations {
 <span class="lineNum">      39 </span><span class="lineCov">          3 :     for (Field* field in _fields) {</span>
-<span class="lineNum">      40 </span><span class="lineCov">          2 :         if (field.isDirty) {</span>
-<span class="lineNum">      41 </span><span class="lineCov">          2 :             return NO;</span>
+<span class="lineNum">      40 </span><span class="lineCov">          3 :         if (field.isDirty) {</span>
+<span class="lineNum">      41 </span><span class="lineCov">          3 :             return NO;</span>
 <span class="lineNum">      42 </span><span class="lineCov">          1 :         }</span>
 <span class="lineNum">      43 </span>            :     }
-<span class="lineNum">      44 </span><span class="lineCov">          3 :     return YES;</span>
+<span class="lineNum">      44 </span><span class="lineCov">          4 :     return YES;</span>
 <span class="lineNum">      45 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      46 </span><span class="lineCov">          3 : </span>
 <span class="lineNum">      47 </span>            : - (NSArray*) fields {
@@ -114,11 +114,11 @@
 <span class="lineNum">      56 </span><span class="lineCov">        295 : </span>
 <span class="lineNum">      57 </span>            : - (Field*) fieldWithId:(NSString*)fieldId {
 <span class="lineNum">      58 </span><span class="lineCov">        201 :     for (Field* field in _fields) {</span>
-<span class="lineNum">      59 </span><span class="lineCov">       1345 :         if ([field.fieldId isEqualToString:fieldId]) {</span>
-<span class="lineNum">      60 </span><span class="lineCov">       1345 :             return field;</span>
+<span class="lineNum">      59 </span><span class="lineCov">       1383 :         if ([field.fieldId isEqualToString:fieldId]) {</span>
+<span class="lineNum">      60 </span><span class="lineCov">       1383 :             return field;</span>
 <span class="lineNum">      61 </span><span class="lineCov">        158 :         }</span>
 <span class="lineNum">      62 </span>            :     }
-<span class="lineNum">      63 </span><span class="lineCov">       1345 :     return nil;</span>
+<span class="lineNum">      63 </span><span class="lineCov">       1383 :     return nil;</span>
 <span class="lineNum">      64 </span><span class="lineCov">         43 : }</span>
 <span class="lineNum">      65 </span><span class="lineCov">        201 : </span>
 <span class="lineNum">      66 </span>            : 
